@@ -1,1 +1,11 @@
 theme: jekyll-theme-cayman
+title: Physics 64
+description: Harvey Mudd College
+show_downloads: false
+relative_links:
+  enabled: true
+  collections: false
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  parse_block_html: true
