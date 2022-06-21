@@ -6,6 +6,15 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 $$ E = mc^2 $$
 
+\begin{equation}\label{eq:dumb}
+  F = n d^3
+\end{equation}
+
+As a test of the physics package, let's try
+\begin{equation}\label{eq:physics}
+  \Gamma(n+1) = \int_0^\infty \qty(x^n e^{-x})\dd{x}
+\end{equation}
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

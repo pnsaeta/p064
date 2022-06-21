@@ -13,11 +13,19 @@
  
     <script>
       MathJax = {
-        loader: {load: ['[tex]/tagFormat']},
+        loader: {
+          load: ['[tex]/tagFormat', '[tex]/physics'],
+        },
         section: 1,
         tex: {
           tags: 'ams',
-          packages: {'[+]': ['tagFormat']},
+          tagSide: 'right',
+          tagIndent: '0.8em',
+          useLabelIds: true,
+          packages: {'[+]': ['tagFormat', 'autoload', 'require']},
+          processEscapes: true,
+          processEnvironments: true,
+          processRefs: true
           tagFormat: {
             number: (n) =>  n,
             id: (n) => 'eqn-id-' + n
@@ -28,7 +36,7 @@
     </script>
     
  <!--   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  -->
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
   </head>
   <body>
     <div class="wrapper">
