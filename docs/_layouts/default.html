@@ -12,12 +12,17 @@
     <![endif]-->
  
     <script>
-      MathJax = {
+      window.MathJax = {
         loader: {
           load: ['[tex]/tagFormat', '[tex]/physics'],
         },
         section: 1,
         tex: {
+          inlineMath: [ ['\\(', '\\)'] ],
+          displayMath: [
+            ['$$', '$$'],
+            ['\\[', '\\]']
+          ],
           tags: 'ams',
           tagSide: 'right',
           tagIndent: '0.8em',
@@ -29,7 +34,7 @@
           tagFormat: {
             number: (n) =>  n,
             id: (n) => 'eqn-id-' + n
-          }
+          },
         }
         
       };
