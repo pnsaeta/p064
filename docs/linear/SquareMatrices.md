@@ -7,10 +7,10 @@ Square matrices have a number of interesting properties and deserve special atte
 The identity matrix has ones along the main diagonal and zeros everywhere else:
 \begin{equation}\label{eq:identity}
   \mathbb{I} = \begin{pmatrix}
-    1 & 0 & 0 & \cdots & 0 \\
-    0 & 1 & 0 & \cdots & 0 \\
-    0 & 0 & 1 & \cdots & 0 \\
-    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    1 & 0 & 0 & \cdots & 0 \\\
+    0 & 1 & 0 & \cdots & 0 \\\
+    0 & 0 & 1 & \cdots & 0 \\\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\\
     0 & 0 & 0 & \cdots & 1
     \end{pmatrix}
 \end{equation}
