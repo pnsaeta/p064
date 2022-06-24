@@ -10,3 +10,5 @@ You can use a "\<details>" tag to create expandable tabs:
 Take a look a the raw markdown file for how to format the "\<details>" tag. 
 
 </details>
+
+[Head to the site](index.md)
