@@ -36,7 +36,7 @@ Linear operators are more much important in quantum mechanics. These act on a qu
 
 ## Inner Products
 
-The inner product of two vectors, $$\vb{a}$$ and $$\vb{b}$$, requires us (roughly speaking) to multiply corresponding components and then add up the resulting products. If the vectors live in $$\mathbb{R}^n$$, then the multiplication is the normal one you expect:
+The inner product of two vectors, $$\vb{a}$$ and $$\vb{b}$$, requires us (roughly speaking) to multiply corresponding components and then add up the resulting products. If the vectors live in $$\mat{R}^n$$, then the multiplication is the normal one you expect:
 \begin{equation}\label{eq:real-inner-product}
   \vb{a} \cdot \vb{b} = (\vb{a}, \vb{b}) = \sum_{i=1}^N a_i b_i
 \end{equation}

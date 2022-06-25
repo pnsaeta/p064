@@ -1,10 +1,10 @@
 # Gauss-Jordan Elimination
 
-One can seek the inverse of a given square matrix $$\mathbb{A}$$ using **Gauss-Jordan elimination**, which consists in writing $$\mathbb{A}$$ and $$\mathbb{I}$$ side-by-side and conducting identical row operations on both to reduce $$\mathbb{A}$$ to $$\mathbb{I}$$. If this procedure can be completed successfully, then the companion array that started out as $$\mathbb{I}$$ will have been reduced to $$\mathbb{A}^{-1}$$. *Row operations* consist in multiplying a row by a scalar value and adding it to another row. The procedure is easiest to understand with an example.
+One can seek the inverse of a given square matrix $$\mat{A}$$ using **Gauss-Jordan elimination**, which consists in writing $$\mat{A}$$ and $$\mat{I}$$ side-by-side and conducting identical row operations on both to reduce $$\mat{A}$$ to $$\mat{I}$$. If this procedure can be completed successfully, then the companion array that started out as $$\mat{I}$$ will have been reduced to $$\mat{A}^{-1}$$. *Row operations* consist in multiplying a row by a scalar value and adding it to another row. The procedure is easiest to understand with an example.
 
 We seek to invert the matrix
 \\\[
-  \mathbb{A} = \begin{pmatrix}
+  \mat{A} = \begin{pmatrix}
    1 & 2 & -3 \\\\ 
    2 & -1 & 4 \\\\ 
  -2 & 1 & 3 
@@ -64,10 +64,10 @@ We now add to the first row the second row multiplied by $$-2$$ and the third ro
 \\\]
 Thus, we have determined that 
 \\\[
-  \mathbb{A}^{-1} = \begin{pmatrix}
+  \mat{A}^{-1} = \begin{pmatrix}
   \frac15 & \frac{9}{35} & -\frac17 \\\\ 
   \frac25 & \frac{3}{35} & \frac27 \\\\ 
   0       & \frac17      & \frac17
  \end{pmatrix}
 \\\]
-You may confirm that multiplying $$\mathbb{A}$$ by $$\mathbb{A}^{-1}$$ does indeed produce the identity matrix.
+You may confirm that multiplying $$\mat{A}$$ by $$\mat{A}^{-1}$$ does indeed produce the identity matrix.
