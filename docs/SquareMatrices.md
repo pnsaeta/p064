@@ -7,11 +7,7 @@ Square matrices have a number of interesting properties and deserve special atte
 The identity matrix has ones along the main diagonal and zeros everywhere else:
 \begin{equation}
   \mathbb{I} = \begin{pmatrix}
-    1 & 0 & 0 & \cdots & 0 \\\
-    0 & 1 & 0 & \cdots & 0 \\\
-    0 & 0 & 1 & \cdots & 0 \\\
-    \vdots & \vdots & \vdots & \ddots & \vdots \\\
-    0 & 0 & 0 & \cdots & 1
+    1 & 0 & 0 & \cdots & 0 \\\  0 & 1 & 0 & \cdots & 0 \\\ 0 & 0 & 1 & \cdots & 0 \\\ \vdots & \vdots & \vdots & \ddots & \vdots \\\ 0 & 0 & 0 & \cdots & 1
     \end{pmatrix}
     \label{eq:identity}
 \end{equation}
@@ -38,34 +34,22 @@ We seek to invert the matrix
 so we write it next to the 3$$\times$$3 identity matrix:
 \[
 \begin{pmatrix}
-1 & 2 & -3 & | & 1 & 0 & 0 \\\
-2 & -1 & 4 & | & 0 & 1 & 0 \\\
--2 & 1 & 3 & | & 0 & 0 & 1
+1 & 2 & -3 & | & 1 & 0 & 0 \\\ 2 & -1 & 4 & | & 0 & 1 & 0 \\\ -2 & 1 & 3 & | & 0 & 0 & 1
 \end{pmatrix}
 \]
 To zero the first column of rows 2 and 3, we multiply the first row by $$-2$$ and 2, respectively, and add to get
 \[
-\begin{pmatrix}
-1 & 2 & -3 &  | &  1 & 0 & 0 \\\
-0 & -5 & 10 & | & -2 & 1 & 0 \\\
-0 & 5 & -3  & | &  2 & 0 & 1
-\end{pmatrix}
+\begin{pmatrix}1 & 2 & -3 &  | &  1 & 0 & 0 \\\ 0 & -5 & 10 & | & -2 & 1 & 0 \\\ 0 & 5 & -3  & | &  2 & 0 & 1\end{pmatrix}
 \]
 Now divide the second row by $$-5$$ to get
 \[
 \begin{pmatrix}
-1 & 2 & -3 &  | &  1 & 0 & 0 \\\
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 5 & -3  & | &  2 & 0 & 1
+1 & 2 & -3 &  | &  1 & 0 & 0 \\\ 0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\ 0 & 5 & -3  & | &  2 & 0 & 1
 \end{pmatrix}
 \]
 To eliminate the 5 on the second column of the third row, multiply the second row by $$-5$$ and add, giving
 \[
-\begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 0 &  7 & | & 0 & 1 & 1
-\end{pmatrix}
+\begin{pmatrix}1 & 2 & -3 & | &  1 & 0 & 0 \\\0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\0 & 0 &  7 & | & 0 & 1 & 1\end{pmatrix}
 \]
 Dividing the last row by 7 reduces the original matrix to standard upper-triangular form (ones on the main diagonal and zeros below it):
 \[
