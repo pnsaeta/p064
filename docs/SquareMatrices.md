@@ -84,5 +84,3 @@ Thus, we have determined that
  \end{pmatrix}
 \\]
 You may confirm that multiplying $$\mathbb{A}$$ by $$\mathbb{A}^{-1}$$ does indeed produce the identity matrix.
-
-Does this do the trick?
