@@ -62,24 +62,24 @@ Dividing the last row by 7 reduces the original matrix to standard upper-triangu
 Now we proceed from bottom to top, eliminating with row operations the nonzero entries above the main diagonal. Multiplying the final row by 2 and adding to the middle row gives
 \\[
 \begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\
-0 & 1 &  0 & | & 2/5 & 3/35 & 2/7 \\\
+1 & 2 & -3 & | &  1 & 0 & 0 \\\ 
+0 & 1 &  0 & | & 2/5 & 3/35 & 2/7 \\\ 
 0 & 0 &  1 & | & 0 & 1/7 & 1/7
 \end{pmatrix}
 \\]
 We now add to the first row the second row multiplied by $$-2$$ and the third row multiplied by 3, which gives
 \\[
 \begin{pmatrix}
-1 & 0 & 0 & | &  1/5 & 9/35 & -1/7 \\\\
-0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\\
+1 & 0 & 0 & | &  1/5 & 9/35 & -1/7 \\\ 
+0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\ 
 0 & 0 & 1 & | & 0 & 1/7 & 1/7
 \end{pmatrix}
 \\]
 Thus, we have determined that 
 \\[
   \mathbb{A}^{-1} = \begin{pmatrix}
- \frac15 & \frac{9}{35} & -\frac17 \\\
- \frac25 & \frac{3}{35} & \frac27 \\\
+ \frac15 & \frac{9}{35} & -\frac17 \\\ 
+ \frac25 & \frac{3}{35} & \frac27 \\\ 
  0       & \frac17      & \frac17
  \end{pmatrix}
 \\]
