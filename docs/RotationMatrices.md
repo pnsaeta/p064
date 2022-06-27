@@ -20,5 +20,3 @@ We can generalize readily to 3 dimensions, at least for rotations around one of 
 \\]
 rotates a column vector around the $$y$$ axis. All proper rotations (that don't alter the handedness of the basis vectors) have a determinant of 1. Improper rotations, which do change the handedness of the basis vectors, have determinant $$-1$$.
 
-# Orthogonal Matrices
-

@@ -1,15 +1,10 @@
 # Linear Algebra
 
-+ linear operators
-+ inner products
-+ linear independence and completeness
-+ outer products
-+ special matrices (orthogonal, hermitian, symmetric, unitary)
-
-+ Hilbert spaces
-+ Commuting matrices and diagonlization
-+ functions of matrices
-+ Eigenvalue problem and completeness 
++ [Special square matrices](SquareMatrices.md)
++ [Gauss-Jordan elimination](GaussJordan.md)
++ [Hilbert spaces](HilbertSpace.md)
++ [Diagonalizing a matrix](Diagonalization.md)
++ [Eigenvalues, eigenvectors, and completeness](Eigenvectors.md)
 
 ## Notation
 
@@ -38,13 +33,28 @@ Linear operators are more much important in quantum mechanics. These act on a qu
 
 The inner product of two vectors, $$\vb{a}$$ and $$\vb{b}$$, requires us (roughly speaking) to multiply corresponding components and then add up the resulting products. If the vectors live in $$\mat{R}^n$$, then the multiplication is the normal one you expect:
 \begin{equation}\label{eq:real-inner-product}
-  \vb{a} \cdot \vb{b} = (\vb{a}, \vb{b}) = \sum_{i=1}^N a_i b_i
+  \vb{a} \vdot \vb{b} = (\vb{a}, \vb{b}) = \sum_{i=1}^N a_i b_i
 \end{equation}
+
+From a matrix standpoint, the inner product of two vectors is represented by the matrix multiplication of the transpose of one by the other:
+\\[
+  \vb{a} \vdot \vb{b} = 
+  \begin{pmatrix}
+    a_1 & a_2 & a_3 & \cdots
+  \end{pmatrix} \vdot \begin{pmatrix}
+    b_1 \\\ b_2 \\\ b_3 \\\ \vdots
+  \end{pmatrix}
+\\]
+
+Note that this operation only makes sense provided that both vectors have the same dimension (rank).
+
 The magnitude of a vector having such an inner product is given by
 \begin{equation}\label{eq:real-mag}
-  |\vb{a}| = \sqrt{\vb{a} \cdot \vb{a}} = \qty(\sum_{i=1}^N a_i^2)^{1/2}
+  |\vb{a}| = \sqrt{\vb{a} \vdot \vb{a}} = \qty(\sum_{i=1}^N a_i^2)^{1/2}
 \end{equation}
 which is just what we’d expect from the Pythagorean theorem.
+
+### Complex spaces
 
 On the other hand, if the vectors inhabit a vector space over the field of complex numbers (as in quantum mechanics), the inner product is defined slightly differently:
 \begin{equation}\label{eq:complex-inner-product}
@@ -69,7 +79,7 @@ and the “bra” vector (the dual) as a row vector
 so that the inner product is achieved by standard matrix multiplication of bra and ket:
 \begin{equation}
   \braket{a}{a} \longrightarrow \pmatrix{a_1^* & a_2^* & \cdots & a_N^*}
-     \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N} = \sum_{i=1}^N |a_i|^2
+    \vdot \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N} = \sum_{i=1}^N |a_i|^2
 \end{equation}
 which is a manifestly nonnegative real number.
 
@@ -83,3 +93,18 @@ which means that they are not colinear. In general, a vector space of dimension 
 $$D$$ linearly independent vectors, which are often chosen to be unit vectors in
 each of the Cartesian directions: $$e_1 = (1,0,0,\ldots)$$, $$e_2 = (0, 1, 0, \ldots)$$, etc.
 
+## Outer Products
+
+The inner product described above takes two equal-rank vectors and contracts them to produce a scalar. In matrix language, it is the product of the transpose of the first vector (converting a column vector to a row vector) by the second. What happens if we let the first vector remain a column vector but "contract" it with the transpose of the second vector? That is, take
+\\[
+  \mat{M} = \begin{pmatrix} a_1 \\\ a_2 \\\ \vdots \\\ a_m \end{pmatrix} \vdot
+    \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}
+    =
+    \begin{pmatrix}
+      a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\\ 
+      a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\\ 
+      \vdots & \vdots & \ddots & \vdots \\\ 
+      a_m b_1 & a_m b_2 & \cdots & a_m b_n
+    \end{pmatrix}
+  \\]
+This is called the **outer product** of the two vectors and produces a rectangular matrix with $$m$$ rows and $$n$$ columns.
