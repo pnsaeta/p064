@@ -42,6 +42,8 @@ All of the standard functions have NumPy versions that “broadcast” in this w
     y = np.sin(x)
     fig, ax = plt.subplots()
     ax.plot(x, y)
+    ax.set_xlabel('$x$')
+    ax.set_ylabel(r'$\sin{x}$')
 
 ![Sine plot](figs/sineplot.png)
 
