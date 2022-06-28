@@ -1,10 +1,11 @@
-# Numerical Linear Algebra with NumPy
+# Basics of NumPy
 
 + [Back to Linear Algebra](LinearAlgebra.md)
 
 * toc
 {:toc}
 
+NumPy is a Python library of optimized routines for computing with arrays. Compared to writing loops over nested lists, as in normal Python syntax, operating with NumPy routines on NumPy arrays greatly accelerates operations and uses more readable syntax.
 
 The standard way to access the routines of NumPy in a Python program is with an import statement of the form
 
@@ -121,3 +122,7 @@ This approach is not limited to two-dimensional arrays:
     array([9.53219154, 9.17986084, 8.04918146])
 
 In summary, functions such as `sum`, `max`, `min`, etc. operate by default on all elements of multidimensional arrays, but can also be specialized to work along various directions.
+
+## What now?
+
+Black.

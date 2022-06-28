@@ -10,3 +10,4 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 logo: logo.png
+toc_levels: 2-6
