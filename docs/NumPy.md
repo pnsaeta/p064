@@ -1,6 +1,9 @@
+{::options toc_levels="2..6"}
+
 # Basics of NumPy
 
 + [Back to Linear Algebra](LinearAlgebra.md)
+
 
 * toc
 {:toc}
