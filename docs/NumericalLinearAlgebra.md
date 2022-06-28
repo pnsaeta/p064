@@ -1,6 +1,7 @@
 # Numerical Linear Algebra with NumPy
 
 + [Back to Linear Algebra](LinearAlgebra.md)
++ [Introduction to NumPy](NumPy.md)
 
 * toc
 {:toc}
@@ -121,3 +122,5 @@ This approach is not limited to two-dimensional arrays:
     array([9.53219154, 9.17986084, 8.04918146])
 
 In summary, functions such as `sum`, `max`, `min`, etc. operate by default on all elements of multidimensional arrays, but can also be specialized to work along various directions.
+
+## 
