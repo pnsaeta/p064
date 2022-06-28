@@ -9,5 +9,5 @@ highlighter: rouge
 markdown: kramdown
 kramdown:
   parse_block_html: true
-  toc_levels: 2-6
+  toc_levels: 2..6
 logo: logo.png
