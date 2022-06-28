@@ -1,12 +1,12 @@
-{::options toc_levels="2..6"}
-
 # Basics of NumPy
 
-+ [Back to Linear Algebra](LinearAlgebra.md)
 
 
 * toc
 {:toc}
+
+[Back to Linear Algebra](LinearAlgebra.md)
+
 
 NumPy is a Python library of optimized routines for computing with arrays. Compared to writing loops over nested lists, as in normal Python syntax, operating with NumPy routines on NumPy arrays greatly accelerates operations and uses more readable syntax.
 
@@ -57,6 +57,9 @@ All of the standard functions have NumPy versions that “broadcast” in this w
 
 ![Sine plot](figs/sineplot.png)
 
+### Universal functions
+
+Functions that "broadcast" across the elements of an array are called **universal functions**. 
 You can [read more about NumPy's universal functions](https://numpy.org/doc/stable/reference/ufuncs.html) in the official documentation. They include all the standard trigonometric, exponential, and hyperbolic functions, degree-radian conversions, rounding, etc. Some “unusual” ones you might find handy:
 
 + `square(x)` computes the square of all elements of `x`
@@ -72,60 +75,96 @@ Sometimes you want to operate row-wise or column-wise on a two-dimensional array
 
     from numpy.random import default_rng
     rng = default_rng()                     # initialize a random number generator
-    m = rng.uniform(-5., 5., size=(2, 3))   # make a row of random numbers in [-5.0, 5.0) with 2 rows and 3 columns
-    m
+    m = np.around(rng.uniform(-5., 5., size=(2, 3)), 1)
+    m                                       # make a row of random numbers in [-5.0, 5.0) with 2 rows and 3 columns
+    array([[-1.5,  4.8, -0.7],              # but round to one digit after the decimal point
+           [ 3.4, -4.8,  2.7]])
 
-    array([[-1.30298926,  0.29909209, -2.43088339],
-           [ 0.49986483,  0.86389192,  3.21737843]])
-    
-    m.max()
-    3.2173784294384173                      # the maximum single value in the array
+    m.shape                                 # describe the size of m
+    (2, 3)
 
-    m.max(axis=0)                           # find the maximum value in each column
-                                            # by "collapsing" over the row axis
-    array([0.49986483, 0.86389192, 3.21737843])
+    m.max()                                 # what is the single largest value in the array?
+    4.8
 
-    m.max(axis=1)                           # find the maximum value in each row
-    array([0.29909209, 3.21737843])
+    m.max(axis=0)                           # what is the largest value in any row
+    array([3.4, 4.8, 2.7])                  # three answers, one for each column
+
+    m.max(axis=1)                           # what is the largest value in any column
+    array([4.8, 3.4])                       # two answers, one for each row
 
 This approach is not limited to two-dimensional arrays:
 
-    m3 = rng.uniform(-10., 10., size=(2,3,4))
+    m3 = np.around(rng.uniform(-10., 10., size=(2,3,4)), 1)
     m3
-    array([[[ 6.90429787, -2.40068511,  5.68998764,  8.11941128],
-            [-8.5648789 , -3.3223694 ,  5.93420326, -6.52864494],
-            [-3.95970545, -8.60586592, -9.09347286, -3.33440424]],
+    array([[[ 6.1,  0.2, -2.8,  3.8],
+            [ 8.1,  4.5, -3.1, -4.1],
+            [ 8.2,  0.1, -0.8, -5.6]],
 
-           [[ 9.53219154,  4.0103738 ,  7.36151971,  3.82092826],
-            [-8.00710273,  9.17986084,  0.05692238,  7.33611053],
-            [ 7.51311752, -3.20018323,  8.04918146,  1.9521936 ]]])
-    
+           [[ 9.3, -5.6, -6.2, -5.6],
+            [ 1.6,  0.2,  4.6, -8.5],
+            [ 5.8, -1.9,  1.2,  6. ]]])
     m3.max()
-    9.532191544702176
-
-    m3.max(axis=0)                          # "collapse" over rows, yielding an array
-                                            # with 3 rows and 4 columns
-    array([[ 9.53219154,  4.0103738 ,  7.36151971,  8.11941128],
-           [-8.00710273,  9.17986084,  5.93420326,  7.33611053],
-           [ 7.51311752, -3.20018323,  8.04918146,  1.9521936 ]])
-    
+    9.3
+    m3.max(axis=0)
+    array([[ 9.3,  0.2, -2.8,  3.8],
+           [ 8.1,  4.5,  4.6, -4.1],
+           [ 8.2,  0.1,  1.2,  6. ]])
     m3.max(axis=1)
-    array([[ 6.90429787, -2.40068511,  5.93420326,  8.11941128],
-           [ 9.53219154,  9.17986084,  8.04918146,  7.33611053]])
-    
+    array([[ 8.2,  4.5, -0.8,  3.8],
+           [ 9.3,  0.2,  4.6,  6. ]])
     m3.max(axis=2)
-    array([[ 8.11941128,  5.93420326, -3.33440424],
-           [ 9.53219154,  9.17986084,  8.04918146]])
-    
-    m3.max(axis=(0,1))                      # "collapse" over the first two indices, yielding
-                                            # a 4-element array
-    array([9.53219154, 9.17986084, 8.04918146, 8.11941128])
-    
-    m3.max(axis=(0,2))
-    array([9.53219154, 9.17986084, 8.04918146])
+    array([[6.1, 8.1, 8.2],
+           [9.3, 4.6, 6. ]])
+    m3.max(axis=(0,1))
+    array([9.3, 4.5, 4.6, 6. ])
 
-In summary, functions such as `sum`, `max`, `min`, etc. operate by default on all elements of multidimensional arrays, but can also be specialized to work along various directions.
+In summary, functions such as `sum`, `max`, `min`, etc., operate by default on all elements of multidimensional arrays, but can also be specialized to work along various axes (directions) of the array.
 
-## What now?
+## Slicing
 
-Black.
+Like lists and tuples, NumPy arrays understand slices. To extract the first column (column 0) from `m`, use `m[:,0]`:
+
+    m[:,0]
+    array([-1.5,  3.4])
+
+    m[1,:]
+    array([ 3.4, -4.8,  2.7])
+
+Note that the "bare" colon means *all*; you can use `start:stop` or `start:stop:stride` syntax, as well.
+
+    p = np.array(range(12))
+    array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+
+    p[0:10:2]
+    array([0, 2, 4, 6, 8])
+
+## Searching and sorting
+
+Sometimes you want to know not just what the largest value is but where it is in the array.
+
+    np.argmax(m3)                           # where is the largest element
+    12                                      # 9.3 is at offset 12 (the 13th element)
+
+    np.argmax(m3, axis=0)
+    array([[1, 0, 0, 0],
+           [0, 0, 1, 0],
+           [0, 0, 1, 1]])
+
+    np.sort(m3)                             # sort over the last index of the array
+    array([[[-2.8,  0.2,  3.8,  6.1],
+            [-4.1, -3.1,  4.5,  8.1],
+            [-5.6, -0.8,  0.1,  8.2]],
+
+           [[-6.2, -5.6, -5.6,  9.3],
+            [-8.5,  0.2,  1.6,  4.6],
+            [-1.9,  1.2,  5.8,  6. ]]])    
+
+You can also sort over other axes.
+
+## Sums and products
+
++ `sum(x)` computes the sum of all elements, but you can also use `axis=` to adjust what is summed
++ `product(x)` multiplies all elements
++ `cumsum(x)` (cumulative sum) returns an array in which the nth value is the sum of all entries up to and including the nth value
++ `cumprod(x)` (cumulative product) like `cumsum` but multiplies all prior elements together
++ `nansum(x)` compute the sum of all values in `x` that are not NaNs (not a numbers)
