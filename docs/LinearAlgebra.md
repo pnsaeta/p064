@@ -5,6 +5,7 @@
 + [Hilbert spaces](HilbertSpace.md)
 + [Diagonalizing a matrix](Diagonalization.md)
 + [Eigenvalues, eigenvectors, and completeness](Eigenvectors.md)
++ [Numerical linear algebra in NumPy](NumericalLinearAlgebra.md)
 
 ## Notation
 
