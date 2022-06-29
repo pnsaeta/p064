@@ -1,0 +1,12 @@
+a { font-weight: bold; font-family: sans-serif;}
+body {
+    padding-left: 50px;
+    padding-right: 50px;
+    font: 13px/1.5 Georgia;
+    margin: 16px;
+    margin-right: 150px;
+    color: #606060;
+}
+div#logo {
+    position: fixed; right:20px; top:20px;
+}
