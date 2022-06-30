@@ -6,6 +6,14 @@ This course aims to extend your understanding of a range of important mathematic
 
 <table class="nicetable">
   <tr>
+    <td><a href="Installation.md">Installing Software</a></td>
+    <td>Instructions for installing Python, NumPy, SciPy, Matplotlib, and jupyter, as well as hints for efficient configuration</td>
+  </tr>
+  <tr>
+    <td><a href="Jupyter.md">Introduction to Jupyter Notebooks</a></td>
+    <td>We will use Jupyter Notebooks to run Python code and to visualize results</td>
+  </tr>
+  <tr>
     <td><a href="NumPy.md">Introduction to NumPy</a></td>
     <td>NumPy and SciPy are the standard packages for numerical computation in Python</td>
   </tr>
