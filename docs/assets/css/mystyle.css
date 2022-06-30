@@ -10,3 +10,14 @@ body {
 div#logo {
     position: fixed; right:20px; top:20px;
 }
+
+table.nicetable tr td {
+    padding: 4px;
+    padding-right: 12px;
+}
+
+tr.sep {
+  border-top: solid;
+  border-width: 1px;
+  border-color: #CCCCCC;
+}
