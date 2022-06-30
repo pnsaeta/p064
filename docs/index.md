@@ -6,49 +6,36 @@ This course aims to extend your understanding of a range of important mathematic
 
 <table class="nicetable">
   <tr>
-    <td markdown="1">[Introduction to NumPy](NumPy.md)
-    </td>
+    <td><a href="NumPy.md">Introduction to NumPy</a></td>
     <td>NumPy and SciPy are the standard packages for numerical computation in Python</td>
   </tr>
   <tr>
-    <td markdown="1"> [Introduction to Matplotlib](Matplotlib.md) </td>
+    <td><a href="Matplotlib.md">Introduction to Matplotlib</a></td>
     <td>Matplotlib is the standard package for generating publication-quality graphics in Python</td>
   </tr>
-  <hr>
-  <tr>
-    <td markdown="1"> [Linear Algebra](LinearAlgebra.md) </td>
+
+  <tr class="sep">
+    <td><a href="LinearAlgebra.md">Linear Algebra</a></td>
     <td> We will review key results and discuss numerical approaches to solving problems in linear algebra </td>
   </tr>
   <tr>
-    <td markdown="1"> [Fourier Series and Transforms](Fourier.md) </td>
+    <td><a href="Fourier.md">Fourier Series and Transforms</a></td>
     <td> Fourier series represent arbitrary periodic functions as series of sines and cosines. Fourier transforms generalize to the infinite interval. </td>
   </tr>
   <tr>
-    <td markdown="1"> [Pseudorandom Numbers](Random.md) </td>
+    <td><a href="Random.md">Pseudorandom Numbers</a></td>
     <td> Many simulations rely on random numbers to approximate stochastic processes </td>
   </tr>
   <tr>
-    <td markdown="1"> [Stochastic Processes](Stochastic.md) </td>
+    <td><a href="Stochastic.md">Stochastic Processes</a></td>
     <td>Stochastic processes involve random steps </td>
   </tr>
   <tr>
-    <td markdown="1"> [Ordinary Differential Equations](DEs.md) </td>
+    <td><a href="DEs.md">Ordinary Differential Equations</a></td>
     <td>Stuff</td>
   </tr>
   <tr>
-    <td markdown="1"> [Partial Differential Equations](PDEs.md) </td>
+    <td><a href="PDEs.md">Partial Differential Equations</a></td>
     <td>What?</td>
   </tr>
 </table>
-
-|---
-| Default aligned | Left aligned | Center aligned | Right aligned
-|-|:-|:-:|-:
-| First body part | Second cell | Third cell | fourth cell
-| Second line |foo | **strong** | baz
-| Third line |quux | baz | bar
-|---
-| Second body
-| 2 line
-|===
-| Footer row blah

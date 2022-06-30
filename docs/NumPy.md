@@ -1,7 +1,6 @@
 # Basics of NumPy
 
 
-
 * toc
 {:toc}
 

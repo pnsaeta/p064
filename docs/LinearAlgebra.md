@@ -7,6 +7,8 @@
 + [Eigenvalues, eigenvectors, and completeness](Eigenvectors.md)
 + [Numerical linear algebra in NumPy](NumericalLinearAlgebra.md)
 
+[Back to the top](index.md)
+
 ## Notation
 
 A “delightful” bug (feature?) of mathematical physics is the different notations used to describe identical mathematical systems/situations. In physics, we are wont to represent a quantity with magnitude and direction, such as a force $$\vb{F}$$ in either boldface or with an arrow over it ($$\va{F}$$). Mathematicians often prefer to use a component notation $$(F_1, F_2, F_3)$$ to represent the same thing. Each strategy has its pros and cons. The problem with the component notation is that it implicitly assumes a particular basis—which is typically **not** made explicit. Thus, we are “invited” to guess that $$F_1$$ is the component of $$F$$ in the $$x$$ direction, but unless this choice is stated explicitly, we can't really be sure. The “physics” notation $$\vb{F}$$ implies that the quantity $$F$$ has both a magnitude and a direction, but declines to state explicitly what its components may be. After all, the direction of the force exists *independent* of the choice of basis vectors we make to describe it. Fundamentally, north is north, even if we orient our coordinate system in some cockamaimie direction. Hence, much of physics is written in coordinate-free notation that emphasizes that vectors have magnitude and direction, rather than that they have representations in various bases.
