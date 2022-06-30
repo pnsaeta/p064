@@ -389,6 +389,6 @@ as the following
 ax.plot([0, 0.25, 0.5, 0.75], [1, 0.75, 0.5, -0.25], 'o', color='#44bb60')
 ~~~~
 
-See [[https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers][markers]] for more marker options and [[https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors][colors]] for more options for representing colors.
+See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors.
 
-[[file:formatting.org][Next step: formatting in Matplotlib]]
+[Next step: formatting in Matplotlib](MPLFormatting.md)
