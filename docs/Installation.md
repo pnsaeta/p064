@@ -1,7 +1,5 @@
 # Installing and Configuring Software
 
-* toc
-{:toc}
 
 The computational portions of the course will use Python 3 and several modules.
 If you have Anaconda installed, You may already have everything you need
