@@ -56,32 +56,30 @@ Type "help", "copyright", "credits" or "license" for more information.
 ## Installing Python on MacOS
 
 Although there is a Python version already installed in MacOS, it tends to lag
-behind and I much prefer to use [[https://homebrew.sh][Homebrew]] to install an up-to-date version (and
+behind and I much prefer to use [Homebrew](https://homebrew.sh) to install an up-to-date version (and
 plenty of other free software). You can check if you already have it installed
 by opening up a terminal window (the *Terminal.app* program is in
-##/Applications/Utilities/Terminal.app*, or you can use an alternative terminal
-program, such as [[https://iterm2.com][iTerm2]]).
+`/Applications/Utilities/Terminal.app`, or you can use an alternative terminal
+program, such as [iTerm2](https://iterm2.com)).
 
-~~~~
-which brew
-
+~~~~ shell
+> which brew
 /opt/homebrew/bin/brew
 ~~~~
-
 
 Since I already have the `brew` command installed, I see that it is located in
 `/opt/homebrew/bin`, which is where most Homebrew commands get linked.
 
-If you do not have Homebrew installed, you can follow the directions at [[https://brew.sh][brew.sh]]
+If you do not have Homebrew installed, you can follow the directions at [brew.sh](https://brew.sh)
 or paste the following at the terminal.
 
-~~~~
-/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+~~~~ shell
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ~~~~
 
 Once Homebrew is installed, use it to install python:
 
-~~~~
+~~~~ shell
 brew install python
 ~~~~
 
@@ -89,8 +87,8 @@ This should install the most recent stable version of Python 3. It also includes
 the Python installer `pip`. (Prior versions of jupyterlab required nodejs, but
 the current version (jupyterlab-3.0) does not.) 
 
-~~~~
-$$ brew --version
+~~~~ shell
+> brew --version
 
 Homebrew 3.3.9
 Homebrew/homebrew-core (git revision 5eeaacb2ec3; last commit 2022-01-04)
@@ -116,7 +114,7 @@ displayed inside a jupyter lab window.
 
 Make sure that Python 3 is installed:
 
-~~~~
+~~~~ shell
 sudo apt update
 sudo apt -y upgrade
 sudo apt install -y python3-dev python3-pip
@@ -128,7 +126,7 @@ sudo apt install -y build-essential libssl-dev libffi-dev
 You can learn a lot about your current environment by issuing the `env` command
 at a terminal prompt:
 
-~~~~
+~~~~ shell
 > env
 PWD=/Users/saeta/Documents/Courses/p64
 LOGNAME=saeta
@@ -175,7 +173,7 @@ Python has a standard package manager, *pip*, which stands for **Package
 Installer for Python**. You can check if `pip` is available by entering the
 following command at a terminal prompt:
 
-~~~~
+~~~~ shell
 $$ pip --version
 pip 22.1.2 from /Users/saeta/.local/lib/python3.10/site-packages/pip (python 3.10)
 ~~~~
@@ -191,19 +189,24 @@ available, you can install everything you need with the following. If you
 prefer, you can first create a virtual environment for this Python installation
 so any upgrades or installed libraries don't encounter conflicts:
 
-
-    virtualenv jup        # the standard virtualenv package
-    vf jup                # or, if you use the fish shell, as I do
+~~~~ shell
+virtualenv jup        # the standard virtualenv package
+vf jup                # or, if you use the fish shell, as I do
+~~~~
 
 After creating the virtual environment above, then run
 
-    pip install --upgrade pip  # make sure you have an up-to-date version
-    pip install numpy scipy matplotlib jupyter
+~~~~ shell
+pip install --upgrade pip  # make sure you have an up-to-date version
+pip install numpy scipy matplotlib jupyter
+~~~~
 
 These commands install the minimum you need to get going. However, I recommend also installing some more packages:
 
-    pip install autopep8 ipympl jupyter_contrib_nbextensions plotly
-    jupyter contrib nbextension install --user
+~~~~ shell
+pip install autopep8 ipympl jupyter_contrib_nbextensions plotly
+jupyter contrib nbextension install --user
+~~~~
 
 ## Configuration
 
@@ -214,29 +217,34 @@ customize things a bit. Here are some basic ideas.
 
 First install `jupyter_contrib_nbextensions` from pip:
 
-    pip install jupyter_contrib_nbextensions
+~~~~ shell
+pip install jupyter_contrib_nbextensions
+~~~~
 
 Next install the necessary javascript and css files
 
-    jupyter contrib nbextension install --user
-    pip3 install jupyter_nbextensions_configurator
-    jupyter nbextensions_configurator enable --user
+~~~~ shell
+jupyter contrib nbextension install --user
+pip install jupyter_nbextensions_configurator
+jupyter nbextensions_configurator enable --user
+~~~~
 
 Launch Jupyter notebook from the directory where you would like to load code and save notebooks:
 
-    > cd ~/Documents/testing
-    > jupyter notebook
-
+~~~~ shell
+> cd ~/Documents/testing
+> jupyter notebook
+~~~~
 
 A browser window should open and you will see a listing of the files in the current directory. At the bottom of the Edit menu you should see
 
-   ![nbextensions config](figs/notebookext1.png)
+<p class="center" markdown="0"><img alt="nbextensions config" src="figs/notebookext1.png"></p>
 
-   You should now see a menu item called **Nbextensions**, as illustrated in the
-   figure.
+You should now see a menu item called **Nbextensions**, as illustrated in the figure.
    
-
-   ![Nbextensions](figs/nbextensions.png)
+<p class="center" markdown="0">
+   <img alt="Nbextensions" src="figs/nbextensions.png">
+</p>
 
 Clicking on the **Nbextensions** menu will allow you to load extensions as  desired. I recommend several, including 
 
@@ -251,18 +259,17 @@ Clicking on the **Nbextensions** menu will allow you to load extensions as  desi
 
 We will need a couple of extensions to be installed in JupyterLab. The first step to install those is to enable them by clicking the jigsaw icon as shown in the figure below and then clicking on the **Enable** button.
 
-![Enable](figs/labext1.png)
+<p class="center"><img alt="Enable" src="figs/labext1.png"></p>
 
 Once you have enabled extensions, you can use the search box to install the two extensions shown here
 
-![](figs/labext2.png)
+<p class="center"><img alt="?" src="figs/labext2.png"></p>
 
 Alternatively, you can issue the following statement in the terminal
 
-~~~~
-jupyter labextension install @jupyter-widgets/controls \
-   @jupyter-widgets/jupyterlab-manager jupyterlab-plotly\
-   jupyter-matplotlib
+~~~~ shell
+jupyter labextension install @jupyter-widgets/controls @jupyter-widgets/jupyterlab-manager \
+   jupyterlab-plotly jupyter-matplotlib
 ~~~~
 
 ### Jupyter Notebook
@@ -276,14 +283,13 @@ You can override default styling of notebook cells by preparing a `custom.css`
 file and placing it in `~/.jupyter/custom/custom.css`. The following example
 allows the width of the cell to expand as the window is made wider:
 
-~~~~
+~~~~ css
 .container {
   width: 100% !important;
   margin-right: 40px;
   margin-left: 40px;
 }
 ~~~~
-
 
 
 ### Matplotlib
@@ -298,7 +304,7 @@ This file has all sorts of options, all of them commented out with leading hash
 tags. Uncomment the lines you wish to modify and set appropriate values. On my
 system, I have set the following lines:
 
-~~~~
+~~~~ shell
 saeta@Saeta-MBP19~/.c/matplotlib> grep "^[^ #]" matplotlibrc
 backend             : macosx
 font.family         : serif # sans-serif
@@ -314,7 +320,7 @@ ytick.direction     : in   ## direction: in, out, or inout
 
 savefig.format      : pdf  ## png, ps, pdf, svg
 savefig.transparent : True ## setting that controls whether figures are saved with a
-               ## transparent background by default
+                           ## transparent background by default
 ~~~~
 
 ### Using LaTeX in matplotlib labels
@@ -332,7 +338,7 @@ keyword argument `usetex=False` in the label to avoid the problem.
 You can change the defaults used to generate graphs in a notebook by writing
 values directly to the `matplotlib.rcParams` dictionary.
 
-~~~~
+~~~~ python
 import matplotlib as mpl
 mpl.rcParams['figure.figsize'] = [12, 8] # You can adjust the plot size
 mpl.rcParams['axes.titlesize'] = 18
@@ -343,7 +349,7 @@ mpl.rcParams['legend.fontsize'] = 'large'
 ~~~~
 
 If you'd like to see *all* the available parameters and their current values,
-lanuch Python and run
+launch Python and run
 
 ~~~~ python
 import matplotlib as mpl
