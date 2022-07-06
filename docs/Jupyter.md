@@ -1,3 +1,22 @@
+{:menu Setup}
+{::comment}menu-start{:/comment}
+
+<div class="dropdown">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="Installation.html">Installing necessary software</a></li>
+<li><a href="Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="NumPy.html">NumPy</a></li>
+<li><a href="Matplotlib.html">Matplotlib</a></li>
+<li><a href="MPLFormatting.html">Formatting Plots</a></li>
+</ul>
+</div>
+</div>
+
+{::comment}menu-end{:/comment}
+
+
 # Using Jupyter Notebooks
 
 * toc
