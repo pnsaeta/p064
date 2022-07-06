@@ -49,6 +49,11 @@ th { padding-right: 16px; }
   display: inline-block;
 }
 
+.dropdown p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
