@@ -1,14 +1,21 @@
 {:menu LinAl}
 {::comment}menu-start{:/comment}
-<ul class="menu">
-<li class="menu"><a href="SquareMatrices.html">Special square matrices</a></li>
-<li class="menu"><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
-<li class="menu"><a href="HilbertSpace.html">Hilbert spaces</a></li>
-<li class="menu"><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
-<li class="menu"><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
-<li class="menu"><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li></ul>
-{::comment}menu-end{:/comment}
 
+<div class="dropdown">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SquareMatrices.html">Special square matrices</a></li>
+<li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
+<li><a href="HilbertSpace.html">Hilbert spaces</a></li>
+<li><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
+<li><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
+<li><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+</ul>
+</div>
+</div>
+
+{::comment}menu-end{:/comment}
 
 # Diagonalization
 
