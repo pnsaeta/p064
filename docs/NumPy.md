@@ -11,7 +11,9 @@ NumPy is a Python library of optimized routines for computing with arrays. Compa
 
 The standard way to access the routines of NumPy in a Python program is with an import statement of the form
 
-    import numpy as np
+~~~~ python
+import numpy as np
+~~~~
 
 
 A basic numerical type in NumPy is the `np.ndarray`, which can represent an array of arbitrary numbers of dimensions. You can create an array from basic Python types such as **lists** and **tuples** using `np.asarray(list_or_tuple)`. For example

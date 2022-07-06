@@ -103,7 +103,7 @@ Download the Anaconda3 installer and launch it. After it finishes installing, la
 
 This opens a terminal window. Enter the command
 
-~~~~
+~~~~ shell
 pip install ipympl
 ~~~~
 
@@ -353,8 +353,8 @@ launch Python and run
 
 ~~~~ python
 import matplotlib as mpl
-mess = []
 for k, v in mpl.rcParams.items():
-    mess.append(f"{k: >32s} = {v}")
-return mess
+    print(f"{k: >32s} = {v}")
 ~~~~
+
+The output runs to 300+ lines.

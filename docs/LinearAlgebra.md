@@ -1,13 +1,28 @@
+{:menu LinAl}
+{::comment}menu-start{:/comment}
+
+<div class="dropdown">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SquareMatrices.html">Special square matrices</a></li>
+<li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
+<li><a href="HilbertSpace.html">Hilbert spaces</a></li>
+<li><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
+<li><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
+<li><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+</ul>
+</div>
+</div>
+
+{::comment}menu-end{:/comment}
+
 # Linear Algebra
 
-+ [Special square matrices](SquareMatrices.md)
-+ [Gauss-Jordan elimination](GaussJordan.md)
-+ [Hilbert spaces](HilbertSpace.md)
-+ [Diagonalizing a matrix](Diagonalization.md)
-+ [Eigenvalues, eigenvectors, and completeness](Eigenvectors.md)
-+ [Numerical linear algebra in NumPy](NumericalLinearAlgebra.md)
-
 [Back to the top](index.md)
+
+* toc
+{:toc}
 
 ## Notation
 
@@ -67,6 +82,13 @@ where the star indicates complex conjugation. This definition ensures that the m
 \begin{equation}\label{eq:c-magnitude}
     \braket{a}{a} = \sum_{i=1}^N a_i^* a_i = \sum_{i=1}^N |a_i^2|
 \end{equation}
+
+It is common in physics to use the same notation for the magnitude of a vector as for the absolute value of a real or complex number: 
+\\[
+   |x|, |\vb{a}| \qqtext{(physics)} \qqtext{vs} |x|, ||\vb{a}|| \qqtext{(math)}
+\\]
+Because physicists habitually use notation that distinguishes vectors from scalars and matrices, the double pipes are unnecessary; since math frequently does not, using the double pipes for **norm** helps remind the reader of the meaning of the vector whose norm is being referenced.
+
 
 ### Vector Spaces over the Field of Complex Numbers
 

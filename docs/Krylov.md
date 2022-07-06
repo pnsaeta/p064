@@ -45,4 +45,4 @@ The **generalized minimum residual** method (GMRES) is a robust means of searchi
 3. Let $$e_0 \leftarrow \|\mat{Q}_0\| / \|\vb{b}\|$$, the error in the zeroth-order approximation to $$\vb{x}$$.
 4. For $$k = 0, 1, 2, \ldots, m-1$$:
     1. Construct column $$k+1$$ of $$\mat{Q}$$ to be an orthonormal quasi-Krylov vector of the first $$k$$ vectors 
-    2. 
+    2. blah

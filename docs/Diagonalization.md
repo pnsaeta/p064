@@ -1,4 +1,19 @@
-# Matrix Diagonalization
+{:menu LinAl}
+{::comment}menu-start{:/comment}
+<ul class="menu">
+<li class="menu"><a href="SquareMatrices.html">Special square matrices</a></li>
+<li class="menu"><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
+<li class="menu"><a href="HilbertSpace.html">Hilbert spaces</a></li>
+<li class="menu"><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
+<li class="menu"><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
+<li class="menu"><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li></ul>
+{::comment}menu-end{:/comment}
+
+
+# Diagonalization
+
+* toc
+{:toc}
 
 [Back to the top](LinearAlgebra.md)
 

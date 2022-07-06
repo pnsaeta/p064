@@ -2,7 +2,7 @@
 
 * toc
 {:toc}
-
+ 
 ## Cheat sheets
 
   - [Beginners](https://matplotlib.org/cheatsheets/handout-beginner.pdf)
