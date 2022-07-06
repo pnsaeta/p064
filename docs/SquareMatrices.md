@@ -18,6 +18,7 @@
 {::comment}menu-end{:/comment}
 
 
+
 # Square Matrices
 
 Square matrices have a number of interesting properties and deserve special attention.

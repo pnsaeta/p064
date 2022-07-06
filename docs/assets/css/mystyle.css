@@ -1,15 +1,22 @@
 a { font-weight: bold; font-family: sans-serif;}
 body {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 0;
     font: 14px/1.5 Georgia;
     margin: 16px;
-    margin-right: 150px;
     color: #606060;
 }
-div#logo {
+div#logo { display: none; }
+
+@media screen and (min-width: 750px) {
+  body {
+    margin-right: 150px;
+  }
+  div#logo {
     position: fixed; right:20px; top:20px;
+    display: block;
+  }
 }
+
 
 table.nicetable tr td {
     padding: 4px;
