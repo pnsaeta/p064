@@ -5,6 +5,7 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
+<li><a href="LinearAlgebra.html">Linear Algebra</a></li>
 <li><a href="SquareMatrices.html">Special square matrices</a></li>
 <li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
 <li><a href="HilbertSpace.html">Hilbert spaces</a></li>

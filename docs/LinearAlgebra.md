@@ -5,6 +5,7 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
+<li><a href="LinearAlgebra.html">Linear Algebra</a></li>
 <li><a href="SquareMatrices.html">Special square matrices</a></li>
 <li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
 <li><a href="HilbertSpace.html">Hilbert spaces</a></li>
@@ -64,7 +65,7 @@ From a matrix standpoint, the inner product of two vectors is represented by the
   \end{pmatrix}
 \\]
 
-Note that this operation only makes sense provided that both vectors have the same dimension (rank).
+Note that this operation only makes sense provided that both vectors have the same dimension.
 
 The magnitude of a vector having such an inner product is given by
 \begin{equation}\label{eq:real-mag}
@@ -120,7 +121,7 @@ each of the Cartesian directions: $$e_1 = (1,0,0,\ldots)$$, $$e_2 = (0, 1, 0, \l
 
 ## Outer Products
 
-The inner product described above takes two equal-rank vectors and contracts them to produce a scalar. In matrix language, it is the product of the transpose of the first vector (converting a column vector to a row vector) by the second. What happens if we let the first vector remain a column vector but "contract" it with the transpose of the second vector? That is, take
+The inner product described above takes two vectors of equal dimension and contracts them to produce a scalar. In matrix language, it is the product of the transpose of the first vector (converting a column vector to a row vector) by the second. What happens if we let the first vector remain a column vector but "contract" it with the transpose of the second vector? That is, take
 \\[
   \mat{M} = \begin{pmatrix} a_1 \\\ a_2 \\\ \vdots \\\ a_m \end{pmatrix} \vdot
     \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}

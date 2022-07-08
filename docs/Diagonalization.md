@@ -5,6 +5,7 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
+<li><a href="LinearAlgebra.html">Linear Algebra</a></li>
 <li><a href="SquareMatrices.html">Special square matrices</a></li>
 <li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
 <li><a href="HilbertSpace.html">Hilbert spaces</a></li>
@@ -40,7 +41,7 @@ A similarity transformation preserves the determinant of a matrix.
 
 ## Eigenvalues and Eigenvectors
 
-A rank-$$n$$ square matrix $$\mat{A}$$ transforms a vector in $$\mathbb{R}^n$$ to another vector in $$\mathbb{R}^n$$; in general, the transformed vector points in a different direction than the original vector and has different magnitude. However, an eigenvector satisfies
+An $$n$$-dimensional square matrix $$\mat{A}$$ transforms a vector in $$\mathbb{R}^n$$ to another vector in $$\mathbb{R}^n$$; in general, the transformed vector points in a different direction than the original vector and has different magnitude. However, an eigenvector satisfies
 \\[
     \mat{A} \vdot \vb{x} = \lambda \vb{x}
 \\]

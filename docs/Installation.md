@@ -10,6 +10,7 @@
 <li><a href="NumPy.html">NumPy</a></li>
 <li><a href="Matplotlib.html">Matplotlib</a></li>
 <li><a href="MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>

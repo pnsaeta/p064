@@ -17,8 +17,15 @@
 
 {::comment}menu-end{:/comment}
 
+# Pandas
 
-[Pandas](https://pandas.pydata.org) is a Python module that makes is easier to analyze data. 
+* toc
+{:toc}
+
+[Pandas](https://pandas.pydata.org) is a Python module that provides features 
+somewhat akin to a spreadsheet or database and meshes very naturally with both
+[NumPy](NumPy.md) and [Matplotlib](Matplotlib.md). Before we can
+explore it, we need to import this module. 
 
 ## Installation
 
@@ -132,3 +139,94 @@ df.Fibonacci
 2.645751    21
 Name: Fibonacci, dtype: int64
 ~~~~
+
+
+## Example
+
+On the [Matplotlib introduction page](Matplotlib.md), we developed the following figure.
+
+<p class="center"><img src="figs/intro-5.png" style="width: 500px;"></p>
+<p class="mycap">Now our resonance cup runneth over in style!</p>
+
+I’m going to recompute the values plotted in this figure and store them
+in a pandas DataFrame for easy display.
+
+
+~~~~ python
+# First make a dictionary of vectors
+values = {z:myfunc(logx, z) for z in (0.05, 0.1, 0.2, 0.5, 1, 2)}
+# Now create a pandas DataFrame to store them
+df = pd.DataFrame(values, index=logx)
+df
+~~~~
+
+<p class="center"><img src="figs/intro-pandas.png"></p>
+<p class="mycap">Displaying a pandas DataFrame.</p>
+
+
+
+
+You can access individual columns using their name:
+
+
+~~~~ python
+    df[0.2]
+    df.plot(logx=True, logy=True, xlabel="$x$", ylabel="$y$");
+~~~~
+
+<p class="center"><img src="figs/intro-6.png"></p>
+<p class="mycap">With the curves in a pandas DataFrame, the plot command takes a single line.</p>
+
+
+
+Notice how the value of $$\zeta$$ doesn’t affect the frequencies either
+significantly below the natural frequency ($$x = 1$$) nor significantly above it,
+where all the curves fall off in the same way with increasing frequency. Also
+note how the plotting operation could be achieved with a single call, with the
+various properties adjusted with keyword arguments. 
+
+## Practice with pandas and matplotlib
+
+I have placed some experimental data with uncertainties at
+https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt. The $$x$$ axis
+variable is the position of the detector (in mm); the $$y$$ axis variable is the
+observed light intensity (in volts); the $$y$$ uncertainty values are in the same
+units. 
+
+Prepare a plot of these data using discrete points for the data, error bars set
+according to the uncertainties, and see if you can style your graph *exactly*
+like the one shown below. Feel free to consult the matplotlib documentation as
+liberally as you like! 
+
+
+<p class="center"><img src="figs/moore.png"></p>
+<p class="mycap">Target practice: Can you make your plot look <strong>exactly</strong> like this one?</p>
+
+**Hints**
+
++ You can load the data into a convenient data structure defined by pandas with
+   some code like 
+
+~~~~ python
+import pandas as pd
+the_data = pd.read_table('filename_or_URL')
+~~~~
+
+You can then see a table of the data by entering `the_data` in a Jupyter
+cell. You can access individual columns of the data by name: `the_data['x']` or
+`the_data.x`. 
+
++ The command to plot with error bars is `ax.errorbar(xvals, yvals, yerrors)`
+   and you can add lots of keyword arguments to make things look the way you
+   wish. To make a pleasant-looking plot, I recommend scaling the errors in
+   Moore’s data by a factor of 50 (yeah, he was good!). The data in the
+   $$x$$ column is the position of the detector in millimeters, while the data in
+   the columns labeled `I` and `I_err` are the intensity and intensity errors,
+   with values in volts. 
+
++ Potentially interesting keywords:
+    - `marker`
+    - `fmt`
+    - `markersize`
+    - `capsize`
+

@@ -1,3 +1,4 @@
+Linear Algebra	LinearAlgebra.md
 Special square matrices	SquareMatrices.md
 Gauss-Jordan elimination	GaussJordan.md
 Hilbert spaces	HilbertSpace.md

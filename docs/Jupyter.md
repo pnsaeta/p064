@@ -10,11 +10,13 @@
 <li><a href="NumPy.html">NumPy</a></li>
 <li><a href="Matplotlib.html">Matplotlib</a></li>
 <li><a href="MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
 
 {::comment}menu-end{:/comment}
+
 
 
 # Using Jupyter Notebooks
@@ -37,35 +39,34 @@ get submitted to the Jupyter kernel (and passed to the Python interpreter).
 This cell is in Raw mode so I can illustrate the basics of Markdown.
 
 ~~~~ markdown
-    Italics: *this will be in italics*
+Italics: *this will be in italics*
 
-    Boldface: **whereas this statement is in boldface.**
+Boldface: **whereas this statement is in boldface.**
 
-    Code: `def fred(x, y)`
+Code: `def fred(x, y)`
 
-    - a bullet
-    - in a list
+- a bullet
+- in a list
 
-    1. Or a numbered
-    2. list
+1. Or a numbered
+2. list
 
-    To write math, surround with dollar signs:
-    $E = m c^2$ or $x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}$
+To write math, surround with dollar signs:
+$E = m c^2$ or $x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a}$
 
-    To center an equation on its own line, use
-    \begin{equation}
-    \sin^2 \theta + \cos^2 \theta = 1
-    \end{equation}
+To center an equation on its own line, use
+\begin{equation}
+\sin^2 \theta + \cos^2 \theta = 1
+\end{equation}
 
-    Notice that mathematical functions should be preceded with a backslash
-    and that you get Greek letters by preceding their name in English with a backslash. 
+Notice that mathematical functions should be preceded with a backslash
+and that you get Greek letters by preceding their name in English with a backslash. 
 
-    For more information about Markdown, check out the **Markdown Reference**
-    item in the Jupyter **Help** menu.
+For more information about Markdown, check out the **Markdown Reference**
+item in the Jupyter **Help** menu.
 ~~~~
 
-And this is how that same text appears when used in a Markdown cell
-
+And this is how that same text appears when used in a Markdown cell:
 
 Italics: *this will be in italics*
 
