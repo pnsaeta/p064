@@ -66,3 +66,69 @@ But $$(\vb{x}_2 \vdot \mat{H} \vdot \vb{x}_1)^{\rm T} = \vb{x}_1 \vdot \mat{H}^{
 
 Since a scalar multiple of an eigenvector is also an eigenvector, it is possible to find a set of orthonormal eigenvectors that span the vector space of real symmetric matrices and also of Hermitian matrices.
 
+## Positive Definite Matrices
+
+A symmetric square matrix $$\mat{A}$$ is **positive definite** if 
+\\[
+    \vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x} \ge 0
+\\]
+for all vectors $$\vb{x}$$. [If $$\mat{A}$$ is Hermitian, then the transpose operation implies complex conjugation.] Such matrices have nonnegative real eigenvalues. The proof is straightforward. Suppose that $$\vb{x}$$ is an eigenvector with eigenvalue $$\lambda$$. Then
+\\[
+    \vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x} = \vb{x}^{\rm T} \vdot \lambda \vb{x} = \lambda | \vb{x} |^2
+\\]
+Taking the transpose of this equation gives
+\\[
+    \qty(\vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A}^\rm {T} \vdot \qty(\vb{x}^{\rm T})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x} = \lambda |\vb{x}|^2
+\\]
+The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x}$$. Therefore, $$\lambda \ge 0$$. Once again, the proof for Hermitian matrices is similar.
+
+### Physics Example
+
+What is a physical example of a positive-definite matrix? Consider the kinetic energy of a rotating rigid body. Choosing an origin on the axis of rotation, the velocity of any point on the body is given by
+\\[
+    \vb{v}\_i = \vb*{\omega}\cross\vb{r}\_i
+\\]
+
+The kinetic energy of a mass $$m_i$$ at $$\vb{r}_i$$ is 
+\\[
+    K = \frac12 m\_i \vb{v}\_i \vdot \vb{v}\_i =
+     \frac12 m\_i (\vb\*{\omega}\cross\vb{r}\_i) \vdot
+     (\vb\*{\omega}\cross\vb{r}\_i)
+\\]
+Let us decompose $$\vb{r}_i$$ into its components parallel and perpendicular to $$\vb*{\omega}$$:
+\\[
+    \vb{r}\_i = \vb{r}\_i^{\parallel} + \vb{r}\_i^{\perp}
+\\]
+The magnitude of the cross product with $$\vb*{\omega}$$ is $$\omega r_i^{\perp} = \omega |\vb{r}_i - \vb{r}_i^{\parallel}|$$, so the magnitude squared is
+\\[
+    (\vb\*{\omega}\cross\vb{r}\_i) \vdot (\vb\*{\omega}\cross\vb{r}\_i)
+    = \omega^2 r\_i^2 - (\vb*{\omega}\vdot\vb{r}\_i)^2
+    = \vb\*{\omega}^{\rm T} \vdot (r\_i^2 \mat{I} - \vb{r}\_i \vdot \vb{r}\_i^{\rm T}) \vdot \vb\*{\omega}
+\\]
+Therefore, we can express the kinetic energy of the rotating rigid body as
+\\[
+    K = \frac12
+    \begin{pmatrix}
+    \omega_x & \omega_y & \omega_z
+    \end{pmatrix}
+    \vdot
+    \underbrace{
+      \qty[
+    \sum\_i
+    m\_i
+    \begin{pmatrix}
+      r\_i^2 - x\_i^2 & -x\_i y\_i & -x\_i z\_i \\\ 
+      -y\_i x\_i & r\_i^2 - y\_i^2 & -y\_i z\_i \\\ 
+      -z\_i x\_i & -z\_i y\_i  & r\_i^2 - z\_i^2 
+    \end{pmatrix}
+    ]
+    }\_{\mat{J}}
+    \vdot
+    \begin{pmatrix}
+    \omega\_x \\\ \omega\_y \\\ \omega\_z
+    \end{pmatrix}
+\\]
+where $$\mat{J}$$ represents the **inertia tensor** of the rigid body. Since the contribution to the kinetic energy of each mass point $$m_i$$ is nonnegative, the symmetric matrix of the inertia tensor is positive definite (despite the impressive number of evident minus signs!).
+
+The structure of the inertia tensor makes it possible to show that we can always find a body-centered coordinate system in which the matrix is diagonal; because it is also positive definite, the eigenvalues along the diagonal must all be nonnegative. 
+
