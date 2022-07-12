@@ -53,15 +53,15 @@ If $$\mat{A}$$ transforms a column vector $$\vb{x}$$ to a new column vector $$\v
   \mat{A}^{-1} \vb{y} = \mat{A}^{-1} \vdot (\mat{A} \vdot \vb{x}) = (\mat{A}^{-1} \vdot \mat{A}) \vdot \vb{x} =
    \mat{I} \vdot \vb{x} = \vb{x}
 \end{equation}
-The existence of an inverse implies that operating with $$\mat{A}$$ on a vector does not entail the loss of information; that is, the matrix lacks a **nullspace**, which means that its rows are linearly independent. It usually isn't obvious by inspection whether a square matrix has an inverse (that its rows are linearly independent). If one or more rows can be expressed as the linear combination of other rows, then the matrix is **singular**, its **determinant** vanishes, and it does not have an inverse. 
+The existence of an inverse implies that operating with $$\mat{A}$$ on a vector does not entail the loss of information; that is, the matrix has a trivial **nullspace**, which means that its rows (and columns) are linearly independent. It usually isn't obvious by inspection whether a square matrix has an inverse (that its rows are linearly independent). If one or more rows can be expressed as the linear combination of other rows, then the matrix is **singular**, its **determinant** vanishes, and it does not have an inverse. 
 
 You can use [Gauss-Jordan elimination](GaussJordan.md) to compute the inverse of a square matrix (provided it has one).
 
-## Special Square Matrices
 
 Besides the identity matrix, there are a number of important classes of square matrices that arise in physics:
 
-### Hermitian
+## Hermitian Matrices
+
 A **Hermitian matrix** is a complex matrix equal to its conjugate transpose: $$\mat{H} = \mat{H}^*$$.
 
 + In matrix mechanics, Hermitian matrices represent physically observable quantities (e.g., angular momentum, the hamiltonian (energy), etc.). The matrix representing the $$z$$ component of spin angular momentum of a spin-1/2 particle, in the basis of $$\ket{\uparrow}, \ket{\downarrow}$$ along $$z$$ is
@@ -76,10 +76,12 @@ Note that the “hat” on $$S_z$$ indicates that it is an operator; it operates
 + Hermitian matrices are diagonalizable.
 + Hermitian matrices have real eigenvalues.
 
-### Normal
- A **normal matrix** commutes with its conjugate transpose: $$\mat{A}^* \vdot \mat{A} = \mat{A} \vdot \mat{A}^*$$.
+## Normal Matrices
 
-### Unitary
+A **normal matrix** commutes with its conjugate transpose: $$\mat{A}^* \vdot \mat{A} = \mat{A} \vdot \mat{A}^*$$.
+
+## Unitary Matrices
+
 A **unitary matrix** is a complex square matrix whose inverse is equal to its conjugate transpose: $$\mat{U}^{-1} = \mat{U}^*$$. 
 
 
@@ -96,7 +98,7 @@ A **unitary matrix** is a complex square matrix whose inverse is equal to its co
   e^{i\mat{H}} = \mat{I} + i\mat{H} + \frac{i^2}{2!} \mat{H}\vdot \mat{H} + \frac{i^3}{3!} \mat{H}\vdot\mat{H}\vdot\mat{H} + \cdots
 \end{equation}
 
-### Orthogonal
+## Orthogonal Matrices
 
 An orthogonal matrix satisfies
 \begin{equation}

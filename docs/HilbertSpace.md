@@ -27,7 +27,7 @@ A **Hilbert space** is a vector space with an inner product that is used to defi
 
 The meaning of a **complete metric space** has to do with with limiting sequences of vectors: if a series of vectors, $$\displaystyle \sum_{k=0}^\infty \vb{v}_k$$ converges absolutely — meaning that $$\displaystyle\sum_{k=0}^\infty \parallel \vb{v}_k \parallel < \infty$$ — then the partial sums converge to an element in the Hilbert space.
 
-What is an example of a Hilbert space. Suppose that $$H$$ is the space of all square-integrable one-dimensional real functions of a real variable. That is, the elements $$f$$ of the space $$H$$ satisfy
+What is an example of a Hilbert space? Suppose that $$H$$ is the space of all square-integrable one-dimensional real functions of a real variable. That is, the elements $$f$$ of the space $$H$$ satisfy
 \begin{equation}\label{eq:square-integrable}
   \int_{-\infty}^{\infty} [f(x)]^2 \dd{x} < \infty
 \end{equation}

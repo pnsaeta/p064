@@ -37,12 +37,16 @@ import numpy as np
 
 A basic numerical type in NumPy is the `np.ndarray`, which can represent an array of arbitrary numbers of dimensions. You can create an array from basic Python types such as **lists** and **tuples** using `np.asarray(list_or_tuple)`. For example
 
-    a = np.asarray([[1, 2, 3], [4, 5, 6]])
+~~~~ python
+a = np.asarray([[1, 2, 3], [4, 5, 6]])
+~~~~
 
 generates the $$2\times 3$$ array
 
-    array([[1, 2, 3],
-           [4, 5, 6]])
+~~~~ python
+array([[1, 2, 3],
+       [4, 5, 6]])
+~~~~
 
 Besides listing all elements of a NumPy array, you can use a number of convenience functions to generate them:
 
@@ -57,23 +61,29 @@ Besides listing all elements of a NumPy array, you can use a number of convenien
 
 Suppose that you want to multiply each element in a list by 3.2. In standard Python, you could write a list comprehension of the form
 
-    b = [x * 3.2 for x in a]
+~~~~ python
+b = [x * 3.2 for x in a]
+~~~~
 
 for a list stored in `a`. If, instead, you use a NumPy array, you can simplify the notation to eliminate explicit loops:
 
-    b = np.asarray(a) * 3.2
+~~~~ python
+b = np.asarray(a) * 3.2
+~~~~
 
 This notation also works for multiplying (or performing similar arithmetic operations) on all elements of a NumPy array of arbitrary dimensions.
 
 All of the standard functions have NumPy versions that “broadcast” in this way over the elements of the array that they are passed. So, the following code computes a comb of equally spaced $$x$$ values and computes the corresponding sine values and then uses matplotlib to plot the result:
 
-    import matplotlib.pyplot as plt
-    x = np.linspace(0, np.pi, 101)  # create an array of equally spaced x values
-    y = np.sin(x)                   # compute the corresponding y values via broadcasting
-    fig, ax = plt.subplots()        # start a matplotlib plot
-    ax.plot(x, y)                   # by default, matplotlib connects the points
-    ax.set_xlabel('$x$')            # dollar signs turn on LaTeX; x is set in italics
-    ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escaping
+~~~~ python
+import matplotlib.pyplot as plt
+x = np.linspace(0, np.pi, 101)  # create an array of equally spaced x values
+y = np.sin(x)                   # compute the corresponding y values via broadcasting
+fig, ax = plt.subplots()        # start a matplotlib plot
+ax.plot(x, y)                   # by default, matplotlib connects the points
+ax.set_xlabel('$x$')            # dollar signs turn on LaTeX; x is set in italics
+ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escaping
+~~~~
 
 ![Sine plot](figs/sineplot.png)
 
@@ -93,50 +103,56 @@ You can [read more about NumPy's universal functions](https://numpy.org/doc/stab
 
 Sometimes you want to operate row-wise or column-wise on a two-dimensional array. Consider the following example:
 
-    from numpy.random import default_rng
-    rng = default_rng()                     # initialize a random number generator
-    m = np.around(rng.uniform(-5., 5., size=(2, 3)), 1)
-    m                                       # make a row of random numbers in [-5.0, 5.0) with 2 rows and 3 columns
-    array([[-1.5,  4.8, -0.7],              # but round to one digit after the decimal point
-           [ 3.4, -4.8,  2.7]])
+~~~~ python
+from numpy.random import default_rng
+rng = default_rng()                     # initialize a random number generator
+m = np.around(rng.uniform(-5., 5., size=(2, 3)), 1)
+m                                       # make a row of random numbers in [-5.0, 5.0) with 2 rows and 3 columns
+array([[-1.5,  4.8, -0.7],              # but round to one digit after the decimal point
+        [ 3.4, -4.8,  2.7]])
 
-    m.shape                                 # describe the size of m
-    (2, 3)
+m.shape                                 # describe the size of m
+(2, 3)
 
-    m.max()                                 # what is the single largest value in the array?
-    4.8
+m.max()                                 # what is the single largest value in the array?
+4.8
 
-    m.max(axis=0)                           # what is the largest value in any row
-    array([3.4, 4.8, 2.7])                  # three answers, one for each column
+m.max(axis=0)                           # what is the largest value in any row
+array([3.4, 4.8, 2.7])                  # three answers, one for each column
 
-    m.max(axis=1)                           # what is the largest value in any column
-    array([4.8, 3.4])                       # two answers, one for each row
+m.max(axis=1)                           # what is the largest value in any column
+array([4.8, 3.4])                       # two answers, one for each row
+~~~~
+
 
 This approach is not limited to two-dimensional arrays:
 
-    m3 = np.around(rng.uniform(-10., 10., size=(2,3,4)), 1)
-    m3
-    array([[[ 6.1,  0.2, -2.8,  3.8],
-            [ 8.1,  4.5, -3.1, -4.1],
-            [ 8.2,  0.1, -0.8, -5.6]],
+~~~~ python
+m3 = np.around(rng.uniform(-10., 10., size=(2,3,4)), 1)
+m3
+array([[[ 6.1,  0.2, -2.8,  3.8],
+        [ 8.1,  4.5, -3.1, -4.1],
+        [ 8.2,  0.1, -0.8, -5.6]],
 
-           [[ 9.3, -5.6, -6.2, -5.6],
-            [ 1.6,  0.2,  4.6, -8.5],
-            [ 5.8, -1.9,  1.2,  6. ]]])
-    m3.max()
-    9.3
-    m3.max(axis=0)
-    array([[ 9.3,  0.2, -2.8,  3.8],
-           [ 8.1,  4.5,  4.6, -4.1],
-           [ 8.2,  0.1,  1.2,  6. ]])
-    m3.max(axis=1)
-    array([[ 8.2,  4.5, -0.8,  3.8],
-           [ 9.3,  0.2,  4.6,  6. ]])
-    m3.max(axis=2)
-    array([[6.1, 8.1, 8.2],
-           [9.3, 4.6, 6. ]])
-    m3.max(axis=(0,1))
-    array([9.3, 4.5, 4.6, 6. ])
+        [[ 9.3, -5.6, -6.2, -5.6],
+        [ 1.6,  0.2,  4.6, -8.5],
+        [ 5.8, -1.9,  1.2,  6. ]]])
+m3.max()
+9.3
+m3.max(axis=0)
+array([[ 9.3,  0.2, -2.8,  3.8],
+        [ 8.1,  4.5,  4.6, -4.1],
+        [ 8.2,  0.1,  1.2,  6. ]])
+m3.max(axis=1)
+array([[ 8.2,  4.5, -0.8,  3.8],
+        [ 9.3,  0.2,  4.6,  6. ]])
+m3.max(axis=2)
+array([[6.1, 8.1, 8.2],
+        [9.3, 4.6, 6. ]])
+m3.max(axis=(0,1))
+array([9.3, 4.5, 4.6, 6. ])
+~~~~
+
 
 In summary, functions such as `sum`, `max`, `min`, etc., operate by default on all elements of multidimensional arrays, but can also be specialized to work along various axes (directions) of the array.
 
@@ -144,40 +160,46 @@ In summary, functions such as `sum`, `max`, `min`, etc., operate by default on a
 
 Like lists and tuples, NumPy arrays understand slices. To extract the first column (column 0) from `m`, use `m[:,0]`:
 
-    m[:,0]
-    array([-1.5,  3.4])
+~~~~ python
+m[:,0]
+array([-1.5,  3.4])
 
-    m[1,:]
-    array([ 3.4, -4.8,  2.7])
+m[1,:]
+array([ 3.4, -4.8,  2.7])
+~~~~
 
 Note that the "bare" colon means *all*; you can use `start:stop` or `start:stop:stride` syntax, as well.
 
-    p = np.array(range(12))
-    array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+~~~~ python
+p = np.array(range(12))
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
 
-    p[0:10:2]
-    array([0, 2, 4, 6, 8])
+p[0:10:2]
+array([0, 2, 4, 6, 8])
+~~~~
 
 ## Searching and sorting
 
 Sometimes you want to know not just what the largest value is but where it is in the array.
 
-    np.argmax(m3)                           # where is the largest element
-    12                                      # 9.3 is at offset 12 (the 13th element)
+~~~~ python
+np.argmax(m3)                           # where is the largest element
+12                                      # 9.3 is at offset 12 (the 13th element)
 
-    np.argmax(m3, axis=0)
-    array([[1, 0, 0, 0],
-           [0, 0, 1, 0],
-           [0, 0, 1, 1]])
+np.argmax(m3, axis=0)
+array([[1, 0, 0, 0],
+        [0, 0, 1, 0],
+        [0, 0, 1, 1]])
 
-    np.sort(m3)                             # sort over the last index of the array
-    array([[[-2.8,  0.2,  3.8,  6.1],
-            [-4.1, -3.1,  4.5,  8.1],
-            [-5.6, -0.8,  0.1,  8.2]],
+np.sort(m3)                             # sort over the last index of the array
+array([[[-2.8,  0.2,  3.8,  6.1],
+        [-4.1, -3.1,  4.5,  8.1],
+        [-5.6, -0.8,  0.1,  8.2]],
 
-           [[-6.2, -5.6, -5.6,  9.3],
-            [-8.5,  0.2,  1.6,  4.6],
-            [-1.9,  1.2,  5.8,  6. ]]])    
+        [[-6.2, -5.6, -5.6,  9.3],
+        [-8.5,  0.2,  1.6,  4.6],
+        [-1.9,  1.2,  5.8,  6. ]]])    
+~~~~
 
 You can also sort over other axes.
 

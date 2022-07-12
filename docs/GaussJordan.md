@@ -420,4 +420,4 @@ Finally, multiply row 2 by $$1/2$$ and add it to the first row
 0 & 0 & 1 & | & 0   & 1/7  & 1/7
 \end{pmatrix}
 \\]
-which yields the same result for the inverse as before. Even having permuted the first and second rows to use the largest available pivot, *we get the same inverse matrix*.
+which yields the same result for the inverse as before. Note that even though we permuted the first and second rows to use the largest available pivot, *we get the same inverse matrix*.

@@ -27,7 +27,7 @@
 
 ## Notation
 
-A “delightful” bug (feature?) of mathematical physics is the different notations used to describe identical mathematical systems/situations. In physics, we are wont to represent a quantity with magnitude and direction, such as a force $$\vb{F}$$ in either boldface or with an arrow over it ($$\va{F}$$). Mathematicians often prefer to use a component notation $$(F_1, F_2, F_3)$$ to represent the same thing. Each strategy has its pros and cons. The problem with the component notation is that it implicitly assumes a particular basis—which is typically **not** made explicit. Thus, we are “invited” to guess that $$F_1$$ is the component of $$F$$ in the $$x$$ direction, but unless this choice is stated explicitly, we can't really be sure. The “physics” notation $$\vb{F}$$ implies that the quantity $$F$$ has both a magnitude and a direction, but declines to state explicitly what its components may be. After all, the direction of the force exists *independent* of the choice of basis vectors we make to describe it. Fundamentally, north is north, even if we orient our coordinate system in some cockamaimie direction. Hence, much of physics is written in coordinate-free notation that emphasizes that vectors have magnitude and direction, rather than that they have representations in various bases.
+A “delightful” bug (feature?) of mathematical physics is the different notations used to describe identical mathematical systems/situations. In physics, we are wont to represent a quantity with magnitude and direction, such as a force $$\vb{F}$$ in either boldface or with an arrow over it ($$\va{F}$$). Mathematicians often prefer to use a component notation $$(F_1, F_2, F_3)$$ to represent the same thing. Each strategy has its pros and cons. The problem with the component notation is that it implicitly assumes a particular basis—which is typically **not** made explicit. Thus, we are “invited” to guess that $$F_1$$ is the component of $$F$$ in the $$x$$ direction, but unless this choice is stated explicitly, we can't really be sure. The “physics” notation $$\vb{F}$$ implies that the quantity $$F$$ has both a magnitude and a direction, but declines to state explicitly what its components may be. After all, the direction of the force exists *independent* of the choice of basis vectors we make to describe it. Fundamentally, north is north, even if we orient our coordinate system in some cockamaimie direction. Hence, much of physics is written in coordinate-free notation that emphasizes that vectors have magnitude and direction, rather than that they have representations in a particular basis.
 
 ## Linear Operators
 
@@ -35,7 +35,7 @@ A linear operator $$\hat{A}$$ has the following behavior
 \begin{equation}\label{eq:linear-operator}
   \hat{A}(\alpha \vb{x} + \beta \vb{y}) = \alpha \hat{A}\vb{x} + \beta \hat{A}\vb{y}
 \end{equation}
-In this expression, $$\alpha$$ and $$\beta$$ are scalar values (either real numbers or complex numbers) and $$\vb{x}$$ and $$\vb{y}$$ are $$N$$-dimensional vectors. The operator $$\hat{A}$$ transforms a vector in an $$N$$-dimensional space into another vector in the same $$N$$-dimensional space. Equation \ref{eq:linear-operator} says that you get the same result whether you combine vectors and then transform with the operator as when you transform the vectors separately and then combine the results. Why is this interesting?
+In this expression, $$\alpha$$ and $$\beta$$ are scalar values (either real numbers or complex numbers) and $$\vb{x}$$ and $$\vb{y}$$ are $$N$$-dimensional vectors. The operator $$\hat{A}$$ transforms a vector in an $$N$$-dimensional space into another vector in the same $$N$$-dimensional space. Equation (\ref{eq:linear-operator}) says that you get the same result whether you combine vectors and then transform with the operator as when you transform the vectors separately and then combine the results. Why is this interesting?
 
 Many physical quantities have this property. In classical mechanics, some linear operators are:
 
@@ -43,9 +43,9 @@ Many physical quantities have this property. In classical mechanics, some linear
 + Galilean transformations, $$\hat{G}(\vb{v})$$, which take $$\vb{r} \to \vb{r} + \vb{v} t$$ and $$\vb{p} \to \vb{p} + m\vb{v}$$.
 + time reversal, $$\hat{T}$$, which takes $$\vb{r}(t) \to \vb{r}(-t)$$ and $$\vb{p}(t) \to -\vb{p}(-t)$$.
 
-Linear operators are more much important in quantum mechanics. These act on a quantum state (vector), $$\ket{\psi}$$ and produce another state (vector) $$\ket{\varphi}$$ in the same vector space over the field of complex numbers. (In quantum mechanics, we represent state vectors as “kets” with the notation $$\ket{\psi}$$, which is a notation due to Paul Dirac. Indeed, every physically observable quantity corresponds to a special kind of linear operator, called a Hermitian operator, whose properties we will define and explore below.
+Linear operators are fundamental in quantum mechanics. These act on a quantum state (vector), $$\ket{\psi}$$ and produce another state (vector) $$\ket{\varphi}$$ in the same vector space over the field of complex numbers. The definition of the norm (magnitude) of a vector in a complex space requires the inner product with the Hermitian conjugate vector to produce a real value. When represented as vectors, the Hermitian conjugate of a column vector is its corresponding row vector with all values complex conjugated. (In quantum mechanics, we represent state vectors as “**kets**” with the notation $$\ket{\psi}$$, and their Hermitian conjugates as "**bras**" with the notation $$\bra{\psi}$$, which is a notation due to Paul Dirac. The names come from the inner product, $$\braket{\varphi}{\psi}$$, which was inspired by the Poisson **bra**c**ket**.) Indeed, every physically observable quantity corresponds to a special kind of linear operator, called a Hermitian operator, whose properties we will define and explore below.
 
-+ rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vu{z})$$
++ rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vb{e}_z)$$
 + the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$.
 
 ## Inner Products
@@ -117,7 +117,7 @@ Two vectors $$\vb{a}$$ and $$\vb{b}$$ are linearly independent if and only if
 \end{equation}
 which means that they are not colinear. In general, a vector space of dimension $$D$$ is spanned by 
 $$D$$ linearly independent vectors, which are often chosen to be unit vectors in
-each of the Cartesian directions: $$e_1 = (1,0,0,\ldots)$$, $$e_2 = (0, 1, 0, \ldots)$$, etc.
+each of the Cartesian directions: $$\vb{e}_1 = (1,0,0,\ldots)$$, $$\vb{e}_2 = (0, 1, 0, \ldots)$$, etc.
 
 ## Outer Products
 
@@ -134,3 +134,17 @@ The inner product described above takes two vectors of equal dimension and contr
     \end{pmatrix}
   \\]
 This is called the **outer product** of the two vectors and produces a rectangular matrix with $$m$$ rows and $$n$$ columns.
+
+## The Two Main Problems of Linear Algebra
+
+There are two primary problems in linear algebra. The first is to solve for $$\vb{x}$$ in equations of the form 
+\begin{equation}
+ \mat{A} \vdot \vb{x} = \vb{b}
+\end{equation}
+for known matrix $$\mat{A}$$ and vector $$\vb{b}$$. You undoubtedly know how this can be accomplished, in principle, using [Gauss-Jordan elimination](GaussJordan.md) to compute the inverse of $$\mat{A}$$ so that $$\vb{x} = \mat{A}^{-1}\vdot\vb{b}$$. For small matrices, this is straightforward; with large matrices it may be a poor strategy and require considerably more computation than needed. When $$\mat{A}$$ is known to have certain properties (it may be symmetric, or tridiagonal, or Hermitian, or …), there are specialized algorithms that speed up the computation (and may avoid numerical roundoff issues that may spoil the solution developed by a generic algorithm). We will explore some strategies for factoring $$\mat{A}$$ into the product of two or three matrices with special forms (such as upper- or lower-triangular, diagonal, etc.) that allow efficient solution for $$\vb{x}$$.
+
+The second is to find the solutions to
+\begin{equation}
+  \mat{A} \vdot \vb{x} = \lambda \vb{x}
+\end{equation}
+Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**.

@@ -19,7 +19,6 @@
 {::comment}menu-end{:/comment}
 
 
-
 # Numerical Linear Algebra with NumPy
 
 
@@ -152,7 +151,7 @@ array([[ 2., -1.,  0.],
        [ 0., -1.,  2.]])
 ~~~~
 
-According to *Numerical Recipes*, for matrices admitting a Cholesky decomposition, this method of solving $$\mat{A}\vdot\vb{x} = \vb{b}$$ is more numerically stable and about a factor of 2 faster than standard LDU decomposition.
+According to *Numerical Recipes*, for matrices admitting a Cholesky decomposition, this method of solving $$\mat{A}\vdot\vb{x} = \vb{b}$$ is more numerically stable and about a factor of 2 faster than standard [LDU decomposition](GaussJordan.md).
 
 ## Singular value decomposition
 
