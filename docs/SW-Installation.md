@@ -5,12 +5,12 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="Installation.html">Installing necessary software</a></li>
-<li><a href="Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="NumPy.html">NumPy</a></li>
-<li><a href="Matplotlib.html">Matplotlib</a></li>
-<li><a href="MPLFormatting.html">Formatting Plots</a></li>
-<li><a href="pandas.html">Pandas</a></li>
+<li><a href="SW-Installation.html">Installing necessary software</a></li>
+<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="SW-NumPy.html">NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
@@ -33,7 +33,7 @@ course, requires a live net connection) by using Google Colab, a
 Google-inflected version of JupyterLab. If you use this approach, all you need
 to do is head to [Google's colab page](https://colab.research.google.com/).
 If you need to access your
-own Python code, see [the Colab page](colab.md) for more information.
+own Python code, see [the Colab page](SW-colab.md) for more information.
 
 An Anaconda installation should already have Jupyter notebook installed and
 available, but you don't need the full anaconda distribution to use Jupyter

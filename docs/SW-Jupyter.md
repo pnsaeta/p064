@@ -5,12 +5,12 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="Installation.html">Installing necessary software</a></li>
-<li><a href="Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="NumPy.html">NumPy</a></li>
-<li><a href="Matplotlib.html">Matplotlib</a></li>
-<li><a href="MPLFormatting.html">Formatting Plots</a></li>
-<li><a href="pandas.html">Pandas</a></li>
+<li><a href="SW-Installation.html">Installing necessary software</a></li>
+<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="SW-NumPy.html">NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
@@ -144,5 +144,5 @@ Some explanations:
   output of this command. (You can remove it and run the command again to see
   what gets returned.) 
 
-See [Introduction to Matplotlib](Matplotlib.md) for some basics on using Matplotlib to generate plots.
+See [Introduction to Matplotlib](SW-Matplotlib.md) for some basics on using Matplotlib to generate plots.
 

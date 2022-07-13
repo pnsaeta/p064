@@ -5,12 +5,12 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="Installation.html">Installing necessary software</a></li>
-<li><a href="Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="NumPy.html">NumPy</a></li>
-<li><a href="Matplotlib.html">Matplotlib</a></li>
-<li><a href="MPLFormatting.html">Formatting Plots</a></li>
-<li><a href="pandas.html">Pandas</a></li>
+<li><a href="SW-Installation.html">Installing necessary software</a></li>
+<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="SW-NumPy.html">NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
@@ -46,7 +46,7 @@ import matplotlib as mpl
 mpl.rcParams['figure.figsize'] = (8.0, 6.0) 
 ~~~~
 Or you can put your preference in your matplotlibrc so that it is loaded
-automatically every time you use matplotlib. See [Configuration](Installation.md) for details.
+automatically every time you use matplotlib. See [Configuration](SW-Installation.md) for details.
 
 ## Subplots
 
@@ -87,7 +87,7 @@ the subplots. See
 ## Labels
 
 Axes should be labeled (with units, where appropriate). The following example
-assumes that `usetex=True`. See [Configuration](Installation.md) for how to set that up. 
+assumes that `usetex=True`. See [Configuration](SW-Installation.md) for how to set that up. 
 
 
 ~~~~ python 
@@ -145,4 +145,4 @@ contents of the frame just by entering the variable name in a cell:
 <p class="center"><img src="figs/pandas.png"></p>
 <p class="mycap" markdown="1">A pandas `DataFrame`.</p>
 
-See [Pandas](pandas.md) for more information on how to use pandas.
+See [Pandas](SW-pandas.md) for more information on how to use pandas.

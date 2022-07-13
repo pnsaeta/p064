@@ -55,7 +55,7 @@ If $$\mat{A}$$ transforms a column vector $$\vb{x}$$ to a new column vector $$\v
 \end{equation}
 The existence of an inverse implies that operating with $$\mat{A}$$ on a vector does not entail the loss of information; that is, the matrix has a trivial **nullspace**, which means that its rows (and columns) are linearly independent. It usually isn't obvious by inspection whether a square matrix has an inverse (that its rows are linearly independent). If one or more rows can be expressed as the linear combination of other rows, then the matrix is **singular**, its **determinant** vanishes, and it does not have an inverse. 
 
-You can use [Gauss-Jordan elimination](GaussJordan.md) to compute the inverse of a square matrix (provided it has one).
+You can use [Gauss-Jordan elimination](LA-GaussJordan.md) to compute the inverse of a square matrix (provided it has one).
 
 
 Besides the identity matrix, there are a number of important classes of square matrices that arise in physics:

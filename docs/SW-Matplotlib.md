@@ -5,12 +5,12 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="Installation.html">Installing necessary software</a></li>
-<li><a href="Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="NumPy.html">NumPy</a></li>
-<li><a href="Matplotlib.html">Matplotlib</a></li>
-<li><a href="MPLFormatting.html">Formatting Plots</a></li>
-<li><a href="pandas.html">Pandas</a></li>
+<li><a href="SW-Installation.html">Installing necessary software</a></li>
+<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="SW-NumPy.html">NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
@@ -198,4 +198,4 @@ ax.plot([0, 0.25, 0.5, 0.75], [1, 0.75, 0.5, -0.25], 'o', color='#44bb60')
 
 See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors.
 
-[Next step: formatting in Matplotlib](MPLFormatting.md)
+[Next step: formatting in Matplotlib](SW-MPLFormatting.md)

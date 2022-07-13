@@ -5,12 +5,12 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="Installation.html">Installing necessary software</a></li>
-<li><a href="Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="NumPy.html">NumPy</a></li>
-<li><a href="Matplotlib.html">Matplotlib</a></li>
-<li><a href="MPLFormatting.html">Formatting Plots</a></li>
-<li><a href="pandas.html">Pandas</a></li>
+<li><a href="SW-Installation.html">Installing necessary software</a></li>
+<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
+<li><a href="SW-NumPy.html">NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-pandas.html">Pandas</a></li>
 </ul>
 </div>
 </div>
@@ -24,7 +24,7 @@
 
 [Pandas](https://pandas.pydata.org) is a Python module that provides features 
 somewhat akin to a spreadsheet or database and meshes very naturally with both
-[NumPy](NumPy.md) and [Matplotlib](Matplotlib.md). Before we can
+[NumPy](SW-NumPy.md) and [Matplotlib](SW-Matplotlib.md). Before we can
 explore it, we need to import this module. 
 
 ## Installation
@@ -143,7 +143,7 @@ Name: Fibonacci, dtype: int64
 
 ## Example
 
-On the [Matplotlib introduction page](Matplotlib.md), we developed the following figure.
+On the [Matplotlib introduction page](SW-Matplotlib.md), we developed the following figure.
 
 <p class="center"><img src="figs/intro-5.png" style="width: 500px;"></p>
 <p class="mycap">Now our resonance cup runneth over in style!</p>
