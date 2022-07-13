@@ -138,3 +138,5 @@ and then normalizing
 \\[
     \vb{x}\_i = \frac{\vb{x}'\_i}{\sqrt{\vb{x}'\_i \vdot \vb{x}'\_i}}
 \\]
+
+While Gram-Schmidt orthogonalization is mathematically sound, the good folks who wrote *Numerical Recipes* point out that “because of the build-up of roundoff errors, naïve Gram-Schmidt orthgonalization is *terrible*. (Emphasis in the original.) They go on to explain that the right way to build an orthonormal basis for a subspace is by [singular value decomposition](LA-NumericalLinearAlgebra.md#singular-value-decomposition) (SVD).
