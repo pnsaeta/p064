@@ -1,4 +1,4 @@
-{:menu LinAl}
+{:menu LA}
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">

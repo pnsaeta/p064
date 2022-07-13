@@ -1,4 +1,4 @@
-{:menu Setup}
+{:menu SW}
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">

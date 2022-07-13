@@ -1,4 +1,4 @@
-{:menu DE}
+{:menu FO}
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
@@ -18,10 +18,17 @@
 {::comment}menu-end{:/comment}
 
 
-# Ordinary Differential Equations
+# Fourier Transforms
 
 * toc
 {:toc}
 
 [Back to the top](index.md)
 
++ Definition and connection to Fourier series
++ Example transform pairs
++ Connection to Laplace from STEMs?
++ Inversion?
++ Convolutions
++ Correlations
++ Power spectra

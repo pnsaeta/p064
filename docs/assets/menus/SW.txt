@@ -1,0 +1,6 @@
+Installing necessary software	SW-Installation.md
+Jupyter notebooks	SW-Jupyter.md
+NumPy	SW-NumPy.md
+Matplotlib	SW-Matplotlib.md
+Formatting Plots	SW-MPLFormatting.md
+Pandas	SW-pandas.md

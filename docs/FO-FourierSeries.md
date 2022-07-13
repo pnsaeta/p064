@@ -1,4 +1,4 @@
-{:menu DE}
+{:menu FO}
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
@@ -18,10 +18,15 @@
 {::comment}menu-end{:/comment}
 
 
-# Ordinary Differential Equations
+# Fourier Series
 
 * toc
 {:toc}
 
 [Back to the top](index.md)
 
++ Series to represent periodic functions
++ Convergence, Gibbs
++ integration and differentiation (?)
++ Dirac delta function, definition, real, and Fourier representation
++ Periodic boundary conditions
