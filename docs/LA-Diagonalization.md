@@ -5,13 +5,13 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="SquareMatrices.html">Special square matrices</a></li>
-<li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
-<li><a href="HilbertSpace.html">Hilbert spaces</a></li>
-<li><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
-<li><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
-<li><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="LA-SquareMatrices.html">Special square matrices</a></li>
+<li><a href="LA-GaussJordan.html">Gauss-Jordan elimination</a></li>
+<li><a href="LA-HilbertSpace.html">Hilbert spaces</a></li>
+<li><a href="LA-Diagonalization.html">Diagonalizing a matrix</a></li>
+<li><a href="LA-Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
 </ul>
 </div>
 </div>
@@ -23,7 +23,7 @@
 * toc
 {:toc}
 
-[Back to the top](LinearAlgebra.md)
+[Back to the top](LA-LinearAlgebra.md)
 
 A **similarity transformation** of a square matrix $$\mat{A}$$ is a product of the form
 \\[

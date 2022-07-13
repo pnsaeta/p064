@@ -5,13 +5,13 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="SquareMatrices.html">Special square matrices</a></li>
-<li><a href="GaussJordan.html">Gauss-Jordan elimination</a></li>
-<li><a href="HilbertSpace.html">Hilbert spaces</a></li>
-<li><a href="Diagonalization.html">Diagonalizing a matrix</a></li>
-<li><a href="Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
-<li><a href="NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="LA-SquareMatrices.html">Special square matrices</a></li>
+<li><a href="LA-GaussJordan.html">Gauss-Jordan elimination</a></li>
+<li><a href="LA-HilbertSpace.html">Hilbert spaces</a></li>
+<li><a href="LA-Diagonalization.html">Diagonalizing a matrix</a></li>
+<li><a href="LA-Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
 </ul>
 </div>
 </div>
@@ -141,7 +141,7 @@ There are two primary problems in linear algebra. The first is to solve for $$\v
 \begin{equation}
  \mat{A} \vdot \vb{x} = \vb{b}
 \end{equation}
-for known matrix $$\mat{A}$$ and vector $$\vb{b}$$. You undoubtedly know how this can be accomplished, in principle, using [Gauss-Jordan elimination](GaussJordan.md) to compute the inverse of $$\mat{A}$$ so that $$\vb{x} = \mat{A}^{-1}\vdot\vb{b}$$. For small matrices, this is straightforward; with large matrices it may be a poor strategy and require considerably more computation than needed. When $$\mat{A}$$ is known to have certain properties (it may be symmetric, or tridiagonal, or Hermitian, or …), there are specialized algorithms that speed up the computation (and may avoid numerical roundoff issues that may spoil the solution developed by a generic algorithm). We will explore some strategies for factoring $$\mat{A}$$ into the product of two or three matrices with special forms (such as upper- or lower-triangular, diagonal, etc.) that allow efficient solution for $$\vb{x}$$.
+for known matrix $$\mat{A}$$ and vector $$\vb{b}$$. You undoubtedly know how this can be accomplished, in principle, using [Gauss-Jordan elimination](LA-GaussJordan.md) to compute the inverse of $$\mat{A}$$ so that $$\vb{x} = \mat{A}^{-1}\vdot\vb{b}$$. For small matrices, this is straightforward; with large matrices it may be a poor strategy and require considerably more computation than needed. When $$\mat{A}$$ is known to have certain properties (it may be symmetric, or tridiagonal, or Hermitian, or …), there are specialized algorithms that speed up the computation (and may avoid numerical roundoff issues that may spoil the solution developed by a generic algorithm). We will explore some strategies for factoring $$\mat{A}$$ into the product of two or three matrices with special forms (such as upper- or lower-triangular, diagonal, etc.) that allow efficient solution for $$\vb{x}$$.
 
 The second is to find the solutions to
 \begin{equation}
