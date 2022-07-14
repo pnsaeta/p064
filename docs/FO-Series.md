@@ -122,11 +122,15 @@ for some value $$a \le \xi \le x$$ by the mean value theorem.
 ### Some Important Taylor Series
 
 \begin{align}
-  e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +  \cdots  \notag \\\ 
-  \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \notag \\\ 
-  \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \notag \\\ 
-  \ln(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \notag \\\ 
-  (1+x)^n &= 1 + n x + \frac{n(n-1)}{2!} x^2 + \frac{n(n-1)(n-2)}{3!} x^3 + \cdots \tag{binomial}
+  e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots &  &-\infty < x <\infty \notag \\\ 
+  \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots &  &-\infty < x <\infty \notag \\\ 
+  \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots &  &-\infty < x <\infty\notag \\\ 
+  \sinh x &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots &  &-\infty < x <\infty \notag \\\ 
+  \cosh x &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots &  &-\infty < x <\infty\notag \\\ 
+  \frac{1}{1-x} &= 1 + x + x^2 + x^3 + x^4 + \cdots & & -1 < x < 1 \notag \\\ 
+  \ln(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots &  &-1 < x \le 1 \notag \\\ 
+  (1+x)^n &= 1 + n x + \frac{n(n-1)}{2!} x^2 + \frac{n(n-1)(n-2)}{3!} x^3 + \cdots
+  & & -1 < x < 1 \tag{binomial}
 \end{align}
 Clearly, the radius of convergence of the logarithmic series does not include $$x = -1$$, which generates a divergent harmonic series. For the **binomial series**, the series terminates when $$n$$ is a positive integer and so converges for all $$x$$. When $$n$$ is not a positive integer, the series does not terminate and may not converge.
 
@@ -144,10 +148,60 @@ where the extra 1 in the argument is courtesy of Legendre. To see that $$\Gamma(
 \\[
     \Gamma(n+1) =  \underbrace{\left. n x^{n-1} e^{-x} \right|\_0^\infty}\_{\text{vanishes}} + \int_0^\infty n x^{n-1} e^{-x}\,dx = n \Gamma(n)
 \\]
+or
+\begin{equation}\label{eq:recurrence}
+  \Gamma(n+1) = n \Gamma(n)
+\end{equation}
+
 When $$n = 1$$, we have a straightforward integral to do
 \\[
     \Gamma(1) = \int_0^\infty x^0 e^{-x} \, dx = \left. -e^{-x} \right|\_0^\infty = 1
 \\]
 Hence, the recursion relation $$\Gamma(n+1) = n \Gamma(n)$$ along with the termination condition $$\Gamma(1) = 1$$ proves that $$\Gamma(n+1) = n!$$ for nonnegative integer $$n$$.
 
-What about when $$n$$ is non-integral?
+What about when $$n$$ is non-integral? For instance, what about $$n = -\frac12$$? That is, can we evaluate
+\\[
+    I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \, dt
+\\]
+Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$dt = 2 x \,dx$$, giving
+\\[
+    I = \int_0^\infty \frac1x e^{-x^2} 2x \, dx = 2\int_0^\infty e^{-x^2}\,dx = \int_{-\infty}^{\infty} e^{-x^2}\,dx
+\\]
+While it may not look like we are any closer to an evaluation, it is undeniably true that squaring this expression yields
+\\[
+    I^2 = \int_{-\infty}^\infty dx \int_{-\infty}^\infty dy \, e^{-x^2} e^{-y^2} =
+    \int_{-\infty}^\infty dx \int_{-\infty}^\infty dy \; e^{-(x^2+y^2)}
+\\]
+since both $$x$$ and $$y$$ are dummy variables of integration. On the other hand, we can read this expression as the integral over the $$xy$$ plane of the integrand $$e^{-x^2-y^2} = e^{-r^2}$$, where $$r$$ is the distance from the origin. Rather than integrating in cartesians, we can use polar coordinates:
+\\[
+    I^2 = \int_0^{2\pi} \int_0^\infty e^{-r^2} \, r dr \, d\theta
+\\]
+Making the $$u$$ substitution $$u = r^2$$, so that $$du = 2 r \, dr$$, we can rewrite this double integral as
+\\[
+    I^2 = \int_0^{2\pi} \int_0^\infty e^{-u} \, \frac{du}{2} \, d\theta = \pi
+\\]
+Therefore,
+\\[
+    I = \Gamma\qty(\frac12) =  \int_{-\infty}^\infty e^{-x^2}\,dx = \sqrt{\pi}
+\\]
+We can then use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
+\begin{align}
+    \Gamma\qty(\frac32) &= \frac12 \Gamma\qty(\frac12) = \frac{\sqrt{\pi}}{2} \notag \\\ 
+    \Gamma\qty(\frac52) &= \frac32 \Gamma\qty(\frac32) = \frac{3\sqrt{\pi}}{4} \notag
+\end{align}
+and in general
+\\[
+    \Gamma\qty(n+\frac12) = \frac{2n-1}{2} \times \frac{2n-3}{2} \times \cdots \frac{1}{2} \Gamma\qty(\frac12)
+    = \frac{(2n-1)!!}{2^n} \sqrt{\pi}
+\\]
+where the double factorial is defined by
+\\[
+    n!! = n \times (n-2) \times \cdots \times \begin{cases} 1 & n\text{ odd} \\\ 
+    0 & n\text {even}
+    \end{cases}
+\\]
+
+<p class="center" markdown="0">
+  <img src="figs/gamma.png" style="width: 500px;">
+</p>
+<p class="mycap" markdown="1">The $$\Gamma$$ function for small arguments.</p>
