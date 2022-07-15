@@ -16,7 +16,6 @@
 {::comment}menu-end{:/comment}
 
 
-
 # Series
 
 * toc
@@ -117,7 +116,7 @@ where the remainder is the $$n$$-dimensional integral,
 \\[
     R_n = \int_a^x dx_1 \cdots \int_a^{x\_{n}} dx\_n\; f^{(n)}(x_n) = \frac{(x-a)^n}{n!} f^{(n)}(\xi)
 \\]
-for some value $$a \le \xi \le x$$ by the mean value theorem.
+for some value $$a \le \xi \le x$$ by the mean value theorem. Equation (\ref{eq:Taylor}), with the explicit form of the residual $$R_n$$ is a particularly powerful way of not only estimating functions but also the magnitude of the error associated with a finite series.
 
 ### Some Important Taylor Series
 
@@ -253,3 +252,14 @@ bernoulli(6)
 array([ 1.        , -0.5       ,  0.16666667,  0.        , -0.03333333,
         0.        ,  0.02380952])
 ~~~~
+
+As you can probably guess from this output, the Bernoulli numbers for odd $$n \ge 3$$ all vanish.
+
+## Possible Problems
+
+1. Do certain series converge?
+2. Combining absolutely convergent series.
+3. Illustrating failure to converge of alternating series?
+4. Working out the Taylor series for something
+5. Expressing a Gaussian integral in terms of $$\Gamma(x)$$.
+6. Multiplying a pair of series to determine unknown coefficients.
