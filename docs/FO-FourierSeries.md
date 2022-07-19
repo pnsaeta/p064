@@ -50,9 +50,9 @@ Let $$f(t)$$ be an arbitrary periodic function with period $$T$$. Can we find a 
     \qty[a\_n \cos \qty(\frac{2 \pi n t}{T}) + 
         b\_n \sin \qty(\frac{2 \pi n t}{T})]
 \end{equation}
-where I have explicitly factored out the cosine term with $$n = 0$$, and the coefficients $$a_n$$ and $$b_n$$ are as yet unknown. This form of series is called a **Fourier series**, and Fourier found a straightforward way to determine these unknown coefficients.
+where I have explicitly factored out the cosine term with $$n = 0$$, and the coefficients $$a_n$$ and $$b_n$$ are as yet unknown. Apart from the lead constant, which represents the average value of the function, all terms in the series have frequencies that are integer multiples of the fundamental frequency, $$\nu = 1/T$$. This form of series is called a **Fourier series**, and Fourier found a straightforward way to determine these unknown coefficients.
 
-The method relies on a perhaps surprising property of these trigonometric functions. First off, note that the product of two functions with period $$T$$ is itself a periodic function with period $$T$$. Second, if any of these functions is multiplied by itself, it oscillates between 0 and 1, instead of between $$-1$$ and 1. Instead of averaging to zero if we integrate over a period, the square of one of these functions averages to $$\frac12$$. The one exception is the constant function 1 ($$a_0$$), which of course averages to 1 ($$a_0$$). We say that the basis functions,
+The method relies on a perhaps surprising and deep property of these trigonometric functions. First off, note that the product of two functions with period $$T$$ is itself a periodic function with period $$T$$. Second, if any of these functions is multiplied by itself, it oscillates between 0 and 1, instead of between $$-1$$ and 1. Instead of averaging to zero if we integrate over a period, the square of one of these functions averages to $$\frac12$$. The one exception is the constant function 1 ($$a_0$$), which of course averages to 1 ($$a_0$$). We say that the basis functions,
 \\[
     \sin\qty(\frac{2\pi n t}{T}) \qqtext{and}
     \cos\qty(\frac{2\pi n t}{T})
@@ -195,3 +195,10 @@ a sawtooth wave. Comparing the rate of convergence to the discontinuous square w
 <p class="mycap" markdown="1">Near a point of discontinuity in the first derivative, the rate of convergence is slower, although still significantly faster than in the first example.</p>
 
 ## Now what?
+
+1. Have them work out some series of varying symmetry
+2. Have them confirm appropriate orthogonality integrals
+3. Investigate the root-mean-square difference between the truncated series and the original function as a function of the number of terms in the series? (i.e., rate of convergence)
+4. Evaluate Gibbs overshoot.
+5. Analytic investigation of the role discontinuity in the $$n$$th derivative on the rate of convergence?
+6.
