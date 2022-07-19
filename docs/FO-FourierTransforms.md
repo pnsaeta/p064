@@ -74,7 +74,14 @@ For finite $$\sigma$$, the peak has unit area and as $$\sigma \to 0$$ the region
 
 To see that Eqs. (\ref{eq:FT1}) and (\ref{eq:FT2}) are consistent with one another, we could substitute Eq. (\ref{eq:FT1}) into Eq. (\ref{eq:FT2}), taking care to a different (dummy) variable of integration for Eq. (\ref{eq:FT1}):
 \\[
-    f(t) \overset{?}{=} infint
+    f(t) \overset{?}{=} \frac{1}{2\pi} \int_{-\infty}^{\infty}  \dd{\omega} e^{i\omega t}
+    \int_{-\infty}^{\infty}  \dd{t'} f(t') e^{-i\omega t'}
+\\]
+Assuming that $$f$$ dies off adequately at infinity, we may exchange the order of these two integrations:
+\\[
+    f(t) \overset{?}{=} \int_{-\infty}^{\infty} \dd{t'}
+     f(t')  \times 
+     \underbrace{\frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} e^{i\omega (t-t')}}_{\delta(t-t')}
 \\]
 
 
