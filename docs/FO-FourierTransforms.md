@@ -77,7 +77,7 @@ To see that Eqs. (\ref{eq:FT1}) and (\ref{eq:FT2}) are consistent with one anoth
     f(t) \overset{?}{=} infint
 \\]
 
-eq
+
 
 
 + Definition and connection to Fourier series
