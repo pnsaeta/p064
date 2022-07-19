@@ -136,15 +136,26 @@ For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
   \pdv{u}{x} &= \pdv{v}{y}  \\\ 
   -\pdv{u}{y} &= \pdv{v}{x}
 \end{align}
-which are called the **Cauchy-Riemann equations**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann equations must be satisfied.
+which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**.
 
-We already worked out about that if $$f(z) = z^2$$, then $$u(x,y) = x^2 - y^2$$ and $$v(x,y) = 2 x y$$. We can see immediately that both Cauchy-Riemann equations are satisfied in this case. However, it is possible to produce a very simple function that does not. Consider
+We already worked out about that if $$f(z) = z^2$$, then $$u(x,y) = x^2 - y^2$$ and $$v(x,y) = 2 x y$$. We can see immediately that both Cauchy-Riemann conditions are satisfied in this case.
+
+It is straightforward to confirm that
+\\[
+  \dv{}{z} f(z)g(z) = \dv{f}{z} g + f \dv{g}{z}  \notag
+\\]
+and to use induction to show that
+\\[
+    \dv{(z^n)}{z} = n z^{n-1}
+\\]
+
+ However, it is possible to produce a very simple function that does not. Consider
 \\[
     f(z) = z^* = x - i y
 \\]
 so that $$u(x,y) = x$$ and $$v(x,y) = -y$$. This function satisfies Eq. (\ref{eq:CR2}), but fails to satisfy (\ref{eq:CR1}), so its derivative does not exist.
 
-The Cauchy-Riemann equations are sufficient to ensure that we get the same limit for the derivative regardless of the direction along which we let $$\delta z \to 0$$. You may readily verify that if they are satisfied for two functions $$f(z)$$ and $$g(z)$$, then they are satisfied by $$(f+g)(z)$$ and $$(f-g)(z)$$; and you may verify that they are satisfied for $$z^n$$ for $$n \in \mathbb{Z}$$. Any differentiable function of a complex variable may therefore be expressed in the form
+The Cauchy-Riemann conditions are sufficient to ensure that we get the same limit for the derivative regardless of the direction along which we let $$\delta z \to 0$$. You may readily verify that if they are satisfied for two functions $$f(z)$$ and $$g(z)$$, then they are satisfied by $$(f+g)(z)$$ and $$(f-g)(z)$$; and you may verify that they are satisfied for $$z^n$$ for $$n \in \mathbb{Z}$$. Any differentiable function of a complex variable may therefore be expressed in the form
 \begin{equation}\label{eq:Laurent}
   f(z - z_0) = \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
 \end{equation}
@@ -152,8 +163,48 @@ called a **Laurent expansion** about the point $$z_0$$ (which is a generalizatio
 
 ## Cauchy Integral Theorem
 
+The Cauchy-Riemann conditions describe the coordination necessary between the real and imaginary parts of a complex function for it to be differentiable. In some measure, the notion of an integral of a complex function is much simpler. We pick a path from some point on the complex plane to another, subdivide it into infinitely small segments, and tally up the product of $$f(z)\dd{z}$$ for all those segments. Naïvely, we should expect that the value of the integral should depend both on the end points and on the particular path that connects them. However, as for conservative forces, for which the work done in going from one point to another is independent of the path, in a wide variety of cases, the complex path integral depends only on the end points and the value of the integral around a closed path is precisely zero!
 
-+ Cauchy-Riemann and the derivative
-+ Trig
-+ Cauchy integral theorem
+More formally, **Cauchy's integral theorem** holds that the path integral *vanishes* around any contour within a simply connected region in which the Cauchy-Riemann conditions hold. Crudely speaking, a **simply connected** region has no holes. Any closed path within a simply connected region can be shrunk continuously to a point without having left the region.
+
+Before proceeding to a proof, let us consider the integral of $$z^n$$ around a small circle of radius $$r$$ around the origin. Along that circle, we have $$z = r e^{i\theta}$$ and $$\dd{z} = r i e^{i\theta}\dd{\theta}$$,  so the integral is
+\\[
+    \oint z^n\dd{z} = \int_0^{2\pi} r^n e^{i n \theta} \, r i e^{i\theta}\dd{\theta}
+    = i r^{n+1} \left. \frac{e^{i(n+1)\theta}}{i(n+1)}\right|_0^{2\pi}
+    = 0
+\\]
+Provided that $$n \ne -1$$, the integral vanishes, since $$e^{i(n+1)\theta}$$ is periodic with period $$2\pi$$. However, if $$n = -1$$, we have the integral
+\\[
+    \oint \frac{\dd{z}}{z} = \int_0^{2\pi} r^{-1} e^{-i\theta} r i e^{i\theta}\dd{\theta} =\int_0^{2\pi} i\dd{\theta} =  2\pi i
+\\]
+That is, if we were able to express our function in a Laurent expansion such as Eq. (\ref{eq:Laurent}), the **only** term that would contribute a nonzero value to an integral around a closed contour that contained the point $$z_0$$ would yield an integrated value of $$2\pi i a_{-1}$$, where $$a_{-1}$$ is called **the residue**. How remarkable! Cauchy's theorem says that we are free to deform the integration contour through regions that are analytic with impunity, since integrals around closed contours in those regions yield nothing. We can even ignore most singularities within the contour; only those that are proportional to $$(z-z_0)^{-1}$$ produce a nonzero value for the integral.
+
+### Proof of Cauchy's Integral Theorem
+
+We start by reminding you of **Stokes's theorem**, which holds that the integral of a vector function $$\vb{F}$$ around a closed path is equal to the integral of the curl of $$\vb{F}$$ over any area bounded by the closed path:
+\\[
+    \oint \vb{F}\vdot\dd{\vb{s}} = \iint (\curl \vb{F}) \vdot \dd{\vb{A}}
+\\]
+We can understand the theorem by noting that the curl of a vector function is defined as the limit of the circulation ($$\oint \vb{F}\vdot\dd{\vb{s}}$$) divided by the area bounded by the path over which the integral is taken as the area shrinks to zero. In integrating the curl over an extended area, the contributions to the circulation along all interior paths cancel, leaving only the contribution from the path around the entire area.
+
+If we focus on the $$z$$ component of curl, Stokes's theorem says that
+\begin{equation}\label{eq:CIT0}
+    \oint (F_x\dd{x} + F_y\dd{y}) = \iint \qty(\pdv{F_y}{x} - \pdv{F_x}{y})\dd{x}\dd{y}
+\end{equation}
+We now associate $$F_x = u(x,y)$$ and $$F_y = v(x,y)$$ so that the right-hand side of Eq. (\ref{eq:CIT0}) reads
+\\[
+    \iint \qty(\pdv{v}{x} - \pdv{u}{y})\dd{x}\dd{y}
+\\]
+
+
+
+
 + Calculus of residues?
+
+## Problems
+
+1. Show that both the real part and the imaginary part of a differentiable function of a complex variable satisfy Laplace's equation,
+\\[
+    \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
+\\]
+and similarly for $$v$$.
