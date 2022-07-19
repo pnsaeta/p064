@@ -133,8 +133,8 @@ On the other hand, if we let $$\delta x = 0$$ and approach $$z$$ parallel to the
 \end{align}
 For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
 \begin{align}
-  \pdv{u}{x} &= \pdv{v}{y}  \\\ 
-  -\pdv{u}{y} &= \pdv{v}{x}
+  \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\ 
+  -\pdv{u}{y} &= \pdv{v}{x} \label{eq:CR4}
 \end{align}
 which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**.
 
@@ -191,10 +191,18 @@ If we focus on the $$z$$ component of curl, Stokes's theorem says that
 \begin{equation}\label{eq:CIT0}
     \oint (F_x\dd{x} + F_y\dd{y}) = \iint \qty(\pdv{F_y}{x} - \pdv{F_x}{y})\dd{x}\dd{y}
 \end{equation}
-We now associate $$F_x = u(x,y)$$ and $$F_y = v(x,y)$$ so that the right-hand side of Eq. (\ref{eq:CIT0}) reads
+
+To prove Cauchy's integral theorem, we need to evaluate
 \\[
-    \iint \qty(\pdv{v}{x} - \pdv{u}{y})\dd{x}\dd{y}
+    \oint f(z)\dd{z} = \oint \qty[u(x,y) + i v(x,y)] (\dd{x} + i\dd{y})
+    = \oint \qty( u\dd{x} - v\dd{y}) + i\qty(u\dd{y} + v\dd{x})
 \\]
+
+Consider, first, the real part of the integrand. Comparison with Eq. (\ref{eq:CIT0}) suggests that we take $$u = F_x$$ and $$-v = F_y$$ in Stokes's theorem to get
+\\[
+    \oint \qty( u\dd{x} - v\dd{y}) = \iint \qty(-\pdv{v}{x} - \pdv{u}{y}) \dd{x}\dd{y}
+\\]
+But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem.
 
 
 
