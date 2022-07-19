@@ -7,6 +7,7 @@
 <ul>
 <li><a href="FO-Intro.html">Introduction to Fourier Series and Transforms</a></li>
 <li><a href="FO-ComplexVariables.html">Complex Variables</a></li>
+<li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
 </ul>

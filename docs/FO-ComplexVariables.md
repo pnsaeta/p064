@@ -7,6 +7,7 @@
 <ul>
 <li><a href="FO-Intro.html">Introduction to Fourier Series and Transforms</a></li>
 <li><a href="FO-ComplexVariables.html">Complex Variables</a></li>
+<li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
 </ul>
@@ -203,7 +204,6 @@ Consider, first, the real part of the integrand. Comparison with Eq. (\ref{eq:CI
     \oint \qty( u\dd{x} - v\dd{y}) = \iint \qty(-\pdv{v}{x} - \pdv{u}{y}) \dd{x}\dd{y}
 \\]
 But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem.
-
 
 
 
