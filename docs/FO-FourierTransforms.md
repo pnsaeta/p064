@@ -102,14 +102,14 @@ The quintessential behavior of a delta function is revealed by integrating over 
     \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ik x} \dd{k} = \delta(x)
 \\]
 let's integrate from $$x_1$$ to $$x_2$$. If these two points straddle zero, we should get something. If they don't, we should get zero.
-\\[
+\begin{equation}\label{eq:a}
     a = \int_{x_1}^{x_2}  \dd{x} \frac{1}{2\pi}
     \int_{-\infty}^{\infty} e^{ikx} \dd{k}
     = \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{k}
     \int_{x_1}^{x_2} e^{ikx} \dd{x}
     = \frac{1}{2\pi} \int_{-\infty}^{\infty}  \dd{k}
     \frac{e^{ikx_2} - e^{ikx_1}}{ik}
-\\]
+\end{equation}
 This is two integrals of the form
 \\[
     b(x_n) = \frac{1}{2\pi i} \int_{-\infty}^{\infty} \frac{e^{ikx_n}}{k} \dd{k}
@@ -147,13 +147,16 @@ as $$\epsilon \to 0$$. By distorting the path, we have add $$i\pi$$ to the value
 \\[
     I = \frac{1}{2\pi i}\times \qty(2\pi i a_{-1} - i\pi) = \frac{1}{2}
 \\]
-Or, translating back to $$b(x_n)$$, we have
+since $$a_{-1} = e^0 = 1$$. Or, translating back to $$b(x_n)$$, we have
 \\[
     b(x_n) = \frac12 \qqtext{if $$x_n > 0$$}
 \\]
 
-If, on the other hand, $$x_n < 0$$
-
+If, on the other hand, $$x_n < 0$$, we must close in the lower half-plane (LHP). By an argument analogous to the one given just now—and noting that when we close in the LHP, we traverse the contour in the clockwise (negative) direction—we find that 
+\\[
+    b(x_n) = -\frac12 \qqtext{if $$x_n < 0$$}
+\\]
+But this is *exactly* what we need. If $$x_1$$ and $$x_2$$ have the same sign, then they integrate to give the same value (either $$\frac12$$ or $$-\frac12$$) and cancel one another in Eq. (\ref{eq:a}).
 
 + Definition and connection to Fourier series
 + Example transform pairs
