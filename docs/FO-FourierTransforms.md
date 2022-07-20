@@ -53,6 +53,17 @@ where the **Dirac delta function** is the limiting case of a peak with unit area
 
 ## Dirac Delta Function
 
+A Dirac delta function, $$\delta(x)$$, is defined by the following property:
+\begin{equation}\label{eq:DiracProp}
+    \int_{x_1}^{x_2} \delta(x)\dd{x} =
+    \begin{cases}
+      0 & x_1 < 0\qqtext{and} x_2 < 0 \\\ 
+      1 & x_1 < 0 \qqtext{and} x_2 > 0 \\\ 
+      -1 & x_1 > 0 \qqtext{and} x_2 < 0 \\\ 
+      0 & x_1 >0 \qqtext{and} x_2 > 0
+    \end{cases}
+\end{equation}
+
 One way to represent it would be a skinny rectangle:
 \\[
     \delta (x - x_0) = \lim_{\epsilon \to 0} 
@@ -143,7 +154,7 @@ We now need to evaluate $$I$$ along the illustrated path. The integrand has a si
 \\[
     I_{sc} = \int_{\pi}^{2\pi} \frac{e^{ix_n \epsilon e^{i\theta}}}{\epsilon e^{i\theta}} i\epsilon e^{i\theta} \dd{\theta} = i \int_\pi^{2\pi} e^{i x_n \epsilon e^{i\theta}} \dd{\theta} = i\pi
 \\]
-as $$\epsilon \to 0$$. By distorting the path, we have add $$i\pi$$ to the value of the integral, so we need to subtract if from the result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral is
+as $$\epsilon \to 0$$. By distorting the path, we have added $$i\pi$$ to the value of the integral, so we need to subtract if from the result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral is
 \\[
     I = \frac{1}{2\pi i}\times \qty(2\pi i a_{-1} - i\pi) = \frac{1}{2}
 \\]
@@ -156,12 +167,20 @@ If, on the other hand, $$x_n < 0$$, we must close in the lower half-plane (LHP).
 \\[
     b(x_n) = -\frac12 \qqtext{if $$x_n < 0$$}
 \\]
-But this is *exactly* what we need. If $$x_1$$ and $$x_2$$ have the same sign, then they integrate to give the same value (either $$\frac12$$ or $$-\frac12$$) and cancel one another in Eq. (\ref{eq:a}).
+But this is *exactly* what we need. If $$x_1$$ and $$x_2$$ have the same sign, then they integrate to give the same value (either $$\frac12$$ or $$-\frac12$$) and cancel one another in Eq. (\ref{eq:a}). If they straddle zero and $$x_2 > x_1$$ then the integral gives $$\frac12 - (-\frac12) = 1$$, as we expect for a $$\delta$$ function: integrating over where it turns on should give unity. If $$x_1$$ and $$x_2$$ straddle in the opposite order, then we get $$-1$$, again as we expect.
+
+Need to summarize here, consider moving stuff to another file, ... 
+
+
+
 
 + Definition and connection to Fourier series
 + Example transform pairs
-+ Connection to Laplace from STEMs?
-+ Inversion?
+gaussian
+hyperbolic secant?
+Lorentzian and ...?
+
+
 + Convolutions
 + Correlations
 + Power spectra
