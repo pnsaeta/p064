@@ -10,6 +10,7 @@
 <li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
+<li><a href="FO-Delta.html">Dirac Delta Function</a></li>
 </ul>
 </div>
 </div>
@@ -32,12 +33,12 @@ In Engineering 79 you got some practice using **Laplace transforms** to convert 
 \\]
 After performing various algebraic manipulations in "Laplaceland", you either recognized the resulting function as the Laplace transform of a known function of time, or you used a table of transforms to perform the inversion.
 
-A **Fourier transform** is similar in some respects, but has a more symmetric structure for going between time and frequency space. It may be defined by
+A **Fourier transform** is similar in some respects, but has a more symmetric structure for going between time- and frequency-space. It may be defined by
 \begin{align}
   \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{-i\omega t} \dd{t}  \label{eq:FT1} \\\ 
   f(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty  \tilde{f}(\omega) e^{i\omega t}\dd{\omega} \label{eq:FT2}
 \end{align}
-I say "may be" because different authors use different conventions on how to distribute the factor of $$1/2\pi$$ between the two expressions. For example, it is common in quantum mechanics to put a factor of $$1/\sqrt{2\pi}$$ in front of each integral.
+I say "may be" because different authors use different conventions on how to distribute the factor of $$1/2\pi$$ between the two expressions. For example, it is common in quantum mechanics to symmetrize by putting a factor of $$1/\sqrt{2\pi}$$ in front of each integral.
 
 Before attempting to justify these two expressions, let's play around a bit. Suppose, for instance, that $$f(t) = \cos(\Omega t)$$, a cosine wave at angular frequency $$\Omega$$. If we substitute into Eq. (\ref{eq:FT2}), we get
 \\[
