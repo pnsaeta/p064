@@ -27,7 +27,7 @@ This course aims to extend your understanding of a range of important mathematic
     <td> We will review key results and discuss numerical approaches to solving problems in linear algebra </td>
   </tr>
   <tr>
-    <td><a href="FO-Fourier.html">Fourier Series and Transforms</a></td>
+    <td><a href="FO-Intro.html">Fourier Series and Transforms</a></td>
     <td> Fourier series represent arbitrary periodic functions as series of sines and cosines. Fourier transforms generalize to the infinite interval. </td>
   </tr>
   <tr>

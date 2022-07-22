@@ -10,6 +10,7 @@
 <li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
+<li><a href="FO-Delta.html">Dirac Delta Function</a></li>
 </ul>
 </div>
 </div>
@@ -156,11 +157,7 @@ and to use induction to show that
 \\]
 so that $$u(x,y) = x$$ and $$v(x,y) = -y$$. This function satisfies Eq. (\ref{eq:CR2}), but fails to satisfy (\ref{eq:CR1}), so its derivative does not exist.
 
-The Cauchy-Riemann conditions are sufficient to ensure that we get the same limit for the derivative regardless of the direction along which we let $$\delta z \to 0$$. You may readily verify that if they are satisfied for two functions $$f(z)$$ and $$g(z)$$, then they are satisfied by $$(f+g)(z)$$ and $$(f-g)(z)$$; and you may verify that they are satisfied for $$z^n$$ for $$n \in \mathbb{Z}$$. Any differentiable function of a complex variable may therefore be expressed in the form
-\begin{equation}\label{eq:Laurent}
-  f(z - z_0) = \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
-\end{equation}
-called a **Laurent expansion** about the point $$z_0$$ (which is a generalization of a Taylor expansion).
+The Cauchy-Riemann conditions are sufficient to ensure that we get the same limit for the derivative regardless of the direction along which we let $$\delta z \to 0$$. You may readily verify that if they are satisfied for two functions $$f(z)$$ and $$g(z)$$, then they are satisfied by $$(f+g)(z)$$ and $$(f-g)(z)$$; and you may verify that they are satisfied for $$z^n$$ for $$n \in \mathbb{Z}$$.
 
 ## Cauchy Integral Theorem
 
@@ -178,7 +175,17 @@ Provided that $$n \ne -1$$, the integral vanishes, since $$e^{i(n+1)\theta}$$ is
 \\[
     \oint \frac{\dd{z}}{z} = \int_0^{2\pi} r^{-1} e^{-i\theta} r i e^{i\theta}\dd{\theta} =\int_0^{2\pi} i\dd{\theta} =  2\pi i
 \\]
-That is, if we were able to express our function in a Laurent expansion such as Eq. (\ref{eq:Laurent}), the **only** term that would contribute a nonzero value to an integral around a closed contour that contained the point $$z_0$$ would yield an integrated value of $$2\pi i a_{-1}$$, where $$a_{-1}$$ is called **the residue**. How remarkable! Cauchy's theorem says that we are free to deform the integration contour through regions that are analytic with impunity, since integrals around closed contours in those regions yield nothing. We can even ignore most singularities within the contour; only those that are proportional to $$(z-z_0)^{-1}$$ produce a nonzero value for the integral.
+This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges. 
+
+There is a generalization of a Taylor expansion appropriate for functions of a complex variable. It is
+\begin{equation}\label{eq:Laurent}
+  f(z) = \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
+\end{equation}
+called a **Laurent expansion** about the point $$z_0$$. If such an expansion exists, integrating around a closed contour that contains the point $$z_0$$ would yield zero for every term in the series except for $$n = -1$$. That is,
+\\[
+    \underset{C}{\oint} f(z) = 2\pi i a_{-1} 
+\\]
+The coefficient $$a_{-1}$$ is called **the residue** of the pole at $$z = z_0$$. How remarkable! Cauchy's theorem says that we are free to deform the integration contour through regions that are analytic with impunity, since integrals around closed contours in those regions yield nothing. We can even ignore most singularities within the contour; only those that are proportional to $$(z-z_0)^{-1}$$ produce a nonzero value for the integral.
 
 ### Proof of Cauchy's Integral Theorem
 
@@ -203,16 +210,46 @@ Consider, first, the real part of the integrand. Comparison with Eq. (\ref{eq:CI
 \\[
     \oint \qty( u\dd{x} - v\dd{y}) = \iint \qty(-\pdv{v}{x} - \pdv{u}{y}) \dd{x}\dd{y}
 \\]
-But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem.
+But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem. Goursat showed how to relax the constraint that the region be simply connected by making infinitely thin bridges between regions and showing that integrating on either side of the bridges produced contributions to the integral that exactly cancel. 
+
+## Cauchy's Integral Formula
+
+Cauchy's integral formula holds that
+\begin{equation}\label{eq:CauchyInt}
+  f(z_0) = \frac{1}{2\pi i} \underset{C}{\oint} \frac{f(z)}{z-z_0} \dd{z}
+\end{equation}
+where the function $$f(z)$$ must be analytic on the closed contour $$C$$ and in its interior, the point $$z_0$$ is inside $$C$$, and $$C$$ is traversed in the counterclockwise direction.
+To prove the formula, note that we are free to distort the contour from $$C$$ through analytic regions without changing the value of the integral, since the integral of an analytic function around a closed contour vanishes by Cauchy's integral theorem. So, we shrink the contour down to a tiny circle surrounding $$z_0$$. Along this contour, $$z - z_0 = \epsilon e^{i\theta}$$ and $$\dd{z} = \epsilon i e^{i\theta}\dd{\theta}$$ so that
+\\[
+  \frac{1}{2\pi i} \underset{C}{\oint} \frac{f(z)}{z-z_0} \dd{z}
+  = \frac{1}{2\pi i} \int_0^{2\pi} \frac{f(z_0+\epsilon e^{i\theta})}{\epsilon e^{i\theta}} \; \epsilon i e^{i\theta}\dd{\theta}
+  = \frac{1}{2\pi i} \int_0^{2\pi} f(z_0) i \dd{\theta} = f(z_0)
+\\]
+
+We can extend this result by differentiating both sides with respect to $$z_0$$:
+\begin{align}
+    f'(z_0) &= \frac{1}{2\pi i} \underset{C}{\oint}
+    \frac{f(z)}{(z-z_0)^2} \dd{z} \\\ 
+    f^{\prime\prime}(z_0) &= \frac{2!}{2\pi i} \underset{C}{\oint}
+    \frac{f(z)}{(z-z_0)^3}\dd{z} \\\ 
+    f^{(n)}(z_0) &= \frac{n!}{2\pi i} \underset{C}{\oint}
+    \frac{f(z)}{(z-z_0)^{n+1}}\dd{z}
+\end{align}
+
+## Calculus of Residues
 
 
-
-+ Calculus of residues?
 
 ## Problems
 
-1. Show that both the real part and the imaginary part of a differentiable function of a complex variable satisfy Laplace's equation,
+1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$. 
+
+2. Simplify $$\cos i z$$ for $$z = x + i y$$.
+
+2. Show that both the real part and the imaginary part of a differentiable function of a complex variable satisfy Laplace's equation,
 \\[
     \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
 \\]
 and similarly for $$v$$.
+
+2. Evaluate
