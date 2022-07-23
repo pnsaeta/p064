@@ -1,6 +1,6 @@
 # Mathematics and Computation for Physicists
 
-In your first three semesters at Harvey Mudd College, you have taken (at least) three mathematics courses that seek to solidify your understanding of differential and integral calculus, and lay foundations in linear algebra and ordinary differential equations. You have also taken an introductory course in computer science, in which you learned some of the basics of computation using Python. You have also taken Engineering 79, in which Laplace transforms were used to solve (systems of) ordinary differential equations.
+In your first three semesters at Harvey Mudd College, you have taken (at least) three mathematics courses that seek to solidify your understanding of differential and integral calculus and lay foundations in linear algebra and ordinary differential equations. You have also taken an introductory course in computer science, in which you learned some of the basics of computation using Python. You have also taken Engineering 79, in which Laplace transforms were used to solve (systems of) ordinary differential equations.
 
 This course aims to extend your understanding of a range of important mathematical topics and to develop your ability to use Python and standard numerical and graphics libraries to solve physical problems and visual solutions.
 
@@ -40,10 +40,22 @@ This course aims to extend your understanding of a range of important mathematic
   </tr>
   <tr>
     <td><a href="DE-DEs.html">Ordinary Differential Equations</a></td>
-    <td>Stuff</td>
+    <td>A quick review of Math 82 with a slant towards the ODEs of physics</td>
   </tr>
   <tr>
     <td><a href="DE-PDEs.html">Partial Differential Equations</a></td>
-    <td>What?</td>
+    <td>Lots of things vary in both space <em>and</em> time, so partial differential equations are central to physics</td>
   </tr>
 </table>
+
+## To Do
+
+1. FO-ComplexVariables: problems, maybe also calculus of residues
+2. FO-Series problems
+3. FO-FourierSeries: problems
+4. FO-Transforms: theory and problems
+5. ST-Random: everything
+6. ST-Stochastic: everything
+7. DE-DEs: everything
+8. DE-PDEs: two-dimensions, problems, Green's functions?
+9. Need computational stuff for most topics, too!

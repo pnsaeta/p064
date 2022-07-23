@@ -1,2 +1,3 @@
 Ordinary Differential Equations	DE-DEs.md
-Partial Differential Equations	DE-PDEs.md
+Partial Differential Equations I	DE-PDEs.md
+Partial Differential Equations II	DE-PDE-II.md

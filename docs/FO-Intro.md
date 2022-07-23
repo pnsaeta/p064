@@ -28,4 +28,4 @@ If we are really thinking about a periodic signal, the analogous idea is a **Fou
 + So, our first step is to remind ourselves of the [algebra of complex numbers](FO-ComplexVariables.md).
 + We will then proceed to explore the extension of the notions of differential and integral calculus to functions of a complex variable before attacking [series](FO-Series.md) in general, 
 + [Fourier series](FO-FourierSeries.md) in particular, 
-+ and [Fourier transforms](FO-Fourier).
++ and [Fourier transforms](FO-FourierTransforms.md).

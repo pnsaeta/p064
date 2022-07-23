@@ -10,6 +10,7 @@
 <li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
+<li><a href="FO-Delta.html">Dirac Delta Function</a></li>
 </ul>
 </div>
 </div>
@@ -193,7 +194,7 @@ a sawtooth wave. Comparing the rate of convergence to the discontinuous square w
 <p class="center" markdown="0">
   <img src="figs/triangle-zero.png" style="width: 500px;">
 </p>
-<p class="mycap" markdown="1">Near a point of discontinuity in the first derivative, the rate of convergence is slower, although still significantly faster than in the first example.</p>
+<p class="icap" markdown="1">Near a point of discontinuity in the first derivative, the rate of convergence is slower, although still significantly faster than in the first example.</p>
 
 ## Now what?
 
