@@ -6,7 +6,8 @@
 <div class="dropdown-content">
 <ul>
 <li><a href="DE-DEs.html">Ordinary Differential Equations</a></li>
-<li><a href="DE-PDEs.html">Partial Differential Equations</a></li>
+<li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
+<li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
 </ul>
 </div>
 </div>
