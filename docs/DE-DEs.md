@@ -136,9 +136,10 @@ The method of Frobenius is to way of developing series solutions to differential
 which is a generalization of a Taylor series that includes the possibility of negative or nonintegral powers, and substitute it into the differential equation. We then perform appropriate index shifts to group all terms to the same power of $$x$$. For a homogeneous ODE, each of these must be zero.
 
 To illustrate, let's apply the method to Bessel's equation,
-\begin{equation}\label{eq:Legendre}
+\begin{equation}\label{eq:Bessel}
   x^2 y^{\prime\prime} + x y' + (x^2 - n^2) y = 0
 \end{equation}
+See [the page on Bessel's equation](DE-Bessel.md) for some background on why this equation arises in physical problems.
 
 Substituting the Frobenius series into this equation gives
 \begin{align}
@@ -174,5 +175,32 @@ which we can combine to form
     J_0(x) = 1 - \qty(\frac{x}{2})^2 + \frac{1}{(2!)^2} \qty(\frac{x}{2})^4 - \frac{1}{(3!)^2} \qty(\frac{x}{2})^6 + \cdots
 \\]
 
+What does this look like?
 
-check now
+~~~~ python
+def myJ0(x, n_max=16):
+    j0, y = 1, (x/2)**2
+    a, yn = 1, 1
+    for n in range(1, n_max+1):
+        a /= -(n*n)
+        yn *= y
+        j0 += a * yn
+    return j0
+
+fig, ax = plt.subplots()
+x = np.pi * np.linspace(0, 3, 101)
+y = myJ0(x)
+ax.plot(x, y)
+
+# Now let's add the scipy version
+from scipy.special import jv
+j0 = jv(0, x)
+ax.plot(x, j0, '.')
+ax.set_xlabel("$x$")
+ax.set_ylabel(r"$J_0(x)$");
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/J0.png" style="width: 500px;">
+</p>
+<p class="mycap" markdown="1">The behavior of $$J_0(x)$$ for small $$x$$ computed via `myJ0` (smooth curve) and `scipy.special.jv` (dots).</p>

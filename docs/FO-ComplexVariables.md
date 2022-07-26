@@ -246,10 +246,10 @@ We can extend this result by differentiating both sides with respect to $$z_0$$:
 
 2. Simplify $$\cos i z$$ for $$z = x + i y$$.
 
-2. Show that both the real part and the imaginary part of a differentiable function of a complex variable satisfy Laplace's equation,
+3. Show that both the real part and the imaginary part of a differentiable function of a complex variable satisfy Laplace's equation,
 \\[
     \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
 \\]
 and similarly for $$v$$.
 
-2. Evaluate
+4. Evaluate
