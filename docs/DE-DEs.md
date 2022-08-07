@@ -204,3 +204,4 @@ ax.set_ylabel(r"$J_0(x)$");
   <img src="figs/J0.png" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">The behavior of $$J_0(x)$$ for small $$x$$ computed via `myJ0` (smooth curve) and `scipy.special.jv` (dots).</p>
+

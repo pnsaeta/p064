@@ -86,7 +86,7 @@ The solutions to Bessel's equation that are bounded at the origin are called **B
 </p>
 <p class="mycap" markdown="1">The first five Bessel functions of integer order.</p>
 
-The solutions that diverge at the origin are called **Neumann functions** (or Bessel functions of the second kind) and denoted $$Y_n(x)$$
+The solutions that diverge at the origin are called **Neumann functions** (or Bessel functions of the second kind) and denoted $$Y_n(x)$$.
 
 <p class="center" markdown="0">
   <img src="figs/Y0-4.png" style="width: 500px;">
