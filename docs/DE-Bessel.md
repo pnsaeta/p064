@@ -79,6 +79,8 @@ and taking $$y(x) = R(kr)$$, we get finally **Bessel's equation**
 
 If the domain over which we seek to solve the equation includes the full circle, then $$n$$ must be an integer to make $$\Theta(\theta)$$ single valued.
 
+## Bessel Functions
+
 The solutions to Bessel's equation that are bounded at the origin are called **Bessel functions** (of the first kind) and denoted $$J_n(x)$$. 
 
 <p class="center" markdown="0">
@@ -117,3 +119,45 @@ ax.set_ylim(-1,0.6)
 
 If the domain of solution includes the origin, then we must rule out the Neumann functions. On the other hand, if we are working in an annular region, we will generally need both Bessel and Neumann functions.
 
+## Properties of Bessel Functions
+
+It is possible to show the following relationships among Bessel functions $$Z_n(x)$$, where $$Z$$ can represent either Bessel functions of the first kind ($$J_n$$) or of the second kind ($$Y_n$$):
+\begin{align}
+  Z\_{n-1}(x) + Z\_{n+1}(x) &= \frac{2n}{x} Z\_n(x) \label{eq:bes1} \\\ 
+  Z\_{n-1}(x) - Z\_{n+1}(x) &= 2 Z'\_n(x) \label{eq:bes2}
+\end{align}
+There is an integral representation of Bessel functions,
+\begin{equation}\label{eq:bes3}
+J\_n(x) = \frac{1}{2\pi} \int_{0}^{2\pi} \cos(x \sin\theta - n\theta) \dd{\theta}
+\end{equation}
+and asymptotic forms, such as
+\begin{equation}\label{eq:asympt}
+  J_n(x) \approx \sqrt{\frac{2}{\pi x}} \cos \qty[x - \qty(n+\frac12)\qty(\frac{\pi}{2})]
+\end{equation}
+which capture the behavior at large values of $$x$$.
+
+From Sturm-Liouville theory, we can show that if $$\alpha_{n,\nu}$$ is the $$\nu$$th zero of $$J_n(x)$$, then
+\begin{equation}\label{eq:ortho}
+  \int_{0}^{a} J_{n}(\alpha_{n,\nu} r/a) J_{m}(\alpha_{m,\mu}r/a)\; r\dd{r} = 
+  \delta_{nm} \delta_{\nu\mu}
+\end{equation}
+
+## Vibrations of a Drum Head
+
+A uniform thin drumhead is stretched across a circular rim of radius $$a$$. The wave speed of disturbances of the drumhead is set by the ratio of the tension (stress) in the membrane divided by its mass per unit area. For simplicity, let us assume that the initial disturbance of the drumhead has radial symmetry. The solution to the azimuthal dependence equation,
+\\[
+    \Theta^{\prime\prime} + n^2 \Theta = 0
+\\]
+becomes $$\Theta = 1$$ and $$n = 0$$.
+
+Because the drumhead includes the origin, we must rule out Neumann functions in the expansion for the solution, which will therefore take the form
+\begin{equation}\label{eq:symmetric}
+  z(r, t) = \sum_{\nu=1}^{\infty} b_{\nu} J_0\qty(k_\nu r) \cos(v k_\nu t)
+\end{equation}
+where $$k_\nu = \alpha_\nu / a$$ and $$\alpha_\nu$$ is the $$\nu$$th zero of $$J_0(x)$$. By using only cosines for the time dependence, I am assuming that the initial displacement of the head is nonzero, but that it is initially at rest.
+
+To determine the unknown coefficients $$b_\nu$$, we must solve
+\begin{equation}\label{eq:initial}
+  z(r, 0) = f(r) = \sum_{\nu=1}^{\infty} b_{\nu} J_0\qty(\alpha_\nu r/a)
+\end{equation}
+for the initial displacement function $$f(r)$$. 
