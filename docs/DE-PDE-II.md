@@ -22,11 +22,11 @@
 
 ## Laplace's Equation
 
-Laplace's equation
+Laplace’s equation
 \begin{equation}\label{eq:Laplace}
   \laplacian V = \pdv[2]{V}{x} + \pdv[2]{V}{y} + \pdv[2]{V}{z} = 0
 \end{equation}
-describes the electrostatic potential in a charge-free region of space. It also describes the steady-state temperature distribution in a region of space that lacks sources or sinks. If that region has rectangular boundaries, then the natural approach to solving it is to look for separated-variable solutions of the form
+describes the electrostatic potential $$V$$ in a charge-free region of space. It also describes the steady-state temperature distribution in a region of space that lacks sources or sinks (if we substitute $$T$$ for $$V$$). If that region has rectangular boundaries, then the natural approach to solving it is to look for separated-variable solutions of the form
 \\[
     V = X(x) Y(y) Z(z)
 \\]
@@ -119,7 +119,7 @@ def Lapl2d(nmax):
 
 ## Solving Laplace's Equation in a Circular Region
 
-If the region in which you seek to solve Laplace's equation is not rectangular but circular, it will make sense to return to the definition of the Laplacian and express this operator in terms of polar coordinates. Since the Laplacian is the divergence of the gradient, we need to work out (or look up) expressions for these operators in polar coordinates.
+If the region in which you seek to solve Laplace's equation is not rectangular but circular, it will make sense to return to the definition of the laplacian and express this operator in terms of polar coordinates. Since the laplacian is the divergence of the gradient, we need to work out (or look up) expressions for these operators in polar coordinates.
 
 The gradient is straightforward:
 \\[
@@ -140,7 +140,7 @@ Dividing by the area and taking the limit gives
 \\[
     \div \vb{A} = \frac1r \pdv{(r A_r)}{r} + \frac1r \pdv{A_\theta} {\theta}
 \\]
-Hence, the Laplacian in polar coordinates is
+Hence, the laplacian in polar coordinates is
 \begin{equation}\label{eq:LaplPolar}
   \boxed{
     \laplacian V = \frac1r \pdv{}{r}\qty(r \pdv{V}{r}) + \frac{1}{r^2} \pdv[2]{V}{\theta} =
@@ -157,7 +157,7 @@ To have a definite problem to work out, let us suppose that a circular region of
 \\]
 We seek the potential in the interior of the circle.
 
-We look for a separated variable solution of the form $$V(r, \theta) = R(r)\Theta(\theta)$$ which we substitute into the expression for the Laplacian to get
+We look for a separated variable solution of the form $$V(r, \theta) = R(r)\Theta(\theta)$$ which we substitute into the expression for the laplacian to get
 \\[
     R^{\prime\prime}(r) \Theta(\theta) +
     \frac1r R'(r)(r) \Theta(\theta) +

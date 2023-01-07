@@ -14,7 +14,6 @@
 
 {::comment}menu-end{:/comment}
 
-
 # Bessel's Equation
 
 * toc
@@ -26,7 +25,7 @@ The wave equation is
 \\[
     \laplacian \psi = \frac{1}{v^2} \pdv[2]{\psi}{t}
 \\]
-[As shown here](DE-PDE-II#solving-laplaces-equation-in-a-circular-region), the form of the Laplacian in polar coordinates is
+[As shown here](DE-PDE-II#solving-laplaces-equation-in-a-circular-region), the form of the laplacian in polar coordinates is
 \\[
     \laplacian \psi = \frac{1}{r} \pdv{}{r}\qty(r \pdv{\psi}{r}) + \frac{1}{r^2} \pdv[2]{\psi}{\theta}
 \\]
@@ -117,7 +116,7 @@ ax.set_ylabel("$Y_n(x)$")
 ax.set_ylim(-1,0.6)
 ~~~~
 
-If the domain of solution includes the origin, then we must rule out the Neumann functions. On the other hand, if we are working in an annular region, we will generally need both Bessel and Neumann functions.
+If the domain of solution includes the origin, then we must rule out the Neumann functions. On the other hand, if we are working in an annular region, we will generally need both Bessel and Neumann functions to be able to satisfy boundary conditions at both the inner and outer radii.
 
 ## Properties of Bessel Functions
 
@@ -160,4 +159,4 @@ To determine the unknown coefficients $$b_\nu$$, we must solve
 \begin{equation}\label{eq:initial}
   z(r, 0) = f(r) = \sum_{\nu=1}^{\infty} b_{\nu} J_0\qty(\alpha_\nu r/a)
 \end{equation}
-for the initial displacement function $$f(r)$$. 
+for the initial displacement function $$f(r)$$.

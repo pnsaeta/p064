@@ -145,7 +145,7 @@ It turns out that this plot will look better if we use logarithmic axes. Let’s
 
 
 ~~~~ python
-logx = np.power(10, np.linspace(-1, 1, 201))
+logx = np.logspace(-1, 1, 201)
 fig, ax = plt.subplots()
 ax.set_xlabel("$$x$$")
 ax.set_ylabel("$$y$$")
@@ -196,6 +196,6 @@ as the following
 ax.plot([0, 0.25, 0.5, 0.75], [1, 0.75, 0.5, -0.25], 'o', color='#44bb60')
 ~~~~
 
-See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors.
+See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors. 
 
 [Next step: formatting in Matplotlib](SW-MPLFormatting.md)

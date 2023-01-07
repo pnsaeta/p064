@@ -35,10 +35,10 @@ import numpy as np
 ~~~~
 
 
-A basic numerical type in NumPy is the `np.ndarray`, which can represent an array of arbitrary numbers of dimensions. You can create an array from basic Python types such as **lists** and **tuples** using `np.asarray(list_or_tuple)`. For example
+A basic numerical type in NumPy is the `np.ndarray`, which can represent an array of arbitrary numbers of dimensions. You can create an array from basic Python types such as **lists** and **tuples** using `np.array(list_or_tuple)`. For example
 
 ~~~~ python
-a = np.asarray([[1, 2, 3], [4, 5, 6]])
+a = np.array([[1, 2, 3], [4, 5, 6]])
 ~~~~
 
 generates the $$2\times 3$$ array
@@ -50,10 +50,12 @@ array([[1, 2, 3],
 
 Besides listing all elements of a NumPy array, you can use a number of convenience functions to generate them:
 
-+ `np.arange(start, end, dx)` generates a one-dimensional array of values (start, start + dx, start + 2 * dx, ..., start + n * dx) where the final value satisfies start + n * dx < end. For instance, `np.arange(1, 4, 1)` produces  `array([1, 2, 3])`
++ `np.arange(start, end, dx)` generates a one-dimensional array of values (start, start + dx, start + 2 * dx, ..., start + n * dx) where the final value satisfies start + n * dx < end. For instance, `np.arange(1, 4, 1)` produces  `array([1, 2, 3])`. That is, the final value in the array *is smaller than the second argument*.
 + `np.linspace(start, end, n)` generates a one-dimensional array of values that divides [start, end] into $$n-1$$ equal intervals, so that `np.linspace(1, 4, 4)` produces `array([1, 2, 3, 4])`. That is, `linspace` includes the end points, whereas `arange` does not include its end point.
-+ `np.zeros((nrows, ncols))` generates a nrows by ncols array of zeros
++ `np.zeros((nrows, ncols))` generates a nrows by ncols array of zeros. You can include any number of dimensions in the tuple that specifies the size of the array.
++ You can also pass an optional numerical type for the array, as in `np.zeros(nelements, dtype=np.int8)`
 + `np.ones((nrows, ncols))` generates a nrows by ncols array of ones
++ If you aren't sure whether an object `A` is already an array (or might be some other iterable), use `np.asarray(A)`, rather than `np.array(A)`. Why? Because `np.asarray(A)` does not create a copy if it doesn't need to, whereas `np.array(A)` creates a copy of `A` regardless.
 + [See the NumPy page on Array creation routines](https://numpy.org/doc/stable/reference/routines.array-creation.html) for more information.
 
 
@@ -62,13 +64,13 @@ Besides listing all elements of a NumPy array, you can use a number of convenien
 Suppose that you want to multiply each element in a list by 3.2. In standard Python, you could write a list comprehension of the form
 
 ~~~~ python
-b = [x * 3.2 for x in a]
+b = [x * 3.2 for x in mylist]
 ~~~~
 
 for a list stored in `a`. If, instead, you use a NumPy array, you can simplify the notation to eliminate explicit loops:
 
 ~~~~ python
-b = np.asarray(a) * 3.2
+b = np.asarray(mylist) * 3.2
 ~~~~
 
 This notation also works for multiplying (or performing similar arithmetic operations) on all elements of a NumPy array of arbitrary dimensions.
@@ -137,24 +139,24 @@ array([[[ 6.1,  0.2, -2.8,  3.8],
         [[ 9.3, -5.6, -6.2, -5.6],
         [ 1.6,  0.2,  4.6, -8.5],
         [ 5.8, -1.9,  1.2,  6. ]]])
-m3.max()
+m3.max()            # the maximum of all elements
 9.3
-m3.max(axis=0)
+m3.max(axis=0)      # the maximum in each row
 array([[ 9.3,  0.2, -2.8,  3.8],
         [ 8.1,  4.5,  4.6, -4.1],
         [ 8.2,  0.1,  1.2,  6. ]])
-m3.max(axis=1)
+m3.max(axis=1)      # the maximum in each column
 array([[ 8.2,  4.5, -0.8,  3.8],
         [ 9.3,  0.2,  4.6,  6. ]])
-m3.max(axis=2)
+m3.max(axis=2)      # the maximum in each chunk
 array([[6.1, 8.1, 8.2],
         [9.3, 4.6, 6. ]])
-m3.max(axis=(0,1))
+m3.max(axis=(0,1))  # the maximum in each (row, col) portion
 array([9.3, 4.5, 4.6, 6. ])
 ~~~~
 
 
-In summary, functions such as `sum`, `max`, `min`, etc., operate by default on all elements of multidimensional arrays, but can also be specialized to work along various axes (directions) of the array.
+In short, functions such as `sum`, `max`, `min`, etc., operate by default on all elements of multidimensional arrays, but can also be specialized to work along various axes (directions) of the array.
 
 ## Slicing
 
