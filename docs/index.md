@@ -59,3 +59,4 @@ This course aims to extend your understanding of a range of important mathematic
 7. DE-DEs: everything
 8. DE-PDEs: two-dimensions, problems, Green's functions?
 9. Need computational stuff for most topics, too!
+10. What else? 

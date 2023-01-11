@@ -139,7 +139,7 @@ From Sturm-Liouville theory, we can show that if $$\alpha_{n,\nu}$$ is the $$\nu
 \begin{equation}\label{eq:ortho}
   \int_{0}^{a} J_{n}(\alpha_{n,\nu} r/a) J_{m}(\alpha_{m,\mu}r/a)\; r\dd{r} = 
   \delta_{nm} \delta_{\nu\mu}
-\end{equation}
+\end{equation} 
 
 ## Vibrations of a Drum Head
 

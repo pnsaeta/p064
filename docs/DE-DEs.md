@@ -5,7 +5,9 @@
 <label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="DE-DEs.html">Ordinary Differential Equations</a></li>
+<li><a href="DE-DEs.html">Ordinary Differential Equations I</a></li>
+<li><a href="DE-DE-2.html">Ordinary Differential Equations II</a></li>
+<li><a href="DE-DE-3.html">Ordinary Differential Equations III</a></li>
 <li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
 <li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
 </ul>
@@ -204,4 +206,8 @@ ax.set_ylabel(r"$J_0(x)$");
   <img src="figs/J0.png" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">The behavior of $$J_0(x)$$ for small $$x$$ computed via `myJ0` (smooth curve) and `scipy.special.jv` (dots).</p>
+
+You can readily see the fine agreement between the truncated series and the `scipy` version of $$J_0(x)$$.
+
+## Numerical Approaches
 

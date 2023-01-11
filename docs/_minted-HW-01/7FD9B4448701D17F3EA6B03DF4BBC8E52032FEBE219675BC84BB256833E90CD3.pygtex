@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{numpy.random} \PYG{k+kn}{import} \PYG{n}{default\PYGZus{}rng}
+\PYG{n}{rng} \PYG{o}{=} \PYG{n}{default\PYGZus{}rng}\PYG{p}{()}
+
+\PYG{n}{rng}\PYG{o}{.}\PYG{n}{uniform}\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{lower\PYGZus{}bound}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{o}{\PYGZlt{}}\PYG{n}{upper\PYGZus{}bound}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{dim}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{o}{\PYGZlt{}}\PYG{n}{dim}\PYG{o}{\PYGZgt{}}\PYG{p}{))}
+
+\PYG{n}{rng}\PYG{o}{.}\PYG{n}{uniform}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{l+m+mi}{5}\PYG{p}{))} \PYG{c+c1}{\PYGZsh{} for example}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mf}{4.23959642}\PYG{p}{,}  \PYG{l+m+mf}{3.60732447}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.16149884}\PYG{p}{,}  \PYG{l+m+mf}{3.6900891} \PYG{p}{,}  \PYG{l+m+mf}{2.65585838}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{1.97695378}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.09057092}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.10553997}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.78785912}\PYG{p}{,}  \PYG{l+m+mf}{1.44810866}\PYG{p}{],}
+       \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.27088306}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.36821066}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.14689027}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.29851331}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.93396243}\PYG{p}{],}
+       \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.99115728}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.63366415}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.04232138}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.73824459}\PYG{p}{,}  \PYG{l+m+mf}{3.46747273}\PYG{p}{],}
+       \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.71288883}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.94345835}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.96308442}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.07039782}\PYG{p}{,}  \PYG{l+m+mf}{2.43547367}\PYG{p}{]])}
+
+\end{Verbatim}

@@ -225,7 +225,7 @@ If we were now to successively apply inverse elementary matrices from the left, 
   \mat{A} = \mat{L}\vdot\mat{U}
 \\]
 
-What would the inverse of $$\mat{E}\_{23}$$ look like? Well, $$\mat{E}\_{23}$$ multiplies row 2 by 1 and adds it to row 3. Undoing this procedure would multiply row 2 by $$-1$$ and add it to row 3:
+What would the inverse of $$\mat{E}_{23}$$ look like? Well, $$\mat{E}_{23}$$ multiplies row 2 by 1 and adds it to row 3. Undoing this procedure would multiply row 2 by $$-1$$ and add it to row 3:
 \\[
   \mat{E}\_{23}^{-1} = \begin{pmatrix}
     1 & 0 & 0 \\\ 0 & 1 & 0 \\\ 0 & -1 & 1
