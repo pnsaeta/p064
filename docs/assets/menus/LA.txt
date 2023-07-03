@@ -1,7 +1,10 @@
-Linear Algebra	LA-LinearAlgebra.md
-Special square matrices	LA-SquareMatrices.md
-Gauss-Jordan elimination	LA-GaussJordan.md
-Hilbert spaces	LA-HilbertSpace.md
-Diagonalizing a matrix	LA-Diagonalization.md
-Eigenvalues, eigenvectors, and completeness	LA-Eigenvectors.md
-Numerical linear algebra in NumPy	LA-NumericalLinearAlgebra.md
++	LA-LinearAlgebra.md	Linear Algebra
++	LA-SquareMatrices.md	Square Matrices
++	LA-GaussJordan.md	Gauss-Jordan Elimination
++	LA-HilbertSpace.md	Hilbert Space
++	LA-Diagonalization.md	Diagonalization
++	LA-Eigenvectors.md	Eigenvalues and Eigenvectors of Square Matrices
++	LA-NumericalLinearAlgebra.md	Numerical Linear Algebra with NumPy
++	LA-Krylov.md	Krylov Sets
+-	LA-RotationMatrices.md	Rotation Matrices
++	LA-NumericalLinearAlgebra.md	Numerical Linear Algebra with NumPy

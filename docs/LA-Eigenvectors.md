@@ -2,16 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
 <div class="dropdown-content">
 <ul>
 <li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Special square matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert spaces</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalizing a matrix</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
+<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
+<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
+<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
+<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
+<li><a href="LA-Krylov.html">Krylov Sets</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
 </ul>
 </div>
 </div>
@@ -139,4 +155,4 @@ and then normalizing
     \vb{x}\_i = \frac{\vb{x}'\_i}{\sqrt{\vb{x}'\_i \vdot \vb{x}'\_i}}
 \\]
 
-While Gram-Schmidt orthogonalization is mathematically sound, the good folks who wrote *Numerical Recipes* point out that “because of the build-up of roundoff errors, naïve Gram-Schmidt orthgonalization is *terrible*. (Emphasis in the original.) They go on to explain that the right way to build an orthonormal basis for a subspace is by [singular value decomposition](LA-NumericalLinearAlgebra.md#singular-value-decomposition) (SVD).
+While Gram-Schmidt orthogonalization is mathematically sound, the good folks who wrote *Numerical Recipes* point out that “because of the build-up of roundoff errors, naïve Gram-Schmidt orthogonalization is *terrible*. (Emphasis in the original.) They go on to explain that the right way to build an orthonormal basis for a subspace is by [singular value decomposition](LA-NumericalLinearAlgebra.md#singular-value-decomposition) (SVD).

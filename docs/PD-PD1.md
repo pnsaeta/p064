@@ -1,13 +1,29 @@
-{:menu DE}
+{:menu PD}
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="DE-DEs.html">Ordinary Differential Equations</a></li>
-<li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
-<li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PD-PD2.html">PDEs II — Laplace’s Equation</a></li>
+<li><a href="PD-PD3.html">PDEs III — the Wave Equation</a></li>
+<li><a href="PD-PD4.html">Combining Fourier Transforms and PDEs</a></li>
+<li><a href="PD-PD5.html">Numerical Solution to Partial Differential Equations</a></li>
 </ul>
 </div>
 </div>
@@ -37,7 +53,7 @@ where $$v = \sqrt{F/\mu}$$ is the wave speed and $$f$$ and $$g$$ are arbitrary f
 + Maxwell's equation for the electric field is
 \\[
     \div\vb{E} = \begin{cases}
-       \frac{\rho(\vb{r}, t)}{\epsilon_0} & \text{S.I.} \\\ 
+       \frac{\displaystyle\rho(\vb{r}, t)}{\displaystyle\epsilon_0} & \text{S.I.} \\\ 
        4\pi\rho(\vb{r}, t) & \text{gaussian}
     \end{cases}
 \\]
@@ -56,7 +72,7 @@ In a region of charge-free space, the potential satisfies **Laplace's equation**
     \pdv[2]{V}{x} + \pdv[2]{V}{y} + \pdv[2]{V}{z}
     = 0
 \\]
-[I have written the laplacian in cartesian coordinates here, but the meaning of the laplacian is the divergence of the gradient, regardless of the coordinate system, and the expression in terms of coordinates is more complicated in cylindrical, spherical, and other curvilinear coordinate systems.]
+[I have written the laplacian in cartesian coordinates here, but the meaning of the laplacian is the divergence of the gradient, regardless of the coordinate system, and the expression is more complicated in cylindrical, spherical, and other curvilinear coordinate systems.]
 
 + The Schrödinger equation of quantum mechanics is
 \\[
@@ -69,23 +85,23 @@ For our development, we will focus on an equation quite similar to the Schrödin
 
 ## The Heat Equation
 
-Newton argued that heat flowed from a hot region to a cold region in proportion to the temperature difference between them. To keep the exposition as simple as possible, we consider a uniform cylindrical rod, whose surface is thermally insulated, and whose axis is aligned with the $$x$$ axis. In particular, focus on a small segment of the rod, as illustrated in Fig. 1.
+Newton argued that heat flowed from a hot region to a cold region in proportion to the temperature difference between them. To keep the exposition as simple as possible, we consider a uniform cylindrical rod, whose surface is thermally insulated, and whose axis is aligned with the $$x$$ axis. In particular, focus on a small segment of the rod, as illustrated in <a href="#Fig1">Figure&nbsp;1</a>.
 
 <p class="center" markdown="0">
-  <img src="figs/rod.png" style="width: 300px;">
+  <img src="figs/rod.webp" style="width: 300px;">
 </p>
-<p class="mycap" markdown="1">Figure 1 — We consider a small segment of the insulated rod, with cross section $$A$$ and thickness $$\delta x$$.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — We consider a small segment of the insulated rod, with cross section $$A$$ and thickness $$\delta x$$. The heat that flows into the segment on the left is $$J(x) A$$, where the heat flux density $$J$$ has dimensions energy per unit area per unit time.</p>
 
 The temperature inside this little chunk of the rod can change because it is being heated by an outside source (a flame?), or because more heat is flowing in from the left than out on the right. The relationship between energy change and temperature is
 \\[
     \delta E = C \delta u
 \\]
-where $$C$$ is the **heat capacity** of the little chunk and $$u$$ is its temperature. The heat capacity is proportional to the amount of material in the chunk, so it is more common to express this relation in terms of the **specific heat capacity**, which is the heat capacity per unit volume of the material of the rod,
+where $$C$$ is the **heat capacity** of the little chunk and $$u$$ is its temperature. The heat capacity is proportional to the amount of material in the chunk, so it is more common to express this relation in terms of the **specific heat capacity**, which is the heat capacity per unit mass of the material of the rod, and its mass density $$\rho$$:
 \\[
-    \delta E = (c A \delta x) \delta u
+    \delta E = (c \rho A \delta x) \delta u
 \\]
 
-The heat (thermal energy) flow into the segment through the face at $$x$$ is given by
+The heat flow (the flow of thermal energy) into the segment through the face at $$x$$ is given by
 \\[
     A J(x,t) = -A \kappa(x,t) \pdv{u}{x}
 \\]
@@ -96,28 +112,28 @@ where $$u(x,t)$$ is the temperature of the rod and $$\kappa(x,t)$$ is thermal co
 Finally, the heat generated in the segment is $$G \delta t = g A \delta x \delta t$$, where $$g$$ is the power per unit volume deposited and $$\delta t$$ is the time over which the heat is deposited. Putting this all together, conservation of energy applied to the little segment gives
 \begin{equation}\label{eq:heat-equation}
   \underbrace{c A \delta x \pdv{u}{t}}\_{\text{net power in}} = 
-  \underbrace{g(x,t) A \delta x\vphantom{\pdv{u}{t}}}\_{\text{source power}} -
-  \underbrace{\kappa(x,t) A \pdv{u(x,t)}{x}}\_{\text{heat flow in}} +
-  \underbrace{\kappa(x+\delta x,t) A \pdv{u(x+\delta x, t)}{x}}\_{\text{heat flow out}}
+  \underbrace{g(x,t) A \delta x\vphantom{\pdv{u}{t}}}\_{\text{source power}} \;
+  \underbrace{- \kappa(x,t) A \pdv{u(x,t)}{x}}\_{\text{heat flow in}} \;
+  \underbrace{+ \kappa(x+\delta x,t) A \pdv{u(x+\delta x, t)}{x}}\_{\text{heat flow out}}
 \end{equation}
 We can simplify this expression by dividing by $$A\delta x$$ and taking the limit as $$\delta x \to 0$$, which gives
 \\[
-  c \pdv{u}{t} = g + \pdv{}{x}\qty(\kappa \pdv{u}{x})
+  c \rho \pdv{u}{t} = g + \pdv{}{x}\qty(\kappa \pdv{u}{x})
 \\]
 or, if we rearrange to put the differential terms on the left and the source term on the right, we have 
 \begin{equation}\label{eq:heat-eq}
-  \boxed{c \pdv{u}{t} - \pdv{}{x}\qty(\kappa \pdv{u}{x}) = g(x,t)}
+  \boxed{c \rho \pdv{u}{t} - \pdv{}{x}\qty(\kappa \pdv{u}{x}) = g(x,t)}
 \end{equation}
-which is the **one-dimensional heat equation**. Had we been more adventurous and chosen to work in three honest dimensions, we would have gotten
+which is the **one-dimensional heat equation**. Had we been more adventurous and chosen to work in three honest dimensions, we would have found
 \\[
-    c\pdv{u}{t} - \div (\kappa \grad u) = g(\vb{r},t)
+    c \rho \pdv{u}{t} - \div (\kappa \grad u) = g(\vb{r},t)
 \\]
 
 ### Simplifications
 
 It is typically reasonable to take the specific heat and thermal conductivity to be independent of temperature and position. If we make these simplifications, the one-dimensional heat equation becomes
 \\[
-    c u_t - \kappa u_{xx} = g
+    c \rho u_t - \kappa u_{xx} = g
 \\]
 where the subscripts indicate partial differentiation.
 
@@ -125,7 +141,7 @@ In many situations, there is no source term in the body of the rod, which allows
 \begin{equation}\label{eq:one-D}
     u_t = D u_{xx}
 \end{equation}
-where the **thermal diffusivity** $$D$$ is defined by $$D = \kappa/c$$.
+where the **thermal diffusivity** $$D$$ is defined by $$D = \kappa/c\rho$$.
 
 ### Dimensions
 
@@ -192,7 +208,7 @@ To make progress, divide both sides by $$D u = D X(x)T(t)$$ to get
 \end{equation}
 The left-hand side is a function of time, while the right-hand side is a function of position. The only way that these can be equal to each other is for each to be equal to a constant, which I will call $$-k^2$$. We can now solve separately the ordinary differential equations for $$T(t)$$ and $$X(x)$$, getting
 \\[
-    \dv{T}{t} = -k D T(t) 
+    \dv{T}{t} = -k^2 D T(t) 
     \qquad\longrightarrow\qquad
     T(t) = a e^{-k^2 D t}
 \\]
@@ -259,7 +275,7 @@ ax.set_ylabel("$u$");
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/PDE0.png" style="width: 600px;">
+  <img src="figs/PDE0.webp" style="width: 600px;">
 </p>
 <p class="icap" markdown="1">Plot of Eq. (\ref{eq:solution}) using the first 500 terms in the series and the values $$D=1$$ and $$L=1$$. Note that the solution at $$t = 0$$ shows the Gibbs phenomenon at the points of discontinuity at $$x = 0$$ and $$x = L$$. Note, as well, that the modes with higher spatial frequency (larger $$n$$) decay much more rapidly, so that by $$t = 0.05$$, the temperature distribution is dominated by the fundamental mode ($$\sin \pi x/L$$), which decays with a time constant $$\tau = L^2/(\pi^2 D) \approx 10$$.</p>
 
@@ -317,7 +333,7 @@ We now integrate by parts
 Substituting into the expansion for $$u(x,t)$$, we have finally
 \begin{equation}\label{eq:PDE2}
   \boxed{
-    u(x,t) = \frac{8}{\pi^2} \sum\_{n=0}^{\infty}  \frac{(-1)^m}{(2 n+1)^2}
+    u(x,t) = \frac{8}{\pi^2} \sum\_{n=0}^{\infty}  \frac{(-1)^n}{(2 n+1)^2}
   \sin\qty[ \frac{(2n+1)\pi x}{2L}]
   \exp\qty(-Dt \qty[ \frac{(2n+1)\pi}{2L} ]^2 )
   }
@@ -345,7 +361,7 @@ ax.set_ylabel("$u$");
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/PDE1.png" style="width: 600px;">
+  <img src="figs/PDE1.webp" style="width: 600px;">
 </p>
 <p class="icap" markdown="1">The temperature profile in an insulated rod whose left end is mantained at 0°C and whose right end is insulated, as developed in Eq. (\ref{eq:PDE2}).</p>
 
@@ -389,7 +405,7 @@ The term proportional to $$c_1$$ grows in amplitude with increasing depth $$x$$,
 where $$\tau$$ is the period of oscillation of the driving surface temperature. The shorter the period, the larger the value of $$\beta$$ and the more rapidly the surface variation dies out with depth. The daily variations in surface temperature barely penetrate into the ground, but the annual variations do.
 
 <p class="center" markdown="0">
-  <img src="figs/wine.png" style="width: 500px;">
+  <img src="figs/wine.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1">Illustration of Eq. (\ref{eq:Tprofile}), which describes the temperature of the ground as a function of depth over the course of an annual temperature oscillation at the surface of amplitude 15°C, with an average of 5°C. Note: this does *not* attempt to describe facts “on” the ground in Claremont!</p>
 

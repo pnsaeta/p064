@@ -2,15 +2,28 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="DE-DEs.html">Ordinary Differential Equations I</a></li>
-<li><a href="DE-DE-2.html">Ordinary Differential Equations II</a></li>
-<li><a href="DE-SHO-analytic.html">The Quantum SHO, Analytic Treatment</a></li>
-<li><a href="DE-SHO-numerical.html">The Quantum SHO, Numerical Treatment</a></li>
-<li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
-<li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="DE-DE1.html">Ordinary Differential Equations</a></li>
+<li><a href="DE-DE2.html">Numerical Approaches to Solving ODEs</a></li>
+<li><a href="DE-SHO-analytic.html">The Quantum Simple Harmonic Oscillator</a></li>
+<li><a href="DE-SHO-numerical.html">The Quantum SHO—Numerical Approaches</a></li>
+<li><a href="DE-SturmLiouville.html">Sturm-Liouville Theory</a></li>
 </ul>
 </div>
 </div>
@@ -177,7 +190,7 @@ Higher-order solutions have the same Gaussian form, multiplied by a **Hermite po
 </div>
 
 <p class="center" markdown="0">
-  <img src="figs/SHO-psi.png" style="width: 600px;">
+  <img src="figs/SHO-psi.webp" style="width: 600px;">
 </p>
 <p class="mycap" markdown="1">The five lowest-energy normalized wave functions of a simple harmonic
 oscillator. Note that each successive wave function has one more node than the previous.</p>

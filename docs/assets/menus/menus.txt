@@ -1,0 +1,7 @@
+SW	Software Installation	SW-Installation
+LA	Linear Algebra	LA-LinearAlgebra
+FO	Fourier Series and Transforms	FO-Intro
+ST	Stochastic Processes	ST-Random
+DE	Differential Equations	DE-DE1
+PD	Partial Differential Equations	PD-PD1
+PR	Projects	PR-Project

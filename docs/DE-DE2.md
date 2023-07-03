@@ -2,14 +2,28 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="DE-DEs.html">Ordinary Differential Equations I</a></li>
-<li><a href="DE-DE-2.html">Ordinary Differential Equations II</a></li>
-<li><a href="DE-DE-3.html">Ordinary Differential Equations III</a></li>
-<li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
-<li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="DE-DE1.html">Ordinary Differential Equations</a></li>
+<li><a href="DE-DE2.html">Numerical Approaches to Solving ODEs</a></li>
+<li><a href="DE-SHO-analytic.html">The Quantum Simple Harmonic Oscillator</a></li>
+<li><a href="DE-SHO-numerical.html">The Quantum SHO—Numerical Approaches</a></li>
+<li><a href="DE-SturmLiouville.html">Sturm-Liouville Theory</a></li>
 </ul>
 </div>
 </div>
@@ -44,7 +58,7 @@ of $$v$$, from which we can determine a new value of slope and then a new value 
 $$v$$, etc. The result is illustrated by the light red line in the figure below.
 
 <p class="center" markdown="0">
-  <img src="figs/slope-field.png" style="width: 400px;">
+  <img src="figs/slope-field.webp" style="width: 400px;">
 </p>
 <p class="mycap" markdown="1">The arrows show the derivative $$\dot{v}$$; the red curve shows an example solution to the first-order equation, while the dashed green line shows the continuation of the slope from its value at $$t = 0$$.</p>
 
@@ -142,7 +156,7 @@ using Euler’s method lie below the true solution to the differential equation,
 which is $$v(t) = v_0 \exp(-\frac{b}{m} t)$$.
 
 <p class="center" markdown="0">
-  <img src="figs/euler.png" style="width: 500px;">
+  <img src="figs/euler.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">Euler’s method (red dots) compared to the true solution to the differential equation.</p>
 
@@ -204,7 +218,7 @@ shown in Fig. 2. Clearly, the smaller the steps we take, the more accurate the
 numerical approximation is. We could quantify
 
 <p class="center" markdown="0">
-  <img src="figs/euler_error.png" style="width: 700px;">
+  <img src="figs/euler_error.webp" style="width: 700px;">
 </p>
 <p class="mycap" markdown="1">Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
 
@@ -327,7 +341,7 @@ ax.plot(res.t, errors, 'ro');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/rk45errors.png" style="width: 500px;">
+  <img src="figs/rk45errors.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
 
@@ -534,7 +548,7 @@ ax.set_xlabel('$$t$$');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO1.png" style="width: 500px;">
+  <img src="figs/SHO1.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">The solution to Eq. (2) provided by `solve_ivp`.</p>
 
@@ -579,7 +593,7 @@ ax.set_ylabel('$$x$$');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO2.png" style="width: 500px;">
+  <img src="figs/SHO2.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1"></p>
 
@@ -652,7 +666,7 @@ ax.set_ylabel('$$v$$');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO3.png" style="width: 500px;">
+  <img src="figs/SHO3.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1"></p>
 
@@ -668,7 +682,7 @@ ax.set_ylabel('Error in $$v$$');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO4.png" style="width: 500px;">
+  <img src="figs/SHO4.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1"></p>
 
@@ -778,4 +792,3 @@ different initial conditions.
     system. For this system, the angular momentum around the $$z$$ axis should be
     the mass of the bob times the quantity $$x \dot{y} - y \dot{x}$$. Is it in fact
     conserved?
-

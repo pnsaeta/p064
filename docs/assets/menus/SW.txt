@@ -1,6 +1,9 @@
-Installing necessary software	SW-Installation.md
-Jupyter notebooks	SW-Jupyter.md
-NumPy	SW-NumPy.md
-Matplotlib	SW-Matplotlib.md
-Formatting Plots	SW-MPLFormatting.md
-Pandas	SW-pandas.md
++	SW-Installation.md	Installing and Configuring Software
++	SW-Jupyter.md	Using Jupyter Notebooks
++	SW-NumPy.md	Basics of NumPy
++	SW-Matplotlib.md	Introduction to Plotting with Matplotlib
++	SW-MPLFormatting.md	Formatting in Matplotlib
++	SW-pandas.md	Pandas
++	SW-colab.md	Using Google Colab
++	SW-Python.md	Python
++	SW-Animation.md	Animations in Matplotlib

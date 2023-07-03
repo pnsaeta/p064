@@ -2,15 +2,28 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="DE-DEs.html">Ordinary Differential Equations I</a></li>
-<li><a href="DE-DE-2.html">Ordinary Differential Equations II</a></li>
-<li><a href="DE-SHO-analytic.html">The Quantum SHO, Analytic Treatment</a></li>
-<li><a href="DE-SHO-numerical.html">The Quantum SHO, Numerical Treatment</a></li>
-<li><a href="DE-PDEs.html">Partial Differential Equations I</a></li>
-<li><a href="DE-PDE-II.html">Partial Differential Equations II</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="DE-DE1.html">Ordinary Differential Equations</a></li>
+<li><a href="DE-DE2.html">Numerical Approaches to Solving ODEs</a></li>
+<li><a href="DE-SHO-analytic.html">The Quantum Simple Harmonic Oscillator</a></li>
+<li><a href="DE-SHO-numerical.html">The Quantum SHO—Numerical Approaches</a></li>
+<li><a href="DE-SturmLiouville.html">Sturm-Liouville Theory</a></li>
 </ul>
 </div>
 </div>
@@ -42,7 +55,7 @@ From the symmetry of the potential, we expect solutions with either even or odd 
 A naive strategy would integrate from the origin out, starting either from $$(\psi, \psi') = (1,0)$$ at $$x = 0$$ for even $$n$$ or $$(\psi, \psi') = (0,1)$$ for odd $$n$$. This approach will work for a while, but is ultimately doomed to fail. The differential equation we seek to solve is second order, so it has two, linearly independent solutions. Far from the origin, one solution is (roughly) exponentially decreasing, while the other is (roughly) exponentially increasing. To be physically meaningful, an eigenfunction must consist *exclusively* of the exponentially decreasing solution; any component of the exponentially increasing solution will eventually diverge to infinity. When we use a numerical approach, we cannot avoid round-off errors that will inevitably inject a tiny amount of the exponentially growing solution. Eventually, it takes over and comes to dominate the behavior of the numerical solution, as shown in <a ref="Fig1">Figure 1</a>.
 
 <p class="center" markdown="0">
-  <img src="figs/SHO-bad-integration.png" style="width: 500px;">
+  <img src="figs/SHO-bad-integration.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — An illustration of integrating from the origin with $$\psi(0) = 1$$ and $$\psi'(0) = 0$$ for $$\epsilon = 1$$ (blue curve) and with $$\psi'(0) = 1$$ and $$\psi(0) = 0$$ for $$\epsilon=3$$. The solutions start out looking great, but eventually, numerical error admixes enough of the exponentially blowing-up solution that they begin to diverge.</p>
 
@@ -119,7 +132,7 @@ savefig("SHO-shooting")
 which produces the graph below. Note that even with the right eigenvalue (the green curve in the upper panel), the solution degrades quite rapidly after the peak because of the small but nonzero value of $$\psi'$$ at the origin. However, the figure of merit appears to be doing the right thing and should allow us to home in on legitimate eigenvalues.
 
 <p class="center" markdown="0">
-  <img src="figs/SHO-shooting.png" style="width: 500px;">
+  <img src="figs/SHO-shooting.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Solution for $$\psi(x)$$ for different test values of $$\epsilon$$ (upper panel) and the corresponding figure of merit $$\Phi$$ (lower panel).</p>
 
@@ -128,7 +141,96 @@ which produces the graph below. Note that even with the right eigenvalue (the gr
 ~~~ python
 from scipy.optimize import root_scalar
 
+def FOM(epsilon:float, n:int, x_start=-5, y0=(1e-6, 0)):
+    if x_start == -5:
+        x_start = -5 - n
+    sol = solve_ivp(derivs, (x_start,0), y0,
+                    events=stop_at_zero, args=(epsilon,),
+                    rtol=1e-12, atol=1e-12)
+    psi, psip = sol.y_events[0][0,:]
+    return psi/psip if n % 2 else psip/psi
+
 def shoot_eigenvalue(epsilon_range, n:int):
-    root = root_scalar(FOM, args=(n,), x0=epsilon_range[0], x1=epsilon_range[1])
-    return root.root
+    r = root_scalar(FOM, args=(n,), x0=epsilon_range[0], x1=epsilon_range[1])
+    return r.root
+
+nvals = np.arange(6)
+evals, eps = [], []
+for n in nvals:
+    true = 2*n+1
+    sev = shoot_eigenvalue((true-rng.random(), true+rng.random()), n)
+    eps.append(true - sev)
+    evals.append(sev)
+df = pd.DataFrame(dict(n=nvals, ev=evals, eps=eps))
+print(df)
+
+   n    ev           eps
+0  0   1.0  1.602619e-10
+1  1   3.0  2.486900e-13
+2  2   5.0  1.953993e-14
+3  3   7.0  2.309264e-14
+4  4   9.0  2.842171e-14
+5  5  11.0  3.375078e-14
 ~~~
+
+The table shows just how accurately this method is able to determine the eigenvalues, since the third column labeled `eps` shows the error of each determination. What do you think causes the first two roots to be comparatively less accurate?
+
+## Discretizing the Differential Equation
+
+Another numerical approach to solving the differential equation is to divide the range in $$x$$ values into a number of equally spaced steps, to approximate the derivatives with finite differences, and then solve the problem using matrix methods. To see how this works, let us suppose that we divide the range from $$-y_0$$ to $$y_0$$ into an integral number $$N$$ of steps of size $$\Delta y$$ (where I am using the same dimensionless position variable as before, $$y = x \sqrt{m\omega/\hbar}$$ ). That is, we will look for the values of $$\psi$$ at the set of positions
+\begin{equation}\label{eq:xpos}
+  y_k = -y_0 + k \Delta y \qquad k = 0, 1, 2, \ldots, N
+\end{equation}
+
+The approximate value of the derivative $$\psi'$$ can be computed with a finite difference:
+\begin{equation}\label{eq:psifinite}
+  \psi'(y_j + \Delta y/2) \approx \frac{\psi(y_{j+1}) - \psi(y_j)}{\Delta y} = \frac{\psi_{j+1} - \psi_j}{\Delta y}
+\end{equation}
+Note that the position at which this best approximates the derivative is halfway between the two $$y$$ positions we use. 
+
+To compute the second derivative, we can subtract values of the derivative at $$y_j-\Delta y/2$$ from its value at $$y_j+\Delta y/2$$ and divide by the displacement ($$\Delta y$$)
+to get
+\begin{equation}\label{eq:2dfinite}
+  \psi^{\prime\prime}(y_j) \approx \frac{\psi_{j+1} - 2 \psi_j + \psi_{j-1}}{(\Delta y)^2}
+\end{equation}
+
+Using this approximation, the differential equation
+\\[
+  -\psi'' + y^2 \psi = \epsilon\psi
+\\]
+becomes the finite difference equations
+\begin{equation}\label{eq:FDeq}
+  \frac{-\psi_{j+1} + 2 \psi_j - \psi_{j-1}}{(\Delta y)^2} + y_j^2 \psi_j = \epsilon \psi_j
+\end{equation}
+(To handle the edge cases, we will take $$\psi_{-1} = \psi_{N+1} = 0$$.)
+
+Equation&nbsp;(\ref{eq:FDeq}) may be cast in matrix form as
+\begin{equation}\label{eq:eveq}
+  \underbrace{\begin{pmatrix}
+  a_{00} & a_{01} & 0 & 0 & \cdots & 0 \\\ 
+  a_{10} & a_{11} & a_{12} & 0 & \cdots & 0 \\\ 
+  0 & a_{21} & a_{22} & a_{23} & \cdots & 0\\\ 
+  0 & 0 & a_{32} & a_{33} & \cdots & 0 \\\ 
+  \vdots & \vdots & \vdots & \vdots & \ddots & a_{N-1\, N} \\\ 
+  0 & 0 & 0 & 0 & a_{N\, N-1} & a_{NN}
+  \end{pmatrix}
+  }\_{\mat{A}}
+  \begin{pmatrix}
+  \psi_0 \\\ \psi_1 \\\ \psi_2 \\\ \psi_3 \\\ \vdots \\\ \psi_N
+  \end{pmatrix}
+  =
+  \epsilon
+    \begin{pmatrix}
+  \psi_0 \\\ \psi_1 \\\ \psi_2 \\\ \psi_3 \\\ \vdots \\\ \psi_N
+  \end{pmatrix}
+\end{equation}
+where the elements of the matrix $$\mat{A}$$ are given by
+\begin{equation}\label{eq:Amat}
+  a_{ij} = \begin{cases}
+    \frac{2}{(\Delta y)^2} + y_j^2 & i = j \\\ 
+    -\frac{1}{(\Delta y)^2} & i = j \pm 1 \\\ 
+    0 & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+You can solve this kind of eigenvalue equation using `scipy.linalg.eigh` or `scipy.sparse.linalg.eigsh`. Which approach do you think will give more accurate eigenvalues and eigenvectors?

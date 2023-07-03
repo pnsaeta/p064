@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>
@@ -126,7 +143,7 @@ ax.legend();
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/intro-1.png" style="width: 400px;">
+  <img src="figs/intro-1.webp" style="width: 400px;">
 </p>
 
 
@@ -146,3 +163,47 @@ Some explanations:
 
 See [Introduction to Matplotlib](SW-Matplotlib.md) for some basics on using Matplotlib to generate plots.
 
+## Troubleshooting
+
+For Jupyter Lab to work with matplotlib, you need to have a few extensions installed. If plotting or animations aren't working for you, you may have out-of-date versions of Python and/or the necessary modules. 
+
+From a terminal, type
+
+~~~~ bash
+> jupyter labextension list
+JupyterLab v3.6.3
+/opt/homebrew/Cellar/jupyterlab/3.6.3/libexec/share/jupyter/labextensions
+        jupyterlab_pygments v0.2.2 enabled OK (python, jupyterlab_pygments)
+
+Other labextensions (built into JupyterLab)
+   app dir: /opt/homebrew/Cellar/jupyterlab/3.6.3/libexec/share/jupyter/lab
+        @jupyter-widgets/jupyterlab-manager v5.0.7 enabled OK
+        jupyter-matplotlib v0.11.3 enabled OK
+
+~~~~
+
+This command gives the version of the JupyterLab software and the status of all installed and enabled extensions.
+I have found that I need both **@jupyter-widgets/jupyterlab-manager** and **jupyter-matplotlib** installed and enabled. See below for instructions on installing and updating them right from within Jupyter Lab.
+
+
+Notice that my installation is in the `/opt/homebrew` directory structure, since I installed it with homebrew. If your installation is from anaconda, which you can tell by looking at the directory path of the files listed in the output you see from the `jupyter labextension list` command, then please try
+
+~~~~ bash
+conda update conda
+conda update anaconda
+~~~~
+
+Kate Riggs found that these two commands fixed her installation, which was running an old version of Python and which would not display figures.
+
+
+## Installing Jupyter labextensions
+
+<p class="center" markdown="0">
+  <img src="figs/labextension.webp" style="width: 300px;">
+</p>
+
+You may need to install `node.js` to be able to compile these extensions. In homebrew, try
+
+~~~~ sh
+brew install node
+~~~~

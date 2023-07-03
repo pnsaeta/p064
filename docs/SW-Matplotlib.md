@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>
@@ -92,7 +109,7 @@ Let’s try a curve with a small value of damping parameter $$\zeta$$.
 ~~~~
 
 <p class='center' markdown='0'>
-  <img src='figs/intro-2.png' style='width: 500px;'>
+  <img src='figs/intro-2.webp' style='width: 500px;'>
 </p>
 
 
@@ -110,7 +127,7 @@ ax.legend();
 ~~~~
 
 <p class='center' markdown='0'>
-  <img src='figs/intro-3.png' style='width: 500px;'>
+  <img src='figs/intro-3.webp' style='width: 500px;'>
 </p>
 
 <p class='mycap'>Stronger damping attenuates the resonance peak.</p>
@@ -132,7 +149,7 @@ for zeta in (0.05,0.1, 0.2, 0.5, 1, 2):
 ax.legend();
 ~~~~
 
-<p class='center'><img src="figs/intro-4.png" style="width: 500px;"></p>
+<p class='center'><img src="figs/intro-4.webp" style="width: 500px;"></p>
 <p class="mycap">Now our resonance cup runneth over!</p>
 
 
@@ -155,7 +172,7 @@ for zeta in (0.05, 0.1, 0.2, 0.5, 1, 2):
 ax.legend();
 ~~~~
 
-<p class="center"><img src="figs/intro-5.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/intro-5.webp" style="width: 500px;"></p>
 <p class="mycap">Now our resonance cup runneth over in style!</p>
 
 

@@ -2,16 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
 <div class="dropdown-content">
 <ul>
 <li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Special square matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert spaces</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalizing a matrix</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues, eigenvectors, and completeness</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical linear algebra in NumPy</a></li>
+<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
+<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
+<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
+<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
+<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
+<li><a href="LA-Krylov.html">Krylov Sets</a></li>
+<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
 </ul>
 </div>
 </div>
@@ -78,7 +94,7 @@ Note that the “hat” on $$S_z$$ indicates that it is an operator; it operates
 
 ## Normal Matrices
 
-A **normal matrix** commutes with its conjugate transpose: $$\mat{A}^* \vdot \mat{A} = \mat{A} \vdot \mat{A}^*$$.
+A **normal matrix** commutes with its conjugate transpose: $$\mat{A}^{*\mathrm{T}} \vdot \mat{A} = \mat{A} \vdot \mat{A}^{*\mathrm{T}}$$.
 
 ## Unitary Matrices
 
@@ -115,4 +131,27 @@ Orthogonal matrices:
 
 + preserve lengths of vectors
 + preserve the inner product between two vectors
+
+
+### Rotation Matrices
+
+The matrix 
+\\[
+  \mat{R}(\theta) = 
+    \begin{pmatrix}
+  \cos\theta & -\sin\theta \\\ 
+  \sin\theta & \cos\theta
+  \end{pmatrix}
+\\]
+rotates a column vector through angle $$\theta$$ in the counterclockwise direction. You can confirm that $$\mat{R}(\pi/2)$$ rotates $$\vu{x} \to \begin{pmatrix}1 \\\ 0\end{pmatrix}$$ into $$\vu{y} \to \begin{pmatrix} 0 \\\ 1 \end{pmatrix}$$ and $$\vu{y}$$ into $$-\vu{x}$$.
+
+We can generalize readily to 3 dimensions, at least for rotations around one of the basis vectors. For example, 
+\\[
+    \begin{pmatrix}
+    \cos\theta & 0 & \sin\theta \\\ 
+    0 & 1 & 0 \\\ 
+    -\sin\theta & 0 & \cos\theta
+    \end{pmatrix}
+\\]
+rotates a column vector around the $$y$$ axis. All proper rotations (that don't alter the handedness of the basis vectors) have a determinant of 1. Improper rotations, which do change the handedness of the basis vectors, have determinant $$-1$$.
 

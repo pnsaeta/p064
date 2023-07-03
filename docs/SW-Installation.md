@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>
@@ -119,7 +136,7 @@ Homebrew/homebrew-cask (git revision 16eab891a1; last commit 2022-01-04)
 
 Download the Anaconda3 installer and launch it. After it finishes installing, launch the Anaconda Navigator. Then click to launch a Powershell:
 
-![blah](figs/w11powershell.png)
+![blah](figs/w11powershell.webp)
 
 This opens a terminal window. Enter the command
 
@@ -258,12 +275,12 @@ Launch Jupyter notebook from the directory where you would like to load code and
 
 A browser window should open and you will see a listing of the files in the current directory. At the bottom of the Edit menu you should see
 
-<p class="center" markdown="0"><img alt="nbextensions config" src="figs/notebookext1.png"></p>
+<p class="center" markdown="0"><img alt="nbextensions config" src="figs/notebookext1.webp"></p>
 
 You should now see a menu item called **Nbextensions**, as illustrated in the figure.
    
 <p class="center" markdown="0">
-   <img alt="Nbextensions" src="figs/nbextensions.png">
+   <img alt="Nbextensions" src="figs/nbextensions.webp">
 </p>
 
 Clicking on the **Nbextensions** menu will allow you to load extensions as  desired. I recommend several, including 
@@ -273,17 +290,17 @@ Clicking on the **Nbextensions** menu will allow you to load extensions as  desi
 + Collapsible Headings
 + ExecuteTime
 
-![Extensions](figs/extensions.png)
+![Extensions](figs/extensions.webp)
 
 ### Extensions in Jupyter Lab
 
 We will need a couple of extensions to be installed in JupyterLab. The first step to install those is to enable them by clicking the jigsaw icon as shown in the figure below and then clicking on the **Enable** button.
 
-<p class="center"><img alt="Enable" src="figs/labext1.png"></p>
+<p class="center"><img alt="Enable" src="figs/labext1.webp"></p>
 
 Once you have enabled extensions, you can use the search box to install the two extensions shown here
 
-<p class="center"><img alt="?" src="figs/labext2.png"></p>
+<p class="center"><img alt="?" src="figs/labext2.webp"></p>
 
 Alternatively, you can issue the following statement in the terminal
 

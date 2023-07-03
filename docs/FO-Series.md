@@ -2,15 +2,30 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="FO-Intro.html">Introduction to Fourier Series and Transforms</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="FO-Intro.html">Complex Numbers and All Things Fourier</a></li>
 <li><a href="FO-ComplexVariables.html">Complex Variables</a></li>
 <li><a href="FO-Series.html">Series</a></li>
 <li><a href="FO-FourierSeries.html">Fourier Series</a></li>
 <li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
-<li><a href="FO-Delta.html">Dirac Delta Function</a></li>
+<li><a href="FO-Delta.html">The Dirac Delta Function</a></li>
+<li><a href="FO-Numerical-FFT.html">Numerical Fourier Transforms</a></li>
 </ul>
 </div>
 </div>
@@ -42,7 +57,7 @@ that is the limit of partial sums having a finite number of terms. For the limit
 does not converge, although its divergence is logarithmic (weak), as illustrated in the following figure
 
 <p class="center" markdown="0">
-  <img src="figs/harmonic.png" style="width: 500px;">
+  <img src="figs/harmonic.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1">Fig. 1 — The harmonic series is represented by the area shaded blue of the bars of height $$1$$, $$\frac12$$, $$\frac13$$, etc. The area of the bars is greater than the area under the curve $$1/x$$, since the curve is everywhere contained within a bar. Since $$\int_1^x \frac1{x'}\,dx' = \ln x$$, which slowly diverges as $$x\to\infty$$, the harmonic series diverges even though its individual terms tend to zero.</p>
 
@@ -203,7 +218,7 @@ where the double factorial is defined by
 \\]
 
 <p class="center" markdown="0">
-  <img src="figs/gamma.png" style="width: 500px;">
+  <img src="figs/gamma.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">The $$\Gamma$$ function for small arguments. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 

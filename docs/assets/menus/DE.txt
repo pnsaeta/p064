@@ -1,6 +1,5 @@
-Ordinary Differential Equations I	DE-DEs.md
-Ordinary Differential Equations II	DE-DE-2.md
-The Quantum SHO, Analytic Treatment	DE-SHO-analytic.md
-The Quantum SHO, Numerical Treatment	DE-SHO-numerical.md
-Partial Differential Equations I	DE-PDEs.md
-Partial Differential Equations II	DE-PDE-II.md
++	DE-DE1.md	Ordinary Differential Equations
++	DE-DE2.md	Numerical Approaches to Solving ODEs
++	DE-SHO-analytic.md	The Quantum Simple Harmonic Oscillator
++	DE-SHO-numerical.md	The Quantum SHO—Numerical Approaches
++	DE-SturmLiouville.md	Sturm-Liouville Theory

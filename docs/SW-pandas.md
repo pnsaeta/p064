@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>
@@ -59,7 +76,7 @@ df = pd.DataFrame(dict(Fibonacci=fibo, Prime=prime, Nifty=nifty))
 If we ask Jupyter to display the DataFrame by submitting df, this is what we
 get:
 
-<p class="center"><img src="figs/pandas-out.png"></p>
+<p class="center"><img src="figs/pandas-out.webp"></p>
 
 In combination with Jupyter, pandas generates a nice looking table, with column
 heads you can use for sorting. In this case, everything is sorted in ascending
@@ -74,7 +91,7 @@ df
 ~~~~
 which generates the output
 
-<p class="center"><img src="figs/pandas-index.png"></p>
+<p class="center"><img src="figs/pandas-index.webp"></p>
 
 * Plotting data in a pandas DataFrame
 
@@ -86,7 +103,7 @@ and use it to specify blue squares:
 df.plot(y='Prime', style='bs')
 ~~~~
 
-<p class="center"><img src="figs/prime.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/prime.webp" style="width: 500px;"></p>
 
 If I would rather plot one column against another, I can specify both `x` and
 `y` values. I'll gussy up some other things, too.
@@ -95,7 +112,7 @@ If I would rather plot one column against another, I can specify both `x` and
 df.plot(x='Fibonacci', y='Prime', kind='scatter', title='Ridiculous')
 ~~~~
 
-<p class="center"><img src="figs/ridiculous.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/ridiculous.webp" style="width: 500px;"></p>
 
 As usual, you can get lots more information about a command by asking for help:
 
@@ -115,7 +132,7 @@ df[df['Fibonacci'] % 2 == 0]
 ~~~~
 which yields
 
-<p class="center"><img src="figs/evenfib.png"></p>
+<p class="center"><img src="figs/evenfib.webp"></p>
 
 What’s going on here? The interior expression, `df['Fibonacci'] % 2 == 0`
 produces a boolean array of values, one for each row in the DataFrame. This
@@ -145,7 +162,7 @@ Name: Fibonacci, dtype: int64
 
 On the [Matplotlib introduction page](SW-Matplotlib.md), we developed the following figure.
 
-<p class="center"><img src="figs/intro-5.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/intro-5.webp" style="width: 500px;"></p>
 <p class="mycap">Now our resonance cup runneth over in style!</p>
 
 I’m going to recompute the values plotted in this figure and store them
@@ -160,7 +177,7 @@ df = pd.DataFrame(values, index=logx)
 df
 ~~~~
 
-<p class="center"><img src="figs/intro-pandas.png"></p>
+<p class="center"><img src="figs/intro-pandas.webp"></p>
 <p class="mycap">Displaying a pandas DataFrame.</p>
 
 
@@ -174,7 +191,7 @@ You can access individual columns using their name:
     df.plot(logx=True, logy=True, xlabel="$x$", ylabel="$y$");
 ~~~~
 
-<p class="center"><img src="figs/intro-6.png"></p>
+<p class="center"><img src="figs/intro-6.webp"></p>
 <p class="mycap">With the curves in a pandas DataFrame, the plot command takes a single line.</p>
 
 
@@ -199,7 +216,7 @@ like the one shown below. Feel free to consult the matplotlib documentation as
 liberally as you like! 
 
 
-<p class="center"><img src="figs/moore.png"></p>
+<p class="center"><img src="figs/moore.webp"></p>
 <p class="mycap">Target practice: Can you make your plot look <strong>exactly</strong> like this one?</p>
 
 **Hints**

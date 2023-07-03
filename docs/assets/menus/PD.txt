@@ -1,0 +1,5 @@
++	PD-PD1.md	Partial Differential Equations
++	PD-PD2.md	PDEs II — Laplace’s Equation
++	PD-PD3.md	PDEs III — the Wave Equation
++	PD-PD4.md	Combining Fourier Transforms and PDEs
++	PD-PD5.md	Numerical Solution to Partial Differential Equations

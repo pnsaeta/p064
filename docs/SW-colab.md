@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>

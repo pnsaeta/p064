@@ -2,15 +2,32 @@
 {::comment}menu-start{:/comment}
 
 <div class="dropdown">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.png"></label>
+<label id="main-menu"><img id="master" src="figs/master.webp"></label>
 <div class="dropdown-content">
 <ul>
-<li><a href="SW-Installation.html">Installing necessary software</a></li>
-<li><a href="SW-Jupyter.html">Jupyter notebooks</a></li>
-<li><a href="SW-NumPy.html">NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting Plots</a></li>
+<li><a href="SW-Installation.html">Software Installation</a></li>
+<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
+<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
+<li><a href="ST-Random.html">Stochastic Processes</a></li>
+<li><a href="DE-DE1.html">Differential Equations</a></li>
+<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
+<li><a href="PR-Project.html">Projects</a></li>
+</ul>
+</div>
+</div>
+<div class="dropdown hamburger">
+<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
+<div class="dropdown-content">
+<ul>
+<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
+<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
+<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
+<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
+<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
 <li><a href="SW-pandas.html">Pandas</a></li>
+<li><a href="SW-colab.html">Using Google Colab</a></li>
+<li><a href="SW-Python.html">Python</a></li>
+<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
 </ul>
 </div>
 </div>
@@ -67,14 +84,14 @@ If you wish to tie certain axes of the subplots to one another, pass
 `False`. 
 
 <p class="center">
-<img src="figs/subplots.png" style="width: 500px;">
+<img src="figs/subplots.webp" style="width: 500px;">
 </p>
 <p class="mycap">Fig. 1 — A simple figure with two subplots</p>
 
 Had we passed `sharey=True` to the `plt.subplots()` command, we would have
 obtained a figure like Fig. 2.
 
-<p class="center"><img src="figs/sharey.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/sharey.webp" style="width: 500px;"></p>
 <p class="mycap">Fig. 2 — Two subplots with a shared y axis</p>
 
 
@@ -101,7 +118,7 @@ ax3.set_xlabel(r'$$t$$')
 ax3.legend([r'$$\sin(2\pi t)$$', r'$$\cos(2\pi t)$$']);
 ~~~~
 
-<p class="center"><img src="figs/labels.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/labels.webp" style="width: 500px;"></p>
 <p class="icap">Using LaTeX to produce properly formatted labels, with variables set in italics and functions in roman font.</p>
 
 In this example, the legend was created by passing in a list of strings, one for
@@ -135,14 +152,14 @@ eax.set_xlabel('Position (mm)')
 eax.set_ylabel('Intensity (V)');
 ~~~~
 
-<p class="center"><img src="figs/errorbar.png" style="width: 500px;"></p>
+<p class="center"><img src="figs/errorbar.webp" style="width: 500px;"></p>
 <p class="icap" markdown="1">A figure with error bars showing data taken by a student in Physics 134,
  *Optics Lab*  (I had to grow the error bars by a factor of 50 so you could see them!).</p>
 
 The `pd.read_table()` call produces a pandas `DataFrame`. You can examine the
 contents of the frame just by entering the variable name in a cell:
 
-<p class="center"><img src="figs/pandas.png"></p>
+<p class="center"><img src="figs/pandas.webp"></p>
 <p class="mycap" markdown="1">A pandas `DataFrame`.</p>
 
 See [Pandas](SW-pandas.md) for more information on how to use pandas.
