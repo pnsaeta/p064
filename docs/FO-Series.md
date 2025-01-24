@@ -1,36 +1,5 @@
 {:menu FO}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="FO-Intro.html">Complex Numbers and All Things Fourier</a></li>
-<li><a href="FO-ComplexVariables.html">Complex Variables</a></li>
-<li><a href="FO-Series.html">Series</a></li>
-<li><a href="FO-FourierSeries.html">Fourier Series</a></li>
-<li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
-<li><a href="FO-Delta.html">The Dirac Delta Function</a></li>
-<li><a href="FO-Numerical-FFT.html">Numerical Fourier Transforms</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Series
@@ -66,20 +35,22 @@ does not converge, although its divergence is logarithmic (weak), as illustrated
 
 Successive terms of a geometric form a fixed ratio $$r$$:
 \\[
-    G_N = \sum_n^N a_0 r^n = a_0 \frac{1 - r^{N+1}}{1 - r}
+    G_N = \sum_{n=0}^N a_0 r^n = a_0 \frac{1 - r^{N+1}}{1 - r}
 \\]
 The series converges as $$N\to\infty$$ provided that $$|r| < 1$$.
 
 ### Tests of Convergence
 
+It is often necessary to know whether an infinite series converges to a finite value. Some of the useful tests to answer this question are:
+
 1. **Comparison tests**: by comparing one series of unknown convergence term-by-term to a series of known convergence properties, it may be possible to deduce the convergence of the first series. For instance, if the series of terms $$\sum_n a_n$$ is known to converge and $$b_n < a_n$$ for all $$n$$, then $$\sum_n b_n$$ converges.
-2. **Cauchy Root Test**: if $$(a_n)^{1/n} \le r < 1$$ for all terms $$n \ge N$$, with $$r$$ independent of $$n$$, then $$\sum_n a_n$$ converges. This test is a comparison to the convergence geometric series.
+2. **Cauchy Root Test**: if $$(a_n)^{1/n} \le r < 1$$ for all terms $$n \ge N$$, with $$r$$ independent of $$n$$, then $$\sum_n a_n$$ converges. This test is a comparison to the convergence of a geometric series.
 3. **Ratio test**: the convergence of a series may be determined from the limit of the ratio of successive terms:
 \\[
     \lim_{n\to\infty} \frac{a_{n+1}}{a_n} \begin{cases}
-    < 1, & \text{convergence} \\\ 
-    > 1, & \text{divergence} \\\ 
-    = 1, & \text{indeterminate}
+    < 1 &\quad \text{convergence} \\\ 
+    > 1 &\quad \text{divergence} \\\ 
+    = 1 &\quad \text{indeterminate}
     \end{cases}
 \\]
 4. **Integral test** The caption to Fig. 1 above illustrates using an integral test 
@@ -90,12 +61,20 @@ The **Riemann zeta** function is defined by
 \begin{equation}\label{eq:zeta}
   \zeta(x) = \sum_{n=1}^\infty \frac1{n^{x}}
 \end{equation}
-If $$x=1$$, this series becomes the harmonic series, which he know to be divergent. For $$x < 1$$ it diverges more rapidly, but for $$x > 1$$ we can use an integral test to check convergence:
+If $$x=1$$, this series becomes the harmonic series, which we know to be divergent. For $$x < 1$$ it diverges more rapidly, but for $$x > 1$$ we can use an integral test to check convergence:
 \\[
     \zeta(x) = \sum_{n=1}^\infty \frac1{n^{x}} < \int_1^{\infty} n^{-x} \;dn
     = \left.\frac{n^{1-x}}{1-x}\right|_{n=1}^{n=\infty} = \frac{1}{x-1}
 \\]
-The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant.
+The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
+\begin{equation}\label{eq:Stefan-Boltzmann}
+  p = \sigma T^4 \qquad\text{where}\qquad
+  \sigma = \frac{6 \zeta(4) k\_{\mathrm{B}}^4}{\pi^2 c^2 \hbar^3}
+  = \frac{2 \pi^5 k\_{\mathrm{B}}^4}{15 c^2 h^3}
+  \approx 5.67 \times 10^{-8}\,\mathrm{W \cdot m^{-2} \cdot K^{-4}}
+\end{equation}
+
+
 
 ### Alternating Series
 

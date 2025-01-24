@@ -1,39 +1,4 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
-
 
 
 # Using Jupyter Notebooks
@@ -41,10 +6,10 @@
 * toc
 {:toc}
 
-Jupyter notebooks use a browser to provide an interactive computation and
+Jupyter(lab) notebooks provide an interactive computation and
 authoring environment that allows one freely to combine text (including LaTeX
 equations), graphics, computation, and the results of computations in a single
-window. Jupyter Notebook is the more established code base; Jupyter Lab is newer, has a number of nice features, but is buggier than the Notebook interface; use it at your own risk!
+window. Jupyter Notebook was the original platform, but has now been superseded by Jupyterlab. My preferred approach is to use the stand-along [Jupyter Lab application](https://github.com/jupyterlab/jupyterlab-desktop).
 
 
 Notebook cells can include text written in **Markdown** (such as this cell),
@@ -113,7 +78,8 @@ in the Jupyter **Help** menu.
 
 ## Code
 
-The first step in a new notebook is a line containing a magic command that
+The first step in a new notebook is typically a cell that loads the modules you need and contains a *magic command* to specify how to render graphics.
+ containing a magic command that
 allows graphs to appear in output cells of the notebook. Magic lines start with
 a % (and you can’t put a comment after them the way you can in Python. To
 execute the commands in a cell, make sure the cell is selected and press
@@ -122,9 +88,9 @@ triangle symbol at the top of the page.
 
 
 ~~~~ python
-# the following line is for jupyter notebook
-%matplotlib notebook
-# if you use jupyter lab, replace "notebook" with "widget"
+# the following line is for jupyterlab
+%matplotlib widget
+# if you use jupyter notebook, replace "widget" with "notebook"
 import numpy as np               # np is the standard abbreviation for numpy
 import matplotlib.pyplot as plt  # plt is the standard abbreviation for pyplot
 ~~~~
@@ -136,7 +102,7 @@ try a very simple example.
 
 ~~~~ python
 fig, ax = plt.subplots()
-ax.plot([1, 2, 3], [4, 2, 3], 'r*', label="stars")
+ax.plot([1, 2, 3], [4, 2, 3], 'r*', ms=16, label="stars")
 ax.set_xlabel("x")
 ax.set_ylabel("y")
 ax.legend();
@@ -152,7 +118,7 @@ Some explanations:
 - `plt.subplots` returns both a figure object and an axes object
 - `ax.plot` takes two lists, one for the x values, and the other for the y
   values. They must have the same length! The optional argument `'r*'` says to use
-  red star symbols, and the label allows the legend to associate a label with
+  red star symbols, `ms=16` sets the marker size, and the label allows the legend to associate a label with
   the symbol in the legend. 
 - `ax.set_xlabel` and `ax.set_ylabel` take a string. The string can contain
   LaTeX commands (see below).
@@ -170,16 +136,17 @@ For Jupyter Lab to work with matplotlib, you need to have a few extensions insta
 From a terminal, type
 
 ~~~~ bash
-> jupyter labextension list
-JupyterLab v3.6.3
-/opt/homebrew/Cellar/jupyterlab/3.6.3/libexec/share/jupyter/labextensions
-        jupyterlab_pygments v0.2.2 enabled OK (python, jupyterlab_pygments)
-
-Other labextensions (built into JupyterLab)
-   app dir: /opt/homebrew/Cellar/jupyterlab/3.6.3/libexec/share/jupyter/lab
-        @jupyter-widgets/jupyterlab-manager v5.0.7 enabled OK
-        jupyter-matplotlib v0.11.3 enabled OK
-
+> jupyter labextension list 
+JupyterLab v4.3.4
+/Users/saeta/.virtualenvs/py13/share/jupyter/labextensions
+        anywidget v0.9.13 enabled OK
+        jupyterlab_pygments v0.3.0 enabled OK (python, jupyterlab_pygments)
+        jupyter-matplotlib v0.11.6 enabled OK
+        spreadsheet-editor v0.7.2 enabled OK (python, jupyterlab-spreadsheet-editor)
+        jupyterlab-execute-time v3.2.0 enabled OK (python, jupyterlab_execute_time)
+        @jupyter-notebook/lab-extension v7.3.2 enabled OK
+        @voila-dashboards/jupyterlab-preview v2.3.8 enabled OK (python, voila)
+        @jupyter-widgets/jupyterlab-manager v5.0.13 enabled OK (python, jupyterlab_widgets)
 ~~~~
 
 This command gives the version of the JupyterLab software and the status of all installed and enabled extensions.
@@ -202,8 +169,4 @@ Kate Riggs found that these two commands fixed her installation, which was runni
   <img src="figs/labextension.webp" style="width: 300px;">
 </p>
 
-You may need to install `node.js` to be able to compile these extensions. In homebrew, try
-
-~~~~ sh
-brew install node
-~~~~
+Extensions may be installed using the **Extension Manager**, at the bottom of the **View** menu. Near the top of the PyPi panel is a **Warning** section. You will have to grant permission to allow third-party extensions to be installed. You only have to do this once.

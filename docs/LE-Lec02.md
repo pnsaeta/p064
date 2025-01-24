@@ -2,23 +2,24 @@
 
 ## A Research Problem
 
-The HRL 2022–23 Clinic Team is working on a project to explore the use of ferroelectrics in HRL's solid-state qubit design. The strategy relies on trapping single electrons in potential wells that are created in a thin silicon layer by voltages on gates (electrodes) placed above the thin silicon layer. The structure of the layers is illustrated in the following figure. Because electrons in the silicon layer have lower energy than they would have if they moved to the surrounding Si<sub>0.7</sub>Ge<sub>0.3</sub> layers, they are confined in the Si layer and can move about as a two-dimensional gas.
+The HRL 2022–23 Clinic Team worked on a project to explore the use of ferroelectrics in HRL's solid-state qubit design. The strategy relies on trapping single electrons in potential wells that are created in a thin silicon layer by voltages on gates (electrodes) placed above the thin silicon layer. The structure of the layers is illustrated in the following figure. Because electrons in the silicon layer have lower energy than they would have if they moved to the surrounding Si<sub>0.7</sub>Ge<sub>0.3</sub> layers, they are confined in the Si layer and can move about as a two-dimensional gas.
 
 <p class="center" markdown="0">
   <img src="figs/layers.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Layer structure of the HRL devices.</p>
 
-
-If a positive potential is applied to the Al gate, then electrons in the Si layer will be drawn to the potential well underneath the gate. If we use other gates to form potential barriers, it is possible to create a sequence of potential wells, each of which can trap a single electron. The spins of these electrons can then be manipulated as quantum bits 
-(superpositions of $$|0\rangle$$ and $$|1\rangle$$) in a quantum computer.
+If a positive potential is applied to the Al gate, then electrons in the Si layer will be drawn to the potential well underneath the gate. If we use other gates to form potential barriers, it is possible to create a sequence of potential wells, each of which can trap a single electron. The spins of these electrons can then be manipulated as quantum bits —
+superpositions of $$ |0 \rangle$$ 
+and $$|1 \rangle$$
+— in a quantum computer.
 
 <p class="center" markdown="0">
-  <img src="figs/HRL-micrograph.webp" style="width: 300px;">
-  <img src="figs/HRL-geometry.webp" style="width: 500px;">
+  <img src="figs/HRL-micrograph.webp" style="width: 300px;" alt="micrograph of device with separation 110 nm and radius 30 nm">
+  <img src="figs/HRL-geometry.webp" style="width: 500px;" alt="model representation of the device geometry">
 </p>
 <p class="icap" markdown="1"><a name="layout">Figure 2</a> — Micrograph of an actual sample (left); model representation (right).</p>
-
+ 
 
 ## The Model
 
@@ -66,10 +67,13 @@ where $$V_P = 0.6$$ V and $$V_X = 0.3$$ V. More succinctly, we can represent COM
   \vb{y} = M(\vb{x})
 \end{equation}
 
-We would like all the even values of $$\vb{y}$$ to be the same (let's say, $$V_p = -280$$ meV as a target) and all the barrier heights to be the same (say $$V_x = -240$$ meV). This means we need to find the changes in the input vector, $$\delta\vb{x}$$, that will change the output by $$\delta\vb{y}$$ where
+We would like all the even values of $$\vb{y}$$ to be the same (let's say, $$V_P = -280$$ meV as a target) and all the barrier heights to be the same (say $$V_X = -240$$ meV). This means we need to find the changes in the input vector, $$\delta\vb{x}$$, that will change the output by $$\delta\vb{y}$$ where
 \begin{equation}\label{eq:dy}
   \delta \vb{y} = \begin{pmatrix}
-  -8.160 \\\ -1.591 \\\ -1.297 \\\ -2.785 \\\ 0.549 \\\ -1.158 \\\ 0.534 \\\ -2.781 \\\ -1.342 \\\ -1.704 \\\ -8.306
+  -8.160 = V_P - (-271.840)\\\ -1.591 = V_X - (-238.409) \\\ -1.297 = V_P - (-278.703)
+   \\\ -2.785 = V_X - (-237.215) \\\ 0.549 = V_P - (-280.549) \\\ -1.158 = V_X - (-238.842) \\\ 
+    0.534 = V_P - (-280.534) \\\ -2.781 = V_X - (-237.219) \\\ -1.342 = V_P - (-278.658) \\\ 
+     -1.704 = V_X - (-238.296) \\\ -8.306 = V_P - -271.694
   \end{pmatrix}
 \end{equation}
 

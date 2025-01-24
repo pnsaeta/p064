@@ -1,34 +1,5 @@
 {:menu PD}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PD-PD2.html">PDEs II — Laplace’s Equation</a></li>
-<li><a href="PD-PD3.html">PDEs III — the Wave Equation</a></li>
-<li><a href="PD-PD4.html">Combining Fourier Transforms and PDEs</a></li>
-<li><a href="PD-PD5.html">Numerical Solution to Partial Differential Equations</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # PDEs III — the Wave Equation
@@ -88,7 +59,7 @@ A general solution to the wave equation for light is a superposition of plane wa
 
 Bessel's equation arises when we solve the wave equation in a circular region, for instance in the shape of a taut drum head after being struck or the ripples on a smooth pond after a pebble is thrown into it—at least while the shore is far away. If we imagine the energy density in the ripples as they proceed outward, it must diminish as $$1/r$$, since the perimeter of the ripple is growing proportional to $$r$$. The energy is proportional to the amplitude squared (same as for a harmonic oscillator), so the amplitude of the wave must decay proportional to $$1/\sqrt{r}$$. So, roughly speaking, we should expect a form something like $$\frac{\sin(kr)}{\sqrt{kr}}$$, where $$k = 2\pi/\lambda$$ is the wave vector.
 
-[As shown here](DE-PDE-II#solving-laplaces-equation-in-a-circular-region), the form of the laplacian in polar coordinates is
+[As shown here](PD-PD2.md#solving-laplaces-equation-in-a-circular-region), the form of the laplacian in polar coordinates is
 \\[
     \laplacian \psi = \frac{1}{r} \pdv{}{r}\qty(r \pdv{\psi}{r}) + \frac{1}{r^2} \pdv[2]{\psi}{\theta}
 \\]
@@ -201,7 +172,7 @@ which capture the behavior at large values of $$x$$.
 From [Sturm-Liouville theory](DE-SturmLiouville.md), we can show that if $$\alpha_{\nu}$$ is the $$\nu$$th zero of $$J_n(x)$$, then
 \begin{equation}\label{eq:ortho}
   \int_{0}^{a} J_{n}(\alpha_{\nu} r/a) J_{n}(\alpha_{\mu}r/a)\; r\dd{r} = 
-  \frac{a^2}{2}[J_{n+1}(\alpha_n)]^2 \delta_{\nu\mu}
+  \frac{a^2}{2}[J_{n+1}(\alpha_{\nu})]^2 \delta_{\nu\mu}
 \end{equation}
 In other words, the orthogonality condition of the Bessel functions uses the weight factor $$r$$ in the integration.
 

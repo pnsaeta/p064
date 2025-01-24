@@ -1,49 +1,75 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 # Linear Algebra
-
-[Back to the top](index.md)
 
 * toc
 {:toc}
 
-## Notation
+## Overview
 
-A “delightful” bug (feature?) of mathematical physics is the different notations used to describe identical mathematical systems/situations. In physics, we are wont to represent a quantity with magnitude and direction, such as a force $$\vb{F}$$ in either boldface or with an arrow over it ($$\va{F}$$). Mathematicians often prefer to use a component notation $$(F_1, F_2, F_3)$$ to represent the same thing. Each strategy has its pros and cons. The problem with the component notation is that it implicitly assumes a particular basis—which is typically **not** made explicit. Thus, we are “invited” to guess that $$F_1$$ is the component of $$F$$ in the $$x$$ direction, but unless this choice is stated explicitly, we can't really be sure. The “physics” notation $$\vb{F}$$ implies that the quantity $$F$$ has both a magnitude and a direction, but declines to state explicitly what its components may be. After all, the direction of the force exists *independent* of the choice of basis vectors we make to describe it. Fundamentally, north is north, even if we orient our coordinate system in some cockamaimie direction. Hence, much of physics is written in coordinate-free notation that emphasizes that vectors have magnitude and direction, rather than that they have representations in a particular basis.
+Lines are so simple! Just about the most basic function you can think
+of. There's not much to them, right? $$y = mx + b$$ and all that. What's to know?
+
+Well, calculus teaches that continuous functions look like lines when you zoom in enough. For small changes, a tangent line approximation may be all you need. If your function has more than one independent variable, then a tangent hyperplane is the obvious generalization. Displacements from the point of tangency are **vectors**; they are elements of a **vector space**.
+
+Of course, not everything is linear. Some of the most interesting and challenging phenomena are inherently nonlinear. A friend of mine in graduate school often joked "Linearity breeds contempt!" Then again, he studied hurricanes and the Navier-Stokes equations of fluid dynamics are nonlinear in general.
+
+In essence, **linear algebra** is the mathematics of objects for which the
+operations of addition and of multiplication by a scalar are defined. That is,
+linear algebra is the mathematics of **vector spaces**.
+
+## What is a Vector?
+
+Let's start with a physics definition that applies in mechanics and electromagnetism. *A vector is a quantity with magnitude and direction* in (two- or) three-dimensional space. Examples include position, velocity, acceleration, force, momentum, electric field, magnetic field, etc.
+
+You already know all about such objects. You can add them if they have the same dimensions. You can stretch or shrink them (by multiplying by a scalar). You've been using them for years now, although you may still be pretty sloppy about notation (you know, putting that arrow on top!).
+
+
+### Addition
+
+However, having a magnitude and direction is not quite a sufficient definition for a vector, until we supplement with rules for addition and for multiplication by a scalar. If we adopt a geometric approach, then the rule for vector addition is to place the tail of vector $$\vb{B}$$ at the head of vector $$\vb{A}$$, and draw the arrow from the tail of $$\vb{A}$$ to the head of $$\vb{B}$$, as illustrated below.
+
+<p class="center" markdown="0">
+  <img src="figs/vector-addition.webp" style="width: 200px;">
+</p>
+<p class="mycap" markdown="1">Addition of vectors: $$\vb{C} = \vb{A} + \vb{B}$$. Note that $$\vb{B} + \vb{A}$$, shown dashed, yields the same vector $$\vb{C}$$. In other words, vector addition is **commutative**.</p>
+
+
+## Vector Spaces
+
+Now, I'd like to generalize the notion of a vector as being an element of a **vector space** governed by the following axioms (vectors are shown in **boldface**; Greek letters represent *scalars*):
+
+1. There is a function, **addition** of vectors (+), so that $$\vb{v}_1 + \vb{v}_2$$ is another vector.
+2. There is a function, **multiplication by scalars**, denoted by juxtaposition, so that $$\alpha \vb{v}$$ is a vector.
+3. Vector addition is **commutative**: $$\vb{v}_1 + \vb{v}_2 = \vb{v}_2 + \vb{v}_1$$.
+4. Vector addition is **associative**: $$(\vb{v}_1 + \vb{v}_2) + \vb{v}_3 = \vb{v}_1 + (\vb{v}_2 + \vb{v}_3)$$.
+5. There is a **zero vector**, $$\vb{0}$$, such that $$\vb{v} + \vb{0} = \vb{v}$$ for all $$\vb{v}$$.
+6. Each vector $$\vb{v}$$ has an **additive inverse** $$\vb{v}'$$ so that $$\vb{v} + \vb{v}' = \vb{0}$$.
+7. **Scalar multiplication is distributive I.**: $$(\alpha + \beta)\vb{v} = \alpha\vb{v} + \beta\vb{v}$$.
+8. **Scalar multiplication is distributive II.**: $$\alpha(\vb{v}_1 + \vb{v}_2) = \alpha \vb{v}_1 + \alpha \vb{v}_2$$.
+9. **Scalar multiplication is associative**: $$(\alpha\beta)\vb{v} = \alpha(\beta\vb{v})$$.
+10. **Multiplication by 1 leaves a vector unchanged**: $$1\vb{v} = \vb{v}$$.
+
+- Axiom 1 means that the vector space is closed under addition.
+- The scalars may be real or complex (or quaternions…).
+
+### Examples
+
+There are many familiar examples, such as directed line segments in a plane, using the usual parallelogram law of addition, and all the previously mentioned vectorial quantities, but consider the following:
+
+1. The set of $$n$$-tuples of real numbers, $$(a_1, a_2, \ldots, a_n)$$ where addition and scalar multiplication are defined by $$(a_1, \ldots, a_n) + (b_1, \ldots, b_n) = (a_1+b_1, \ldots, a_n+b_n)$$ and $$\alpha(a_1,\ldots,a_n) = (\alpha a_1,\ldots, \alpha a_n)$$.
+2. The set of real-valued functions of a real variable $$x$$, defined on the domain $$[a \le x \le b]$$, where addition is defined at each point $$x$$ in the domain. That is, if $$f_1$$ and $$f_2$$ are functions, then $$f_1 + f_2$$ at the point $$x$$ is $$f_1(x) + f_2(x)$$.
+3. The set of square-integrable real-valued functions of a real variable on the domain
+ $$[a \le x \le b]$$, where a square-integrable function $$f$$ satisfies $$\int_a^b |f(x)|^2\dd{x} < \infty$$.
+4. The set of all cubic polynomials.
+
+**Pick one of these examples and confirm that all ten axioms are satisfied.**
+
+
+### A Slightly Silly but Informative Example
+
+Suppose we revise the rule for multiplication of a directed line segment (an arrow) by a scalar to yield the zero vector for all vectors and scalars: $$\alpha \vb{v} = \vb{0}$$. This rule violates only one of the ten axioms, making it *not* a vector space. Which one?
+
 
 ## Linear Operators
 
@@ -59,71 +85,86 @@ Many physical quantities have this property. In classical mechanics, some linear
 + Galilean transformations, $$\hat{G}(\vb{v})$$, which take $$\vb{r} \to \vb{r} + \vb{v} t$$ and $$\vb{p} \to \vb{p} + m\vb{v}$$.
 + time reversal, $$\hat{T}$$, which takes $$\vb{r}(t) \to \vb{r}(-t)$$ and $$\vb{p}(t) \to -\vb{p}(-t)$$.
 
-Linear operators are fundamental in quantum mechanics. These act on a quantum state (vector), $$\ket{\psi}$$ and produce another state (vector) $$\ket{\varphi}$$ in the same vector space over the field of complex numbers. The definition of the norm (magnitude) of a vector in a complex space requires the inner product with the Hermitian conjugate vector to produce a real value. When represented as vectors, the Hermitian conjugate of a column vector is its corresponding row vector with all values complex conjugated. (In quantum mechanics, we represent state vectors as “**kets**” with the notation $$\ket{\psi}$$, and their Hermitian conjugates as "**bras**" with the notation $$\bra{\psi}$$, which is a notation due to Paul Dirac. The names come from the inner product, $$\braket{\varphi}{\psi}$$, which was inspired by the Poisson **bra**c**ket**.) Indeed, every physically observable quantity corresponds to a special kind of linear operator, called a Hermitian operator, whose properties we will define and explore below.
+Linear operators are fundamental in quantum mechanics. To distinguish a quantum state vector from other physical vectors, such as position or momentum, we use the notation $$\ket{\psi}$$ for represent the quantum state $$\psi$$. Quantum mechanical linear operators act on a quantum state vector $$\ket{\psi}$$ to produce another state vector $$\ket{\varphi}$$ in the same vector space over the field of complex numbers.
+
+## Inner Products
+
+So far, we have described one way to combine vectors (addition) and another to scale them (scalar multiplication), but we have no notion of combining vectors to yield a scalar. The inner product between two vectors, denoted $$\langle \vb{v}_1, \vb{v}_2 \rangle$$, is such a function. If the vector space is over the real numbers (the amplitudes are all real), then the inner product is defined by
+\begin{equation}
+  \langle \vb{a}, \vb{b} \rangle = \vb{a} \vdot \vb{b} = \sum_{i=1}^N a_i b_i
+  = (a1, \ldots, a_N) \vdot \begin{pmatrix}
+  b_1 \\\ \vdots \\\ b_N
+  \end{pmatrix}
+  \label{eq:innerproduct}
+\end{equation}
+
+The "length" or **norm** of a vector is given by
+\begin{equation}
+  || \vb{a} || = \sqrt{\langle \vb{a}, \vb{a} \rangle} = \left( \sum_{i=1}^{N} a_i^2 \right)^{1/2}
+  \label{eq:norm}
+\end{equation}
+which is what we would expect from the Pythagorean theorem. 
+
+> Mathematicians are wont to preserve the "double-pipe" notation for *norm*, as shown in Eq. (\ref{eq:norm}), to distinguish it from the absolute value of a scalar quantity (either real or complex). Physicists typically adopt a more expansive view; both represent the magnitude or length of either a scalar or vector quantity. Hence, most physicists avoid the "double-pipe" notation and write
+$$|\vb{a}| = a$$.
+
+However, if the vector space is over the field of complex numbers, then the inner product defined in Eq. (\ref{eq:innerproduct}) won't generally produce a real nonnegative value that can represent the "length" of the vector. In this case, we modify the definition of the inner product by taking the complex conjugate of the first argument:
+\begin{equation}
+  \langle \vb{a}, \vb{b} \rangle = \sum_{i=1}^N (a_i)^* b_i
+\end{equation}
+In matrix notation, this is the product of the conjugate-transpose of column vector $$\vb{a}$$ multiplying column vector $$\vb{b}$$:
+\begin{equation}
+  \langle \vb{a}, \vb{b} \rangle =
+   (a_{1}^{\*},
+   a_{2}^{\*}, \ldots,
+   a_N^*) \vdot
+  \begin{pmatrix}
+  b_1 \\\ b_2 \\\ \vdots \\\ b_N
+  \end{pmatrix}
+\end{equation}
+This definition means that the inner product of a vector with itself is positive definite and suitable for defining a magnitude or length of the vector:
+\begin{equation}
+  \ev{\vb{a}, \vb{a}} = \sum_{i=1}^N (a_i)^{\*} a_i = \sum_{i=1}^N |a_i|^2 \ge 0
+\end{equation}
+which means that the length of $$\vb{a}$$ is
+\begin{equation}
+  \boxed{ |\vb{a}| = \sqrt{\ev{\vb{a}, \vb{a}}} = \sqrt{ \sum_{i=1}^N |a_i|^2 } }
+\end{equation}
+Note that this is the same as Eq.&nbsp;(\ref{eq:norm}), apart from the absolute value sign surrounding each (complex) component of the vector.
+
+### Question
+
+What is the length of $$\vb{a} = \begin{pmatrix} 1 \\\ i \\\ -1 \\\ -i \end{pmatrix}$$? &nbsp; &nbsp;
+If $$\vb{b}^{T} = (1, e^{i\phi}, e^{2i\phi}, e^{3i\phi})$$, what is $$\langle \vb{b}, \vb{a} \rangle$$? Can you simplify your expression?
+
+## Dirac Notation
+
+If the vector space is over the field of complex numbers, the two vectors of the inner product are treated differently; the amplitudes of the first vector are conjugated before multiplying by the corresponding amplitudes of the second vector. A pioneer of quantum mechanics, **Paul Adrien Maurice Dirac**, developed a notation to handle this conjugation for vector spaces over the field of complex numbers that physicists use to this day. In Dirac notation, a vector $$\psi$$ is denoted $$\ket{\psi}$$ and its conjugate transpose is denoted $$\bra{\psi}$$, so that the inner product of $$\psi$$ with itself is $$\bra{\psi}\ket{\psi}$$ (where we simplify to show only a single bar between the left- and right-hand sides).
+
+In Dirac notation, the vector $$\ket{\psi}$$ is called a **ket** and its **dual** (conjugate transpose) $$\bra{\psi}$$ is called a **bra**, so that their inner product is a **bra**c**ket** (which was inspired by the Poisson bracket of theoretical mechanics). Every ket vector has its corresponding bra vector, and their inner product yields a nonnegative real number. 
+
+Every physically observable quantity (e.g., momentum, angular momentum, position, etc.) corresponds to a special kind of linear operator, called a Hermitian operator, whose properties we will define and explore below.
 
 + rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vb{e}_z)$$
 + the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$.
 
-## Inner Products
 
-The inner product of two vectors, $$\vb{a}$$ and $$\vb{b}$$, requires us (roughly speaking) to multiply corresponding components and then add up the resulting products. If the vectors live in $$\mat{R}^n$$, then the multiplication is the normal one you expect:
-\begin{equation}\label{eq:real-inner-product}
-  \vb{a} \vdot \vb{b} = (\vb{a}, \vb{b}) = \sum_{i=1}^N a_i b_i
-\end{equation}
+### Matrix Representation
 
-From a matrix standpoint, the inner product of two vectors is represented by the matrix multiplication of the transpose of one by the other:
-\\[
-  \vb{a} \vdot \vb{b} = 
-  \begin{pmatrix}
-    a_1 & a_2 & a_3 & \cdots
-  \end{pmatrix} \vdot \begin{pmatrix}
-    b_1 \\\ b_2 \\\ b_3 \\\ \vdots
-  \end{pmatrix}
-\\]
-
-Note that this operation only makes sense provided that both vectors have the same dimension.
-
-The magnitude of a vector having such an inner product is given by
-\begin{equation}\label{eq:real-mag}
-  |\vb{a}| = \sqrt{\vb{a} \vdot \vb{a}} = \qty(\sum_{i=1}^N a_i^2)^{1/2}
-\end{equation}
-which is just what we’d expect from the Pythagorean theorem.
-
-### Complex spaces
-
-On the other hand, if the vectors inhabit a vector space over the field of complex numbers (as in quantum mechanics), the inner product is defined slightly differently:
-\begin{equation}\label{eq:complex-inner-product}
-  \braket{a}{b} = \sum_{i=1}^N (a_i)^* b_i
-\end{equation}
-where the star indicates complex conjugation. This definition ensures that the magnitude squared of any state vector is a nonnegative real number: 
-\begin{equation}\label{eq:c-magnitude}
-    \braket{a}{a} = \sum_{i=1}^N a_i^* a_i = \sum_{i=1}^N |a_i^2|
-\end{equation}
-
-It is common in physics to use the same notation for the magnitude of a vector as for the absolute value of a real or complex number: 
-\\[
-   |x|, |\vb{a}| \qqtext{(physics)} \qqtext{vs} |x|, ||\vb{a}|| \qqtext{(math)}
-\\]
-Because physicists habitually use notation that distinguishes vectors from scalars and matrices, the double pipes are unnecessary; since math frequently does not, using the double pipes for **norm** helps remind the reader of the meaning of the vector whose norm is being referenced.
-
-
-### Vector Spaces over the Field of Complex Numbers
-
-The “length” of a vector should be a non-negative real number. For this notion to work in vector spaces over the field of complex numbers, we must modify the definition of the inner product to require that the first vector's values be complex conjugated. In such cases, it is often convenient to define a **dual space** with the following property. If the components of vector $$\ket{a}$$ in some basis are $$a_1$$, $$a_2$$, $$\ldots$$, then the components of the dual vector $$\bra{a}$$ in the same basis are $$a_1^*$$, $$a_2^*$$, $$\ldots$$. Furthermore, we can represent the ket vector $$\ket{a}$$ in this basis as a column vector,
+If the components of vector $$\ket{a}$$ in some basis are $$(a_1, a_2, \ldots, a_N)$$, then the components of the dual vector $$\bra{a}$$ in the same basis are $$(a_1^*, a_2^*,\ldots, a_N^*)$$. Furthermore, we can represent the ket vector $$\ket{a}$$ in this basis as a column vector, 
 \begin{equation}
   \ket{a} \longrightarrow \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N}
 \end{equation}
 and the “bra” vector (the dual) as a row vector
 \begin{equation}
-  \bra{a} \longrightarrow \pmatrix{a_1^* & a_2^* & \cdots & a_N^*}
+  \bra{a} \longrightarrow \pmatrix{a_1^{\*} & a_2^{\*} & \cdots & a_N^{\*}}
 \end{equation}
-
 so that the inner product is achieved by standard matrix multiplication of bra and ket:
 \begin{equation}
-  \braket{a}{a} \longrightarrow \pmatrix{a_1^* & a_2^* & \cdots & a_N^*}
+  \braket{a}{a} \longrightarrow \pmatrix{a_1^{\*} & a_2^{\*} & \cdots & a_N^{\*}}
     \vdot \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N} = \sum_{i=1}^N |a_i|^2
 \end{equation}
-which is a manifestly nonnegative real number.
+which is a manifestly nonnegative real number. 
 
 ## Linear Independence
 
@@ -149,11 +190,11 @@ The inner product described above takes two vectors of equal dimension and contr
       a_m b_1 & a_m b_2 & \cdots & a_m b_n
     \end{pmatrix}
   \\]
-This is called the **outer product** of the two vectors and produces a rectangular matrix with $$m$$ rows and $$n$$ columns.
+This is called the **outer product** of the two vectors and produces a rectangular matrix with $$m$$ rows and $$n$$ columns, where $$m$$ is the dimension of $$\vb{a}$$ and $$n$$ is the dimension of $$\vb{b}$$.
 
 ## The Two Main Problems of Linear Algebra
 
-There are two primary problems in linear algebra. The first is to solve for $$\vb{x}$$ in equations of the form 
+There are two primary problems in linear algebra. The first is to solve for $$\vb{x}$$ in equations of the form
 \begin{equation}
  \mat{A} \vdot \vb{x} = \vb{b}
 \end{equation}
@@ -161,6 +202,7 @@ for known matrix $$\mat{A}$$ and vector $$\vb{b}$$. You undoubtedly know how thi
 
 The second is to find the solutions to
 \begin{equation}
+  \label{eq:eigenvector}
   \mat{A} \vdot \vb{x} = \lambda \vb{x}
 \end{equation}
-Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**.
+Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**. Because Eq.&nbsp;(\ref{eq:eigenvector}) is homogeneous in $$\vb{x}$$, eigenvectors may be arbitrarily scaled. However, eigenvalues $$\lambda$$ are uniquely determined the $$\mat{A}$$.

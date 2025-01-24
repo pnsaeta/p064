@@ -1,41 +1,10 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
+* toc
+{:toc}
 
 
-# Eigenvalues and Eigenvectors of Square Matrices
+## Eigenvalues and Eigenvectors of Square Matrices
 
 Consider the matrix
 \\[
@@ -106,53 +75,54 @@ What about for $$\lambda = 0$$? If we successively choose $$y = 0$$ and $$z = 0$
 
 ## Gram-Schmidt Orthogonalization
 
-While $$\vb{x}_2$$ and $$\vb{x}_3$$ are orthogonal to $$\vb{x}_1$$, they are not orthogonal to each other. Often it is most convenient to construct and orthonormal set of eigenvectors. Normalizing the first two gives
+While $$\vb{x}_2$$ and $$\vb{x}_3$$ are orthogonal to $$\vb{x}_1$$, they are not orthogonal to each other. Often it is most convenient to construct an orthonormal set of eigenvectors. Normalizing the first two gives
 \\[
-    \vb{x}\_1 = \begin{pmatrix}
+    \vb{e}\_1 = \begin{pmatrix}
       \frac{1}{\sqrt{3}} \\\ \frac{1}{\sqrt{3}} \\\ \frac{1}{\sqrt{3}}
     \end{pmatrix}
     \qqtext{and}
-    \vb{x}\_2 = \begin{pmatrix}
+    \vb{e}\_2 = \begin{pmatrix}
     \frac{1}{\sqrt{2}} \\\ 0 \\\ -\frac{1}{\sqrt{2}}
     \end{pmatrix}
 \\]
-We can construct a vector from $$\vb{x}_3$$ that is orthogonal to $$\vb{x}_2$$ by subtracting from $$\vb{x}_3$$ its projection onto (normalized) $$\vb{x}_2$$:
+where I am using $$\vb{e}_i$$ for the normalized (basis) eigenvectors.
+We can construct a vector from $$\vb{x}_3$$ that is orthogonal to $$\vb{x}_2$$ by subtracting from $$\vb{x}_3$$ its projection onto (normalized) $$\vb{e}_2$$:
 \\[
-    \vb{x}'\_3 = \vb{x}\_3 - (\vb{x}\_3 \vdot \vb{x}\_2) \vb{x}\_2
+    \vb{x}'\_3 = \vb{x}\_3 - (\vb{x}\_3 \vdot \vb{e}\_2) \vb{e}\_2
     = \begin{pmatrix}
     1 \\\ -1 \\\ 0
     \end{pmatrix} - \frac{1}{\sqrt{2}} \begin{pmatrix}
     \frac{1}{\sqrt{2}} \\\ 0 \\\ -\frac{1}{\sqrt{2}}
-    \end{pmatrix} 
+    \end{pmatrix}
     = \begin{pmatrix}
     \frac12 \\\ -1 \\\ \frac12
     \end{pmatrix}
 \\]
 You can readily confirm that $$\vb{x}'_3$$ is orthogonal to both $$\vb{x}_1$$ and $$\vb{x}_2$$, but it is not yet normalized. Dividing by $$\sqrt{\vb{x}'_3 \vdot \vb{x}'_3}$$ yields the complete set of orthonormal eigenvectors:
 \\[
-    \vb{x}\_1 = \begin{pmatrix}
+    \vb{e}\_1 = \begin{pmatrix}
       \frac{1}{\sqrt{3}} \\\ \frac{1}{\sqrt{3}} \\\ \frac{1}{\sqrt{3}}
     \end{pmatrix}
     \qqtext{and}
-    \vb{x}\_2 = \begin{pmatrix}
+    \vb{e}\_2 = \begin{pmatrix}
     \frac{1}{\sqrt{2}} \\\ 0 \\\ -\frac{1}{\sqrt{2}}
     \end{pmatrix}
     \qqtext{and}
-    \vb{x}\_3 = \begin{pmatrix}
+    \vb{e}\_3 = \begin{pmatrix}
     \frac{1}{\sqrt{6}} \\\ -\frac{2}{\sqrt{6}} \\\ \frac{1}{\sqrt{6}}
     \end{pmatrix}
 \\]
-In summary, **Gram-Schmidt orthogonalization** of a set of linearly independent but nonorthogonal vectors $$\vb{X}_j$$ to yield an orthonormal set of basis vectors $$\vb{x}_j$$ consists first in selecting an initial vector and normalizing it:
+In summary, **Gram-Schmidt orthogonalization** of a set of linearly independent but nonorthogonal vectors $$\vb{x}_j$$ to yield an orthonormal set of basis vectors $$\vb{e}_j$$ consists first in selecting an initial vector and normalizing it:
 \\[
-    \vb{x}\_1 = \frac{\vb{X}\_1}{\sqrt{\vb{X}\_1 \vdot \vb{X}\_1}}
+    \vb{e}\_1 = \frac{\vb{x}\_1}{\sqrt{\vb{x}\_1 \vdot \vb{x}\_1}}
 \\]
 and then for each subsequent vector, projecting out all previous normalized vectors before normalizing the result:
 \\[
-    \vb{x}'\_i = \vb{X}\_i - \sum\_{j=1}^{i-1} (\vb{x}\_i \vdot \vb{x}\_j)\vb{x}\_j
+    \vb{x}'\_i = \vb{x}\_i - \sum\_{j=1}^{i-1} (\vb{x}\_i \vdot \vb{e}\_j)\vb{e}\_j
 \\]
 and then normalizing
 \\[
-    \vb{x}\_i = \frac{\vb{x}'\_i}{\sqrt{\vb{x}'\_i \vdot \vb{x}'\_i}}
+    \vb{e}\_i = \frac{\vb{x}'\_i}{\sqrt{\vb{x}'\_i \vdot \vb{x}'\_i}}
 \\]
 
 While Gram-Schmidt orthogonalization is mathematically sound, the good folks who wrote *Numerical Recipes* point out that “because of the build-up of roundoff errors, naïve Gram-Schmidt orthogonalization is *terrible*. (Emphasis in the original.) They go on to explain that the right way to build an orthonormal basis for a subspace is by [singular value decomposition](LA-NumericalLinearAlgebra.md#singular-value-decomposition) (SVD).

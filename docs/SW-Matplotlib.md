@@ -1,38 +1,5 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 # Introduction to Plotting with Matplotlib
 
@@ -50,9 +17,9 @@ To plot a function in matplotlib you need to first compute $$x$$ values and $$y$
 where $$\zeta$$ is called the *damping parameter* and *x* represents the ratio of
 the frequency of an oscillator to its *natural frequency*, as you learned in E79.
 
-Can you imagine what the curve looks like for $$x \ge 0$$? See if you can guess
+*Can you imagine what the curve looks like for $$x \ge 0$$? See if you can guess
 the shape of the curve for a value of $$\zeta \ll 1$$ and also for $$\zeta >
-1$$. Then proceed.
+1$$. Then proceed.*
 
 We need to pick a suitable range of the independent variable `x`. I’m going to
 start at zero and go to $$x = 4$$ for starters. Let’s use 201 points over that
@@ -70,8 +37,8 @@ x                          # show the values we just computed
 
 Now we need to calculate the corresponding values of $$y$$. But those values
 depend on the value of $$\zeta$$, which we haven’t yet specified. Let’s write a
-little function to take two inputs, the `x` array of values and single value of
-$$\zeta$$ and produce the corresponding values of `y`.
+little function to take two inputs, the `x` array of values and a single value of
+$$\zeta$$, producing the corresponding values of `y`.
 
 
 ~~~~ python
@@ -83,6 +50,7 @@ def myfunc(x: np.ndarray, zeta:float):
 ~~~~
 
 Some explanations:
+
 - `myfunc` takes two arguments, and their types are indicated after the
   colons. Where possible, specifying the type expected for the argument makes
   your functions easier to interpret. 
@@ -109,7 +77,7 @@ Let’s try a curve with a small value of damping parameter $$\zeta$$.
 ~~~~
 
 <p class='center' markdown='0'>
-  <img src='figs/intro-2.webp' style='width: 500px;'>
+  <img src='figs/intro-2.webp' style='width: 400px;'>
 </p>
 
 
@@ -127,7 +95,7 @@ ax.legend();
 ~~~~
 
 <p class='center' markdown='0'>
-  <img src='figs/intro-3.webp' style='width: 500px;'>
+  <img src='figs/intro-3.webp' style='width: 400px;'>
 </p>
 
 <p class='mycap'>Stronger damping attenuates the resonance peak.</p>
@@ -136,25 +104,46 @@ ax.legend();
 
 Well, that’s interesting. Increasing the damping parameter really pushed the
 peak down. I wonder if we could make a plot that showed curves for several
-values of damping parameter. Let’s try. 
+values of damping parameter. Let’s try.
 
 
 ~~~~ python
 fig, ax = plt.subplots()
-ax.set_xlabel("$$x$$")
-ax.set_ylabel("$$y$$")
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
 for zeta in (0.05,0.1, 0.2, 0.5, 1, 2):
     y = myfunc(x, zeta)
     ax.plot(x, y, label=r"$\zeta = %g$" % zeta)
 ax.legend();
 ~~~~
 
-<p class='center'><img src="figs/intro-4.webp" style="width: 500px;"></p>
+<p class='center'><img src="figs/intro-4.webp" style="width: 400px;"></p>
 <p class="mycap">Now our resonance cup runneth over!</p>
 
 
-
 Can you summarize the behavior you observe?
+
+
+### Refining the graph
+
+You may notice that when the damping parameter is small, we aren't calculating enough points near the peak to get a smooth curve. One strategy would be to use more points in `x`, but that seems inelegant: we don't need all those extra points except around the peak. 
+
+We can use `np.concatenate` to generate a set of points for `x` that are more closely spaced around the peak:
+
+~~~~ python
+x = np.concatenate((
+    np.arange(0.0, 0.75, 0.02),
+    np.arange(0.75,1.25, 0.005),
+    np.arange(1.25, 2, 0.05)
+    ))
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/intro-5.webp" style="width: 400px;">
+</p>
+<p class="mycap"><a name="Fig5"></a>Smoother curves around the peak.</p>
+
+
 
 ### Logarithmic axes
 
@@ -164,15 +153,15 @@ It turns out that this plot will look better if we use logarithmic axes. Let’s
 ~~~~ python
 logx = np.logspace(-1, 1, 201)
 fig, ax = plt.subplots()
-ax.set_xlabel("$$x$$")
-ax.set_ylabel("$$y$$")
+ax.set_xlabel("$x$")
+ax.set_ylabel("$y$")
 for zeta in (0.05, 0.1, 0.2, 0.5, 1, 2):
     y = myfunc(logx, zeta)
     ax.loglog(logx, y, label=r"$\zeta = %g$" % zeta)
 ax.legend();
 ~~~~
 
-<p class="center"><img src="figs/intro-5.webp" style="width: 500px;"></p>
+<p class="center"><img src="figs/intro-5.webp" style="width: 400px;"></p>
 <p class="mycap">Now our resonance cup runneth over in style!</p>
 
 

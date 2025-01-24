@@ -1,38 +1,4 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Numerical Linear Algebra with NumPy
@@ -44,7 +10,7 @@
 + [Back to Linear Algebra](LA-LinearAlgebra.md)
 + [Introduction to NumPy](SW-NumPy.md)
 
-## Matrix multiplication
+## Matrix Multiplication
 
 NumPy uses the `@` operator to perform matrix multiplication. Given that
 \\[
@@ -89,7 +55,7 @@ v @ v
 5
 ~~~~
 
-## Matrix inversion
+## Matrix Inversion
 
 The generic matrix inversion routine in NumPy is `numpy.linalg.inv`:
 
@@ -107,7 +73,7 @@ array([[1.00000000e+00, 0.00000000e+00],
        [1.11022302e-16, 1.00000000e+00]])
 ~~~~
 
-## Eigenvalues and eigenvectors
+## Eigenvalues and Eigenvectors
 
 You can get both the eigenvalues and the corresponding normalized eigenvectors by calling `np.linalg.eig(m)`
 
@@ -129,7 +95,7 @@ evals[0] * evecs[:,0], m @ evecs[:,0]
 (array([ 0.30697009, -0.21062466]), array([ 0.30697009, -0.21062466]))
 ~~~~
 
-## Cholesky decomposition
+## Cholesky Decomposition
 
 The Cholesky decomposition of a positive-definite symmetric (Hermitian)
 square matrix factors 
@@ -169,7 +135,7 @@ array([[ 2., -1.,  0.],
 
 According to *Numerical Recipes*, for matrices admitting a Cholesky decomposition, this method of solving $$\mat{A}\vdot\vb{x} = \vb{b}$$ is more numerically stable and about a factor of 2 faster than standard [LDU decomposition](LA-GaussJordan.md).
 
-## Singular value decomposition
+## Singular Value Decomposition
 
 The singular value decomposition of a rectangular matrix $$\mat{M}$$ takes the form
 \begin{equation}

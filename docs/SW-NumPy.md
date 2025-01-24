@@ -1,38 +1,5 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Basics of NumPy
@@ -43,14 +10,13 @@
 [Back to Linear Algebra](LA-LinearAlgebra.md)
 
 
-NumPy is a Python library of optimized routines for computing with arrays. Compared to writing loops over nested lists, as in normal Python syntax, operating with NumPy routines on NumPy arrays greatly accelerates operations and uses more readable syntax.
+NumPy ("num-pie") is a Python library of optimized routines for computing with arrays. Compared to writing loops over nested lists, as in normal Python syntax, operating with NumPy routines on NumPy arrays greatly accelerates operations and uses more readable syntax.
 
 The standard way to access the routines of NumPy in a Python program is with an import statement of the form
 
 ~~~~ python
 import numpy as np
 ~~~~
-
 
 A basic numerical type in NumPy is the `np.ndarray`, which can represent an array of arbitrary numbers of dimensions. You can create an array from basic Python types such as **lists** and **tuples** using `np.array(list_or_tuple)`. For example
 
@@ -69,9 +35,9 @@ Besides listing all elements of a NumPy array, you can use a number of convenien
 
 + `np.arange(start, end, dx)` generates a one-dimensional array of values (start, start + dx, start + 2 * dx, ..., start + n * dx) where the final value satisfies start + n * dx < end. For instance, `np.arange(1, 4, 1)` produces  `array([1, 2, 3])`. That is, the final value in the array *is smaller than the second argument*.
 + `np.linspace(start, end, n)` generates a one-dimensional array of values that divides [start, end] into $$n-1$$ equal intervals, so that `np.linspace(1, 4, 4)` produces `array([1, 2, 3, 4])`. That is, `linspace` includes the end points, whereas `arange` does not include its end point.
-+ `np.zeros((nrows, ncols))` generates a nrows by ncols array of zeros. You can include any number of dimensions in the tuple that specifies the size of the array.
++ `np.zeros((nrows, ncols))` generates an array with `nrows` and `ncols` filled with zeros. You can include any number of dimensions in the tuple that specifies the size of the array.
 + You can also pass an optional numerical type for the array, as in `np.zeros(nelements, dtype=np.int8)`
-+ `np.ones((nrows, ncols))` generates a nrows by ncols array of ones
++ `np.ones((nrows, ncols))` generates an array of ones.
 + If you aren't sure whether an object `A` is already an array (or might be some other iterable), use `np.asarray(A)`, rather than `np.array(A)`. Why? Because `np.asarray(A)` does not create a copy if it doesn't need to, whereas `np.array(A)` creates a copy of `A` regardless.
 + [See the NumPy page on Array creation routines](https://numpy.org/doc/stable/reference/routines.array-creation.html) for more information.
 
@@ -104,7 +70,16 @@ ax.set_xlabel('$x$')            # dollar signs turn on LaTeX; x is set in italic
 ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escaping
 ~~~~
 
-![Sine plot](figs/sineplot.webp)
+<p class="center" markdown="0">
+  <img src="figs/sineplot.webp" style="width: 500px;">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(x)$$ on the interval $$[0, \pi]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including this optional keyword argument:</p>
+
+~~~~ python
+ax.set_xlabel('$x$', usetex=True)
+ax.set_ylabel(r'$\sin{x}$', usetex=True)
+~~~~
+
 
 ### Universal functions
 

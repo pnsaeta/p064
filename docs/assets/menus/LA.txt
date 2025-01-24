@@ -1,5 +1,5 @@
 +	LA-LinearAlgebra.md	Linear Algebra
-+	LA-SquareMatrices.md	Square Matrices
++	LA-SquareMatrices.md	Square Matrices 
 +	LA-GaussJordan.md	Gauss-Jordan Elimination
 +	LA-HilbertSpace.md	Hilbert Space
 +	LA-Diagonalization.md	Diagonalization

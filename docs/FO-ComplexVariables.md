@@ -1,36 +1,5 @@
 {:menu FO}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="FO-Intro.html">Complex Numbers and All Things Fourier</a></li>
-<li><a href="FO-ComplexVariables.html">Complex Variables</a></li>
-<li><a href="FO-Series.html">Series</a></li>
-<li><a href="FO-FourierSeries.html">Fourier Series</a></li>
-<li><a href="FO-FourierTransforms.html">Fourier Transforms</a></li>
-<li><a href="FO-Delta.html">The Dirac Delta Function</a></li>
-<li><a href="FO-Numerical-FFT.html">Numerical Fourier Transforms</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Complex Variables
@@ -40,7 +9,7 @@
 
 ## Definitions and Algebra
 
-The imaginary unit was conjured to be able to solve $$z^2 = x$$ for all $$x \in \mathbb{R}$$. The cheapest extension to the real numbers is to define $$i = \sqrt{-1}$$ and to represent an arbitrary **complex** number as
+The imaginary unit was conjured to be able to solve $$z^2 = x$$ for all $$x \in \mathbb{R}$$. The cheapest extension to the real numbers is to define $$i = \sqrt{-1}$$ and to represent an arbitrary **complex number** as
 \\[
     z = x + iy\qquad x,y \in \mathbb{R}
 \\]
@@ -49,7 +18,9 @@ Here $$x$$ represents the real part of $$z$$ and $$y$$ the imaginary part of $$z
    (x\_1 + i y\_1)\times (x_2 + i y\_2) &= x\_1 x\_2 + x\_1 i y\_2 + i y\_1 x\_2 + i^2 y\_1 y\_2 \notag\\\ 
    &= (x\_1 x\_2 - y\_1 y\_2) + i(x\_1 y\_2 + y\_1 x\_2) \notag
 \end{align}
-Both the real and imaginary parts of the product are unchanged on exchanging 1 and 2; multiplication of complex numbers is also commutative. There are more involved ways to solve $$z^2 = x$$ that preserve the commutative property of addition but not for multiplication. In particular, the **quaternions** are defined by
+Both the real and imaginary parts of the product are unchanged on exchanging 1 and 2; multiplication of complex numbers is also commutative.
+
+There are more involved ways to solve $$z^2 = x$$ that preserve the commutative property of addition but not for multiplication. In particular, the **quaternions** are defined by
 \begin{align}
   -1 &= i^2 = j^2 = k^2  \notag \\\ 
   i j &= k = - j i \qqtext{and cyclic permutations}\notag
@@ -58,7 +29,15 @@ The quaternions have three distinct square roots of $$-1$$, and the products of 
 
 ### Argand Plane
 
-A common way to visualize complex numbers is on the **Argand plane**, in which the real part of the number is plotted on the $$x$$ axis and the imaginary part along the $$y$$ axis. Of course, we could also use a polar coordinate system in which
+A common way to visualize complex numbers is on the **Argand plane**, in which the real part of the number is plotted on the $$x$$ axis and the imaginary part along the $$y$$ axis. 
+
+<p class="center" markdown="0">
+  <img src="figs/Argand.webp" style="width: 300px;" alt="Argand plane">
+</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The complex number $$z = x + i y$$ (for real $$x$$ and $$y$$) is plotted on the $$xy$$ plane at point $$(x,y)$$.</p>
+
+
+Of course, we could also use a polar coordinate system in which
 \begin{align}
   r &= \sqrt{x^2 + y^2} = |z| & \qquad x &= r \cos\phi = \Re(z) \notag \\\ 
   \phi &= \arctan(y/x) &\qquad y &= r \sin\phi = \Im(z) \notag
@@ -153,20 +132,20 @@ For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
   \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\ 
   -\pdv{u}{y} &= \pdv{v}{x} \label{eq:CR4}
 \end{align}
-which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**.
+which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**. 
 
 We already worked out about that if $$f(z) = z^2$$, then $$u(x,y) = x^2 - y^2$$ and $$v(x,y) = 2 x y$$. We can see immediately that both Cauchy-Riemann conditions are satisfied in this case.
 
 It is straightforward to confirm that
 \\[
-  \dv{}{z} f(z)g(z) = \dv{f}{z} g + f \dv{g}{z}  \notag
+  \dv{}{z} \left[ f(z)g(z) \right] = \dv{f}{z} g + f \dv{g}{z}  \notag
 \\]
 and to use induction to show that
 \\[
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
- However, it is possible to produce a very simple function that does not. Consider
+ However, it is possible to produce a very simple function that does not have a derivative. Consider
 \\[
     f(z) = z^* = x - i y
 \\]
@@ -267,4 +246,3 @@ We can extend this result by differentiating both sides with respect to $$z_0$$:
 \\]
 and similarly for $$v$$.
 
-4. Evaluate

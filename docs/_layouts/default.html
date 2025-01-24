@@ -36,7 +36,7 @@
             id: (n) => 'eqn-id-' + n
           },
           macros: {
-            mat: ['{\\mathsf #1}', 1]
+            mat: ['{\\mathbb{#1}}', 1]
           }
         }
         
@@ -49,6 +49,8 @@
   <body>
     <div class="wrapper">
       <header>
+        <div class="menubar">
+
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
@@ -56,9 +58,7 @@
         {% endif %}
 
         <p><a name="top">{{ site.description | default: site.github.project_tagline }}</a></p>
-
-
-       
+        </div>
       </header>
       <section>
 

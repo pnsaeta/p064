@@ -1,47 +1,22 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
-
 
 
 # Square Matrices
 
-Square matrices have a number of interesting properties and deserve special attention.
-
 * toc
 {:toc}
+
+Square matrices have a number of interesting properties and deserve special attention. An $$N \times N$$ square matrix maps an $$N$$-dimensional vector into another $$N$$-dimensional vector. Several types of square matrices have special properties: 
+
+- an **identity** matrix $$\mat{I}$$ maps a vector to itself, much as multiplying by the number 1 leaves another value unchanged.
+- the **inverse** of a square matrix *undoes* the transformation that the matrix causes: $$\mat{A}^{-1} \vdot \mat{A} = \mat{I}$$. Applying first one and then the other yields the original vector. Most matrices do not have an inverse; only those whose rows are linearly independent do.
+- the **transpose** of a matrix is the matrix yielded by exchanging rows and columns: $$(\mat{A}^{\mathrm{T}})_{ij} = \mat{A}_{ji}$$.
+- an **orthogonal** matrix $$\mat{O}$$ satisfies $$\trans{O} \vdot \mat{O} = \mat{O} \vdot \trans{O} = \mat{I}$$. Orthogonal matrices rotate and/or reflect vectors, preserving their length.
+- a **rotation** matrix $$\mat{R}_{\vb{u}}(\theta)$$ rotates a vector through angle $$\theta$$ around the axis specified by the unit vector $$\vb{u}$$. If the space is real, then a rotation matrix is an orthogonal matrix. If the space is complex, a rotation matrix is **unitary** (see below). 
+- a **Hermitian** matrix $$\mat{H}$$ is a complex valued matrix that is equal to its complex conjugate transpose: $$\mat{H} = (\mat{H}^*)^{\mathrm{T}} = \hc{H}$$. Hermitian matrices have real eigenvalues and orthogonal eigenvectors.
+- a **normal** matrix commutes with its conjugate transpose, $$\mat{N}\vdot\hc{N} = \hc{N}\vdot\mat{N}$$, which means that you get the same matrix regardless of the order in which you multiply them.
+- the inverse of a **unitary** matrix is equal to its conjugate transpose: $$\mat{U}^{-1} = \hc{U}$$. Unitary matrices preserve the length of a vector. The time evolution operator in quantum mechanics may be represented by a unitary matrix whose matrix elements generally depend on time $$t$$. 
+
 
 ## Identity Matrix
 
@@ -59,26 +34,23 @@ The identity matrix has ones along the main diagonal and zeros everywhere else:
 
 ## Inverse
 
-If a square matrix $$\mat{A}$$ has an inverse $$\mat{A}^{-1}$$, then
+If a square matrix $$\mat{A}$$ has an inverse $$\mat{A}^{-1}$$, then 
 \begin{equation}
   \mat{A}^{-1} \vdot \mat{A} = \mat{I} = \mat{A} \vdot \mat{A}^{-1}
 \end{equation}
 
 If $$\mat{A}$$ transforms a column vector $$\vb{x}$$ to a new column vector $$\vb{y} = \mat{A} \vdot \vb{x}$$, the inverse matrix allows us to recover $$\vb{x}$$ from  $$\vb{y}$$ via $$\vb{x} = \mat{A}^{-1} \vdot \vb{y}$$ since
 \begin{equation}
-  \mat{A}^{-1} \vb{y} = \mat{A}^{-1} \vdot (\mat{A} \vdot \vb{x}) = (\mat{A}^{-1} \vdot \mat{A}) \vdot \vb{x} =
+  \mat{A}^{-1} \vdot \vb{y} = \mat{A}^{-1} \vdot (\mat{A} \vdot \vb{x}) = (\mat{A}^{-1} \vdot \mat{A}) \vdot \vb{x} =
    \mat{I} \vdot \vb{x} = \vb{x}
 \end{equation}
-The existence of an inverse implies that operating with $$\mat{A}$$ on a vector does not entail the loss of information; that is, the matrix has a trivial **nullspace**, which means that its rows (and columns) are linearly independent. It usually isn't obvious by inspection whether a square matrix has an inverse (that its rows are linearly independent). If one or more rows can be expressed as the linear combination of other rows, then the matrix is **singular**, its **determinant** vanishes, and it does not have an inverse. 
+The existence of an inverse implies that operating with $$\mat{A}$$ on a vector does not entail the loss of information; that is, the matrix has a trivial **nullspace**, which means that its rows (and columns) are linearly independent. It usually isn't obvious by inspection whether a square matrix has an inverse (that its rows are linearly independent). If one or more rows can be expressed as the linear combination of other rows, then the matrix is **singular**, its **determinant** vanishes, and it does not have an inverse.
 
 You can use [Gauss-Jordan elimination](LA-GaussJordan.md) to compute the inverse of a square matrix (provided it has one).
 
-
-Besides the identity matrix, there are a number of important classes of square matrices that arise in physics:
-
 ## Hermitian Matrices
 
-A **Hermitian matrix** is a complex matrix equal to its conjugate transpose: $$\mat{H} = \mat{H}^*$$.
+A **Hermitian matrix** is a complex matrix equal to its conjugate transpose: $$\mat{H} = \widetilde{\mat{H}} = (\mat{H}^{*})^{\mathrm{T}}$$.
 
 + In matrix mechanics, Hermitian matrices represent physically observable quantities (e.g., angular momentum, the hamiltonian (energy), etc.). The matrix representing the $$z$$ component of spin angular momentum of a spin-1/2 particle, in the basis of $$\ket{\uparrow}, \ket{\downarrow}$$ along $$z$$ is
 \\[
@@ -94,11 +66,11 @@ Note that the “hat” on $$S_z$$ indicates that it is an operator; it operates
 
 ## Normal Matrices
 
-A **normal matrix** commutes with its conjugate transpose: $$\mat{A}^{*\mathrm{T}} \vdot \mat{A} = \mat{A} \vdot \mat{A}^{*\mathrm{T}}$$.
+A **normal matrix** commutes with its conjugate transpose: $$\widetilde{\mat{A}} \vdot \mat{A} = \mat{A} \vdot \widetilde{\mat{A}} $$.
 
 ## Unitary Matrices
 
-A **unitary matrix** is a complex square matrix whose inverse is equal to its conjugate transpose: $$\mat{U}^{-1} = \mat{U}^*$$. 
+A **unitary matrix** is a complex square matrix whose inverse is equal to its conjugate transpose: $$\mat{U}^{-1} = \widetilde{\mat{U}}$$. 
 
 
 + A unitary matrix that represents the rotation of a spin-1/2 particle through angle $$\phi$$ around the $$z$$ axis, expressed in the basis of $$\ket{\uparrow}, \ket{\downarrow}$$ along $$z$$ is
@@ -155,3 +127,9 @@ We can generalize readily to 3 dimensions, at least for rotations around one of 
 \\]
 rotates a column vector around the $$y$$ axis. All proper rotations (that don't alter the handedness of the basis vectors) have a determinant of 1. Improper rotations, which do change the handedness of the basis vectors, have determinant $$-1$$.
 
+## Miscellany
+
+- $$\det(\alpha \mat{A}) = \alpha^n \det(\mat{A})$$
+- $$\det(\mat{A} \mat{B}) = \det(\mat{A}) \det(\mat{B})$$
+- $$\det(\mat{A}^{-1}) = \frac{1}{\det{\mat{A}}} $$
+- $$\mathrm{trace}(\mat{A B}) = \mathrm{trace}(\mat{B A})$$

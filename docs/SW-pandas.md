@@ -1,38 +1,5 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 # Pandas
 
@@ -120,12 +87,11 @@ As usual, you can get lots more information about a command by asking for help:
 help(df.plot)
 ~~~~
 
-* Filtering data
+## Filtering data
 
 Suppose we wanted to work only with the data in the table for which the
 Fibonacci number was even. We can construct a new subset table with the
 following command
-
 
 ~~~~ python
 df[df['Fibonacci'] % 2 == 0]
@@ -177,7 +143,7 @@ df = pd.DataFrame(values, index=logx)
 df
 ~~~~
 
-<p class="center"><img src="figs/intro-pandas.webp"></p>
+<p class="center"><img src="figs/intro-pandas.webp" style="width: 500px;"></p>
 <p class="mycap">Displaying a pandas DataFrame.</p>
 
 
@@ -187,11 +153,11 @@ You can access individual columns using their name:
 
 
 ~~~~ python
-    df[0.2]
-    df.plot(logx=True, logy=True, xlabel="$x$", ylabel="$y$");
+   df[0.2]
+   df.plot(logx=True, logy=True, xlabel="$x$", ylabel="$y$");
 ~~~~
 
-<p class="center"><img src="figs/intro-6.webp"></p>
+<p class="center"><img src="figs/intro-7.webp" style="width: 500px;"></p>
 <p class="mycap">With the curves in a pandas DataFrame, the plot command takes a single line.</p>
 
 
@@ -205,7 +171,7 @@ various properties adjusted with keyword arguments.
 ## Practice with pandas and matplotlib
 
 I have placed some experimental data with uncertainties at
-https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt. The $$x$$ axis
+[https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt](https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt). The $$x$$ axis
 variable is the position of the detector (in mm); the $$y$$ axis variable is the
 observed light intensity (in volts); the $$y$$ uncertainty values are in the same
 units. 

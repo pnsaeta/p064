@@ -1,38 +1,5 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 # Diagonalization
 

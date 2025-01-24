@@ -1,34 +1,5 @@
 {:menu DE}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="DE-DE1.html">Ordinary Differential Equations</a></li>
-<li><a href="DE-DE2.html">Numerical Approaches to Solving ODEs</a></li>
-<li><a href="DE-SHO-analytic.html">The Quantum Simple Harmonic Oscillator</a></li>
-<li><a href="DE-SHO-numerical.html">The Quantum SHO—Numerical Approaches</a></li>
-<li><a href="DE-SturmLiouville.html">Sturm-Liouville Theory</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 # The Quantum Simple Harmonic Oscillator
 

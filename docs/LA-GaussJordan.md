@@ -1,38 +1,5 @@
 {:menu LA}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="LA-SquareMatrices.html">Square Matrices</a></li>
-<li><a href="LA-GaussJordan.html">Gauss-Jordan Elimination</a></li>
-<li><a href="LA-HilbertSpace.html">Hilbert Space</a></li>
-<li><a href="LA-Diagonalization.html">Diagonalization</a></li>
-<li><a href="LA-Eigenvectors.html">Eigenvalues and Eigenvectors of Square Matrices</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-<li><a href="LA-Krylov.html">Krylov Sets</a></li>
-<li><a href="LA-NumericalLinearAlgebra.html">Numerical Linear Algebra with NumPy</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 
@@ -59,8 +26,8 @@ Consider the matrix
  -2 & 1 & 3 
  \end{pmatrix}
 \\]
-and suppose we seek to solve for the components of $$\vb{x}$$ such
-that $$\mat{A}\vdot\vb{x} = \begin{pmatrix}1 & 0 & 0\end{pmatrix}^{\rm
+and suppose we seek to solve for the components of $$\vb{x}_1$$ such
+that $$\mat{A}\vdot\vb{x}_1 = \begin{pmatrix}1 & 0 & 0\end{pmatrix}^{\rm
   T}$$. That is, we want to solve
 \\[
   \begin{pmatrix}
@@ -72,7 +39,8 @@ that $$\mat{A}\vdot\vb{x} = \begin{pmatrix}1 & 0 & 0\end{pmatrix}^{\rm
    \end{pmatrix}
   = \begin{pmatrix} 1 \\\ 0 \\\ 0 \end{pmatrix}
 \\]
-for $$x_1, x_2, x_3$$. Written out longhand, this means solving the set of equations
+for $$x_1, x_2, x_3$$ [and similar sets of equations to determine $$\vb{x}_2$$
+ and $$\vb{x}_3$$, corresponding respectively to right-hand sides $$\begin{pmatrix}0 & 1 & 0\end{pmatrix}^{\mathrm{T}}$$ and $$\begin{pmatrix}0 & 0 & 1\end{pmatrix}^{\mathrm{T}}$$]. Written out longhand, this means solving the set of equations
 
 \begin{align}
   x_1 + 2 x_2 - 3 x_3 &= 1 \\\ 
@@ -181,6 +149,8 @@ for $$\vb{y}$$ and then solve
 \\]
 for $$\vb{x}$$. Because the former can be solved by forward substitution and the latter by backward substitution, each subproblem is solved efficiently and if we have to solve for several different right-hand sides $$\vb{b}$$, we only need to do the LU decomposition once to realize the efficiency gains for all.
 
+To describe the LU decomposition procedure, it will be helpful to define two special kinds of matrices: **permutation** matrices and **elementary** matrices.
+
 ### Permutation Matrices
 
 A **permutation matrix** is a version of the identity matrix in which the rows (columns) have been shuffled in some fashion. Suppose that we need to exchange rows 2 and 3 of a 3-dimensional matrix to avoid a zero pivot. The matrix that accomplishes this is
@@ -266,7 +236,7 @@ So, we have
     1 & 0 & 0 \\\ 2 & 1 & 0 \\\ -2 & -1 & 1
   \end{pmatrix}
 \\]
-Before going on to check that multiplying this matrix on the right by $$\mat{U}$$ produces $$\mat{A}$$, notice something amazing about its structure. In the final matrix, the elements below the main diagonal are just the negatives of the coefficients $$c_{ij}$$ that we found in the process of reducing $$\mat{A}$$ to upper-diagonal form. The form of the elementary matrices and the order in which we multiply them to generate $$\mat{L}$$ allows us to simply write down the form of $$\mat{L}$$ directly from the coefficients $$c_{ij}$$!
+Before going on to check that multiplying this matrix on the right by $$\mat{U}$$ produces $$\mat{A}$$, notice something amazing about its structure. In the final matrix, the elements below the main diagonal are just the negatives of the coefficients $$c_{ij}$$ that we found in the process of reducing $$\mat{A}$$ to upper-triangular form. The form of the elementary matrices and the order in which we multiply them to generate $$\mat{L}$$ allow us to simply write down the form of $$\mat{L}$$ directly from the coefficients $$c_{ij}$$!
 
 ### Check
 

@@ -1,32 +1,5 @@
 {:menu ST}
-{::comment}menu-start{:/comment}
 
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="ST-Random.html">Pseudorandom Numbers</a></li>
-<li><a href="ST-Binomial.html">Binomial Distribution</a></li>
-<li><a href="ST-Stochastic.html">Stochastic Processes</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Binomial Distribution
@@ -48,10 +21,10 @@ The average number of successes is then
 \\[
     \ev{n} = \sum_{n=0}^{N} n P(n) = \sum_{n=0}^N n \binom{N}{n} p^n q^{N-n}
 \\]
-We can now employ our old friend, the **derivative trick** to simplify this sum:
+We can now employ our old friend, the **derivative trick**, to simplify this sum:
 \\[
-    \ev{n} = \sum_{n=0}^N \binom{N}{n} p \pdv{}{p} p^n q^{N-n}
-    = p \pdv{}{p} \sum_{n=0}^N \binom{N}{n}  p^n q^{N-n} = p\pdv{}{p} (p+q)^N = p N (p+q)^{N-1} = Np
+    \ev{n} = \sum_{n=0}^N \binom{N}{n} \left(p \pdv{}{p}\right) p^n q^{N-n}
+    = \left(p \pdv{}{p}\right) \sum_{n=0}^N \binom{N}{n}  p^n q^{N-n} = \left(p\pdv{}{p}\right) (p+q)^N = p N (p+q)^{N-1} = Np
 \\]
 This was perhaps obvious from the start: each of the attempts is independent and has probability $$p$$ of success, so we should expect on average $$Np$$ successes. However, it points the way to computing the variance, which is average squared difference from the mean:
 \\[
@@ -59,7 +32,7 @@ This was perhaps obvious from the start: each of the attempts is independent and
 \\]
 Using the derivative trick again, we have
 \\[
-    \ev{n^2} = \qty(p\dv{}{p}) \qty(p\dv{}{p}) (p+q)^N = \qty(p\dv{}{p}) N p(p+q)^{N-1} = p\qty[ N (p+q)^{N-1} + N p (N-1) (p+q)^{N-2}] = p[N + Np(N-1)]
+    \ev{n^2} = \qty(p\pdv{}{p}) \qty(p\pdv{}{p}) (p+q)^N = \qty(p\pdv{}{p}) N p(p+q)^{N-1} = p\qty[ N (p+q)^{N-1} + N p (N-1) (p+q)^{N-2}] = p[N + Np(N-1)]
 \\]
 so that the variance is
 \\[
@@ -74,3 +47,4 @@ and the standard deviation is
   <img src="figs/binom.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Plot of the binomial distribution for $$N=19$$ and $$p=0.6$$, which yields a mean of 11.4 and standard deviation of 2.14. The red bars show the binomial distribution, the black dashed line shows the mean $$\mu$$, blue curve shows the Gaussian approximation to the binomial distribution (that is, the normal distribution with the same mean and standard deviation), and the gray shaded region shows the range within one standard deviation from the mean.</p>
+

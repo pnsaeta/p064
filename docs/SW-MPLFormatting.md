@@ -1,38 +1,4 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Formatting in Matplotlib
@@ -52,7 +18,7 @@
 You can override the default figure size by including the figsize keyword
 argument:
 
-~~~~ python 
+~~~~ python
 fig = plt.figure(figsize=(8,6)) # create a figure that is 8" x 6"
 ~~~~
 To make all figures in a notebook use a different size, you can execute the
@@ -80,19 +46,19 @@ axright.plot(np.random.random(15), np.random.random(15), 'bs', markersize=12)
 
 If you wish to tie certain axes of the subplots to one another, pass
 `sharex=True` and/or `sharey=True` as optional keyword arguments to
-`plt.subplots()`. In Fig. [[fig:subplots]] the value of `sharey` was implicitly set to
-`False`. 
+`plt.subplots()`. In <a href="#Fig1">Fig. 1</a> the value of `sharey` was implicitly set to
+`False`.
 
 <p class="center">
-<img src="figs/subplots.webp" style="width: 500px;">
+<img src="figs/subplots.webp" style="width: 500px;" alt="Sample figure with subplots">
 </p>
-<p class="mycap">Fig. 1 — A simple figure with two subplots</p>
+<p class="mycap" id="Fig1">Fig. 1 — A simple figure with two subplots</p>
 
 Had we passed `sharey=True` to the `plt.subplots()` command, we would have
-obtained a figure like Fig. 2.
+obtained a figure like <a href="#Fig2">Fig. 2</a>.
 
-<p class="center"><img src="figs/sharey.webp" style="width: 500px;"></p>
-<p class="mycap">Fig. 2 — Two subplots with a shared y axis</p>
+<p class="center"><img src="figs/sharey.webp" style="width: 500px;" alt="Subplots with shared y axis"></p>
+<p class="mycap" id="Fig2">Fig. 2 — Two subplots with a shared y axis</p>
 
 
 
@@ -108,11 +74,10 @@ assumes that `usetex=True`. See [Configuration](SW-Installation.md) for how to s
 
 
 ~~~~ python 
-fig3 = plt.figure(3, figsize=(6,4))
+fig3, ax3 = plt.subplots(figsize=(6,4))
 t_vals = np.arange(0.0, 1.0, 0.01)
 sines = np.sin(2 * np.pi * t_vals)
 cosines = np.cos(2 * np.pi * t_vals)
-ax3 = fig3.add_subplot(111)
 ax3.plot(t_vals, sines, 'b.', t_vals, cosines, 'ro')
 ax3.set_xlabel(r'$$t$$')
 ax3.legend([r'$$\sin(2\pi t)$$', r'$$\cos(2\pi t)$$']);

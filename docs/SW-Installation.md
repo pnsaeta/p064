@@ -1,38 +1,4 @@
 {:menu SW}
-{::comment}menu-start{:/comment}
-
-<div class="dropdown">
-<label id="main-menu"><img id="master" src="figs/master.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Software Installation</a></li>
-<li><a href="LA-LinearAlgebra.html">Linear Algebra</a></li>
-<li><a href="FO-Intro.html">Fourier Series and Transforms</a></li>
-<li><a href="ST-Random.html">Stochastic Processes</a></li>
-<li><a href="DE-DE1.html">Differential Equations</a></li>
-<li><a href="PD-PD1.html">Partial Differential Equations</a></li>
-<li><a href="PR-Project.html">Projects</a></li>
-</ul>
-</div>
-</div>
-<div class="dropdown hamburger">
-<label id="hamburger-menu"><img id="hamburger" src="figs/hamburger.webp"></label>
-<div class="dropdown-content">
-<ul>
-<li><a href="SW-Installation.html">Installing and Configuring Software</a></li>
-<li><a href="SW-Jupyter.html">Using Jupyter Notebooks</a></li>
-<li><a href="SW-NumPy.html">Basics of NumPy</a></li>
-<li><a href="SW-Matplotlib.html">Introduction to Plotting with Matplotlib</a></li>
-<li><a href="SW-MPLFormatting.html">Formatting in Matplotlib</a></li>
-<li><a href="SW-pandas.html">Pandas</a></li>
-<li><a href="SW-colab.html">Using Google Colab</a></li>
-<li><a href="SW-Python.html">Python</a></li>
-<li><a href="SW-Animation.html">Animations in Matplotlib</a></li>
-</ul>
-</div>
-</div>
-
-{::comment}menu-end{:/comment}
 
 
 # Installing and Configuring Software
@@ -40,27 +6,62 @@
 * toc
 {:toc}
 
-The computational portions of the course will use Python 3 and several modules.
-If you have Anaconda installed, You may already have everything you need
-
-I prefer not to use Anaconda, but to install the tools I need using Pip, the Python installer program.
+The computational portions of the course will use Python 3 and several modules,
+most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you have
+Anaconda installed, you may already have everything you need. However, I prefer
+*not to use Anaconda*, but to install the tools I need using `pip`, the Python
+installer program.
 
 Alternatively, you can let Google take care of hosting the software (which, of
 course, requires a live net connection) by using Google Colab, a
 Google-inflected version of JupyterLab. If you use this approach, all you need
-to do is head to [Google's colab page](https://colab.research.google.com/).
-If you need to access your
-own Python code, see [the Colab page](SW-colab.md) for more information.
+to do is head to [Google's colab page](https://colab.research.google.com/).  If
+you need to access your own Python code, see [the Colab page](SW-colab.md) for
+more information.
+
+## Checking your Installation
+
+You can check your Python installation by running the following code. If it
+generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
+
+~~~~ python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from numpy.random import default_rng
+rng = default_rng()
+
+x = np.arange(0, 10, 0.1)
+y = np.exp(np.sqrt(x))
+noise = rng.normal(size=len(x))
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.plot(x, y + noise, 'r.')
+ax.set_xlabel("$x$", usetex=True)
+ax.set_ylabel(r"$y = e^{\sqrt{x}}$", usetex=True)
+ax.set_title("Did it work?")
+plt.show()
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/check_installation.webp" style="width: 400px;">
+</p>
+
+<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Copy the code above
+  and run it in a terminal after launching Python. If it generates this graph,
+  you have all the packages we'll need.</p>
+
+
+## Anaconda
 
 An Anaconda installation should already have Jupyter notebook installed and
-available, but you don't need the full anaconda distribution to use Jupyter
+available, but you don't need the full Anaconda distribution to use Jupyter
 notebook and I have had some trouble in the past getting Anaconda to update to a
 more recent version of some of the tools. If you already have an Anaconda
 installation, it seems reasonable to check it out and make sure that it can run
-what we need. Otherwise, I recommend a light-weight approach using Python/Pip,
-as described below.
+what we need. Otherwise, I highly recommend a light-weight approach using Python/Pip,
+as described [below](#pythonpip).
 
-## Anaconda
    If you have Anaconda installed you can launch the Anaconda Navigator from
    which you can launch Jupyter notebook. You can download Anaconda from
    [https://www.anaconda.com/](https://www.anaconda.com/).
@@ -81,19 +82,21 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ~~~~
 
-To be sure that you are running some flavor of Python 3, you can use =python3=:
+To be sure that you are running some flavor of Python 3, you can use `python3`:
 
 ~~~~ python
 > python3
-Python 3.10.1 (main, May 24 2022, 11:45:23) [Clang 13.1.6 (clang-1316.0.21.2.5)] on darwin
+Python 3.13.1 (main, Dec  3 2024, 17:59:52) [Clang 16.0.0 (clang-1600.0.26.4)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ~~~~
 
+If you have a much older version of Python 3 than the one listed above, it is probably worthwhile upgrading to the current version.
+
 ## Installing Python on MacOS
 
 Although there is a Python version already installed in MacOS, it tends to lag
-behind and I much prefer to use [Homebrew](https://homebrew.sh) to install an up-to-date version (and
+behind and I much prefer to use [Homebrew](https://homebrew.sh) to install an up-to-date version  of Python (and
 plenty of other free software). You can check if you already have it installed
 by opening up a terminal window (the *Terminal.app* program is in
 `/Applications/Utilities/Terminal.app`, or you can use an alternative terminal
@@ -121,18 +124,37 @@ brew install python
 ~~~~
 
 This should install the most recent stable version of Python 3. It also includes
-the Python installer `pip`. (Prior versions of jupyterlab required nodejs, but
-the current version (jupyterlab-3.0) does not.) 
+the Python installer `pip`.
 
 ~~~~ shell
 > brew --version
-
-Homebrew 3.3.9
-Homebrew/homebrew-core (git revision 5eeaacb2ec3; last commit 2022-01-04)
-Homebrew/homebrew-cask (git revision 16eab891a1; last commit 2022-01-04)
+Homebrew 4.4.1
 ~~~~
 
 ## Installing on Windows 10 or 11
+
+I strongly recommend installing [Windows Subsystem for
+Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
+UNIX command line and all the utilities you need to run Python, pip, etc. You
+can check whether WSL is installed by typing the following command into
+PowerShell or the Windows Command Prompt:
+
+~~~ shell
+> wsl -l -v
+~~~~
+
+If WSL is not installed, [you can install it with](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+~~~~ shell
+> wsl --install
+~~~~
+
+Once you have installed WSL, you need to create a user account and password for
+your [newly installed Linux
+distribution](https://learn.microsoft.com/en-us/windows/wsl/install#set-up-your-linux-user-info). Follow
+the instructions on the WSL page. Then skip to the instructions below for
+installing on Ubuntu (Linux).
+
 
 Download the Anaconda3 installer and launch it. After it finishes installing, launch the Anaconda Navigator. Then click to launch a Powershell:
 
@@ -144,7 +166,7 @@ This opens a terminal window. Enter the command
 pip install ipympl
 ~~~~
 
-to install the Python package that allows graphs generated by ~Matplotlib~ to be
+to install the Python package that allows graphs generated by `Matplotlib` to be
 displayed inside a jupyter lab window.
 
 ## Installing on Ubuntu (Linux)
@@ -165,54 +187,50 @@ at a terminal prompt:
 
 ~~~~ shell
 > env
-PWD=/Users/saeta/Documents/Courses/p64
+PWD=/Users/saeta/Documents/Courses/p064
 LOGNAME=saeta
+LANG=en_US.UTF-8
+TERM_PROGRAM=iTerm.app
+TERM_PROGRAM_VERSION=3.5.10
+LaunchInstanceID=42D7C565-643A-46C2-A54D-ECC2CBC9BA3E
+COLORTERM=truecolor
+EDITOR=/Applications/Emacs.app/Contents/MacOS/Emacs
+TERM_FEATURES=T3CwLrMSc7UUw9Ts3BFGsSyHNoSxF
+OMF_PATH=/Users/saeta/.local/share/omf
+SHELL=/opt/homebrew/bin/fish
+__CFBundleIdentifier=com.googlecode.iterm2
+OMF_CONFIG=/Users/saeta/.config/omf
+PATH=/Users/saeta/.virtualenvs/py13/bin:/Users/saeta/bin:/Users/saeta/.juliaup/bin:/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/Users/saeta/Library/Python/3.10/bin:/opt/homebrew/opt/ruby/bin:/Users/saeta/.pyenv/bin:/opt/homebrew/opt/fzf/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Users/saeta/Applications/iTerm.app/Contents/Resources/utilities:/Users/saeta/.local/bin:/Users/saeta/.gem/ruby/3.3.0/bin:/usr/local/mysql/bin
+SHELL_PID=75906
 LC_TERMINAL=iTerm2
 COLORFGBG=0;15
-TERM_PROGRAM=iTerm.app
-TERM_PROGRAM_VERSION=3.4.15
-LANG=en_US.UTF-8
-COLORTERM=truecolor
-EDITOR=/Applications/Aquamacs.app/Contents/Resources/bin/aquamacs
-ITERM_SESSION_ID=w2t0p0:8CE2A14F-C154-4863-A515-86F06CC7167C
-PATH=/Users/saeta/.pyenv/shims:/Users/saeta/bin:/usr/local/bin:/usr/local/sbin:
-  /opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/opt/homebrew/opt/fzf/bin:
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:
-  /Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:
-  /Users/saeta/Library/Python/3.9/bin:/usr/local/mysql/bin:/Users/saeta/.gem/ruby/2.6.0/bin
-OMF_CONFIG=/Users/saeta/.config/omf
-PYENV_SHELL=fish
 TERM=xterm-256color
-TMPDIR=/var/folders/tw/_d06s9vj4wj_83s0m3j99qhc0000gn/T/
-SHLVL=1
-SHELL=/opt/homebrew/bin/fish
-ITERM_PROFILE=Default
-SECURITYSESSIONID=186a5
-JUPYTER=/opt/homebrew/bin/jupyter
-OMF_PATH=/Users/saeta/.local/share/omf
-HOME=/Users/saeta
-USER=saeta
 PYTHONPATH=/Users/saeta/.python
 COMMAND_MODE=unix2003
-BAT_THEME=zenburn
+GEM_HOME=/Users/saeta/.gem
+HOME=/Users/saeta
+USER=saeta
+PYENV_ROOT=/Users/saeta/.pyenv
+VIRTUAL_ENV=/Users/saeta/.virtualenvs/py13
 ~~~~
 
 In particular, notice the value of the `PATH` shell variable, which tells you
 where the system will look for commands that you name on the command line, and
 shows them in the order in which they will be searched. Paths are separated with
-colons, so in this example, my shell will first look in `/Users/saeta/bin`, then
-in `/usr/local/bin`, etc. If you have installed Anaconda, your `PATH` variable may
+colons, so in this example, my shell will first look in `/Users/saeta/.virtualenvs/py13/bin`, then
+in `/Users/saeta/bin`, etc. If you have installed Anaconda, your `PATH` variable may
 start with the path to the `bin` directory inside your Anaconda distribution.
+
 
 ## Using pip to install Python modules
 
-Python has a standard package manager, *pip*, which stands for **Package
+Python has a standard package manager, `pip`, which stands for **Package
 Installer for Python**. You can check if `pip` is available by entering the
 following command at a terminal prompt:
 
 ~~~~ shell
 $$ pip --version
-pip 22.1.2 from /Users/saeta/.local/lib/python3.10/site-packages/pip (python 3.10)
+pip 24.3.1 from /Users/saeta/.virtualenvs/py13/lib/python3.13/site-packages/pip (python 3.13)
 ~~~~
 
 Look carefully at the path to your version of pip. If it has Anaconda in it
@@ -222,33 +240,36 @@ see if you can upgrade to a current version of Anaconda and its associated
 versions of numpy, scipy, matplotlib, and plotly.
 
 If you have a Python 3 installation, and pip is
-available, you can install everything you need with the following. If you
-prefer, you can first create a virtual environment for this Python installation
-so any upgrades or installed libraries don't encounter conflicts:
+available, you can install everything you need with the following. I recommend that you can first create a virtual environment for this Python installation
+so any upgrades or installed libraries don't encounter conflicts. The following commands show how to create a virtual environment named `py13`:
 
 ~~~~ shell
-virtualenv jup        # the standard virtualenv package
-vf jup                # or, if you use the fish shell, as I do
+$$ pip install --user virtualenv   # install virtualenv
+$$ python -m virtualenv py13       # the standard virtualenv package
 ~~~~
 
-After creating the virtual environment above, then run
+After creating the virtual environment above, you need to activate it:
+
+~~~~ shell
+$$ source 
+
+then run
 
 ~~~~ shell
 pip install --upgrade pip  # make sure you have an up-to-date version
-pip install numpy scipy matplotlib jupyter
+pip install numpy scipy matplotlib jupyter pandas
 ~~~~
 
 These commands install the minimum you need to get going. However, I recommend also installing some more packages:
 
 ~~~~ shell
-pip install autopep8 ipympl jupyter_contrib_nbextensions plotly
+pip install autopep8 ipympl plotly
 jupyter contrib nbextension install --user
 ~~~~
 
 ## Configuration
 
-Although Jupyter and Matplotlib work “out of the box,” you will probably want to
-customize things a bit. Here are some basic ideas.
+Although Jupyter and Matplotlib work “out of the box,” you will probably want to customize things a bit. Here are some basic ideas.
 
 ### Extensions in Jupyter Notebook
 
