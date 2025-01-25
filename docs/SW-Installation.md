@@ -7,7 +7,23 @@
 {:toc}
 
 The computational portions of the course will use Python 3 and several modules,
-most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you have
+most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you are starting from scratch, I recommend you just install the Jupyter Lab application:
+
+1. Head to [its GitHub repository](https://github.com/jupyterlab/jupyterlab-desktop), then scroll down the page until you get the **Installation section**.
+
+2. Click the link that corresponds to your operating system and processor.
+
+3. Follow installation instructions, *and read carefully any messages*.
+
+<p class="center" markdown="0">
+  <img src="figs/JL.webp" style="width: 600px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="FigJL">Figure 1</a> — Installing the JupyterLab Desktop Application</p>
+
+4. When 
+
+
+If you have
 Anaconda installed, you may already have everything you need. However, I prefer
 *not to use Anaconda*, but to install the tools I need using `pip`, the Python
 installer program.
