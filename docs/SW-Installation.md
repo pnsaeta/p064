@@ -9,19 +9,32 @@
 The computational portions of the course will use Python 3 and several modules,
 most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you are starting from scratch, I recommend you just install the Jupyter Lab application:
 
+<p class="center" markdown="0">
+  <img src="figs/JL.webp" style="width: 600px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="FigJL">Figure 1</a> — Installing the JupyterLab Desktop Application</p>
+
+
 1. Head to [its GitHub repository](https://github.com/jupyterlab/jupyterlab-desktop), then scroll down the page until you get the **Installation section**.
 
 2. Click the link that corresponds to your operating system and processor.
 
 3. Follow installation instructions, *and read carefully any messages*.
 
-<p class="center" markdown="0">
-  <img src="figs/JL.webp" style="width: 600px;" alt="">
-</p>
-<p class="icap" markdown="1"><a name="FigJL">Figure 1</a> — Installing the JupyterLab Desktop Application</p>
+4. When you have finished installing, launch the Jupyter Lab application and watch whether it reports that you need to identify a Python installation. If it does, it gives you a link to install a default Python. **Do that!** It takes a bit longer, but once it's done, you have everything you need. It installs `numpy`, `scipy`, `matplotlib`, `ipython`, and `ipympl`. To check your installation, click the **New notebook…** link on the jupyterlab homepage and enter the following in the cell:
 
-4. When 
+~~~~ python
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib widget
 
+fig, ax = plt.subplots()
+ax.plot([1, 2], [3, 4], 'ro')
+~~~~
+
+Press **shift-return** to execute the code in the cell. If your installation is working properly, you should see a really dumb plot with two red dots.
+
+### Anaconda
 
 If you have
 Anaconda installed, you may already have everything you need. However, I prefer
