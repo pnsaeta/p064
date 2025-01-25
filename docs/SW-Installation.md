@@ -6,6 +6,8 @@
 * toc
 {:toc}
 
+## Installing from scratch
+
 The computational portions of the course will use Python 3 and several modules,
 most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you are starting from scratch, I recommend you just install the Jupyter Lab application:
 
