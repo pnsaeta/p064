@@ -32,7 +32,13 @@ fig, ax = plt.subplots()
 ax.plot([1, 2], [3, 4], 'ro')
 ~~~~
 
-Press **shift-return** to execute the code in the cell. If your installation is working properly, you should see a really dumb plot with two red dots.
+Press **shift-return** to execute the code in the cell. If your installation is working properly, you should see a really dumb plot with two red dots:
+
+<p class="center" markdown="0">
+  <img src="figs/dumbplot.webp" style="width: 400px;" alt="dumb plot">
+</p>
+<p class="icap" markdown="1"><a name="FigDP">Figure DP</a> — a dumb test plot.</p>
+
 
 ### Anaconda
 
