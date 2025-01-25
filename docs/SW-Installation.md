@@ -40,7 +40,7 @@ Press **shift-return** to execute the code in the cell. If your installation is 
 <p class="icap" markdown="1"><a name="FigDP">Figure DP</a> — a dumb test plot.</p>
 
 
-### Anaconda
+## Anaconda
 
 If you have
 Anaconda installed, you may already have everything you need. However, I prefer
