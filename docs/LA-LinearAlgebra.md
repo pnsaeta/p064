@@ -103,7 +103,7 @@ The "length" or **norm** of a vector is given by
   || \vb{a} || = \sqrt{\langle \vb{a}, \vb{a} \rangle} = \left( \sum_{i=1}^{N} a_i^2 \right)^{1/2}
   \label{eq:norm}
 \end{equation}
-which is what we would expect from the Pythagorean theorem. 
+which is what we would expect from the Pythagorean theorem. (For more information on norms, See [this page](LA-Norms.md)).
 
 > Mathematicians are wont to preserve the "double-pipe" notation for *norm*, as shown in Eq. (\ref{eq:norm}), to distinguish it from the absolute value of a scalar quantity (either real or complex). Physicists typically adopt a more expansive view; both represent the magnitude or length of either a scalar or vector quantity. Hence, most physicists avoid the "double-pipe" notation and write
 $$|\vb{a}| = a$$.
