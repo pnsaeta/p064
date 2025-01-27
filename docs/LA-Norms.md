@@ -15,4 +15,4 @@ and this is indeed a satisfactory form. However, other definitions are possible,
    if and only if $$\vb{v} = \vb{0}$$.
 
 2. $$ \Vert\alpha \mathbf{v}\Vert = $$
-   $$ (|\alpha\right|) \Vert\vb{v}\Vert $$.
+   $$ |\alpha| \Vert\vb{v}\Vert $$.
