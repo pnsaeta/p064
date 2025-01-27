@@ -23,9 +23,10 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 
 \begin{align}
     \Vert (a\_1, \ldots, a\_n) \Vert &= \sqrt{ \sum_{k=1}^n |a\_k|^2} \\\ 
-    \Vert (a\_1, \ldots, a\_n) \Vert &= \sum\_{k=1}^n |a\_k| \\\ 
+    \Vert (a\_1, \ldots, a\_n) \Vert &= \sum\_{k=1}^n |a\_k| \label{eq:USPS} \\\ 
     \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n |a\_k|  \\\ 
     \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n k|a\_k|
 \end{align}
 
 You may confirm that each of these definitions satisfies all three required properties to be a norm.
+As Nearing points out, "the United States Postal Service prefers a variation on Eq.&nbsp;(\ref{eq:USPS}).
