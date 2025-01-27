@@ -22,6 +22,7 @@ Given a set of linearly independent vectors that are not necessarily orthogonal,
   \vb{a}'_2 = \vb{a}_2 - (\vb{a}_2 \cdot \vb{e}_1) \vb{e}_1
 \end{equation}
 3. Normalize $$\vb{a}'_2$$ to produce $$\vb{e}_2$$.
+4. Take each subsequent vector in turn and follow steps 2 and 3, first to remove projections along all previously determined basis vectors, and then normalizing.
 
 Given the three vectors
 \begin{equation}
