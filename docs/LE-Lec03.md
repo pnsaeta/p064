@@ -19,9 +19,9 @@ Given a set of linearly independent vectors that are not necessarily orthogonal,
 1. Normalize the first vector $$\vb{a}_1$$ by dividing by its magnitude to get $$\vb{e}_1$$.
 2. Form a vector orthgonal to $$\vb{e}_1$$ by subtracting from $$\vb{a}_2$$ its projection along $$\vb{e}_1$$:
 
-\begin{equation*}
+\begin{equation}
   \vb{a}'_2 = \vb{a}_2 - (\vb{a}_2 \cdot \vb{e}_1) \vb{e}_1
-\end{equation*}
+\end{equation}
 
 3. Normalize $$\vb{a}'_2$$ to produce $$\vb{e}_2$$.
 
