@@ -28,4 +28,4 @@ Given the three vectors
 \begin{equation}
     (1, 2, 3) \qquad (-3, -2, -1) \qquad (2, 3, 2)
 \end{equation}
-form an orthonormal set of basis vectors in which $$\vb{e}_1$$ is parallel to $$(1, 2, 3)$$.
+use the Gram-Schmidt procedure to form an orthonormal set of basis vectors in which $$\vb{e}_1$$ is parallel to $$(1, 2, 3)$$.
