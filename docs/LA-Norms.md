@@ -27,3 +27,5 @@ and this is indeed a satisfactory form. However, other definitions are possible,
     \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n |a\_k|  \\\ 
     \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n k|a\_k|
 \end{align}
+
+You may confirm that each of these definitions satisfies all three required properties to be a norm.
