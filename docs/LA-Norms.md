@@ -47,6 +47,16 @@ A scalar product is a scalar function of two vectors with the following properti
 
 If a scalar product is defined on a particular vector space, then a natural definition for norm is the one we started with in Eq.&nbsp;(\ref{eq:spnorm}). However, consistency requires us to show that this norm satisfies the triangle inequality.
 
+### Example Scalar Product
+
+We argued that cubic polynomials on $$0 \le x \le 1$$ form a vector space, in which the basis vectors could be taken to be $$(1, x, x^2, x^3)$$, the addition of vectors and scalar multiplication are as expected:
+\begin{align}
+    (a_0 + a_1 x + a_2 x^2 + a_3 x^3) + (b_0 + b_1 x + b_2 x^2 + b_3 x^3) &=
+    (a_0 + b_0) + (a_1 + b_1) x + (a_2 + b_2) x^2 + (a_3 + b_3) x^3
+    \\\ 
+    \alpha (a_0 + a_1 x + a_2 x^2 + a_3 x^3) &= (\alpha a_0) + (\alpha a_1) x + (\alpha a_2) x^2 + (\alpha a_3) x^3
+\end{align}
+
 ## Cauchy-Schwartz Inequality
 
 The **Cauchy-Schwartz inequality** is
