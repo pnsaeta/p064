@@ -57,6 +57,11 @@ We argued that cubic polynomials on $$0 \le x \le 1$$ form a vector space, in wh
     \alpha (a_0 + a_1 x + a_2 x^2 + a_3 x^3) &= (\alpha a_0) + (\alpha a_1) x + (\alpha a_2) x^2 + (\alpha a_3) x^3
 \end{align}
 
+What could be a scalar product for this vector space? Consider
+\begin{equation}
+    \ev{f, g} = \int_0^1 f(x) g(x) \dd{x}
+\end{equation}
+
 ## Cauchy-Schwartz Inequality
 
 The **Cauchy-Schwartz inequality** is
