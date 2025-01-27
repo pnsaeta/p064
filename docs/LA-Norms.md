@@ -29,4 +29,4 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 \end{align}
 
 You may confirm that each of these definitions satisfies all three required properties to be a norm.
-As Nearing points out, "the United States Postal Service prefers a variation on Eq.&nbsp;(\ref{eq:USPS}).
+As Nearing points out, "the United States Postal Service prefers a variation on Eq.&nbsp;(\ref{eq:USPS}), which makes good sense in a place like Manhattan, though not as much in Boston.
