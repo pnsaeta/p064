@@ -40,3 +40,6 @@ A scalar product is a scalar function of two vectors with the following properti
 2. $$\ev{\vb{w}, \alpha\vb{v}} = \alpha \ev{\vb{w}, \vb{v}}$$.
 
 3. $$\ev{\vb{u}, \vb{v}}^{*} = \ev{\vb{v}, \vb{u}}$$.
+
+4. $$\ev{\vb{v}, \vb{v}} \ge 0;\quad\text{and}\quad \ev{\vb{v}, \vb{v}} = 0$$ if and only if
+   $$\vb{v} = \vb{0}$$.
