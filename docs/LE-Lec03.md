@@ -17,7 +17,7 @@ That is, can you write one of them as a linear combination of the other two?
 Given a set of linearly independent vectors that are not necessarily orthogonal, Gram-Schmidt orthogonalization is a procedure to generate an orthonormal set of basis vectors from the given set. The strategy is straightforward:
 
 1. Normalize the first vector $$\vb{a}_1$$ by dividing by its magnitude to get $$\vb{e}_1$$.
-2. Form a vector orthgonal to $$\vb{e}_1$$ by subtracting from $$\vb{a}_2$$ its projection along $$\vb{e}_1:
+2. Form a vector orthgonal to $$\vb{e}_1$$ by subtracting from $$\vb{a}_2$$ its projection along $$\vb{e}_1$$:
 \begin{equation*}
   \vb{a}'_2 = \vb{a}_2 - (\vb{a}_2 \cdot \vb{e}_1) \vb{e}_1
 \end{equation*}
