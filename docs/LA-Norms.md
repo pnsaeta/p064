@@ -16,3 +16,5 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 
 2. $$ \Vert\alpha \mathbf{v}\Vert = $$
    $$ |\alpha| \Vert\vb{v}\Vert $$.
+
+3. $$ \Vert\vb{v}_1 + \vb{v}_2\Vert \le \Vert\vb{v}_1\Vert + \Vert\vb{v}_2\Vert $$ (the triangle inequality).
