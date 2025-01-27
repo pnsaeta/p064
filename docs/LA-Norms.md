@@ -59,8 +59,10 @@ We argued that cubic polynomials on $$0 \le x \le 1$$ form a vector space, in wh
 
 What could be a scalar product for this vector space? Consider
 \begin{equation}
-    \ev{f, g} = \int_0^1 f(x) g(x) \dd{x}
+    \ev{f, g} = \int_0^1 f(x)^* g(x) \dd{x}
 \end{equation}
+Does it satisfy all four required properties for a scalar product? Can you define a **norm** using this definition? 
+
 
 ## Cauchy-Schwartz Inequality
 
