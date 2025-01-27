@@ -12,4 +12,4 @@ I previously claimed that the **norm** of a vector in a space with a defined inn
 and this is indeed a satisfactory form. However, other definitions are possible, consistent with the following properties:
 
 1. $$||\vb{v}|| \ge 0$$; $$||\vb{v}|| = 0$$ if and only iff $$\vb{v} = \vb{0}$$.
-2.
+2. $$||\alpha \vb{v}|| = |\alpha| ||\vb{v}||$$.
