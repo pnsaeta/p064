@@ -1,4 +1,9 @@
+{:menu LE}
+
 # Lecture 2 — A Research Problem
+
+* toc
+{:toc}
 
 The HRL 2022–23 Clinic Team worked on a project to explore the use of ferroelectrics in HRL's solid-state qubit design. The strategy relies on trapping single electrons in potential wells that are created in a thin silicon layer by voltages on gates (electrodes) placed above the thin silicon layer. The structure of the layers is illustrated in the following figure. Because electrons in the silicon layer have lower energy than they would have if they moved to the surrounding Si<sub>0.7</sub>Ge<sub>0.3</sub> layers, they are confined in the Si layer and can move about as a two-dimensional gas.
 
