@@ -53,3 +53,5 @@ The **Cauchy-Schwartz inequality** is
 \begin{equation} \label{eq:cauchy-schwartz}
   |\ev{\vb{u}, \vb{v}}| \le \Vert\vb{u}\Vert  \Vert\vb{v}\Vert
 \end{equation}
+You can prove it by considering
+$$ \ev{\vb{u} - \lambda \vb{v}, \vb{u} - \lambda \vb{v}} \ge 0 $$.
