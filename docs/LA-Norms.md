@@ -35,4 +35,8 @@ As Nearing points out, "the United States Postal Service prefers a variation on 
 
 A scalar product is a scalar function of two vectors with the following properties:
 
-1. $$\ev{\vb{w},(\vb{u} + \vb{v})} = \ev{\vb{w}, \vb{u}} + \ev{\vb{w}, \vb{v}}$$
+1. $$\ev{\vb{w},(\vb{u} + \vb{v})} = \ev{\vb{w}, \vb{u}} + \ev{\vb{w}, \vb{v}}$$.
+
+2. $$\ev{\vb{w}, \alpha\vb{v}} = \alpha \ev{\vb{w}, \vb{v}}$$
+
+3. 
