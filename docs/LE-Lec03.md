@@ -7,10 +7,9 @@
 ## Problem
 
 Are the following three vectors in $$\mathbb{R}^3$$ linearly independent?
-
-$$
+\begin{equation}
     (1, 2, 3) \qquad (-3, -2, -1) \qquad (2, 3, 4)
-$$
+\end{equation}
 
 ## Problem — Gram-Schmidt Orthogonalization
 
