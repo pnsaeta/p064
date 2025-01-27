@@ -14,4 +14,5 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 1. $$||\vb{v}|| \ge 0$$ ; $$||\vb{v}|| = 0$$
    if and only if $$\vb{v} = \vb{0}$$.
 
-2. $$ \Vert\alpha \mathbf{v}\Vert = (|\alpha\right|) \Vert\vb{v}\Vert $$.
+2. $$ \Vert\alpha \mathbf{v}\Vert = $$
+   $$ (|\alpha\right|) \Vert\vb{v}\Vert $$.
