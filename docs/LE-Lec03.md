@@ -7,6 +7,7 @@
 ## Problem
 
 Are the following three vectors in $$\mathbb{R}^3$$ linearly independent?
+
 $$
     (1, 2, 3) \qquad (-3, -2, -1) \qquad (2, 3, 4)
 $$
