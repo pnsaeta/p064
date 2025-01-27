@@ -8,6 +8,7 @@
 I previously claimed that the **norm** of a vector in a space with a defined inner product is
 \begin{equation}
   \Vert \vb{a} \Vert = \sqrt{\ev{\vb{a},\vb{a}}}
+  \label{eq:spnorm}
 \end{equation}
 and this is indeed a satisfactory form. However, other definitions are possible, consistent with the following properties:
 
@@ -43,3 +44,12 @@ A scalar product is a scalar function of two vectors with the following properti
 
 4. $$\ev{\vb{v}, \vb{v}} \ge 0;\quad\text{and}\quad \ev{\vb{v}, \vb{v}} = 0$$ if and only if
    $$\vb{v} = \vb{0}$$.
+
+If a scalar product is defined on a particular vector space, then a natural definition for norm is the one we started with in Eq.&nbsp;(\ref{eq:spnorm}). However, consistency requires us to show that this norm satisfies the triangle inequality.
+
+## Cauchy-Schwartz Inequality
+
+The **Cauchy-Schwartz inequality** is
+\begin{equation} \label{eq:cauchy-schwartz}
+  |\ev{\vb{u}, \vb{v}}| \le \Vert\vb{u}\Vert  \Vert\vb{v}\Vert
+\end{equation}
