@@ -23,7 +23,5 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 
 \begin{align}
     \Vert (a\_1, \ldots, a\_n) \Vert &= \sqrt{ \sum_{k=1}^n |a\_k|^2} \\\ 
-    \Vert (a_1, \ldots, a_n) \Vert &= \sum_{k=1}^n |a_k|  \\\ 
-    \Vert (a_1, \ldots, a_n) \Vert &= \text{max}_{k=1}^n |a_k|  \\\ 
-    \Vert (a_1, \ldots, a_n) \Vert &= \text{max}_{k=1}^n k|a_k|
+    \Vert (a\_1, \ldots, a\_n) \Vert &= \sum\_{k=1}^n |a\_k|
 \end{align}
