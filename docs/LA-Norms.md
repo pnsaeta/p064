@@ -7,7 +7,7 @@
 
 I previously claimed that the **norm** of a vector in a space with a defined inner product is
 \begin{equation}
-  ||\vb{a}|| = \sqrt{\langle \vb{a}, \vb{a} \rangle}
+  \Vert \vb{a} \Vert = \sqrt{\langle \vb{a}, \vb{a} \rangle}
 \end{equation}
 and this is indeed a satisfactory form. However, other definitions are possible, consistent with the following properties:
 
