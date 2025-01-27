@@ -18,3 +18,8 @@ and this is indeed a satisfactory form. However, other definitions are possible,
    $$ |\alpha| \Vert\vb{v}\Vert $$.
 
 3. $$ \Vert\vb{v}_1 + \vb{v}_2\Vert \le \Vert\vb{v}_1\Vert + \Vert\vb{v}_2\Vert $$ (the triangle inequality).
+
+## Examples
+
++ $$\Vert (a_1, \ldots, a_n) \Vert = \sqrt{ \sum_{k=1}^n |a_k|^2}$$
++ bl
