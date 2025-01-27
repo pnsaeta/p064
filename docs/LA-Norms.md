@@ -21,5 +21,6 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 
 ## Examples
 
-+ $$\Vert (a_1, \ldots, a_n) \Vert = \sqrt{ \sum_{k=1}^n |a_k|^2}$$
-+ bl
+1. $$\Vert (a_1, \ldots, a_n) \Vert = \sqrt{ \sum_{k=1}^n |a_k|^2}$$
+
+2. $$\Vert (a_1, \ldots, a_n) \Vert = \sum_{k=1}^n |a_k| $$
