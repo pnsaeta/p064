@@ -43,9 +43,9 @@ Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u}
 Therefore, $$I = \sqrt{\pi}$$.
 
 If we now return to Eq.&nbsp;(\ref{eq:gauss1}) with our new-found knowledge, we can normalize $$g(t)$$:
-\begin{align*}
+\begin{align}
   1 &= \int_{-\infty}^{\infty} k e^{-\alpha t^2} \dd{t}
-\end{align*}
+\end{align}
 
 ## Fourier Representation of $$\delta(x)$$
 
