@@ -60,6 +60,8 @@ Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u}
 \\]
 Therefore, $$I = \sqrt{\pi}$$, which we can use in Eq.&nbsp;(\ref{eq:gauss3}) to confirm, indeed, that $$g(x)$$ is properly normalized.
 
+> If you wonder about why we have included a 2 in the denominator of Eq.&nbsp;(\ref{eq:gauss1})
+
 ## Fourier Representation of $$\delta(x)$$
 
 We seek to prove that
