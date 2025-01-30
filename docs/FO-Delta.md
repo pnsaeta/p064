@@ -23,7 +23,7 @@ Sadly, we don't have the integrating factor we need to make this integral simple
 Here's a beautiful trick for getting around that problem. Let's try to calculate $$I^2$$:
 \begin{equation}\label{eq:I2}
   I^2 = \int_{-\infty}^{\infty} e^{-x^2}\dd{x} \int_{-\infty}^{\infty} e^{-y^2}\dd{y}
-  = \iint_{-\infty}^{\infty} e^{-x^2 - y^2} \dd{y} \dd{x}
+  = \iint\limits_{-\infty}^{\infty} e^{-x^2 - y^2} \dd{y} \dd{x}
 \end{equation}
 
 ## Fourier Representation of $$\delta(x)$$
