@@ -1,8 +1,10 @@
 {:menu FO}
 
 
-
 # The Dirac Delta Function
+
+*toc
+{:toc}
 
 We seek to prove that
 \begin{equation}\label{eq:FourierDelta}
