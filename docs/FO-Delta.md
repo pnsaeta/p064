@@ -23,6 +23,14 @@ where the parameter $$\sigma$$ governs how narrow the peak, and I have written t
 
 We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as $$\sigma$$ gets smaller, the prefactor gets larger and the exponential part falls off more rapidly as $$x$$ departs from zero.
 
+Delta functions are made to be integrated over:
+\begin{equation}\label{eq:prop1}
+  \int_a^b \delta(x) \dd{x} = \begin{cases}
+    1 & a < 0 < b \\\ 
+    -1 & b < 0 < a \\\ 
+    0 & \text{otherwise}
+\end{equation}
+
 ### Normalization
 
 Before struggling to evaluate the integral, let's at least make a variable substitution to simplify the exponent. Let
