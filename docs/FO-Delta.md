@@ -34,6 +34,10 @@ so that the integral becomes
     I^2 = \int_0^\infty \int_0^{2\pi} \dd{\theta} e^{-r^2} r \dd{r}
     = 2\pi \int_0^\infty e^{-r^2} r\dd{r}
 \\]
+Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u} = 2 r \dd{r}$$. Therefore,
+\\[
+    I^2 = 2 \pi \int_0^{\infty} u^{-1} \frac{\dd{u}}{2}
+\\]
 
 ## Fourier Representation of $$\delta(x)$$
 
