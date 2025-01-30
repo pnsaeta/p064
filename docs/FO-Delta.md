@@ -31,7 +31,14 @@ Delta functions are made to be integrated over:
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
-
+and
+\begin{equation}\label{eq:prop2}
+  \int_a^b \delta(x-x_0) f(x)\dd{x} = \begin{cases}
+    f(x_0) & a < x_0 < b \\\ 
+    -f(x_0) & b < x_0 < a \\\ 
+    0 & \text{otherwise}
+    \end{cases}
+\end{equation}
 ### Normalization
 
 Before struggling to evaluate the integral, let's at least make a variable substitution to simplify the exponent. Let
