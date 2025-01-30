@@ -16,7 +16,7 @@ We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked func
 \begin{equation} \label{eq:gauss1}
     g(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-x^2 / 2 \sigma^2}
 \end{equation}
-where the parameter $$\sigma$$ governs how narrow the peak, and I have written the prefactor (allegedly) so that
+where the parameter $$\sigma$$ governs how narrow the peak, and I have written the prefactor (allegedly) so that $$g(x)$$ is normalized so that
 \\[
     \int_{-\infty}^{\infty} g(x) \dd{x} = 1
 \\]
