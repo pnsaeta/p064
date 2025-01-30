@@ -10,6 +10,8 @@
 
 The Dirac delta function, $$\delta(x)$$, is the limit of a narrow spike, centered at $$x = 0$$, that grows infinitely tall, and infinitely narrow in just such a way as to integrate to one. That is, the area under the spike is normalized to one.
 
+### A Gaussian Representation
+
 We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked function, but a particularly convenient one is a **gaussian**:
 \begin{equation}
     g(t) = k e^{-\alpha t^2}
