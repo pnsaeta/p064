@@ -29,6 +29,10 @@ That is, we need to integrate $$e^{-(x^2+y^2)}$$ over the entire $$xy$$ plane. I
 \\[
     x^2 + y^2 = r^2 \qquad\text{and}\qquad \dd{x}\dd{y} = r \dd{\theta} \dd{r}
 \\]
+so that the integral becomes
+\\[
+    I^2 = \int_0^\infty \int_0^{2\pi} \dd{\theta} e^{-r^2} r \dd{r}
+\\]
 
 ## Fourier Representation of $$\delta(x)$$
 
