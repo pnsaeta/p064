@@ -20,6 +20,10 @@ where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an ampl
 \end{equation}
 Sadly, we don't have the integrating factor we need to make this integral simple; if we were to let $$u = x^2$$, then $$\dd{u} = 2 x\dd{x}$$, but we don't have that factor of $$x$$ in the integrand.
 
+Here's a beautiful trick for getting around that problem. Let's try to calculate $$I^2$$:
+\begin{equation}\label{eq:I2}
+  I^2 = \int_{-\infty}^{\infty} e^{-x^2}\dd{x} \int_{-\infty}^{\infty} e^{-y^2}\dd{y}
+\end{equation}
 
 ## Fourier Representation of $$\delta(x)$$
 
