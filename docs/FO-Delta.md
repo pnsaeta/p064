@@ -89,7 +89,7 @@ where $$\mu$$ is the mean value of $$g(x)$$, which here is zero by symmetry.
 \begin{align}
   \int \delta(x)\dd{x} &= 1,\text{ provided that we integrate over 0} \\\ 
   \int \delta(x - x_0) f(x) \dd{x} &= f(x_0),\text{  provided that we integrate over $$x_0$$} \\\ 
-  \int \delta(kx) f(x) \dd{x} &= \frac{1}{k} f(0), ,\text{  provided that we integrate over $$x_0$$}
+  \int \delta(kx) f(x) \dd{x} &= \frac{1}{k} f(0),\text{  provided that we integrate over $$x_0$$}
 \end{align}
 
 
