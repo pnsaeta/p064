@@ -25,6 +25,10 @@ Here's a beautiful trick for getting around that problem. Let's try to calculate
   I^2 = \int_{-\infty}^{\infty} e^{-x^2}\dd{x} \int_{-\infty}^{\infty} e^{-y^2}\dd{y}
   = \iint\limits_{-\infty}^{\infty} e^{-x^2 - y^2} \dd{y} \dd{x}
 \end{equation}
+That is, we need to integrate $$e^{-(x^2+y^2)}$$ over the entire $$xy$$ plane. If we switch to polar coordinates, then
+\\[
+    x^2 + y^2 = r^2 \qquad\text{and}\qquad \dd{x}\dd{y} = r \dd{\theta} \dd{r}
+\\]
 
 ## Fourier Representation of $$\delta(x)$$
 
