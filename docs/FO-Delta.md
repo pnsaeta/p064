@@ -18,6 +18,7 @@ where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an ampl
 \begin{equation}
   I = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
 \end{equation}
+Sadly, we don't have the integrating factor we need to make this integral simple; if we were to let $$u = x^2$$, then $$\dd{u} = 2 x\dd{x}$$, but we don't have that factor of $$x$$ in the integrand.
 
 
 ## Fourier Representation of $$\delta(x)$$
