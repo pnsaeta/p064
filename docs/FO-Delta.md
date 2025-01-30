@@ -36,7 +36,7 @@ so that the integral becomes
 \\]
 Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u} = 2 r \dd{r}$$. Therefore,
 \\[
-    I^2 = 2 \pi \int_0^{\infty} e^{-u} \frac{\dd{u}}{2} = \pi \left( -e^{-u} \right)_0^\infty
+    I^2 = 2 \pi \int_0^{\infty} e^{-u} \frac{\dd{u}}{2} = \pi \left( -e^{-u} \right)_0^\infty = \pi
 \\]
 
 ## Fourier Representation of $$\delta(x)$$
