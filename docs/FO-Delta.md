@@ -58,14 +58,7 @@ Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u}
 \\[
     I^2 = 2 \pi \int_0^{\infty} e^{-u} \frac{\dd{u}}{2} = \pi \left( -e^{-u} \right)_0^\infty = \pi
 \\]
-Therefore, $$I = \sqrt{\pi}$$.
-
-If we now return to Eq.&nbsp;(\ref{eq:gauss1}) with our new-found knowledge, we can normalize $$g(t)$$:
-\begin{align}
-  1 &= \int_{-\infty}^{\infty} k e^{-\alpha t^2} \dd{t} = k \int_{-\infty}^{\infty} e^{-(\sqrt{\alpha} t)^2} \dd{t} \notag \\\ 
-  &= k \int_{-\infty}^{\infty} e^{-y^2} \frac{\dd{y}}{\sqrt{\alpha}} = \frac{k}{\sqrt{\alpha}} \times \sqrt{\pi} \notag \\\ 
-  k &= \sqrt{\frac{\alpha}{\pi}}
-\end{align}
+Therefore, $$I = \sqrt{\pi}$$, which we can use in Eq.&nbsp;(\ref{eq:gauss3}) to confirm, indeed, that $$g(x)$$ is properly normalized.
 
 ## Fourier Representation of $$\delta(x)$$
 
