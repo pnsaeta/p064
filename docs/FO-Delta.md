@@ -16,7 +16,7 @@ We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked func
 \begin{equation} \label{eq:gauss1}
     g(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-x^2 / 2 \sigma^2}
 \end{equation}
-where the parameter $$\sigma$$ governs how narrow the peak, and I have written the prefactor (allegedly) so that $$g(x)$$ is normalized so that
+where the parameter $$\sigma$$ governs how narrow the peak, and I have written the prefactor (allegedly) so that $$g(x)$$ is normalized:
 \begin{equation} \label{eq:gauss2}
     \int_{-\infty}^{\infty} g(x) \dd{x} = 1
 \end{equation}
@@ -24,6 +24,7 @@ where the parameter $$\sigma$$ governs how narrow the peak, and I have written t
 We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as $$\sigma$$ gets smaller, the prefactor gets larger and the exponential part falls off more rapidly as $$x$$ departs from zero.
 
 ### Normalization
+
 
 If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what whether Eq.&nbsp;(\ref{eq:gauss2}) holds. So, let us determine the value of $$I$$ in
 \begin{equation}
