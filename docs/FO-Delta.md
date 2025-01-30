@@ -32,6 +32,7 @@ Before struggling to evaluate the integral, let's at least make a variable subst
 Then
 \\[
     \int_{-\infty}^{\infty} g(x)\dd{x} = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}} e^{-y^2} \; \sigma \sqrt{2} \dd{y}
+    = \frac{1}{\sqrt{\pi}} \int_{-\infty}^{\infty} e^{-y^2}\dd{y}
 \\]
 
 If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what whether Eq.&nbsp;(\ref{eq:gauss2}) holds. So, let us determine the value of $$I$$ in
