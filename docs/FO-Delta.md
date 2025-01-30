@@ -64,6 +64,7 @@ Therefore, $$I = \sqrt{\pi}$$, which we can use in Eq.&nbsp;(\ref{eq:gauss3}) to
 \begin{equation}\label{eq:variance}
   \sigma^2 \equiv \int g(x) (x - \mu)^2\dd{x}
 \end{equation}
+where $$\mu$$ is the mean value of $$g(x)$$, which here is zero by symmetry.
 
 ## Fourier Representation of $$\delta(x)$$
 
