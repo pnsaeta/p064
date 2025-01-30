@@ -60,7 +60,10 @@ Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u}
 \\]
 Therefore, $$I = \sqrt{\pi}$$, which we can use in Eq.&nbsp;(\ref{eq:gauss3}) to confirm, indeed, that $$g(x)$$ is properly normalized.
 
-> If you wonder about why we have included a 2 in the denominator of Eq.&nbsp;(\ref{eq:gauss1})
+> If you wonder about why we have included a 2 in the denominator of Eq.&nbsp;(\ref{eq:gauss1}), it is so that $$\sigma^2$$ is the **variance** of the probability density function $$g(x)$$, which is defined as
+\begin{equation}\label{eq:variance}
+  \sigma^2 \equiv \int g(x) (x - \mu)^2\dd{x}
+\end{equation}
 
 ## Fourier Representation of $$\delta(x)$$
 
