@@ -135,7 +135,7 @@ Up to numerical round-off error, we do indeed get the identity matrix.
 ## LU Decomposition
 
 The procedure just outlined uses a sequence of pivots to reduce the input matrix $$\mat{A}$$ to upper-triangular form (all entries below the main diagonal get sent to zero). In general, we will need to resort to permuting some rows to avoid zero pivots, so we will assume that we can 
-factor $$\mat{P}\vdot\mat{A} = \mat{L}\vdot\mat{U}$$. In that case, the task of solving the equation
+factor $$\mat{P}\vdot\mat{A} = \mat{L}\vdot\mat{U}$$, where $$\mat{P}$$ is a matrix describing the row permutations. In that case, the task of solving the equation 
 \\[
   \mat{P}\vdot\mat{A}\vdot\vb{x} = \mat{L} \vdot \mat{U} \vdot\vb{x} = \mat{P}\vdot \vb{b}
 \\]
