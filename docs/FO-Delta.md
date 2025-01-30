@@ -30,10 +30,10 @@ Before struggling to evaluate the integral, let's at least make a variable subst
     y^2 = \frac{x^2}{2\sigma^2} \qquad\text{so that}\qquad y = \frac{1}{\sigma\sqrt{2}} x
 \\]
 Then
-\\[
+\begin{equation}\label{eq:gauss3}
     \int_{-\infty}^{\infty} g(x)\dd{x} = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}} e^{-y^2} \; \sigma \sqrt{2} \dd{y}
     = \frac{1}{\sqrt{\pi}} \int_{-\infty}^{\infty} e^{-y^2}\dd{y}
-\\]
+\end{equation}
 Can we show that $$\int_{-\infty}^{\infty} e^{-y^2} \dd{y} = \sqrt{\pi}$$? If so, we will have confirmed that $$g(x)$$ is normalized. To that end, let us consider the following integral (remember, $$x$$ is a dummy variable of integration):
 \begin{equation}
   I = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
