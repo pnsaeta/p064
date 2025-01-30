@@ -29,6 +29,7 @@ Delta functions are made to be integrated over:
     1 & a < 0 < b \\\ 
     -1 & b < 0 < a \\\ 
     0 & \text{otherwise}
+    \end{cases}
 \end{equation}
 
 ### Normalization
