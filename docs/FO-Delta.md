@@ -21,7 +21,7 @@ where the parameter $$\sigma$$ governs how narrow the peak, and I have written t
     \int_{-\infty}^{\infty} g(x) \dd{x} = 1
 \\]
 
-We'll verify
+We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as $$\sigma$$ gets smaller, the prefactor gets larger and the exponential part falls off more rapidly as $$x$$ departs from zero.
 
 
 $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x} = 1$$. If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what we need $$k$$ to be for given $$\alpha$$. So, let us determine the value of $$I$$ in
