@@ -40,6 +40,11 @@ Now we have the integration factor we need, so let $$u = r^2$$, so that $$\dd{u}
 \\]
 Therefore, $$I = \sqrt{\pi}$$.
 
+So,
+\\[
+    \frac{1}{\sqrt{\pi}} \int_{-\infty}^\infty e^{-x^2}\dd{x} = 1
+\\]
+
 ## Fourier Representation of $$\delta(x)$$
 
 We seek to prove that
