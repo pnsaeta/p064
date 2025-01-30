@@ -3,7 +3,7 @@
 
 # The Dirac Delta Function
 
-*toc
+* toc
 {:toc}
 
 We seek to prove that
