@@ -14,7 +14,7 @@ We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked func
 \begin{equation}
     g(t) = k e^{-\alpha t^2}
 \end{equation}
-where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x} = 1$$. If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what we need $$k$$ to be for given $$\alpha$$. So, let us determine
+where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x} = 1$$. If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what we need $$k$$ to be for given $$\alpha$$. So, let us determine the value of $$I$$ in
 \begin{equation}
   I = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
 \end{equation}
