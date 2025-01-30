@@ -169,7 +169,6 @@ Another example function that arises in physics with this property is the hyperb
     f(t) = \frac{A}{\cosh (t/\tau)} = A \sech(t/\tau)
 \\]
 
-
 # Convolution
 
 The **convolution** of functions $$f(t)$$ and $$g(t)$$ is defined by
