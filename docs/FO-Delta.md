@@ -45,7 +45,8 @@ Therefore, $$I = \sqrt{\pi}$$.
 If we now return to Eq.&nbsp;(\ref{eq:gauss1}) with our new-found knowledge, we can normalize $$g(t)$$:
 \begin{align}
   1 &= \int_{-\infty}^{\infty} k e^{-\alpha t^2} \dd{t} = k \int_{-\infty}^{\infty} e^{-(\sqrt{\alpha} t)^2} \dd{t} \notag \\\ 
-  &= k \int_{-\infty}^{\infty} e^{-y^2} \frac{\dd{y}}{\sqrt{\alpha}} = \frac{k}{\sqrt{\alpha}} \times \sqrt{\pi}
+  &= k \int_{-\infty}^{\infty} e^{-y^2} \frac{\dd{y}}{\sqrt{\alpha}} = \frac{k}{\sqrt{\alpha}} \times \sqrt{\pi} \notag \\\ 
+  k &= \sqrt{\frac{\alpha}{\pi}}
 \end{align}
 
 ## Fourier Representation of $$\delta(x)$$
