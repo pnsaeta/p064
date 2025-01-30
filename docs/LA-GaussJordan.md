@@ -135,7 +135,7 @@ Up to numerical round-off error, we do indeed get the identity matrix.
 ## LU Decomposition
 
 The procedure just outlined uses a sequence of pivots to reduce the input matrix $$\mat{A}$$ to upper-triangular form (all entries below the main diagonal get sent to zero). In general, we will need to resort to permuting some rows to avoid zero pivots, so we will assume that we can 
-factor $$\mat{P}\vdot\mat{A} = \mat{L}\vdot\mat{U}$$, where $$\mat{P}$$ is a matrix describing the row permutations. In that case, the task of solving the equation 
+factor $$\mat{P}\vdot\mat{A} = \mat{L}\vdot\mat{U}$$, where $$\mat{P}$$ is a matrix describing the row permutations. In that case, the task of solving the equation
 \\[
   \mat{P}\vdot\mat{A}\vdot\vb{x} = \mat{L} \vdot \mat{U} \vdot\vb{x} = \mat{P}\vdot \vb{b}
 \\]
@@ -364,7 +364,9 @@ array([[ 2. , -1. ,  4. ],
 
 The `lu` function of `scipy.linalg` returns the three matrices $$\mat{P}$$, $$\mat{L}$$, and $$\mat{U}$$, getting just what we did from the straight LU decomposition of $$\mat{A}$$.
 
-If we want a complete LDU factorization, we can pull the values of $$\mat{D}$$ from the diagonal of $$\mat{U}$$ and divide the rows of $$\mat{U}$$ by these values:
+If we want a complete LDU factorization, we can pull the values of $$\mat{D}$$ from the diagonal of $$\mat{U}$$ and divide the rows of $$\mat{U}$$ by these values.
+
+> In the following we use two "different" flavors of `np.diag()`. If you call `np.diag(m)` with `m` being a square $$N\times N$$ matrix, it returns a **vector** of length $$N$$ that holds the elements on the main diagonal. On the other hand, if you call it with a one-dimensional vector, it returns a two-dimensional matrix in which the input values appear on the main diagonal, and all other elements of the matrix are zero.
 
 ~~~~ python
 >>> D = np.diag(np.diag(U))
