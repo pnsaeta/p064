@@ -39,7 +39,7 @@ and
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
-That is, they pick out the function of whatever they multiply in the integrand at the point(s) where they blow up.
+That is, they pick out the function of whatever they multiply in the integrand at the point(s) where they blow up—provided that the range of integration includes the blow up.
 
 ### Normalization
 
