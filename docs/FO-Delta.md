@@ -25,7 +25,7 @@ We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as
 
 ### Normalization
 
-If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what whethere need $$k$$ to be for given $$\alpha$$. So, let us determine the value of $$I$$ in
+If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what whether Eq.&nbsp;(\ref{eq:gauss2}) holds. So, let us determine the value of $$I$$ in
 \begin{equation}
   I = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
 \end{equation}
