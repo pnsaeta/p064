@@ -14,7 +14,7 @@ The Dirac delta function, $$\delta(x)$$, is the limit of a narrow spike, centere
 
 We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked function, but a particularly convenient one is a **gaussian**:
 \begin{equation} \label{eq:gauss1}
-    g(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{t^2}{2\sigma^2}}
+    g(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-t^2 / 2 \sigma^2}
 \end{equation}
 where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x} = 1$$. If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what we need $$k$$ to be for given $$\alpha$$. So, let us determine the value of $$I$$ in
 \begin{equation}
