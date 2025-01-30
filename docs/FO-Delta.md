@@ -32,6 +32,7 @@ That is, we need to integrate $$e^{-(x^2+y^2)}$$ over the entire $$xy$$ plane. I
 so that the integral becomes
 \\[
     I^2 = \int_0^\infty \int_0^{2\pi} \dd{\theta} e^{-r^2} r \dd{r}
+    = 2\pi \int_0^\infty e^{-r^2} r\dd{r}
 \\]
 
 ## Fourier Representation of $$\delta(x)$$
