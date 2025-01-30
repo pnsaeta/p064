@@ -27,7 +27,7 @@ We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as
 
 Before struggling to evaluate the integral, let's at least make a variable substitution to simplify the exponent. Let
 \\[
-    y^2 = \frac{x^2}{2\sigma^2}
+    y^2 = \frac{x^2}{2\sigma^2} \qquad\text{so that}\qquad y = \frac{1}{\sigma\sqrt{2}} x
 \\]
 
 If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what whether Eq.&nbsp;(\ref{eq:gauss2}) holds. So, let us determine the value of $$I$$ in
