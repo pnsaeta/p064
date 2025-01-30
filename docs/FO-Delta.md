@@ -39,6 +39,8 @@ and
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
+That is, they pick out the function of whatever they multiply in the integrand at the point(s) where they blow up.
+
 ### Normalization
 
 Before struggling to evaluate the integral, let's at least make a variable substitution to simplify the exponent. Let
