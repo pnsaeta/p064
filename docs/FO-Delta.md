@@ -10,11 +10,14 @@
 
 The Dirac delta function, $$\delta(x)$$, is the limit of a narrow spike, centered at $$x = 0$$, that grows infinitely tall, and infinitely narrow in just such a way as to integrate to one. That is, the area under the spike is normalized to one.
 
-We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked function, but a particularlyl convenient one is a **gaussian**:
+We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked function, but a particularly convenient one is a **gaussian**:
 \begin{equation}
-    g(x) = k e^{-\alpha x^2}
+    g(t) = k e^{-\alpha t^2}
 \end{equation}
-where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x}$$.
+where the parameter $$\alpha$$ governs how narrow the peak, and $$k$$ is an amplitude that we will need to determine so that $$\int_{-\infty}^{\infty} k e^{-\alpha x^2} \dd{x} = 1$$. If we knew the value of $$\int_{-\infty}^{\infty} e^{-x^2} \dd{x}$$, we could figure out what we need $$k$$ to be for given $$\alpha$$. So, let us determine
+\begin{equation}
+  I = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
+\end{equation}
 
 
 ## Fourier Representation of $$\delta(x)$$
