@@ -6,6 +6,15 @@
 * toc
 {:toc}
 
+## The Idea
+
+The Dirac delta function, $$\delta(x)$$, is the limit of a narrow spike, centered at $$x = 0$$, that grows infinitely tall, and infinitely narrow in just such a way as to integrate to one. That is, the area under the spike is normalized to one.
+
+A way to 
+
+
+## Fourier Representation of $$\delta(x)$$
+
 We seek to prove that
 \begin{equation}\label{eq:FourierDelta}
   \boxed{\delta(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ikx} \dd{k}}
