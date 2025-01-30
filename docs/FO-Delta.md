@@ -84,6 +84,12 @@ Therefore, $$I = \sqrt{\pi}$$, which we can use in Eq.&nbsp;(\ref{eq:gauss3}) to
 \end{equation}
 where $$\mu$$ is the mean value of $$g(x)$$, which here is zero by symmetry.
 
+## Summary
+
+\begin{align}
+  \int \delta(x)\dd{x} &= 1,\text{ provided that we integrate over 0} \\\ 
+  \int \delta(x - x_0) f(x) \dd{x} &= f(x_0),\text{  provided that we integrate over $$x_0$$}
+\end{align}
 ## Fourier Representation of $$\delta(x)$$
 
 We seek to prove that
