@@ -8,6 +8,16 @@
 
 [Back to the top](LA-LinearAlgebra.md)
 
+## Hermitian Operators
+
+Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$$, then $$\bra{a} \hat{A}^{\dagger} = \bra{b}$$. That is, the adjoint operator $$\hat{A}^{\dagger}$$ turns the bra of $$\ket{a}$$ into the bra of $$\ket{b}$$. Is this consistent with matrix operations?
+
+- We can represent $$\hat{A}$$ by a square matrix with elements $$A_{ij}$$.
+- $$b_i = \sum_{j=1}^N A_{ij} a_j$$
+- Taking the complex conjugate of this equation gives $$b_i^* = \sum_{j=1}^N A_{ij}^* a_j^*$$
+
+
+
 A **similarity transformation** of a square matrix $$\mat{A}$$ is a product of the form
 \\[
   \mat{D} = \mat{S}^{-1} \vdot \mat{A} \vdot \mat{S}
@@ -64,14 +74,6 @@ Taking the transpose of this equation gives
     \qty(\vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A}^\rm {T} \vdot \qty(\vb{x}^{\rm T})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x} = \lambda |\vb{x}|^2
 \\]
 The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x}$$. Therefore, $$\lambda \ge 0$$. Once again, the proof for Hermitian matrices is similar.
-
-## Hermitian Operators
-
-Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$$, then $$\bra{a} \hat{A}^{\dagger} = \bra{b}$$. That is, the adjoint operator $$\hat{A}^{\dagger}$$ turns the bra of $$\ket{a}$$ into the bra of $$\ket{b}$$. Is this consistent with matrix operations?
-
-- We can represent $$\hat{A}$$ by a square matrix with elements $$A_{ij}$$.
-- $$b_i = \sum_{j=1}^N A_{ij} a_j$$
-- Taking the complex conjugate of this equation gives $$b_i^* = \sum_{j=1}^N A_{ij}^* a_j^*$$
 
 ## Physics Example
 
