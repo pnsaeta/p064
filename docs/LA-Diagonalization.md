@@ -65,6 +65,9 @@ Taking the transpose of this equation gives
 \\]
 The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x}$$. Therefore, $$\lambda \ge 0$$. Once again, the proof for Hermitian matrices is similar.
 
+## Hermitian Matrices
+
+
 ### Physics Example
 
 What is a physical example of a positive-definite matrix? Consider the kinetic energy of a rotating rigid body. Choosing an origin on the axis of rotation, the velocity of any point on the body is given by
