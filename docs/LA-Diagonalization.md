@@ -33,7 +33,7 @@ for some *scalar* **eigenvalue** $$\lambda$$. That is, the action of transformat
 Certain kinds of matrices are guaranteed to be diagonalizable and to have a set of **eigenvectors** that span their $$n$$-dimensional space. These include
 
 + real symmetric matrices
-+ Hermitian (complex self-adjoint) matrices
++ Hermitian (complex self-adjoint) matrices ([see below](#Hermitian-matrices))
 
 Eigenvectors corresponding to different eigenvalues are guaranteed to be orthogonal:
 \begin{align}
