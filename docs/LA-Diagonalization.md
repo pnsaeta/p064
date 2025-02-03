@@ -67,7 +67,7 @@ The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm
 
 ## Hermitian Operators
 
-Let’s practice with Dirac notation. 
+Let’s practice with Dirac notation. Recall that if $$\op{A}\ket{a} = \ket{b}$$
 
 ## Physics Example
 
