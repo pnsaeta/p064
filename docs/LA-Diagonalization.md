@@ -33,7 +33,7 @@ for some *scalar* **eigenvalue** $$\lambda$$. That is, the action of transformat
 Certain kinds of matrices are guaranteed to be diagonalizable and to have a set of **eigenvectors** that span their $$n$$-dimensional space. These include
 
 + real symmetric matrices
-+ Hermitian (complex self-adjoint) matrices ([see below](#Hermitian-matrices))
++ Hermitian (complex self-adjoint) matrices ([see below](#Hermitian-operators))
 
 Eigenvectors corresponding to different eigenvalues are guaranteed to be orthogonal:
 \begin{align}
@@ -65,10 +65,11 @@ Taking the transpose of this equation gives
 \\]
 The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x}$$. Therefore, $$\lambda \ge 0$$. Once again, the proof for Hermitian matrices is similar.
 
-## Hermitian Matrices
+## Hermitian Operators
 
+Let’s practice with Dirac notation. 
 
-### Physics Example
+## Physics Example
 
 What is a physical example of a positive-definite matrix? Consider the kinetic energy of a rotating rigid body. Choosing an origin on the axis of rotation, the velocity of any point on the body is given by
 \\[
