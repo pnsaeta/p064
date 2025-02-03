@@ -195,3 +195,12 @@ There are several possible formats for an animation file. The oldest one is an [
 ~~~~ python
 ani.save("squarewave.webp", fps=10, dpi=100)
 ~~~~
+
+However, if you want your animation to loop, you need to override the default writer. If you have ImageMagick installed, you can call
+
+~~~~ python
+from matplotlib.animation import ImageMagickWriter
+ani.save("squarewave.webp", writer=ImageMagickWriter(fps=10, extra_args=['-loop', '0'])
+~~~~
+
+Unfortunately, as of 2/2/25, there is a bug in the matplotlib code that I had to fix on line 476 of `matplotlib/__init__.py` by replacing `path = 'convert'` to `path = "magick"`, since ImageMagick has deprecated the use of `convert` as its command line executable in favor of `magick`.
