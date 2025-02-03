@@ -1,1 +1,2 @@
-+	LE-Lec02.md	Lecture 2
++	LE-Lec02.md	Lecture 2 — A Research Problem
++	LE-Lec03.md	Lecture 3 — Linear Independence and Matrix Inverses
