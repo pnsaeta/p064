@@ -71,6 +71,7 @@ Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$
 
 - We can represent $$\hat{A}$$ by a square matrix with elements $$A_{ij}$$.
 - $$b_i = \sum_{j=1}^N A_{ij} a_j$$
+- Taking the complex conjugate of this equation gives $$b_i^* = \sum_{j=1}^N A_{ij}^* a_j^*$$
 
 ## Physics Example
 
