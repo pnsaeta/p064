@@ -187,3 +187,11 @@ for i in range(10):
     display.clear_output(wait=True)
     sleep(0.5)
 ~~~~
+
+## Output formats
+
+There are several possible formats for an animation file. The oldest one is an [animated GIF (Graphics Interchange Format)](https://en.wikipedia.org/wiki/GIF), which was introduced in 1987. All browsers support GIFs, but for most animations there are better formats (better resolution, better compression). One modern option is [WebP](https://en.wikipedia.org/wiki/WebP), which is format developed Google to replace JPEG, PNG, and GIF. You can simply change the file extension in the call to save to switch from GIF to WebP:
+
+~~~~ python
+ani.save("squarewave.gif", fps=10, dpi=100)
+~~~~
