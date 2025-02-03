@@ -13,7 +13,12 @@
 Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$$, then $$\bra{a} \hat{A}^{\dagger} = \bra{b}$$. That is, the adjoint operator $$\hat{A}^{\dagger}$$ turns the bra of $$\ket{a}$$ into the bra of $$\ket{b}$$. Is this consistent with matrix operations?
 
 - We can represent $$\hat{A}$$ by a square matrix with elements $$A_{ij}: \quad b_i = \sum_{j=1}^N A_{ij} a_j$$
-- Taking the complex conjugate of this equation gives $$b_i^* = \sum_{j=1}^N A_{ij}^* a_j^* = \sum_{j=1}^N a_j^* A_{ji} $$, where I have used the definition that the matrix of the adjoint operation is the conjugate transpose of the operator matrix.
+- Taking the complex conjugate of this equation gives 
+\begin{equation}\label{eq:HO1}
+  b_i^* = \sum_{j=1}^N A_{ij}^* a_j^* = \sum_{j=1}^N a_j^* A_{ji}
+\end{equation} 
+   where I have used the definition that the matrix of the adjoint operation is the conjugate transpose of the operator matrix.
+- Since
 
 
 
