@@ -42,13 +42,7 @@ If we now subtract the second line from the first, we get
 \end{equation}
 
 The series converges as $$N\to\infty$$ provided that
-$$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is convenient to symmetrize this expression by taking $$\sigma = \ln(r)$$ so $$r = e^\sigma$$:
-\begin{equation}
-  S_N = a_0 \, \frac{r^{(N+1)/2}}{r^{1/2}} \frac{r^{-(N+1)/2} - r^{(N+1)/2}}{(r^{-1/2}- r^{1/2})}
-  = a_0 r^{N/2} \frac{r^{(N+1)/2} - r^{-(N+1)/2}}{r^{1/2}- r^{-1/2}}
-  = a_0 e^{\sigma N/2} \frac{e^{\sigma(N+1)/2} - e^{-\sigma(N+1)/2}}{e^{\sigma/2} - e^{-\sigma/2}}
-  = a_0 e^{\sigma N/2} \frac{\sinh\bigg(\sigma(N+1)/2 \bigg)}{\sinh(\sigma/2)}
-\end{equation}
+$$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is convenient to symmetrize this expression by factoring out $$r^{N/2}$$, which allows you to express the fraction in terms of the ratio between hyperbolic sine functions.
 
 ### Tests of Convergence
 
