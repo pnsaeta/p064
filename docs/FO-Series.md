@@ -41,7 +41,8 @@ If we now subtract the second line from the first, we get
   S_N (1-r) = a_0 (1 - r^{N+1}) \qquad\text{so}\qquad \boxed{ S_N = a_0 \frac{1 - r^{N+1}}{1 - r} }
 \end{equation}
 
-The series converges as $$N\to\infty$$ provided that $$|r| < 1$$.
+The series converges as $$N\to\infty$$ provided that
+$$|r| < 1$$.
 
 ### Tests of Convergence
 
