@@ -38,10 +38,10 @@ Successive terms of a geometric form a fixed ratio $$r$$:
     S_N = \sum_{n=0}^N a_0 r^n
 \\]
 There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N$$:
-\begin{align*}
+\begin{align}
     S\_N &= a\_0 (1 + r + \cdots + r^N) \\\ 
     r S\_N &= a\_0(\hphantom{1 +} r + r^2 + \cdots + r^N + r^{N+1})
-\end{align*}
+\end{align}
 
 The series converges as $$N\to\infty$$ provided that $$|r| < 1$$.
 
