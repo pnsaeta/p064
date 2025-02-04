@@ -38,7 +38,7 @@ There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N
 \end{align}
 If we now subtract the second line from the first, we get
 \begin{equation}
-  S_N (1-r) = a_0 (1 - r^{N+1}) \qquad\text{so}\qquad \boxed{ S_N = a_0 \frac{1 - r^{N+1}}{1 - r} }
+  S_N (1-r) = a_0 (1 - r^{N+1}) \qquad\text{so}\qquad \boxed{ S_N = a_0 \left( \frac{1 - r^{N+1}}{1 - r} \right) }
 \end{equation}
 
 The series converges as $$N\to\infty$$ provided that
