@@ -47,7 +47,7 @@ $$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is c
   S_N = a_0 \, \frac{r^{(N+1)/2}}{r^{1/2}} \frac{r^{-(N+1)/2} - r^{(N+1)/2}}{(r^{-1/2}- r^{1/2})}
   = a_0 r^{N/2} \frac{r^{(N+1)/2} - r^{-(N+1)/2}}{r^{1/2}- r^{-1/2}}
   = a_0 e^{\sigma N/2} \frac{e^{\sigma(N+1)/2} - e^{-\sigma(N+1)/2}}{e^{\sigma/2} - e^{-\sigma/2}}
-  = a_0 e^{\sigma N/2} \frac{\sinh\big\{\sigma(N+1)/2 \big\}}{\sinh(\sigma/2)}
+  = a_0 e^{\sigma N/2} \frac{\sinh\big\[\sigma(N+1)/2 \big\\]}{\sinh(\sigma/2)}
 \end{equation}
 
 ### Tests of Convergence
