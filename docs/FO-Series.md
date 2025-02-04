@@ -18,7 +18,7 @@ The **harmonic series**,
 \\[
     H = \sum_{n=1}^{\infty} \frac1n = 1 + \frac12 + \frac13 + \cdots
 \\]
-does not converge, although its divergence is logarithmic (weak), as illustrated in the following figure
+does not converge, even though its terms tend to zero as $$n \to \infty$$. Its divergence is logarithmic (i.e., weak), as illustrated in the following figure
 
 <p class="center" markdown="0">
   <img src="figs/harmonic.webp" style="width: 500px;">
