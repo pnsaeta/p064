@@ -259,6 +259,7 @@ array([ 1.        , -0.5       ,  0.16666667,  0.        , -0.03333333,
 
 As you can probably guess from this output, the Bernoulli numbers for odd $$n \ge 3$$ all vanish.
 
+<!---
 ## Possible Problems
 
 1. Do certain series converge?
@@ -267,3 +268,4 @@ As you can probably guess from this output, the Bernoulli numbers for odd $$n \g
 4. Working out the Taylor series for something
 5. Expressing a Gaussian integral in terms of $$\Gamma(x)$$.
 6. Multiplying a pair of series to determine unknown coefficients.
+-->
