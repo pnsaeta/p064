@@ -42,6 +42,7 @@ There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N
     S_N &= a_0 (1 + r + \cdots + r^N) \\\ 
     r S_N &= a_0(\hphantom{1 +} r + r^2 + \cdots + r^N + r^{N+1})
 \end{align*}
+
 The series converges as $$N\to\infty$$ provided that $$|r| < 1$$.
 
 ### Tests of Convergence
