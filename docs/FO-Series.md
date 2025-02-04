@@ -42,7 +42,7 @@ If we now subtract the second line from the first, we get
 \end{equation}
 
 The series converges as $$N\to\infty$$ provided that
-$$|r| < 1$$.
+$$|r| < 1$$ (so that the numerator of the fraction goes to 1).
 
 ### Tests of Convergence
 
