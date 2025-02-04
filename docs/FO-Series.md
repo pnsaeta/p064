@@ -92,7 +92,7 @@ Properties of absolutely convergent series:
 + two absolutely convergent series may be added, subtracted, or multiplied termwise to yield another absolutely convergent series
 + the product of two absolutely convergent series converges to the product of the individual series
 
-Note that none of these claims can be made for conditionally convergent series.
+Note that **none of these claims** can be made for conditionally convergent series.
 
 ## Taylor Series
 
