@@ -18,7 +18,7 @@ Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$
   b_i^* = \sum_{j=1}^N A_{ij}^* a_j^* = \sum_{j=1}^N a_j^* A_{ji}
 \end{equation} 
    where I have used the definition that the matrix of the adjoint operation is the conjugate transpose of the operator matrix.
-- Since
+- Since Eq.&nbsp;(\ref{eq:HO1}) expresses the multiplication of a row vector, $$(a_1^*, \ldots, a_N^*)$$ by matrix $$A_{ji}$$
 
 
 
