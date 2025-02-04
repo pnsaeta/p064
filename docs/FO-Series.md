@@ -7,12 +7,6 @@
 * toc
 {:toc}
 
-+ Definitions, convergence
-+ Taylor, power series
-+ gamma function
-+ binomial expansion/series?
-+ Bernoulli numbers?
-
 ## Definitions
 
 An infinite series is an infinite sum,
