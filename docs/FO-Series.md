@@ -13,7 +13,8 @@ An infinite series is an infinite sum,
 \begin{equation}\label{eq:infseries}
   s = \sum_{n=1}^{\infty} u_n = \lim_{N\to\infty} \sum_{n=1}^N u_n
 \end{equation}
-that is the limit of partial sums having a finite number of terms. For the limit to exist, the magnitude of the terms $$u_n$$ must go to zero as $$n\to\infty$$, but while a necessary condition it is not sufficient. The **harmonic series**,
+that is the limit of partial sums having a finite number of terms. For the limit to exist, the magnitude of the terms $$u_n$$ must go to zero as $$n\to\infty$$. However, while this is a necessary condition it is not sufficient.
+The **harmonic series**,
 \\[
     H = \sum_{n=1}^{\infty} \frac1n = 1 + \frac12 + \frac13 + \cdots
 \\]
