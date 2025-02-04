@@ -124,6 +124,12 @@ for some value $$a \le \xi \le x$$ by the mean value theorem. Equation (\ref{eq:
 
 Physicists should know the following series cold; they arise very frequently in physics and it is worth your time to learn so well that you don't need to think about them:
 
+| blah | blahdeblah |
++-
+| really? | blah |
+
+
+
 \begin{align}
   \text{function} & \text{ and series} & \text{radius of convergence} \notag \\\ 
   e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots &  &-\infty < x <\infty \notag \\\ 
