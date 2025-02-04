@@ -42,10 +42,11 @@ If we now subtract the second line from the first, we get
 \end{equation}
 
 The series converges as $$N\to\infty$$ provided that
-$$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is convenient to symmetrize this expression:
+$$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is convenient to symmetrize this expression by taking $$\sigma = \ln(r)$$:
 \begin{equation}
   S_N = a_0 \, \frac{r^{(N+1)/2}}{r^{1/2}} \frac{r^{-(N+1)/2} - r^{(N+1)/2}}{(r^{-1/2}- r^{1/2})}
   = a_0 r^{N/2} \frac{r^{(N+1)/2} - r^{-(N+1)/2}}{r^{1/2}- r^{-1/2}}
+  = 
 \end{equation}
 
 ### Tests of Convergence
