@@ -199,7 +199,7 @@ and in general
 where the double factorial is defined by
 \\[
     n!! = n \times (n-2) \times \cdots \times \begin{cases} 1 & n\text{ odd} \\\ 
-    0 & n\text {even}
+    2 & n\text{ even}
     \end{cases}
 \\]
 
