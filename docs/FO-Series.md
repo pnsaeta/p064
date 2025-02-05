@@ -10,7 +10,7 @@
 
 An infinite series is an infinite sum,
 \begin{equation}\label{eq:infseries}
-  s = \sum_{n=1}^{\infty} u_n = \lim_{N\to\infty} \sum_{n=1}^N u_n
+  s = \sum_{n=1}^{\infty} a_n = \lim_{N\to\infty} \sum_{n=1}^N a_n
 \end{equation}
 that is the limit of partial sums having a finite number of terms. For the limit to exist, the magnitude of the terms $$u_n$$ must go to zero as $$n\to\infty$$. However, while this is a necessary condition it is not sufficient.
 The **harmonic series**,
