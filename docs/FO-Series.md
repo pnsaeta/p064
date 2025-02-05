@@ -58,7 +58,7 @@ It is often necessary to know whether an infinite series converges to a finite v
     = 1 &\quad \text{indeterminate}
     \end{cases}
 \\]
-4. **Integral test** The caption to Fig. 1 above illustrates using an integral test 
+4. **Integral test**: The caption to Fig. 1 above illustrates using an integral test 
 
 ### Riemann Zeta Function
 
