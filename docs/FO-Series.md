@@ -69,7 +69,7 @@ The **Riemann zeta** function is defined by
 If $$\nu=1$$, this series becomes the harmonic series, which we know to be divergent. For $$\nu < 1$$ it diverges more rapidly, but for $$\nu > 1$$ we can use an integral test to check convergence:
 \\[
     \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}} 
-    < 1 + \int_2^{\infty} (x-1)^{-\nu} \;dx
+    < 1 + \int_2^{\infty} (x-1)^{-\nu} \dd{x}
     = 1 + \left.\frac{(x-1)^{1-\nu}}{1-\nu}\right|_{x=2}^{\infty} = 1 + \frac{1}{\nu-1} < \infty
 \\]
 
@@ -111,7 +111,7 @@ where the inequality comes from ignoring higher-order terms.
 
 A useful way to bound the error associated with ignoring those terms is to integrate the $$n$$th derivative from $$a$$ to $$x$$ $$n$$ times:
 \begin{align}
-  \int\_a^{x\_{n-1}} f^{(n)} \, dx\_n &= f^{(n-1)}(x_{n-1}) - f^{(n-1)}(a) \notag \\\ 
+  \int\_a^{x\_{n-1}} f^{(n)} \dd{x\_n} &= f^{(n-1)}(x_{n-1}) - f^{(n-1)}(a) \notag \\\ 
   \int\_a^{x\_{n-2}} dx_{n-1} \int\_a^{x\_{n-1}} dx\_{n} f^{(n)}(x_n) &= f^{(n-2)}(x\_{n-2}) - f^{(n-2)}(a) -(x\_{n-2} - a) f^{(n-1)}(a) \notag \\\ 
   \vdots \qquad & \qquad \vdots \notag \\\ 
   &= f(x) - f(a) -(x-a) f'(a) - \frac{(x-a)^2}{2!} f^{\prime\prime}(a) - \cdots - \frac{(x-a)^{n-1}}{(n-1)!} f^{(n-1)}(a)
