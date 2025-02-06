@@ -227,11 +227,11 @@ While it may not look like we are any closer to an evaluation, it is undeniably 
 \\]
 since both $$x$$ and $$y$$ are dummy variables of integration. On the other hand, we can read this expression as the integral over the $$xy$$ plane of the integrand $$e^{-x^2-y^2} = e^{-r^2}$$, where $$r$$ is the distance from the origin. Rather than integrating in cartesians, we can use polar coordinates:
 \\[
-    I^2 = \int_0^{2\pi} \int_0^\infty e^{-r^2} \, r dr \, d\theta
+    I^2 = \int_0^{2\pi} \int_0^\infty e^{-r^2} \, r \dd{r} \dd{\theta}
 \\]
-Making the $$u$$ substitution $$u = r^2$$, so that $$du = 2 r \, dr$$, we can rewrite this double integral as
+Making the $$u$$ substitution $$u = r^2$$, so that $$\dd{u} = 2 r \dd{r}$$, we can rewrite this double integral as
 \\[
-    I^2 = \int_0^{2\pi} \int_0^\infty e^{-u} \, \frac{du}{2} \, d\theta = \pi
+    I^2 = \int_0^{2\pi} \int_0^\infty e^{-u} \, \frac{du}{2} \dd{\theta} = \pi
 \\]
 Therefore,
 \\[
