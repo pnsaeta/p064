@@ -105,6 +105,7 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
   &= \frac14 \int_0^T \bigg(
     e^{i(m+n)\omega t} + e^{i(m-n)\omega t} + e^{-i(m-n)\omega t} + e^{-i(m+n)\omega t} \bigg) \dd{t}
 \end{align}
+Each of the exponential terms goes through an integral number of cycles as $$t$$ goes from $$0$$ to $$T$$, returning to exactly the same value at $$T$$ as it had at $$0$$, provided that $$m \ne n$$. All such terms integrate to zero. However, if $$m = n$$, then the terms with $$m-n$$ evaluate to $$1$$ throughout the interval and yield a value of $$T$$ on integrating, so the integral is equal to $$T/2$$ (when we account for the leading factor of $$1/4$$). In the singular case where $$m = n = 0$$, both $$m-n = 0$$ and $$m+n=0$$, in which case all four terms integrate to $$T$$, so the value of the integral is just $$T$$.
 
 The strategy for determining the coefficients $$a_n$$ and $$b_n$$ is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
 \begin{equation}\label{eq:bn}
