@@ -99,7 +99,10 @@ If $$m\ne n$$ we get the same expression with $$m+n \to m-n$$, which vanishes fo
 
 To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;(\ref{eq:thisone}). To simplify the notation, I will use $$\omega = 2 \pi /T$$. We will need to know how to evaluate the single (simple) integral for integral $$N$$:
 \begin{equation}
-  I_N = \int_0^T e^{i N \omega t}\dd{t} = \frac{e^{iN\omega t}}{iN\omega} \bigg|_0^T
+  I_N = \int_0^T e^{i N \omega t}\dd{t} = 
+  \begin{cases}
+    t |_0^T & N = 0 \\\ 
+    \frac{e^{iN\omega t}}{iN\omega} \bigg|_0^T
   = \begin{cases}
    \displaystyle \frac{e^{iN\omega T} - 1}{i N \omega}= 0 & N \ne 0 \\\ 
    T & N = 0
