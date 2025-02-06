@@ -150,9 +150,9 @@ Suppose that you knew a Maclaurin series for a function $$f(x)$$ but you need th
 The "easy" way is to go back to the definition in Eq.&nbsp;(\ref{eq:Taylor}) and work out all the derivatives of $$\sech(x)$$. While this is straightforward, in principle, the expressions for the derivatives get more and more complicated as we proceed. [If you don't believe me, try it!]
 
 Here's another option. For small $$x$$, 
-\begin{equation*}
+\begin{equation}
   \cosh x = 1 + \underbrace{\frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots}_{q}
-\end{equation*}
+\end{equation}
 
 ## Gamma Function
 
