@@ -173,7 +173,7 @@ To produce the series for $$\sech x$$ valid for terms through $$x^6$$ just requi
 
 Now, we just need to combine all these terms:
 \begin{align}
-  \sech x & 1 - \frac{x^2}{2} +
+  \sech x &= 1 - \frac{x^2}{2} +
    x^4 \left( -\frac{1}{4!} + \frac{1}{4} \right) 
    + x^6 \left( -\frac{1}{6!} \right) \notag
 \end{align}
