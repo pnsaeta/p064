@@ -33,7 +33,7 @@ Successive terms of a geometric form a fixed ratio $$r$$:
 \\]
 There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N$$:
 \begin{align}
-    S\_N &= a\_0 (1 + r + \cdots + r^N) \\\ 
+    S\_N &= a\_0 (1 + r + r^2 + \cdots + r^N) \\\ 
     r S\_N &= a\_0(\hphantom{1 + } \; r + r^2 + \cdots + r^N + r^{N+1})
 \end{align}
 If we now subtract the second line from the first, we get
