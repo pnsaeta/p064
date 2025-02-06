@@ -214,7 +214,7 @@ Hence, the recursion relation $$\Gamma(n+1) = n \Gamma(n)$$ along with the termi
 
 What about when $$n$$ is non-integral? For instance, what about $$n = -\frac12$$? That is, can we evaluate
 \\[
-    I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \, dt
+    I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \dd{t}
 \\]
 Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$\dd{t} = 2 x \dd{x} $$, giving
 \\[
