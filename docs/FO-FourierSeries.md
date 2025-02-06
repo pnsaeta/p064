@@ -103,6 +103,7 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
   \begin{cases}
     t |_0^T & N = 0 \\\ 
     \frac{e^{iN\omega t}}{iN\omega} \bigg|_0^T
+  \end{cases}
   = \begin{cases}
    \displaystyle \frac{e^{iN\omega T} - 1}{i N \omega}= 0 & N \ne 0 \\\ 
    T & N = 0
