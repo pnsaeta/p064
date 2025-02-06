@@ -117,7 +117,7 @@ Then Eq.&nbsp;(\ref{eq:thisone}) is
   &= \frac14 \int_0^T \bigg(
     e^{i(m+n)\omega t} + e^{i(m-n)\omega t} + e^{-i(m-n)\omega t} + e^{-i(m+n)\omega t} \bigg) \dd{t}
 \end{align}
-By Eq.&nbsp;(\ref{eq:keyortho}, the only integrals that are nonzero have $$m\pm n = 0$$.
+By Eq.&nbsp;(\ref{eq:keyortho}), the only integrals that are nonzero have $$m\pm n = 0$$.
 
 Each of the exponential terms goes through an integral number of cycles as $$t$$ goes from $$0$$ to $$T$$, returning to exactly the same value at $$T$$ as it had at $$0$$, provided that $$m \ne n$$. All such terms integrate to zero. However, if $$m = n$$, then the terms with $$m-n$$ evaluate to $$1$$ throughout the interval and yield a value of $$T$$ on integrating, so the integral is equal to $$T/2$$ (when we account for the leading factor of $$1/4$$). In the singular case where $$m = n = 0$$, both $$m-n = 0$$ and $$m+n=0$$, in which case all four terms integrate to $$T$$, so the value of the integral is just $$T$$.
 
