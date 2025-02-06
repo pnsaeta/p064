@@ -216,9 +216,9 @@ What about when $$n$$ is non-integral? For instance, what about $$n = -\frac12$$
 \\[
     I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \, dt
 \\]
-Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$dt = 2 x \,dx$$, giving
+Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$\dd{t} = 2 x \dd{x} $$, giving
 \\[
-    I = \int_0^\infty \frac1x e^{-x^2} 2x \, dx = 2\int_0^\infty e^{-x^2}\,dx = \int_{-\infty}^{\infty} e^{-x^2}\,dx
+    I = \int_0^\infty \frac1x e^{-x^2} 2x \dd{x}  = 2\int_0^\infty e^{-x^2}\dd{x} = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
 \\]
 While it may not look like we are any closer to an evaluation, it is undeniably true that squaring this expression yields
 \\[
