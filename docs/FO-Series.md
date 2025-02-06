@@ -64,11 +64,11 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 The **Riemann zeta** function is defined by
 \begin{equation}\label{eq:zeta}
-  \zeta(x) = \sum_{n=1}^\infty \frac1{n^{x}}
+  \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}}
 \end{equation}
-If $$x=1$$, this series becomes the harmonic series, which we know to be divergent. For $$x < 1$$ it diverges more rapidly, but for $$x > 1$$ we can use an integral test to check convergence:
+If $$\nu=1$$, this series becomes the harmonic series, which we know to be divergent. For $$\nu < 1$$ it diverges more rapidly, but for $$\nu > 1$$ we can use an integral test to check convergence:
 \\[
-    \zeta(x) = \sum_{n=1}^\infty \frac1{n^{x}} < \int_1^{\infty} n^{-x} \;dn
+    \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{x}} < 1 + \int_2^{\infty} (x-1)^{-\nu} \;dx
     = \left.\frac{n^{1-x}}{1-x}\right|_{n=1}^{n=\infty} = \frac{1}{x-1}
 \\]
 
