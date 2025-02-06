@@ -145,7 +145,7 @@ Clearly, the radius of convergence of the logarithmic series does not include $$
 
 ## Manipulating Series
 
-Suppose that you knew a Maclaurin series for a function $$f(x)$$ but you need the series for $$1/f(x)$$, valid for small values of $$x$$. For example, we know the series for $$\cosh x$$ from the above list (or we could derive it ourselves).
+Suppose that you knew a Maclaurin series for a function $$f(x)$$ but you need the series for $$1/f(x)$$, valid for small values of $$x$$. For example, we know the series for $$\cosh x$$ from the above list (or we could derive it ourselves). The hyperbolic secant function, $$\sech x$$ is $$1 / \cosh x$$.
 
 ## Gamma Function
 
