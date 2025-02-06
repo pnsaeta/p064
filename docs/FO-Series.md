@@ -162,7 +162,6 @@ But, the binomial series for $$n = -1$$ is just
     \frac{1}{1 + q} = 1 - q + q^2 - q^3 + \cdots
 \\]
 To produce the series for $$\sech x$$ valid for terms through $$x^6$$ just requires us to keep **all** the terms in $$-q + q^2 - q^3$$ through $$x^6$$. We'll work term by term:
-$$\newcommand*{\O}[1]{\mathcal{O}(#1)}$$
 \begin{align}
   q &= \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \O(x^8)     \notag
   q^2 &=
