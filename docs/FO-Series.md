@@ -163,12 +163,19 @@ But, the binomial series for $$n = -1$$ is just
 \\]
 To produce the series for $$\sech x$$ valid for terms through $$x^6$$ just requires us to keep **all** the terms in $$-q + q^2 - q^3$$ through $$x^6$$. We'll work term by term:
 \begin{align}
-  q &= \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \frac{x^8}{8!} + \O{x^{10}}     \notag \\\ 
+  -q &= -\frac{x^2}{2!} - \frac{x^4}{4!} - \frac{x^6}{6!} - \frac{x^8}{8!} + \O{x^{10}}     \notag \\\ 
   q^2 &= \frac{x^4}{(2!)^2} + 2 \frac{x^2 \; x^4}{2! \; 4!} +
    2 \frac{x^2}{2!} \frac{x^6}{6!} + \left( \frac{x^4}{4!} \right)^2 + \O{x^{10}} \notag \\\ 
    &= \frac{x^4}{4} + \frac{x^6}{4!} + x^8 \left( \frac{1}{6!} + \frac{1}{(4!)^2} \right) + \O{x^{10}} \notag \\\ 
-   q^3 &= \left(\frac{x^2}{2!} \right)^3 + 3 \left(\frac{x^2}{2!}\right)^2 \frac{x^4}{4!}
+   -q^3 &= -\left(\frac{x^2}{2!} \right)^3 - 3 \left(\frac{x^2}{2!}\right)^2 \frac{x^4}{4!}
    + \O{x^{10}}
+\end{align}
+
+Now, we just need to combine all these terms:
+\begin{align}
+  \sech x & 1 - \frac{x^2}}{2} +
+   x^4 \left( -\frac{1}{4!} + \frac{1}{4} \right) 
+   + x^6 \left( -\frac{1}{6!} \right) \notag
 \end{align}
 
 ## Gamma Function
