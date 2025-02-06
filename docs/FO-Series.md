@@ -222,8 +222,8 @@ Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$\dd{t} = 2 x \dd{x} $$, giving
 \\]
 While it may not look like we are any closer to an evaluation, it is undeniably true that squaring this expression yields
 \\[
-    I^2 = \int_{-\infty}^\infty dx \int_{-\infty}^\infty dy \, e^{-x^2} e^{-y^2} =
-    \int_{-\infty}^\infty dx \int_{-\infty}^\infty dy \; e^{-(x^2+y^2)}
+    I^2 = \int_{-\infty}^\infty \dd{x} \int_{-\infty}^\infty \dd{y} \, e^{-x^2} e^{-y^2} =
+    \int_{-\infty}^\infty \dd{x} \int_{-\infty}^\infty \dd{y} \; e^{-(x^2+y^2)}
 \\]
 since both $$x$$ and $$y$$ are dummy variables of integration. On the other hand, we can read this expression as the integral over the $$xy$$ plane of the integrand $$e^{-x^2-y^2} = e^{-r^2}$$, where $$r$$ is the distance from the origin. Rather than integrating in cartesians, we can use polar coordinates:
 \\[
