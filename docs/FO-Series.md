@@ -117,14 +117,14 @@ A useful way to bound the error associated with ignoring those terms is to integ
   &= f(x) - f(a) -(x-a) f'(a) - \frac{(x-a)^2}{2!} f^{\prime\prime}(a) - \cdots - \frac{(x-a)^{n-1}}{(n-1)!} f^{(n-1)}(a)
 \end{align}
 Rearranging slightly gives
-\begin{equation}\label{eq:Taylor}
+\begin{equation}\label{eq:Taylor2}
   f(x) = \sum\_{i=0}^{n-1} \frac{(x-a)^i}{i!} f^{(i)}(a) + R_n
 \end{equation}
 where the remainder is the $$n$$-dimensional integral,
 \\[
     R_n = \int_a^x dx_1 \cdots \int_a^{x\_{n}} dx\_n\; f^{(n)}(x_n) = \frac{(x-a)^n}{n!} f^{(n)}(\xi)
 \\]
-for some value $$a \le \xi \le x$$ by the mean value theorem. Equation (\ref{eq:Taylor}), with the explicit form of the residual $$R_n$$ is a particularly powerful way of not only estimating functions but also the magnitude of the error associated with a finite series.
+for some value $$a \le \xi \le x$$ by the mean value theorem. Equation (\ref{eq:Taylor2}), with the explicit form of the residual $$R_n$$ is a particularly powerful way of not only estimating functions but also the magnitude of the error associated with a finite series.
 
 ### Some Important Taylor Series
 
