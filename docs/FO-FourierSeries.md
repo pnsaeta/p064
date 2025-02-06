@@ -46,16 +46,16 @@ The method relies on a perhaps surprising and deep property of these trigonometr
 are orthogonal to one another under integration over a period:
 \begin{align}
   \int\_0^T \sin\qty(\frac{m 2\pi t}{T})
-  \sin\qty(\frac{n 2\pi t}{T}) \;dt &= \begin{cases}  
+  \sin\qty(\frac{n 2\pi t}{T}) \dd{t} &= \begin{cases}  
   \frac{T}{2} & m = n \\\ 
   0 & m \ne n
   \end{cases} \label{eq:sinsin}
    \\\ 
   \int\_0^T \sin\qty(\frac{m 2\pi t}{T})
-  \cos\qty(\frac{n 2\pi t}{T}) \;dt &= 0
+  \cos\qty(\frac{n 2\pi t}{T}) \dd{t} &= 0
   \\\ 
   \int\_0^T \cos\qty(\frac{m 2\pi t}{T})
-  \cos\qty(\frac{n 2\pi t}{T}) \;dt &= \begin{cases}  
+  \cos\qty(\frac{n 2\pi t}{T}) \dd{t} &= \begin{cases}  
   T & m = n = 0 \\\ 
   \frac{T}{2} & m = n > 0 \\\ 
   0 & m \ne n
@@ -94,6 +94,10 @@ The second term integrates to
 since the integrated expression vanishes at both endpoints. 
 
 If $$m\ne n$$ we get the same expression with $$m+n \to m-n$$, which vanishes for the same reason. However, if $$m=n$$, the first cosine term is just the constant 1, so it integrates to $$\frac{T}{2}$$.
+
+### Easier Version Using Complex Exponentials
+
+To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;
 
 The strategy for determining the coefficients $$a_n$$ and $$b_n$$ is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
 \begin{equation}\label{eq:bn}
