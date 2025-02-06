@@ -100,8 +100,8 @@ If $$m\ne n$$ we get the same expression with $$m+n \to m-n$$, which vanishes fo
 To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;(\ref{eq:thisone}). To simplify the notation, I will use $$\omega = 2 \pi /T$$. Then Eq.&nbsp;(\ref{eq:thisone}) is
 \begin{align}
   \int_0^T \cos(m\omega t) \cos(n\omega t)\dd{t} 
-  &= \int_0^T \frac{e^{im\omega t} + e^{-im\omega t}}{2} \,
-  \frac{e^{in\omega t} + e^{-in\omega t}}{2} \dd{t} \notag\\\ 
+  &= \int_0^T \left(\frac{e^{im\omega t} + e^{-im\omega t}}{2} \right) \,
+   \left( \frac{e^{in\omega t} + e^{-in\omega t}}{2}\right) \dd{t} \notag\\\ 
   &=
 \end{align}
 
