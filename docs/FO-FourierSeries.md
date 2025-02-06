@@ -106,7 +106,7 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
     & N \ne 0
   \end{cases}
 \end{equation}
-That is, unless $$N = 0$$, the integral vanishes, since we integrate over an integral number of complete periods. However, if $$N = 0$$, the exponential is just 1, so we get an integral equal to the range of integration.
+That is, unless $$N = 0$$, the integral vanishes, since we integrate over an integral number of complete periods, so the numerator is the same at the beginning and end of the integration. However, if $$N = 0$$, the exponential is just 1, so we get an integral equal to the range of integration.
 
 
 Then Eq.&nbsp;(\ref{eq:thisone}) is
