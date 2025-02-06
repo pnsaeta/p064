@@ -71,6 +71,12 @@ If $$x=1$$, this series becomes the harmonic series, which we know to be diverge
     \zeta(x) = \sum_{n=1}^\infty \frac1{n^{x}} < \int_1^{\infty} n^{-x} \;dn
     = \left.\frac{n^{1-x}}{1-x}\right|_{n=1}^{n=\infty} = \frac{1}{x-1}
 \\]
+
+<p class="center" markdown="0">
+  <img src="figs/zeta.webp" style="width: 400px;" alt="Riemann zeta function">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+
 The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
 \begin{equation}\label{eq:Stefan-Boltzmann}
   p = \sigma T^4 \qquad\text{where}\qquad
