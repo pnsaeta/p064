@@ -88,8 +88,8 @@ Therefore,
 The second term integrates to
 \\[
     -\frac12 \int\_0^T 
-      \cos\qty(\frac{(m+n)2\pi t}{T})
-  \; dt = -\frac12 \qty[\frac{T}{(m+n)2\pi} \sin\qty(\frac{(m+n)2\pi t}{T})]_0^T = 0
+      \cos\qty(\frac{(m+n)2\pi t}{T}) \dd{t}
+  = -\frac12 \qty[\frac{T}{(m+n)2\pi} \sin\qty(\frac{(m+n)2\pi t}{T})]_0^T = 0
 \\]
 since the integrated expression vanishes at both endpoints. 
 
