@@ -231,7 +231,7 @@ since both $$x$$ and $$y$$ are dummy variables of integration. On the other hand
 \\]
 Making the $$u$$ substitution $$u = r^2$$, so that $$\dd{u} = 2 r \dd{r}$$, we can rewrite this double integral as
 \\[
-    I^2 = \int_0^{2\pi} \int_0^\infty e^{-u} \, \frac{du}{2} \dd{\theta} = \pi
+    I^2 = \int_0^{2\pi} \int_0^\infty e^{-u}  \frac{\dd{u}}{2} \dd{\theta} = \pi
 \\]
 Therefore,
 \\[
