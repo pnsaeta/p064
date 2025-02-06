@@ -155,8 +155,12 @@ Here's another option. For small $$x$$,
 \end{equation}
 where $$q$$ is a "small quantity" as long as $$x$$ isn't too large. So,
 \begin{equation}\label{eq:sech1}
-  \sech x = \frac{1}{\cosh x} = \frac{1}{1 + q}
+  \sech x = \frac{1}{\cosh x} = \frac{1}{1 + q} = (1 + q)^{-1}
 \end{equation}
+But, the binomial series for $$n = -1$$ is just
+\\[
+    \frac{1}{1 + q} = 1 - q + q^2 - q^3 + \cdots
+\\]
 
 ## Gamma Function
 
