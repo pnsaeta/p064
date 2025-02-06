@@ -88,7 +88,6 @@ The Riemann zeta function pops up occasionally in physics, including the theory 
 \end{equation}
 
 
-
 ### Alternating Series
 
 If successive terms in a series alternate sign, and if the magnitude of the terms goes to zero as $$n\to\infty$$, then the series converges. An infinite series is **absolutely** convergent if the sum of the absolute value of its terms converges. If the series converges, but it is not absolutely convergent, it is called **conditionally** convergent.
