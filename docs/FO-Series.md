@@ -235,7 +235,7 @@ Making the $$u$$ substitution $$u = r^2$$, so that $$\dd{u} = 2 r \dd{r}$$, we c
 \\]
 Therefore,
 \\[
-    I = \Gamma\qty(\frac12) =  \int_{-\infty}^\infty e^{-x^2}\,dx = \sqrt{\pi}
+    I = \Gamma\qty(\frac12) =  \int_{-\infty}^\infty e^{-x^2}\dd{x} = \sqrt{\pi}
 \\]
 We can then use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
 \begin{align}
