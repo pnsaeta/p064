@@ -63,7 +63,7 @@ are orthogonal to one another under integration over a period:
 \end{align}
 Can we prove these?
 
-I will prove Eq. (\ref{eq:sinsin}), leaving the other two as the proverbial exercise for the reader. The proof relies on the trigonometric identity
+I will first prove Eq. (\ref{eq:sinsin}) using "classic trig". The proof relies on the trigonometric identity
 \begin{equation}\label{eq:cossum}
     \cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp
     \sin\alpha\sin\beta
