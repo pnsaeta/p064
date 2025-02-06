@@ -80,10 +80,10 @@ Subtracting the sum formula from the difference gives
 Therefore,
 \\[
   \int\_0^T \sin\qty(\frac{m 2\pi t}{T})
-  \sin\qty(\frac{n 2\pi t}{T}) \;dt =
+  \sin\qty(\frac{n 2\pi t}{T}) \dd{t} =
   \frac12 \int\_0^T \qty[\cos\qty(\frac{(m-n)2\pi t}{T}) -
       \cos\qty(\frac{(m+n)2\pi t}{T})
-  ] \; dt
+  ] \dd{t}
 \\]
 The second term integrates to
 \\[
