@@ -257,7 +257,7 @@ where the double factorial is defined by
 <p class="center" markdown="0">
   <img src="figs/gamma.webp" style="width: 500px;">
 </p>
-<p class="mycap" markdown="1">The $$\Gamma$$ function for small arguments. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
+<p class="mycap" markdown="1">The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 
 The figure was generated with
 
