@@ -257,7 +257,7 @@ illustrated in <a href="#convslow">Figure 5</a>.
 <p class="icap" markdown="1"><a name="convslow">Figure 5</a> — Convergence of the Fourier series using basis functions to represent a parabola that is symmetric in the interval $$[0, L]$$. The percentage shown in the legend is the value of $$\sqrt{ \langle f-s_n, f-s_n\rangle }$$.</p>
 
 <p class="center" markdown="0">
-  <img src="figs/FO-awk.gif">
+  <img src="figs/FO-awk.webp">
 </p>
 <p class="icap" markdown="1"><a name="FOawk">Figure 6</a> — Same as above, but showing versions of the series through increasing number of terms. The series converges more slowly than the parabola that agrees with the boundary conditions. Note the additional power of $$n$$ in the numerator.</p>
 
