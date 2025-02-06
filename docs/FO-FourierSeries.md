@@ -59,7 +59,7 @@ are orthogonal to one another under integration over a period:
   T & m = n = 0 \\\ 
   \frac{T}{2} & m = n > 0 \\\ 
   0 & m \ne n
-  \end{cases}
+  \end{cases} \label{eq:thisone}
 \end{align}
 Can we prove these?
 
