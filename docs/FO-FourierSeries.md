@@ -101,14 +101,12 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
 \begin{equation}
   I_N = \int_0^T e^{i N \omega t}\dd{t} = 
   \begin{cases}
-    t |_0^T & N = 0 \\\ 
-    \frac{e^{iN\omega t}}{iN\omega} \bigg|_0^T & N \ne 0
+    t |_0^T = T & N = 0 \\\ 
+    \frac{e^{iN\omega t}}{iN\omega} \bigg|_0^T = \frac{e^{i 2 \pi N} - 1}{i N \omega} = 0
+    & N \ne 0
   \end{cases}
-  = \begin{cases}
-  T & N = 0 \\\ 
-   \displaystyle \frac{e^{iN\omega T} - 1}{i N \omega}= 0 & N \ne 0
-   \end{cases}
 \end{equation}
+That is, 
 
 
 Then Eq.&nbsp;(\ref{eq:thisone}) is
