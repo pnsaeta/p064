@@ -168,7 +168,7 @@ To produce the series for $$\sech x$$ valid for terms through $$x^6$$ just requi
    2 \frac{x^2}{2!} \frac{x^6}{6!} + \left( \frac{x^4}{4!} \right)^2 + \O{x^{10}} \notag \\\ 
    &= \frac{x^4}{4} + \frac{x^6}{4!} + x^8 \left( \frac{1}{6!} + \frac{1}{(4!)^2} \right) + \O{x^{10}} \notag \\\ 
    -q^3 &= -\left(\frac{x^2}{2!} \right)^3 - 3 \left(\frac{x^2}{2!}\right)^2 \frac{x^4}{4!}
-   + \O{x^{10}} \notag \\
+   + \O{x^{10}} \notag \\\ 
    q^4 &= \frac{x^8}{16} + \O{x^{10}} \notag
 \end{align}
 
@@ -178,7 +178,9 @@ Now, we just need to combine all these terms:
    x^4 \left( -\frac{1}{4!} + \frac{1}{4} \right) 
    + x^6 \left( -\frac{1}{6!} + \frac{1}{4!} - \frac{1}{8} \right) \notag
    \\\ 
-   &\qquad + x^8 \left( -\frac{1}{8!} + \frac{1}{6!} + \frac{1}{(4!)^2} - \frac{1}{32} \right) + \O{x^{10}} \notag \\\ 
+   &\qquad + x^8 \left( -\frac{1}{8!} + \frac{1}{6!} + \frac{1}{(4!)^2} - \frac{1}{32} 
+   + \frac{1}{16}
+   \right) + \O{x^{10}} \notag \\\ 
    &= 1 - \frac{x^2}{2} + \frac{5 x^4}{24} - \frac{61 x^6}{720} + \frac{277 x^8}{8064} + \O{x^{10}}
 \end{align}
 
