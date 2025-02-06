@@ -102,7 +102,8 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
   \int_0^T \cos(m\omega t) \cos(n\omega t)\dd{t} 
   &= \int_0^T \left(\frac{e^{im\omega t} + e^{-im\omega t}}{2} \right) \,
    \left( \frac{e^{in\omega t} + e^{-in\omega t}}{2}\right) \dd{t} \notag\\\ 
-  &=
+  &= \frac14 \int_0^T \left(
+    e^{i(m+n)\omega t} + e^{i(m-n)\omega t} + e^{-i(m-n)\omega t} + e^{-i(m+n)\omega t} \right) \dd{t}
 \end{align}
 
 The strategy for determining the coefficients $$a_n$$ and $$b_n$$ is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
