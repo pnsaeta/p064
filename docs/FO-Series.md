@@ -68,8 +68,9 @@ The **Riemann zeta** function is defined by
 \end{equation}
 If $$\nu=1$$, this series becomes the harmonic series, which we know to be divergent. For $$\nu < 1$$ it diverges more rapidly, but for $$\nu > 1$$ we can use an integral test to check convergence:
 \\[
-    \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{x}} < 1 + \int_2^{\infty} (x-1)^{-\nu} \;dx
-    = \left.\frac{n^{1-x}}{1-x}\right|_{n=1}^{n=\infty} = \frac{1}{x-1}
+    \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}} 
+    < 1 + \int_2^{\infty} (x-1)^{-\nu} \;dx
+    = 1 + \left.\frac{x^{1-\nu}}{1-\nu}\right|_{x=2}^{\infty} = \frac{1}{x-1}
 \\]
 
 <p class="center" markdown="0">
