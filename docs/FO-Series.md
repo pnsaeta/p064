@@ -103,10 +103,10 @@ Note that **none of these claims** can be made for conditionally convergent seri
 ## Taylor Series
 
 Taylor's expansion is a way of approximating a function $$f(x)$$ in the neighborhood of a point $$x=a$$ with a polynomial in powers of $$(x-a)$$ such that the first $$n$$ derivatives of the polynomial match the first $$n$$ derivatives of $$f(x)$$ at $$a$$,
-\\[
+\begin{equation} \label{eq:Taylor}
     f(x) \approx f(a) + (x-a) f'(a) + \frac{(x-a)^2}{2!} f^{\prime\prime}(a) + \cdots +
     \frac{(x-a)^n}{n!} f^{(n)}(a)
-\\]
+\end{equation}
 where the inequality comes from ignoring higher-order terms.
 
 A useful way to bound the error associated with ignoring those terms is to integrate the $$n$$th derivative from $$a$$ to $$x$$ $$n$$ times:
@@ -128,7 +128,7 @@ for some value $$a \le \xi \le x$$ by the mean value theorem. Equation (\ref{eq:
 
 ### Some Important Taylor Series
 
-Physicists should know the following series cold; they arise very frequently in physics and it is worth your time to learn so well that you don't need to think about them:
+Physicists should know the following series cold; they arise very frequently in physics and it is worth your time to learn so well that you don't need to think about them. (Actually, each of these is a **Maclaurin series**, which is a form of Taylor series ):
 
 \begin{align}
   e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots &  &-\infty < x <\infty \notag \\\ 
@@ -142,6 +142,10 @@ Physicists should know the following series cold; they arise very frequently in 
   & & -1 < x < 1 \tag{binomial}
 \end{align}
 Clearly, the radius of convergence of the logarithmic series does not include $$x = -1$$, which generates a divergent harmonic series. For the **binomial series**, the series terminates when $$n$$ is a positive integer and so converges for all $$x$$. When $$n$$ is not a positive integer, the series does not terminate and may not converge.
+
+## Manipulating Series
+
+Suppose that you knew a Maclaurin series
 
 ## Gamma Function
 
