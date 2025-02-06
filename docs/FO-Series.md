@@ -259,7 +259,7 @@ where the double factorial is defined by
 </p>
 <p class="mycap" markdown="1">The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 
-The figure was generated with
+The figure was generated with the following Python code:
 
 ~~~~ python
 import matplotlib.pyplot as plt
