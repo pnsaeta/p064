@@ -177,7 +177,7 @@ Now, we just need to combine all these terms:
    x^4 \left( -\frac{1}{4!} + \frac{1}{4} \right) 
    + x^6 \left( -\frac{1}{6!} + \frac{1}{4!} - \frac{1}{8} \right) \notag
    \\\ 
-   &\qquad + x^8 \left( -\frac{1}{8!} + \frac{1}{6!} + \frac{1}{(4!)^2} - \frac{1}{16} \right) + \O{x^{10}} \notag \\\ 
+   &\qquad + x^8 \left( -\frac{1}{8!} + \frac{1}{6!} + \frac{1}{(4!)^2} - \frac{1}{32} \right) + \O{x^{10}} \notag \\\ 
    &= 1 - \frac{x^2}{2} + \frac{5 x^4}{24} - \frac{61 x^6}{720} + \frac{277 x^8}{8064} + \O{x^{10}}
 \end{align}
 
