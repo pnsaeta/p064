@@ -97,7 +97,13 @@ If $$m\ne n$$ we get the same expression with $$m+n \to m-n$$, which vanishes fo
 
 ### Easier Version Using Complex Exponentials
 
-To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;(\ref{eq:thisone}). To simplify the notation, I will use $$\omega = 2 \pi /T$$. Then Eq.&nbsp;(\ref{eq:thisone}) is
+To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;(\ref{eq:thisone}). To simplify the notation, I will use $$\omega = 2 \pi /T$$. We will need to know how to evaluate the single (simple) integral for integral $$N$$:
+\begin{equation}
+  I_N = \int_0^T e^{i N \omega t}\dd{t}
+\end{equation}
+
+
+Then Eq.&nbsp;(\ref{eq:thisone}) is
 \begin{align}
   \int_0^T \cos(m\omega t) \cos(n\omega t)\dd{t} 
   &= \int_0^T \left(\frac{e^{im\omega t} + e^{-im\omega t}}{2} \right) \,
