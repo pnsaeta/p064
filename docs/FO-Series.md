@@ -75,7 +75,7 @@ If $$x=1$$, this series becomes the harmonic series, which we know to be diverge
 <p class="center" markdown="0">
   <img src="figs/zeta.webp" style="width: 400px;" alt="Riemann zeta function">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2 </a> — The Riemann zeta function for $$\nu = 1.1$$. The red and green curves clearly bound the area of the blue bars, which represents the Riemann $$\zeta$$ for $$\nu = 1.1$$ (not the logarithmic vertical scale).</p>
 
 The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
 \begin{equation}\label{eq:Stefan-Boltzmann}
