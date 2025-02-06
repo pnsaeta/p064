@@ -71,6 +71,7 @@ If $$\nu=1$$, this series becomes the harmonic series, which we know to be diver
     \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}} 
     < 1 + \int_2^{\infty} (x-1)^{-\nu} \dd{x}
     = 1 + \left.\frac{(x-1)^{1-\nu}}{1-\nu}\right|_{x=2}^{\infty} = 1 + \frac{1}{\nu-1} = \frac{\nu}{\nu-1} < \infty
+    \qquad\text{when } \nu > 1
 \\]
 
 <p class="center" markdown="0">
