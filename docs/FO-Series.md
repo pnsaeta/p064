@@ -181,6 +181,12 @@ Now, we just need to combine all these terms:
    &= 1 - \frac{x^2}{2} + \frac{5 x^4}{24} - \frac{61 x^6}{720} + \frac{277 x^8}{8064} + \O{x^{10}}
 \end{align}
 
+<p class="center" markdown="0">
+  <img src="figs/sech-expansion.webp" style="width: 400px;" alt="series expansion of sech">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Maclaurin series for the hyperbolic cosine obtained by inverting the series for $$\cosh x$$.</p>
+
+
 ## Gamma Function
 
 You are quite familiar with factorials,
