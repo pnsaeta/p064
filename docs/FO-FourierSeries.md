@@ -24,7 +24,7 @@ A periodic function with period $$T$$ has the property that
 for all $$t$$. You are already familiar with a large class of periodic functions, the trigonometric functions sine, cosine, and tangent, along with their reciprocals, but these just scratch the surface. 
 
 <p class="center" markdown="0">
-  <img src="figs/periodic.webp" style="width: 800px;">
+  <img src="figs/periodic.webp" style="width: 600px;">
 </p>
 <p class="mycap" markdown="1">A few functions with period $$T$$.</p>
 
