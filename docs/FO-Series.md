@@ -153,6 +153,7 @@ Here's another option. For small $$x$$,
 \begin{equation}
   \cosh x = 1 + \underbrace{\frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots}_{q}
 \end{equation}
+where $$q$$ is a "small quantity" as long as $$x$$ isn't too large.
 
 ## Gamma Function
 
