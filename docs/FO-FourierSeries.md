@@ -97,7 +97,13 @@ If $$m\ne n$$ we get the same expression with $$m+n \to m-n$$, which vanishes fo
 
 ### Easier Version Using Complex Exponentials
 
-To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;
+To illustrate an (allegedly) easier approach that uses complex exponentials, I will now attempt a proof of Eq.&nbsp;(\ref{eq:thisone}). To simplify the notation, I will use $$\omega = 2 \pi /T$$. Then Eq.&nbsp;(\ref{eq:thisone}) is
+\begin{align}
+  \int_0^T \cos(m\omega t) \cos(n\omega t)\dd{t} 
+  &= \int_0^T \frac{e^{im\omega t} + e^{-im\omega t}}{2} \,
+  \frac{e^{in\omega t} + e^{-in\omega t}}{2} \dd{t} \notag\\\ 
+  &=
+\end{align}
 
 The strategy for determining the coefficients $$a_n$$ and $$b_n$$ is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
 \begin{equation}\label{eq:bn}
