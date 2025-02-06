@@ -195,11 +195,11 @@ You are quite familiar with factorials,
 \\]
 with the understanding that $$0! = 1$$. The gamma function generalizes the factorial function to nonintegral values. It is defined by
 \\[
-    \Gamma(n+1) = \int_0^\infty x^n e^{-x} \, dx
+    \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x}
 \\]
 where the extra 1 in the argument is courtesy of Legendre. To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
 \\[
-    \Gamma(n+1) =  \underbrace{\left. n x^{n-1} e^{-x} \right|\_0^\infty}\_{\text{vanishes}} + \int_0^\infty n x^{n-1} e^{-x}\,dx = n \Gamma(n)
+    \Gamma(n+1) =  \underbrace{\left. n x^{n-1} e^{-x} \right|\_0^\infty}\_{\text{vanishes}} + \int_0^\infty n x^{n-1} e^{-x}\dd{x} = n \Gamma(n)
 \\]
 or
 \begin{equation}\label{eq:recurrence}
@@ -208,7 +208,7 @@ or
 
 When $$n = 1$$, we have a straightforward integral to do
 \\[
-    \Gamma(1) = \int_0^\infty x^0 e^{-x} \, dx = \left. -e^{-x} \right|\_0^\infty = 1
+    \Gamma(1) = \int_0^\infty x^0 e^{-x} \dd{x} = \left. -e^{-x} \right|\_0^\infty = 1
 \\]
 Hence, the recursion relation $$\Gamma(n+1) = n \Gamma(n)$$ along with the termination condition $$\Gamma(1) = 1$$ proves that $$\Gamma(n+1) = n!$$ for nonnegative integer $$n$$.
 
