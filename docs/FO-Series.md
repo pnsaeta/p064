@@ -20,7 +20,7 @@ The **harmonic series**,
 does not converge, even though its terms tend to zero as $$n \to \infty$$. Its divergence is logarithmic (i.e., weak), as illustrated in the following figure
 
 <p class="center" markdown="0">
-  <img src="figs/harmonic.webp" style="width: 500px;">
+  <img src="figs/harmonic.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1">Fig. 1 — The harmonic series is represented by the area shaded blue of the bars of height $$1$$, $$\frac12$$, $$\frac13$$, etc. The area of the bars is greater than the area under the curve $$1/x$$ (shown in red), since the curve is everywhere contained within a bar. Since $$\int_1^x \frac1{x'}\,dx' = \ln x$$, which slowly diverges as $$x\to\infty$$, the harmonic series diverges even though its individual terms tend to zero.</p>
 
