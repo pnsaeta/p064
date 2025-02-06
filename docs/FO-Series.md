@@ -175,7 +175,7 @@ Now, we just need to combine all these terms:
 \begin{align}
   \sech x &= 1 - \frac{x^2}{2} +
    x^4 \left( -\frac{1}{4!} + \frac{1}{4} \right) 
-   + x^6 \left( -\frac{1}{6!} \right) \notag
+   + x^6 \left( -\frac{1}{6!} + \frac{1}{4!} \right) \notag
 \end{align}
 
 ## Gamma Function
