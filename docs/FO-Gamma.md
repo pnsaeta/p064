@@ -119,4 +119,7 @@ Wow, that's not very good, is it? Well, the red estimate would be $$7^7 e^{-7} =
 
 ### A Continuum Approach
 
-We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$.
+We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$. That is,
+\\[
+    n! = \int_0^{\infty} x^n e^{-x} \dd{x}
+\\]
