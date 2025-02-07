@@ -89,3 +89,10 @@ a.plot(x, gamma(x))
 a.set_xlabel("$x$")
 a.set_ylabel(r"$\Gamma(x)$");
 ~~~~
+
+## Stirling's Approximation
+
+Factorials grow extremely rapidly with their argument; it could be handy to have an approximate expression. It might be easier to estimate $$\ln n!$$, though, since the logarithm converts all the multiplications to addition:
+\\[
+    \ln n! = \ln 1 + \ln 2 + \cdots + \ln n
+\\]
