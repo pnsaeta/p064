@@ -106,3 +106,8 @@ The area under the red curve would be
 \\[
     \ln n!\_{\text{red}} = \int\_{1}^{n+1} \ln x \dd{x} = x\ln x - x \bigg|\_1^{n+1} = (n+1) \ln (n+1) - n - 1
 \\]
+whereas the area under the green curve would be
+\\[
+    \ln n!\_{\text{green}} = \int\_{2}^{n+1} \ln (x-1) \dd{x} = \int\_1^{n} \ln x' \dd{x'} = x'\ln x' - x' \bigg|\_1^{n} = 
+    n \ln n - n
+\\]
