@@ -123,3 +123,8 @@ We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$. Tha
 \\[
     n! = \int_0^{\infty} x^n e^{-x} \dd{x}
 \\]
+The integrand is the product of a rapidly increasing function of $$x$$ (at large $$n$$) and a rapidly decreasing function of $$x$$. There's a peak somewhere. Maybe we could develop an approximation by expanding about that peak. Actually, it will be smoother if we expand the logarithm of the integrand around the peak, and then exponentiate our series expansion. So, the steps are:
+
+1. Let $$ y = \ln(x^n e^-x) $$ and find where $$y$$ has a maximum.
+2. Expand $$y$$ around its maximum in a Taylor series.
+3. Integrate $$\exp(\text{our approximate series})$$ to get an approximation to $$n!$$.
