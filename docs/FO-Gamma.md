@@ -111,4 +111,7 @@ whereas the area under the green curve would be
     \ln n!\_{\text{green}} = \int\_{2}^{n+1} \ln (x-1) \dd{x} = \int\_1^{n} \ln x' \dd{x'} = x'\ln x' - x' \bigg|\_1^{n} = 
     n \ln n - n
 \\]
-The true value lies above green but below red. So, crudely, $$\ln n! \approx n \ln n - n$$ and $$n! \approx n^n e^{-n}$$.
+The true value lies above green but below red. So, crudely, $$\ln n! \approx n \ln n - n$$ and $$n! \approx n^n e^{-n}$$, although that's going to be a modest underestimate. As a spot check, we can evaluate $$6! = 720$$:
+\\[
+    6^6 e^{-6} = 115.65
+\\]
