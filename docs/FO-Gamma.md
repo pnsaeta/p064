@@ -104,5 +104,5 @@ Factorials grow extremely rapidly with their argument; it could be handy to have
 
 The area under the red curve would be
 \\[
-    \ln_{\text{red}} = \int_{1}^{n+1} \ln x \dd{x}
+    \ln n!_{\text{red}} = \int_{1}^{n+1} \ln x \dd{x} = x\ln x - x \bigg|_1^{n+1}
 \\]
