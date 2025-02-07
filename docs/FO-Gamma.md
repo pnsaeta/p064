@@ -116,3 +116,7 @@ The true value lies above green but below red. So, crudely, $$\ln n! \approx n \
     6^6 e^{-6} = 115.65
 \\]
 Wow, that's not very good, is it? Well, the red estimate would be $$7^7 e^{-7} = 751$$, so at least the upper bound seems pretty reasonable.
+
+### A Continuum Approach
+
+We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$.
