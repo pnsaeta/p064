@@ -96,3 +96,8 @@ Factorials grow extremely rapidly with their argument; it could be handy to have
 \\[
     \ln n! = \ln 1 + \ln 2 + \cdots + \ln n
 \\]
+
+<p class="center" markdown="0">
+  <img src="figs/baby-Stirling.webp" style="width: 400px;" alt="The logarithm of n!">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
