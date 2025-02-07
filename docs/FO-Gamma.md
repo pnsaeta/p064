@@ -100,4 +100,4 @@ Factorials grow extremely rapidly with their argument; it could be handy to have
 <p class="center" markdown="0">
   <img src="figs/baby-Stirling.webp" style="width: 400px;" alt="The logarithm of n!">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A way to estimate $$\ln x!$$ would be to compute the area under the red curve, although that sure looks like an overestimate, since there is area outside the blue bars. By contrast, the area under the green curve would be an underestimate, since it is entirely contained in the bars.</p>
