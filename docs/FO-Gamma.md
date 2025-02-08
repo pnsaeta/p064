@@ -181,7 +181,7 @@ When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer 
 
 Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check: 
 
-<div class="center">
+<div class="center-div">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
