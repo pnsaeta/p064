@@ -165,5 +165,5 @@ We can simplify the notation by letting $$\xi = x-n$$:
 
 To get our feet wet, let's just include the first term in this series with $$\xi$$ dependence. Then we have
 \begin{align}
-  n! &\approx \int_{-n}^\infty \exp\ab[ n\ln n - n - \frac{\xi^2}{2n} ] \dd{\xi}  \notag
+  n! &\approx \int_{-n}^\infty \exp\left[ n\ln n - n - \frac{\xi^2}{2n} \right] \dd{\xi}  \notag
 \end{align}
