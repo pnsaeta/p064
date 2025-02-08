@@ -272,3 +272,7 @@ If we now expand $$e^q$$ in a Taylor series,
 \\[
     e^q = 1 + q + \frac{q^2}{2!} + \frac{q^3}{3!} + \cdots
 \\]
+then we will have terms of the form
+\begin{equation}\label{eq:blah}
+  I_{\mu} = \int_{-\infty}^{\infty} e^{-\alpha \xi^2} \xi^{\mu} \dd{\xi}
+\end{equation}
