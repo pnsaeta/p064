@@ -187,8 +187,8 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
     <tr style="text-align: right;">
       <th>n</th>
       <th>n!</th>
-      <th>simple</th>
-      <th>first</th>
+      <th>$$n^n e^{-n}$$</th>
+      <th>$$\sqrt{2\pi n} \, n^n \, e^{-n}$$</th>
     </tr>
   </thead>
   <tbody>
