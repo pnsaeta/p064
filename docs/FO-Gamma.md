@@ -304,3 +304,4 @@ What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$
        &= \frac{\xi^{6}}{9n^{2}} + \frac{\xi^{8}}{n^{6}} \left( \frac{1}{16} +
          \frac{2}{15} \right)
 \end{align}
+The first term will yield 
