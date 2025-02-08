@@ -117,14 +117,27 @@ The true value lies above green but below red. So, crudely, $$\ln n! \approx n \
 \\]
 Wow, that's not very good, is it? Well, the red estimate would be $$7^7 e^{-7} = 751$$, so at least the upper bound seems pretty reasonable.
 
-### A Continuum Approach
+## A Continuum Approach
 
 We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$. That is,
 \\[
     n! = \int_0^{\infty} x^n e^{-x} \dd{x}
 \\]
-The integrand is the product of a rapidly increasing function of $$x$$ (at large $$n$$) and a rapidly decreasing function of $$x$$. There's a peak somewhere. Maybe we could develop an approximation by expanding about that peak. Actually, it will be smoother if we expand the logarithm of the integrand around the peak, and then exponentiate our series expansion. So, the steps are:
+The integrand is the product of a rapidly increasing function of $$x$$ (at large $$n$$) and a rapidly decreasing function of $$x$$. There's a peak somewhere. Maybe we could develop an approximation by expanding about that peak. 
+
+<p class="center" markdown="0">
+  <img src="figs/gamma-integrand.webp" style="width: 400px;" alt="The integrand of the gamma function">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The integrand of $$\Gamma(x)$$, shown here for $$n = 6$$. It is peaked in the vicinity of $$x = n$$.</p>
+
+Actually, it will be smoother if we expand the logarithm of the integrand around the peak, and then exponentiate our series expansion. So, the steps are:
 
 1. Let $$ y = \ln(x^n e^-x) $$ and find where $$y$$ has a maximum.
 2. Expand $$y$$ around its maximum in a Taylor series.
 3. Integrate $$\exp(\text{our approximate series})$$ to get an approximation to $$n!$$.
+
+### Step 1: Find the maximum
+
+\begin{equation*}
+  y = n \ln x - x  \qqtext{so} y' = \frac{n}{x} - 1
+\end{equation*}
