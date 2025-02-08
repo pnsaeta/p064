@@ -306,5 +306,5 @@ What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$
 \end{align}
 On integrating, the first term will yield 
 \begin{equation}\label{eq:blah2}
-  \sqrt{2 \pi n}
+  \frac{1}{2} \sqrt{2 \pi n}
 \end{equation}
