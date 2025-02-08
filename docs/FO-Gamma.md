@@ -305,6 +305,6 @@ What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$
          \frac{2}{15} \right)
 \end{align}
 On integrating, the first term will yield 
-\begin{equation}\label{eq:blah}
+\begin{equation}\label{eq:blah2}
   \sqrt{2 \pi n}
 \end{equation}
