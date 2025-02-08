@@ -185,8 +185,8 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>n</th>
-      <th>n!</th>
+      <th>$$n$$</th>
+      <th>$$n!$$</th>
       <th>$$n^n e^{-n} / n!$$</th>
       <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} /n!$$</th>
     </tr>
