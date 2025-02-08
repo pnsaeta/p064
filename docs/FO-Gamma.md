@@ -179,7 +179,7 @@ When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer 
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
 
-Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
+Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check: 
 
 <table border="1" class="dataframe">
   <thead>
