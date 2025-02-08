@@ -160,3 +160,10 @@ We can simplify the notation by letting $$\xi = x-n$$:
 \begin{equation}\label{eq:ybetter}
   y = n \ln n - n - \frac{\xi^2}{2n} + \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \cdots
 \end{equation}
+
+### Step 3: A First Pass
+
+To get our feet wet, let's just include the first term in this series with $$\xi$$ dependence. Then we have
+\begin{align}
+  n! &\approx \int_{-n}^\infty \exp\ab[ n\ln n - n - \frac{\xi^2}{2n} ] \dd{\xi}  \notag
+\end{align}
