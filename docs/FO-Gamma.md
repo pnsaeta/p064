@@ -178,3 +178,89 @@ When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer 
   <img src="figs/gamma-first-pass.webp" style="width: 400px;" alt="First term in the Stirling approximation">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
+
+Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>n!</th>
+      <th>simple</th>
+      <th>first</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0.367879</td>
+      <td>0.922137</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>2</td>
+      <td>0.270671</td>
+      <td>0.959502</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>6</td>
+      <td>0.224042</td>
+      <td>0.972702</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>24</td>
+      <td>0.195367</td>
+      <td>0.979424</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>120</td>
+      <td>0.175467</td>
+      <td>0.983493</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>720</td>
+      <td>0.160623</td>
+      <td>0.986220</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>5040</td>
+      <td>0.149003</td>
+      <td>0.988174</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>40320</td>
+      <td>0.139587</td>
+      <td>0.989643</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>362880</td>
+      <td>0.131756</td>
+      <td>0.990787</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>3628800</td>
+      <td>0.125110</td>
+      <td>0.991704</td>
+    </tr>
+  </tbody>
+</table>
