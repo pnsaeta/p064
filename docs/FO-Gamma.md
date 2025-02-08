@@ -142,3 +142,11 @@ Actually, it will be smoother if we expand the logarithm of the integrand around
   y = n \ln x - x  \qqtext{so} y' = \frac{n}{x} - 1
 \end{equation}
 Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expand about that point.
+
+### Step 2: Expand $$y$$ in a Taylor Series
+
+<table class="nicetable">
+  <tr>
+    <th> $$i$$ </th> <th> $$\dv[i]{y}{x}$$ </th> <th> Evaluated at $$x = n$$</th>
+  </tr>
+</table>
