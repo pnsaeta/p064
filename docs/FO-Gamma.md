@@ -276,4 +276,4 @@ then we will have terms of the form
 \begin{equation}\label{eq:blah}
   I_{\mu} = \int_{-\infty}^{\infty} e^{-\alpha \xi^2} \xi^{\mu} \dd{\xi}
 \end{equation}
-Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so evaluates to zero.
+Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so evaluates to zero. So, we only need to worry about even values of $$\mu = 2m$$.
