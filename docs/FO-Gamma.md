@@ -173,4 +173,4 @@ where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go 
 <p class="center" markdown="0">
   <img src="figs/gamma-first-pass.webp" style="width: 400px;" alt="First term in the Stirling approximation">
 </p>
-<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
