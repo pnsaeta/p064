@@ -184,7 +184,6 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>n</th>
       <th>n!</th>
       <th>simple</th>
@@ -193,70 +192,60 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>1</td>
       <td>1</td>
       <td>0.367879</td>
       <td>0.922137</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>2</td>
       <td>2</td>
       <td>0.270671</td>
       <td>0.959502</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>3</td>
       <td>6</td>
       <td>0.224042</td>
       <td>0.972702</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>4</td>
       <td>24</td>
       <td>0.195367</td>
       <td>0.979424</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>5</td>
       <td>120</td>
       <td>0.175467</td>
       <td>0.983493</td>
     </tr>
     <tr>
-      <th>5</th>
       <td>6</td>
       <td>720</td>
       <td>0.160623</td>
       <td>0.986220</td>
     </tr>
     <tr>
-      <th>6</th>
       <td>7</td>
       <td>5040</td>
       <td>0.149003</td>
       <td>0.988174</td>
     </tr>
     <tr>
-      <th>7</th>
       <td>8</td>
       <td>40320</td>
       <td>0.139587</td>
       <td>0.989643</td>
     </tr>
     <tr>
-      <th>8</th>
       <td>9</td>
       <td>362880</td>
       <td>0.131756</td>
       <td>0.990787</td>
     </tr>
     <tr>
-      <th>9</th>
       <td>10</td>
       <td>3628800</td>
       <td>0.125110</td>
