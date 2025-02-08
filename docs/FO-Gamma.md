@@ -282,5 +282,5 @@ Before sweating the details, note that if $$\mu$$ is odd, then the integrand is 
   I_m &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}  
   = \int_{-\infty}^{\infty} \left( -\pdv{}{\alpha}\right)^m \;e^{-\alpha \xi^2} \dd{\xi} \notag \\\ 
   &= \left( -\pdv{}{\alpha}\right)^m \int_{-\infty}^{\infty} e^{\alpha \xi^2} \dd{\xi} = \left( -\pdv{}{\alpha}\right)^m \sqrt{\frac{\pi}{\alpha}}
-  = \sqrt{\pi/\alpha} \frac{1}{2} \, \frac{3}{2} \, \cdots \frac{2m-1}{2} \alpha^{-m}
+  = \sqrt{\frac{\pi}{\alpha}} \frac{1}{2} \times \frac{3}{2} \times \cdots \times \frac{2m-1}{2} \alpha^{-m}
 \end{align}
