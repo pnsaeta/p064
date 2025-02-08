@@ -260,4 +260,7 @@ So, that hunch seems to be right; by $$n = 10$$, our approximation that includes
 
 ### Step 4: Series Corrections
 
-We now need to return to Eq.&nbsp;(\ref{eq:ybetter}).
+We now need to return to Eq.&nbsp;(\ref{eq:ybetter}). Let
+\begin{equation}\label{eq:q}
+  q = \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \frac{\xi^5}{5n^4} - \frac{\xi^6}{6n^5} + \cdots
+\end{equation}
