@@ -260,7 +260,7 @@ So, that hunch seems to be right; by $$n = 10$$, our approximation that includes
 
 ### Step 4: Series Corrections
 
-We now need to return to Eq.&nbsp;(\ref{eq:ybetter}). Let
+We now need to return to Eq. (\ref{eq:ybetter}). Let
 \begin{equation}\label{eq:q}
   q = \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \frac{\xi^5}{5n^4} - \frac{\xi^6}{6n^5} + \cdots
 \end{equation}
@@ -279,9 +279,28 @@ then we will have terms of the form
 
 Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so the integral evaluates to zero. So, we only need to worry about even values of $$\mu = 2m$$. We can evaluate these by differentiating under the integral sign:
 \begin{align}
-  I_m &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}  
+  I_{2m} &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}  
   = \int_{-\infty}^{\infty} \left( -\pdv{}{\alpha}\right)^m \;e^{-\alpha \xi^2} \dd{\xi} \notag \\\ 
   &= \left( -\pdv{}{\alpha}\right)^m \int_{-\infty}^{\infty} e^{\alpha \xi^2} \dd{\xi} = \left( -\pdv{}{\alpha}\right)^m \sqrt{\frac{\pi}{\alpha}}
   = \sqrt{\frac{\pi}{\alpha}} \frac{1}{2} \times \frac{3}{2} \times \cdots \times \frac{2m-1}{2} \alpha^{-m} \notag \\\ 
   &= \sqrt{2 \pi n} \frac{(2m-1)!!}{2^m} (2n)^m = \sqrt{2 \pi n} \; n^m \; (2m-1)!!
+\end{align}
+
+So, how do we keep track of which terms are important as we expand the
+exponential of $$q$$? Keeping in mind that the odd powers of $$\xi$$ integrate to zero,
+the terms we need from $$q$$ are all negative:
+\begin{align}
+  \label{eq:qterms}
+  q: &\quad -\sqrt{2\pi n} \left[ \frac{1}{4n^{3}} n^{2} (3!!) +
+    \frac{1}{6n^{5}} n^{3} (5!!) + \frac{7!! \; n^{4}}{8n^{7}}  + \cdots
+       \right]\\\ 
+  &\quad -\sqrt{2 \pi n} \left[ \frac{3}{4n} + \frac{5}{2n^{2}} + \frac{105}{8n^{3}} +
+    \cdots \right]
+\end{align}
+What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$\xi$$?
+\begin{align}
+ q^{2} & = \frac{\xi^{6}}{(3n)^{2}} + \frac{\xi^{8}}{(4n^{3})^{2}} +
+         2\frac{\xi^{3}}{3n^{2}} \frac{\xi^{5}}{5n^{4}}  + \cdots \\\ 
+       &= \frac{\xi^{6}}{9n^{2}} + \frac{\xi^{8}}{n^{6}} \left( \frac{1}{16} +
+         \frac{2}{15} \right)
 \end{align}
