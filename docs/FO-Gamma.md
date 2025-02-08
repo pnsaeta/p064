@@ -299,9 +299,12 @@ the terms we need from $$q$$ are all negative:
 \end{align}
 What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$\xi$$?
 \begin{align}
- q^{2} & = \frac{\xi^{6}}{(3n)^{2}} + \frac{\xi^{8}}{(4n^{3})^{2}} +
+ q^{2} & = \frac{\xi^{6}}{(3n^2)^{2}} + \frac{\xi^{8}}{(4n^{3})^{2}} +
          2\frac{\xi^{3}}{3n^{2}} \frac{\xi^{5}}{5n^{4}}  + \cdots \\\ 
        &= \frac{\xi^{6}}{9n^{2}} + \frac{\xi^{8}}{n^{6}} \left( \frac{1}{16} +
          \frac{2}{15} \right)
 \end{align}
-The first term will yield 
+On integrating, the first term will yield 
+\begin{equation}\label{eq:blah}
+  \sqrt{2 \pi n}
+\end{equation}
