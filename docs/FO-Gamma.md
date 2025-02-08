@@ -145,8 +145,16 @@ Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expa
 
 ### Step 2: Expand $$y$$ in a Taylor Series
 
+\begin{align}
+  i &= 2 & \qquad y'' &= \dv[2]{y}{x} = -\frac{n}{x^2} &\qquad y''(n) &= -\frac{1}{n} \notag
+  i &= 3 & \qquad y''' &= \dv[3]{y}{x} = \frac{2n}{x^3} &\qquad y'''(n) &= \frac{2}{n^2} \notag
+\end{align}
+
 <table class="nicetable">
   <tr>
     <th> $$i$$ </th> <th> $$\dv[i]{y}{x}$$ </th> <th> Evaluated at $$x = n$$</th>
   </tr>
+  <tr>
+    <td>2</td> <td>$$ -\frac{n}{x^2} $$
+  </t>
 </table>
