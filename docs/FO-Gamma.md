@@ -136,9 +136,9 @@ Actually, it will be smoother if we expand the logarithm of the integrand around
 2. Expand $$y$$ around its maximum in a Taylor series.
 3. Integrate $$\exp(\text{our approximate series})$$ to get an approximation to $$n!$$.
 
-### Step 1: Find the Maximum 
+### Step 1: Find the Maximum
 
-\begin{equation*}
+\begin{equation}
   y = n \ln x - x  \qqtext{so} y' = \frac{n}{x} - 1
-\end{equation*}
+\end{equation}
 Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expand about that point.
