@@ -166,4 +166,6 @@ We can simplify the notation by letting $$\xi = x-n$$:
 To get our feet wet, let's just include the first term in this series with $$\xi$$ dependence. Then we have
 \begin{align}
   n! &\approx \int_{-n}^\infty \exp\left[ n\ln n - n - \frac{\xi^2}{2n} \right] \dd{\xi}  \notag
+  &= n^n e^{-n} \int_{-n}^\infty e^{-\alpha \xi^2} \dd{\xi} \notag
 \end{align}
+where I have defined $$\alpha \equiv 1/2n$$.
