@@ -268,3 +268,7 @@ Then,
 \begin{equation}\label{eq:nf2}
   n! \approx n^n e^{-n} \int_{-\infty}^{\infty} e^{-\alpha n^2} e^q \dd{\xi}
 \end{equation}
+If we now expand $$e^q$$ in a Taylor series, 
+\\[
+    e^q = 1 + q + \frac{q^2}{2!} + \frac{q^3}{3!} + \cdots
+\\]
