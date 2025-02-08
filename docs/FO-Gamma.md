@@ -168,4 +168,9 @@ To get our feet wet, let's just include the first term in this series with $$\xi
   n! &\approx \int_{-n}^\infty \exp\left[ n\ln n - n - \frac{\xi^2}{2n} \right] \dd{\xi}  \notag
   &= n^n e^{-n} \int_{-n}^\infty e^{-\alpha \xi^2} \dd{\xi} \notag
 \end{align}
-where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go off to $$-\infty$$, we would know that the integral was $$\sqrt{\pi/\alpha} = \sqrt{2 \pi n}$$.
+where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go off to $$-\infty$$, we would know that the integral was $$\sqrt{\pi/\alpha} = \sqrt{2 \pi n}$$. Looking at Fig.&nbsp;2, it might seem like a reasonable approximation; the integrand seems really small there.
+
+<p class="center" markdown="0">
+  <img src="figs/gamma-first-pass.webp" style="width: 400px;" alt="First term in the Stirling approximation">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
