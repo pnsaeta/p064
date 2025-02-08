@@ -257,3 +257,6 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
 </div>
 
 So, that hunch seems to be right; by $$n = 10$$, our approximation that includes the Gaussian integral is closer than 1% to the true value.
+
+### Step 4: Series Corrections
+
