@@ -156,3 +156,7 @@ I think I see the pattern here. So
 \begin{equation}\label{eq:Taylor}
   y = n \ln n - n - \frac{(x-n)^2}{2!\;n} + \frac{2!(x-n)^3}{3!\;n^2} - \frac{3!(x-n)^4}{4!\; n^3}+ \cdots
 \end{equation}
+We can simplify the notation by letting $$\xi = x-n$$:
+\begin{equation}\label{eq:ybetter}
+  y = n \ln n - n - \frac{\xi^2}{2n} + \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \cdots
+\end{equation}
