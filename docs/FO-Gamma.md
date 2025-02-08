@@ -276,7 +276,8 @@ then we will have terms of the form
 \begin{equation}\label{eq:blah}
   I_{\mu} = \int_{-\infty}^{\infty} e^{-\alpha \xi^2} \xi^{\mu} \dd{\xi}
 \end{equation}
-Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so evaluates to zero. So, we only need to worry about even values of $$\mu = 2m$$. We can evaluate these by differentiating under the integral sign:
+
+Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so the integral evaluates to zero. So, we only need to worry about even values of $$\mu = 2m$$. We can evaluate these by differentiating under the integral sign:
 \begin{align}
   I_m &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}  \notag \\\ 
   &= \int_{-\infty}^{\infty} \left( -\pdv{}{\alpha}\right)^m \;e^{-\alpha \xi^2} \dd{\xi} \notag
