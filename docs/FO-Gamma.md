@@ -264,3 +264,7 @@ We now need to return to Eq.&nbsp;(\ref{eq:ybetter}). Let
 \begin{equation}\label{eq:q}
   q = \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \frac{\xi^5}{5n^4} - \frac{\xi^6}{6n^5} + \cdots
 \end{equation}
+Then,
+\begin{equation}\label{eq:nf2}
+  n! \approx n^n e^{-n} \int_{-\infty}^{\infty} e^{-\alpha n^2} e^q \dd{\xi}
+\end{equation}
