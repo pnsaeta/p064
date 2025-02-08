@@ -260,3 +260,4 @@ So, that hunch seems to be right; by $$n = 10$$, our approximation that includes
 
 ### Step 4: Series Corrections
 
+We now need to return to Eq.&nbsp;(\ref{eq:ybetter}).
