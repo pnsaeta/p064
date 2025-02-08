@@ -146,7 +146,7 @@ Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expa
 ### Step 2: Expand $$y$$ in a Taylor Series
 
 \begin{align}
-  i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y''(n) &= -\frac{1}{n} \notag \\\ 
-  i &= 3 & \qquad y''' &=  \frac{2n}{x^3} &\qquad y'''(n) &= \frac{2}{n^2} \notag
+  i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y'' (n) &= -\frac{1}{n} \notag \\\ 
+  i &= 3 & \qquad y''' &=  \frac{2n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag
 \end{align}
 
