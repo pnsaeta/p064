@@ -308,11 +308,11 @@ On integrating, the first term will yield
 \begin{equation}\label{eq:blah2}
   \frac{1}{2} \sqrt{2 \pi n} \frac{1}{9n^4} n^3 (5!!) =  \sqrt{2\pi n} \frac{5}{6n}
 \end{equation}
-So, noting that $$5/6 - 3/4 = 1/12$$, through the terms proportional to $$1/n$$, we get
+So, noting that $$ \frac{5}{6} - \frac{3}{4} = \frac{1}{12} $$, through the terms proportional to $$1/n$$, we get
 \begin{equation}\label{eq:Stirling}
   n! \approx \sqrt{2 \pi n} \, n^n e^{-n} \left(1 + \frac{1}{12n} + \cdots \right)
 \end{equation}
-which is called **Stirling's approximation**.
+which is called **Stirling's approximation**. As you can see from the table below, the correction makes the approximation converge extremely well, being off by a mere 32 parts per million at the rather modest value of $$n = 10$$.
 
 <div class="center-div">
 <table border="1" class="dataframe">
