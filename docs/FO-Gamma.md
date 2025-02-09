@@ -322,7 +322,7 @@ which is called **Stirling's approximation**.
       <th>$$n!$$</th>
       <th>$$n^n e^{-n} / n!$$</th>
       <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} /n!$$</th>
-      <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} \left(1 + \frac{1}{12n} \right) \bigg/n!$$</th>
+      <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} \left(1 + \frac{1}{12n} \right) \big/n!$$</th>
     </tr>
   </thead>
   <tbody>
