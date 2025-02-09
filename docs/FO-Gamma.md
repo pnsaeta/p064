@@ -312,3 +312,4 @@ So, noting that $$5/6 - 3/4 = 1/12$$, through the terms proportional to $$1/n$$,
 \begin{equation}\label{eq:Stirling}
   n! \approx \sqrt{2 \pi n} \, n^n e^{-n} \left(1 + \frac{1}{12n} + \cdots \right)
 \end{equation}
+which is called **Stirling's approximation**.
