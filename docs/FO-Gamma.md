@@ -6,6 +6,7 @@
 * toc
 {:toc}
 
+To illustrate the power of series expansions and to continue exploring the centrality of Gaussian integrals, we will develop an algebraic approximation to the factorial function $$n!$$ for large $$n$$ that is good to parts per million already by $$n = 10$$.
 
 You are quite familiar with factorials,
 \\[
