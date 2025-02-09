@@ -12,7 +12,7 @@ You are quite familiar with factorials,
 \\[
     n! = n \times (n-1) \times \cdot \times 2 \times 1
 \\]
-with the understanding that $$0! = 1$$. The gamma function generalizes the factorial function to nonintegral values. It is defined by
+with the understanding that $$0! = 1$$. The gamma function generalizes the factorial function to nonintegral values of the argument. It is defined by
 \\[
     \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x}
 \\]
@@ -148,9 +148,9 @@ Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expa
 
 \begin{align}
   i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y'' (n) &= -\frac{1}{n} \notag \\\ 
-  i &= 3 & \qquad y''' &=  \frac{2n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag \\\ 
-  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! n}{x^4} &\qquad y^{\text{iv}} (n) &= \frac{3!}{n^3} \notag \\\ 
-  i &= 5 & \qquad y^{\text{v}} &=  \frac{4! n}{x^5} &\qquad y^{\text{v}} (n) &= \frac{4!}{n^4} \notag
+  i &= 3 & \qquad y''' &=  \frac{2! \; n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag \\\ 
+  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! \; n}{x^4} &\qquad y^{\text{iv}} (n) &= \frac{3!}{n^3} \notag \\\ 
+  i &= 5 & \qquad y^{\text{v}} &=  \frac{4! \; n}{x^5} &\qquad y^{\text{v}} (n) &= \frac{4!}{n^4} \notag
   \end{align}
 
 I think I see the pattern here. So
