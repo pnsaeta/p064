@@ -314,6 +314,7 @@ So, noting that $$5/6 - 3/4 = 1/12$$, through the terms proportional to $$1/n$$,
 \end{equation}
 which is called **Stirling's approximation**.
 
+<div class="center-div">
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -397,3 +398,4 @@ which is called **Stirling's approximation**.
     </tr>
   </tbody>
 </table>
+</div>
