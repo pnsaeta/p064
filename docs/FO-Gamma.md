@@ -399,3 +399,8 @@ which is called **Stirling's approximation**. As you can see from the table belo
   </tbody>
 </table>
 </div>
+
+For those up to a challenge, show that the next term in the series is
+\\[
+    n! \approx \sqrt{2 \pi n} n^n e^{-n} \left(1 + \frac{1}{12 n} + \frac{1}{288 n^2} + \cdots \right)
+\\]
