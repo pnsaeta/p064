@@ -313,3 +313,87 @@ So, noting that $$5/6 - 3/4 = 1/12$$, through the terms proportional to $$1/n$$,
   n! \approx \sqrt{2 \pi n} \, n^n e^{-n} \left(1 + \frac{1}{12n} + \cdots \right)
 \end{equation}
 which is called **Stirling's approximation**.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>n</th>
+      <th>n!</th>
+      <th>simple</th>
+      <th>first</th>
+      <th>Stirling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0.367879</td>
+      <td>0.922137</td>
+      <td>0.998982</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>0.270671</td>
+      <td>0.959502</td>
+      <td>0.999481</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>6</td>
+      <td>0.224042</td>
+      <td>0.972702</td>
+      <td>0.999721</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>24</td>
+      <td>0.195367</td>
+      <td>0.979424</td>
+      <td>0.999829</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>120</td>
+      <td>0.175467</td>
+      <td>0.983493</td>
+      <td>0.999885</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>720</td>
+      <td>0.160623</td>
+      <td>0.986220</td>
+      <td>0.999917</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>5040</td>
+      <td>0.149003</td>
+      <td>0.988174</td>
+      <td>0.999938</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>40320</td>
+      <td>0.139587</td>
+      <td>0.989643</td>
+      <td>0.999952</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>362880</td>
+      <td>0.131756</td>
+      <td>0.990787</td>
+      <td>0.999961</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>3628800</td>
+      <td>0.125110</td>
+      <td>0.991704</td>
+      <td>0.999968</td>
+    </tr>
+  </tbody>
+</table>
