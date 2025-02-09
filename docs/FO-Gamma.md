@@ -308,7 +308,7 @@ On integrating, the first term will yield
 \begin{equation}\label{eq:blah2}
   \frac{1}{2} \sqrt{2 \pi n} \frac{1}{9n^4} n^3 (5!!) =  \sqrt{2\pi n} \frac{5}{6n}
 \end{equation}
-So, through the terms proportional to $$1/n$$, we get
+So, noting that $$5/6 - 3/4 = 1/12$$, through the terms proportional to $$1/n$$, we get
 \begin{equation}\label{eq:Stirling}
   n! \approx \sqrt{2 \pi n} \, n^n e^{-n} \left(1 + \frac{1}{12n} + \cdots \right)
 \end{equation}
