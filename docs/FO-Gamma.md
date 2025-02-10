@@ -327,7 +327,7 @@ which is called **Stirling's approximation**. As you can see from the table belo
     <tr style="text-align: right;">
      <th>$$n$$</th>
       <th>$$n!$$</th>
-      <th>$$n^n e^{-n} / n!$$</th>
+      <th>$$\frac{n^n e^{-n}}{n!}$$</th>
       <th>$$\frac{\sqrt{2\pi n} \, n^n \, e^{-n} }{n!}$$</th>
       <th>$$\frac{\sqrt{2\pi n} \, n^n \, e^{-n}}{n!} \left(1 + \frac{1}{12n} \right) $$</th>
     </tr>
