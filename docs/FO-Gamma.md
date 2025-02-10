@@ -8,11 +8,13 @@
 
 To illustrate the power of series expansions and to continue exploring the centrality of Gaussian integrals, we will develop an algebraic approximation to the factorial function $$n!$$ for large $$n$$ that is good to parts per million already by $$n = 10$$.
 
+## Factorials
+
 You are quite familiar with factorials,
 \\[
     n! = n \times (n-1) \times \cdot \times 2 \times 1
 \\]
-with the understanding that $$0! = 1$$. The gamma function generalizes the factorial function to nonintegral values of the argument. It is defined by
+with the understanding that $$0! = 1$$. Euler's $$\Gamma$$ function generalizes the factorial function to nonintegral values of the argument. It is defined by
 \\[
     \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x}
 \\]
