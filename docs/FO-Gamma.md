@@ -35,6 +35,7 @@ When $$n = 1$$, we have a straightforward integral to do
 \\]
 Hence, the recursion relation $$\Gamma(n+1) = n \Gamma(n)$$ along with the termination condition $$\Gamma(1) = 1$$ proves that $$\Gamma(n+1) = n!$$ for nonnegative integer $$n$$.
 
+## Non-integral $$n$$
 What about when $$n$$ is non-integral? For instance, what about $$n = -\frac12$$? That is, can we evaluate
 \\[
     I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \dd{t}
