@@ -328,8 +328,8 @@ which is called **Stirling's approximation**. As you can see from the table belo
      <th>$$n$$</th>
       <th>$$n!$$</th>
       <th>$$n^n e^{-n} / n!$$</th>
-      <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} /n!$$</th>
-      <th>$$\sqrt{2\pi n} \, n^n \, e^{-n} \left(1 + \frac{1}{12n} \right) \big/n!$$</th>
+      <th>$$\frac{\sqrt{2\pi n} \, n^n \, e^{-n} }{n!}$$</th>
+      <th>$$\frac{\sqrt{2\pi n} \, n^n \, e^{-n}}{n!} \left(1 + \frac{1}{12n} \right) $$</th>
     </tr>
   </thead>
   <tbody>
