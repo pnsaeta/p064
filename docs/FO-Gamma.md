@@ -16,7 +16,7 @@ You are quite familiar with factorials,
 \\]
 with the understanding that $$0! = 1$$. Euler's $$\Gamma$$ function generalizes the factorial function to nonintegral values of the argument. It is defined by
 \\[
-    \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x}
+    \boxed{ \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x} }
 \\]
 where the extra 1 in the argument is courtesy of Legendre. To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
 \\[
