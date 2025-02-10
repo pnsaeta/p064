@@ -71,7 +71,7 @@ and in general
     \Gamma\qty(n+\frac12) = \frac{2n-1}{2} \times \frac{2n-3}{2} \times \cdots \frac{1}{2} \Gamma\qty(\frac12)
     = \frac{(2n-1)!!}{2^n} \sqrt{\pi}
 \\]
-where the double factorial is defined by
+where the **double factorial** is defined by
 \\[
     n!! = n \times (n-2) \times \cdots \times \begin{cases} 1 & n\text{ odd} \\\ 
     2 & n\text{ even}
