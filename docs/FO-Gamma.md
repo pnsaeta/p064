@@ -18,7 +18,9 @@ with the understanding that $$0! = 1$$. Euler's $$\Gamma$$ function generalizes 
 \\[
     \boxed{ \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x} }
 \\]
-where the extra 1 in the argument is courtesy of Legendre. To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
+where the extra 1 in the argument is courtesy of Legendre. 
+
+To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
 \\[
     \Gamma(n+1) =  \underbrace{\left. n x^{n-1} e^{-x} \right|\_0^\infty}\_{\text{vanishes}} + \int_0^\infty n x^{n-1} e^{-x}\dd{x} = n \Gamma(n)
 \\]
