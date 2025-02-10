@@ -146,6 +146,7 @@ Actually, it will be smoother if we expand the logarithm of the integrand around
 
 \begin{equation}
   y = n \ln x - x  \qqtext{so} y' = \frac{n}{x} - 1
+  \qqtext{and so} y' = 0 \qqtext{when} x = n
 \end{equation}
 Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expand about that point.
 
