@@ -15,9 +15,9 @@ You are quite familiar with factorials,
     n! = n \times (n-1) \times \cdot \times 2 \times 1
 \\]
 with the understanding that $$0! = 1$$. Euler's $$\Gamma$$ function generalizes the factorial function to nonintegral values of the argument. It is defined by
-\\[
+\begin{equation}\label{eq:Gamma}
     \boxed{ \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x} }
-\\]
+\end{equation}
 where the extra 1 in the argument is courtesy of Legendre. 
 
 To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
