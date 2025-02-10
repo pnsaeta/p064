@@ -96,7 +96,7 @@ a.set_xlabel("$x$")
 a.set_ylabel(r"$\Gamma(x)$");
 ~~~~
 
-## A Crude Approximation
+## A Crude Approximation Using Integral Bounds
 
 Factorials grow extremely rapidly with their argument; it could be handy to have an approximate expression. It might be easier to estimate $$\ln n!$$, though, since the logarithm converts all the multiplications to addition:
 \\[
