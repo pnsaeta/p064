@@ -55,4 +55,5 @@ It is often handy to symmetrize the numerator and denominator, which we could do
 The sine terms are clearly real, so the imaginary part of the term in large parentheses is
 \\[
     g'\_N(t) = \frac{4\omega}{\pi} \cos(N+1)\omega t \frac{\sin(N+1)\omega t}{\sin\omega t}
+    = \frac{2\omega}{\pi} \frac{\sin2(N+1)\omega t}{\sin\omega t}
 \\]
