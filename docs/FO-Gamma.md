@@ -411,3 +411,10 @@ For those up to a challenge, show that the next term in the series is
 \\[
     n! \approx \sqrt{2 \pi n} n^n e^{-n} \left(1 + \frac{1}{12 n} + \frac{1}{288 n^2} + \cdots \right)
 \\]
+
+Perhaps a more insightful way to show the error arising from the various versions of the Stirling series is to take the absolute difference between the true value and the approximate value, and divide that by the true value.
+
+<p class="center" markdown="0">
+  <img src="figs/Stirling-error.webp" style="width: 400px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
