@@ -415,6 +415,6 @@ For those up to a challenge, show that the next term in the series is
 Perhaps a more insightful way to show the error arising from the various versions of the Stirling series is to take the absolute difference between the true value and the approximate value, and divide that by the true value.
 
 <p class="center" markdown="0">
-  <img src="figs/Stirling-error.webp" style="width: 400px;" alt="">
+  <img src="figs/Stirling-error.webp" style="width: 500px;" alt="">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Relative error in the various approximations to the factorial function.</p>
