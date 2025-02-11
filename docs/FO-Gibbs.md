@@ -15,10 +15,8 @@ We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a
 
 Is there a way to quantify this overshoot?
 
-We found
-\\[
-    \boxed{
-        f(t) = \frac{4}{\pi} \sum\_{n = 1}^\infty \frac1n
-    \sin\qty(\frac{  2\pi n t}{T}) \qquad (n\text{ odd})
-    }
-\\]
+We found that the series representing the square wave is
+\begin{equation}\label{eq:squarewave}
+    f(t) = \frac{4}{\pi} \sum\_{n\text{ odd}}^\infty \frac1n
+    \sin\qty(\frac{  2\pi n t}{T})
+\end{equation}
