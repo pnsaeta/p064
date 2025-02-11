@@ -50,4 +50,5 @@ It is often handy to symmetrize the numerator and denominator, which we could do
     g'\_N(t) = \frac{4\omega}{\pi} \Im \left(
         i e^{i\omega t} \frac{e^{i(N+1)\omega t}}{e^{i\omega t}} \frac{e^{-i(N+1)\omega t} - e^{i(N+1)\omega t}}{e^{-i\omega t} - e^{i\omega t}}
         \right)
+        = \frac{4\omega}{\pi} \Im \left( i e^{i(N+1)\omega t} \frac{\sin(N+1)\omega t}{\sin \omega t} \right)
 \\]
