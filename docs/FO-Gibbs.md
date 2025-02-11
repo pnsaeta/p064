@@ -45,3 +45,9 @@ The series is geometric, with ratio $$r = e^{2i\omega t}$$; we know how to sum s
 \begin{equation}\label{eq:gprimesum}
   g'\_N(t) = \frac{4 \omega}{\pi} \Im \left( ie^{i\omega t} \frac{1 - e^{i 2(N+1) \omega t}}{1 - e^{2i\omega t}} \right)
 \end{equation}
+It is often handy to symmetrize the numerator and denominator, which we could do by factoring out $$e^{i(N+1)\omega t}$$ from the numerator and $$e^{i\omega t}$$ from the denominator:
+\\[
+    g'\_N(t) = \frac{4\omega}{\pi} \Im \left(
+        i e^{i\omega t} \frac{e^{i(N+1)\omega t}}{e^{i\omega t}} \frac{e^{-i(N+1)\omega t} - e^{i(N+1)\omega t}}{e^{-i\omega t} - e^{i\omega t}}
+        \right)
+\\]
