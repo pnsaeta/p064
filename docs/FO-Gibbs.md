@@ -32,3 +32,7 @@ where I have let $$\omega = 2 \pi / T$$ for notational convenience.
 
 ## Getting Rid of $$1/n$$
 
+If we could get rid of the $$1/n$$ term inside the sum, we would have a geometric series. Suppose we take a time derivative of $$f(t)$$. Just to be sure we don't run into any issues as the upper limit of the sum tends to infinity, let us use an explicit upper limit. That is, let
+\begin{equation}\label{eq:g}
+  g(t) = \frac{4}{\pi} \Im \sum_{m = 0}^N \frac{1}{1 + 2m} e^{i(1+2m)\omega t}
+\end{equation}
