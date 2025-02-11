@@ -52,3 +52,7 @@ It is often handy to symmetrize the numerator and denominator, which we could do
         \right)
         = \frac{4\omega}{\pi} \Im \left( i e^{i(N+1)\omega t} \frac{\sin(N+1)\omega t}{\sin \omega t} \right)
 \\]
+The sine terms are clearly real, so the imaginary part of the term in large parentheses is
+\\[
+    g'\_N(t) = \frac{4\omega}{\pi} \cos(N+1)\omega t \frac{\sin(N+1)\omega t}{\sin\omega t}
+\\]
