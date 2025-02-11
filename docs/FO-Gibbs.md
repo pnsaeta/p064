@@ -36,4 +36,7 @@ If we could get rid of the $$1/n$$ term inside the sum, we would have a geometri
 \begin{equation}\label{eq:g}
   g_N(t) = \frac{4}{\pi} \Im \sum_{m = 0}^N \frac{1}{1 + 2m} e^{i(1+2m)\omega t}
 \end{equation}
-so that $$f(t) = \lim_{N \to \infty} g_N(t)$$.
+so that $$f(t) = \lim_{N \to \infty} g_N(t)$$. There is no problem differentiating the finite series $$g_N(t)$$:
+\begin{equation}\label{eq:gprime}
+  g'_N(t) = \frac{4}{\pi} \Im \sum_{m = 0}^N i \omega e^{i(1+2m)\omega t}
+\end{equation}
