@@ -14,7 +14,6 @@ We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists.</p>
 
 Is there a way to quantify this overshoot?
-
 We found that the series representing the square wave is
 \begin{equation}\label{eq:squarewave}
     f(t) = \frac{4}{\pi} \sum\_{n\text{ odd}}^\infty \frac1n
