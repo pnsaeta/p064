@@ -41,4 +41,7 @@ so that $$f(t) = \lim_{N \to \infty} g_N(t)$$. There is no problem differentiati
   g'\_N(t) = \frac{4}{\pi} \Im \sum_{m = 0}^N i \omega e^{i(1+2m)\omega t}
   = \frac{4\omega}{\pi} \Im \left( ie^{i\omega t} \sum\_{m=0}^N e^{i 2 m \omega t} \right)
 \end{equation}
-The series is geometric, with ratio $$r = e^{2i\omega t}$$.
+The series is geometric, with ratio $$r = e^{2i\omega t}$$; we know how to sum such series!
+\begin{equation}\label{eq:gprimesum}
+  g'\_N(t) = \frac{4 \omega}{\pi} \Im \left( ie^{i\omega t} \frac{1 - e^{i 2(N+1) \omega t}}{1 - e^{2i\omega t}} \right)
+\end{equation}
