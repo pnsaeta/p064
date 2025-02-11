@@ -25,3 +25,4 @@ From Euler's formula, $$e^{i \phi} = \cos\phi + i \sin\phi$$, we could rewrite t
 \begin{equation}\label{eq:sw2}
   f(t) = \frac{4}{\pi} \Im \sum_{n\text{ odd}} \frac{1}{n} e^{i n \omega t}
 \end{equation}
+where I have let $$\omega = 2 \pi / T$$ for convenience.
