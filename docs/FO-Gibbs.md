@@ -19,3 +19,9 @@ We found that the series representing the square wave is
     f(t) = \frac{4}{\pi} \sum\_{n\text{ odd}}^\infty \frac1n
     \sin\qty(\frac{  2\pi n t}{T})
 \end{equation}
+It would be nice if we could convert this trigonometric series to a geometric series, which would make it easier for us to manipulate. Can we do that?
+
+From Euler's formula, $$e^{i \phi} = \cos\phi + i \sin\phi$$, we could rewrite this series as
+\begin{equation}\label{eq:sw2}
+  f(t) = \frac{4}{\pi} \Im \sum_{n\text{ odd}} \frac{1}{n} e^{i n \omega t}
+\end{equation}
