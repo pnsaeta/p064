@@ -417,4 +417,4 @@ Perhaps a more insightful way to show the error arising from the various version
 <p class="center" markdown="0">
   <img src="figs/Stirling-error.webp" style="width: 500px;" alt="">
 </p>
-<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Relative error in the various approximations to the factorial function.</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Relative error in the various approximations to the factorial function. The dots represent the true values; the dashed curves are power laws proportional to $$1/n$$, $$1/n^2$$, and $$1/n^3$$ chosen to pass through the points at $$n = 30$$.</p>
