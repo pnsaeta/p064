@@ -58,4 +58,7 @@ The sine terms are clearly real, so the imaginary part of the term in large pare
     = \frac{2\omega}{\pi} \frac{\sin2(N+1)\omega t}{\sin\omega t}
 \\]
 
-The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1)\omega t = \pi$$.
+The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1)\omega t = \pi$$, so
+\\[
+    t_\text{peak} = \frac{\pi}{2(N+1)\omega} = \frac{T}{4(N+1)}
+\\].
