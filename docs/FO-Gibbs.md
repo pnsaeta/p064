@@ -95,3 +95,8 @@ from scipy.integrate import quad
 2 * val / np.pi
 1.1789797
 ~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/Gibbs-overshoot.webp" style="width: 400px;" alt="The Gibbs phenomenon">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$.</p>
