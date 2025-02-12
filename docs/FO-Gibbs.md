@@ -65,3 +65,4 @@ The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1
 
 ## Integrating to Get $$g_N(t_\text{peak})$$
 
+We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$
