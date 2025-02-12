@@ -227,8 +227,8 @@ and integrate from $$a$$ to $$b$$:
 \begin{align}
   \int_a^b  [(u\_1^{\prime\prime})^* u\_2 - (u\_1)^* u\_2^{\prime\prime} ] dx &= (\lambda_1^* - \lambda_2) \int_a^b u\_1^* u_2 \dd{x}  \notag \\\ 
   \left[ (u\_1^{\prime})^{*} u\_2 - u_1^\* u_2^\prime \right]_a^b - 
-  \int_a^b \left[ (u\_1^{\prime})^{\*} u\_2^{\prime} - (u\_1^{\prime})^{\*} u\_2^{\prime}\right] \, dx &=
-  (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \, dx \notag \\\ 
+  \int_a^b \left[ (u\_1^{\prime})^{\*} u\_2^{\prime} - (u\_1^{\prime})^{\*} u\_2^{\prime}\right] \dd{x} &=
+  (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \dd{x} \notag \\\ 
   \left[ u\_1^{\prime\*} u\_2 - u_1^\* u_2^\prime \right]_a^b  &=
   (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \, dx
 \end{align}
