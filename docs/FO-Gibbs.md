@@ -78,7 +78,9 @@ We can rewrite this a bit by letting $$y = 2(N+1)x$$, so that
 \begin{equation}\label{eq:gNt}
   g_N(t_\text{peak}) \approx \frac{2}{\pi} \int_0^{\pi} \frac{\sin y}{y}\dd{y}
 \end{equation}
-This is not an integral I can do analytically, although the *sine integral* is defined by
+Note that all dependence on $$N$$ has dropped out; provided that $$N$$ is large enough to allow the denominator to be approximated as $$x$$. 
+
+I can't do this integral analytically, although the *sine integral* is defined by
 \\[
     \mathrm{Si}(x) \equiv \int_0^x \frac{\sin t}{t}\dd{t}
 \\]
