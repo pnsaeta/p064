@@ -74,3 +74,7 @@ where $$x_\text{peak} = \omega t_\text{peak} = \frac{2\pi}{T} \frac{T}{4(N+1)} =
 \\[
     g_N(t_\text{peak}) \approx \frac{2}{\pi} \int_0^{\frac{\pi}{2(N+1)}} \frac{\sin2(N+1)x}{x} \dd{x}
 \\]
+We can rewrite this a bit by letting $$y = 2(N+1)x$$, so that
+\begin{equation}\label{eq:gNt}
+  g_N(t_\text{peak}) \approx \frac{2}{\pi} \int_0^{\pi} \frac{\sin y}{y}\dd{y}
+\end{equation}
