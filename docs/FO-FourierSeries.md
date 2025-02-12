@@ -209,7 +209,7 @@ a sawtooth wave. Comparing the rate of convergence to the discontinuous square w
 
 ## General Theory
 
-To demonstrate the sines and cosines are orthogonal over a period, we took advantage of trigonometric identities. We now seek to develop an approach that uses the governing differential equation and doesn't rely on such specialized knowledge.
+To demonstrate the sines and cosines are orthogonal over a period, we took advantage of trigonometric identities. We now seek to develop an approach that relies only on the governing differential equation and doesn't need such specialized knowledge as trig identities.
 
 The trigonometric functions satisfy the differential equation
 \begin{equation}\label{eq:DE}
