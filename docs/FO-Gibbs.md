@@ -63,7 +63,7 @@ The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1
     t_\text{peak} = \frac{\pi}{2(N+1)\omega} = \frac{T}{4(N+1)}
 \\]
 
-## Integrating to Get $$g_N(t_\text{peak})$$
+## Integrating to get $$g_N(t_\text{peak})$$
 
 We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$ to see how large the overshot goes. 
 \\[
@@ -81,6 +81,10 @@ We can rewrite this a bit by letting $$y = 2(N+1)x$$, so that
 This is not an integral I can do analytically, although the *sine integral* is defined by
 \\[
     \mathrm{Si}(x) \equiv \int_0^x \frac{\sin t}{t}\dd{t}
+\\]
+in terms of which, 
+\\[
+    g_\text{peak} \approx \frac{2}{\pi} \mathrm{Si}(\pi)
 \\]
 but we can do it numerically using `scipy`:
 
