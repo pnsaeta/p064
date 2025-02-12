@@ -96,7 +96,9 @@ from scipy.integrate import quad
 1.1789797
 ~~~~
 
+So, the height of the peak should be 1.179, which does indeed seem to be consistent with 
+
 <p class="center" markdown="0">
   <img src="figs/Gibbs-overshoot.webp" style="width: 400px;" alt="The Gibbs phenomenon">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$, using a sum through $$N=999$$. The peak does indeed seem consistent with $$\frac{2}{\pi} \text{Si}(\pi) \approx 1.179$$. </p>
