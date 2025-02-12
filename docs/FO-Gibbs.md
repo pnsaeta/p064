@@ -86,7 +86,8 @@ in terms of which,
 \\[
     g_\text{peak} \approx \frac{2}{\pi} \mathrm{Si}(\pi)
 \\]
-but we can do it numerically using `scipy`:
+
+We can also use `scipy` to do the integral numerically:
 
 ~~~~ python
 from scipy.integrate import quad
