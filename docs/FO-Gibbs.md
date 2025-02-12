@@ -70,4 +70,7 @@ We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$ to see how large
     g_N(t_\text{peak}) = \int_0^{t_\text{peak}} \frac{4}{T} \frac{\sin 2(N+1)\omega t}{\sin\omega t}\dd{t}
     = \frac{4}{T} \int_0^{x_\text{peak}} \frac{\sin 2(N+1)x}{\sin x} \frac{\dd{x}}{\omega}
 \\]
-where $$x_\text{peak} = \omega t_\text{peak} = \frac{2\pi}{T} \frac{T}{4(N+1)} = \frac{\pi}{2(N+1)}$$.
+where $$x_\text{peak} = \omega t_\text{peak} = \frac{2\pi}{T} \frac{T}{4(N+1)} = \frac{\pi}{2(N+1)}$$. For $$N \gg 1$$, $$x_\text{peak} \ll \pi$$. Throughout the range of integration, $$\sin x \approx x$$. So,
+\\[
+    g\_N(t_\text{peak}) \approx \frac{2}{\pi} \int_0^{\pi/2(N+1)} \frac{\sin2(N+1)x}}{x} \dd{x}
+\\]
