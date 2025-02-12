@@ -182,7 +182,7 @@ ax.legend();
 <p class="center" markdown="0">
   <img src="figs/square.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1">The Fourier series representation of the square wave defined in Eq. (\ref{eq:square}) for terms through the given order $$n$$. Increasing numbers of terms allow the series to approach ever more closely the constant value 1 for $$0 < t < \frac{T}{2}$$, but there appears to be a persistent overshoot at the discontinuities, which is called the **Gibbs phenomenon**.</p>
+<p class="icap" markdown="1">The Fourier series representation of the square wave defined in Eq. (\ref{eq:square}) for terms through the given order $$n$$. Increasing numbers of terms allow the series to approach ever more closely the constant value 1 for $$0 < t < \frac{T}{2}$$, but there appears to be a persistent overshoot at the discontinuities, which is called the **Gibbs phenomenon**. For more on the Gibbs phenomon, see [this page](FO-Gibbs.md).</p>
 
 Stopping after just two terms ($$n=3$$) does not make a very convincing representation of the square wave, but as we add more and more terms, it does indeed appear that the Fourier series is at least trying to converge to $$f(t)$$, at least away from its points of discontinuity. Let’s hone in on the region around $$t = 0$$.
 
