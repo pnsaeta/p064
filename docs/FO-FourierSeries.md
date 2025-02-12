@@ -230,7 +230,7 @@ and integrate from $$a$$ to $$b$$:
   \int_a^b \left[ (u\_1^{\prime})^{\*} u\_2^{\prime} - (u\_1^{\prime})^{\*} u\_2^{\prime}\right] \dd{x} &=
   (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \dd{x} \notag \\\ 
   \left[ u\_1^{\prime\*} u\_2 - u_1^\* u_2^\prime \right]_a^b  &=
-  (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \, dx
+  (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \dd{x}
 \end{align}
 
 The term on the left is called the **bilinear concomitant**. If we use the boundary condition $$u(a) = 0$$ or $$u'(a) = 0$$, and similarly at $$x = b$$, then the bilinear concomitant vanishes.
