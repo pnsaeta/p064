@@ -209,6 +209,8 @@ a sawtooth wave. Comparing the rate of convergence to the discontinuous square w
 
 ## General Theory
 
+To demonstrate the sines and cosines are orthogonal over a period, we took advantage of trigonometric identities. We now seek to develop an approach that uses the governing differential equation and doesn't rely on such specialized knowledge.
+
 The trigonometric functions satisfy the differential equation
 \begin{equation}\label{eq:DE}
   u^{\prime\prime}(x) = \lambda u(x)
