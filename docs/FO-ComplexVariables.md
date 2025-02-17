@@ -102,11 +102,11 @@ In particular, if $$z$$ is purely imaginary, then
 
 ## Derivative of a Complex Function
 
-We might think to define the derivative a function of a complex variable in analogy with functions of a real variable:
+We might think to define the derivative of a function of a complex variable in analogy with functions of a real variable:
 \\[
     f'(z) = \lim_{\delta z \to 0} \frac{f(z+\delta z) - f(z)}{\delta z}
 \\]
-but a little thought reveals a major concern. The value of $$\delta z = \delta x + i \delta y$$ can be made to shrink to zero in any direction on the complex plane. Would this limit make any sense if the value for the derivative depended on the direction of approach?
+but a little thought reveals a major concern: the value of $$\delta z = \delta x + i \delta y$$ can be made to shrink to zero in any direction on the complex plane. Would this limit make any sense if the value for the derivative depended on the direction of approach?
 
 If we assume that the limit is well-defined and independent of the direction of approach then there will need to be careful coordination between the real and the imaginary parts of $$f(z)$$, which we can deduce by representing $$f(z) = u(x,y) + i v(x,y)$$. Making this substitution, we have
 \begin{equation}\label{eq:CR0}
