@@ -114,7 +114,7 @@ We might think to define the derivative of a function of a complex variable in a
 \\]
 but a little thought reveals a major concern: the value of $$\delta z = \delta x + i \delta y$$ can be made to shrink to zero in any direction on the complex plane. Would this limit make any sense if the value for the derivative depended on the direction of approach?
 
-If we assume that the limit is well-defined and independent of the direction of approach then there will need to be careful coordination between the real and the imaginary parts of $$f(z)$$, which we can deduce by representing $$f(z) = u(x,y) + i v(x,y)$$. Making this substitution, we have
+If we assume that the limit is well-defined and independent of the direction of approach, then there will need to be careful coordination between the real and the imaginary parts of $$f(z)$$, which we can deduce by representing $$f(z) = u(x,y) + i v(x,y)$$. Making this substitution, we have
 \begin{equation}\label{eq:CR0}
     f'(z) = \lim_{\delta x, \delta y \to 0} \frac{
         u(x + \delta x, y + \delta y) + i v(x + \delta x, y + \delta y) -
