@@ -138,7 +138,7 @@ For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
   \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\ 
   -\pdv{u}{y} &= \pdv{v}{x} \label{eq:CR4}
 \end{align}
-which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**. More generally, functions may be analytic in a region of the complex plane, but nonanalytic at certain points or regions.
+which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**. More generally, functions may be analytic in a region of the complex plane, but nonanalytic at certain points or in certain regions.
 
 We already zworked out about that if $$f(z) = z^2$$, then $$u(x,y) = x^2 - y^2$$ and $$v(x,y) = 2 x y$$. We can see immediately that both Cauchy-Riemann conditions are satisfied in this case.
 
