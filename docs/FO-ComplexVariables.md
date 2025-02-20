@@ -20,6 +20,8 @@ Here $$x$$ represents the real part of $$z$$ and $$y$$ the imaginary part of $$z
 \end{align}
 Both the real and imaginary parts of the product are unchanged on exchanging 1 and 2; multiplication of complex numbers is also commutative.
 
+### Quaternions
+
 There are more involved ways to solve $$z^2 = x$$ that preserve the commutative property of addition but not for multiplication. In particular, the **quaternions** are defined by
 \begin{align}
   -1 &= i^2 = j^2 = k^2  \notag \\\ 
