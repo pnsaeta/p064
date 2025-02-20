@@ -149,7 +149,7 @@ We now need to evaluate $$I$$ along the illustrated path. The integrand has a si
 \\[
     I_{sc} = \int_{\pi}^{2\pi} \frac{e^{ix_n \epsilon e^{i\theta}}}{\epsilon e^{i\theta}} i\epsilon e^{i\theta} \dd{\theta} = i \int_\pi^{2\pi} e^{i x_n \epsilon e^{i\theta}} \dd{\theta} = i\pi
 \\]
-as $$\epsilon \to 0$$. By distorting the path, we have added $$i\pi$$ to the value of the integral, so we need to subtract if from the result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral is
+as $$\epsilon \to 0$$. By distorting the path, we have added $$i\pi$$ to the value of the integral, so we need to subtract it from the result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral is
 \\[
     I = \frac{1}{2\pi i}\times \qty(2\pi i a_{-1} - i\pi) = \frac{1}{2}
 \\]
@@ -158,7 +158,7 @@ since $$a_{-1} = e^0 = 1$$. Or, translating back to $$b(x_n)$$, we have
     b(x_n) = \frac12 \qqtext{if $$x_n > 0$$}
 \\]
 
-If, on the other hand, $$x_n < 0$$, we must close in the lower half-plane (LHP). By an argument analogous to the one given just now—and noting that when we close in the LHP, we traverse the contour in the clockwise (negative) direction—we find that 
+If, on the other hand, $$x_n < 0$$, we must close in the lower half-plane (LHP). By an argument analogous to the one given just now—and noting that when we close in the LHP, we traverse the contour in the clockwise (negative) direction—we find that
 \\[
     b(x_n) = -\frac12 \qqtext{if $$x_n < 0$$}
 \\]
