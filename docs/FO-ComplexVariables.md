@@ -82,7 +82,7 @@ You can confirm the plausibility of this last identity by checking out $$\theta 
 
 ## Functions of a Complex Variable
 
-Just as a function of a real variable $$x$$ takes $$\mathbb{R} \to \mathbb{R}$$, and function of a complex variable takes $$\mathbb{C} \to \mathbb{C}$$. If $$z = x + iy$$, we can define $$f(z) = u(x, y) + i v(x,y)$$, where $$u(x,y)$$ is the real part of $$f(z)$$ and $$v(x,y)$$ is the imaginary part of $$f(z)$$. For example, suppose $$f(z) = z^2$$. Then,
+Just as a function of a real variable $$x$$ takes $$\mathbb{R} \to \mathbb{R}$$, a function of a complex variable takes $$\mathbb{C} \to \mathbb{C}$$. If $$z = x + iy$$, we can define $$f(z) = u(x, y) + i v(x,y)$$, where $$u(x,y)$$ is the real part of $$f(z)$$ and $$v(x,y)$$ is the imaginary part of $$f(z)$$. For example, suppose $$f(z) = z^2$$. Then,
 \\[
     f(z) = (x^2 - y^2) + i 2 x y
 \\]
