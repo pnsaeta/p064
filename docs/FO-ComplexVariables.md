@@ -151,6 +151,7 @@ and to use induction to show that
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
+### A Non-differentiable Function of a Complex Variable
 
 However, it is possible to produce a very simple function that does not have a derivative. Consider
 \\[
