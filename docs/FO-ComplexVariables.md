@@ -99,7 +99,7 @@ Another example: if $$f(z) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\co
 What would it mean to take the sine of a complex variable $$z$$?
 \\[
     \sin z = \frac{e^{iz} - e^{-iz}}{2i}
-    = \frac{e^{i x - y} - e^{-i x + y}}{2i} = \frac{e^{-y} e^{ix} - e^{-y} e^{-ix}}{2i}
+    = \frac{e^{i x - y} - e^{-i x + y}}{2i} = \frac{e^{-y} e^{ix} - e^{y} e^{-ix}}{2i}
 \\]
 In particular, if $$z$$ is purely imaginary, then
 \\[
