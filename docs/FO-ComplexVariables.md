@@ -91,7 +91,7 @@ so
     u(x,y) = x^2 - y^2 \qqtext{and} v(x,y) = 2 x y
 \\]
 
-Another example: if $$f(x) = e^{iz} = e^{i(x + iy)}$$
+Another example: if $$f(x) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\cos x + i\sin x)$$
 
 What would it mean to take the sine of a complex variable $$z$$?
 \\[
