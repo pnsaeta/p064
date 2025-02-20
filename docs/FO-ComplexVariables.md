@@ -147,7 +147,7 @@ and to use induction to show that
 
 ### Quaternions
 
- However, it is possible to produce a very simple function that does not have a derivative. Consider
+However, it is possible to produce a very simple function that does not have a derivative. Consider
 \\[
     f(z) = z^* = x - i y
 \\]
