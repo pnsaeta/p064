@@ -38,7 +38,6 @@ A common way to visualize complex numbers is on the **Argand plane**, in which t
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The complex number $$z = x + i y$$ (for real $$x$$ and $$y$$) is plotted on the $$xy$$ plane at point $$(x,y)$$.</p>
 
-
 Of course, we could also use a polar coordinate system in which
 \begin{align}
   r &= \sqrt{x^2 + y^2} = |z| & \qquad x &= r \cos\phi = \Re(z) \notag \\\ 
