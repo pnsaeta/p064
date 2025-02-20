@@ -189,7 +189,7 @@ called a **Laurent expansion** about the point $$z_0$$. If such an expansion exi
 \\]
 The coefficient $$a_{-1}$$ is called **the residue** of the pole at $$z = z_0$$.
 
-This result is truly remarkable! If we integrate around a closed path containing no singularity, the result is zero. On the other hand, if we integrate around a closed path containing a singularity, which may contain terms in its Laurent expansion proportional to many terms proportional to $$z-z_0$$ to a variety of negative integral powers, only the term proportional to $$(z-z_0)^{-1}$$ yields a nonzero contribution to the path integral.
+This result is truly remarkable! If we integrate around a closed path containing no singularity, the result is zero. On the other hand, if we integrate around a closed path containing a singularity, which may contain terms in its Laurent expansion proportional to many terms proportional to $$z-z_0$$ to a variety of negative integral powers, only the term proportional to $$(z-z_0)^{-1}$$ yields a nonzero contribution to the path integral—and that contribution is $$2 \pi i a_{-1}$$.
 
 Cauchy's theorem says that we are free to deform the integration contour through regions that are analytic with impunity, since integrals around closed contours in those regions yield nothing. We can even ignore most singularities within the contour; only those that are proportional to $$(z-z_0)^{-1}$$ produce a nonzero value for the integral.
 
