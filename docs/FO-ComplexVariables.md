@@ -147,7 +147,6 @@ and to use induction to show that
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
-### Quaternions
 
 However, it is possible to produce a very simple function that does not have a derivative. Consider
 \\[
