@@ -91,7 +91,7 @@ so
     u(x,y) = x^2 - y^2 \qqtext{and} v(x,y) = 2 x y
 \\]
 
-Another example: if $$f(x) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\cos x + i\sin x)$$, then
+Another example: if $$f(z) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\cos x + i\sin x)$$, then
 \\[
     u(x, y) = e^{-y} \cos x  \qquad\text{and}\qquad v(x,y) = e^{-y} \sin x
 \\]
@@ -99,7 +99,7 @@ Another example: if $$f(x) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\co
 What would it mean to take the sine of a complex variable $$z$$?
 \\[
     \sin z = \frac{e^{iz} - e^{-iz}}{2i}
-    = \frac{e^{i x - y} - e^{-i x + y}}{2i} = \frac{e^{ix}}{i} \frac{e^{-y} - e^y}{2} = i e^{ix} \sinh y
+    = \frac{e^{i x - y} - e^{-i x + y}}{2i} = \frac{e^{-y} e^{ix} - e^{-y} e^{-ix}}{2i}
 \\]
 In particular, if $$z$$ is purely imaginary, then
 \\[
