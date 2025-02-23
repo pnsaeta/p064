@@ -199,3 +199,5 @@ np.pi / np.sqrt(2)
     <th>Total</th><th>2.2214408 / 2</th><th>2.4 ✕ 10<sup>–9</sup> / 2</th>
     </tr>
 </table>
+
+You can readily see that the numerical integration agrees well with the exact value we obtained via contour integration.
