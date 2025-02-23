@@ -253,7 +253,7 @@ where $$(a_{-1})_j$$ is the the residue at pole $$j$$.
 The residue theorem establishes a method for evaluating integrals along closed paths on the complex plane. Quite often, however, we wish to evaluate an integral of a real function of a real variable along the real axis. Since the residue theorem requires that we integrate around a closed contour in the complex plane, an important step in using the residue theorem to calculate such integrals is to identify a contour that either
 
 - closes along a segment that adds nothing to the value of the integral, or
-- one that generates a multiple of the desired integral (e.g., by integrating along a return path that goes from $$x = \infty$$ to $$x = -\infty$$ at some nonzero value of the imaginary part of $$z$$). 
+- generates a multiple of the desired integral (e.g., by integrating along a return path that goes from $$x = \infty$$ to $$x = -\infty$$ at some nonzero value of the imaginary part of $$z$$). 
 
 ## Problems
 
