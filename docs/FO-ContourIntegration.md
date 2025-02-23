@@ -176,7 +176,7 @@ np.pi / np.sqrt(2)
 2.22144147
 ~~~~
 
-<table class="nicetable" >
+<table >
   <tr>
     <th>Range</th><th>Integral</th><th>Error Estimate</th>
   </tr>
