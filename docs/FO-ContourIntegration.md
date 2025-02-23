@@ -161,3 +161,8 @@ y = 1.0 / (1.0 + x**4)
 fig, ax = plt.subplots()
 ax.plot(x,y);
 ~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/CI1.webp" style="width: 400px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — </p>
