@@ -244,10 +244,11 @@ We can extend this result by differentiating both sides with respect to $$z_0$$:
 
 ## Calculus of Residues
 
-If a function $$f(z)$$ is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number of poles (locations where the function diverges) in $$R$$, then 
+If a function $$f(z)$$ is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number $$N$$ of poles (locations where the function diverges) in $$R$$, then 
 \begin{equation}
-  \int_C f(z) \dd{z} = 2 \pi i \sum_j (a_{-1})_j
+  \int_C f(z) \dd{z} = 2 \pi i \sum_{j=1}^N (a_{-1})_j
 \end{equation}
+where $$(a_{-1})_j$$ is the the residue at pole $$j$$.
 
 ## Problems
 
