@@ -13,3 +13,7 @@ This is not an integral for which we require the methods of contour integration;
 \begin{equation}
   I = \int_{-\pi/2}^{\pi/2} \frac{1}{1 + \tan^2 u} \sec^2{u}\dd{u} = \int_{-\pi/2}^{\pi/2} \dd{u} = \pi
 \end{equation}
+
+Can we get the same result from contour integration?
+
+We need to find a way to close the contour that includes the entire real axis, but needs to somehow get from $$x = \infty$$ to $$x = -\infty$$.
