@@ -244,7 +244,7 @@ We can extend this result by differentiating both sides with respect to $$z_0$$:
 
 ## Calculus of Residues
 
-If a 
+If a function is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number of poles (locations where the function diverges)in $$R$$ 
 
 ## Problems
 
