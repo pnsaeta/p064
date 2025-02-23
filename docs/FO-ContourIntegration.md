@@ -129,7 +129,7 @@ Each term in the product is of the form
 $$t_{mn} = (e^{i m \pi/4} - e^{i n \pi/4})$$ for integer $$m$$ and
 $$n$$. If we factor out $$e^{i(m+n)\pi/8}$$, we get
 \begin{equation}
-    t_{mn} = e^{i(m+n)\pi/8} \left\{ e^{i(m-n)\pi/8} - e^{-i(m-n)\pi/8} \right\}
+    t_{mn} = e^{i(m+n)\pi/8} \left{ e^{i(m-n)\pi/8} - e^{-i(m-n)\pi/8} \right}
     = e^{i(m+n)\pi/8} (-2i) \sin \left(\frac{(n-m)\pi}{8}\right)
 \end{equation} 
 Using this expression to evaluate the denominators, we have
