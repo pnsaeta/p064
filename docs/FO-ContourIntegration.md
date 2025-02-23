@@ -195,4 +195,7 @@ np.pi / np.sqrt(2)
   <tr>
     <td>20 – 100</td><td>$$4.1332217\times10^{-5}$$</td><td>$$1.2\times10^{-9}$$</td>
   </tr>
+  <tr>
+    <th>Total</th><th>2.2214408 / 2</th><th>$$2.4\times10^{-9}$$</th>
+    </tr>
 </table>
