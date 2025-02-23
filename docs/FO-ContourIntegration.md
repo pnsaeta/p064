@@ -180,5 +180,7 @@ np.pi / np.sqrt(2)
   <tr>
     <th>Range</th><th>Integral</th><th>Error Estimate</th>
   </tr>
-
+  <tr>
+    <td>0 – 2</td><td>1.07012769</td><td>$$1.49\times10^{-12}$$</td>
+  </tr>
 </table>
