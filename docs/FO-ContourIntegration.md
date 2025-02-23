@@ -41,11 +41,12 @@ back to $$x = -\infty$$ without adding anything to the value of the
 integral. Let's try closing along a semicircular arc of radius $$R$$, as
 illustrated below, and then take the limit as $$R \to \infty$$.
 
-    \begin{figure}
-\centering
-\pandocbounded{\includegraphics[keepaspectratio]{ae4302ea-c60b-4224-8b8d-cc681a2846b1.webp}}
-\caption{UHP.webp}
-\end{figure}
+<p class="center" markdown="0">
+  <img src="figs/UGP.webp" style="width: 400px;" alt="Closing in the upper half-plane">
+</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour
+</p>
+
 
     Along the semicircular arc, $$z = R e^{i\theta}$$, so
 $$\dd{z} = iR e^{i\theta}\dd{\theta}$$ and the contribution to the
