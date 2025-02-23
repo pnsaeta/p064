@@ -47,7 +47,6 @@ illustrated below, and then take the limit as $$R \to \infty$$.
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour
 </p>
 
-
 Along the semicircular arc, $$z = R e^{i\theta}$$, so
 $$\dd{z} = iR e^{i\theta}\dd{\theta}$$ and the contribution to the
 integral is
@@ -97,8 +96,8 @@ integral to yield something that would require a lot more work to
 integrate with a standard method such as substitution. Can you evaluate
 \begin{equation}
   J = \int_{-\infty}^{\infty} \frac{1}{1 + x^4}\dd{x}
-\end{equation} analytically? Perhaps, but I'm going to try to use
-contour integration.
+\end{equation}
+analytically? Perhaps, but I'm going to try to use contour integration.
 
 The argument we developed above to evaluate $$I'$$ works even better for
 this integrand, which goes much more strongly to zero at large $$R$$.
@@ -107,7 +106,7 @@ same semicircular path as before, which will contribute nothing to the
 integral. So, we just need to locate the poles and evaluate the residues
 of the poles that lie in the upper half-plane.
 
-    Where are the zeros of $$z^4 + 1$$? At $$z^4 = -1$$. They are at
+Where are the zeros of $$z^4 + 1$$? At $$z^4 = -1$$. They are at
 $$z = e^{i \phi}$$ for
 $$\phi \in \left\{\pi/4, 3\pi/4, 5\pi/4, 7\pi/4\right\}$$. The first two
 lie in the upper half-plane, so we need to calculate the residues at
