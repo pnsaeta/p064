@@ -166,3 +166,19 @@ ax.plot(x,y);
   <img src="figs/CI1.webp" style="width: 400px;" alt="The integrandl">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Plot of $$f(x) = 1 / (1 + x^4)$$.</p>
+
+Because the contribution from the wings lives at a different scale than the bulk of the weight of the integrand near $$x = 0$$, I will break apart the integral into segments and then add the segments up.
+
+~~~~ python
+v = np.array([quad(f, 0, 2), quad(f, 2, 4), quad(f, 4, 10), quad(f, 10, 20), quad(f, 20, 100)])
+np.pi / np.sqrt(2)
+
+2.22144147
+~~~~
+
+<table class="nicetable" style="width: 600px;">
+  <tr>
+    <th>Range</th><th>Integral</th><th>Error Estimate</th>
+  </tr>
+
+</table>
