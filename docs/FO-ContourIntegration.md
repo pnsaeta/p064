@@ -163,6 +163,6 @@ ax.plot(x,y);
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/CI1.webp" style="width: 400px;" alt="">
+  <img src="figs/CI1.webp" style="width: 400px;" alt="The integrandl">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — </p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Plot of $$f(x) = 1 / (1 + x^4)$$.</p>
