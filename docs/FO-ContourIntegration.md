@@ -42,7 +42,7 @@ integral. Let's try closing along a semicircular arc of radius $$R$$, as
 illustrated below, and then take the limit as $$R \to \infty$$.
 
 <p class="center" markdown="0">
-  <img src="figs/UGP.webp" style="width: 400px;" alt="Closing in the upper half-plane">
+  <img src="figs/UHP.webp" style="width: 400px;" alt="Closing in the upper half-plane">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour
 </p>
