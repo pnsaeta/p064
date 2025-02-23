@@ -148,3 +148,16 @@ These values are the reciprocals of the residues, so
 \end{equation}
 
 Can we confirm this value numerically?
+
+~~~~ python
+import numpy as np 
+import matplotlib.pyplot as plt
+%matplotlib widget 
+from scipy.integrate import quad
+
+f = lambda x: 1 / (1 + x**4)
+x = np.linspace(-10, 10, 201)
+y = 1.0 / (1.0 + x**4)
+fig, ax = plt.subplots()
+ax.plot(x,y);
+~~~~
