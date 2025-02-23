@@ -242,13 +242,15 @@ We can extend this result by differentiating both sides with respect to $$z_0$$:
     \frac{f(z)}{(z-z_0)^{n+1}}\dd{z}
 \end{align}
 
-## Calculus of Residues
+## The Residue Theorem
 
 If a function $$f(z)$$ is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number $$N$$ of poles (locations where the function diverges) in $$R$$, then 
 \begin{equation}
   \int_C f(z) \dd{z} = 2 \pi i \sum_{j=1}^N (a_{-1})_j
 \end{equation}
-where $$(a_{-1})_j$$ is the the residue at pole $$j$$.
+where $$(a_{-1})_j$$ is the the residue at pole $$j$$. 
+
+The residue theorem 
 
 ## Problems
 
