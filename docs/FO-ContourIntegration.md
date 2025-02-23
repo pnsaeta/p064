@@ -176,15 +176,15 @@ np.pi / np.sqrt(2)
 2.22144147
 ~~~~
 
-<table >
+<table class="nicetable">
   <tr>
     <th>Range</th><th>Integral</th><th>Error Estimate</th>
   </tr>
   <tr>
-    <td>0 – 2</td><td>1.07012769</td><td>1.49 ✕ 10<sup>–12</sup></td>
+    <td>0 – 2</td><td>1.070 127 69</td><td>1.49 ✕ 10<sup>–12</sup></td>
   </tr>
   <tr>
-    <td>2 – 4</td><td>0.0353934098</td><td>$$3.9\times10^{-16}$$</td>
+    <td>2 – 4</td><td>0.035 393 409 8</td><td>3.9 ✕ 10<sup>–16</sup></td>
   </tr>
   <tr>
     <td>4 – 10</td><td>$$4.86631659\times10^{-3}$$</td><td>$$2.86\times10^{-14}$$</td>
