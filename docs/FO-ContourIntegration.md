@@ -170,7 +170,8 @@ ax.plot(x,y);
 Because the contribution from the wings lives at a different scale than the bulk of the weight of the integrand near $$x = 0$$, I will break apart the integral into segments and then add the segments up.
 
 ~~~~ python
-v = np.array([quad(f, 0, 2), quad(f, 2, 4), quad(f, 4, 10), quad(f, 10, 20), quad(f, 20, 100)])
+v = np.array([quad(f, 0, 2), quad(f, 2, 4), quad(f, 4, 10), 
+    quad(f, 10, 20), quad(f, 20, 100)])
 np.pi / np.sqrt(2)
 
 2.22144147
