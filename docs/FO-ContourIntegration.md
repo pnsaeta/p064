@@ -48,11 +48,13 @@ illustrated below, and then take the limit as $$R \to \infty$$.
 </p>
 
 
-    Along the semicircular arc, $$z = R e^{i\theta}$$, so
+Along the semicircular arc, $$z = R e^{i\theta}$$, so
 $$\dd{z} = iR e^{i\theta}\dd{\theta}$$ and the contribution to the
-integral is \begin{equation}
+integral is
+\begin{equation}
   I' = \int_{0}^{\pi} \frac{i R e^{i\theta}}{1 + R^2 e^{2i\theta}} \dd{\theta}
-\end{equation} Let's pull the leading dependence on $$R$$ out of the
+\end{equation}
+Let's pull the leading dependence on $$R$$ out of the
 integral: \begin{equation}
   I' = \frac{1}{R} \int_{0}^{\pi} \frac{i e^{i\theta}}{e^{2i\theta} + 1/R^2} \dd{\theta}
 \end{equation} As $$R \to \infty$$, the integral becomes
