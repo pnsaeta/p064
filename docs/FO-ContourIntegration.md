@@ -193,9 +193,9 @@ np.pi / np.sqrt(2)
     <td>10 – 20</td><td>0.000 291 652 493</td><td>3.2 ✕ 10<sup>–18</sup></td>
   </tr>
   <tr>
-    <td>20 – 100</td><td>$$4.1332217\times10^{-5}$$</td><td>$$1.2\times10^{-9}$$</td>
+    <td>20 – 100</td><td>0.000 041 332 217</td><td>1.2 ✕ 10<sup>–9</sup></td>
   </tr>
   <tr>
-    <th>Total</th><th>2.2214408 / 2</th><th>$$2.4\times10^{-9} / 2$$</th>
+    <th>Total</th><th>2.2214408 / 2</th><th>2.4 ✕ 10<sup>–9</sup> / 2</th>
     </tr>
 </table>
