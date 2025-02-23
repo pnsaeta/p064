@@ -67,7 +67,7 @@ contribution to the integral. So, the integral around the closed contour
 has the same value as the integral we care about along the $$x$$ axis,
 and that means we can use the residue theorem to evaluate it.
 
-    The integrand \[\frac{1}{z^2+1} = \frac{1}{(z+i)(z-i)}\\] has poles at
+The integrand \[\frac{1}{z^2+1} = \frac{1}{(z+i)(z-i)}\\] has poles at
 $$z = \pm i$$. If we close the contour in the upper half-plane, as
 illustrated in the figure, then we proceed around the contour in the
 positive direction and we enclose the pole at $$z = i$$. By the residue
@@ -82,7 +82,7 @@ $$\lim_{\xi \to 0} \frac{1}{\xi + 2i} = \frac{1}{2i}$$. Therefore,
 \end{equation} just as we found from the $$u$$ substitution.
 \textbf{Well, that's reassuring!}
 
-    \subsection{Another Example}\label{another-example}
+## Another Example
 
 To appreciate the power of contour integration, we need to modify the
 integral to yield something that would require a lot more work to
