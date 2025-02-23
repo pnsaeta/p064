@@ -55,13 +55,16 @@ integral is
   I' = \int_{0}^{\pi} \frac{i R e^{i\theta}}{1 + R^2 e^{2i\theta}} \dd{\theta}
 \end{equation}
 Let's pull the leading dependence on $$R$$ out of the
-integral: \begin{equation}
+integral: 
+\begin{equation}
   I' = \frac{1}{R} \int_{0}^{\pi} \frac{i e^{i\theta}}{e^{2i\theta} + 1/R^2} \dd{\theta}
-\end{equation} As $$R \to \infty$$, the integral becomes
+\end{equation}
+As $$R \to \infty$$, the integral becomes
 \begin{equation}
   I' = \frac{1}{R} \int_{0}^{\pi} \frac{i e^{i\theta}}{e^{2i\theta} + 0} \dd{\theta}
   = \frac{1}{R} \int_0^\pi i e^{-i\theta} \dd{\theta}
-\end{equation} which clearly goes to zero as $$R \to 0$$. So, by closing
+\end{equation}
+which clearly goes to zero as $$R \to 0$$. So, by closing
 the contour along the semicircular arc at infinity, we add no
 contribution to the integral. So, the integral around the closed contour
 has the same value as the integral we care about along the $$x$$ axis,
@@ -71,20 +74,21 @@ The integrand
 \begin{equation}
 \frac{1}{z^2+1} = \frac{1}{(z+i)(z-i)}
 \end{equation}
-has poles at
-$$z = \pm i$$. If we close the contour in the upper half-plane, as
+has poles at $$z = \pm i$$. If we close the contour in the upper half-plane, as
 illustrated in the figure, then we proceed around the contour in the
 positive direction and we enclose the pole at $$z = i$$. By the residue
 theorem, therefore, the value of the integral $$I$$ is $$2 \pi i$$ times
 the residue at $$z = i$$. Let $$\xi = z-i$$, so that the integrand in
-the vicinity of the pole has the form. \begin{equation}
+the vicinity of the pole has the form.
+\begin{equation}
   \frac{1}{(z + i)(z - i)} = \frac{1}{(\xi + 2i)\xi} = \frac{a_{-1}}{\xi}
-\end{equation} for $$a_{-1} = \frac{1}{2i}$$, since
+\end{equation}
+for $$a_{-1} = \frac{1}{2i}$$, since
 $$\lim_{\xi \to 0} \frac{1}{\xi + 2i} = \frac{1}{2i}$$. Therefore,
 \begin{equation}
   I = 2 \pi i \times \frac{1}{2i} = \pi
 \end{equation} just as we found from the $$u$$ substitution.
-\textbf{Well, that's reassuring!}
+**Well, that's reassuring!**
 
 ## Another Example
 
