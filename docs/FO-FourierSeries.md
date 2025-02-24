@@ -161,7 +161,7 @@ When $$n$$ is even, this expression vanishes; when $$n$$ is odd, it equals 2. So
     }
 \\]
 
-What does this look like? To get some idea, we can truncate the infinite sum at a finite number of terms and get a sense for how it is converging. We can use the following bit of Python code to great a plot:
+What does this look like? To get some idea, we can truncate the infinite sum at a finite number of terms and get a sense for how it is converging. We can use the following bit of Python code to create a plot:
 
 ~~~~ python
 t = np.linspace(-0.5,0.5,341)
