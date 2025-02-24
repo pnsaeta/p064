@@ -124,6 +124,10 @@ To compute the residues, we can use
 \\[
     a_{-1} = \lim_{z \to z_0} [f(z) (z-z_0)]
 \\]
+The residue at $$z_0 = e^{i\pi/4}$$ is
+\\[
+    a_{-1} = \lim_{z \to e^{i\pi/4}} \frac{z - e^{i\pi/4}}{z^4+1}
+\\]
 
 So, we need to evaluate the denominators: \begin{align}
 b = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
