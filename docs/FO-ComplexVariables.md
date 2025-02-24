@@ -264,7 +264,7 @@ The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the Laurent exp
   f(z) = \sum_{j=-n}^{\infty} a_j (z-z_0)^j
 \end{equation}
 
-For a simple pole, the sum begins at $$n = -1$$. One strategy to compute the residue, then, is to multiply $$f(z)$$ by $$(z-z_0)$$ and taking the limit as $$z \to 0$$.
+For a simple pole, the sum begins at $$n = -1$$. One strategy to compute the residue, then, is to multiply $$f(z)$$ by $$(z-z_0)$$ and taking the limit as $$z \to z_0$$.
 
 If we multiply $$f(z)$$ by $$(z-z_0)^n$$, we get
 \begin{equation}
