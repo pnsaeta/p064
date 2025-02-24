@@ -129,7 +129,12 @@ The residue at $$z_0 = e^{i\pi/4}$$ is
     a_{-1} = \lim_{z \to e^{i\pi/4}} \frac{z - e^{i\pi/4}}{z^4+1}
     = \lim_{z \to e^{i\pi/4}} \frac{1}{4z^3} = \frac{e^{-i 3\pi/4}}{4}
 \\]
-
+where I have used l’Hôpital’s rule to simplify the limit of the fraction. Similarly, the residue at 
+$$z_0 = e^{i 3\pi/4}$$ is
+\\[
+    b_{-1} = \lim_{z \to e^{i3\pi/4}} \frac{z - e^{i 3\pi/4}}{z^4+1}
+    = \lim_{z \to e^{i3\pi/4}} \frac{1}{4z^3} = \frac{e^{-i 9\pi/4}}{4}
+\\]
 So, we need to evaluate the denominators: \begin{align}
 b = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
 c = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
