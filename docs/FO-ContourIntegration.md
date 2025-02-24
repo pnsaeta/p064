@@ -138,7 +138,7 @@ $$z_0 = e^{i 3\pi/4}$$ is
 
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
-  J = 2 \pi i  e^{-i\pi/2} \left( e^{i\pi/4} + e^{-i\pi/4}  \right)
+  J = 2 \pi i  e^{-i\pi/2} \left( \frac{e^{i\pi/4} + e^{-i\pi/4}}{4}  \right)
 \end{equation}
 
 So, we need to evaluate the denominators: \begin{align}
