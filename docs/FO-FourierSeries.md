@@ -43,7 +43,7 @@ The method relies on a perhaps surprising but deep property of these trigonometr
     \sin\qty(\frac{2\pi n t}{T}) \qqtext{and}
     \cos\qty(\frac{2\pi n t}{T})
 \\]
-are orthogonal to one another under integration over a period:
+are orthogonal to one another **under integration over a period**:
 \begin{align}
   \int\_0^T \sin\qty(\frac{m 2\pi t}{T})
   \sin\qty(\frac{n 2\pi t}{T}) \dd{t} &= \begin{cases}  
