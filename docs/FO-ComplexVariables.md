@@ -261,7 +261,7 @@ The residue theorem establishes a method for evaluating integrals along closed p
 
 Sometimes it is necessary to use a modified integrand so that the difference between the two paths parallel to the $$x$$ axis yields the actual integral we seek to evaluate.
 
-## Computing Residues
+### Computing Residues
 
 The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the [Laurent expansion](#laurent-expansion). There are several ways to compute residues. The Laurent expansion of an $$n$$th-order pole at $$z_0$$ has the form
 \begin{equation}
