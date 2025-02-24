@@ -112,7 +112,7 @@ $$\phi \in \left\{\pi/4, 3\pi/4, 5\pi/4, 7\pi/4\right\}$$. The first two
 lie in the upper half-plane, so we need to calculate the residues at
 these two poles.
 
-Claim:
+**Claim:**
 $$z^4 + 1 = (z - e^{i\pi/4})(z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4})$$,
 since this product is fourth-order in $$z$$ and has zeros in all the
 right places. As a check, let's compute the $$z^3$$ term, which is
