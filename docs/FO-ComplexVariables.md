@@ -181,6 +181,8 @@ Provided that $$n \ne -1$$, the integral vanishes, since $$e^{i(n+1)\theta}$$ is
 \\]
 This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges. 
 
+### Laurent Expansion
+
 There is a generalization of a Taylor expansion appropriate for functions of a complex variable. It is
 \begin{equation}\label{eq:Laurent}
   f(z) = \sum_{n=-\infty}^{\infty} a_n (z-z_0)^n
