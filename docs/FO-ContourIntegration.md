@@ -120,6 +120,11 @@ $$z^3 (-e^{i\pi/4}-e^{3i\pi/4}-e^{5i\pi/4}-e^{7i\pi/4}) = 0$$, since the
 zeros are distributed symmetrically about the origin along the unit
 circle.
 
+To compute the residues, we can use
+\\[
+    a_{-1} = \lim_{z \to z_0} [f(z) (z-z_0)]
+\\]
+
 So, we need to evaluate the denominators: \begin{align}
 b = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
 c = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
