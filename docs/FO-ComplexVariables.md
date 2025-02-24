@@ -263,7 +263,7 @@ Sometimes it is necessary to use a modified integrand so that the difference bet
 
 ### Computing Residues
 
-The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the [Laurent expansion](#laurent-expansion). There are several ways to compute residues. The Laurent expansion of an $$n$$th-order pole at $$z_0$$ has the form
+The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the [Laurent expansion]( #laurent-expansion). There are several ways to compute residues. The Laurent expansion of an $$n$$th-order pole at $$z_0$$ has the form
 \begin{equation}
   f(z) = \sum_{j=-n}^{\infty} a_j (z-z_0)^j
 \end{equation}
