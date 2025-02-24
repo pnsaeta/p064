@@ -263,8 +263,8 @@ The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the Laurent exp
 \begin{equation}
   f(z) = \sum_{j=-n}^{\infty} a_j (z-z_0)^j
 \end{equation}
+If we multiply $$f(z)$$ by $$(z-z_0)^n$$
 
-1. 
 
 ## Problems
 
