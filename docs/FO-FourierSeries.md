@@ -233,7 +233,7 @@ and integrate from $$a$$ to $$b$$:
   (\lambda_1^\* - \lambda_2) \int_a^b u\_1^\* u_2 \dd{x}
 \end{align}
 
-The term on the left is called the **bilinear concomitant**. If we use the boundary condition $$u(a) = 0$$ or $$u'(a) = 0$$, and similarly at $$x = b$$, then the bilinear concomitant vanishes.
+The term on the left is called the **bilinear concomitant**. If we use the boundary condition $$u(a) = 0$$ or $$u'(a) = 0$$, and similarly at $$x = b$$, then the bilinear concomitant vanishes. Another way to make it vanish is with **periodic boundary conditions**, in which $$u(a) = u(b)$$ and $$u'(a) = u'(b)$$.
 
 Let us suppose that we do indeed impose such boundary conditions that make the bilinear concomitant vanish. If $$u_2$$ = $$u_1$$, then we get
 \begin{equation}\label{eq:BC0}
