@@ -266,8 +266,10 @@ The residue is the coefficient of the $$(z - z_0)^{-1}$$ term in the Laurent exp
 
 For a simple pole, the sum begins at $$n = -1$$. One strategy to compute the residue, then, is to multiply $$f(z)$$ by $$(z-z_0)$$ and take the limit as $$z \to z_0$$:
 \begin{equation}\label{eq:blah}
-  \lim_{z\to z_0} [f(z) (z-z_0)] = \lim_{z\to z_0} \left[ a_{-1} + a_0 (z-z_0) + a_1 (z-z_0)^2 + \cdots \right]
+  \lim_{z\to z_0} [f(z) (z-z_0)] = \lim_{z\to z_0} \left[ a_{-1} + a_0 (z-z_0) + a_1 (z-z_0)^2 + \cdots \right] = a_{-1}
 \end{equation}
+
+The series for a second-order pole begins with $$n = -2$$. If we multiply $$f(z)$$ by $$(z-z_0)^2$$ and then differentiate once with respect to $$z$$ before taking the limit as $$z \to z_0$$
 
 If we multiply $$f(z)$$ by $$(z-z_0)^n$$, we get
 \begin{equation}
