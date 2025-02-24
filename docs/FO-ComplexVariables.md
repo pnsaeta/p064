@@ -275,13 +275,9 @@ The series for a second-order pole begins with $$n = -2$$. If we multiply $$f(z)
   \lim_{z \to z_0} \dv{}{z}[f(z) (z-z_0)^2] &= \lim_{z \to z_0} [a_{-1} + 2 a_0 (z-z_0) + \cdots] = a_{-1}
 \end{align}
 
-If we multiply $$f(z)$$ by $$(z-z_0)^n$$, we get
+You can readily show by induction that for a $$n$$th-order pole,
 \begin{equation}
-  f(z) (z-z_0)^n = \sum_{k = 0}^\infty a_{k-n} (z-z_0)^k
-\end{equation}
-Taking $$n$$ derivatives, we get
-\begin{equation}\label{eq:}
-  \dv[n]{}{z} [f(z) (z-z_0)^n] = n! a_{-1} (z - z_0)
+  \lim_{z \to z_0} \dv[n-1]{}{z}[f(z) (z-z_0)^n] = a_{-1}
 \end{equation}
 
 
