@@ -151,6 +151,8 @@ and to use induction to show that
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
+Standard differentiable functions of a single real variable $$x$$ with which you are familiar are generally also differentiable on replacing the variable with a complex variable $$z = x + iy$$: trigonometric functions, exponential functions, powers, polynomials, logarithms. 
+
 ### A Non-differentiable Function of a Complex Variable
 
 However, it is possible to produce a very simple function that does not have a derivative. Consider
