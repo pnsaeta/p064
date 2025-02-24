@@ -268,6 +268,7 @@ For a simple pole, the sum begins at $$n = -1$$. One strategy to compute the res
 \begin{equation}\label{eq:blah}
   \lim_{z\to z_0} [f(z) (z-z_0)] = \lim_{z\to z_0} \left[ a_{-1} + a_0 (z-z_0) + a_1 (z-z_0)^2 + \cdots \right] = a_{-1}
 \end{equation}
+It may be helpful to use l'Hôpital’s rule in evaluating the limit.
 
 The series for a second-order pole begins with $$n = -2$$. If we multiply $$f(z)$$ by $$(z-z_0)^2$$ and then differentiate once with respect to $$z$$ before taking the limit as $$z \to z_0$$, we get
 \begin{align}
