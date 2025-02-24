@@ -127,6 +127,7 @@ To compute the residues, we can use
 The residue at $$z_0 = e^{i\pi/4}$$ is
 \\[
     a_{-1} = \lim_{z \to e^{i\pi/4}} \frac{z - e^{i\pi/4}}{z^4+1}
+    = \lim_{z \to e^{i\pi/4}} \frac{1}{4z^3}
 \\]
 
 So, we need to evaluate the denominators: \begin{align}
