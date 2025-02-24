@@ -245,7 +245,8 @@ Now let $$\lambda_1$$ differ from $$\lambda_2$$. Then
 \begin{equation}\label{eq:orthogonal}
   0 = (\lambda_1^* - \lambda_2) \int_a^b u_1^\* u_2 \, dx = (\lambda_1^* - \lambda_2) \langle u_1, u_2 \rangle
 \end{equation}
-Since, by assumption, the eigenvalues differ, the integral (inner product) must vanish. That is, the eigenfunctions corresponding to different eigenvalues are orthogonal in the sense defined by Eq.&nbsp;(\ref{eq:orthogonal}).
+Since, by assumption, the eigenvalues differ, the integral (inner product) must vanish. That is, 
+**the eigenfunctions corresponding to different eigenvalues are orthogonal**, in the sense defined by Eq.&nbsp;(\ref{eq:orthogonal}).
 
 ### Example
 
