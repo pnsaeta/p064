@@ -235,7 +235,7 @@ and integrate from $$a$$ to $$b$$:
 
 The term on the left is called the **bilinear concomitant**. If we use the boundary condition $$u(a) = 0$$ or $$u'(a) = 0$$, and similarly at $$x = b$$, then the bilinear concomitant vanishes. Another way to make it vanish is with **periodic boundary conditions**, in which $$u(a) = u(b)$$ and $$u'(a) = u'(b)$$.
 
-Let us suppose that we do indeed impose such boundary conditions that make the bilinear concomitant vanish. If $$u_2$$ = $$u_1$$, then we get
+Let us suppose that we do indeed impose such boundary conditions that make the bilinear concomitant vanish. If $$u_2(x) = u_1(x)$$, then we get
 \begin{equation}\label{eq:BC0}
   0 = (\lambda_1^\* - \lambda_1) \int_a^b |u_1(x)|^2 \, dx
 \end{equation}
