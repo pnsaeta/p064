@@ -156,11 +156,10 @@ The ones cancel and we're left with
 \\]
 as we found before. We can find $$b_{-1}$$ in the same way.
 
-3. 
-So, we need to evaluate the denominators:
+3. In $$(z - e^{i\pi/4})(z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4})$$, only one term goes to zero at each pole, so we just need to evaluate the denominators by multiplying together the three other terms:
 \begin{align}
-b = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
-c = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
+d_1 = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
+d_2 = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
 \end{align}
 
 Each term in the product is of the form $$t_{mn} = (e^{i m \pi/4} - e^{i n \pi/4})$$ for integer $$m$$ and $$n$$. If we factor out $$e^{i(m+n)\pi/8}$$, we get
