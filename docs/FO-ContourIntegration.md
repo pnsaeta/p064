@@ -170,17 +170,12 @@ Each term in the product is of the form $$t_{mn} = (e^{i m \pi/4} - e^{i n \pi/4
 
 Using this expression to evaluate the denominators, we have
 \begin{align}
-b &= t_{13} t_{15} t_{17} = (-2i)^3 e^{i(18)\pi/8}\sin(\pi/4) \sin(\pi/2) \sin(3\pi/4)
-= 8i e^{i\pi/4} \frac12 = 4i e^{i\pi/4} \\\ 
-c &= t_{31} t_{35} t_{37} = (-2i)^3 e^{i(22)\pi/8}\sin(-\pi/4) \sin(\pi/4) \sin(\pi/2)
-= 8i e^{i3\pi/4} \times -\frac12 = -4ie^{i3\pi/4}
+d_1 &= t_{13} t_{15} t_{17} = (-2i)^3 e^{i(18)\pi/8}\sin(\pi/4) \sin(\pi/2) \sin(3\pi/4)
+= 8i e^{i\pi/4} \frac12 = 4i e^{i\pi/4} = 4 e^{i 3\pi/4} \\\ 
+d_2 &= t_{31} t_{35} t_{37} = (-2i)^3 e^{i(22)\pi/8}\sin(-\pi/4) \sin(\pi/4) \sin(\pi/2)
+= 8i e^{i3\pi/4} \times -\frac12 = 4 e^{i\pi/4}
 \end{align}
-These values are the reciprocals of the residues, so
-\begin{equation}
-  J = 2 \pi i \left( \frac{e^{-i\pi/4}}{4i} - \frac{e^{-i 3\pi/4}}{4i} \right)
-  = \frac{\pi}{2} \left( \frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}} - \frac{-1}{\sqrt{2}} - \frac{-i}{\sqrt{2}} \right)
-  = \frac{\pi}{\sqrt{2}}
-\end{equation}
+These values are the reciprocals of the residues we found before.
 
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
