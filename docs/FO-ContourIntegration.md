@@ -157,6 +157,18 @@ The ones cancel and we're left with
 as we found before. We can find $$b_{-1}$$ in the same way.
 
 3. 
+So, we need to evaluate the denominators:
+\begin{align}
+b = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
+c = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
+\end{align}
+
+Each term in the product is of the form $$t_{mn} = (e^{i m \pi/4} - e^{i n \pi/4})$$ for integer $$m$$ and $$n$$. If we factor out $$e^{i(m+n)\pi/8}$$, we get
+\begin{equation}
+    t_{mn} = e^{i(m+n)\pi/8} \left\{ e^{i(m-n)\pi/8} - e^{-i(m-n)\pi/8} \right\}
+    = e^{i(m+n)\pi/8} (-2i) \sin \left(\frac{(n-m)\pi}{8}\right)
+\end{equation}
+Using this expression to evaluate the denominators, we have
 
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
