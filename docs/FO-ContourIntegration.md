@@ -198,7 +198,7 @@ np.pi / np.sqrt(2)
 
 You can readily see that the numerical integration agrees well with the exact value we obtained via contour integration.
 
-# Problems
+## Problems
 
 1. Evaluate $$\displaystyle \int_{0}^{\infty} \frac{1}{1 + x^6}\dd{x}$$.
 
