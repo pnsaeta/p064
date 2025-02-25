@@ -144,6 +144,11 @@ $$z_0 = e^{i 3\pi/4}$$ is
     = \lim_{z \to e^{i3\pi/4}} \frac{1}{4z^3} = \frac{e^{-i 9\pi/4}}{4} = \frac{e^{-i\pi/4}}{4}
 \\]
 
+2. For the second method, consider the residue as $$z \to e^{i\pi/4}$$. Let $$\zeta = z-e^{i\pi/4}$$. Then
+\\[
+    \frac{1}{z^4 + 1} = \frac{1}{(\zeta + e^{i\pi/4})^4 + 1}
+\\]
+
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
   J = 2 \pi i  e^{-i\pi/2} \left( \frac{e^{i\pi/4} + e^{-i\pi/4}}{4}  \right)
