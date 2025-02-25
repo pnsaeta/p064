@@ -113,7 +113,7 @@ lie in the upper half-plane, so we need to calculate the residues at
 these two poles.
 
 <p class="center" markdown="0">
-  <img src="figs/poles-of-z4.webp" style="width: 400px;" alt="Location of the poles">
+  <img src="figs/poles-of-z4.webp" style="width: 300px;" alt="Location of the poles">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Location of the poles of $$1/(z^4+1)$$. The dashed circle has radius 1.</p>
 
