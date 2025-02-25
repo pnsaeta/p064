@@ -204,4 +204,4 @@ You can readily see that the numerical integration agrees well with the exact va
 
 2. Show that $$\displaystyle \int_0^\infty \frac{\sin x}{x}\dd{x} = \frac{\pi}{2}$$.
 
-3. Show that $$\displaystyle  \int_0^\infty \sin x^2 \dd{x} = \int_0^\infty \cos x^2\dd{x} = \frac12 \sqrt{\frac{\pi}{2}}$$.
+3. Show that $$\displaystyle  \int_0^\infty \sin x^2 \dd{x} = \int_0^\infty \cos x^2\dd{x} = \frac12 \sqrt{\frac{\pi}{2}}$$. Hint: consider a path that returns to the origin along the line $$x = y$$.
