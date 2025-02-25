@@ -154,6 +154,9 @@ The ones cancel and we're left with
     \frac{1}{\zeta} \frac{1}{(4 e^{3i\pi/4} + \O{\zeta})} \qquad\longrightarrow\qquad
     a_{-1} = \frac{e^{-3i\pi/4}}{4}
 \\]
+as we found before. We can find $$b_{-1}$$ in the same way.
+
+3. 
 
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
