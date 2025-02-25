@@ -149,6 +149,10 @@ $$z_0 = e^{i 3\pi/4}$$ is
     \frac{1}{z^4 + 1} = \frac{1}{(e^{i\pi/4} + \zeta)^4 + 1} 
     = \frac{1}{-1 + 4 \zeta e^{3i\pi/4} + 6 \zeta^2 e^{i\pi/2} + 4 \zeta^3 e^{i\pi/4} + \zeta^4 + 1}
 \\]
+The ones cancel and we're left with 
+\\[
+    \frac{1}{\zeta} \frac{1}{(4\e^{3i\pi/4} + \O{\zeta})}
+\\]
 
 By the residue theorem, therefore,
 \begin{equation}\label{eq:voila}
