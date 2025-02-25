@@ -151,7 +151,8 @@ $$z_0 = e^{i 3\pi/4}$$ is
 \\]
 The ones cancel and we're left with 
 \\[
-    \frac{1}{\zeta} \frac{1}{(4 e^{3i\pi/4} + \O{\zeta})}
+    \frac{1}{\zeta} \frac{1}{(4 e^{3i\pi/4} + \O{\zeta})} \qquad\longrightarrow\qquad
+    a_{-1} = \frac{e^{-3i\pi/4}}{4}
 \\]
 
 By the residue theorem, therefore,
