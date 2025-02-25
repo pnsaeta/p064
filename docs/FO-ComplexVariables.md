@@ -282,10 +282,10 @@ The series for a second-order pole begins with $$n = -2$$. If we multiply $$f(z)
 
 You can readily show by induction that for a $$n$$th-order pole,
 \begin{equation}
-  \boxed{ \lim_{z \to z_0} \dv[n-1]{}{z}[f(z) (z-z_0)^n] = a_{-1} }
+  \boxed{ \lim_{z \to z_0} \frac{1}{(n-1)!} \dv[n-1]{}{z}[f(z) (z-z_0)^n] = a_{-1} }
 \end{equation}
 
-There are other approaches. If your function is the ratio of two functions for which you know the Taylor series, you can use series expansion to determine the coefficient of the $$z^{-1}$$ term.
+There are other approaches. If your function is the ratio of two functions for which you know the Taylor series, you can use series expansion to determine the coefficient of the $$z^{-1}$$ term. 
 
 ## Problems
 
