@@ -126,7 +126,9 @@ $$z^3 (-e^{i\pi/4}-e^{3i\pi/4}-e^{5i\pi/4}-e^{7i\pi/4}) = 0$$, since the
 zeros are distributed symmetrically about the origin along the unit
 circle.
 
-To compute the residues, we can use
+I will illustrate three different approaches to computing the residues.
+
+1. The first method is perhaps the most straightforward:
 \\[
     a_{-1} = \lim_{z \to z_0} [f(z) (z-z_0)]
 \\]
