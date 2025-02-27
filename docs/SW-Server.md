@@ -120,3 +120,52 @@ authorityKeyIdentifier = keyid,issuer
 basicConstraints       = CA:FALSE
 keyUsage               = digitalSignature, keyEncipherment
 ~~~~
+
+~~~~ shell
+HOME            = .
+RANDFILE        = $ENV::HOME/.rnd
+
+####################################################################
+[ req ]
+default_bits       = 2048
+default_keyfile    = serverkey.pem
+distinguished_name = server_distinguished_name
+req_extensions     = server_req_extensions
+string_mask        = utf8only
+
+####################################################################
+[ server_distinguished_name ]
+countryName                 = Country Name (2 letter code)
+countryName_default         = US
+
+stateOrProvinceName         = State or Province Name (full name)
+stateOrProvinceName_default = California
+
+localityName                = Locality Name (eg, city)
+localityName_default        = Claremont
+
+organizationName            = Organization Name (eg, company)
+organizationName_default    = PNS Chaos
+
+commonName                  = Common Name (e.g. server FQDN or YOUR name)
+commonName_default          = Self
+
+emailAddress                = Email Address
+emailAddress_default        = saeta@hmc.edu
+
+####################################################################
+[ server_req_extensions ]
+
+subjectKeyIdentifier = hash
+basicConstraints     = CA:FALSE
+keyUsage             = digitalSignature, keyEncipherment
+subjectAltName       = @alternate_names
+nsComment            = "OpenSSL Generated Certificate"
+
+####################################################################
+[ alternate_names ]
+
+DNS.1  = localhost
+DNS.2  = mysrc
+DNS.3  = djphys
+~~~~
