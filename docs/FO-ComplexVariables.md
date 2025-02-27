@@ -296,7 +296,7 @@ There are other approaches. If your function is the ratio of two functions for w
 \\[
     \dv{f(z)}{z} = \lim_{\delta z \to 0} \frac{f(z + \delta z)}{\delta z}
 \\] 
-to exist, its value must be independent of the manner in which $$\delta z = \delta x + i \delta y$$ goes to zero. That is, along which direction we approach the point $$z$$. This insight generated the Cauchy-Riemann conditions.
+to exist, its value must be independent of the manner in which $$\delta z = \delta x + i \delta y$$ goes to zero. That is, we must get the same value for the derivative regardless of the direction along which we approach the point $$z$$. This insight generated the Cauchy-Riemann conditions.
 
 2. 
 
