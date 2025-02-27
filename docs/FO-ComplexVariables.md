@@ -312,6 +312,8 @@ If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z
 
 6. Integrating around a pole at $$z_0$$ for which we can generate a Laurent series yields zero for *every* term in the series except the term $$a_{-1} (z-z_0)^{-1}$$, which yields $$2 \pi i a_{-1}$$. 
 
+7. The **residue theorem** says that the integral around a closed contour of a function that is analytic on and in the contour *except* at a finite number $$N$$ of poles in the interior of the contour is equal to $$2 \pi i$$ times the sum of the residues at the $$N$$ poles.
+
 ## Problems
 
 1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$. 
