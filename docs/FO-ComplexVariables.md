@@ -310,6 +310,8 @@ to exist, its value must be independent of the manner in which $$\delta z = \del
 \\]
 If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z_0$$, all coefficients $$a_n$$ in its Laurent series vanish for $$n < -1$$. 
 
+6. Integrating around a pole at $$z_0$$ for which we can generate a Laurent series yields zero for *every* term in the series except the term $$a_{-1} (z-z_0)^{-1}$$, which yields $$2 \pi i a_{-1}$$. 
+
 ## Problems
 
 1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$. 
