@@ -5,6 +5,47 @@
 * toc
 {:toc}
 
+I am using nginx and gunicorn to host local web pages. The nginx service may be launched by
+`brew services start nginx`, and it seems to get hosted by root for a reason that I haven't been able to figure out. Configuration files for nginx are located at `/opt/homebrew/etc/nginx/` and involve three pieces. The main file is `nginx.conf`
+
+~~~~ shell
+
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+	add_header Content-Security-Policy "frame-ancestors localhost djphys";
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+	include       /opt/homebrew/etc/nginx/sites-enabled/*;
+
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+    #keepalive_timeout  0;
+    keepalive_timeout  15;
+    include servers/*;
+}
+~~~~
+
 To enable https for local web serving with multiple Django apps, it was
 necessary to generate a self-signed certificate with multiple SANs, to get it
 properly installed and respected by the system, and then configure both nginx
