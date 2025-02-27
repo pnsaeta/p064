@@ -35,13 +35,9 @@ http {
 
 	include       /opt/homebrew/etc/nginx/sites-enabled/*;
 
-
-    #access_log  logs/access.log  main;
-
     sendfile        on;
     #tcp_nopush     on;
-    #keepalive_timeout  0;
-    keepalive_timeout  15;
+    keepalive_timeout 15;
     include servers/*;
 }
 ~~~~
