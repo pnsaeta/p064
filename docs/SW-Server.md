@@ -16,6 +16,8 @@ do the trick:
 
 **/opt/homebrew/etc/ssl/cmds**
 
+To save a bit on typing as I went around and around, I put the openssl commands in a short script file.
+
 ~~~~ shell
 #! /bin/bash
 
