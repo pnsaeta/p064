@@ -302,7 +302,7 @@ to exist, its value must be independent of the manner in which $$\delta z = \del
 
 3. A pole is a location at which the function diverges (and the derivative fails to exist). A simple pole at the origin is proportional to $$1/z$$ as $$z \to 0$$. A second-order pole is proportional to $$1/z^2$$ as $$z \to 0$$, etc. If the pole is located at $$z_0$$, then a simple pole has the form $$a_{-1} / (z - z_0)$$ as $$z \to z_0$$, etc.
 
-4. The integral of $$a_n z^{-n}$$ around the origin is zero for integral $$n, unless $$n = 1$$. If $$n = -1$$, the integral is $$2\pi i a_{-1}$$. The coefficient $$a_{-1}$$ is called the residue.
+4. The integral of $$a_n z^{-n}$$ around the origin is zero for integral $$n$$, unless $$n = 1$$. If $$n = -1$$, the integral is $$2\pi i a_{-1}$$. The coefficient $$a_{-1}$$ is called the residue.
 
 5. A Laurent series expansion is a generalization of a Taylor series about a point $$z_0$$:
 \\[
