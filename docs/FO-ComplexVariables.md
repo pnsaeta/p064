@@ -289,6 +289,15 @@ You can readily show by induction that for a $$n$$th-order pole,
 
 There are other approaches. If your function is the ratio of two functions for which you know the Taylor series, you can use series expansion to determine the coefficient of the $$z^{-1}$$ term. 
 
+
+## Summary
+
+1. For the derivative of a function of a complex variable,
+\\[
+    \dv{f(z)}{z} = \lim_{\delta z \to 0} \frac{f(z + \delta z)}{\delta z}
+\\] 
+to exist, its value must be independent of the manner in which
+
 ## Problems
 
 1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$. 
