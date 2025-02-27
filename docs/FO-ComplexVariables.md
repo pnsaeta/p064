@@ -308,7 +308,7 @@ to exist, its value must be independent of the manner in which $$\delta z = \del
 \\[
     f(z) = \sum_{n=-\infty}^\infty a_n (z - z_0)^n
 \\]
-For a simple (first-order) pole at $$z_0$$, all coefficients $$a_n$$ vanish for $$n < -1$$.
+If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z_0$$, all coefficients $$a_n$$ in its Laurent series vanish for $$n < -1$$. 
 
 ## Problems
 
