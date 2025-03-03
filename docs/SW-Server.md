@@ -5,6 +5,9 @@
 * toc
 {:toc}
 
+
+## Nginx
+
 I am using nginx and gunicorn to host local web pages. The nginx service may be launched by
 `brew services start nginx`, and it seems to get hosted by root for a reason that I haven't been able to figure out. Configuration files for nginx are located at `/opt/homebrew/etc/nginx/` and involve three pieces. The main file is `nginx.conf`
 
@@ -38,6 +41,7 @@ http {
 ~~~~
 
 The Content-Security-Policy header is necessary to allow the search page from static pages in `~/www/p064` to query `djphys` and display results.
+
 
 The `sites-enabled` directory has soft links to configuration files in `sites-available`, which are `base.conf`, `mysrc.conf`, and `djphys.conf`. The base configuration services files with autoindex on from `~/www/`.
 
