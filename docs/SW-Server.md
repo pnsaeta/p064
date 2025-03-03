@@ -82,26 +82,25 @@ server {
     include snippets/self-signed.conf;
     include snippets/ssl-params.conf;
 
-	add_header X-Frame-Options SAMEORIGIN always;
     http2 on;
 
     access_log /Users/saeta/www/logs/dj-ssl-access.log main;
     error_log /Users/saeta/www/logs/dj-ssl-error.log info;
 
     location / {
-		proxy_ssl_name $host;
-		proxy_ssl_server_name on;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_ssl_name $host;
+        proxy_ssl_server_name on;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_set_header Host $http_host;
-		proxy_redirect off;
+        proxy_redirect off;
         proxy_pass https://djphys-django;
     }
 
     location /static/ {
-	    root /Users/saeta/Code/djphys;
-		autoindex on;
-	}
+        root /Users/saeta/Code/djphys;
+        autoindex on;
+    }
 }
 ~~~~
 
@@ -147,6 +146,7 @@ server {
     }
 }
 ~~~~
+
 ### https
 
 To enable https for local web serving with multiple Django apps, it was
