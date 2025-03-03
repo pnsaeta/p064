@@ -49,6 +49,40 @@ The Content-Security-Policy header is necessary to allow the search page from st
 
 The `sites-enabled` directory has soft links to configuration files in `sites-available`, which are `base.conf`, `mysrc.conf`, and `djphys.conf`. The base configuration services files with autoindex on from `~/www/`.
 
+#### base.conf
+
+~~~~ shell
+server {
+    listen 80;
+    server_name localhost;
+
+    access_log /Users/saeta/www/logs/lh-access.log main;
+    error_log /Users/saeta/www/logs/lh-error.log warn;
+
+    location / {
+        root /Users/saeta/www/;
+        autoindex on;
+    }
+}
+
+server {
+    listen	443 ssl;
+    server_name localhost;
+    include snippets/self-signed.conf;
+    include snippets/ssl-params.conf;
+
+    http2 on;
+
+    access_log /Users/saeta/www/logs/lh-ssl-access.log main;
+    error_log /Users/saeta/www/logs/lh-ssl-error.log warn;
+
+    location / {
+        root /Users/saeta/www;
+        autoindex on;
+    }
+}
+~~~~
+
 #### djphys.conf
 
 ~~~~ shell
