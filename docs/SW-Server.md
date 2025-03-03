@@ -353,3 +353,25 @@ DNS.3  = djphys
 #### Installation in nginx
 
 Now that the self-signed certificate and its originating authority are generated and installed in the appropriate directories, we need to make sure nginx can find them. There is a snippet file that site configuration can include to handle this at `/opt/homebrew/etc/ssl/snippets/self-signed.conf` and another that handles SSL parameters in `/opt/homebrew/etc/ssl/snippets/ssl-params.conf`:
+
+~~~~ shell
+ssl_certificate /opt/homebrew/etc/ssl/certs/servercert.pem;
+ssl_certificate_key /opt/homebrew/etc/ssl/private/serverkey.pem;
+
+# and
+
+ssl_protocols TLSv1.1 TLSv1.2;
+ssl_prefer_server_ciphers on;
+ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
+ssl_ecdh_curve secp384r1;
+ssl_session_cache shared:SSL:10m;
+ssl_session_tickets off;
+ssl_stapling on;
+ssl_stapling_verify on;
+resolver 8.8.8.8 8.8.4.4 valid=300s;
+resolver_timeout 5s;
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
+add_header X-Frame-Options DENY;
+add_header X-Content-Type-Options nosniff;
+ssl_dhparam /opt/homebrew/etc/ssl/certs/dhparam.pem;
+~~~~
