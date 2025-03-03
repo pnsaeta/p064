@@ -9,7 +9,6 @@ I am using nginx and gunicorn to host local web pages. The nginx service may be 
 `brew services start nginx`, and it seems to get hosted by root for a reason that I haven't been able to figure out. Configuration files for nginx are located at `/opt/homebrew/etc/nginx/` and involve three pieces. The main file is `nginx.conf`
 
 ~~~~ shell
-
 #user  nobody;
 worker_processes  1;
 
