@@ -49,6 +49,8 @@ The Content-Security-Policy header is necessary to allow the search page from st
 
 The `sites-enabled` directory has soft links to configuration files in `sites-available`, which are `base.conf`, `mysrc.conf`, and `djphys.conf`. The base configuration services files with autoindex on from `~/www/`.
 
+### https
+
 To enable https for local web serving with multiple Django apps, it was
 necessary to generate a self-signed certificate with multiple SANs, to get it
 properly installed and respected by the system, and then configure both nginx
