@@ -105,6 +105,48 @@ server {
 }
 ~~~~
 
+
+#### mysrc.conf
+
+~~~~ shell
+upstream mysrc-django {
+    server 127.0.0.1:9000;
+}
+
+server {
+    listen 80;
+    server_name mysrc;
+
+    access_log /Users/saeta/www/logs/my-access.log main;
+    error_log /Users/saeta/www/logs/my-error.log warn;
+
+    location / {
+        proxy_pass http://mysrc-django;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+    location /static/ {
+        root /Users/saeta/www/mysrc;
+    }
+}
+
+server {
+    listen	443 ssl;
+    server_name mysrc;
+    include snippets/self-signed.conf;
+    include snippets/ssl-params.conf;
+
+    location / {
+        proxy_pass https://mysrc-django;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /static/ {
+        root /Users/saeta/www/mysrc;
+    }
+}
+~~~~
 ### https
 
 To enable https for local web serving with multiple Django apps, it was
