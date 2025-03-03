@@ -375,3 +375,7 @@ add_header X-Frame-Options DENY;
 add_header X-Content-Type-Options nosniff;
 ssl_dhparam /opt/homebrew/etc/ssl/certs/dhparam.pem;
 ~~~~
+
+## Gunicorn
+
+The interface with Django is provided by `gunicorn`. Each instance needs its own python environment, so I created a `~/.virtualenvs/py13` for `mysrc` and `~/.virtualenvs/django` for `djphys`.
