@@ -349,3 +349,7 @@ DNS.1  = localhost
 DNS.2  = mysrc
 DNS.3  = djphys
 ~~~~
+
+#### Installation in nginx
+
+Now that the self-signed certificate and its originating authority are generated and installed in the appropriate directories, we need to make sure nginx can find them. There is a snippet file that site configuration can include to handle this at `/opt/homebrew/etc/ssl/snippets/self-signed.conf` and another that handles SSL parameters in `/opt/homebrew/etc/ssl/snippets/ssl-params.conf`:
