@@ -394,3 +394,5 @@ keyfile = '/opt/homebrew/etc/ssl/private/serverkey.pem'
 certfile = '/opt/homebrew/etc/ssl/certs/servercert.pem'
 ca_certs = '/opt/homebrew/etc/ssl/certs/cacert.pem'
 ~~~~
+
+The final three entries are necessary for gunicorn to handle https connections; it inherits nothing from nginx.
