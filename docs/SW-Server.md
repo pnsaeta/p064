@@ -396,3 +396,20 @@ ca_certs = '/opt/homebrew/etc/ssl/certs/cacert.pem'
 ~~~~
 
 The final three entries are necessary for gunicorn to handle https connections; it inherits nothing from nginx.
+
+### djphys
+
+The configuration for djphys is in `~/Code/djphys/gunicorn_conf.py`:
+
+~~~~ python
+from djphys.wsgi import application
+
+bind = "djphys:9001"
+errorlog = '/Users/saeta/www/logs/dj-gun-error.log'
+accesslog = '/Users/saeta/www/logs/dj-gun-access.log'
+loglevel = 'info'
+workers = 3
+keyfile = '/opt/homebrew/etc/ssl/private/serverkey.pem'
+certfile = '/opt/homebrew/etc/ssl/certs/servercert.pem'
+ca_certs = '/opt/homebrew/etc/ssl/certs/cacert.pem'
+~~~~
