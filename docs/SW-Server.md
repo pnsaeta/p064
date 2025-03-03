@@ -49,6 +49,62 @@ The Content-Security-Policy header is necessary to allow the search page from st
 
 The `sites-enabled` directory has soft links to configuration files in `sites-available`, which are `base.conf`, `mysrc.conf`, and `djphys.conf`. The base configuration services files with autoindex on from `~/www/`.
 
+#### djphys.conf
+
+~~~~ shell
+upstream djphys-django {
+    server 127.0.0.1:9001;
+}
+
+server {
+    listen 80;
+    server_name djphys;
+
+    access_log /Users/saeta/www/logs/dj-access.log main;
+    error_log /Users/saeta/www/logs/dj-error.log warn;
+	add_header X-Frame-Options SAMEORIGIN always;
+
+    location / {
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Host $http_host;
+	    proxy_pass http://djphys-django;
+    }
+
+    location /static/ {
+	    root /Users/saeta/Code/djphys;
+	}
+
+}
+
+server {
+    listen	443 ssl;
+    server_name djphys;
+    include snippets/self-signed.conf;
+    include snippets/ssl-params.conf;
+
+	add_header X-Frame-Options SAMEORIGIN always;
+    http2 on;
+
+    access_log /Users/saeta/www/logs/dj-ssl-access.log main;
+    error_log /Users/saeta/www/logs/dj-ssl-error.log info;
+
+    location / {
+		proxy_ssl_name $host;
+		proxy_ssl_server_name on;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+		proxy_redirect off;
+        proxy_pass https://djphys-django;
+    }
+
+    location /static/ {
+	    root /Users/saeta/Code/djphys;
+		autoindex on;
+	}
+}
+~~~~
+
 ### https
 
 To enable https for local web serving with multiple Django apps, it was
