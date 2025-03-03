@@ -11,9 +11,6 @@ I am using nginx and gunicorn to host local web pages. The nginx service may be 
 ~~~~ shell
 #user  nobody;
 worker_processes  1;
-
-#error_log  logs/error.log;
-#error_log  logs/error.log  notice;
 error_log  logs/error.log  info;
 
 #pid        logs/nginx.pid;
@@ -21,7 +18,6 @@ error_log  logs/error.log  info;
 events {
     worker_connections  1024;
 }
-
 
 http {
     include       mime.types;
