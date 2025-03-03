@@ -37,6 +37,8 @@ http {
 }
 ~~~~
 
+The Content-Security-Policy header is necessary to allow the search page from static pages in `~/www/p064` to query `djphys` and display results.
+
 The `sites-enabled` directory has soft links to configuration files in `sites-available`, which are `base.conf`, `mysrc.conf`, and `djphys.conf`. The base configuration services files with autoindex on from `~/www/`.
 
 To enable https for local web serving with multiple Django apps, it was
