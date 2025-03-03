@@ -414,3 +414,18 @@ certfile = '/opt/homebrew/etc/ssl/certs/servercert.pem'
 ca_certs = '/opt/homebrew/etc/ssl/certs/cacert.pem'
 ~~~~
 
+## /etc/hosts
+
+Finally, so that the virtual hosting stuff actually works, I needed to edit the `/etc/hosts` file to define aliases for localhost:
+
+~~~~ shell
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost djphys mysrc
+255.255.255.255	broadcasthost
+::1             localhost
+~~~~
