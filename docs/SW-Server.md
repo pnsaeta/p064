@@ -22,13 +22,13 @@ events {
 http {
     include       mime.types;
     default_type  application/octet-stream;
-	add_header Content-Security-Policy "frame-ancestors localhost djphys";
+    add_header Content-Security-Policy "frame-ancestors localhost djphys";
 
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
 
-	include       /opt/homebrew/etc/nginx/sites-enabled/*;
+    include       /opt/homebrew/etc/nginx/sites-enabled/*;
 
     sendfile        on;
     #tcp_nopush     on;
