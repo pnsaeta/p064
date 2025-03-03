@@ -378,4 +378,19 @@ ssl_dhparam /opt/homebrew/etc/ssl/certs/dhparam.pem;
 
 ## Gunicorn
 
-The interface with Django is provided by `gunicorn`. Each instance needs its own python environment, so I created a `~/.virtualenvs/py13` for `mysrc` and `~/.virtualenvs/django` for `djphys`.
+The interface with Django is provided by `gunicorn`. Each instance needs its own python environment, so I created a `~/.virtualenvs/py13` for `mysrc` and `~/.virtualenvs/django` for `djphys`. Each environment needs gunicorn installed and each needs a gunicorn configuration file.
+
+### mysrc
+
+The configuration for `mysrc` is located in `~/www/mysrc/gunicorn.conf.py`:
+
+~~~~ python
+bind = "127.0.0.1:9000"
+errorlog = '/Users/saeta/www/logs/mysrc-gun-error.log'
+accesslog = '/Users/saeta/www/logs/mysrc-gun-access.log'
+loglevel = 'info'
+workers = 3
+keyfile = '/opt/homebrew/etc/ssl/private/serverkey.pem'
+certfile = '/opt/homebrew/etc/ssl/certs/servercert.pem'
+ca_certs = '/opt/homebrew/etc/ssl/certs/cacert.pem'
+~~~~
