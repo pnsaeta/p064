@@ -122,6 +122,7 @@ That is, we integrate just short of the pole on the negative side, and pick up j
 We can evaluate this integral via contour integration if we can identify a path that allows us to close the contour without changing the value of the integral. As before, let us consider a semicircle at radius $$R$$ in the upper half-plane. Along that path, $$\omega = R e^{i \phi}$$, so the contribution to the contour integral would be
 \\[
     h_{\text{semicircle}} = \int_0^\pi \frac{e^{i T R(\cos\phi + i\sin\phi)}}{Re^{i\phi}} \; R i e^{i\phi}\dd{\phi}
+    = \int_0^\pi e^{-TR\sin\phi} e^{iTR\cos\phi} i\dd{\phi}
 \\]
 
 , although we have to make a slight detour around the pole at $$\omega = 0$$.
