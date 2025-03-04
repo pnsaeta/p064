@@ -115,8 +115,7 @@ Cauchy worried about this issue and defined the **Cauchy principal value** of th
   \lim_{\epsilon \to 0} \frac{1}{2\pi i} \left( \int_{-\infty}^{-\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega} +\int^{\infty}_{\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega}
   \right)
 \end{equation}
-
-. That is, we integrate just short of the pole on the negative side, and pick up just after the pole on the positive side. In view of the fact that the integrand looks odd in the neighborhood of the origin, we might expect the explosion to cancel by symmetry.
+That is, we integrate just short of the pole on the negative side, and pick up just after the pole on the positive side. In view of the fact that the integrand looks odd in the neighborhood of the origin, we might expect the explosion to cancel by symmetry.
 
  We can evaluate this integral via contour integration, although we have to make a slight detour around the pole at $$\omega = 0$$, which lies directly on the path of integration.
 Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, because the integrand goes exponentially to zero as the radius of the semicircle approaches infinity. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
