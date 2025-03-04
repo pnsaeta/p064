@@ -124,6 +124,7 @@ We can evaluate this integral via contour integration if we can identify a path 
     h_{\text{semicircle}} = \int_0^\pi \frac{e^{i T R(\cos\phi + i\sin\phi)}}{Re^{i\phi}} \; R i e^{i\phi}\dd{\phi}
     = \int_0^\pi e^{-TR\sin\phi} e^{iTR\cos\phi} i\dd{\phi}
 \\]
+In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term goes exponentially to zero along the path, while the second one just oscillates extremely rapidly in phase. Therefore, as $$R \to \infty$$, $$h_{\text{semicircle}} \to 0$$.
 
 , although we have to make a slight detour around the pole at $$\omega = 0$$.
 Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, because the integrand goes exponentially to zero as the radius of the semicircle approaches infinity. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
