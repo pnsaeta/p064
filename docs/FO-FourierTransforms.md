@@ -108,13 +108,15 @@ This function, $$g(t)$$, is the sum of two functions of the basic form
 \\[
   h(T) = \frac{1}{2\pi i} \int_{-\infty}^{\infty} \frac{e^{i\omega T}}{\omega} \dd{\omega}
 \\]
-for some value of $$T$$. We can evaluate this integral via contour integration, although we have to make a slight detour around the pole at $$\omega = 0$$, which lies directly on the path of integration.
+for some value of $$T$$. However, the pole at $$\omega \to 0$$ lies smack-dab on the path of integration. 
 
 The **Cauchy principal value** of the integral is defined by
 \begin{equation}\label{eq:CPV}
   \lim_{\epsilon \to 0} \frac{1}{2\pi i} \left( \int_{-\infty}^{-\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega} +\int^{\infty}_{\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega}
   \right)
 \end{equation}
+
+ We can evaluate this integral via contour integration, although we have to make a slight detour around the pole at $$\omega = 0$$, which lies directly on the path of integration.
 Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, because the integrand goes exponentially to zero as the radius of the semicircle approaches infinity. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
 \begin{equation}\label{eq:detour}
   \int \frac{e^{i\omega T}}{\omega} \dd{\omega} = \int_\pi^0 \frac{e^{i\omega T}}{\epsilon e^{i\phi}} i\epsilon e^{i\phi}\dd{\phi} = -\int_0^\pi e^{i \epsilon T(\cos\phi + i\sin\phi)} i \dd{\phi}
