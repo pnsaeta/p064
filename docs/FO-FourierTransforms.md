@@ -135,7 +135,7 @@ In the limit as $$\epsilon \to 0$$, the integral is equal to $$-i\pi$$. That is,
 </p>
 <p class="icap" markdown="1"><a name="avoidance">Figure 2</a> — The pole at the origin lies directly on the contour. We consider distorting the contour in a tiny semicircle in the neighborhood of the origin, as suggested in the figure.</p>
 
-> Of course, we could have distorted the contour to go around the pole in the positive direction by making a little semicircle *underneath* the pole, which would then have rendered the pole entirely in the contour. However, we then need to subtract the contribution we get by integrating around the tiny semicircle, which would be $$\frac{1}{2\pi i} (i\pi) = \frac12$$, from the full value of the pole, which is 1, which gives the same final answer of $$h(T) = \frac12$$.
+> Of course, we could have distorted the contour to go around the pole in the positive direction by making a little semicircle *underneath* the pole, which would then have rendered the pole entirely in the contour. However, we then need to subtract the contribution we get by integrating around the tiny semicircle, which would be $$\frac{1}{2\pi i} (i\pi) = \frac12$$, from the full value of the pole, which is 1, which gives the same final answer of $$h(T) = \frac12$$ for $$T > 0$$.
 
 You can readily show that if $$T < 0$$, we must close in the lower half-plane, meaning that we need to traverse the contour in the negative direction. Of course, the pole has the same residue, so we get $$h(T) = -\frac12$$ in this case.
 
