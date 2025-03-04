@@ -119,15 +119,20 @@ Cauchy worried about this issue and defined the **Cauchy principal value** of th
 \end{equation}
 That is, we integrate just short of the pole on the negative side, and pick up just after the pole on the positive side. In view of the fact that the integrand looks odd in the neighborhood of the origin, we might expect the explosion to cancel by symmetry.
 
-We can evaluate this integral via contour integration if we can identify a path that allows us to close the contour without changing the value of the integral. As before, let us consider a semicircle at radius $$R$$ in the upper half-plane. Along that path, $$\omega = R e^{i \phi}$$, so the contribution to the contour integral would be
+We can evaluate this integral via contour integration if we can identify a path that allows us to close the contour without changing the value of the integral. As before, let us consider a semicircle at radius $$R$$ in the upper half-plane, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>. Along that path, $$\omega = R e^{i \phi}$$, so the contribution to the contour integral would be
 \\[
     h_{\text{semicircle}} = \int_0^\pi \frac{e^{i T R(\cos\phi + i\sin\phi)}}{Re^{i\phi}} \; R i e^{i\phi}\dd{\phi}
     = \int_0^\pi e^{-TR\sin\phi} e^{iTR\cos\phi} i\dd{\phi}
 \\]
 In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term goes exponentially to zero along the path, while the second one just oscillates extremely rapidly in phase. Therefore, as $$R \to \infty$$, $$h_{\text{semicircle}} \to 0$$.
 
-, although we have to make a slight detour around the pole at $$\omega = 0$$.
-Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, because the integrand goes exponentially to zero as the radius of the semicircle approaches infinity. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
+<p class="center" markdown="0">
+  <img src="figs/pvalue.webp" style="width: 400px;">
+</p>
+<p class="icap" markdown="1"><a name="avoidance">Figure 2</a> — The pole at the origin lies directly on the contour. We consider distorting the contour in a tiny semicircle in the neighborhood of the origin, as suggested in the figure.</p>
+
+To avoid ploughing through the pole at the origin, we have to make a slight detour around $$\omega = 0$$.
+Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, as we have argued above. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
 \begin{equation}\label{eq:detour}
   \int \frac{e^{i\omega T}}{\omega} \dd{\omega} = \int_\pi^0 \frac{e^{i\omega T}}{\epsilon e^{i\phi}} i\epsilon e^{i\phi}\dd{\phi} = -\int_0^\pi e^{i \epsilon T(\cos\phi + i\sin\phi)} i \dd{\phi}
 \end{equation}
@@ -139,10 +144,7 @@ In the limit as $$\epsilon \to 0$$, the integral is equal to $$-i\pi$$. That is,
 
 
 
-<p class="center" markdown="0">
-  <img src="figs/pvalue.webp" style="width: 400px;">
-</p>
-<p class="icap" markdown="1"><a name="avoidance">Figure 2</a> — The pole at the origin lies directly on the contour. We consider distorting the contour in a tiny semicircle in the neighborhood of the origin, as suggested in the figure.</p>
+
 
 > Of course, we could have distorted the contour to go around the pole in the positive direction by making a little semicircle *underneath* the pole, which would then have rendered the pole entirely in the contour. However, we then need to subtract the contribution we get by integrating around the tiny semicircle, which would be $$\frac{1}{2\pi i} (i\pi) = \frac12$$, from the full value of the pole, which is 1, which gives the same final answer of $$h(T) = \frac12$$ for $$T > 0$$.
 
