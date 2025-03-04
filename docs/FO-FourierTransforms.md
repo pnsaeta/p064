@@ -108,9 +108,9 @@ This function, $$g(t)$$, is the sum of two functions of the basic form
 \\[
   h(T) = \frac{1}{2\pi i} \int_{-\infty}^{\infty} \frac{e^{i\omega T}}{\omega} \dd{\omega}
 \\]
-for some value of $$T$$. However, the pole at $$\omega \to 0$$ lies smack-dab on the path of integration. 
+for some value of $$T$$. However, the pole at $$\omega \to 0$$ lies smack-dab on the path of integration, which would appear to be a problem.
 
-The **Cauchy principal value** of the integral is defined by
+Cauchy worried about this issue and defined the **Cauchy principal value** of the integral via
 \begin{equation}\label{eq:CPV}
   \lim_{\epsilon \to 0} \frac{1}{2\pi i} \left( \int_{-\infty}^{-\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega} +\int^{\infty}_{\epsilon} \frac{e^{i\omega T}}{\omega} \dd{\omega}
   \right)
