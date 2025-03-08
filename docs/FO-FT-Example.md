@@ -56,7 +56,7 @@ Let $$\omega_1 \equiv \sqrt{\omega_0^2 - \beta^2}$$. For an under-damped system,
 
 Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the other hand, if $$t > t'$$, we must close the contour in the LHP, which means that we traverse the contour in the negative direction and that we enclose the two poles. Hence, for $$t > t'$$ we get
 \begin{equation}\label{eq:G}
-  G(t'-t) = -2 \pi i \times \sum \text{residues}
+  G(t'-t) = \frac{-2 \pi i}{2\pi m} \times \sum \text{residues}
 \end{equation}
 We may write the integrand as
 \\[
