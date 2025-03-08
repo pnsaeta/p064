@@ -51,4 +51,5 @@ Where are the poles? At the zeros of $$\omega^2 + 2 \beta i \omega - \omega_0^2$
 \\[
     \omega_{\pm} = -i\beta \pm \sqrt{-\beta^2 + \omega_0^2}
 \\]
+For an under-damped system, the radical is real, so the poles lie in the LHP.
 
