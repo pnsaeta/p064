@@ -28,3 +28,7 @@ You can readily verify that each time derivative brings down another factor of $
 \begin{equation}\label{eq:FTDDSHO}
   [(-i\omega)^2 - 2 \beta i \omega + \omega_0^2] \tilde{x}(\omega) = \frac1m \tilde{F}_0(\omega)
 \end{equation}
+Solving for $$\tilde{x}$$, we have
+\begin{equation}\label{eq:xtilde}
+  \tilde{x}(\omega) = \frac{\tilde{F_0}/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
+\end{equation}
