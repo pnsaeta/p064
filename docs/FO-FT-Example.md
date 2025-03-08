@@ -70,4 +70,5 @@ from which we infer that the residues are
 with sum
 \\[
     \frac{e^{-\beta(t'-t)}}{\omega_1} \frac{e^{i\omega_1(t'-t)} - e^{-i\omega_1(t'-t)}}{2}
+    = i \frac{e^{-\beta(t'-t)}{\omega_1} \sin(\omega_1(t'-t))
 \\]
