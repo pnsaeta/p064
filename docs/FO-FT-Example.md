@@ -20,3 +20,7 @@ In Engineering 79, you may have solved this equation using Laplace transforms. H
     \int_{-\infty}^{\infty} \dot{x} e^{i\omega t} \dd{t} =
     x e^{i\omega t} \bigg|\_{-\infty}^{\infty} - \int_{-\infty}^{\infty} x (i\omega) e^{i\omega t}\dd{t}
 \\]
+Assuming that $$x(t)$$ goes to zero as $$t \to \pm \infty$$, the integrated term vanishes and we get
+\\[
+    \text{FT} \dot{x} = -i\omega \tilde{x}(\omega)
+\\]
