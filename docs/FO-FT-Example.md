@@ -14,3 +14,8 @@ where $$b$$ is the linear damping constant and $$m\omega_0^2 = k$$ is the spring
 \begin{equation}\label{eq:DDSHO2}
   \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = \frac{F_0(t)}{m}
 \end{equation}
+
+In Engineering 79, you may have solved this equation using Laplace transforms. Here, we will use the Fourier transform. To take the Fourier transform, let us first take the transform of $$\dot{x}$$:
+\\[
+    \int_{-\infty}^{\infty} \dot{x} e^{i\omega t} \dd{t}
+\\]
