@@ -32,3 +32,7 @@ Solving for $$\tilde{x}$$, we have
 \begin{equation}\label{eq:xtilde}
   \tilde{x}(\omega) = \frac{\tilde{F_0}/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
 \end{equation}
+where
+\\[
+    \tilde{F}_0(\omega) = \int\_{-\infty}^{\infty} F\_0(t) e^{i\omega t}\dd{t}
+\\]
