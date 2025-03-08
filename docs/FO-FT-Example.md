@@ -58,3 +58,7 @@ Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the ot
 \begin{equation}\label{eq:G}
   G(t'-t) = -2 \pi i \times \sum \text{residues}
 \end{equation}
+We may write the integrand as
+\\[
+    \frac{e^{i\omega(t'-t)}}{(\omega - \omega_+)(\omega - \omega_-)}
+\\]
