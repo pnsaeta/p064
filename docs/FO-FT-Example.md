@@ -75,7 +75,7 @@ with sum
 so that
 \\[
     G(t'-t) = \begin{cases}
-      \frac{2\pi e^{-\beta(t'-t)}}{\omega_1} \sin(\omega_1(t'-t)) & t > t' \\\ 
+      \frac{e^{-\beta(t'-t)}}{m\omega_1} \sin(\omega_1(t'-t)) & t > t' \\\ 
       0 & t < t'
     \end{cases}
 \\]
