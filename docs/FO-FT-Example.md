@@ -43,5 +43,5 @@ Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's posit
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'} \dd{\omega}
   \\\ 
-  &= \int_{-\infty}^{\infty}\dd{t'} \frac{F_0(t')}{m} \; \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
+  &= \frac{1}{2\pi m} \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
 \end{align}
