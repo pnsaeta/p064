@@ -54,4 +54,7 @@ Where are the poles? At the zeros of $$\omega^2 + 2 \beta i \omega - \omega_0^2$
 \\]
 Let $$\omega_1 \equiv \sqrt{\omega_0^2 - \beta^2}$$. For an under-damped system, the radical is real, so the poles lie in the LHP at $$-i\beta \pm \omega_1$$. 
 
-Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$.
+Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the other hand, if $$t > t'$$, we must close the contour in the LHP, which means that we traverse the contour in the negative direction and that we enclose the two poles. Hence, for $$t > t'$$ we get
+\begin{equation}\label{eq:G}
+  G(t'-t) = -2 \pi i \times \sum \text{residues}
+\end{equation}
