@@ -106,4 +106,6 @@ Its Fourier transform is
     \\\ 
     &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} - 
     \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega + \Omega}\bigg]
+    \\\ 
+    &= F_0 \Omega \frac{e^{i 2 \pi N \omega/\Omega}-1}{\omega^2 - \Omega^2}
 \end{align}
