@@ -18,5 +18,5 @@ where $$b$$ is the linear damping constant and $$m\omega_0^2 = k$$ is the spring
 In Engineering 79, you may have solved this equation using Laplace transforms. Here, we will use the Fourier transform. To take the Fourier transform, let us first take the transform of $$\dot{x}$$:
 \\[
     \int_{-\infty}^{\infty} \dot{x} e^{i\omega t} \dd{t} =
-    x e^{i\omega t} \bigg|_{-\infty}^{\infty} - \int_{-\infty}^{\infty} x (i\omega) e^{i\omega t}\dd{t}
+    x e^{i\omega t} \bigg|\_{-\infty}^{\infty} - \int_{-\infty}^{\infty} x (i\omega) e^{i\omega t}\dd{t}
 \\]
