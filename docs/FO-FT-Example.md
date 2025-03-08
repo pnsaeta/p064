@@ -81,7 +81,7 @@ so that
 \end{equation}
 and
 \begin{equation}\label{eq:convo}
-  x(t) = \int_{-\infty}^{\infty} F_0(t') G(t-t') \dd{t'}
+  x(t) = \int_{-\infty}^{t} F_0(t') G(t-t') \dd{t'}
 \end{equation}
 
-The actual response of the oscillator, $$x(t)$$, is the convolution of $$F_0$$ and $$G$$. The Green's function, $$G(t'-t)$$ describes the contribution to the motion of the oscillator at time $$t$$ after it has been given a unit impulse at time $$t'$$.
+In other words, the actual response of the oscillator, $$x(t)$$, is the convolution of $$F_0$$ and $$G$$. The Green's function, $$G(t-t')$$ describes the contribution to the motion of the oscillator at time $$t$$ after it has been given a unit impulse at (the earlier) time $$t'$$.
