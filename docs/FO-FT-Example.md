@@ -46,7 +46,7 @@ Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's posit
   &= \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; 
   \underbrace{ \frac{1}{2\pi m} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{-i\omega(t-t')}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t-t')}
 \end{align}
-where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t'-t > 0$$) or the lower half-plane (if $$t'-t < 0$$). 
+where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t' > t$$) or the lower half-plane (if $$t' < t$$). 
 
 Where are the poles? At the zeros of $$\omega^2 + 2 \beta i \omega - \omega_0^2$$, which are
 \\[
