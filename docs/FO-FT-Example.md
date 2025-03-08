@@ -113,5 +113,5 @@ Its Fourier transform is
 By the convolution theorem, then,
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{F_0 \Omega}{m} 
-  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i2\piN\omega/\Omega}-1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
+  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i2\pi N\omega/\Omega}-1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
