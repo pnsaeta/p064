@@ -44,7 +44,7 @@ Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's posit
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'} \dd{\omega}
   \\\ 
   &= \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; 
-  \underbrace{ \frac{1}{2\pi m} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t'-t)}
+  \underbrace{ \frac{1}{2\pi m} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t-t')}
 \end{align}
 where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t'-t > 0$$) or the lower half-plane (if $$t'-t < 0$$). 
 
@@ -56,7 +56,7 @@ Let $$\omega_1 \equiv \sqrt{\omega_0^2 - \beta^2}$$. For an under-damped system,
 
 Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the other hand, if $$t > t'$$, we must close the contour in the LHP, which means that we traverse the contour in the negative direction and that we enclose the two poles. Hence, for $$t > t'$$ we get
 \begin{equation}\label{eq:G}
-  G(t'-t) = \frac{-2 \pi i}{2\pi m} \times \sum \text{residues}
+  G(t-t') = \frac{-2 \pi i}{2\pi m} \times \sum \text{residues}
 \end{equation}
 We may write the integrand as
 \\[
@@ -73,11 +73,15 @@ with sum
     = i \frac{e^{-\beta(t'-t)}}{\omega_1} \sin(\omega_1(t'-t))
 \\]
 so that
-\\[
+\begin{equation}
     G(t'-t) = \begin{cases}
       \displaystyle\frac{e^{-\beta(t'-t)}}{m\omega_1} \sin\big[\omega_1(t'-t)\big] & t > t' \\\ 
       0 & t < t'
     \end{cases}
-\\]
+\end{equation}
+and
+\begin{equation}\label{eq:convo}
+  x(t) = \int_{-\infty}^{\infty} F_0(t') G(t'-t)
+\end{equation}
 
 The actual response of the oscillator, $$x(t)$$, is the convolution of $$F_0$$ and $$G$$. The Green's function, $$G(t'-t)$$ describes the contribution to the motion of the oscillator at time $$t$$ after it has been given a unit impulse at time $$t'$$.
