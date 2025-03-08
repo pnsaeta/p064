@@ -31,10 +31,13 @@ You can readily verify that each time derivative brings down another factor of $
 Solving for $$\tilde{x}$$, we have
 \begin{equation}\label{eq:xtilde}
   \tilde{x}(\omega) = \frac{\tilde{F_0}/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
+  = \tilde{F}_0(\omega) \tilde{G}(\omega)
 \end{equation}
 where
 \\[
     \tilde{F}_0(\omega) = \int\_{-\infty}^{\infty} F\_0(t) e^{i\omega t}\dd{t}
+    \qquad\text{and}\qquad
+    \tilde{G}(\omega) = \frac{1/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
 \\]
 
 ## Returning to the time domain
