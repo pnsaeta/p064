@@ -41,7 +41,7 @@ where
 
 Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's position in terms of the Fourier transform of the forcing function $$F_0(t)$$. To see the behavior of the oscillator in the time domain, we now need to take the inverse Fourier transform:
 \begin{align}
-  x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'}
+  x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'} \dd{\omega}
   \\\ 
   &=
 \end{align}
