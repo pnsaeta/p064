@@ -60,7 +60,7 @@ Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the ot
 \end{equation}
 We may write the integrand as
 \\[
-    \frac{e^{-i\omega(t-t')}}{(\omega - \omega_+)(\omega - \omega_-)}
+    -\frac{e^{-i\omega(t-t')}}{(\omega - \omega_+)(\omega - \omega_-)}
 \\]
 from which we infer that the residues are
 \\[
