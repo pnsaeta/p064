@@ -85,3 +85,13 @@ and
 \end{equation}
 
 In other words, the actual response of the oscillator, $$x(t)$$, is the convolution of $$F_0$$ and $$G$$. The Green's function, $$G(t-t')$$ describes the contribution to the motion of the oscillator at time $$t$$ after it has been given a unit impulse at (the earlier) time $$t'$$.
+
+## Example
+
+Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates for $$N$$ cycles:
+\\[
+    F(t) = \begin{cases}
+      F_0 \sin(\Omega t) & 0 < t < \frac{2 \pi N}{\Omega} \\\ 
+      0 & \text{otherwise}
+    \end{cases}
+\\]
