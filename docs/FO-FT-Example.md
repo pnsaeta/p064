@@ -104,6 +104,6 @@ Its Fourier transform is
     \\\ 
     &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
     \\\ 
-    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N/\Omega}-1}{\omega-\Omega} - 
-    \frac{e^{i 2\pi N/\Omega}-1}{\omega-\Omega}\bigg]
+    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} - 
+    \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega}\bigg]
 \end{align}
