@@ -101,5 +101,9 @@ Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates 
 Its Fourier transform is
 \begin{align}
     \tilde{F}(\omega) &= \int_{0}^{2 \pi N/\Omega} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
-    = \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
+    \\\ 
+    &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
+    \\\ 
+    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N/\Omega}-1}{\omega-\Omega} - 
+    \frac{e^{i 2\pi N/\Omega}-1}{\omega-\Omega}\bigg]
 \end{align}
