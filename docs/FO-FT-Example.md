@@ -22,5 +22,5 @@ In Engineering 79, you may have solved this equation using Laplace transforms. H
 \\]
 Assuming that $$x(t)$$ goes to zero as $$t \to \pm \infty$$, the integrated term vanishes and we get
 \\[
-    \text{FT} \dot{x} = -i\omega \tilde{x}(\omega)
+    \text{FT} (\dot{x}) = -i\omega \tilde{x}(\omega)
 \\]
