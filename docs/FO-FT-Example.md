@@ -109,3 +109,5 @@ Its Fourier transform is
     \\\ 
     &= F_0 \Omega \frac{e^{i 2 \pi N \omega/\Omega}-1}{\omega^2 - \Omega^2}
 \end{align}
+
+By the convolution theorem, 
