@@ -24,4 +24,7 @@ Assuming that $$x(t)$$ goes to zero as $$t \to \pm \infty$$, the integrated term
 \\[
     \text{FT} (\dot{x}) = -i\omega \tilde{x}(\omega)
 \\]
-You can readily verify that each time derivative brings down another factor of $$(-i\omega)$$, so that the Fourier transform of Eq.&nbsp;(\ref{eq:DDSHO2})
+You can readily verify that each time derivative brings down another factor of $$(-i\omega)$$, so that the Fourier transform of Eq.&nbsp;(\ref{eq:DDSHO2}) is
+\begin{equation}\label{eq:FTDDSHO}
+  [(-i\omega)^2 - 2 \beta i \omega + \omega_0^2] \tilde{x}(\omega) = \frac1m \tilde{F}_0(\omega)
+\end{equation}
