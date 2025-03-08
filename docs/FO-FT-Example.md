@@ -43,8 +43,8 @@ Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's posit
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'} \dd{\omega}
   \\\ 
-  &= \frac{1}{2\pi m} \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; 
-  \underbrace{\int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t'-t)}
+  &= \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; 
+  \underbrace{ \frac{1}{2\pi m} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{i\omega(t'-t)}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t'-t)}
 \end{align}
 where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t'-t > 0$$) or the lower half-plane (if $$t'-t < 0$$). 
 
