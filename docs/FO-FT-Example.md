@@ -72,3 +72,10 @@ with sum
     \frac{e^{-\beta(t'-t)}}{\omega_1} \frac{e^{i\omega_1(t'-t)} - e^{-i\omega_1(t'-t)}}{2}
     = i \frac{e^{-\beta(t'-t)}}{\omega_1} \sin(\omega_1(t'-t))
 \\]
+so that
+\\[
+    G(t'-t) = \begin{cases}
+      \frac{2\pi e^{-\beta(t'-t)}}{\omega_1} \sin(\omega_1(t'-t)) & t > t' \\\ 
+      0 & t < t'
+    \end{cases}
+\\]
