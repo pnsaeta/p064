@@ -98,3 +98,7 @@ Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates 
       0 & \text{otherwise}
     \end{cases}
 \\]
+Its Fourier transform is
+\\[
+    \tilde{F}(\omega) = \int_{0}^{2 \pi N/\Omega} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
+\\]
