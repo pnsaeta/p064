@@ -62,3 +62,8 @@ We may write the integrand as
 \\[
     \frac{e^{i\omega(t'-t)}}{(\omega - \omega_+)(\omega - \omega_-)}
 \\]
+from which we infer that the residues are
+\\[
+    \frac{e^{i\omega_+(t'-t)}}{(\omega_+ -\omega_-)} \qquad\text{and}\qquad
+    \frac{e^{i\omega_-(t'-t)}}{\omega_- - \omega_+}
+\\]
