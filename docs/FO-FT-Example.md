@@ -49,6 +49,6 @@ where I have interchanged the order of integration. To perform the integration o
 
 Where are the poles? At the zeros of $$\omega^2 + 2 \beta i \omega - \omega_0^2$$, which are
 \\[
-    \omega_{\pm} = \frac{-i\beta \pm \sqrt{-\beta^2 + \omega_0^2}}{1}
+    \omega_{\pm} = -i\beta \pm \sqrt{-\beta^2 + \omega_0^2}
 \\]
 
