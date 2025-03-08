@@ -36,3 +36,7 @@ where
 \\[
     \tilde{F}_0(\omega) = \int\_{-\infty}^{\infty} F\_0(t) e^{i\omega t}\dd{t}
 \\]
+
+## Returning to the time domain
+
+Equation (\ref{eq:FTDDSHO})
