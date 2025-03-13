@@ -248,3 +248,5 @@ You can readily see that the numerical integration agrees well with the exact va
 3. Show that $$\displaystyle  \int_0^\infty \sin x^2 \dd{x} = \int_0^\infty \cos x^2\dd{x} = \frac12 \sqrt{\frac{\pi}{2}}$$. Hint: consider a path that returns to the origin along the line $$x = y$$.
 
 4. Show that $$\displaystyle \int_0^{2\pi} \cos^{2n}\theta\dd{\theta} = \frac{1\cdot3\cdot5\cdots(2n-1)}{2\cdot4\cdots(2n)} 2\pi$$ for $$n = 1, 2, 3, \ldots$$.
+
+5. If $$f(z) = u(x,y) + i v(x,y)$$ is analytic in a region, prove that $$u$$ and $$v$$ are harmonic in the region. A harmonic function satisfies $$\displaystyle \pdv[2]{g}{x}$$.
