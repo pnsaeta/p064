@@ -237,7 +237,7 @@ As you can probably guess from this output, the Bernoulli numbers for odd $$n \g
 <p class="center" markdown="0">
   <img src="figs/Fresnel.webp" style="width: 600px;" alt="Geometry for Fresnel diffraction">
 </p>
-<p class="icap" markdown="1"><a name="Fign">Figure n</a> — </p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Geometry of Fresnel diffraction, where $$|x| \ll s_0$$ and the cosine of the angle between $$s_0$$ and $$x$$ is $$x_s / s_0$$.</p>
 
 
 Compute $$s - s_{0}$$ **to second order in $$x$$**, where the law of cosines gives
