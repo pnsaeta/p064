@@ -1,7 +1,6 @@
 {:menu FO}
 
 
-
 # Fourier Transforms
 
 * toc
