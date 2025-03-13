@@ -234,3 +234,4 @@ which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a func
 \begin{equation}
   (\Delta t)^2 = \frac{\displaystyle \int_{-\infty}^{\infty}  t^2 |E(t)|^2 \dd{t}}{\displaystyle \int_{-\infty}^{\infty}  |E(t)|^2 \dd{t}}
 \end{equation}
+where the integral in the denominator is for proper normalization. Calculate $$\Delta t$$ and the corresponding uncertainty in frequency, $$\Delta \omega$$. How does the uncertainty product for a hyperbolic secant pulse, $$(\Delta \omega)(\Delta t)$$, compare to the value of $$1/2$$ obtained for a gaussian?
