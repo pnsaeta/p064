@@ -226,4 +226,8 @@ By extension, the autocorrelation of a function with itself satisfies
 \end{equation}
 which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a function describes how self-similar it is at various delays.
 
-# Problem
+# Problems
+
+1. Show that the Fourier transform of a hyperbolic secant function, $$f(x) = \frac{1}{\cosh x}$$ is also a hyperbolic secant.
+
+2. The 
