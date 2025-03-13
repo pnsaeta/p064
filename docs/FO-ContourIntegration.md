@@ -253,4 +253,4 @@ You can readily see that the numerical integration agrees well with the exact va
 
 6. Evaluate $$\displaystyle \oint_C \frac{e^z}{(z^2+\pi^2)^2}\dd{z}$$ where $$C$$ is the circle $$|z|=6$$.
 
-7. Evaluate $$\displaystyle \frac{1}{2\pi i} \oint_C \frac{e^{zt}}{(z^2+1)^2}\dd{z}$$ if $$t > 0$$ and $$ C $$ is the circle $$ | z | =3 $$ .
+7. Evaluate $$\displaystyle \frac{1}{2\pi i} \oint_C \frac{e^{zt}}{(z^2+1)^2}\dd{z}$$ if $$t > 0$$ and $$ C $$ is the circle $$ \| z | =3 $$ .
