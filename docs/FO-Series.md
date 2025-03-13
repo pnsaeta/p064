@@ -235,19 +235,18 @@ As you can probably guess from this output, the Bernoulli numbers for odd $$n \g
   we need the difference between $$s$$ and $$s_{0}$$ in the following figure:
 
 <p class="center" markdown="0">
-  <img src="figs/Fresnel.webp" style="width: 400px;" alt="Geometry for Fresnel diffraction">
+  <img src="figs/Fresnel.webp" style="width: 600px;" alt="Geometry for Fresnel diffraction">
 </p>
 <p class="icap" markdown="1"><a name="Fign">Figure n</a> — </p>
-    
 
 
-  Compute $$s - s_{0}$$ \textbf{to second order in $$x$$}, where the law of cosines gives
-  \begin{equation*}
+Compute $$s - s_{0}$$ **to second order in $$x$$**, where the law of cosines gives
+\begin{equation}
 	s^{2} = s_{0}^{2} + x^{2} - 2 x x_{s}
-  \end{equation*}
+\end{equation}
   and $$x_{s}$$ is a constant. That is, you may ignore terms proportional to
   $$x^{3}$$ or any higher power of $$x$$.
-\end{kproblem}
+
 
 <!---
 ## Possible Problems
