@@ -225,3 +225,5 @@ By extension, the autocorrelation of a function with itself satisfies
   ] = |\tilde{f}(\omega)|^2
 \end{equation}
 which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a function describes how self-similar it is at various delays.
+
+# Problem
