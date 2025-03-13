@@ -230,4 +230,4 @@ which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a func
 
 1. Show that the Fourier transform of a hyperbolic secant function, $$f(x) = \displaystyle\frac{1}{\cosh x}$$ is also a hyperbolic secant.
 
-2. The  
+2. Consider a short laser pulse of the form $$E(t) = E_0 \sech (t/\tau)$$.
