@@ -230,4 +230,7 @@ which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a func
 
 1. Show that the Fourier transform of a hyperbolic secant function, $$f(x) = \displaystyle\frac{1}{\cosh x}$$ is also a hyperbolic secant.
 
-2. Consider a short laser pulse of the form $$E(t) = E_0 \sech (t/\tau)$$.
+2. Consider a short laser pulse of the form $$E(t) = E_0 \sech (t/\tau)$$. The uncertainty in the temporal location of a photon in this pulse is given by
+\begin{equation}
+  (\Delta t)^2 = \frac{\displaystyle \int_{-\infty}^{\infty}  t^2 |E(t)|^2 \dd{t}}{\displaystyle \int_{-\infty}^{\infty}  |E(t)|^2 \dd{t}}
+\end{equation}
