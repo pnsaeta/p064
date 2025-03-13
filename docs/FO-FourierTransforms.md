@@ -188,7 +188,7 @@ Another example function that arises in physics with this property is the hyperb
     f(t) = \frac{A}{\cosh (t/\tau)} = A \sech(t/\tau)
 \\]
 
-# Convolution
+## Convolution
 
 The **convolution** of functions $$f(t)$$ and $$g(t)$$ is defined by
 \begin{equation}\label{eq:convolution}
@@ -211,7 +211,7 @@ then
 \end{align}
 That is, **the Fourier transform of the convolution is the product of the Fourier transforms**. This result is known as the **convolution theorem**.
 
-# Correlation
+## Correlation
 
 The **correlation** of functions $$f(t)$$ and $$g(t)$$ is closely related to the convolution operation just described. It is defined by
 \begin{equation}\label{eq:correlation}
@@ -226,7 +226,7 @@ By extension, the autocorrelation of a function with itself satisfies
 \end{equation}
 which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a function describes how self-similar it is at various delays.
 
-# Problems
+## Problems
 
 1. Show that the Fourier transform of a hyperbolic secant function, $$f(x) = \frac{1}{\cosh x}$$ is also a hyperbolic secant.
 
