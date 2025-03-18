@@ -98,7 +98,7 @@ ax.plot(np.cumsum(better), lw=0.5)
 <p class="center" markdown="0">
   <img src="figs/ST-MyRNG.webp" style="width: 400px;" alt="Cumulative sum for a simple xorshift random number generator">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — Cumulative sum for a simple xorshift random number generator.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Cumulative sum for a simple xorshift random number generator.</p>
 
 
 Of course, for more efficient work in Python, you should use the built-in functions:
