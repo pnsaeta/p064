@@ -86,7 +86,7 @@ The set of three integers (21, 35, 4) make a good xorshift random number generat
 ~~~~ python
 from numpy random import default_rng
 
-rng = default_rng() # instatiate the default random number generator
+rng = default_rng() # instantiate the default random number generator
 rng.random(size=40) # generate an array of 40 uniform deviates
 ~~~~
 
