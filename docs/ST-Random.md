@@ -110,6 +110,10 @@ rng = default_rng() # instantiate the default random number generator
 rng.random(size=40) # generate an array of 40 uniform deviates
 ~~~~
 
+<p class="center" markdown="0">
+  <img src="figs/ST-default-rng.webp" style="width: 400px;" alt="Cumulative sum of the numpy default random number generator">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Cumulative sum using numpy's `default_rng()`.</p>
 
 
 
