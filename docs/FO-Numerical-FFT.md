@@ -35,7 +35,7 @@ The result of these commands is shown in <a href="#Fig1">Figure&nbsp;1</a>.
 
 
 <p class="center" markdown="0">
-  <img src="figs/FFT1.webp" style="width: 400px;">
+  <img src="figs/fft1.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A simple periodic function, defined in Eq.&nbsp;(\ref{eq:fft1}). The dots show the sampled values; the lines are a guide to the eye.</p>
 
@@ -56,7 +56,7 @@ fig.align_ylabels(axs);
 
 
 <p class="center" markdown="0">
-  <img src="figs/FFT2.webp" style="width: 500px;">
+  <img src="figs/fft2.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The output of the `fft` command on the input 128-point array plotted in <a href="#1">Figure&nbsp;1</a>.</p>
 
