@@ -141,7 +141,7 @@ So how does it work? Let $$W = e^{2\pi i / N}$$ so that
 \begin{equation}\label{eq:ffta}
   g_k = \sum_{n=0}^{N-1} e^{2\pi i n k/N} f_n = \sum_{n=0}^{N-1} W^{nk} f_n
 \end{equation}
-where $$W = e^{2\pi i/N}$$. The basis of the algorithm is the Danielson-Lanczos Lemma, which factors Eq.&nbsp;(\ref{eq:ffta}) into a sum over the even indices and a sum over the odd indices:
+The basis of the algorithm is the Danielson-Lanczos Lemma, which factors Eq.&nbsp;(\ref{eq:ffta}) into a sum over the even indices and a sum over the odd indices:
 \begin{align}
   g_k &= \sum_{j=0}^{N/2-1} \qty[ W^{2kj} f_{2j} + W^{k(2j+1)} f_{2j+1} ]\notag \\\ 
   &= g_k^{\rm even} + W^k g_k^{\rm odd} \notag
