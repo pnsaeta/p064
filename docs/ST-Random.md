@@ -86,7 +86,7 @@ class MyRNG:
         return 2 * v - 1
 ~~~~
 
-The set of three integers (21, 35, 4) make a good xorshift random number generator. Other sets of three shift integers are certainly possible, as discussed in *Numerical Recipes*. 
+The set of three integers (21, 35, 4) make a good xorshift random number generator. Other sets of three shift integers are certainly possible, as discussed in *Numerical Recipes*.
 
 ~~~~ python
 mrng = MyRNG()
