@@ -86,7 +86,22 @@ class MyRNG:
         return 2 * v - 1
 ~~~~
 
-The set of three integers (21, 35, 4) make a good xorshift random number generator. Other sets of three shift integers are certainly possible, as discussed in *Numerical Recipes*. Of course, for more efficient work in Python, you should use the built-in functions:
+The set of three integers (21, 35, 4) make a good xorshift random number generator. Other sets of three shift integers are certainly possible, as discussed in *Numerical Recipes*. 
+
+~~~~ python
+mrng = MyRNG()
+better = [mrng.zero for n in range(1000000)]
+fig, ax = plt.subplots()
+ax.plot(np.cumsum(better), lw=0.5)
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/ST-MyRNG.webp" style="width: 400px;" alt="Cumulative sum for a simple xorshift random number generator">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — Cumulative sum for a simple xorshift random number generator.</p>
+
+
+Of course, for more efficient work in Python, you should use the built-in functions:
 
 ~~~~ python
 from numpy random import default_rng
