@@ -71,14 +71,19 @@ import numpy as np
 class MyRNG:
     def __init__(self, seed=184738293):
         assert isinstance(seed, int) and seed != 0
-        self._x = np.array([seed], dtype=np.unint64)
+        self._x = np.array([seed], dtype=np.uint64)
     
     def int(self):
         self._x = self._x ^ (self._x >> 21)
         self._x = self._x ^ (self._x << 35)
         self._x = self._x ^ (self._x >> 4)
         return self._x
-    
+
+    @property
+    def zero(self):
+        n = self.int()
+        v = (n & 0x00FFFFFF) / 0x01000000
+        return 2 * v - 1
 ~~~~
 
 The set of three integers (21, 35, 4) make a good xorshift random number generator. Other sets of three shift integers are certainly possible, as discussed in *Numerical Recipes*. Of course, for more efficient work in Python, you should use the built-in functions:
