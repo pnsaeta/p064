@@ -44,14 +44,14 @@ class LCG:
         return self.x / self.m
     
     @property
-    def zero(self):
+    def zero_mean(self):
         return 2 * self() - 1
 
 # Now create a poorly designed MLCG and test it
 
 poor = LCG(899, 0, 32768)
-lousy = [poor.zero for n in range(33333)]
-fig, ax = lt.subplots()
+lousy = [poor.zero_mean for n in range(33333)]
+fig, ax = plt.subplots()
 ax.plot(np.cumsum(lousy));
 ~~~~
 
@@ -80,7 +80,7 @@ class MyRNG:
         return self._x
 
     @property
-    def zero(self):
+    def zero_mean(self):
         n = self.int()
         v = (n & 0x00FFFFFF) / 0x01000000
         return 2 * v - 1
