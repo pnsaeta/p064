@@ -149,7 +149,7 @@ axs[1].set_xlabel("$y$");
 <p class="center" markdown="0">
   <img src="figs/ST-xform.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Histograms of one million uniform deviates $$x$$ (left) and the corresponding exponential deviates transformed via $$y = -\ln x$$ (right).</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Histograms of one million uniform deviates $$x$$ (left) and the corresponding exponential deviates transformed via $$y = -\ln x$$ (right).</p>
 
 ## Normal Deviates
 
