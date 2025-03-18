@@ -52,7 +52,7 @@ class LCG:
 poor = LCG(899, 0, 32768)
 lousy = [poor.zero_mean for n in range(33333)]
 fig, ax = plt.subplots()
-ax.plot(np.cumsum(lousy));
+ax.plot(np.cumsum(lousy), lw=0.5);
 ~~~~
 
 <p class="center" markdown="0">
