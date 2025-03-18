@@ -25,7 +25,7 @@ A workhorse random number generator must pass a battery of tests of randomness. 
 \\[
     \chi^2 = \sum_{n=1}^{N} \frac{(y_n - E_n)^2}{E_n}
 \\]
-where $$E_n$$ is the expected number of counts we expect to observe in the $$n$$th bin and $$y_n$$ is the actual number of counts observed. Roughly speaking, we expect $$\chi^2$$ to be about $$N$$.
+where $$E_n$$ is the number of counts we expect to observe in the $$n$$th bin and $$y_n$$ is the actual number of counts observed. Roughly speaking, we expect $$\chi^2$$ to be about $$N$$.
 
 There are plenty of others, as mentioned in *Numerical Recipes*, which references the "Diehard" battery of statistical tests with the caveat to be sure that said Diehard includes the so-called "Gorilla Test." How's that for colorful?!
 
