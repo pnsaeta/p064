@@ -227,7 +227,7 @@ where $$\tau$$ is the sampling period. Signals at frequencies greater than the N
 </p>
 <p class="icap" markdown="1"><a name="Fig6">Figure 6</a> — Illustration of aliasing. The blue curve represents the true source signal, the red dots show the actual samples, and the dashed red curve shows the sine wave we can infer from the discrete samples: it oscillates way more slowly than the true signal.</p>
 
-All is not lost, however. If you can pass your signal through a low-pass filter that eliminates frequencies above the Nyquist frequency, then you can take advantage of an absolutely amazing theorem called **the sampling theorem**. If you are sampling a **bandwidth limited** signal (meaning that it has no Fourier components above the Nyquist frequency), then the function is faithfully represented by the evenly spaced samples. The function is fully characterized by its samples $$f_n = f(n \, \tau)$$ via
+All is not lost, however. If you can pass your signal through a low-pass filter that eliminates frequencies above the Nyquist frequency, then you can take advantage of an absolutely amazing theorem called **the sampling theorem**. If you are sampling a **bandwidth-limited** signal (meaning that it has no Fourier components above the Nyquist frequency), then the function is faithfully represented by the evenly spaced samples. The function is fully characterized by its samples $$f_n = f(n \, \tau)$$ via
 \begin{equation}\label{eq:sampling}
   f(t) = \sum_{n=-\infty}^{\infty} f_n \frac{\sin \qty[2\pi \nu_{\rm Nyquist} (t - n \, \tau)]}{2\pi \nu_{\rm Nyquist} (t - n\, \tau)}
 \end{equation}
