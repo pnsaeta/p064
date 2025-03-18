@@ -11,7 +11,7 @@
 
 There are many situations in which we wish to use random numbers to solve problems, either because the underlying physical processes have an element of randomness or because the parameter space is too large to sample exhaustively. The starting point for a variety of random distributions is the uniform deviate, such as a random integer between 0 and some maximum value $$N$$. Starting in 1949, a particularly simple sort of "random" number generator was used to approximate truly random numbers. It is called a **linear congruential generator (LCG)** and has the simple form
 \begin{equation}\label{eq:LCG}
-  I_{j+1} = (a I_j + c) \mathrm{mod} \; m
+  I_{j+1} = (a I_j + c) \; \mathrm{mod} \; m
 \end{equation}
 with carefully chosen multiplier $$a$$, constant $$c$$, and modulus $$m$$ to make the period equal to the modulus. If the constant $$c$$ is zero, it is called a **multiplicative linear congruential generator (MLCG)**. Both approaches are **obsolete**; **do not use them!** They tend to produce values that lie on distinct hyperplanes in multidimensional space. We'll illustrate a problem using a MLCG in the next section.
 
