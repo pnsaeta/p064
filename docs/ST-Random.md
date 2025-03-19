@@ -56,9 +56,9 @@ ax.plot(np.cumsum(lousy), lw=0.5);
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-LCG-test.webp" style="width: 700px;">
+  <img src="figs/ST-LCG-test.webp" style="width: 800px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator and the associated value of $$\chi^2$$.</p>
 
 
 ## Xorshift
