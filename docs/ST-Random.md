@@ -56,7 +56,7 @@ ax.plot(np.cumsum(lousy), lw=0.5);
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-LCG.webp" style="width: 500px;">
+  <img src="figs/ST-LCG-test.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period.</p>
 
