@@ -251,6 +251,6 @@ You can readily see that the numerical integration agrees well with the exact va
 
 5. If $$f(z) = u(x,y) + i v(x,y)$$ is analytic in a region, prove that $$u$$ and $$v$$ are harmonic in the region. A harmonic function $$g(x,y)$$ is one that satisfies $$\displaystyle \pdv[2]{g}{x} + \pdv[2]{g}{y} = 0$$.
 
-6. Evaluate $$\displaystyle \oint_C \frac{e^z}{(z^2+\pi^2)^2}\dd{z}$$ where $$C$$ is the circle $$|z|=6$$.
+6. Evaluate $$\displaystyle \oint_C \frac{e^z}{(z^2+\pi^2)^2}\dd{z}$$ where $$C$$ is the circle $$\| z \|=6$$.
 
 7. Evaluate $$\displaystyle \frac{1}{2\pi i} \oint_C \frac{e^{zt}}{(z^2+1)^2}\dd{z}$$ if $$t > 0$$ and $$ C $$ is the circle $$ \| z \| =3 $$ .
