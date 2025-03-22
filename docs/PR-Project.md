@@ -20,12 +20,12 @@ Each team of 3 (or so) of you will develop code to simulate a system or to compu
 
 ## Schedule
 
-+ Week 11: (3/28) form teams and tentatively identify topic
-+ Week 12: (4/4) read appropriate background information; gather thoughts about how to code your simulation
-+ Week 13: (4/11) conference on project approach and getting going
-+ Week 14: (4/18) coding
-+ Week 15: (4/25) analyzing and preparing for presentation
-+ Week 16: (5/3) project presentations in Shanahan 2475 starting at 9 am. Each project will have 20 minutes.
++ Week 11: (4/1) form teams and tentatively identify topic
++ Week 12: (4/8) read appropriate background information; gather thoughts about how to code your simulation
++ Week 13: (4/15) conference on project approach and getting going
++ Week 14: (4/22) coding
++ Week 15: (4/29) analyzing and preparing for presentation
++ Week 16: (5/7) project presentations; details to follow.
 
 <!-- comment 
 <table class="nicetable" style="width: 350px;">
