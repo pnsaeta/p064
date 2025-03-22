@@ -103,7 +103,7 @@ plt.subplots_adjust(bottom=0.15)
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/fft3.webp" style="width: 400px;">
+  <img src="figs/fft3.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The same data as in the previous figure, but now plotted against an honest frequency axis computed by `fftfreq`.</p>
 
