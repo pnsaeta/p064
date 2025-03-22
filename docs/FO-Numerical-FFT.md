@@ -222,7 +222,7 @@ If the data aren't sampled fast enough, the discrete samples will not be able to
 \begin{equation}\label{eq:Nyquist}
   \nu_{\rm Nyquist} = \frac{1}{2 \, \tau}
 \end{equation}
-where $$\tau$$ is the sampling period. Signals at frequencies greater than the Nyquist frequency are **aliased** to frequencies at the Nyquist frequency of lower. Aliasing can cause major headaches when your signal has high-frequency components that exceed the Nyquist frequency.
+where $$\tau$$ is the sampling period. Signals at frequencies greater than the Nyquist frequency are **aliased** to frequencies at the Nyquist frequency or lower. Aliasing can cause major headaches when your signal has high-frequency components that exceed the Nyquist frequency.
 
 <p class="center" markdown="0">
   <img src="figs/FT-alias.webp" style="width: 500px;">
