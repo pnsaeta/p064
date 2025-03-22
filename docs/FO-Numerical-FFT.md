@@ -204,9 +204,11 @@ fig, axs = plt.subplots(ncols=2)
 ax = axs[1]
 ax.plot(np.imag(myd), '.-')
 ax = axs[0]
-ax.plot(t, myf, '.', label="original")
-ax.plot(t, np.real(myid), label="inv(inv(f))")
-ax.legend();
+ax.plot(t, myf, '.', c='b', label="original", alpha=0.33)
+ax.plot(t, np.real(myid), c='g', lw=0.75, label="ifft(fft(f))")
+ax.set_ylim(-1.05, 1.6)
+ax.set_xlabel("$t$")
+ax.set_ylabel("Signal")
 ~~~~
 
 <p class="center" markdown="0">
