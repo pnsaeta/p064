@@ -53,49 +53,6 @@ Each team of 3 (or so) of you will develop code to simulate a system or to compu
 </table>
 -->
 
-## Preparing Your Presentation
-
-I'm going to go way out on a limb and suggest that you started the project with confusions, misunderstandings, and uncertainty about where you were headed or downright ignorance of the system you chose. I will further speculate that as you worked on it, you made some false moves, explored some dead ends, and gradually came to appreciate what worked and what didn't. There are two key points about this journey:
-
-1. We don't need to hear about every bone-head move you made on the way to enlightment.
-2. We don't want to be talked *at* as though we should already know everything it took you trial-and-error to figure out.
-
-Invite us to learn with you, tracing for us *the most useful path* through the conceptual minefield so we are led to enlightment without having to spend as much time as you did. 
-
-### “Why” Before “How”
-
-+ Until you have motivated me to care about something, I am ill-disposed to follow your discussion of arcane details. 
-+ Start with your purpose (avoiding jargon as much as possible)
-+ What are you trying to investigate/accomplish? How does it fit in a bigger picture?
-+ Once you have motivated me to *care* about this purpose, I am prepared to follow your discussion that illuminates the *how* or the *what* of the investigation. 
-
-The advice “why before how” also applies to individual slides, if you make them.
-
-<p class="center" markdown="0">
-  <img src="figs/slide2.webp" style="width: 700px;">
-</p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — This is a visually appealing slide created by a clinic team that aimed to explain how they were using a technique called dynamic light scattering to determine the size of particles in their samples. The title, "Dynamics Light Scattering" identifies the technique they used. They knew nothing about DLS at the start of the project and most audience members know nothing about it. Can you think of a more helpful title?</p>
-
- Rather than titling a slide with the name of the phenomenon or technique, consider using a question, as illustrated in <a href="#Fig2">Figure&nbsp;2</a>. 
-
-<p class="center" markdown="0">
-  <img src="figs/slide1.webp" style="width: 700px;">
-</p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — I could have titled this slide “Interband Transitions”, which makes perfect sense to those already in the know. However, I think using a question that gets at the heart of the issue is more helpful. My title for Fig. 1 might be “How We Measure Particle Size”.</p>
-
-### Framing
-
-As the presenter, you know (should know?) more about your topic than the audience does. Your goal should *not be to lord this superiority over them*, but to invite them to learn something interesting about the topic you have studied and in which you have developed expertise. 
-
-+ Each talk should aim for 15 minutes, with 5 minutes for questions.
-+ You may find it most convenient to present from a Jupyter Notebook. The View menu has an option to enter **Presentation mode**, which increases the font size. Check it out to see if it suits your purposes.
-+ Start your presentation with a brief description of the system or model that you investigated. Make explicit the geometry or the simplifying assumptions that underpin your model.
-+ Pictures or equations here can be very helpful. Be concise, but end this section with a description of the primary issues you will explore.
-+ Tell us about any creative approaches you used in coding or analyzing the system.
-+ Show us some results. If they are graphs, make sure they are properly labeled and talk us through what is being shown. If animations, I strongly recommend having rendered animations as gifs, if for nothing more than backup in case dynamic updating in the notebook.
-+ Conclude with a summary of what you found and suggestions for further exploration. 
-
-
 ## Systems
 
 A reference we can all share is *An Introduction to Computer Simulation Methods: Applications to Physical Systems* by Harvey Gould, Jan Tobochnik, and Wolfgang Christian. I will bring copies and we can copy out portions.
@@ -139,3 +96,48 @@ A few considerations are in order:
 3. The velocity at the $$n+1$$st step depends on the known velocity and the average of the accelerations at the prior step $$n$$ and the new step $$n+1$$. Typically, you cannot compute the acceleration $$a_{n+1}$$ until you have updated the positions of all the particles according to Eq.&nbsp;(\ref{eq:pos-update}) 
 
 For $$N$$ particles, the number of pairs is $$N(N-1)/2$$. Typically, you don't have to evaluate all of them; the force dies off very rapidly for distances beyond something like $$2 r_0$$. Nonetheless, a straightforward implementation requires that you analyze $$N(N-1)/2$$ pairs (some of which you may simplify to zero if the particles are far enough apart). Therefore, the computational time to evaluate the accelerations scales as $$N^2$$. When the number of particles is small, this is not a big problem. For large simulations, however, the $$N^2$$ dependence can really slow things down. The [Barnes-Hut algorithm](https://en.wikipedia.org/wiki/Barnes–Hut_simulation) is an approach to sorting the particles that lowers the number of operations needed to compute the accelerations from $$O(N^2)$$ to $$O(N \log_2 N)$$ using [octrees](https://en.wikipedia.org/wiki/Octree).
+
+
+## Preparing Your Presentation
+
+I'm going to go way out on a limb and suggest that you started the project with confusions, misunderstandings, and uncertainty about where you were headed or downright ignorance of the system you chose. I will further speculate that as you worked on it, you made some false moves, explored some dead ends, and gradually came to appreciate what worked and what didn't. There are two key points about this journey:
+
+1. We don't need to hear about every bone-head move you made on the way to enlightment.
+2. We don't want to be talked *at* as though we should already know everything it took you trial-and-error to figure out.
+
+Invite us to learn with you, tracing for us *the most useful path* through the conceptual minefield so we are led to enlightment without having to spend as much time as you did. 
+
+### “Why” Before “How”
+
++ Until you have motivated me to care about something, I am ill-disposed to follow your discussion of arcane details. 
++ Start with your purpose (avoiding jargon as much as possible)
++ What are you trying to investigate/accomplish? How does it fit in a bigger picture?
++ Once you have motivated me to *care* about this purpose, I am prepared to follow your discussion that illuminates the *how* or the *what* of the investigation. 
+
+The advice “why before how” also applies to individual slides, if you make them.
+
+<p class="center" markdown="0">
+  <img src="figs/slide2.webp" style="width: 700px;">
+</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — This is a visually appealing slide created by a clinic team that aimed to explain how they were using a technique called dynamic light scattering to determine the size of particles in their samples. The title, "Dynamics Light Scattering" identifies the technique they used. They knew nothing about DLS at the start of the project and most audience members know nothing about it. Can you think of a more helpful title?</p>
+
+ Rather than titling a slide with the name of the phenomenon or technique, consider using a question, as illustrated in <a href="#Fig2">Figure&nbsp;2</a>. 
+
+<p class="center" markdown="0">
+  <img src="figs/slide1.webp" style="width: 700px;">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — I could have titled this slide “Interband Transitions”, which makes perfect sense to those already in the know. However, I think using a question that gets at the heart of the issue is more helpful. My title for Fig. 1 might be “How We Measure Particle Size”.</p>
+
+### Framing
+
+As the presenter, you know (should know?) more about your topic than the audience does. Your goal should *not be to lord this superiority over them*, but to invite them to learn something interesting about the topic you have studied and in which you have developed expertise. 
+
++ Each talk should aim for 15 minutes, with 5 minutes for questions.
++ You may find it most convenient to present from a Jupyter Notebook. The View menu has an option to enter **Presentation mode**, which increases the font size. Check it out to see if it suits your purposes.
++ Start your presentation with a brief description of the system or model that you investigated. Make explicit the geometry or the simplifying assumptions that underpin your model.
++ Pictures or equations here can be very helpful. Be concise, but end this section with a description of the primary issues you will explore.
++ Tell us about any creative approaches you used in coding or analyzing the system.
++ Show us some results. If they are graphs, make sure they are properly labeled and talk us through what is being shown. If animations, I strongly recommend having rendered animations as gifs, if for nothing more than backup in case dynamic updating in the notebook.
++ Conclude with a summary of what you found and suggestions for further exploration. 
+
+
