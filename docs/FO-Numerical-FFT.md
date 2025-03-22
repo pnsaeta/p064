@@ -127,7 +127,7 @@ plt.subplots_adjust(left=0.15)
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/fft3.webp" style="width: 400px;">
+  <img src="figs/fft4.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Inverse transform of $$g_k$$, which indeed reproduces the original data (to within roundoff error).</p>
 
