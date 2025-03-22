@@ -235,7 +235,10 @@ which is a sum of sinc functions with unit amplitude at $$t - n\tau$$ and zero a
 
 ## Problems
 
-So far, we have carefully sampled signals that go through an integral number of periods over the time we sample. What happens when we miss? To explore the problem, it is handy to look not at the Fourier transform of the signal but its **power spectrum**,
+So far, we have carefully sampled signals that go through an integral number of periods over the time we sample. What happens when we miss?
+
+### Power Spectrum
+To explore the problem, it is handy to look not at the Fourier transform of the signal but its **power spectrum**,
 given by $$| \tilde{f}(\nu) |^2 $$, which combines the real and imaginary parts of the Fourier transform to give a single real number for each discrete frequency. A little routine to compute the power spectrum is
 
 ~~~~ python
