@@ -306,7 +306,7 @@ tw = np.linspace(0, 1, 4096, endpoint=False)
 sw = np.cos(tw * 15.5 * 2 * np.pi)
 ~~~~
 
-which is a pure cosine wave that makes it through a half-integral number of periods (i.e., $$15\frac12$$). In <a href="#Fig9">Figure&nbsp;9</a> the red curve shows power spectrum computed from these data. It has a strong peak at the “right” frequency, but the tails of the peak die off rather slowly. The blue curve shows the power spectrum we obtain on multiplying the raw signal by the window function shown in Eq.&nbsp;(\ref{eq:sine2}). While the resulting peak is not as sharp as it is with the raw data, the falloff with separation from the “true” peak is orders of magnitude faster with the windowed data.
+which is a pure cosine wave that makes it through a half-integral number of periods (i.e., $$15\frac12$$). In <a href="#Fig9">Figure&nbsp;9</a>, the red curve shows power spectrum computed from these data. It has a strong peak at the “right” frequency, but the tails of the peak die off rather slowly. The blue curve shows the power spectrum we obtain on multiplying the raw signal by the window function shown in Eq.&nbsp;(\ref{eq:sine2}). While the resulting peak is not as sharp as it is with the raw data, the falloff with separation from the “true” peak is orders of magnitude faster with the windowed data.
 
 
 <p class="center" markdown="0">
