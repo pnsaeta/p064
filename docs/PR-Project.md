@@ -1,7 +1,6 @@
 {:menu PR}
 
 
-
 # Projects
 
 * toc
@@ -17,7 +16,7 @@ Why? **Because I have high aspirations for you!** I want you to be a pioneer, a 
 
 ## Scope
 
-Each team of 3 (or so) of you will develop code to simulate a system or to compute quantities of physical importance, prepare a presentation of your findings to be delivered on **Wednesday, 3 May 2023** during **Presentation Days**, and submit your documented code in a (zip) archive by **Friday, 5 May 2023**. The presentations and documented code should offer a clear description of the system you are modeling, should outline choices you made in developing the code and/or refining the model, the results you have obtained, and the sanity checks you have made to confirm that your results are trustworthy.
+Each team of 3 (or so) of you will develop code to simulate a system or to compute quantities of physical importance, prepare a presentation of your findings to be delivered on **Wednesday, 7 May 2025** during **Presentation Days**, and submit your documented code in a (zip) archive by **Friday, 9 May 2025**. The presentations and documented code should offer a clear description of the system you are modeling, should outline choices you made in developing the code and/or refining the model, the results you have obtained, and the sanity checks you have made to confirm that your results are trustworthy.
 
 ## Schedule
 
@@ -28,6 +27,7 @@ Each team of 3 (or so) of you will develop code to simulate a system or to compu
 + Week 15: (4/25) analyzing and preparing for presentation
 + Week 16: (5/3) project presentations in Shanahan 2475 starting at 9 am. Each project will have 20 minutes.
 
+<!-- comment 
 <table class="nicetable" style="width: 350px;">
   <tr>
    <th style="text-align: left;"> Time </th> <th style="text-align: left;">Team</th>
@@ -51,6 +51,7 @@ Each team of 3 (or so) of you will develop code to simulate a system or to compu
     <td> 11:00 </td><td> Abby, Eve, and Kate </td>
   </tr>
 </table>
+-->
 
 ## Preparing Your Presentation
 
