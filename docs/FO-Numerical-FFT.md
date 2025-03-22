@@ -287,7 +287,7 @@ What happens if we don't quite make it through a full period? I'll modify the ex
 </p>
 <p class="icap" markdown="1"><a name="Fig8">Figure 8</a> — Computed power spectra from the sinusoidal input shown in the left panel. When the periodic signal cannot complete an integral number of cycles in the sampling period, there is an implicit discontinuity between the right edge and left edge, resulting in power spreading into nearby frequencies.</p>
 
-## Windowing
+### Windowing
 
 As shown in the previous section, the leakage of power into frequency bins far from the frequency of the true signal arises from the implicit discontinuity between the left and right edges of the sampled time interval. A standard approach to reducing the impact of this discontinuity is to modify the raw data to avoid it! If we multiply the raw data by a **window function** that goes smoothly to zero at the beginning and end of the interval, then we can prevent the discontinuity from happening.
 
