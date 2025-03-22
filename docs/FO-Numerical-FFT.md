@@ -210,7 +210,7 @@ ax.legend();
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/fft5.webp" style="width: 800px;">
+  <img src="figs/fft5.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — Computation of the FFT and the inverse FFT for a sinusoidal input whose period is commensurate with the sampling period. The results suggest that our implementation of the Cooley-Tukey algorithm does indeed produce expected results.</p>
 
