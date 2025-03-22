@@ -67,7 +67,6 @@ A reference we can all share is *An Introduction to Computer Simulation Methods:
 \end{align}
 where $$\alpha$$ and $$\gamma$$ are called **critical exponents**. For the two-dimensional Ising model, $$\beta = 1/8$$ and $$\gamma = 7/4$$; in three dimensions, they are $$\beta = 0.32$$ and $$\gamma = 1.24$$. How closely can you determine $$T_c = 2 / \ln(1 + \sqrt{2})$$? See Chapter 15 of Gould, Tobochnik, and Christian, *An Introduction to Computer Simulation Methods* for lots more information and project ideas, including putting a two-dimensional array of spins on a triangular lattice, rather than a square lattice.
 
-
 ### Quantum Mechanics
 
 Chapter 16 discusses many approaches to simulating quantum systems. You may have explored the **shooting method** for finding eigenstates of the "quark potential", $$V \sim \|x\|$$. Does this approach generalize to higher spatial dimensions? Does it depend on having rotational or other symmetry that allows the problem to be factored?
