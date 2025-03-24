@@ -193,7 +193,7 @@ def Cooley_Tukey(v, inverse=False):
     return f
 ~~~~
 
-To test Cooley_Tukey, let's run the following code and compare the transform and the inverse transforms to our expectations.
+To test Cooley_Tukey, let's run the following code and compare the transform and the inverse transform to our expectations.
 
 ~~~~ python
 t = np.linspace(0,4*np.pi, 64, endpoint=False)
