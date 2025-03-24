@@ -16,7 +16,7 @@ The Fourier transform takes a function in the time (spatial) domain and transfor
 \end{align}
 and discussed on [the page on Fourier Transforms](FO-FourierTransforms.md). 
 
-We commonly consider functions of time, which may or may not be periodic, but which may be quasi-periodic, such as the sounds from a musical instrument. After all, they don't go on forever, so they can't be composed of pure tones! Typically, we sample such functions at a fixed period. For example, suppose we consider the function
+We commonly consider functions of time, which may or may not be periodic, but which may be quasi-periodic, such as the sounds from a musical instrument. After all, they don't go on forever, so they can't be composed of pure tones! Typically, we sample such functions at a fixed sampling rate. For example, suppose we consider the function
 \begin{equation}\label{eq:fft1}
   f(t) = \sin(2\pi \nu t) + \frac14 \sin(6 \pi \nu t)
 \end{equation}
