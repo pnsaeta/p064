@@ -235,7 +235,7 @@ All is not lost, however. If you can pass your signal through a low-pass filter 
 \end{equation}
 which is a sum of sinc functions with unit amplitude at $$t - n\tau$$ and zero amplitude at $$t - m\tau$$ for all integers $$m \ne n$$.
 
-## Problems
+## Issues
 
 So far, we have carefully sampled signals that go through an integral number of periods over the time we sample. What happens when we miss?
 
