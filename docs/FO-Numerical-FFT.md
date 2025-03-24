@@ -241,7 +241,7 @@ So far, we have carefully sampled signals that go through an integral number of 
 
 ### Power Spectrum
 To explore the problem, it is handy to look not at the Fourier transform of the signal but its **power spectrum**,
-given by $$| \tilde{f}(\nu) |^2 $$, which sums the squares of the real and imaginary parts of the Fourier transform to give a single real number for each discrete frequency. A little routine to compute the power spectrum is
+given by $$| \tilde{f}(\nu) |^2 $$, which sums the squares of the real and imaginary parts of the Fourier transform to give a single real number for each discrete frequency. The following is a little routine to compute the power spectrum:
 
 ~~~~ python
 def power_spectrum(foft, dt=None):
