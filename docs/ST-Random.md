@@ -249,7 +249,7 @@ ax.hist(v, bins=np.arange(-4,4,0.05), density=True);
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Normal deviates computed using the Box-Muller method.</p>
 
-Naturally, NumPy has an optimized routine to generate normal deviates called `rng.normal(loc, scale, size)`. The first two parameters are either floats or array_like of floats. The size parameter should be an int or a tuple of ints.
+Naturally, NumPy has an optimized routine to generate normal deviates called `rng.normal(loc, scale, size)`. The first two parameters are either floats or array_like of floats. The size parameter should be an int or a tuple of ints. 
 
 ~~~~ python
 fig, ax = plt.subplots()
