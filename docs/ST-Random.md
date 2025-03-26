@@ -198,32 +198,48 @@ So,
 If we draw two numbers ($$v_1, v_2$$) at random from within the unit circle, then we can use $$r^2 = v_1^2 + v_2^2$$ to find the radius, provided that it is less or equal to 1, and we can divide each by $$r$$ to produce the cosine and sine values to yield two normally distributed values $$y_1$$ and $$y_2$$. This is the **Box-Muller** method.
 
 ~~~~ python
-box_muller = None
+class BoxMuller:
+    def __init__(self):
+        self.next = None
 
-def normal():
-    """Compute a standard normal deviate via the Box-Muller transformation.
-    Each time we use the transformation we get two normal deviates. We
-    will return one and save the other in the global box_muller, so we can
-    return it on the next call.
-    """
-    global box_muller
-    if box_muller is not None:
-        res = box_muller
-        box_muller = None
-        return res
-    # draw two values from a square from -1 to 1
-    # until they are less than or equal to 1 from the origin
-    while True:
-        x1, x2 = rng.uniform(-1,1,size=(2))
-        r2 = x1*x1+x2*x2
-        if r2 <= 1:
-            break
-    
-    mag = np.sqrt(-2*np.log(r2)/r2)
-    box_muller = x1 * mag
-    return x2 * mag
+    def many(self, size: int):
+        """
+        We will likely need more than size random numbers from -1 to 1,
+        since we can only use those whose sum of squares is ≤ 1. The fraction
+        that should satisfy this condition is π / 4 ≈ 0.7854, so we should need
+        something like size * 4 / π values
+        """
+        n = int(1.05 * size * 2 / np.pi)  # we'll do a few extra
+        xy = rng.uniform(-1, 1, size=(n, 2))
+        r2 = xy[:,0] ** 2 + xy[:,1]**2
+        good = np.nonzero(r2 <= 1)[0]
+        mag = np.sqrt(-2 * np.log(r2[good]) / r2[good])
+        boxm = np.outer(mag, [1,1]) * xy[good,:]
+        boxy = boxm.flatten()
+        if len(boxy) >= size:
+            return boxy[:size]
+        more = self.many(size - len(boxy))
+        return np.concatenate((boxy, more))
+        
+    def __call__(self, size=1):
+        if size == 1:
+            if self.next:
+                v = self.next
+                self.next = None
+                return v
+            while True:
+                x1, x2 = rng.uniform(-1, 1, size=(2))
+                r2 = x1*x1 + x2*x2
+                if r2 <= 1:
+                    break
+            mag = np.sqrt(-2 * np.log(r2) / r2)
+            self.next = x1 * mag
+            return x2 * mag
+        else:
+            return self.many(size)
 
-v = [normal() for x in range(1000000)]
+BM = BoxMuller()
+v = BM(10000000)
 fig, ax = plt.subplots()
 ax.hist(v, bins=np.arange(-4,4,0.05), density=True);
 ~~~~
