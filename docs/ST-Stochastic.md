@@ -49,7 +49,7 @@ A general feature of systems of many particles (or **degrees of freedom**, meani
 
 ## Metropolis Algorithm
 
-I will illustrate the Metropolis algorithm using a simple one-dimensional model of magnetism called the **Ising model**. The model treats a set of $$N$$ spin-1/2 particles in a periodic lattice. Each spin has two possible states, spin up and spin down and a microstate of the $$N$$ consists in specifying the state of each of the $$N$$ spins. That is, a microstate is an array of $$N$$ values, each of which is either $$1$$ or $$-1$$.
+I will illustrate the Metropolis algorithm using a simple one-dimensional model of magnetism called the **Ising model**. The model treats a set of $$N$$ spin-1/2 particles in a periodic lattice. Each spin has two possible states, spin up and spin down and a microstate of the $$N$$ spins consists in specifying the state of each of the $$N$$ spins. That is, a microstate is an array of $$N$$ values, each of which is either $$1$$ or $$-1$$.
 
 The Ising model assumes that each spin is influenced only by its neighboring spins and an externally applied magnetic field. The energy is
 \begin{equation}\label{eq:Ising}
