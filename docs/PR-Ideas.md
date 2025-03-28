@@ -24,4 +24,6 @@ predicts the positions of the planets in the solar system, as illustrated in Fig
 <p class="center" markdown="0">
   <img src="figs/PR-Bode.webp" style="width: 400px;" alt="">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The red dots show the actual orbital radii of the planets; the blue curve shows the prediction of the Titius-Bode relation, Eq.&nbsp;(\ref{eq:titius-bode}).</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The red dots show the actual orbital radii of the planets; the blue curve shows the prediction of the Titius-Bode formula, Eq.&nbsp;(\ref{eq:titius-bode}).</p>
+
+Until Neptune, the agreement with the Titius-Bode formula is remarkably good. However, there is a suspicious gap in the data: where is the missing planet between Mars and Jupiter?
