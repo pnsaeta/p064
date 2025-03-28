@@ -1,0 +1,14 @@
+{:menu PR}
+
+
+# Project Ideas
+
+* toc
+{:toc}
+
+## Celestial Mechanics
+
+### Janus and Epimetheus
+
+Two moons of Saturn, Janus and Epimetheus, have almost identical orbits, which makes them seem to almost bounce off each other every four years or so. See [the NASA page](https://solarsystem.nasa.gov/moons/saturn-moons/epimetheus/in-depth/) for a description of this remarkable system.
+
