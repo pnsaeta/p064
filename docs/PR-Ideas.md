@@ -26,4 +26,4 @@ predicts the positions of the planets in the solar system, as illustrated in Fig
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The red dots show the actual orbital radii of the planets; the blue curve shows the prediction of the Titius-Bode formula, Eq.&nbsp;(\ref{eq:titius-bode}).</p>
 
-Until Neptune, the agreement with the Titius-Bode formula is remarkably good. However, there is a suspicious gap in the data: where is the missing planet between Mars and Jupiter?
+Until Neptune, the agreement with the Titius-Bode formula is remarkably good. However, there is a suspicious gap in the data: where is the missing planet between Mars and Jupiter? Indeed, that is where the asteroid belt lives. So, there is a bunch of material at roughly the radius predicted by the Titius-Bode formula, but the material never coalesced into a planet. Given Jupiter's size, it seems plausible that the giant planet played a role in preventing the debris from coalescing.
