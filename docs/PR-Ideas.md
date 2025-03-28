@@ -16,7 +16,7 @@ Two moons of Saturn, Janus and Epimetheus, have almost identical orbits, which m
 
 The Titius-Bode formula,
 \begin{equation}
-r_n = \frac{4 + 3 \times 2^{n-1}}{10}
+  a_n = \frac{4 + 3 \times 2^{n-1}}{10}
 \label{eq:titius-bode}
 \end{equation}
 predicts the positions of the planets in the solar system
