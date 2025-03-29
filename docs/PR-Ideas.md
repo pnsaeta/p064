@@ -69,4 +69,6 @@ useful.
 ### Metronomes
 
 A metronome is a sort of pendulum that is driven by a wound spring that gives the oscillating rod a periodic kick to keep it oscillating (that is, to overcome the inevitable dissipation caused by friction). If you place a great number of identical metronomes set the oscillate at the same frequency on a platform that is able to move, and you start them with random phases, the subtle motions of the platform eventually persuade them to all oscillate in phase. That is, they “synchronize.” They all end up ticking at the exact same time, even though they all started at different points in the cycle.
-[See this video](https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s) or [this one](https://www.youtube.com/watch?v=Ov3aeqjeih0).
+[See this video](https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s) or [this one](https://www.youtube.com/watch?v=Ov3aeqjeih0) for persuasive evidence that this actually happens.
+
+Can you simulate it?
