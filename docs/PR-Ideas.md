@@ -63,3 +63,10 @@ planet. I offer some guidance below, but recommend consulting a
 mechanics text such as Marion, Goldstein, or Symon regarding the
 motion of planets. You may also find Chapter 4 of Gould and Tobochnik
 useful.
+
+## Mechanics
+
+### Metronomes
+
+The basic idea is that we have multiple metronomes that all lie on the same platform. What we see in the following videos is that over time, all of the metronomes "synchronize." They all end up ticking at the exact same time, even though they all started at different points.
+( https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s or https://www.youtube.com/watch?v=Ov3aeqjeih0 )
