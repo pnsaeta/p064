@@ -72,3 +72,7 @@ A metronome is a sort of pendulum that is driven by a wound spring that gives th
 [See this video](https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s) or [this one](https://www.youtube.com/watch?v=Ov3aeqjeih0) for persuasive evidence that this actually happens.
 
 Can you simulate it?
+
+### Trebuchet
+
+The Trebuchet is a medieval engine of war; it uses a long boom that is heavily weighted on its short end to rotate its long end rapidly. A stone or other projectile held in a sling attached to that long end will get flung with great speed as the heavy weight descends, causing the boom to whip.
