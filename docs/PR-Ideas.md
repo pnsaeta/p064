@@ -33,7 +33,7 @@ A closer look at the asteroid belt shows that there are gaps at certain radii, w
 ### Proxima Centauri
 
 The closest star to our solar system is the binary $$\alpha$$ Centauri,
-with masses 1.10 and 0.85 solar masses \msolar, having an average
+with masses 1.10 and 0.85 solar masses, having an average
 separation of *about* 23 A.U. (One astronomical unit is the mean
 distance from the earth to the sun.) The system has a period of about
 80 years with an eccentricity of 0.52. (The eccentricity $$\epsilon$$ of
