@@ -55,7 +55,8 @@ Investigate the motion of a planet of about the size of the Earth
 around such a system. To avoid large numbers, use a system of units in
 which time is measured in years, and masses are measured in solar
 masses. The most difficult part of this problem is finding suitable
-initial conditions and a suitable reference frame. You may simplify
+initial conditions and a suitable reference frame in which to observe the planet's motion.
+You may simplify
 the problem somewhat by first solving for the motion of the two stars,
 then assuming that their motion is not significantly affected by the
 planet. I offer some guidance below, but recommend consulting a
