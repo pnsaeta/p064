@@ -81,6 +81,12 @@ The Trebuchet is a medieval engine of war; it uses a long boom that is heavily w
 
 Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which a small mass $$m$$ is attached at one end. The other end is made to oscillate rapidly in the vertical. If it oscillates with sufficient amplitude and at high enough frequency, then the inverted pendulum can oscillate stably about its **unstable** vertical equilibrium position. See [this page](https://en.wikipedia.org/wiki/Kapitza%27s_pendulum) for some background.
 
+<p class="center" markdown="0">
+  <img src="figs/Kapitza.png" style="width: 500px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Phase plot of a Kapitza (inverted) pendulum driven at 40 times its natural frequency. The red curve shows the final 5% of the simulated duration.</p>
+
+
 ## Magnetism
 
 The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. In this simple model, the energy of a collection of spins is given by
@@ -92,6 +98,6 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 <p class="center" markdown="0">
   <img src="figs/Ising-kagome-2-1.gif" style="width: 800px;" alt="Ising model on a kagome lattice">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$ (in energy units). Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment, but cannot figure out how to convert the yellow down-spins to red up-spins to continue to lower the system energy.</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$ (in energy units). Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment, but cannot figure out how to convert the yellow down-spins to red up-spins to continue to lower the system energy.</p>
 
 
