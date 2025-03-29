@@ -76,3 +76,7 @@ Can you simulate it?
 ### Trebuchet
 
 The Trebuchet is a medieval engine of war; it uses a long boom that is heavily weighted on its short end to rotate its long end rapidly. A stone or other projectile held in a sling attached to that long end will get flung with great speed as the heavy weight descends, causing the boom to whip. See [the wikipedia page on Trebuchets](https://en.wikipedia.org/wiki/Trebuchet) for some background on this form of catapult. Can you model it? *Warning: this project is quite challenging.*
+
+### Kaptiza’s Pendulum
+
+Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which a small mass $$m$$ is attached at one end. The other end is made to oscillate rapidly in the vertical. If it oscillates with sufficient amplitude and at high enough frequency, then the inverted pendulum can oscillate stably about its **unstable** vertical equilibrium position. See [this page](https://en.wikipedia.org/wiki/Kapitza%27s_pendulum) for some background.
