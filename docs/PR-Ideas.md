@@ -82,7 +82,7 @@ The Trebuchet is a medieval engine of war; it uses a long boom that is heavily w
 Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which a small mass $$m$$ is attached at one end. The other end is made to oscillate rapidly in the vertical. If it oscillates with sufficient amplitude and at high enough frequency, then the inverted pendulum can oscillate stably about its **unstable** vertical equilibrium position. See [this page](https://en.wikipedia.org/wiki/Kapitza%27s_pendulum) for some background.
 
 <p class="center" markdown="0">
-  <img src="figs/Kapitza.png" style="width: 500px;" alt="Kaptiza phase plot">
+  <img src="figs/Kapitza.webp" style="width: 500px;" alt="Kaptiza phase plot">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Phase plot of a Kapitza (inverted) pendulum driven at 40 times its natural frequency. The red curve shows the final 5% of the simulated duration.</p>
 
