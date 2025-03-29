@@ -87,3 +87,8 @@ The Ising model attempts to represent the interactions between neighboring spins
 \begin{equation}
   E = -J \sum_{i=1}^N \sum\limits_{\text{n.n.} j} s_i s_j - B \sum{i=1}^N s_i
 \end{equation}
+
+<p class="center" markdown="0">
+  <img src="figs/Ising-relax.gif" style="width: 600px;" alt="Ising model on a kagome lattice">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional Kagome lattice.</p>
