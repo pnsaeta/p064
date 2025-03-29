@@ -87,6 +87,7 @@ The Ising model attempts to represent the interactions between neighboring spins
 \begin{equation}
   E = -J \sum_{i=1}^N \sum_{j}^{\text{nn}} s_i s_j - B \sum_{i=1}^N s_i
 \end{equation}
+where each spin $$s_i$$ is equal to $$\pm 1$$.
 
 <p class="center" markdown="0">
   <img src="figs/Ising-relax.gif" style="width: 600px;" alt="Ising model on a kagome lattice">
