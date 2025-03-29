@@ -75,4 +75,4 @@ Can you simulate it?
 
 ### Trebuchet
 
-The Trebuchet is a medieval engine of war; it uses a long boom that is heavily weighted on its short end to rotate its long end rapidly. A stone or other projectile held in a sling attached to that long end will get flung with great speed as the heavy weight descends, causing the boom to whip. See [the wikipedia page on Trebuchets](https://en.wikipedia.org/wiki/Trebuchet) for some background on this form of catapult. Can you model it? Warning: this project is quite challenging.
+The Trebuchet is a medieval engine of war; it uses a long boom that is heavily weighted on its short end to rotate its long end rapidly. A stone or other projectile held in a sling attached to that long end will get flung with great speed as the heavy weight descends, causing the boom to whip. See [the wikipedia page on Trebuchets](https://en.wikipedia.org/wiki/Trebuchet) for some background on this form of catapult. Can you model it? *Warning: this project is quite challenging.*
