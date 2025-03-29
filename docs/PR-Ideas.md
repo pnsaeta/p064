@@ -83,14 +83,14 @@ Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which
 
 ## Magnetism
 
-The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. The energy of a collection of spins is given by
+The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. In this simple model, the energy of a collection of spins is given by
 \begin{equation}
   E = -J \sum_{i=1}^N \sum_{j}^{\text{nn}} s_i s_j - B \sum_{i=1}^N s_i
 \end{equation}
-where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of interaction between nearest neighbors, and $$B$$ the strength of interaction with an externally applied magnetic field.
+where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of interaction between nearest neighbors, and $$B$$ the strength of interaction with an externally applied magnetic field. If $$J > 0$$, the spins prefer to align; if $$J < 0$$, nearest neighbors prefer to point in opposite directions. Of course, on a triangular lattice, this is not possible, which can lead to interesting behavior.
 
 <p class="center" markdown="0">
-  <img src="figs/Ising-relax.gif" style="width: 600px;" alt="Ising model on a kagome lattice">
+  <img src="figs/docs/Ising-kagome-2-1.gif" style="width: 600px;" alt="Ising model on a kagome lattice">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=8$$. Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$. Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment.</p>
 
