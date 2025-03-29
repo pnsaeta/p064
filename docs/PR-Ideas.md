@@ -52,7 +52,7 @@ expression, $$\mu$$ is the reduced mass of the two stars (their
 product over their sum), and $$k = GM_{1}M_{2}$$. (Further details 
 are in the Background section below.)
 
-Investigate the motion of a planet of about the size of the earth
+Investigate the motion of a planet of about the size of the Earth
 around such a system. To avoid large numbers, use a system of units in
 which time is measured in years, and masses are measured in solar
 masses. The most difficult part of this problem is finding suitable
