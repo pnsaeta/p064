@@ -94,3 +94,4 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$. Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment.</p>
 
+?
