@@ -40,9 +40,8 @@ distance from the earth to the sun.) The system has a period of about
 an ellipse is given by $$\epsilon = c/a$$, where the distance from
 the center to one focus is $$ c = \sqrt{a^{2}- b^{2}} $$, $$a$$ is
 the semimajor axis, and $$b$$ is the semiminor axis.) 
-For the purposes of this problem, ignore the ``average'' 
-separation of the stars; take instead the period of their orbit 
-to be \umph{exactly} 80 years. You can then use Kepler's third 
+For the purposes of this problem, ignore the *average* separation of the stars; take instead the period of their orbit 
+to be *exactly* 80 years. You can then use Kepler's third 
 law
 \begin{equation}
 	T^{2} = \frac{4\pi^{2} \mu}{k} a^{3}
