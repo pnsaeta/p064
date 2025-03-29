@@ -68,5 +68,5 @@ useful.
 
 ### Metronomes
 
-The basic idea is that we have multiple metronomes that all lie on the same platform. What we see in the following videos is that over time, all of the metronomes "synchronize." They all end up ticking at the exact same time, even though they all started at different points.
-( https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s or https://www.youtube.com/watch?v=Ov3aeqjeih0 )
+The basic idea is that we have multiple metronomes that all lie on the same platform. What we see in the following videos is that over time, all of the metronomes “synchronize.” They all end up ticking at the exact same time, even though they all started at different points in the cycle.
+[See](https://www.youtube.com/watch?v=5v5eBf2KwF8&t=181s) [or](https://www.youtube.com/watch?v=Ov3aeqjeih0).
