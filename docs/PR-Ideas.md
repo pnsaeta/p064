@@ -91,6 +91,6 @@ The Ising model attempts to represent the interactions between neighboring spins
 <p class="center" markdown="0">
   <img src="figs/Ising-relax.gif" style="width: 600px;" alt="Ising model on a kagome lattice">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional Kagome lattice.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=6$$. </p>
 
 What does that mean?
