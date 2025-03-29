@@ -80,3 +80,10 @@ The Trebuchet is a medieval engine of war; it uses a long boom that is heavily w
 ### Kaptiza’s Pendulum
 
 Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which a small mass $$m$$ is attached at one end. The other end is made to oscillate rapidly in the vertical. If it oscillates with sufficient amplitude and at high enough frequency, then the inverted pendulum can oscillate stably about its **unstable** vertical equilibrium position. See [this page](https://en.wikipedia.org/wiki/Kapitza%27s_pendulum) for some background.
+
+## Magnetism
+
+The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. The energy of a collection of spins is given by
+\begin{equation}
+  E = -J \sum_{i=1}^N \sum\limits_{\text{n.n.} j} s_i s_j - B \sum{i=1}^N s_i
+\end{equation}
