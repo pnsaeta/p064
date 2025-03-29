@@ -85,7 +85,7 @@ Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which
 
 The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. The energy of a collection of spins is given by
 \begin{equation}
-  E = -J \sum_{i=1}^N \sum\limits_{\text{n.n.} j} s_i s_j - B \sum_{i=1}^N s_i
+  E = -J \sum_{i=1}^N \sum\limits_{\text{nn}_j} s_i s_j - B \sum_{i=1}^N s_i
 \end{equation}
 
 <p class="center" markdown="0">
