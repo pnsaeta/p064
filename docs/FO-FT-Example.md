@@ -131,5 +131,5 @@ For $$t > 2 \pi N/\omega$$, we must close in the LHP for the exponentials in the
 \\]
 and when $$\omega \to \omega_-$$, it becomes
 \\[
-    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omeba_1 i)
+    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i)
 \\]
