@@ -96,6 +96,10 @@ A few considerations are in order:
 
 For $$N$$ particles, the number of pairs is $$N(N-1)/2$$. Typically, you don't have to evaluate all of them; the force dies off very rapidly for distances beyond something like $$2 r_0$$. Nonetheless, a straightforward implementation requires that you analyze $$N(N-1)/2$$ pairs (some of which you may simplify to zero if the particles are far enough apart). Therefore, the computational time to evaluate the accelerations scales as $$N^2$$. When the number of particles is small, this is not a big problem. For large simulations, however, the $$N^2$$ dependence can really slow things down. The [Barnes-Hut algorithm](https://en.wikipedia.org/wiki/Barnes–Hut_simulation) is an approach to sorting the particles that lowers the number of operations needed to compute the accelerations from $$O(N^2)$$ to $$O(N \log_2 N)$$ using [octrees](https://en.wikipedia.org/wiki/Octree).
 
+### More ideas
+
+[More project ideas](PR-Ideas.md) are described and illustrated on this page.
+
 
 ## Preparing Your Presentation
 
