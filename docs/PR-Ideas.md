@@ -122,7 +122,7 @@ A generalization of the Ising model, called the **planar model**, treats spins i
 where $$\theta_i$$ is the angle spin $$i$$ makes with the $$x$$ axis. As discussed in Chapter 15 of Gould, Tobochnik, and Christian, the mean magnetization in this model is zero at all finite temperatures, but there is a phase transition (the Kosterlitz-Thouless transition) at $$T_{\text{KT}}$$. Below $$T_{\text{KT}}$$, the spin-spin correlation function $$C(r)$$ decreases as a power law, but above $$T_{\text{KT}}$$, $$C(r)$$ decreases exponentially.
 
 <p class="center" markdown="0">
-  <img src="figs/KT.webp" style="width: 400px;" alt="Kosterlitz-Thousless system">
+  <img src="figs/KT.webp" style="width: 600px;" alt="Kosterlitz-Thousless system">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The planar model that exhibits a Kosterlitz-Thouless transition.</p>
 
