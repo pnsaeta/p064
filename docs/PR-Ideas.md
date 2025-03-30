@@ -71,7 +71,7 @@ useful.
 A double pendulum consists of a two point masses suspended from light, rigid rods, with the second rod attached at the first mass.
 
 <p class="center" markdown="0">
-  <img src="figs/Double-Pendulum.gif" style="width: 600px;" alt="double pendulum">
+  <img src="figs/Double-Pendulum.mp4" style="width: 600px;" alt="double pendulum">
 </p>
 <p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
 
