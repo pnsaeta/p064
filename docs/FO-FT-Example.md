@@ -128,3 +128,7 @@ For $$t > 2 \pi N/\omega$$, we must close in the LHP for the exponentials in the
 \\[
     \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
 \\]
+and when $$\omega \to \omega_-$$, it becomes
+\\[
+    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2)
+\\]
