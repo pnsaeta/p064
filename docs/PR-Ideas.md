@@ -133,3 +133,6 @@ The Heisenberg model generalizes the planar model by allowing the spins to point
 
 ## Percolation
 
+## Electromagnetism
+
+One can use a finite-difference time-domain (FDTD) approach to simulate time-dependent electromagnetic fields, such as optical waves.
