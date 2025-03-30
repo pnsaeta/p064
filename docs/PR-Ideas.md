@@ -89,6 +89,8 @@ Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which
 
 ## Magnetism
 
+### Ising Model
+
 The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. In this simple model, the energy of a collection of spins is given by
 \begin{equation}
   E = -J \sum_{i=1}^N \sum_{j}^{\text{nn}} s_i s_j - B \sum_{i=1}^N s_i
@@ -101,4 +103,10 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$ (in energy units). Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment, but cannot figure out how to convert the yellow down-spins to red up-spins to continue to lower the system energy.</p>
 
 
-Now
+### Kosterlitz-Thouless Transition
+
+A generalization of the Ising model treats spins in a crystalline lattice as units vector in the $$xy$$ plane, yielding an energy function
+\begin{equation}
+  E = - J \sum_{i, j=\text{nn}(i)} \mathbf{s}_i \cdot \mathbf{s}_j 
+  = = - J \sum_{i, j=\text{nn}(i)} \cos(\theta_i - \theta_j)
+\end{equation}
