@@ -116,4 +116,9 @@ By the convolution theorem, then,
   \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i2\pi N\omega/\Omega}-1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
 
-To 
+Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly:
+\begin{equation*}
+  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty} \dd{\omega}
+    \frac{e^{-i\omega t} - e^{i(2\piN/\omega -t)\omega}}
+    {\omega-\omega_+}(\omega-\omega_-)(\omega-\Omega)(\omega+\Omega)}
+\end{equation*}
