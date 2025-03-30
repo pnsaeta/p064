@@ -136,7 +136,9 @@ where I have defined $$\Gamma^2 \equiv \omega_1^2 - \Omega^2 - \beta^2$$, and wh
 
 When $$0 < t < 2 \pi / N$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. Hence, the residue theorem yields
 \begin{align}
-  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2 \phi i) \bigg( \frac{e^{-i\omega_+ t}}{2\omega_1 (\Gamma^2-2\beta\omega_1 i)} 
+  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2 \pi i) \bigg( \frac{e^{-i\omega_+ t}}{2\omega_1 (\Gamma^2-2\beta\omega_1 i)} 
    -  \frac{e^{-i\omega_- t}}{2 \omega_1 (\Gamma^2 + 2 \beta \omega_1 i)}
    \bigg)\notag
+   \\\ 
+   &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right)
 \end{align}
