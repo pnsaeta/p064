@@ -108,5 +108,5 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 A generalization of the Ising model treats spins in a crystalline lattice as units vector in the $$xy$$ plane, yielding an energy function
 \begin{equation}
   E = - J \sum_{i, j=\text{nn}(i)} \mathbf{s}_i \cdot \mathbf{s}\_j 
-  = = - J \sum_{i, j=\text{nn}(i)} \cos(\theta_i - \theta_j)
+  = - J \sum\_{i, j=\text{nn}(i)} \cos(\theta_i - \theta_j)
 \end{equation}
