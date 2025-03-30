@@ -118,7 +118,7 @@ By the convolution theorem, then,
 
 Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly:
 \begin{equation}
-  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty} \dd{\omega}
+  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty} 
     \frac{e^{-i\omega t} - e^{i(2\pi N/\omega -t)\omega}}
-    {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)}
+    {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
