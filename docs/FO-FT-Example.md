@@ -124,4 +124,7 @@ Evaluating this integral is somewhat tricky. Let's first clean up the integrand 
 \end{equation}
 where $$\omega_{\pm} = \pm\omega_1 - i\beta$$. Writing the integrand this way shows that it has four first-order poles, two on the real axis and in the path of integration, and two in the lower half-plane. It is straightforward to show that the residue at the poles on the real axis vanishes, because at those points, the numerator vanishes. Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
 
-For $$t > 2 \pi N/\omega$$, we must close in the LHP for the exponentials in the numerators to go to zero. But if $$0 < t < 2 \pi N/\omega$$, we have to separate numerator into two distinct integrals, because we have to close in opposite half planes for the two terms.
+For $$t > 2 \pi N/\omega$$, we must close in the LHP for the exponentials in the numerators to go to zero. But if $$0 < t < 2 \pi N/\omega$$, we have to separate numerator into two distinct integrals, because we have to close in opposite half planes for the two terms. In either case, the denominator goes to the same expression, so we can evaluate it first. When $$\omega \to \omega_+$$, the denominator becomes
+\\[
+    \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
+\\]
