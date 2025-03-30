@@ -122,3 +122,4 @@ Evaluating this integral is somewhat tricky. Let's first clean up the integrand 
     \frac{e^{-i\omega t} - e^{i(2\pi N/\omega -t)\omega}}
     {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
+where $$\omega_{\pm} = \pm\omega_1 - i\beta$$.
