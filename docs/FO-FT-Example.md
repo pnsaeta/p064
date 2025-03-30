@@ -127,9 +127,9 @@ where $$\omega_{\pm} = \pm\omega_1 - i\beta$$. Writing the integrand this way sh
 For $$t > 2 \pi N/\omega$$, we must close in the LHP for the exponentials in the numerators to go to zero. But if $$0 < t < 2 \pi N/\omega$$, we have to separate numerator into two distinct integrals, because we have to close in opposite half planes for the two terms. In either case, the denominator goes to the same expression (apart from the term going to zero), so we can evaluate it first. When $$\omega \to \omega_+$$, the denominator becomes
 \\[
     \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
-    = 2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 -2 \beta \omega_1 i)
+    = 2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 -2 \beta \omega_1 i) = 2 \omega_1 (\Gamma^2 - 2 \beta \omega_1 i)
 \\]
-and when $$\omega \to \omega_-$$, it becomes
+where I have defined $$\Gamma^2 \equiv \omega_1^2 - \Omega^2 - \beta^2$$, and when $$\omega \to \omega_-$$, it becomes
 \\[
-    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i)
+    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma^2 + 2 \beta \omega_1 i)
 \\]
