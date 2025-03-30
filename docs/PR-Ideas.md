@@ -66,6 +66,13 @@ useful.
 
 ## Mechanics
 
+### Double Pendulum
+
+<p class="center" markdown="0">
+  <img src="figs/Double-Pendulum.gif" style="width: 600px;" alt="double pendulum">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+
 ### Metronomes
 
 A metronome is a sort of pendulum that is driven by a wound spring that gives the oscillating rod a periodic kick to keep it oscillating (that is, to overcome the inevitable dissipation caused by friction). If you place a great number of identical metronomes set the oscillate at the same frequency on a platform that is able to move, and you start them with random phases, the subtle motions of the platform eventually persuade them to all oscillate in phase. That is, they “synchronize.” They all end up ticking at the exact same time, even though they all started at different points in the cycle.
