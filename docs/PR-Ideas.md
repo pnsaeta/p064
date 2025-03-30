@@ -105,10 +105,13 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 
 ### Kosterlitz-Thouless Transition
 
-A generalization of the Ising model treats spins in a crystalline lattice as units vector in the $$xy$$ plane, yielding an energy function
+A generalization of the Ising model, called the **planar model**, treats spins in a crystalline lattice as units vector in the $$xy$$ plane, yielding an energy function
 \begin{equation}
   E = - J \sum_{i, j=\text{nn}(i)} \mathbf{s}_i \cdot \mathbf{s}\_j 
   = - J \sum\_{i, j=\text{nn}(i)} \cos(\theta_i - \theta_j)
 \end{equation}
 where $$\theta_i$$ is the angle spin $$i$$ makes with the $$x$$ axis. As discussed in Chapter 15 of Gould, Tobochnik, and Christian, the mean magnetization in this model is zero at all finite temperatures, but there is a phase transition (the Kosterlitz-Thouless transition) at $$T_{\text{KT}}$$. Below $$T_{\text{KT}}$$, the spin-spin correlation function $$C(r)$$ decreases as a power law, but above $$T_{\text{KT}}$$, $$C(r)$$ decreases exponentially.
 
+### The Classical Heisenberg Model
+
+The Heisenberg model generalizes the planar model by allowing the spins to point in any direction in three-dimensional space.
