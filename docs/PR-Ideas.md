@@ -137,4 +137,4 @@ Imagine starting with a square sheet of aluminum and drilling holes at random po
 
 ## Electromagnetism
 
-One can use a finite-difference time-domain (FDTD) approach to simulate time-dependent electromagnetic fields, such as optical waves.
+One can use a finite-difference time-domain (FDTD) approach to simulate time-dependent electromagnetic fields, such as optical waves. More details to follow.
