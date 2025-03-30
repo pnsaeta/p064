@@ -93,7 +93,7 @@ Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which
 
 The Ising model attempts to represent the interactions between neighboring spins in a crystalline latttice, which may give rise to ferromagnetic behavior. In this simple model, the energy of a collection of spins is given by
 \begin{equation}
-  E = -J \sum_{i=1}^N \sum_{j}^{\text{nn}} s_i s_j - B \sum_{i=1}^N s_i
+  E = -J \sum_{i=1}^N \sum_{j=\text{nn}(i)} s_i s_j - B \sum_{i=1}^N s_i
 \end{equation}
 where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of interaction between nearest neighbors, and $$B$$ the strength of interaction with an externally applied magnetic field. If $$J > 0$$, the spins prefer to align; if $$J < 0$$, nearest neighbors prefer to point in opposite directions. Of course, on a triangular lattice, this is not possible, which can lead to interesting behavior.
 
