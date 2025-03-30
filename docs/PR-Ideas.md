@@ -133,6 +133,8 @@ The Heisenberg model generalizes the planar model by allowing the spins to point
 
 ## Percolation
 
+Imagine starting with a square sheet of aluminum and drilling holes at random positions through the sheet. For a small number of holes, the sheet will hold together. As the mean density of holes increases, however, the structural integrity of the sheet will eventually be compromised and there will no longer remain a path from one side to other without leaving metal. Or consider filling a cardboard cylinder with marbles and attempting to pass an electrical current from the metallic bottom to the top. No current will pass. Now selectively replace individual glass marbles with identically sized metal spheres. At some point, the conductivity will jump from zero to a finite value. These are but two examples of percolation thresholds. Such systems have interesting behavior as the density of holes or of conducting spheres approaches the percolation threshold and lend themselves to simulation.
+
 ## Electromagnetism
 
 One can use a finite-difference time-domain (FDTD) approach to simulate time-dependent electromagnetic fields, such as optical waves.
