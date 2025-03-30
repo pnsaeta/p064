@@ -73,7 +73,7 @@ A double pendulum consists of a two point masses suspended from light, rigid rod
 <p class="center" markdown="0">
   <img src="figs/Double-Pendulum.mp4" style="width: 600px;" alt="double pendulum">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — A set of 5 double pendulums released from rest from very slightly different initial configurations. Initially, their motion is indistinguishable, but as time goes on, their trajectories diverge chaotically.</p>
 
 ### Metronomes
 
