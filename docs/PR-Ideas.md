@@ -68,7 +68,7 @@ useful.
 
 ### Double Pendulum
 
-A double pendulum consists of a two point masses suspended from light, rigid rods, with the second rod attached at the first mass.
+A double pendulum consists of a two point masses suspended from light, rigid rods, with the second rod attached at the first mass. If released from rest at small amplitude, such a system is well behaved; its motion can be described as a combination of two normal modes. In a normal mode, both particles oscillate at the same frequency. Mass-spring systems (molecules, crystals) exhibit this behavior, as well. However, because the gravitational torque is a **nonlinear** function of displacement angle, when given sufficient initial energy, the double pendulum exhibits remarkable, chaotic behavior, as illustrated in <a href="#Fig2">Figure 2</a>.
 
 <p class="center" markdown="0">
   <img src="figs/Double-Pendulum.mp4" style="width: 600px;" alt="double pendulum">
