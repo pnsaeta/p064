@@ -87,7 +87,7 @@ which means that $$y' = \eta$$ is also a solution to the original differential e
 \\[
     s'(x) = \alpha c(x) + \beta s(x)
 \\]
-Since we have assumed $$s'(0) = 1$$, $$\alpha = 1$$, and $$\beta$$ is as yet undetermined. Differentiating again,
+At $$x = 0$$, only $$c(x)$$ is nonzero, so since we have assumed $$s'(0) = 1$$, we must have $$\alpha = 1$$, while $$\beta$$ is as yet undetermined. Differentiating again,
 \\[
     s^{\prime\prime}(x) = c'(x) + \beta s'(x) = -s(x)
 \\]
