@@ -141,4 +141,7 @@ When $$0 < t < 2 \pi / N$$, we get a contribution from the two poles in the LHP 
    \bigg)\notag
    \\\ 
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right)
+   \\\ 
+   &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
+   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg)
 \end{align}
