@@ -79,7 +79,11 @@ Consider the derivative $$y'$$. If we differentiate the original differential eq
 \\[
     y^{\prime\prime\prime} + y' = 0
 \\]
-which means that $$y'$$ is also a solution to the original differential equation. Therefore, $$y'$$ may be expressed as a linear combination of the eigenfunctions $$c(x)$$ and $$s(x)$$. So, for example,
+Letting $$\eta = y'$$, this equation may be written
+\\[
+    \eta^{\prime\prime} + \eta = 0
+\\]
+which means that $$y' = \eta$$ is also a solution to the original differential equation. Therefore, $$y'$$ may be expressed as a linear combination of the eigenfunctions $$c(x)$$ and $$s(x)$$. So, for example,
 \\[
     s'(x) = \alpha c(x) + \beta s(x)
 \\]
