@@ -49,6 +49,8 @@ Some of the most important ODEs in physics include
 
 - The solution to equidimensional equations may be obtained with the *Ansatz* (guess) $$y = x^p$$, which reduces the differential equation to an algebraic equation.
 
+- Legendre’s equation arises when solving Laplace's equation in spherical coordinates, such as when one seeks the eigenstates of the hydrogen atom.
+
 - 
 
 
