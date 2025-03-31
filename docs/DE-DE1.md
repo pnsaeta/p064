@@ -51,7 +51,9 @@ Some of the most important ODEs in physics include
 
 - Legendre’s equation arises when solving Laplace's equation in spherical coordinates, such as when one seeks the eigenstates of the hydrogen atom.
 
-- 
+- Bessel's equation describes the spatial component of waves on a spherical membrane, or waves on a pond. Solutions oscillate with an amplitude that falls off (asymptotically) with distance $$x$$ as $$1/\sqrt{x}$$, consistent with energy conservation as the wave propagates outward.
+
+- The generalized Laguerre equation also arises as the radial equation when solving for the eigenstates of the hydrogen atom.
 
 
 ## Using the ODE to Characterize its Solutions
