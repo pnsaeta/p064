@@ -66,7 +66,12 @@ This is a second-order linear differential equation with constant coefficients. 
 
 But, suppose that you didn't know that. Can we use the differential equation itself to derive the properties of the solutions?
 
-With tongue in cheek (or malice of forethought), let us call the two solutions $$s(x)$$ and $$c(x)$$, with $$s(0) = 0$$, $$s'(0) = 1$$, $$c(0)=1$$, and $$c'(0) = 0$$, and note that the general solution must take the form
+With tongue in cheek (or malice of forethought), let us call the two solutions $$s(x)$$ and $$c(x)$$, and distinguish them by their properties at $$x = 0$$. We will take
+\begin{align}
+  s(0) &= 0 & \qquad s'(0) &= 1  \notag \\\ 
+  c(0) &= 1 & \qquad c'(0) &= 0 \notag
+\end{align}
+ $$s(0) = 0$$, $$s'(0) = 1$$, $$c(0)=1$$, and $$c'(0) = 0$$, and note that the general solution must take the form
 \\[
     y(x) = A c(x) + B s(x)
 \\]
