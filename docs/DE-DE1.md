@@ -213,4 +213,4 @@ ax.set_ylabel(r"$J_0(x)$");
 
 You can readily see the fine agreement between the truncated series and the `scipy` version of $$J_0(x)$$.
 
-[Numerical Approaches](DE-DE-2.md)
+[Numerical Approaches](DE-DE2.md)
