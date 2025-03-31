@@ -128,10 +128,9 @@ Now we take advantage of the fact that each function solves the differential equ
   &= A(x) [f(x) g'(x) - g(x) f'(x)] = A(x) W(x) \notag \\\ 
   \frac{1}{W} \dd{W} &= A(x)\dd{x} \notag \\\ 
   \ln W &= \int A(x)\dd{x} \qquad\longrightarrow\qquad
-  W(x) = c \exp\qty[\int A(x)\dd{x}]
-  \notag
+  W(x) = c \exp\qty[\int A(x)\dd{x}] \label{eq:Abel}
 \end{align}
-Using this expression and knowledge of one of the two solutions, we can generate a first-order equation to yield the other solution.
+Using this expression (known as **Abel's formula**) and knowledge of one of the two solutions, we can generate a first-order equation to yield the other solution.
 
 ### Exercise
 
@@ -139,7 +138,7 @@ Consider the differential equation
 \begin{equation}\label{eq:BDP}
   x^2 y'' + 2 x y' - 2y = 0
 \end{equation}
-for $$x > 0$$.
+for $$x > 0$$. (a) Show that $$y_1(x) = x$$ is a solution. (b) Use this solution and Abel's formula to find the second solution, $$y_2(x)$$.
    
 ## Method of Frobenius
 
