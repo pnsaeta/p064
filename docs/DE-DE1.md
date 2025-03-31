@@ -71,7 +71,7 @@ With tongue in cheek (or malice of forethought), let us call the two solutions $
   s(0) &= 0 & \qquad s'(0) &= 1  \notag \\\ 
   c(0) &= 1 & \qquad c'(0) &= 0 \notag
 \end{align}
- $$s(0) = 0$$, $$s'(0) = 1$$, $$c(0)=1$$, and $$c'(0) = 0$$, and note that the general solution must take the form
+and note that the general solution must take the form
 \\[
     y(x) = A c(x) + B s(x)
 \\]
