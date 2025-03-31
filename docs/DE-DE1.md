@@ -113,11 +113,11 @@ Since $$f'$$ vanishes, $$f$$ must be a constant and since it is 1 when $$x = 0$$
 
 ## Wronskian
 
-If we consider a more general second-order linear differential equation,
+Let us now consider a more general second-order linear differential equation,
 \\[
     y^{\prime\prime} = A(x) y'(x) + B(x) y(x)
 \\]
-The Wronskian of two functions is defined by $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
+The **Wronskian** of two functions is defined by $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
 \\[
     \dv{W}{x} = f' g' + f g^{\prime\prime} - (g' f' + g f^{\prime\prime}) = 
     f g^{\prime\prime} - g f^{\prime\prime}
