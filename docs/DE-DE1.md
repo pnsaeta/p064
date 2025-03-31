@@ -47,6 +47,9 @@ Some of the most important ODEs in physics include
   </tr>
 </table>
 
+- The solution to equidimensional equations may be obtained with the *Ansatz* (guess) $$y = x^p$$, which reduces the differential equation to an algebraic equation.
+
+- 
 
 
 ## Using the ODE to Characterize its Solutions
