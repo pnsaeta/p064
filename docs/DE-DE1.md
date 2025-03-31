@@ -91,7 +91,7 @@ At $$x = 0$$, only $$c(x)$$ is nonzero, so since we have assumed $$s'(0) = 1$$, 
 \\[
     s^{\prime\prime}(x) = c'(x) + \beta s'(x) = -s(x)
 \\]
-At $$x = 0$$, this implies $$0 = 0 + \beta 1$$. Therefore, $$\beta = 0$$ and we have determined that
+At $$x = 0$$, this implies $$0 = 0 + \beta \times 1$$. Therefore, $$\beta = 0$$ and we have determined that
 \\[
     s'(x) = c(x)
 \\]
