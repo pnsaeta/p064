@@ -23,7 +23,7 @@ Some of the most important ODEs in physics include
     <th>Equation</th><th>Form</th><th>Singular points</th>
   </tr>
   <tr class="sep">
-    <td>Damped SHO</td><td>$$y^{\prime\prime} + \beta y' + \omega_0^2 y = F(x)$$</td><td> — </td>
+    <td>Damped SHO</td><td>$$y^{\prime\prime} + 2\beta y' + \omega_0^2 y = \frac{F(x)}{m}$$</td><td> — </td>
   </tr>
   <tr>
     <td>Equidimensional equation</td>
