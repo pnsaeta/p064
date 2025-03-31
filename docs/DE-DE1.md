@@ -132,6 +132,14 @@ Now we take advantage of the fact that each function solves the differential equ
   \notag
 \end{align}
 Using this expression and knowledge of one of the two solutions, we can generate a first-order equation to yield the other solution.
+
+### Exercise
+
+Consider the differential equation
+\begin{equation}\label{eq:BDP}
+  x^2 y'' + 2 x y' - 2y = 0
+\end{equation}
+for $$x > 0$$.
    
 ## Method of Frobenius
 
