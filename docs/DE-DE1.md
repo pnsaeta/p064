@@ -108,11 +108,8 @@ We can also establish the Pythagorean theorem! Note that at $$x = 0$$, $$c(0)^2 
 \\[
     f' = 2c(x) c'(x) + 2 s(x) s'(x) = 2 c(x) [-s(x)] + 2 s(x) [c(x)] = 0
 \\]
+Since $$f'$$ vanishes, $$f$$ must be a constant and since it is 1 when $$x = 0$$, it must be 1 for all $$x$$.
 
- that $$c^2(x) + s^2(x) = 1$$, which is true at $$x = 0$$, by differentiating:
-\\[
-    2 c c' + 2 s s' = 2 c(x) [-s(x)] + 2 s(x) c(x) = 0
-\\]
 
 ## Wronskian
 
