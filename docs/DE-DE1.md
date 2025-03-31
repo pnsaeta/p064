@@ -58,13 +58,15 @@ Some of the most important ODEs in physics include
 
 ## Using the ODE to Characterize its Solutions
 
-As a simple example, consider the differential equation
+One can learn a lot about the solutions to a second-order linear differential equation from the equation itself. As a simple example, consider the differential equation
 \\[
     y^{\prime\prime} + y = 0
 \\]
-This is a second-order linear differential equation with constant coefficients. It has two linearly independent solutions; you already know that the solutions are $$\sin x$$ and $$\cos x$$. But, suppose that you don't. Can we use the differential equation itself to derive the properties of the solutions.
+This is a second-order linear differential equation with constant coefficients. Therefore, it has two linearly independent solutions; you already know that the solutions are $$\sin x$$ and $$\cos x$$.
 
-With tongue in cheek, let us call the two solutions $$s(x)$$ and $$c(x)$$, with $$s(0) = 0$$, $$s'(0) = 1$$, $$c(0)=1$$, and $$c'(0) = 0$$, and note that the general solution must take the form
+But, suppose that you didn't know that. Can we use the differential equation itself to derive the properties of the solutions?
+
+With tongue in cheek (or malice of forethought), let us call the two solutions $$s(x)$$ and $$c(x)$$, with $$s(0) = 0$$, $$s'(0) = 1$$, $$c(0)=1$$, and $$c'(0) = 0$$, and note that the general solution must take the form
 \\[
     y(x) = A c(x) + B s(x)
 \\]
