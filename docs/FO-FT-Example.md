@@ -140,12 +140,12 @@ When $$0 < t < 2 \pi / N$$, we get a contribution from the two poles in the LHP 
    -  \frac{e^{-i\omega_- t}}{2 \omega_1 (\Gamma^2 + 2 \beta \omega_1 i)}
    \bigg)\notag
    \\\ 
-   &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right)
+   &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right) \notag
    \\\ 
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg) \\\ 
+   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg) \notag \\\ 
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( 4\beta\omega_1 i \cos(\omega_1 t) - 2 \Gamma^2 i \sin (\omega_1 t) \bigg) \\\ 
+   \bigg( 4\beta\omega_1 i \cos(\omega_1 t) - 2 \Gamma^2 i \sin (\omega_1 t) \bigg) \notag \\\ 
    &= \frac{F_0 \Omega}{\omega_1 m} \frac{e^{-\beta t}}{\Gamma^4 + 4 \beta^2 \omega_1^2} 
    \left[ \Gamma^2 \sin(\omega_1 t) - 2\beta\omega_1 \cos(\omega_1 t)\right]
 \end{align}
