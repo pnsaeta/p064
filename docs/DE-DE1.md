@@ -104,7 +104,10 @@ Differentiating again gives $$c''(x) = -c(x)$$, which at 0 yields
     c^{\prime\prime}(0) = -c(0) = -1 = B s'(0) = B 
     \qquad \longrightarrow\qquad c'(x) = -s(x)
 \\]
-We can also establish the Pythagorean theorem! Note that at $$x = 0$$, $$c(0)^2 + s(0)^2 = 1$$. Now differentiate $$f = c^2(x) + s^2(x)$$ with respect to $$x$$
+We can also establish the Pythagorean theorem! Note that at $$x = 0$$, $$c(0)^2 + s(0)^2 = 1$$. Now differentiate $$f = c^2(x) + s^2(x)$$ with respect to $$x$$:
+\\[
+    f' = 2c(x) c'(x) + 2 s(x) s'(x) = 2 c(x) [-s(x)] + 2 s(x) [c(x)] = 0
+\\]
 
  that $$c^2(x) + s^2(x) = 1$$, which is true at $$x = 0$$, by differentiating:
 \\[
