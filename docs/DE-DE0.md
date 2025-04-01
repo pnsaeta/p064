@@ -31,4 +31,4 @@ for arbitrary constant $$c$$.
 
 We would like to know under what conditions a solution to the equation $$y' = f(t, y)$$, with $$y(t_0) = y_0$$ has a solution. 
 
-> If the $$f(t,y)$$ and $$\pdv{f}{y}$$ are continuous on a closed rectangle $$R$$ on the $$ty$$ plane and the point $$(t_0, y_0)$$ is inside $$R$$, then a solution $$y(t)$$ exists on some $$t$$ interval containing $$t_0$$ in its interior, and no more than one solution in $$R$$ on any $$t$$ interval that contains $$t_0$$.
+> If the $$f(t,y)$$ and $$\pdv{f}{y}$$ are continuous on a closed rectangle $$R$$ on the $$ty$$ plane and the point $$(t_0, y_0)$$ is inside $$R$$, then a solution $$y(t)$$ exists on some interval of $$t$$ that contains $$t_0$$ in its interior, and no more than one solution in $$R$$ on any $$t$$ interval that contains $$t_0$$.
