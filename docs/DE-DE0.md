@@ -19,9 +19,9 @@ One strategy for finding $$y(t)$$ is to seek to express the left-hand side of th
 - Multiply the differential equation by $$\exp[P(t)]$$ to get $$ [e^{P(t)} y]' = e^{P(t)} q(t) $$.
 - Integrate both sides with respect to time to get
 \\[
-    e^{P(t)} y(t) = Q(t) \equiv \int e^{P(t)} q(t) \dd{t}
+    e^{P(t)} y(t) = Q(t) + C \equiv \int e^{P(t)} q(t) \dd{t}
 \\]
 - Multiply by $$e^{-P(t)}$$ to solve for $$y(t)$$:
 \begin{equation}\label{eq:integrating-factor}
-  y(t) = e^{-P(t)} Q(t)
+  y(t) = e^{-P(t)} (Q(t) + C)
 \end{equation}
