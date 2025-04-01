@@ -14,7 +14,7 @@ The most general second-order linear differential equation is
 \\[
     y^{\prime\prime} + P(x) y' + Q(x) y = R(x)
 \\]
-The point $$x_0$$ is called a **regular point** of the ODE if each of $$P(x)$$ and $$Q(x)$$ has a convergent power series expansion in the neighborhood of $$x_0$$. A point for which this is not the case is called a **singular point**. A **regular singular point** is one for which both $$(x-x_0)P(x)$$ and $$(x-x_0)^2 Q(x)$$ have convergent power series in the neighborhood of $$x_0$$. The method of Frobenius, which is outlined below, can be applied in the neighborhood of regular singular points; other singular points require more complicated techniques.
+In this equation, $$x$$ is the independent variable, $$y(x)$$ is the dependent variable, and primes denote differentiation with respect to $$x$$. The point $$x_0$$ is called a **regular point** of the ODE if each of $$P(x)$$ and $$Q(x)$$ has a convergent power series expansion in the neighborhood of $$x_0$$. A point for which this is not the case is called a **singular point**. A **regular singular point** is one for which both $$(x-x_0)P(x)$$ and $$(x-x_0)^2 Q(x)$$ have convergent power series in the neighborhood of $$x_0$$. The method of Frobenius, which is outlined below, can be applied in the neighborhood of regular singular points; other singular points require more complicated techniques.
 
 Some of the most important ODEs in physics include
 
