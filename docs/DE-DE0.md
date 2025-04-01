@@ -21,3 +21,7 @@ One strategy for finding $$y(t)$$ is to seek to express the left-hand side of th
 \\[
     e^{P(t)} y(t) = Q(t) \equiv \int e^{P(t)} q(t) \dd{t}
 \\]
+- Multiply by $$e^{-P(t)}$$ to solve for $$y(t)$$:
+\begin{equation}\label{eq:integrating-factor}
+  y(t) = e^{-P(t)} Q(t)
+\end{equation}
