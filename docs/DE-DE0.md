@@ -16,7 +16,4 @@ where $$t$$ is the independent variable, $$y(t)$$ is the dependent variable, and
 One strategy for finding $$y(t)$$ is to seek to express the left-hand side of the equation as the total derivative of some function of $$t$$.
 
 - To that end, let us suppose that $$P(t) = \int p(t)\dd{t}$$, where we may pick any constant of integration.
-- Multiply the differential equation by $$\exp[P(t)]$$ to get
-\\[
-    [e^{P(t)} y]' = e^{P(t)} q(t)
-\\]
+- Multiply the differential equation by $$\exp[P(t)]$$ to get $$ [e^{P(t)} y]' = e^{P(t)} q(t) $$.
