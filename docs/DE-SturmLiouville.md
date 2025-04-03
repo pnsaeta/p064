@@ -83,7 +83,7 @@ However, there are plenty of common second-order linear differential equations w
 \begin{equation}\label{eq:Bessel}
   x^2 y^{\prime\prime} + x y' + (x^2 - \nu^2) y = 0
 \end{equation}
-so that $$P' = 2x \ne x = Q$$. Intuitively, we could solve this little problem by dividing the whole equation by $$x$$ to get
+so that $$P' = 2x$$ while $$x = Q$$. Intuitively, we could solve this little problem by dividing the whole equation by $$x$$ to get
 \\[
     x y^{\prime\prime} + y' + \qty(x - \frac{\nu^2}{x}) y = 0
 \\]
