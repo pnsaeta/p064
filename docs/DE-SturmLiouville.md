@@ -57,8 +57,8 @@ it suffices to integrate twice by parts:
    &= -p f^{\star\prime}g\bigg|\_{a}^{b} + \int_{a}^{b} f^{\star\prime} p g' \dd{x} -
     \int_{a}^{b} r(x) f^{\star} g \dd{x}
   \notag  \\\ 
-    &= \left.-p(x) f^{\star\prime}g\right|\_{a}^{b} +
-       \left. f^{\star} p(x) g' \right|\_{a}^{b} -
+    &= -p f^{\star\prime}g\bigg|\_{a}^{b} +
+      f^{\star} p g' \bigg|\_{a}^{b} -
        \int_{a}^{b} f^{\star} \dv{}{x}\qty[ p(x) g'] \dd{x} -
        \int_{a}^{b} q(x) f^{\star} g \dd{x} \\\ 
        &=  \textcolor{DarkRed}{ 
