@@ -758,8 +758,17 @@ different initial conditions.
 * Can you think of a way to check whether energy is conserved? Try ignoring any
     velocity along the $$z$$ axis, as a first approximation, and consider
     gravitational potential energy and kinetic energy.
-* Later we will develop the notion of angular momentum and see that the
-    component of angular momentum parallel to gravity should be conserved for this
-    system. For this system, the angular momentum around the $$z$$ axis should be
+* For this system, the angular momentum around the $$z$$ axis should be
     the mass of the bob times the quantity $$x \dot{y} - y \dot{x}$$. Is it in fact
     conserved?
+
+To handle angles that are not small, it is more convenient to use spherical
+polar angles $$\theta$$ and $$\phi$$ and to employ Lagrangian mechanics, which develops the equations of motion
+from energy, rather than forces. We will discuss this soon. In the meantime, the
+summary is the following:
+
+1. Pick generalized coordinates $$q_i$$ that uniquely identify the configuration of the system. These 
+may be Cartesian, but may also be angles or other convenient quantities.
+2. Compute the potential energy $$U$$ in terms of the $$q_i$$.
+3. Compute the kinetic energy $$T$$ in terms of the $$q_i$$ and their time derivatives, $$\dot{q}_i$$.
+4. 
