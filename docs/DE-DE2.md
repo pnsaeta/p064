@@ -766,7 +766,8 @@ different initial conditions.
 
 To handle angles that are not small, it is more convenient to use spherical
 polar angles $$\theta$$ and $$\phi$$ and to employ Lagrangian mechanics, which develops the equations of motion
-from energy, rather than forces. We will discuss this soon. In the meantime, the
+from energy, rather than forces. We will discuss this approach soon in more detail, as it can
+be very helpful for certain projects. In the meantime, the
 summary is the following:
 
 1. Pick generalized coordinates $$q_i$$ that uniquely identify the configuration of the system. These 
@@ -784,7 +785,7 @@ In this case, the potential energy is
 \begin{equation}\label{eq:U}
   U = - m g \ell \cos\theta
 \end{equation}
-and the kinetic energy is
+if we measure $$\theta$$ from the south pole and the kinetic energy is
 \begin{equation}\label{eq:T}
   T = \frac12 m \ell^2 ( \dot{\theta}^2 + \sin^2\theta \dot{\phi}^2)
 \end{equation}
