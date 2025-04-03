@@ -49,11 +49,11 @@ which looks a lot like Eq.&nbsp;(\ref{eq:old}). To show that $$L$$ is a **self-a
 it suffices to integrate twice by parts:
 \begin{align}
  \ev{Lf,g} &= \int_{a}^{b} - \frac{1}{w(x)} 
-   \left(\dv{}{x} \qty[p(x) f'] + q(x) f \right)^{\star}
+   \left(\dv{}{x} \qty[p(x) f'] + r(x) f \right)^{\star}
     w(x) g(x) \dd{x}  \\\ 
-   &= -\int_{a}^{b}  \left(\dv{}{x} \qty[p(x) f'] + q(x) f\right)^{\star} g(x) \dd{x} \\\ 
+   &= -\int_{a}^{b}  \left(\dv{}{x} \qty[p(x) f'] + r(x) f\right)^{\star} g(x) \dd{x} \\\ 
    &= \left.-p(x) f^{\star\prime}g\right|\_{a}^{b} + \int_{a}^{b} f^{\star\prime} p(x) g(x) \dd{x} -
-    \int_{a}^{b} q(x) f^{\star} g \dd{x} \\\ 
+    \int_{a}^{b} r(x) f^{\star} g \dd{x} \\\ 
     &= \left.-p(x) f^{\star\prime}g\right|\_{a}^{b} +
        \left. f^{\star} p(x) g' \right|\_{a}^{b} -
        \int_{a}^{b} f^{\star} \dv{}{x}\qty[ p(x) g'] \dd{x} -
