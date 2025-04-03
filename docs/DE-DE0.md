@@ -1,6 +1,6 @@
 {:menu DE}
 
-# First-Order Ordinary Differential Equations
+# First-Order ODEs
 
 * toc
 {:toc}
@@ -29,6 +29,44 @@ for arbitrary constant $$c$$.
 
 ## Existence and Uniqueness
 
-We would like to know under what conditions a solution to the equation $$y' = f(t, y)$$, with $$y(t_0) = y_0$$ has a solution. 
+We would like to know under what conditions a solution to the equation $$y' = f(t, y)$$, with $$y(t_0) = y_0$$ has a solution. The **Existence and Uniqueness Theorem** holds the following:
 
-> If the $$f(t,y)$$ and $$\pdv{f}{y}$$ are continuous on a closed rectangle $$R$$ on the $$ty$$ plane and the point $$(t_0, y_0)$$ is inside $$R$$, then a solution $$y(t)$$ exists on some interval of $$t$$ that contains $$t_0$$ in its interior, and no more than one solution in $$R$$ on any $$t$$ interval that contains $$t_0$$.
+> If $$f(t, y)$$ and $$\pdv{f}{y}$$ are continuous on a closed rectangle $$R$$ on the $$ty$$ plane and the point $$(t_0, y_0)$$ is inside $$R$$, then a solution $$y(t)$$ exists on some interval of $$t$$ that contains $$t_0$$ in its interior, and no more than one solution in $$R$$ on any $$t$$ interval that contains $$t_0$$.
+
+## Slope Fields
+
+One way to visualize a first-order equation is to show the slope $$y' = f(t, y)$$ as a
+function of $$t$$ and $$y$$ in a slope field. We start at a particular point on the $$ty$$ plane
+and follow the local value of slope to determine how the value of $$y$$
+should change in the next small interval of time. This takes us to a new value
+of $$y$$, from which we can determine a new value of slope and then a new value of
+$$y$$, etc. The result is illustrated in <a href="#Fig1">in Figure 1</a>.
+
+<p class="center" markdown="0">
+  <img src="figs/DE-slopefield.webp" style="width: 600px;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The arrows show the derivative $$y'$$; the smooth curves show example solutions to the first-order equation.</p>
+
+## Separation of Variables
+
+If the differential equation you seek to solve can be written in the form
+\begin{equation}\label{eq:separable}
+  a(y) y' + b(x) = 0
+\end{equation}
+we can effectively separate the variables as follows. If $$A'(y) = a(y)$$, then 
+\begin{equation}\label{eq:dy}
+  \dv{[A(y)]}{x} = \dv{A}{y} \dv{y}{x} = a(y) y'
+\end{equation}
+by the chain rule. So,
+\begin{equation}\label{eq:sep}
+  \dv{[A(y)]}{x} = - \dv{B}{x} = -b(x)
+  \qquad\longrightarrow\qquad
+  A(y) + B(x) = C
+\end{equation}
+for an integration constant $$C$$. Note that this is the fussy mathematician's way. Physicists are happy proceeding as follows:
+\begin{align}
+  a(y) \dd{y} &= -b(x)\dd{x}  \notag
+  \\\ 
+  \int a(y) \dd{y} &= \int -b(x)\dd{x} + C
+\end{align}
+Simple. The mathematicians have a point that you must be careful about "tearing apart a derivative" this way if you think it establishes a pattern that you can do the same thing with second-order derivatives, which you cannot!
