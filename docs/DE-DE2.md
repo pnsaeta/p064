@@ -771,4 +771,4 @@ summary is the following:
 may be Cartesian, but may also be angles or other convenient quantities.
 2. Compute the potential energy $$U$$ in terms of the $$q_i$$.
 3. Compute the kinetic energy $$T$$ in terms of the $$q_i$$ and their time derivatives, $$\dot{q}_i$$.
-4. 
+4. Form the lagrangian $$L = T-U$$, which is a function of the $$q_i$$ and $$\dot{q}_i$$.
