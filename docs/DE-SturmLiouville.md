@@ -60,7 +60,8 @@ it suffices to integrate twice by parts:
     &= -p f^{\star\prime}g\bigg|\_{a}^{b} +
       f^{\star} p g' \bigg|\_{a}^{b} -
        \int_{a}^{b} f^{\star} \dv{}{x}\qty[ p(x) g'] \dd{x} -
-       \int_{a}^{b} q(x) f^{\star} g \dd{x} \\\ 
+       \int_{a}^{b} r(x) f^{\star} g \dd{x}
+       \notag \\\ 
        &=  \textcolor{DarkRed}{ 
         \underbrace{\left.p(x) \left( f^{\star}g' - f^{\star\prime}g \right) \right|\_{a}^{b} }\_{\text{bilinear concomitant}}} + \ev{f,Lg}
 \end{align}
