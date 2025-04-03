@@ -797,4 +797,4 @@ for $$\theta$$ and $$\phi$$, we get the following equations of motion:
   \ddot{\phi} &= - 2\frac{\dot{\phi}_0 \sin^2 \theta_0}{\sin^3 \theta} \cos\theta \; \dot{\theta} \label{eq:phid}
 \end{align}
 
-Use these dynamical equations and `solve_ivp` to compute trajectories in the projection of the pendulum's position in the $$xy$$ plane. 
+Use these dynamical equations and `solve_ivp` to compute trajectories in the projection of the pendulum's position in the $$xy$$ plane.
