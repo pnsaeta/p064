@@ -784,3 +784,7 @@ In this case, the potential energy is
 \begin{equation}\label{eq:U}
   U = - m g \ell \cos\theta
 \end{equation}
+and the kinetic energy is
+\begin{equation}\label{eq:T}
+  T = \frac12 m \ell^2 ( \dot{\theta}^2 + \sin^2\theta \dot{\phi}^2)
+\end{equation}
