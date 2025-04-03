@@ -788,3 +788,10 @@ and the kinetic energy is
 \begin{equation}\label{eq:T}
   T = \frac12 m \ell^2 ( \dot{\theta}^2 + \sin^2\theta \dot{\phi}^2)
 \end{equation}
+
+After computing the lagrangian $$L = T-U$$ and applying the Euler-Lagrange equation
+for $$\theta$$ and $$\phi$$, we get the following equations of motion:
+\begin{align}
+  \ddot{\theta} &= \sin\theta \cos\theta \dot{\phi}^2 - \frac{g}{l} \sin\theta \label{eq:thd} \\\ 
+  \ddot{\phi} &= - 2\frac{\dot{\phi}_0 \sin^2 \theta_0}{\sin^3 \theta} \cos\theta \; \dot{\theta} \label{eq:phid}
+\end{align}
