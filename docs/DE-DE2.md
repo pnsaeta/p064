@@ -762,6 +762,8 @@ different initial conditions.
     the mass of the bob times the quantity $$x \dot{y} - y \dot{x}$$. Is it in fact
     conserved?
 
+### Extension to Large Angles Using Lagrangian Mechanics
+
 To handle angles that are not small, it is more convenient to use spherical
 polar angles $$\theta$$ and $$\phi$$ and to employ Lagrangian mechanics, which develops the equations of motion
 from energy, rather than forces. We will discuss this soon. In the meantime, the
