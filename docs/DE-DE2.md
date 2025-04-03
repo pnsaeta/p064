@@ -778,3 +778,9 @@ may be Cartesian, but may also be angles or other convenient quantities.
 \begin{equation}
   \dv{}{t}\left[ \pdv{L}{\dot{q}_i} \right] - \pdv{L}{q_i} = 0
 \end{equation}
+to find the equations of motion.
+
+In this case, the potential energy is
+\begin{equation}\label{eq:U}
+  U = - m g \ell \cos\theta
+\end{equation}
