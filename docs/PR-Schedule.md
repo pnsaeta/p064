@@ -8,7 +8,7 @@
 
 ## Teams
 
-<table>
+<table class="nicetable">
 <tr><th>Team</th><th>Topic</th></tr>
 <tr><td>Sorin Jawaweer and Aly Rajan</td>
 <td>Double pendulum</td></tr>
