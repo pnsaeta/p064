@@ -8,6 +8,10 @@
 
 ## Teams
 
-| Team | Topic |
-| Sorin Jayaweera and Aly Rajan | Double pendulum |
-| Sruthi Koneru and Andra Marinescu | Navier-Stokes | 
+<table>
+<tr><th>Team</th><th>Topic</th></tr>
+<tr><td>Sorin Jawaweer and Aly Rajan</td>
+<td>Double pendulum</td></tr>
+<tr><td>Sruthi Koneru and Andra Marinescu</td><td>Navier-Stokes </td></tr>
+
+</table>
