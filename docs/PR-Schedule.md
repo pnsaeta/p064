@@ -13,5 +13,7 @@
 <tr><td>Sorin Jawaweer and Aly Rajan</td>
 <td>Double pendulum</td></tr>
 <tr><td>Sruthi Koneru and Andra Marinescu</td><td>Navier-Stokes </td></tr>
-
+<tr>
+  <td>Ravago Jones and Jonathan Holcombe</td><td>?</td>
+</tr>
 </table>
