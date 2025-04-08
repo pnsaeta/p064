@@ -76,13 +76,13 @@ The heat flow (the flow of thermal energy) into the segment through the face at 
 \\[
     A J(x,t) = -A \kappa(x,t) \pdv{u}{x}
 \\]
-where $$u(x,t)$$ is the temperature of the rod and $$\kappa(x,t)$$ is thermal conductivity of the material of the rod, $$A$$ is the cross-sectional area of the rod, and $$J(x,t)$$ is the power per unit area flowing into the segment. Similarly, the heat flow out of the right face is
+where $$u(x,t)$$ is the temperature of the rod and $$\kappa(x,t)$$ is thermal conductivity of the material of the rod, $$A$$ is the cross-sectional area of the rod, and $$J(x,t)$$ is the power per unit area flowing into the segment. The minus sign expresses that heat flows from regions of high temperature to regions of low temperature (opposite to the gradient). Similarly, the heat flow out of the right face is
 \\[
     A J(x+\delta x, t) = -A \kappa(x+\delta x,t) \pdv{u(x+\delta x, t)}{x}
 \\]
 Finally, the heat generated in the segment is $$G \delta t = g A \delta x \delta t$$, where $$g$$ is the power per unit volume deposited and $$\delta t$$ is the time over which the heat is deposited. Putting this all together, conservation of energy applied to the little segment gives
 \begin{equation}\label{eq:heat-equation}
-  \underbrace{c A \delta x \pdv{u}{t}}\_{\text{net power in}} = 
+  \underbrace{c \rho A \delta x \pdv{u}{t}}\_{\text{net power in}} = 
   \underbrace{g(x,t) A \delta x\vphantom{\pdv{u}{t}}}\_{\text{source power}} \;
   \underbrace{- \kappa(x,t) A \pdv{u(x,t)}{x}}\_{\text{heat flow in}} \;
   \underbrace{+ \kappa(x+\delta x,t) A \pdv{u(x+\delta x, t)}{x}}\_{\text{heat flow out}}
