@@ -239,7 +239,7 @@ The integral is
 \\]
 Hence,
 \begin{equation}\label{eq:LaplRound}
-  V(r,\theta) = \sum\_{n \text{ odd}} \frac{4}{n} \qty(\frac{r}{a})^n \sin n\theta
+  V(r,\theta) = \frac{4}{\pi} \sum\_{n \text{ odd}} \frac{1}{n} \qty(\frac{r}{a})^n \sin n\theta
 \end{equation}
 
 <p class="center" markdown="0">
