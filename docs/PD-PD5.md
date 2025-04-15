@@ -43,6 +43,11 @@ Rearranging slightly, we get
 \end{equation}
 In other words, the potential at $$[i,j]$$ is equal to the average of the four nearest neighbor values along the cardinal directions. A simple method to approach the true solution is to **relax** an initial configuration towards a solution that agrees with Eq.&nbsp;(\ref{eq:average}) by iterating multiple times through the array and applying Eq.&nbsp;(\ref{eq:average}).
 
+### Over-relaxation
+
+The relaxation method converges rather slowly. It typically takes a large number of iterations to achieve a potential distribution that doesn't change appreciably on subsequent iterations. One way to try to speed up convergence of the relaxation method is to **over-relax** by an amount between 1 and 2. That is, if Eq.&nbsp;(\ref{eq:average}) would change the value of $$V_{i,j}$$ by $$\delta V_{i,j}$$, change it by $$\rho \delta V_{i,j}$$ for $$1 \le \rho \le 2$$. For the "right" value of the over-relaxation parameter $$\rho$$, you can achieve significantly better performance. However, if you make $$\rho$$ too big, the convergence rate gets worse again, and for $$\rho \ge 2$$, the method becomes unstable and fails to converge.
+
+Another strategy is to do an initial relaxation on a coarse lattice, and use the result of that relaxation to seed the initial values of a finer lattice.
 
 ## Diffusion in One-Dimension
 
