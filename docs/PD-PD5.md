@@ -204,4 +204,6 @@ If the material properties depend on temperature, we need to return to the origi
 where I am using $$c$$ to represent the specific heat per unit volume. Assuming that the material properties are independent of position and time, but may depend on the temperature, we have for a FTCS scheme
 \\[
     \frac{c(u_j^{i+1})u_j^{i+1} - c(u_j^i)u_j^i}{\Delta t}
+    =
+    \frac{\kappa(u_{j+1}^i)u_{j+1}^i - 2 \kappa(u_j^i)u_j^i + \kappa(u_{j-1}^i) u_{j-1}^i}{(\Delta x)^2}
 \\]
