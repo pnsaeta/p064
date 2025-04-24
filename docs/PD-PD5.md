@@ -199,5 +199,6 @@ Notice that both matrices are **tridiagonal**. As you will undoubtedly recall, o
 
 If the material properties depend on temperature, we need to return to the original differential equation and approximate the derivatives afresh. Recall that the original partial differential equation for the diffusion of heat in one dimension is
 \begin{equation}
-  \pdv{cu}{t} = \pdv{\kappa \pdv{u}{x}}{x}
+  \pdv{(cu)}{t} = \pdv{\kappa \pdv{u}{x}}{x}
 \end{equation}
+where I am using $$c$$ to represent the specific heat per unit volume. Assuming that the material properties are independent of position and time, but may depend on the temperature, we have
