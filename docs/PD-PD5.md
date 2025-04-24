@@ -207,4 +207,4 @@ where I am using $$c$$ to represent the specific heat per unit volume. Assuming 
     =
     \frac{\kappa(u_{j+1}^i)u_{j+1}^i - 2 \kappa(u_j^i)u_j^i + \kappa(u_{j-1}^i) u_{j-1}^i}{(\Delta x)^2}
 \\]
-where the upper index represents the step and the lower the position.
+where the upper index represents the step and the lower the position. The quantities on the right-hand side may all be computed after step $$i$$, but the term $$c(u_j^{i+1}) u_j^{i+1}$$
