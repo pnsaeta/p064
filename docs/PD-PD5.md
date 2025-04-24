@@ -192,3 +192,5 @@ Notice that both matrices are **tridiagonal**. As you will undoubtedly recall, o
 2. The most common boundary conditions are Dirichlet and Neumann conditions. In Dirichlet boundary conditions, the value of the variable is fixed, whereas in Neumann boundary conditions, the normal derivative is fixed (often at zero). In a one-dimensional problem, the normal derivative is the same thing as $$\partial u/\partial x$$. Work out how the tridiagonal matrices need to be adjusted for each type of boundary condition.
 
 3. After implementing the Crank-Nicolson method for solving $$u_t = D u_{xx}$$ in a one-dimensional uniform rod, investigate the error compared to the analytic solution as a function of time step $$\Delta t$$ for fixed $$\Delta x$$. Is the method second-order in time? That is, is the error proportional to $$(\Delta t)^2$$?
+
+4. If material properties such as $$c$$ and $$\kappa$$ were functions of temperature (not an uncommon situation), how would you have to modify the Crank-Nicolson 
