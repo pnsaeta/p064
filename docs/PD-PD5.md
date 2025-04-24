@@ -209,5 +209,5 @@ where I am using $$c$$ to represent the specific heat per unit volume. Assuming 
 \\]
 where the upper index represents the step and the lower the position. The quantities on the right-hand side may all be computed after step $$i$$, but the term $$c(u_j^{i+1}) u_j^{i+1}$$ involves both the unknown future temperature and the specific heat at that temperature. If we were willing to ignore the variation in the specific heat over the (presumably short) time step $$\Delta t$$, then we would get
 \begin{equation}
-  u_j^{i+1} = u_j^i + \frac{\Delta t}{c_j^i(\Delta x)^2} \left(\kappa(u_{j+1}^i)u_{j+1}^i - 2 \kappa(u_j^i)u_j^i + \kappa(u_{j-1}^i) u_{j-1}^i \right)
+  u_j^{i+1} = u_j^i + \frac{\Delta t}{c_j^i(\Delta x)^2} \bigg(\kappa(u_{j+1}^i)u_{j+1}^i - 2 \kappa(u_j^i)u_j^i + \kappa(u_{j-1}^i) u_{j-1}^i \bigg)
 \end{equation}
