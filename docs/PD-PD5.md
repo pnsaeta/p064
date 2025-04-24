@@ -194,3 +194,10 @@ Notice that both matrices are **tridiagonal**. As you will undoubtedly recall, o
 3. After implementing the Crank-Nicolson method for solving $$u_t = D u_{xx}$$ in a one-dimensional uniform rod, investigate the error compared to the analytic solution as a function of time step $$\Delta t$$ for fixed $$\Delta x$$. Is the method second-order in time? That is, is the error proportional to $$(\Delta t)^2$$?
 
 4. If material properties such as $$c$$ and $$\kappa$$ were functions of temperature (not an uncommon situation), how would you have to modify the Crank-Nicolson matrices shown in Eq.&nbsp;(\ref{eq:CNmatrices}) to account for these temperature dependencies? Is the problem even well-posed? What additional assumptions do you need to make?
+
+## Solution
+
+If the material properties depend on temperature, we need to return to the original differential equation and approximate the derivatives afresh. Recall that the original partial differential equation for the diffusion of heat in one dimension is
+\begin{equation}
+  \pdv{cu}{t} = \pdv{\kappa \pdv{u}{x}}{x}
+\end{equation}
