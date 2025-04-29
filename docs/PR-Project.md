@@ -25,7 +25,7 @@ Each team of 3 (or so) of you will develop code to simulate a system or to compu
 + Week 13: (4/15) conference on project approach and getting going
 + Week 14: (4/22) coding
 + Week 15: (4/29) analyzing and preparing for presentation
-+ Week 16: (5/7) [project presentations from 13:30–17:00 in Shanahan 2454]({PR-Schedule.md})
++ Week 16: (5/7) [project presentations from 13:30–17:00 in Shanahan 2454]{PR-Schedule.md}
 
 <!-- comment 
 <table class="nicetable" style="width: 350px;">
