@@ -20,6 +20,6 @@ Talks will be given in Shanahan 2454.
 <tr><td>15:15–15:30</td><td>Ria Haapala and Talia Yoo</td><td>Quantum Monte Carlo</td></tr>
 <tr><td>15:30–15:45</td><td>Cameron Warmerdam and Sam Wheeler</td><td>Plate tectonics?</td></tr>
 <tr><td>15:45–16:00</td><td>Aidan Gallade</td><td>A planet orbiting the binary star Proxima centauri</td></tr>
-<tr><td>15:15–15:30</td><td>Elio Thadhani and Annika Larson</td><td>Molecular dynamics of a nonideal gas</td></tr>
-<tr><td>15:15–15:30</td><td>Sara Morishige and Pranay Gupta</td><td>?</td></tr>
+<tr><td>16:00–16:15</td><td>Elio Thadhani and Annika Larson</td><td>Molecular dynamics of a nonideal gas</td></tr>
+<tr><td>16:15–16:30</td><td>Antara Krishnan and Nicole Balsz</td><td>QM?</td></tr>
 </table>
