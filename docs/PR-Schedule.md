@@ -6,7 +6,7 @@
 * toc
 {:toc}
 
-## Teams
+Talks will be given in Shanahan 2454.
 
 <table class="nicetable">
 <tr><th>Time</th><th>Team</th><th>Topic</th></tr>
