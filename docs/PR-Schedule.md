@@ -22,4 +22,5 @@ Talks will be given in Shanahan 2454.
 <tr><td>15:45–16:00</td><td>Aidan Gallade</td><td>A planet orbiting the binary star Proxima centauri</td></tr>
 <tr><td>16:00–16:15</td><td>Elio Thadhani and Annika Larson</td><td>Molecular dynamics of a nonideal gas</td></tr>
 <tr><td>16:15–16:30</td><td>Antara Krishnan and Nicole Balsz</td><td>QM?</td></tr>
+<tr><td>16:30–16:45</td><td>Sara Morishige and Pranay Gupta</td><td>?</td></tr>
 </table>
