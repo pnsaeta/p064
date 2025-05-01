@@ -95,7 +95,6 @@ Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Phase plot of a Kapitza (inverted) pendulum driven at 40 times its natural frequency. The red curve shows the final 5% of the simulated duration.</p>
 
-
 ## Magnetism
 
 ### Ising Model
