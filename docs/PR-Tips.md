@@ -1,7 +1,6 @@
 {:menu PR}
 
 
-
 # Projects Tips
 
 * toc
