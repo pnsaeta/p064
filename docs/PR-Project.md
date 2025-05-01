@@ -110,7 +110,7 @@ I'm going to go way out on a limb and suggest that you started the project with 
 
 Invite us to learn with you, tracing for us *the most useful path* through the conceptual minefield so we are led to enlightment without having to spend as much time as you did. 
 
-### “Why” Before “How” 
+### “Why” Before “How”
 
 + Until you have motivated me to care about something, I am ill-disposed to follow your discussion of arcane details. 
 + Start with your purpose (avoiding jargon as much as possible)
