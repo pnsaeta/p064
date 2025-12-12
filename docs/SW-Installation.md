@@ -34,7 +34,8 @@ fig, ax = plt.subplots()
 ax.plot([1, 2], [3, 4], 'ro')
 ~~~~
 
-Press **shift-return** to execute the code in the cell. If your installation is working properly, you should see a really dumb plot with two red dots:
+Press **shift-return** to execute the code in the cell. If your installation is working
+properly, you should see a really dumb plot with two red dots:
 
 <p class="center" markdown="0">
   <img src="figs/dumbplot.webp" style="width: 400px;" alt="dumb plot">
@@ -43,8 +44,7 @@ Press **shift-return** to execute the code in the cell. If your installation is 
 
 
 
-If you have
-Anaconda installed, you may already have everything you need. However, I prefer
+If you have Anaconda installed, you may already have everything you need. However, I prefer
 *not to use Anaconda*, but to install the tools I need using `pip`, the Python
 installer program.
 
