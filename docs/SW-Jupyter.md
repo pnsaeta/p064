@@ -9,7 +9,9 @@
 Jupyter(lab) notebooks provide an interactive computation and
 authoring environment that allows one freely to combine text (including LaTeX
 equations), graphics, computation, and the results of computations in a single
-window. Jupyter Notebook was the original platform, but has now been superseded by Jupyterlab. My preferred approach is to use the stand-along [Jupyter Lab application](https://github.com/jupyterlab/jupyterlab-desktop).
+window. Jupyter Notebook was the original platform, but has now been superseded
+by Jupyterlab. My preferred approach is to use the stand-alone
+[Jupyter Lab application](https://github.com/jupyterlab/jupyterlab-desktop).
 
 
 Notebook cells can include text written in **Markdown** (such as this cell),
