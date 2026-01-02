@@ -21,7 +21,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ~~~~
 
-On Windows, use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
+* On Windows, use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
 UNIX command line and all the utilities you need to run Python, pip, etc. You
 can check whether WSL is installed by typing the following command into
 PowerShell or the Windows Command Prompt:
