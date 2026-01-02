@@ -12,7 +12,29 @@ Computation in this course will use Python and JupyterLab, which are open-source
 
 * The current stable version of the Python language is 3.14, which is what I run by default.
 * It is possible to have multiple versions of Python installed on your computer. Virtual environments allow these different versions to avoid conflicting with one another.
-* On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by typing `python`.
+* On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`. On Windows, use 
+
+I strongly recommend installing [Windows Subsystem for
+Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
+UNIX command line and all the utilities you need to run Python, pip, etc. You
+can check whether WSL is installed by typing the following command into
+PowerShell or the Windows Command Prompt:
+
+~~~ shell
+> wsl -l -v
+~~~~
+
+If WSL is not installed, [you can install it with](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+~~~~ shell
+> wsl --install
+~~~~
+
+Once you have installed WSL, you need to create a user account and password for
+your [newly installed Linux
+distribution](https://learn.microsoft.com/en-us/windows/wsl/install#set-up-your-linux-user-info). Follow
+the instructions on the WSL page. Then skip to the instructions below for
+installing on Ubuntu (Linux).
 
 ## Checking your Installation
 
@@ -36,8 +58,8 @@ noise = rng.normal(size=len(x))
 fig, ax = plt.subplots()
 ax.plot(x, y)
 ax.plot(x, y + noise, 'r.')
-ax.set_xlabel("$x$", usetex=True)
-ax.set_ylabel(r"$y = e^{\sqrt{x}}$", usetex=True)
+ax.set_xlabel("$$x$$", usetex=True)
+ax.set_ylabel(r"$$y = e^{\sqrt{x}}$$", usetex=True)
 ax.set_title("Did it work?")
 plt.show()
 ~~~~
@@ -159,7 +181,7 @@ If you do not have Homebrew installed, you can follow the directions at [brew.sh
 or paste the following at the terminal.
 
 ~~~~ shell
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ~~~~
 
 Once Homebrew is installed, use it to install python:
