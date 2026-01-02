@@ -221,6 +221,10 @@ Now, we just need to combine all these terms:
 
 See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration of the power of series expansion as a means of obtaining an analytic expression for the factorial function.
 
+### Exercises
+
+1. Derive a power series expansion through $$x^5$$ for $$\cot x$$ by dividing the series for $$\cos x$$ by the series for $$\sin x$$.
+
 ## Bernoulli Numbers
 
 Unless Vatche provides a reasonable justification, I suspect I'll omit this section!
