@@ -153,10 +153,11 @@ Clearly, the radius of convergence of the logarithmic series does not include $$
 
 ## Evaluating Limits
 
-Taylor series offer a useful alternative to **l'Hôpital’s rule** for evaluating the limit of the ratio of two functions, both of which tend to zero as $$x \to x_0$$. As an example, consider
+Taylor series offer a useful alternative to **l'Hôpital’s rule** for evaluating the limit of the ratio of two functions, $$f(x)$$ and $$g(x)$$, both of which tend to zero as $$x \to x_0$$. As an example, consider
 \begin{equation}\label{eq:blah}
   \lim_{x\to0} \frac{1 - \cos x}{x^2}
 \end{equation}
+To evaluate
 
 ## Manipulating Series
 
