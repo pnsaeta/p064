@@ -41,6 +41,8 @@ plt.show()
 <p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Copy the code above
   and run it in a terminal after launching Python. If it generates this graph,
   you have all the packages we'll need.</p>
+
+
 ## Installing from scratch
 
 The computational portions of the course will use Python 3 and several modules,
