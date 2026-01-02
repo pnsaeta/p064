@@ -29,7 +29,7 @@ does not converge, even though its terms tend to zero as $$n \to \infty$$. Its d
 
 Successive terms of a **geometric series** form a fixed ratio $$r$$:
 \\[
-    S_N = \sum_{n=0}^N a_0 r^n
+    S_N = a_0(1 + r + r^2 + \cdots) = \sum_{n=0}^N a_0 r^n
 \\]
 There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N$$:
 \begin{align}
