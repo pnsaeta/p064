@@ -169,6 +169,7 @@ That's still indeterminate, in the form $$0/0$$, so we can apply l'Hôpital's ru
 Alternatively, we can use the Taylor series for $$\cos x$$:
 \\[
     L = \lim_{x\to0} \frac{1 - (1 - x^2/2! + x^4/4! - \cdots)}{x^2} = \lim_{x\to0} \frac{1}{2!} - \frac{x^2}{4!} + \cdots
+    = \frac12
 \\]
 
 
