@@ -157,7 +157,7 @@ Taylor series offer a useful alternative to **l'Hôpital’s rule** for evaluati
 \begin{equation}\label{eq:blah}
   \lim_{x\to0} \frac{1 - \cos x}{x^2}
 \end{equation}
-To evaluate
+where $$f(x) = 1 - \cos x$$ and $$g(x) = x^2$$, both of which go to zero as $$ x \to 0$$. To evaluate
 
 ## Manipulating Series
 
