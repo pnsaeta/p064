@@ -163,7 +163,7 @@ where $$f(x) = 1 - \cos x$$ and $$g(x) = x^2$$, both of which go to zero as $$ x
 \\]
 That's still indeterminate, in the form $$0/0$$, so we can apply l'Hôpital's rule once again to get
 \\[
-    \frac{f\prime\prime(x)}{g''(x)} = \frac{\cos x}{2} = \frac12
+    \frac{f^{\prime\prime}(x)}{g''(x)} = \frac{\cos x}{2} = \frac12
 \\]
 
 ## Manipulating Series
