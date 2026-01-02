@@ -73,12 +73,7 @@ ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escap
 <p class="center" markdown="0">
   <img src="figs/sineplot.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(x)$$ on the interval $$[0, \pi]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including this optional keyword argument: `ax.set_xlabel('$$x$$', usetex=True)` and `ax.set_ylabel(r'$$\sin{x}$$', usetex=True)`.</p>
-
-~~~~ python
-ax.set_xlabel('$x$', usetex=True)
-ax.set_ylabel(r'$\sin{x}$', usetex=True)
-~~~~
+<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(x)$$ on the interval $$[0, \pi]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including the optional keyword argument `usetex=True` in the two `set_label` commands.</p>
 
 
 ### Universal functions
