@@ -50,7 +50,7 @@ Suppose that you want to multiply each element in a list by 3.2. In standard Pyt
 b = [x * 3.2 for x in mylist]
 ~~~~
 
-for a list stored in `a`. If, instead, you use a NumPy array, you can simplify the notation to eliminate explicit loops:
+for a list stored in `mylist`. If, instead, you use a NumPy array, you can simplify the notation to eliminate explicit loops:
 
 ~~~~ python
 b = np.asarray(mylist) * 3.2
@@ -73,7 +73,7 @@ ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escap
 <p class="center" markdown="0">
   <img src="figs/sineplot.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(x)$$ on the interval $$[0, \pi]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including this optional keyword argument:</p>
+<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(x)$$ on the interval $$[0, \pi]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including this optional keyword argument: `ax.set_xlabel('$$x$$', usetex=True)` and `ax.set_ylabel(r'$$\sin{x}$$', usetex=True)`.</p>
 
 ~~~~ python
 ax.set_xlabel('$x$', usetex=True)
