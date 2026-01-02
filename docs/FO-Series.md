@@ -223,7 +223,10 @@ See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration
 
 ### Exercises
 
-1. Derive a power series expansion through $$x^5$$ for $$\cot x$$ by dividing the series for $$\cos x$$ by the series for $$\sin x$$. Ans: $$\frac1x - \frac{x}{3} - \frac{x^3}{45} - \frac{2 x^5}{945} + \cdots $$.
+1. Derive a power series expansion through $$x^5$$ for $$\cot x$$ by dividing the series for $$\cos x$$ by the series for $$\sin x$$. Ans: 
+\\[
+  \frac1x - \frac{x}{3} - \frac{x^3}{45} - \frac{2 x^5}{945} + \cdots
+\\]
 
 ## Bernoulli Numbers
 
