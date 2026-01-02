@@ -227,6 +227,7 @@ See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration
 \\[
   \cot x = \frac1x - \frac{x}{3} - \frac{x^3}{45} - \frac{2 x^5}{945} + \cdots
 \\]
+Note that this series includes a negative power of $$x$$, which means it is not a Taylor series. Series that include negative powers are called **Laurent series** and are very common in the theory of functions of a complex variable.
 
 ## Bernoulli Numbers
 
