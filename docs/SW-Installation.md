@@ -16,7 +16,9 @@ Computation in this course will use Python and JupyterLab, which are open-source
 
 ~~~~ shell
 > python
-
+Python 3.14.2 (main, Dec  5 2025, 16:49:16) [Clang 17.0.0 (clang-1700.4.4.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
 ~~~~
 
 On Windows, use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
