@@ -229,7 +229,7 @@ See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration
 \\]
 Note that this series includes a negative power of $$x$$, which means it is not a Taylor series. Series that include negative powers are called **Laurent series** and are very common in the theory of functions of a complex variable.
 
-2. The derivative of $$\tan^{-1}x$$ is $$(1+x^2)^{-1}$$.
+2. The derivative of $$\tan^{-1}x$$ is $$(1+x^2)^{-1}$$. By integrating, find a series expansion for $$\tan^{-1} x$$.
 
 ## Bernoulli Numbers
 
