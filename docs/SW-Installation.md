@@ -7,6 +7,8 @@
 {:toc}
 
 
+You may already have installed on your computer all the software you need for this course. To check, follow the instructions below.
+
 ## Checking your Installation
 
 You can check your Python installation by running the following code. If it
