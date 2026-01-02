@@ -30,7 +30,7 @@ If WSL is not installed, [you can install it with](https://learn.microsoft.com/e
 Once you have installed WSL, you need to create a user account and password for
 your [newly installed Linux
 distribution](https://learn.microsoft.com/en-us/windows/wsl/install#set-up-your-linux-user-info). Follow
-the instructions on the WSL page. Then skip to the instructions below for
+the instructions on the [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) page. Then skip to the instructions below for
 installing on Ubuntu (Linux).
 
 ## Checking your Installation
