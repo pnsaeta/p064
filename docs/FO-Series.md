@@ -66,7 +66,7 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 2. (a) Show that the series $$\displaystyle \sum_{n=2}^\infty \frac{1}{n(\ln n)^2}$$ converges. (b) Use numpy to sum the terms through $$n = 100,000$$. You should get 2.022 883 9. (c) Use an integral to obtain the sum of the infinite series to six significant figures.
 
-3. 
+3. Does the series $$\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n+1)}$$ converge? If it does, can you sum it?
 
 ### Riemann Zeta Function
 
