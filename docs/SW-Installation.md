@@ -8,9 +8,9 @@
 
 ## Important — Don't Skip!
 
-Computation in this course will use Python and JupyterLab, which are open-source software that is free to use. You are responsible for making sure that you have a working setup on your personal computer; I offer here some guidance.
+Computation in this course will use Python and JupyterLab, which are open-source software that is free to install and use. **You are responsible** for making sure that you have a working setup on your personal computer; I offer here some guidance.
 
-* The current stable version of the Python language is 3.14, which is what I run by default. 
+* The current stable version of the Python language is 3.14, which is what I run by default.
 * It is possible to have multiple versions of Python installed on your computer. Virtual environments allow these different versions to avoid conflicting with one another.
 * 
 
