@@ -6,6 +6,8 @@
 * toc
 {:toc}
 
+## Important
+
 Computation in this course will use Python and JupyterLab, which are open-source software that is free to use. You are responsible for making sure that you have a working setup on your personal computer; I offer here some guidance.
 
 
