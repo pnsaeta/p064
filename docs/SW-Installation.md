@@ -12,7 +12,7 @@ Computation in this course will use Python and JupyterLab, which are open-source
 
 * The current stable version of the Python language is 3.14, which is what I run by default.
 * It is possible to have multiple versions of Python installed on your computer. Virtual environments allow these different versions to avoid conflicting with one another.
-* 
+* On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by typing `python`.
 
 ## Checking your Installation
 
