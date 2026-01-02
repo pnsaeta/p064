@@ -62,7 +62,7 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 ### Exercises
 
-1. 
+1. Show that the series $$\sum_{n=2}^\infty \frac{1}{n(\ln n)^2} converges.
 
 ### Riemann Zeta Function
 
