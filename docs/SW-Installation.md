@@ -13,7 +13,8 @@ Computation in this course will use Python and JupyterLab, which are open-source
 * The current stable version of the Python language is 3.14, which is what I run by default in a **virtual environment**.
 * Sometimes, it is more convenient to code in an environment such as Microsoft’s **Visual Studio Code**. At others, it is simpler to use a Jupyter Lab notebook. You must set up your computer at minimum to allow running Jupyter Lab notebooks.
 
-* It is possible to have multiple versions of Python installed on your computer. **Virtual environments** allow these different versions to avoid conflicting with one another. When you *activate* a virtual environment, you inform the shell that you wish to use a particular Python installation.
+* It is possible to have multiple versions of Python installed on your computer. **Virtual environments** allow these different versions to avoid conflicting with one another. When you *activate* a virtual environment, you inform the shell that you wish to use a particular Python installation. Jupyter Lab may use a particular Python environment.
+
 * On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`. 
 
 ~~~~ shell
