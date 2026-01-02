@@ -6,6 +6,38 @@
 * toc
 {:toc}
 
+
+## Checking your Installation
+
+You can check your Python installation by running the following code. If it
+generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
+
+~~~~ python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from numpy.random import default_rng
+rng = default_rng()
+
+x = np.arange(0, 10, 0.1)
+y = np.exp(np.sqrt(x))
+noise = rng.normal(size=len(x))
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.plot(x, y + noise, 'r.')
+ax.set_xlabel("$x$", usetex=True)
+ax.set_ylabel(r"$y = e^{\sqrt{x}}$", usetex=True)
+ax.set_title("Did it work?")
+plt.show()
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/check_installation.webp" style="width: 400px;">
+</p>
+
+<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Copy the code above
+  and run it in a terminal after launching Python. If it generates this graph,
+  you have all the packages we'll need.</p>
 ## Installing from scratch
 
 The computational portions of the course will use Python 3 and several modules,
@@ -43,7 +75,6 @@ properly, you should see a really dumb plot with two red dots:
 <p class="icap" markdown="1"><a name="FigDP">Figure DP</a> — a dumb test plot.</p>
 
 
-
 If you have Anaconda installed, you may already have everything you need. However, I prefer
 *not to use Anaconda*, but to install the tools I need using `pip`, the Python
 installer program.
@@ -54,38 +85,6 @@ Google-inflected version of JupyterLab. If you use this approach, all you need
 to do is head to [Google's colab page](https://colab.research.google.com/).  If
 you need to access your own Python code, see [the Colab page](SW-colab.md) for
 more information.
-
-## Checking your Installation
-
-You can check your Python installation by running the following code. If it
-generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
-
-~~~~ python
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-from numpy.random import default_rng
-rng = default_rng()
-
-x = np.arange(0, 10, 0.1)
-y = np.exp(np.sqrt(x))
-noise = rng.normal(size=len(x))
-fig, ax = plt.subplots()
-ax.plot(x, y)
-ax.plot(x, y + noise, 'r.')
-ax.set_xlabel("$x$", usetex=True)
-ax.set_ylabel(r"$y = e^{\sqrt{x}}$", usetex=True)
-ax.set_title("Did it work?")
-plt.show()
-~~~~
-
-<p class="center" markdown="0">
-  <img src="figs/check_installation.webp" style="width: 400px;">
-</p>
-
-<p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Copy the code above
-  and run it in a terminal after launching Python. If it generates this graph,
-  you have all the packages we'll need.</p>
 
 
 ## Anaconda
@@ -132,10 +131,7 @@ If you have a much older version of Python 3 than the one listed above, it is pr
 ## Installing Python on MacOS
 
 Although there is a Python version already installed in MacOS, it tends to lag
-behind and I much prefer to use [Homebrew](https://homebrew.sh) to install an up-to-date version  of Python (and
-plenty of other free software). You can check if you already have it installed
-by opening up a terminal window (the *Terminal.app* program is in
-`/Applications/Utilities/Terminal.app`, or you can use an alternative terminal
+behind and I much prefer to use [Homebrew](https://homebrew.sh) to install an up-to-date version of Python (and plenty of other free software). You can check if you already have it installed by opening up a terminal window (the *Terminal.app* program is in `/Applications/Utilities/Terminal.app`, or you can use an alternative terminal
 program, such as [iTerm2](https://iterm2.com)).
 
 ~~~~ shell
