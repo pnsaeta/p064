@@ -64,7 +64,7 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 1. Does the series $$\displaystyle \sum_{n=2}^{\infty} \frac{1}{n \ln n}$$ converge?
 
-2. Show that the series $$\sum_{n=2}^\infty \frac{1}{n(\ln n)^2}$$ converges.
+2. (a) Show that the series $$\displaystyle \sum_{n=2}^\infty \frac{1}{n(\ln n)^2}$$ converges. (b) Use numpy to sum the terms through $$n = 100,000$$.
 
 ### Riemann Zeta Function
 
