@@ -154,9 +154,9 @@ Clearly, the radius of convergence of the logarithmic series does not include $$
 ## Evaluating Limits
 
 Taylor series offer a useful alternative to **l'Hôpital’s rule** for evaluating the limit of the ratio of two functions, $$f(x)$$ and $$g(x)$$, both of which tend to zero as $$x \to x_0$$. As an example, consider
-\begin{equation}\label{eq:blah}
+\\[
   \lim_{x\to0} \frac{1 - \cos x}{x^2}
-\end{equation}
+\\]
 where $$f(x) = 1 - \cos x$$ and $$g(x) = x^2$$, both of which go to zero as $$ x \to 0$$. To evaluate using l'Hôpital’s rule, form $$f'(x)/g'(x)$$:
 \\[
     \frac{f'(x)}{g'(x)} = \frac{\sin x}{2x}
