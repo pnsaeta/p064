@@ -27,7 +27,7 @@ does not converge, even though its terms tend to zero as $$n \to \infty$$. Its d
 
 ### Geometric Series
 
-Successive terms of a geometric series form a fixed ratio $$r$$:
+Successive terms of a **geometric series** form a fixed ratio $$r$$:
 \\[
     S_N = \sum_{n=0}^N a_0 r^n
 \\]
