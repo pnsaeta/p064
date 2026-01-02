@@ -38,6 +38,7 @@ There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N
 \end{align}
 If we now subtract the second line from the first, we get
 \begin{equation}
+  \label{eq:geo}
   S_N (1-r) = a_0 (1 - r^{N+1}) \qquad\text{so}\qquad \boxed{ S_N = a_0 \left( \frac{1 - r^{N+1}}{1 - r} \right) }
 \end{equation}
 
@@ -61,6 +62,8 @@ It is often necessary to know whether an infinite series converges to a finite v
 4. **Integral test**: The caption to Fig. 1 above illustrates using an integral test 
 
 ### Exercises
+
+1. Use numpy to confirm Eq. \ref{eq:geo} for $$r = 0.99$$ and $$N=100$$.
 
 1. Does the series $$\displaystyle \sum_{n=2}^{\infty} \frac{1}{n \ln n}$$ converge?
 
@@ -230,6 +233,8 @@ See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration
 Note that this series includes a negative power of $$x$$, which means it is not a Taylor series. Series that include negative powers are called **Laurent series** and are very common in the theory of functions of a complex variable.
 
 2. The derivative of $$\tan^{-1}x$$ is $$(1+x^2)^{-1}$$. By integrating, find a series expansion for $$\tan^{-1} x$$.
+
+3. One way to compute a series for $$\sin^{-1} x$$ is to start with $$x = \sin y$$. Then $$dx/dy = 
 
 ## Bernoulli Numbers
 
