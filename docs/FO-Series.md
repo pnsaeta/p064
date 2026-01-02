@@ -60,6 +60,10 @@ It is often necessary to know whether an infinite series converges to a finite v
 \\]
 4. **Integral test**: The caption to Fig. 1 above illustrates using an integral test 
 
+### Exercises
+
+1. 
+
 ### Riemann Zeta Function
 
 The **Riemann zeta** function is defined by
