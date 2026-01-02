@@ -229,6 +229,8 @@ See [the page on Euler’s $$\Gamma$$ function](FO-Gamma.md) for an illustration
 \\]
 Note that this series includes a negative power of $$x$$, which means it is not a Taylor series. Series that include negative powers are called **Laurent series** and are very common in the theory of functions of a complex variable.
 
+2. The derivative of $$\tan^{-1}x$$ is $$(1+x^2)^{-1}$$.
+
 ## Bernoulli Numbers
 
 Unless Vatche provides a reasonable justification, I suspect I'll omit this section!
