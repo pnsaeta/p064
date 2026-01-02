@@ -6,6 +6,8 @@
 * toc
 {:toc}
 
+Computation in this course will use Python and JupyterLab, which are open-source software that is free to use. You are responsible for making sure that you have a working setup on your personal computer; I offer here some guidance.
+
 
 
 ## Checking your Installation
@@ -14,6 +16,8 @@
 You may already have installed on your computer all the software you need for this 
 course. To check, run the following code. If it
 generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
+
+If you don't get 
 
 ~~~~ python
 import numpy as np
