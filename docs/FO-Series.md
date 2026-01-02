@@ -68,7 +68,7 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 3. Does the series $$\displaystyle \sum_{n=1}^{\infty} \frac{1}{n(n+1)}$$ converge? If it does, can you sum it?
 
-### Riemann Zeta Function
+## Riemann Zeta Function
 
 The **Riemann zeta** function is defined by
 \begin{equation}\label{eq:zeta}
@@ -96,7 +96,7 @@ The Riemann zeta function pops up occasionally in physics, including the theory 
 \end{equation}
 
 
-### Alternating Series
+## Alternating Series
 
 If successive terms in a series alternate sign, and if the magnitude of the terms goes to zero as $$n\to\infty$$, then the series converges. An infinite series is **absolutely** convergent if the sum of the absolute value of its terms converges. If the series converges, but it is not absolutely convergent, it is called **conditionally** convergent.
 
