@@ -63,9 +63,9 @@ Therefore,
 \\]
 
 > While we're at it, let's note that a more general gaussian integral is
->    \begin{equation}\label{eq:gaussian}
->    \boxed{ \int_{-\infty}^{\infty} e^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} }
->    \end{equation}
+> \begin{equation}\label{eq:gaussian}
+> \boxed{ \int_{-\infty}^{\infty} e^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} }
+> \end{equation}
 
 Getting back to the gamma function, we can now use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
 \begin{align}
