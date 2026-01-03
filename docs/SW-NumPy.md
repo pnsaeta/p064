@@ -61,13 +61,17 @@ This notation also works for multiplying (or performing similar arithmetic opera
 All of the standard functions have NumPy versions that “broadcast” in this way over the elements of the array that they are passed. So, the following code computes a comb of equally spaced $$x$$ values and computes the corresponding sine values and then uses matplotlib to plot the result:
 
 ~~~~ python
+import numpy as np
 import matplotlib.pyplot as plt
-x = np.linspace(0, np.pi, 101)  # create an array of equally spaced x values
-y = np.sin(x)                   # compute the corresponding y values via broadcasting
-fig, ax = plt.subplots()        # start a matplotlib plot
-ax.plot(x, y)                   # by default, matplotlib connects the points
-ax.set_xlabel('$x$')            # dollar signs turn on LaTeX; x is set in italics
-ax.set_ylabel(r'$\sin{x}$')     # a raw string protects the backslash from escaping
+
+t = np.linspace(0, 1, 51)      # create an array of equally spaced t values
+y = np.sin(x * 2 * np.pi)      # compute sine values via broadcasting
+z = np.cos(x * 2 * np.pi)      # compute cosine values via broadcasting
+fig, ax = plt.subplots()       # start a matplotlib plot
+ax.plot(x, y, 'b.', label=r'$\sin(2\pi t)$') # 'b.' means blue dots
+ax.plot(x, z, 'ro', label=r'$\cos(2\pi t)$') # 'ro' means red circles
+ax.set_xlabel('$t$')           # dollar signs turn on LaTeX; t is italicized
+ax.legend();                   # use labels to create a legend
 ~~~~
 
 <p class="center" markdown="0">
