@@ -61,6 +61,11 @@ Therefore,
 \\[
     I = \Gamma\qty(\frac12) =  \int_{-\infty}^\infty e^{-x^2}\dd{x} = \sqrt{\pi}
 \\]
+While we're at it, let's note that a more general gaussian integral is
+\begin{equation}\label{eq:gaussian}
+  \boxed{ \int_{-\infty}^{\infty} \exp[-\alpha x^2] \dd{x} = \sqrt{\frac{\pi}{\alpha}} }
+\end{equation}
+
 We can then use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
 \begin{align}
     \Gamma\qty(\frac32) &= \frac12 \Gamma\qty(\frac12) = \frac{\sqrt{\pi}}{2} \notag \\\ 
