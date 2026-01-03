@@ -154,4 +154,37 @@ which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could als
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Partial sums of the alternating harmonic series as grouped as illustrated in Eq.&nbsp;(\ref{eq:altharm}), which demonstrates convergence to 3/2.</p>
 
+Following is the matplotlib code to generate the figure:
+
+~~~~ python
+from scipy.interpolate import make_interp_spline
+
+highroad, lowroad = [],[]
+nodd, neven = 1, 0
+thesum = 1
+while len(lowroad) < 6:
+    while thesum < 1.5:
+        nodd += 2
+        thesum += 1/nodd
+    highroad.append(thesum)
+    neven += 2
+    thesum -= 1/neven
+    lowroad.append(thesum)
+
+fig, ax = plt.subplots()
+xhigh = np.arange(1, 2*len(highroad), 2)
+xlow = np.arange(2, 2*len(lowroad)+1, 2)
+sphigh = make_interp_spline(xhigh, highroad)
+splow = make_interp_spline(xlow, lowroad)
+ax.plot(xhigh, highroad, 'ro')
+x = np.arange(1, 11.1, 0.25)
+ax.plot(x, sphigh(x), 'r')
+ax.plot(xlow, lowroad, 'bo')
+x = np.arange(2, 12.1, 0.25)
+ax.plot(x, splow(x), 'b')
+ax.set_xlabel("Number of terms in sum, $n$")
+ax.set_ylabel("Partial sum, $S_n$")
+ax.axhline(1.5)
+~~~~
+
 Next: [Taylor Series](SE-Taylor.md)
