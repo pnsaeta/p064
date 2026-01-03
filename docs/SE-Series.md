@@ -8,7 +8,7 @@
 
 Series are among the most important mathematical tools in the physicist's toolbox. You are no doubt already familiar with Taylor series; for problems that are difficult to solve exactly, we can often satisfactory approximations by truncating a Taylor series. For example, the equation of a simple pendulum is
 \\[
-    \dv[2]{\theta}{t}
+    \dv[2]{\theta}{t} + \frac{g}{L} \theta = 0
 \\]
 
 ## Definitions
