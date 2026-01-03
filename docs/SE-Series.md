@@ -140,7 +140,10 @@ The grouping seems clearly to show that $$A < 1$$. We could also establish a low
 \\]
 which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could also group in the following way
 \begin{align}
-  A &= \left(1 + \frac13 + \frac15 \right) - \left(\frac12\right)  \notag
+  A &= \left(1 + \frac13 + \frac15 \right) - \left(\frac12\right) + \left(
+    \frac17 + \frac19 + \frac{1}{11} + \frac{1}{13} + \frac{1}{15}
+  \right)
+  \notag
   \\\ 
   &\qquad+
 \end{align}
