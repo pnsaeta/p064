@@ -132,7 +132,7 @@ Properties of absolutely convergent series:
 
 Note that **none of these claims** can be made for conditionally convergent series. As an illustration, consider the alternating harmonic series,
 \\[
-    1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \ab(\frac12 - \frac13) - \ab(\frac14-\frac15) + \cdots
+    1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \left(\frac12 - \frac13\right) - \left(\frac14-\frac15\right) + \cdots
 \\]
 
 Next: [Taylor Series](SE-Taylor.md)
