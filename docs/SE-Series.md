@@ -134,6 +134,10 @@ Note that **none of these claims** can be made for conditionally convergent seri
 \\[
    A = 1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \left(\frac12 - \frac13\right) - \left(\frac14-\frac15\right) - \cdots
 \\]
-The grouping seems clearly to show that $$A < 1$$.
+The grouping seems clearly to show that $$A < 1$$. We could also establish a lower bound by sliding the parentheses over one position:
+\\[
+    A = \left(1 - \frac12\right) + \left(\frac13 - \frac14\right) + \left(\frac15 - \frac16\right) + \cdots
+\\]
+which shows that $$A > \frac12$$.
 
 Next: [Taylor Series](SE-Taylor.md)
