@@ -24,6 +24,7 @@ Key issues we need to understand include:
 
 1. Does an infinite series converge?
 2. Can we find a closed-form expression for the infinite sum?
+3. Can a series be manipulated term by term?
 
 ## Definitions
 
