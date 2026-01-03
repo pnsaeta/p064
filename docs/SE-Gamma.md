@@ -1,6 +1,5 @@
 {:menu SE}
 
-
 # Euler's Gamma Function
 
 * toc
