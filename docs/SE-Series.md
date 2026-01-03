@@ -5,6 +5,12 @@
 * toc
 {:toc}
 
+
+Series are among the most important mathematical tools in the physicist's toolbox. You are no doubt already familiar with Taylor series; for problems that are difficult to solve exactly, we can often satisfactory approximations by truncating a Taylor series. For example, the equation of a simple pendulum is
+\\[
+    \dv[2]{\theta}{t}
+\\]
+
 ## Definitions
 
 An infinite series is an infinite sum,
