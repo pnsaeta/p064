@@ -145,7 +145,7 @@ which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could als
   \right)
   \notag
   \\\ 
-  &\qquad+
+  &\qquad - \left(\frac14\right) + \left( \frac{1}{17} + \cdots + \frac{1}{25}\right) - \left(\frac16) + \cdots
 \end{align}
 
 Next: [Taylor Series](SE-Taylor.md)
