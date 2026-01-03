@@ -132,7 +132,8 @@ Properties of absolutely convergent series:
 
 Note that **none of these claims** can be made for conditionally convergent series. As an illustration, consider the alternating harmonic series,
 \\[
-    1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \left(\frac12 - \frac13\right) - \left(\frac14-\frac15\right) - \cdots
+   A = 1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \left(\frac12 - \frac13\right) - \left(\frac14-\frac15\right) - \cdots
 \\]
+The grouping seems clearly to show that $$A < 1$$.
 
 Next: [Taylor Series](SE-Taylor.md)
