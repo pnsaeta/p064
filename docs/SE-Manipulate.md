@@ -62,3 +62,7 @@ Note that this series includes a negative power of $$x$$, which means it is not 
 2. The derivative of $$\tan^{-1}x$$ is $$(1+x^2)^{-1}$$. By integrating, find a series expansion for $$\tan^{-1} x$$.
 
 3. One way to compute a series for $$\sin^{-1} x$$ is to start with $$x = \sin y$$. Then $$\dv{x}{y} = \cos y = \sqrt{1-x^2} $$, or $$\dv{y}{x} = 1/\sqrt{1-x^2}$$.
+
+## Next
+
+[Next: Euler's Gamma function](SE-Gamma.md)
