@@ -63,10 +63,10 @@ Therefore,
 \\]
 While we're at it, let's note that a more general gaussian integral is
 \begin{equation}\label{eq:gaussian}
-  \boxed{ \int_{-\infty}^{\infty} \exp[-\alpha x^2] \dd{x} = \sqrt{\frac{\pi}{\alpha}} }
+  \boxed{ \int_{-\infty}^{\infty} e^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha}} }
 \end{equation}
 
-We can then use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
+Getting back to the gamma function, we can now use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
 \begin{align}
     \Gamma\qty(\frac32) &= \frac12 \Gamma\qty(\frac12) = \frac{\sqrt{\pi}}{2} \notag \\\ 
     \Gamma\qty(\frac52) &= \frac32 \Gamma\qty(\frac32) = \frac{3\sqrt{\pi}}{4} \notag
