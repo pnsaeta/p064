@@ -146,6 +146,13 @@ which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could als
   \notag
   \\\ 
   &\qquad - \left(\frac14\right) + \left( \frac{1}{17} + \cdots + \frac{1}{25}\right) - \left(\frac16 \right) + \cdots
+  \label{eq:altharm}
 \end{align}
+
+<p class="center" markdown="0">
+  <img src="figs/altharmonic.webp" style="width: 400px;" alt="Alternating harmonic series shown converging to 3/2">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Partial sums of the alternating harmonic series as grouped as illustrated in Eq.&nbsp;(\ref{eq:altharm}), which demonstrates convergence to 3/2.</p>
+
 
 Next: [Taylor Series](SE-Taylor.md)
