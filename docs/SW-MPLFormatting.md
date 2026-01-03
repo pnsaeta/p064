@@ -79,8 +79,8 @@ t_vals = np.arange(0.0, 1.0, 0.01)
 sines = np.sin(2 * np.pi * t_vals)
 cosines = np.cos(2 * np.pi * t_vals)
 ax3.plot(t_vals, sines, 'b.', t_vals, cosines, 'ro')
-ax3.set_xlabel(r'$$t$$')
-ax3.legend([r'$$\sin(2\pi t)$$', r'$$\cos(2\pi t)$$']);
+ax3.set_xlabel(r'$t$')
+ax3.legend([r'$\sin(2\pi t)$', r'$\cos(2\pi t)$']);
 ~~~~
 
 <p class="center"><img src="figs/labels.webp" style="width: 500px;"></p>
