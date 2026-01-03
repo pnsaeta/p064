@@ -154,5 +154,4 @@ which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could als
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Partial sums of the alternating harmonic series as grouped as illustrated in Eq.&nbsp;(\ref{eq:altharm}), which demonstrates convergence to 3/2.</p>
 
-
 Next: [Taylor Series](SE-Taylor.md)
