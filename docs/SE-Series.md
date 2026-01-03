@@ -130,6 +130,9 @@ Properties of absolutely convergent series:
 + two absolutely convergent series may be added, subtracted, or multiplied termwise to yield another absolutely convergent series
 + the product of two absolutely convergent series converges to the product of the individual series
 
-Note that **none of these claims** can be made for conditionally convergent series.
+Note that **none of these claims** can be made for conditionally convergent series. As an illustration, consider the alternating harmonic series,
+\\[
+    1 - \frac12 + \frac13 - \frac14+\cdots = 1 - \ab(\frac12 - \frac13) - \ab(\frac14-\frac15) + \cdots
+\\]
 
 Next: [Taylor Series](SE-Taylor.md)
