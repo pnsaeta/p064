@@ -50,9 +50,9 @@ On successfully completing this course, you will
 
 ## Grade
 
-- (30%) Midterm on linear algebra, series, Fourier series, and Fourier transforms
-- (40%) Homework, quizzes, and class participation
-- (30%) Project
+* (30%) Midterm on linear algebra, series, Fourier series, and Fourier transforms
+* (40%) Homework, quizzes, and class participation
+* (30%) Project
 
 ## Use of Artificial Intelligence
 
