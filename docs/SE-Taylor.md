@@ -68,7 +68,10 @@ Alternatively, we can use the Taylor series for $$\cos x$$:
 \\]
 No need to compute derivatives (if you already know the Taylor series)! Oftentimes, this approach is much simplier than (successive) "trips to the hospital."
 
+
+[Next: Manipulating Series](SE-Manipulate.md)
 ## Manipulating Series
+
 
 Suppose that you knew a Maclaurin series for a function $$f(x)$$ but you need the series for $$1/f(x)$$, valid for small values of $$x$$. For example, we know the series for $$\cosh x$$ from the above list (or we could derive it ourselves). The hyperbolic secant function, $$\sech x = 1 / \cosh x$$. How could we compute the series for $$\sech x$$, valid for small $$x$$ through terms of order $$x^6$$?
 
