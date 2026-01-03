@@ -5,7 +5,6 @@
 * toc
 {:toc}
 
-
 Unless Vatche provides a reasonable justification, I suspect I'll omit this section!
 
 The Bernoulli numbers $$B_n$$ arise in many computational physics problems; they may be defined by 
