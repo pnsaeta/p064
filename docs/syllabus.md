@@ -34,13 +34,14 @@ Resources are available primarily at [the schedule page](https://physics.hmc.edu
 
 ### Grutors
 
-- [Conor Floyd](mailto:cfloyd@g.hmc.edu)
-- [Lizzy Jones](mailto:lijones@g.hmc.edu)
+* [who](mailto:who@g.hmc.edu)
+
 
 ## Objectives
 
 On successfully completing this course, you will
 
+- have a broadened understanding of the notion of a **vector** and will see many examples of both finite- and infinite-dimensional **vector spaces**
 - understand the centrality of linear algebra in physics and some of the numerical methods commonly used to solve linear algebraic problems
 - understand that periodic functions may be represented with Fourier series, be able to compute Fourier series for simple periodic functions, understand the relationship between time- and frequency-based representations of functions, appreciate how the fast Fourier Transform can allow the efficient solution of a class of problems.
 - be introduced to simulations of physical systems in (Hamiltonian) phase space, including systems involving random variables.
