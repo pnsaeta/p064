@@ -10,7 +10,10 @@ Series are among the most important mathematical tools in the physicist's toolbo
 \\[
     \dv[2]{\theta}{t} + \frac{g}{L} \sin\theta = 0
 \\]
-It is a **nonlinear** differential equation because the variable $$\theta(t)$$ appears as a nonlinear function.
+It is a **nonlinear** differential equation because the variable $$\theta(t)$$ appears as a nonlinear function. That is
+\\[
+    \sin \theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots
+\\]
 
 ## Definitions
 
