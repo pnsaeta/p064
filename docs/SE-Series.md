@@ -110,13 +110,14 @@ If $$\nu=1$$, this series becomes the harmonic series, which we know to be diver
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2 </a> — The Riemann zeta function for $$\nu = 1.1$$. The red and green curves clearly bound the area of the blue bars, which represents $$\zeta(1.1)$$ (note the logarithmic vertical scale).</p>
 
-The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
+One place the Riemann zeta function pops up in physics is in the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
 \begin{equation}\label{eq:Stefan-Boltzmann}
   p = \sigma T^4 \qquad\text{where}\qquad
   \sigma = \frac{6 \zeta(4) k\_{\mathrm{B}}^4}{\pi^2 c^2 \hbar^3}
   = \frac{2 \pi^5 k\_{\mathrm{B}}^4}{15 c^2 h^3}
   \approx 5.67 \times 10^{-8}\,\mathrm{W \cdot m^{-2} \cdot K^{-4}}
 \end{equation}
+In this expression, I have used that $$\zeta(4) = \frac{\pi^4}{90}$$.
 
 
 ## Alternating Series
