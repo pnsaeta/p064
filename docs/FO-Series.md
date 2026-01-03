@@ -63,7 +63,9 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 ### Exercises
 
-1. Use numpy to confirm Eq. \ref{eq:geo} for $$r = 0.99$$ and $$N=100$$.
+
+
+1. Use numpy to confirm Eq. (\ref{eq:geo}) for $$r = 0.99$$ and $$N=100$$.
 
 1. Does the series $$\displaystyle \sum_{n=2}^{\infty} \frac{1}{n \ln n}$$ converge?
 
