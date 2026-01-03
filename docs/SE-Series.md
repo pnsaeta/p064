@@ -21,6 +21,7 @@ includes terms with higher powers of $$\theta$$ than the first. However, if we i
 which is the equation of a simple harmonic oscillator and has a solution we can readily compute.
 
 Key issues we need to understand include:
+
 1. Does an infinite series converge?
 2. Can we find a closed-form expression for the infinite sum?
 
