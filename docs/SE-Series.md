@@ -117,7 +117,7 @@ One place the Riemann zeta function pops up in physics is in the theory of black
   = \frac{2 \pi^5 k\_{\mathrm{B}}^4}{15 c^2 h^3}
   \approx 5.67 \times 10^{-8}\,\mathrm{W \cdot m^{-2} \cdot K^{-4}}
 \end{equation}
-In this expression, I have used that $$\zeta(4) = \frac{\pi^4}{90}$$.
+In this expression, I have used that $$\displaystyle \zeta(4) = \frac{\pi^4}{90}$$, which can be shown using contour integration.
 
 
 ## Alternating Series
