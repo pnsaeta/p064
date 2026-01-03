@@ -35,6 +35,7 @@ When $$n = 1$$, we have a straightforward integral to do
 Hence, the recursion relation $$\Gamma(n+1) = n \Gamma(n)$$ along with the termination condition $$\Gamma(1) = 1$$ proves that $$\Gamma(n+1) = n!$$ for nonnegative integer $$n$$.
 
 ## Non-integral $$n$$
+
 What about when $$n$$ is non-integral? For instance, what about $$n = -\frac12$$? That is, can we evaluate
 \\[
     I = \int_0^\infty \frac{1}{\sqrt{t}} e^{-t} \dd{t}
@@ -43,7 +44,7 @@ Let $$x = \sqrt{t}$$ or $$x^2 = t$$, so that $$\dd{t} = 2 x \dd{x} $$, giving
 \\[
     I = \int_0^\infty \frac1x e^{-x^2} 2x \dd{x}  = 2\int_0^\infty e^{-x^2}\dd{x} = \int_{-\infty}^{\infty} e^{-x^2}\dd{x}
 \\]
-While it may not look like we are any closer to an evaluation, it is undeniably true that squaring this expression yields
+The integrand is now a **gaussian** (you know, the bell-shaped curve) and the area under it would be really good to know! While it may not look like we are any closer to an evaluation, it is undeniably true that squaring this expression yields
 \\[
     I^2 = \int_{-\infty}^\infty \dd{x} \int_{-\infty}^\infty \dd{y} \, e^{-x^2} e^{-y^2} =
     \int_{-\infty}^\infty \dd{x} \int_{-\infty}^\infty \dd{y} \; e^{-(x^2+y^2)}
