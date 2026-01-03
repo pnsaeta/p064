@@ -61,7 +61,7 @@ That's still indeterminate, in the form $$0/0$$, so we can apply l'Hôpital's ru
     L = \lim_{x\to0}\frac{f^{\prime\prime}(x)}{g^{\prime\prime}(x)} = \lim_{x\to0}\frac{\cos x}{2} = \frac12
 \\]
 
-Alternatively, we can use the Taylor series for $$\cos x$$:
+Ultimately, the justification of l'Hôptial's rule comes from Taylor series, which we can just use directly:
 \\[
     L = \lim_{x\to0} \frac{1 - (1 - x^2/2! + x^4/4! - \cdots)}{x^2} = \lim_{x\to0} \frac{1}{2!} - \frac{x^2}{4!} + \cdots
     = \frac12
