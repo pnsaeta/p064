@@ -29,7 +29,9 @@ Key issues we need to understand include:
 2. Can we find a closed-form expression for the infinite sum?
 3. Can a series be manipulated term by term?
 
-## Harmonic Series
+## Examples
+
+### Harmonic Series
 
 The **harmonic series**,
 \\[
@@ -63,7 +65,7 @@ If we now subtract the second line from the first, we get
 The series converges to $$S_{\infty} = \frac{a_0}{1-r}$$ as $$N\to\infty$$, provided that
 $$|r| < 1$$ (so that the numerator of the fraction goes to 1). Sometimes it is convenient to symmetrize this expression by factoring out $$r^{N/2}$$, which allows you to express the fraction in terms of the ratio between hyperbolic sine functions.
 
-### Tests of Convergence
+## Tests of Convergence
 
 It is often necessary to know whether an infinite series converges to a finite value. Some of the useful tests to answer this question are:
 
