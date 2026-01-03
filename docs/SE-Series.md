@@ -14,6 +14,11 @@ It is a **nonlinear** differential equation because the variable $$\theta(t)$$ a
 \\[
     \sin \theta = \theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots
 \\]
+includes terms with higher powers of $$\theta$$ than the first. However, if we ignore all terms but the first in the Taylor series for $$\sin\theta$$, we obtain
+\\[
+    \dv[2]{\theta}{t} + \frac{g}{L} \theta = 0
+\\]
+which is the equation of a simple harmonic oscillator and has a solution we can readily compute.
 
 ## Definitions
 
