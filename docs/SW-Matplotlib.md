@@ -51,18 +51,18 @@ def myfunc(x: np.ndarray, zeta:float):
 
 Some explanations:
 
-- `myfunc` takes two arguments, and their types are indicated after the
+* `myfunc` takes two arguments, and their types are indicated after the
   colons. Where possible, specifying the type expected for the argument makes
   your functions easier to interpret. 
-- the type `np.ndarray` is the kind of array that gets returned from
-  `np.linspace`; it is a very commonly used type in numpy. 
-- A docstring helps explain the purpose of the function.
-- the square root function is defined differently in numpy than in the Python
+* the type `np.ndarray` is the kind of array that gets returned from
+  `np.linspace`; it is a very commonly used type in numpy.
+* A docstring helps explain the purpose of the function.
+* the square root function is defined differently in numpy than in the Python
   `math` module. The numpy version notices when an argument is not a single
   number but a np.ndarray of values and automatically calculates for each value
   in the array. 
 
-Read that last bullet point again. Numpy calls this feature *broadcasting*; it
+Read that last bullet point again. NumPy calls this feature *broadcasting*; it
 is **really** nice. It means we don’t need to write loops to compute array
 values; numpy will take care of that for us. 
 
