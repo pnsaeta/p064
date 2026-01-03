@@ -8,3 +8,4 @@
 +	SW-Pandas.md	Pandas
 +	SW-Colab.md	Using Google Colab
 +	SW-Animation.md	Animations in Matplotlib
++	SW-Server.md	Setting up local server

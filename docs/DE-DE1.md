@@ -6,7 +6,7 @@
 * toc
 {:toc}
 
-You have encountered a few ordinary differential equations (ODEs) in chemistry, mechanics, engineering, and especially in Math 82. This page will serve as a quick reminder of some basic linear ODEs that are especially important in physics and some approaches to solving them.
+You have encountered a few ordinary differential equations (ODEs) in chemistry, mechanics, engineering, and especially in Math 82. This page will serve as a quick reminder of some basic linear ODEs that are especially important in physics and some approaches to solving them. If you need a [reminder about first-order differential equations, see here](DE-DE0.md).
 
 ### Singular Points
 

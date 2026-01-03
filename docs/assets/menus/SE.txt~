@@ -1,4 +1,6 @@
 +	FO-Intro.md	Complex Numbers and All Things Fourier
++	FO-Series.md	Series
++	FO-Gamma.md	Euler's Gamma Function
 +	FO-FourierSeries.md	Fourier Series
 +	FO-Gibbs.md	The Gibbs Phenomenon
 +	FO-ComplexVariables.md	Complex Variables
@@ -7,3 +9,5 @@
 +	FO-Delta.md	The Dirac Delta Function
 +	FO-Numerical-FFT.md	Numerical Fourier Transforms
 +	FO-FT-Example.md	An Application of Fourier Transforms
++	SE-Gamma.md	Euler's Gamma Function
++	SE-Series.md	Series

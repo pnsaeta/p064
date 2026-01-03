@@ -3,3 +3,4 @@
 +	DE-SHO-analytic.md	The Quantum Simple Harmonic Oscillator
 +	DE-SHO-numerical.md	The Quantum SHO—Numerical Approaches
 +	DE-SturmLiouville.md	Sturm-Liouville Theory
++	DE-DE0.md	First-Order ODEs

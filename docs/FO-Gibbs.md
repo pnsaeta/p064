@@ -98,7 +98,7 @@ from scipy.integrate import quad
 1.1789797
 ~~~~
 
-So, the height of the peak should be 1.179, which does indeed seem to be consistent with 
+So, the height of the peak should be 1.179, which does indeed seem to be consistent with Fig. 2.
 
 <p class="center" markdown="0">
   <img src="figs/Gibbs-overshoot.webp" style="width: 400px;" alt="The Gibbs phenomenon">

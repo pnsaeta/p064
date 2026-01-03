@@ -1,2 +1,4 @@
 +	PR-Project.md	Projects
 +	PR-Tips.md	Projects Tips
++	PR-Ideas.md	Project Ideas
++	PR-Schedule.md	Projects Schedule

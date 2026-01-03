@@ -37,6 +37,12 @@ tr.sep {
 
 th { padding-right: 16px; }
 
+table.dataframe tr td {
+  padding: 4px;
+  padding-right: 12px;
+  text-align: right;
+}
+
 .dropdown {
   position: fixed;
   top: 20px;

@@ -1,4 +1,5 @@
 SW	Software	SW-Installation
+SE	Series	SE-Series
 LA	Linear Algebra	LA-LinearAlgebra
 FO	Fourier Series and Transforms	FO-Intro
 ST	Stochastic Processes	ST-Random
