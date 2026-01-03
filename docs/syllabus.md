@@ -26,7 +26,7 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
   - Thursdays: 15:00–16:00
   - most Fridays: 13:15–15:00
 
-and by appointment: email me at saeta@hmc.edu; I maintain a [Google calendar which you can view at https://saeta.physics.hmc.edu/](https://saeta.physics.hmc.edu/), which can help you suggest a meeting time when I am available.
+and by appointment: email me at [saeta@hmc.edu](mailto:saeta@hmc.edu); I maintain a [Google calendar which you can view at https://saeta.physics.hmc.edu/](https://saeta.physics.hmc.edu/), which can help you suggest a meeting time when I am available.
 
 ### Sites
 
@@ -34,25 +34,24 @@ Resources are available primarily at [the schedule page](https://physics.hmc.edu
 
 ### Grutors
 
-* [who](mailto:who@g.hmc.edu)
-
+- [who](mailto:who@g.hmc.edu)
 
 ## Objectives
 
-On successfully completing this course, you will
+On successfully completing this course, you will:
 
-* have a broadened understanding of the notion of a **vector** and will see many examples of both finite- and infinite-dimensional **vector spaces**
-* understand the centrality of linear algebra in physics and some of the numerical methods commonly used to solve linear algebraic problems
-* understand that periodic functions may be represented with Fourier series, be able to compute Fourier series for simple periodic functions, understand the relationship between time- and frequency-based representations of functions, appreciate how the fast Fourier Transform can allow the efficient solution of a class of problems.
-* be introduced to simulations of physical systems in (Hamiltonian) phase space, including systems involving random variables.
-* use the method of separation of variables to simplify partial differential equations to products of solutions to ordinary differential equations.
-* learn some basic approaches to numerically approximating the solution of partial differential equations.
+- have a broadened understanding of the notion of a **vector** and will see many examples of both finite- and infinite-dimensional **vector spaces**
+- understand the centrality of linear algebra in physics and some of the numerical methods commonly used to solve linear algebraic problems
+- understand that periodic functions may be represented with Fourier series, be able to compute Fourier series for simple periodic functions, understand the relationship between time- and frequency-based representations of functions, appreciate how the fast Fourier Transform can allow the efficient solution of a class of problems.
+- be introduced to simulations of physical systems in (Hamiltonian) phase space, including systems involving random variables.
+- use the method of separation of variables to simplify partial differential equations to products of solutions to ordinary differential equations.
+- learn some basic approaches to numerically approximating the solution of partial differential equations.
 
 ## Grade
 
-* (30%) Midterm on linear algebra, series, Fourier series, and Fourier transforms
-* (40%) Homework, quizzes, and class participation
-* (30%) Project
+- (30%) Midterm on linear algebra, series, Fourier series, and Fourier transforms
+- (40%) Homework, quizzes, and class participation
+- (30%) Project
 
 ## Use of Artificial Intelligence
 
@@ -60,7 +59,7 @@ ChatGPT can write simple programs in a variety of languages, including Python. I
 
 ## Mission
 
-Harvey Mudd College seeks to educate engineers, scientists, and mathematicians well versed in all of these areas and in the humanities and social sciences so that they may assume leadership in their fields with a clear understanding of the impact of their work on society. 
+Harvey Mudd College seeks to educate engineers, scientists, and mathematicians well versed in all of these areas and in the humanities and social sciences so that they may assume leadership in their fields with a clear understanding of the impact of their work on society.
 
 *These days, well-versedness requires computational fluency.*
 
@@ -71,7 +70,7 @@ humanity of every member of our community. We strive to conduct ourselves with
 honesty and integrity. We commit to building an environment that is welcoming,
 supportive, and free from intimidation, harassment, and discrimination. And we
 challenge ourselves to pursue educational and scientific excellence that
-embodies these values. 
+embodies these values.
 
 ## Accommodations
 
@@ -83,7 +82,7 @@ Everyone who is registered for this course belongs here and has valuable contrib
 
 Physics is a very challenging discipline—Nature, while not capricious, does not always read like an open book. Every successful physicist has failed countless times and has wondered whether she or he is cut out for this most beautiful and difficult discipline. What sustains any of us is the incredible realization that we *can* understand (some) things about how the physical universe actually works and that our understanding can be tested in a court of law that is not subject to the whims of mere mortals. In troubling times, this knowledge can be incredibly reassuring and definitely worth a few bruises along the way. When things are tough, reach out, get help; we're in this together!
 
-I am dedicated to fostering an equitable atmosphere in this course, this department, and at HMC, while simultaneously maintaining standards that encourage and promote excellence. Please let me know if you have suggestions or concerns regarding the course or a specific situation; alternatively, you can bring concerns to another member of the faculty or staff. 
+I am dedicated to fostering an equitable atmosphere in this course, this department, and at HMC, while simultaneously maintaining standards that encourage and promote excellence. Please let me know if you have suggestions or concerns regarding the course or a specific situation; alternatively, you can bring concerns to another member of the faculty or staff.
 
 ## Title IX
 
@@ -92,7 +91,7 @@ of all forms of discrimination and sexual harassment, including sexual assault, 
 olence, dating violence, and stalking. If you (or someone you know) has experienced or
 experiences any of these incidents, know that you are not alone. Instructors are available to
 talk to you if you are in need, but keep in mind that we are obligated to report any contraven-
-tions of Title IX to the HMC Title IX Coordinator, Danny Ledezma (dledezma@hmc.edu). If
+tions of Title IX to the HMC Title IX Coordinator, [Danny Ledezma](dledezma@hmc.edu). If
 you want to speak to someone completely confidentially, the following resources are available
 on and off campus: the EmPOWER Center (909-607-2689), the Monsour Counseling Center
 (909-621-8202), the Project Sister Family Services’ 24-hr crisis hotline (909-626-4357) and
