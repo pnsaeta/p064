@@ -20,10 +20,10 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
 - Peter N. Saeta, Keck 1231, 7-3939, saeta@hmc.edu
 - Zoom: [https://hmc-edu.zoom.us/my/saeta](https://hmc-edu.zoom.us/my/saeta)
 - Office Hours: 
-    + Mondays: 13:00–15:00
-    + Tuesdays: 13:15–15:00
+    + Mondays: 13:00–14:30
+    + Tuesdays: 15:00–16:00
     + Wednesdays: 13:00–15:00
-    + Thursdays: 13:15–14:00
+    + Thursdays: 15:00–16:00
     + most Fridays: 13:15–15:00
 
 and by appointment: email me at saeta@hmc.edu; I maintain a [Google calendar which you can view at https://saeta.physics.hmc.edu/](https://saeta.physics.hmc.edu/), which can help you suggest a meeting time when I am available.
