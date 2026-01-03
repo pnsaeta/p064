@@ -1,5 +1,5 @@
 +	SE-Series.md	Series
-+	SE-Gamma.md	Euler's Gamma Function
 +	SE-Taylor.md	Taylor Series
-+	SE-Bernoulli.md	Bernoulli Numbers
 +	SE-Manipulate.md	Manipulating Series
++	SE-Gamma.md	Euler's Gamma Function
++	SE-Bernoulli.md	Bernoulli Numbers
