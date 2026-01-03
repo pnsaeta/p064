@@ -93,7 +93,7 @@ It is often necessary to know whether an infinite series converges to a finite v
 
 ## Riemann Zeta Function
 
-The **Riemann zeta** function is defined by
+Another series that frequently arises in physical theory is the **Riemann zeta** function, which is defined by
 \begin{equation}\label{eq:zeta}
   \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}}
 \end{equation}
@@ -108,7 +108,7 @@ If $$\nu=1$$, this series becomes the harmonic series, which we know to be diver
 <p class="center" markdown="0">
   <img src="figs/zeta.webp" style="width: 400px;" alt="Riemann zeta function">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2 </a> — The Riemann zeta function for $$\nu = 1.1$$. The red and green curves clearly bound the area of the blue bars, which represents the Riemann $$\zeta$$&nbsp; for $$\nu = 1.1$$ (note the logarithmic vertical scale).</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2 </a> — The Riemann zeta function for $$\nu = 1.1$$. The red and green curves clearly bound the area of the blue bars, which represents $$\zeta(1.1)$$ (note the logarithmic vertical scale).</p>
 
 The Riemann zeta function pops up occasionally in physics, including the theory of blackbody radiation and the determination of the Stefan-Boltzmann constant, $$\sigma$$, which relates the power per unit area radiated by an ideal blackbody at temperature $$T$$:
 \begin{equation}\label{eq:Stefan-Boltzmann}
