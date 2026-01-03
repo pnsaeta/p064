@@ -15,6 +15,8 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
 
 ## Nuts and Bolts
 
+- Meetings: Tuesdays and Thursdays, 13:15–14:30, Shanahan 2454
+
 ### Instructor
 
 - Peter N. Saeta, Keck 1231, 7-3939, [saeta@hmc.edu](mailto:saeta@hmc.edu)
@@ -30,7 +32,7 @@ and by appointment: email me at [saeta@hmc.edu](mailto:saeta@hmc.edu); I maintai
 
 ### Sites
 
-Resources are available primarily at [the schedule page](https://physics.hmc.edu/c/p064/) and [the course site](https://saeta.physics.hmc.edu/p064/); we will use [Canvas](https://harveymuddcollege.instructure.com/courses/2132/) for connection to Piazza for posting questions and comments, Gradescope for assignments, and occasional announcements.
+Resources are available primarily at [the schedule page](https://physics.hmc.edu/c/p064/) and [the course site](https://saeta.physics.hmc.edu/p064/); we will use [Canvas](https://harveymuddcollege.instructure.com/courses/3093/) for connection to Gradescope for assignments and occasional announcements. 
 
 ### Grutors
 
