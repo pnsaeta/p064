@@ -161,7 +161,7 @@ for zeta in (0.05, 0.1, 0.2, 0.5, 1, 2):
 ax.legend();
 ~~~~
 
-<p class="center"><img src="figs/intro-5.webp" style="width: 400px;"></p>
+<p class="center"><img src="figs/intro-6.webp" style="width: 400px;"></p>
 <p class="mycap">Now our resonance cup runneth over in style!</p>
 
 
