@@ -12,6 +12,7 @@ div#logo { display: none; }
 @media screen and (min-width: 750px) {
   body {
     margin-right: 150px;
+    max-width: 1000px;
   }
   div#logo {
     position: fixed; right:20px; top:20px;
