@@ -49,8 +49,6 @@ You may already have installed on your computer all the software you need for th
 course. To check, run the following code. If it
 generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
 
-If you don’t get 
-
 ~~~~ python
 import numpy as np
 import matplotlib.pyplot as plt
