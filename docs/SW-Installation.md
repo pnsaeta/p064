@@ -294,8 +294,6 @@ colons, so in this example, my shell will first look in `/Users/saeta/.virtualen
 in `/Users/saeta/bin`, etc. If you have installed Anaconda, your `PATH` variable may
 start with the path to the `bin` directory inside your Anaconda distribution.
 
-python -c "import site; print(site.getsitepackages())"
-
 ## Using pip to install Python modules
 
 Python has a standard package manager, `pip`, which stands for **Package
@@ -313,8 +311,13 @@ a relic from CS 5?) and likely for an older version of Python and Pip. If so,
 see if you can upgrade to a current version of Anaconda and its associated
 versions of numpy, scipy, matplotlib, and plotly.
 
-If you have a Python 3 installation, and pip is
-available, you can install everything you need with the following. I recommend that you can first create a virtual environment for this Python installation
+If the `pip` command doesn't work, try running the following command to see where Python packages are being installed:
+
+~~~~ shell
+python -c "import site; print(site.getsitepackages())"
+~~~~
+
+If you have a Python 3 installation, and pip is available, you can install everything you need with the following. I recommend that you can first create a virtual environment for this Python installation
 so any upgrades or installed libraries don't encounter conflicts. The following commands show how to create a virtual environment named `py14`:
 
 ~~~~ shell
