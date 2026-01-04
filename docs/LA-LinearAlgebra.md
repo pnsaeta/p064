@@ -8,9 +8,7 @@
 ## Overview
 
 Lines are so simple! Just about the most basic function you can think
-of. There's not much to them, right? $$y = mx + b$$ and all that. What's to know?
-
-Well, calculus teaches that continuous functions look like lines when you zoom in enough. For small changes, a tangent line approximation may be all you need. If your function has more than one independent variable, then a tangent hyperplane is the obvious generalization. Displacements from the point of tangency are **vectors**; they are elements of a **vector space**.
+of. There's not much to them, right? $$y = mx + b$$ and all that. What's to know? Well, calculus teaches that continuous functions look like lines when you zoom in enough. For small changes, a tangent line approximation may be all you need. If your function has more than one independent variable, then a tangent hyperplane is the obvious generalization. Displacements from the point of tangency are **vectors**; they are elements of a **vector space**.
 
 Of course, not everything is linear. Some of the most interesting and challenging phenomena are inherently nonlinear. A friend of mine in graduate school often joked "Linearity breeds contempt!" Then again, he studied hurricanes and the Navier-Stokes equations of fluid dynamics are nonlinear in general.
 
@@ -90,7 +88,7 @@ Linear operators are fundamental in quantum mechanics. To distinguish a quantum 
 So far, we have described one way to combine vectors (addition) and another to scale them (scalar multiplication), but we have no notion of combining vectors to yield a scalar. The inner product between two vectors, denoted $$\langle \vb{v}_1, \vb{v}_2 \rangle$$, is such a function. If the vector space is over the real numbers (the amplitudes are all real), then the inner product is defined by
 \begin{equation}
   \langle \vb{a}, \vb{b} \rangle = \vb{a} \vdot \vb{b} = \sum_{i=1}^N a_i b_i
-  = (a1, \ldots, a_N) \vdot \begin{pmatrix}
+  = (a_1, \ldots, a_N) \vdot \begin{pmatrix}
   b_1 \\\ \vdots \\\ b_N
   \end{pmatrix}
   \label{eq:innerproduct}
@@ -133,7 +131,7 @@ Note that this is the same as Eq.&nbsp;(\ref{eq:norm}), apart from the absolute 
 ### Question
 
 What is the length of $$\vb{a} = \begin{pmatrix} 1 \\\ i \\\ -1 \\\ -i \end{pmatrix}$$? &nbsp; &nbsp;
-If $$\vb{b}^{T} = (1, e^{i\phi}, e^{2i\phi}, e^{3i\phi})$$, what is $$\langle \vb{b}, \vb{a} \rangle$$? Can you simplify your expression?
+If $$\vb{b}^{T} = (1, e^{i\phi}, e^{2i\phi}, e^{3i\phi})$$, what is $$\langle \vb{b}, \vb{a} \rangle$$?
 
 ## Dirac Notation
 

@@ -7,3 +7,5 @@
 /docs/*.pandoc
 /docs/.#*
 docs/plot-guide.html
+.last_commit.txt
+.gitignore
