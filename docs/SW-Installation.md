@@ -199,7 +199,7 @@ the Python installer `pip`.
 
 ~~~~ shell
 > brew --version
-Homebrew 4.4.1
+Homebrew 5.0.8
 ~~~~
 
 ## Installing on Windows 10 or 11
