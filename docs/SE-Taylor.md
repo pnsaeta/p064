@@ -68,5 +68,4 @@ Ultimately, the justification of l'Hôptial's rule comes from Taylor series, whi
 \\]
 No need to compute derivatives (if you already know the Taylor series)! Oftentimes, this approach is much simplier than (successive) "trips to the hospital."
 
-
 [Next: Manipulating Series](SE-Manipulate.md)
