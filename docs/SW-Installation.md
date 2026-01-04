@@ -257,32 +257,50 @@ You can learn a lot about your current environment by issuing the `env` command
 at a terminal prompt:
 
 ~~~~ shell
-> env
-PWD=/Users/saeta/Documents/Courses/p064
-LOGNAME=saeta
-LANG=en_US.UTF-8
-TERM_PROGRAM=iTerm.app
-TERM_PROGRAM_VERSION=3.5.10
-LaunchInstanceID=42D7C565-643A-46C2-A54D-ECC2CBC9BA3E
+> env | sort
 COLORTERM=truecolor
-EDITOR=/Applications/Emacs.app/Contents/MacOS/Emacs
-TERM_FEATURES=T3CwLrMSc7UUw9Ts3BFGsSyHNoSxF
-OMF_PATH=/Users/saeta/.local/share/omf
-SHELL=/opt/homebrew/bin/fish
-__CFBundleIdentifier=com.googlecode.iterm2
-OMF_CONFIG=/Users/saeta/.config/omf
-PATH=/Users/saeta/.virtualenvs/py13/bin:/Users/saeta/bin:/Users/saeta/.juliaup/bin:/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/Users/saeta/Library/Python/3.10/bin:/opt/homebrew/opt/ruby/bin:/Users/saeta/.pyenv/bin:/opt/homebrew/opt/fzf/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Users/saeta/Applications/iTerm.app/Contents/Resources/utilities:/Users/saeta/.local/bin:/Users/saeta/.gem/ruby/3.3.0/bin:/usr/local/mysql/bin
-SHELL_PID=75906
-LC_TERMINAL=iTerm2
-COLORFGBG=0;15
-TERM=xterm-256color
-PYTHONPATH=/Users/saeta/.python
 COMMAND_MODE=unix2003
+EDITOR=/Applications/Emacs.app/Contents/MacOS/Emacs
 GEM_HOME=/Users/saeta/.gem
 HOME=/Users/saeta
-USER=saeta
+HOMEBREW_GITHUB_API_TOKEN=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
+ITERM_PROFILE=Default
+ITERM_SESSION_ID=w0t2p0:5F07AF72-4BE6-4577-8EB1-FCDC36AF5E50
+LANG=en_US.UTF-8
+LaunchInstanceID=C6356556-B7B0-4AF7-A4B4-C05E715516CC
+LC_TERMINAL_VERSION=3.6.6
+LC_TERMINAL=iTerm2
+LOGNAME=saeta
+LSCOLORS=exfxcxDxbxegeDabagacadah
+MATLAB_SHELL=/bin/sh
+OMF_CONFIG=/Users/saeta/.config/omf
+OMF_PATH=/Users/saeta/.local/share/omf
+OSLogRateLimit=64
+PATH=/Users/saeta/.virtualenvs/py14/bin:/Users/saeta/bin:/Users/saeta/.juliaup/bin:/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/Users/saeta/Library/Python/3.10/bin:/opt/homebrew/opt/ruby/bin:/Users/saeta/.pyenv/bin:/opt/homebrew/opt/fzf/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Users/saeta/Applications/iTerm.app/Contents/Resources/utilities:/Users/saeta/.local/bin:/Users/saeta/.gem/ruby/3.4.0/bin:/usr/local/mysql/bin:/Users/saeta/.hishtory
+PGPORT=5432
+PWD=/Users/saeta/Documents/Courses/p064/2025
 PYENV_ROOT=/Users/saeta/.pyenv
-VIRTUAL_ENV=/Users/saeta/.virtualenvs/py13
+PYTHONPATH=/Users/saeta/.python
+Q_PARENT=
+Q_TERM=1.23.1
+QTERM_SESSION_ID=e9bb52437f5e4a1b886ecd0cc67b6980
+SECURITYSESSIONID=186b7
+SHELL_PID=52198
+SHELL=/opt/homebrew/bin/fish
+SHLVL=1
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.ZnKh6VfT1D/Listeners
+TERM_FEATURES=T3CwLrMSc7UUw9Ts3BFGsSyHNoSxF
+TERM_PROGRAM_VERSION=3.6.6
+TERM_PROGRAM=iTerm.app
+TERM_SESSION_ID=w0t2p0:5F07AF72-4BE6-4577-8EB1-FCDC36AF5E50
+TERM=xterm-256color
+TERMINFO_DIRS=/Users/saeta/Applications/iTerm.app/Contents/Resources/terminfo:/usr/share/terminfo
+TMPDIR=/var/folders/tw/_d06s9vj4wj_83s0m3j99qhc0000gq/T/
+TTY=
+USER=saeta
+VIRTUAL_ENV=/Users/saeta/.virtualenvs/py14
+XPC_FLAGS=0x0
+XPC_SERVICE_NAME=0
 ~~~~
 
 In particular, notice the value of the `PATH` shell variable, which tells you
