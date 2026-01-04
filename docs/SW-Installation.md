@@ -290,10 +290,11 @@ VIRTUAL_ENV=/Users/saeta/.virtualenvs/py14
 In particular, notice the value of the `PATH` shell variable, which tells you
 where the system will look for commands that you name on the command line, and
 shows them in the order in which they will be searched. Paths are separated with
-colons, so in this example, my shell will first look in `/Users/saeta/.virtualenvs/py13/bin`, then
+colons, so in this example, my shell will first look in `/Users/saeta/.virtualenvs/py14/bin`, then
 in `/Users/saeta/bin`, etc. If you have installed Anaconda, your `PATH` variable may
 start with the path to the `bin` directory inside your Anaconda distribution.
 
+python -c "import site; print(site.getsitepackages())"
 
 ## Using pip to install Python modules
 
@@ -303,7 +304,7 @@ following command at a terminal prompt:
 
 ~~~~ shell
 $$ pip --version
-pip 24.3.1 from /Users/saeta/.virtualenvs/py13/lib/python3.13/site-packages/pip (python 3.13)
+pip 25.3 from /Users/saeta/.virtualenvs/py14/lib/python3.14/site-packages/pip (python 3.14)
 ~~~~
 
 Look carefully at the path to your version of pip. If it has Anaconda in it
@@ -314,17 +315,17 @@ versions of numpy, scipy, matplotlib, and plotly.
 
 If you have a Python 3 installation, and pip is
 available, you can install everything you need with the following. I recommend that you can first create a virtual environment for this Python installation
-so any upgrades or installed libraries don't encounter conflicts. The following commands show how to create a virtual environment named `py13`:
+so any upgrades or installed libraries don't encounter conflicts. The following commands show how to create a virtual environment named `py14`:
 
 ~~~~ shell
 $$ pip install --user virtualenv   # install virtualenv
-$$ python -m virtualenv py13       # the standard virtualenv package
+$$ python -m virtualenv py14       # the standard virtualenv package
 ~~~~
 
 After creating the virtual environment above, you need to activate it:
 
 ~~~~ shell
-$$ source 
+$$ source activate.sh
 
 then run
 
