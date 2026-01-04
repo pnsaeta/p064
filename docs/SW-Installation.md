@@ -10,12 +10,10 @@
 
 Computation in this course will use Python and JupyterLab, which are open-source software that is free to install and use. **You are responsible** for making sure that you have a working setup on your personal computer; I offer here some guidance.
 
-* The current stable version of the Python language is 3.14, which is what I run by default in a **virtual environment**.
-* Sometimes, it is more convenient to code in an environment such as Microsoft’s **Visual Studio Code**. At others, it is simpler to use a Jupyter Lab notebook. You must set up your computer at minimum to allow running Jupyter Lab notebooks.
-
-* It is possible to have multiple versions of Python installed on your computer. **Virtual environments** allow these different versions to avoid conflicting with one another. When you *activate* a virtual environment, you inform the shell that you wish to use a particular Python installation. Jupyter Lab may use a particular Python environment.
-
-* On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`. 
+- The current stable version of the Python language is 3.14, which is what I run by default in a **virtual environment**.
+- Sometimes, it is more convenient to code in an environment such as Microsoft’s **Visual Studio Code**. At others, it is simpler to use a Jupyter Lab notebook. You must set up your computer at minimum to allow running Jupyter Lab notebooks.
+- It is possible to have multiple versions of Python installed on your computer. **Virtual environments** allow these different versions to avoid conflicting with one another. When you *activate* a virtual environment, you inform the shell that you wish to use a particular Python installation. Jupyter Lab may use a particular Python environment.
+- On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`. 
 
 ~~~~ shell
 > python
@@ -24,12 +22,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ~~~~
 
-* On Windows, use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
+- On Windows, use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install), which gives you a
 UNIX command line and all the utilities you need to run Python, pip, etc. You
 can check whether WSL is installed by typing the following command into
 PowerShell or the Windows Command Prompt:
 
-~~~ shell
+~~~~ shell
 > wsl -l -v
 ~~~~
 
@@ -47,12 +45,11 @@ installing on Ubuntu (Linux).
 
 ## Checking your Installation
 
-
 You may already have installed on your computer all the software you need for this 
 course. To check, run the following code. If it
 generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
 
-If you don't get 
+If you don’t get 
 
 ~~~~ python
 import numpy as np
