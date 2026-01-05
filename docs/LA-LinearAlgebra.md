@@ -64,7 +64,7 @@ There are many familiar examples, such as directed line segments in a plane, usi
 
 ### A Slightly Silly but Informative Example
 
-Suppose we revise the rule for multiplication of a directed line segment (an arrow) by a scalar to yield the zero vector for all vectors and scalars: $$\alpha \vb{v} = \vb{0}$$. This rule violates only one of the ten axioms, making it *not* a vector space. Which one?
+Suppose we revise the rule for multiplication of a directed line segment (an arrow) by a scalar to yield the zero vector for all vectors and scalars: $$\alpha \vb{v} = \vb{0}$$. This rule violates only one of the ten axioms, making it *not* a vector space. Which axion does it violate?
 
 
 ## Linear Operators
@@ -201,4 +201,4 @@ The second is to find the solutions to
   \label{eq:eigenvector}
   \mat{A} \vdot \vb{x} = \lambda \vb{x}
 \end{equation}
-Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**. Because Eq.&nbsp;(\ref{eq:eigenvector}) is homogeneous in $$\vb{x}$$, eigenvectors may be arbitrarily scaled. However, eigenvalues $$\lambda$$ are uniquely determined the $$\mat{A}$$.
+Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**. Because Eq.&nbsp;(\ref{eq:eigenvector}) is homogeneous in $$\vb{x}$$, eigenvectors may be arbitrarily scaled. However, eigenvalues $$\lambda$$ are uniquely determined by the matrix $$\mat{A}$$.
