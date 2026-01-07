@@ -30,13 +30,32 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
 
 and by appointment: email me at [saeta@hmc.edu](mailto:saeta@hmc.edu); I maintain a [Google calendar which you can view at https://saeta.physics.hmc.edu/](https://saeta.physics.hmc.edu/), which can help you suggest a meeting time when I am available.
 
-### Sites
+### Resources
 
-Resources are available primarily at [the schedule page](https://physics.hmc.edu/c/p064/) and [the course site](https://saeta.physics.hmc.edu/p064/); we will use [Canvas](https://harveymuddcollege.instructure.com/courses/3093/) for connection to Gradescope for assignments and occasional announcements. 
+There is no textbook for this course, although I will suggest some books I find useful below. The primary sources are available at [the schedule page](https://physics.hmc.edu/c/p064/) and [the course site](https://saeta.physics.hmc.edu/p064/); we will use [Canvas](https://harveymuddcollege.instructure.com/courses/3093/) for connection to Gradescope for assignments and occasional announcements.
+
+<table class="nicetable" style="width: 800px;">
+  <tr>
+    <td><img src="figs/Nearing.jpg" style="height: 100px;" alt="Nearing"></td>
+    <td>Nearing, James. <em>Mathematical Tools for Physics</em> (Dover, 2010). Available inexpensively from Dover or on Amazon. This text is aimed at about the right level for this course.
+    </td>
+  </tr>
+  <tr>
+    <td><img src="figs/Arfken.jpg" style="height: 100px;" alt="Arfken"></td>
+    <td>Arfken, George B., Hans J. Weber, and Frank E. Harris. <em>Mathematical Methods for Physicists</em> (Elsevier, 2013). Available in paperback on Amazon. This text aims a bit beyond Nearing, more at a senior undergraduate or introductory graduate level, but is a valuable resource and has lots of great problems.</td>
+  </tr>
+  <tr>
+    <td><img src="figs/Recipes.jpg" style="height: 100px;" alt="Numerical Recipes"></td>
+    <td>Press, William H., Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. <em>Numerical Recipes: the Art of Scientific Computing</em>, Third edition (Cambridge University Press, 2007). An invaluable reference for a broad range of topics. Somewhat pricier than the other two, and it has examples in C++.</td>
+  </tr>
+</table>
 
 ### Grutors
 
-- [who](mailto:who@g.hmc.edu)
+- [Annika Larson](mailto:anlarson@g.hmc.edu)
+- [Chengyi Tang](mailto:chtang@g.hmc.edu)
+
+
 
 ## Objectives
 
