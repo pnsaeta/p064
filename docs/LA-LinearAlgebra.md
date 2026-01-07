@@ -137,17 +137,16 @@ If $$\vb{b}^{T} = (1, e^{i\phi}, e^{2i\phi}, e^{3i\phi})$$, what is $$\langle \v
 
 If the vector space is over the field of complex numbers, the two vectors of the inner product must be treated differently; the amplitudes of the first vector are conjugated before multiplying by the corresponding amplitudes of the second vector. A pioneer of quantum mechanics, **Paul Adrien Maurice Dirac**, developed a notation to handle this conjugation for vector spaces over the field of complex numbers that physicists use to this day to represent states in quantum mechanics. In Dirac notation, a vector $$\psi$$ is denoted $$\ket{\psi}$$ and its conjugate transpose is denoted $$\bra{\psi}$$, so that the inner product of $$\psi$$ with itself is $$\bra{\psi}\ket{\psi}$$ (where we simplify the notation to show only a single bar between the left- and right-hand sides).
 
-In Dirac notation, the vector $$\ket{\psi}$$ is called a **ket** and its **dual** (conjugate transpose) $$\bra{\psi}$$ is called a **bra**, so that their inner product is a **bra**c**ket** (which was inspired by the Poisson bracket of theoretical mechanics). Every ket vector has its corresponding bra vector, and their inner product yields a nonnegative real number. 
+In Dirac notation, the vector $$\ket{\psi}$$ is called a **ket** and its **dual** (conjugate transpose) $$\bra{\psi}$$ is called a **bra**, so that their inner product is a **bra**c**ket** (which was inspired by the Poisson bracket of theoretical mechanics). Every ket vector has its corresponding bra vector, and their inner product yields a nonnegative real number.
 
-Every physically observable quantity (e.g., momentum, angular momentum, position, etc.) corresponds to a special kind of linear operator, called a **Hermitian operator**, whose properties we will define and explore below.
+Every physically observable quantity (e.g., momentum, angular momentum, position, etc.) corresponds to a special kind of linear operator, called a **Hermitian operator**, whose properties we will define and explore below. Examples:
 
-+ rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vb{e}_z)$$
-+ the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$. This is the **time-independent Schrödinger equation** written in Dirac notation. You will be studying it a lot in Physics 52!
-
+- rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vb{e}_z)$$
+- the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$. This is the **time-independent Schrödinger equation** written in Dirac notation. You will be studying it a lot in Physics 52!
 
 ### Matrix Representation
 
-If the components of vector $$\ket{a}$$ in some basis are $$(a_1, a_2, \ldots, a_N)$$, then the components of the dual vector $$\bra{a}$$ in the same basis are $$(a_1^*, a_2^*,\ldots, a_N^*)$$. Furthermore, we can represent the ket vector $$\ket{a}$$ in this basis as a column vector, 
+If the components of vector $$\ket{a}$$ in some basis are $$(a_1, a_2, \ldots, a_N)$$, then the components of the dual vector $$\bra{a}$$ in the same basis are $$(a_1^*, a_2^*,\ldots, a_N^*)$$. Furthermore, we can represent the ket vector $$\ket{a}$$ in this basis as a column vector,
 \begin{equation}
   \ket{a} \longrightarrow \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N}
 \end{equation}
@@ -160,7 +159,7 @@ so that the inner product is achieved by standard matrix multiplication of bra a
   \braket{a}{a} \longrightarrow \pmatrix{a_1^{\*} & a_2^{\*} & \cdots & a_N^{\*}}
     \vdot \pmatrix{a_1 \\\  a_2 \\\ \vdots \\\ a_N} = \sum_{i=1}^N |a_i|^2
 \end{equation}
-which is a manifestly nonnegative real number. 
+which is a manifestly nonnegative real number.
 
 ## Linear Independence
 
@@ -168,7 +167,7 @@ Two vectors $$\vb{a}$$ and $$\vb{b}$$ are linearly independent if and only if
 \begin{equation}
   \vb{a} \cdot \vb{b} = |\vb{a}| |\vb{b}| \cos\theta_{ab} < |\vb{a}| |\vb{b}|
 \end{equation}
-which means that they are not colinear. In general, a vector space of dimension $$D$$ is spanned by 
+which means that they are not colinear. In general, a vector space of dimension $$D$$ is spanned by
 $$D$$ linearly independent vectors, which are often chosen to be unit vectors in
 each of the Cartesian directions: $$\vb{e}_1 = (1,0,0,\ldots)$$, $$\vb{e}_2 = (0, 1, 0, \ldots)$$, etc.
 
@@ -180,9 +179,9 @@ The inner product described above takes two vectors of equal dimension and contr
     \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}
     =
     \begin{pmatrix}
-      a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\\ 
-      a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\\ 
-      \vdots & \vdots & \ddots & \vdots \\\ 
+      a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\\
+      a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\\
+      \vdots & \vdots & \ddots & \vdots \\\
       a_m b_1 & a_m b_2 & \cdots & a_m b_n
     \end{pmatrix}
   \\]

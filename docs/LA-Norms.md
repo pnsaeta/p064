@@ -23,9 +23,9 @@ and this is indeed a satisfactory form. However, other definitions are possible,
 ## Examples
 
 \begin{align}
-    \Vert (a\_1, \ldots, a\_n) \Vert &= \sqrt{ \sum_{k=1}^n |a\_k|^2} \\\ 
-    \Vert (a\_1, \ldots, a\_n) \Vert &= \sum\_{k=1}^n |a\_k| \label{eq:USPS} \\\ 
-    \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n |a\_k|  \\\ 
+    \Vert (a\_1, \ldots, a\_n) \Vert &= \sqrt{ \sum_{k=1}^n |a\_k|^2} \\\
+    \Vert (a\_1, \ldots, a\_n) \Vert &= \sum\_{k=1}^n |a\_k| \label{eq:USPS} \\\
+    \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n |a\_k|  \\\
     \Vert (a\_1, \ldots, a\_n) \Vert &= \text{max}\_{k=1}^n k|a\_k|
 \end{align}
 
@@ -53,7 +53,7 @@ We argued that cubic polynomials on $$0 \le x \le 1$$ form a vector space, in wh
 \begin{align}
     (a_0 + a_1 x + a_2 x^2 + a_3 x^3) + (b_0 + b_1 x + b_2 x^2 + b_3 x^3) &=
     (a_0 + b_0) + (a_1 + b_1) x + (a_2 + b_2) x^2 + (a_3 + b_3) x^3
-    \\\ 
+    \\\
     \alpha (a_0 + a_1 x + a_2 x^2 + a_3 x^3) &= (\alpha a_0) + (\alpha a_1) x + (\alpha a_2) x^2 + (\alpha a_3) x^3
 \end{align}
 
@@ -61,14 +61,16 @@ What could be a scalar product for this vector space? Consider
 \begin{equation}
     \ev{f, g} = \int_0^1 f(x)^* g(x) \dd{x}
 \end{equation}
-Does it satisfy all four required properties for a scalar product? Can you define a **norm** using this definition? 
+Does it satisfy all four required properties for a scalar product? Can you define a **norm** using this definition?
 
 
 ## Cauchy-Schwartz Inequality
 
-The **Cauchy-Schwartz inequality** is
+The **Cauchy-Schwartz inequality** (the **triangle inequality**) is
 \begin{equation} \label{eq:cauchy-schwartz}
   |\ev{\vb{u}, \vb{v}}| \le \Vert\vb{u}\Vert  \Vert\vb{v}\Vert
 \end{equation}
-You can prove it by considering
+It says that the hypotenuse is (generally) shorter than the sum of the lengths of the other two sides of a triangle. You can prove it by considering
 $$ \ev{\vb{u} - \lambda \vb{v}, \vb{u} - \lambda \vb{v}} \ge 0 $$, where $$\lambda$$ is an arbitrary scalar.
+
+Next: [Square Matrices](LA-SquareMatrices.md)

@@ -6,27 +6,48 @@
 * toc
 {:toc}
 
-Square matrices have a number of interesting properties and deserve special attention. An $$N \times N$$ square matrix maps an $$N$$-dimensional vector into another $$N$$-dimensional vector. Several types of square matrices have special properties: 
+## Categories
+Square matrices have a number of interesting properties and deserve special attention. An $$N \times N$$ square matrix maps an $$N$$-dimensional vector into another $$N$$-dimensional vector. Several types of square matrices have special properties:
 
 - an **identity** matrix $$\mat{I}$$ maps a vector to itself, much as multiplying by the number 1 leaves another value unchanged.
 - the **inverse** of a square matrix *undoes* the transformation that the matrix causes: $$\mat{A}^{-1} \vdot \mat{A} = \mat{I}$$. Applying first one and then the other yields the original vector. Most matrices do not have an inverse; only those whose rows are linearly independent do.
 - the **transpose** of a matrix is the matrix yielded by exchanging rows and columns: $$(\mat{A}^{\mathrm{T}})_{ij} = \mat{A}_{ji}$$.
 - an **orthogonal** matrix $$\mat{O}$$ satisfies $$\trans{O} \vdot \mat{O} = \mat{O} \vdot \trans{O} = \mat{I}$$. Orthogonal matrices rotate and/or reflect vectors, preserving their length.
-- a **rotation** matrix $$\mat{R}_{\vb{u}}(\theta)$$ rotates a vector through angle $$\theta$$ around the axis specified by the unit vector $$\vb{u}$$. If the space is real, then a rotation matrix is an orthogonal matrix. If the space is complex, a rotation matrix is **unitary** (see below). 
+- a **rotation** matrix $$\mat{R}_{\vb{u}}(\theta)$$ rotates a vector through angle $$\theta$$ around the axis specified by the unit vector $$\vb{u}$$. If the space is real, then a rotation matrix is an orthogonal matrix. If the space is complex, a rotation matrix is **unitary** (see below).
 - a **Hermitian** matrix $$\mat{H}$$ is a complex valued matrix that is equal to its complex conjugate transpose: $$\mat{H} = (\mat{H}^*)^{\mathrm{T}} = \hc{H}$$. Hermitian matrices have real eigenvalues and orthogonal eigenvectors.
 - a **normal** matrix commutes with its conjugate transpose, $$\mat{N}\vdot\hc{N} = \hc{N}\vdot\mat{N}$$, which means that you get the same matrix regardless of the order in which you multiply them.
-- the inverse of a **unitary** matrix is equal to its conjugate transpose: $$\mat{U}^{-1} = \hc{U}$$. Unitary matrices preserve the length of a vector. The time evolution operator in quantum mechanics may be represented by a unitary matrix whose matrix elements generally depend on time $$t$$. 
+- the inverse of a **unitary** matrix is equal to its conjugate transpose: $$\mat{U}^{-1} = \hc{U}$$. Unitary matrices preserve the length of a vector. The time evolution operator in quantum mechanics may be represented by a unitary matrix whose matrix elements generally depend on time $$t$$.
 
+### Questions
+
+1. Consider the matrices
+\\[
+  \mat{A} = \begin{pmatrix}
+    1 & 2i \\\
+    2i & 3
+  \end{pmatrix}
+  \qquad
+  \mat{B} = \begin{pmatrix}
+    1 & 2i \\\
+    -2i & 4
+  \end{pmatrix}
+  \qquad
+  \mat{C} = \begin{pmatrix}
+    \sqrt{3}/2 & 1/2 \\\
+    -1/2 & \sqrt{3}/2
+    \end{pmatrix}
+\\]
+Which of these are (a) orthogonal? (b) Hermitian? (c) Unitary?
 
 ## Identity Matrix
 
 The identity matrix has ones along the main diagonal and zeros everywhere else:
 \begin{equation}
   \mat{I} = \begin{pmatrix}
-    1 & 0 & 0 & \cdots & 0 \\\ 
-    0 & 1 & 0 & \cdots & 0 \\\ 
-    0 & 0 & 1 & \cdots & 0 \\\ 
-    \vdots & \vdots & \vdots & \ddots & \vdots \\\ 
+    1 & 0 & 0 & \cdots & 0 \\\
+    0 & 1 & 0 & \cdots & 0 \\\
+    0 & 0 & 1 & \cdots & 0 \\\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\\
     0 & 0 & 0 & \cdots & 1
     \end{pmatrix}
     \label{eq:identity}
@@ -34,7 +55,7 @@ The identity matrix has ones along the main diagonal and zeros everywhere else:
 
 ## Inverse
 
-If a square matrix $$\mat{A}$$ has an inverse $$\mat{A}^{-1}$$, then 
+If a square matrix $$\mat{A}$$ has an inverse $$\mat{A}^{-1}$$, then
 \begin{equation}
   \mat{A}^{-1} \vdot \mat{A} = \mat{I} = \mat{A} \vdot \mat{A}^{-1}
 \end{equation}
@@ -70,13 +91,13 @@ A **normal matrix** commutes with its conjugate transpose: $$\widetilde{\mat{A}}
 
 ## Unitary Matrices
 
-A **unitary matrix** is a complex square matrix whose inverse is equal to its conjugate transpose: $$\mat{U}^{-1} = \widetilde{\mat{U}}$$. 
+A **unitary matrix** is a complex square matrix whose inverse is equal to its conjugate transpose: $$\mat{U}^{-1} = \widetilde{\mat{U}}$$.
 
 
 + A unitary matrix that represents the rotation of a spin-1/2 particle through angle $$\phi$$ around the $$z$$ axis, expressed in the basis of $$\ket{\uparrow}, \ket{\downarrow}$$ along $$z$$ is
 \\[
   \hat{R}(\phi \vu{z}) \longrightarrow \begin{pmatrix}
-    e^{-i\phi/2} & 0 \\\ 
+    e^{-i\phi/2} & 0 \\\
     0 & e^{i\phi/2}
   \end{pmatrix}
 \\]
@@ -107,21 +128,21 @@ Orthogonal matrices:
 
 ### Rotation Matrices
 
-The matrix 
+The matrix
 \\[
-  \mat{R}(\theta) = 
+  \mat{R}(\theta) =
     \begin{pmatrix}
-  \cos\theta & -\sin\theta \\\ 
+  \cos\theta & -\sin\theta \\\
   \sin\theta & \cos\theta
   \end{pmatrix}
 \\]
 rotates a column vector through angle $$\theta$$ in the counterclockwise direction. You can confirm that $$\mat{R}(\pi/2)$$ rotates $$\vu{x} \to \begin{pmatrix}1 \\\ 0\end{pmatrix}$$ into $$\vu{y} \to \begin{pmatrix} 0 \\\ 1 \end{pmatrix}$$ and $$\vu{y}$$ into $$-\vu{x}$$.
 
-We can generalize readily to 3 dimensions, at least for rotations around one of the basis vectors. For example, 
+We can generalize readily to 3 dimensions, at least for rotations around one of the basis vectors. For example,
 \\[
     \begin{pmatrix}
-    \cos\theta & 0 & \sin\theta \\\ 
-    0 & 1 & 0 \\\ 
+    \cos\theta & 0 & \sin\theta \\\
+    0 & 1 & 0 \\\
     -\sin\theta & 0 & \cos\theta
     \end{pmatrix}
 \\]
