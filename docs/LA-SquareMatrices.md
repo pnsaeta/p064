@@ -148,12 +148,27 @@ We can generalize readily to 3 dimensions, at least for rotations around one of 
 \\]
 rotates a column vector around the $$y$$ axis. All proper rotations (that don't alter the handedness of the basis vectors) have a determinant of 1. Improper rotations, which do change the handedness of the basis vectors, have determinant $$-1$$.
 
-## Determinant
+## Determinants
 
 You undoubtedly already know what a determinant is, and how you can work it out using minors, but allow me to make a couple of definitions.
 
 - Each contribution to the determinant of an $$N$$-dimensional matrix is the product of $$N$$ terms, one from each column and row.
 - There are $$N!$$ such contributions, since there are $$N$$ choices for the column in the first row, $$N-1$$ choices for the column in the second row, etc.
+- We can represent a particular ordering with the indices of the successive columns. For example, 1324 would mean to multiply $$a_{11} a_{23} a_{32} a_{44}$$ for a matrix whose elements are $$a_{ij}$$.
+- Starting from the ordering $$123\cdots$$ for the columns, every other ordering can be constructed by pairwise exchange of two elements. For example, to get to 1423 from the reference ordering 1234, we could proceed $$1234 \to 1324 \to 1423$$, which took two exchanges. All possible permutations take either an even or odd number of exchanges.
+- The determinant is the sum of all $$N!$$ N-term products, which are counted positive for **even** permutations and negative for **odd** permutations.
+- The **Levi-Civita symbol** $$\varepsilon_{ijklm\cdots}$$ for $$N$$ elements has $$N$$ subscripts (indices) and is defined by
+\begin{equation}
+  \varepsilon_{ijk\cdots} = \begin{cases}
+    1 & ijk\cdots = 123\cdots \text{ and even permutations} \\\
+    -1 & ijk\cdots = 132\cdots \text{ and odd permutations of } 123\cdots \\\
+    0 & \text{if any index is repeated}
+  \end{cases}
+\end{equation}
+- The determinant is then defined by
+\begin{equation}\label{eq:determinant}
+    D = \sum_{ijk\cdots} (\varepsilon_{ijk\cdots}) a_{1i} a_{2j} a_{3k} \cdots
+\end{equation}
 
 ## Miscellany
 
