@@ -21,9 +21,9 @@ understand with an example.
 Consider the matrix
 \\[
   \mat{A} = \begin{pmatrix}
-   1 & 2 & -3 \\\ 
-   2 & -1 & 4 \\\ 
- -2 & 1 & 3 
+   1 & 2 & -3 \\\
+   2 & -1 & 4 \\\
+ -2 & 1 & 3
  \end{pmatrix}
 \\]
 and suppose we seek to solve for the components of $$\vb{x}_1$$ such
@@ -31,9 +31,9 @@ that $$\mat{A}\vdot\vb{x}_1 = \begin{pmatrix}1 & 0 & 0\end{pmatrix}^{\rm
   T}$$. That is, we want to solve
 \\[
   \begin{pmatrix}
-   1 & 2 & -3 \\\ 
-   2 & -1 & 4 \\\ 
- -2 & 1 & 3 
+   1 & 2 & -3 \\\
+   2 & -1 & 4 \\\
+ -2 & 1 & 3
  \end{pmatrix} \vdot \begin{pmatrix}
    x_1 \\\ x_2 \\\ x_3
    \end{pmatrix}
@@ -43,8 +43,8 @@ for $$x_1, x_2, x_3$$ [and similar sets of equations to determine $$\vb{x}_2$$
  and $$\vb{x}_3$$, corresponding respectively to right-hand sides $$\begin{pmatrix}0 & 1 & 0\end{pmatrix}^{\mathrm{T}}$$ and $$\begin{pmatrix}0 & 0 & 1\end{pmatrix}^{\mathrm{T}}$$]. Written out longhand, this means solving the set of equations
 
 \begin{align}
-  x_1 + 2 x_2 - 3 x_3 &= 1 \\\ 
-  2x_1 - x_2 + 4x_3 &= 0 \\\ 
+  x_1 + 2 x_2 - 3 x_3 &= 1 \\\
+  2x_1 - x_2 + 4x_3 &= 0 \\\
   -2 x_1 + x_2 + 3x_3 &= 0
 \end{align}
 We can clearly multiply each of these equations by any nonzero constant without
@@ -58,61 +58,61 @@ transforming $$\mat{I}$$ into $$\mat{A}^{-1}$$.
 To start, write $$\mat{A}$$ next to the $$3\times3$$ identity matrix:
 \\[
 \begin{pmatrix}
-1 & 2 & -3 & | & 1 & 0 & 0 \\\ 
-2 & -1 & 4 & | & 0 & 1 & 0 \\\ 
+1 & 2 & -3 & | & 1 & 0 & 0 \\\
+2 & -1 & 4 & | & 0 & 1 & 0 \\\
 -2 & 1 & 3 & | & 0 & 0 & 1
 \end{pmatrix}
 \\]
 In this case, $$a_{11}$$ is already the number 1, so we don't need to alter the first row; if it had a different value, we could start by dividing the first row by that value. Element $$a_{11}$$ is called the **pivot**.
 To zero the first column of rows 2 and 3, we multiply the first row by $$-2$$ and 2, respectively, and add to get
 \\[
-\begin{pmatrix}1 & 2 & -3 &  | &  1 & 0 & 0 \\\ 
-0 & -5 & 10 & | & -2 & 1 & 0 \\\ 
+\begin{pmatrix}1 & 2 & -3 &  | &  1 & 0 & 0 \\\
+0 & -5 & 10 & | & -2 & 1 & 0 \\\
 0 & 5 & -3  & | &  2 & 0 & 1\end{pmatrix}
 \\]
 Now divide the second row by $$-5$$ to get
 \\[
 \begin{pmatrix}
-1 & 2 & -3 &  | &  1 & 0 & 0 \\\ 
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\ 
+1 & 2 & -3 &  | &  1 & 0 & 0 \\\
+0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
 0 & 5 & -3  & | &  2 & 0 & 1
 \end{pmatrix}
 \\]
 To eliminate the 5 on the second column of the third row, multiply the second row by $$-5$$ and add, giving
 \\[
-\begin{pmatrix}1 & 2 & -3 & | &  1 & 0 & 0 \\\ 
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\ 
+\begin{pmatrix}1 & 2 & -3 & | &  1 & 0 & 0 \\\
+0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
 0 & 0 &  7 & | & 0 & 1 & 1\end{pmatrix}
 \\]
 Dividing the last row by 7 reduces the original matrix to standard upper-triangular form (ones on the main diagonal and zeros below it):
 \\[
 \begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\ 
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\ 
+1 & 2 & -3 & | &  1 & 0 & 0 \\\
+0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
 0 & 0 &  1 & | & 0 & 1/7 & 1/7
 \end{pmatrix}
 \\]
 Now we proceed from bottom to top, eliminating with row operations the nonzero entries above the main diagonal. Multiplying the final row by 2 and adding to the middle row gives
 \\[
 \begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\ 
-0 & 1 &  0 & | & 2/5 & 3/35 & 2/7 \\\ 
+1 & 2 & -3 & | &  1 & 0 & 0 \\\
+0 & 1 &  0 & | & 2/5 & 3/35 & 2/7 \\\
 0 & 0 &  1 & | & 0 & 1/7 & 1/7
 \end{pmatrix}
 \\]
 We now add to the first row the second row multiplied by $$-2$$ and the third row multiplied by 3, which gives
 \\[
 \begin{pmatrix}
-1 & 0 & 0 & | &  1/5 & 9/35 & -1/7 \\\ 
-0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\ 
+1 & 0 & 0 & | &  1/5 & 9/35 & -1/7 \\\
+0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\
 0 & 0 & 1 & | & 0 & 1/7 & 1/7
 \end{pmatrix}
 \\]
-Thus, we have determined that 
+Thus, we have determined that
 \\[
   \mat{A}^{-1} = \begin{pmatrix}
-  \frac15 & \frac{9}{35} & -\frac17 \\\ 
-  \frac25 & \frac{3}{35} & \frac27 \\\ 
+  \frac15 & \frac{9}{35} & -\frac17 \\\
+  \frac25 & \frac{3}{35} & \frac27 \\\
   0       & \frac17      & \frac17
  \end{pmatrix}
 \\]
@@ -134,7 +134,7 @@ Up to numerical round-off error, we do indeed get the identity matrix.
 
 ## LU Decomposition
 
-The procedure just outlined uses a sequence of pivots to reduce the input matrix $$\mat{A}$$ to upper-triangular form (all entries below the main diagonal get sent to zero). In general, we will need to resort to permuting some rows to avoid zero pivots, so we will assume that we can 
+The procedure just outlined uses a sequence of pivots to reduce the input matrix $$\mat{A}$$ to upper-triangular form (all entries below the main diagonal get sent to zero). In general, we will need to resort to permuting some rows to avoid zero pivots, so we will assume that we can
 factor $$\mat{P}\vdot\mat{A} = \mat{L}\vdot\mat{U}$$, where $$\mat{P}$$ is a matrix describing the row permutations. In that case, the task of solving the equation
 \\[
   \mat{P}\vdot\mat{A}\vdot\vb{x} = \mat{L} \vdot \mat{U} \vdot\vb{x} = \mat{P}\vdot \vb{b}
@@ -179,7 +179,7 @@ The next operation we needed was to multiply row 1 by $$c_{31} = 2$$ and add it 
 \\]
 So far, therefore, we have transformed $$\mat{A}$$ first by multiplying by $$\mat{E}_{12}$$ and then by $$\mat{E}_{13}$$ to get
 \\[
-  \mat{E}\_{13} \vdot \mat{E}\_{12} \vdot \mat{A} = 
+  \mat{E}\_{13} \vdot \mat{E}\_{12} \vdot \mat{A} =
   \begin{pmatrix}
     1 & 2 & -3 \\\ 0 & -5 & 10 \\\ 0 & 5 & -3
   \end{pmatrix}
@@ -219,7 +219,7 @@ What would the inverse of $$\mat{E}_{23}$$ look like? Well, $$\mat{E}_{23}$$ mul
 \\]
 So, we have
 \\[
-  \mat{L} = 
+  \mat{L} =
   \underbrace{\begin{pmatrix}
     1 & 0 & 0 \\\ 2 & 1 & 0 \\\ 0 & 0 & 1
    \end{pmatrix}}\_{\mat{E}\_{12}^{-1}}
@@ -275,8 +275,8 @@ Gauss-Jordan elimination is straightforward to program. A naïve implementation 
 Let's start back at the beginning and scan the first column to look for the row whose first element has the greatest magnitude:
 \\[
 \begin{pmatrix}
-1 & 2 & -3 & | & 1 & 0 & 0 \\\ 
-2 & -1 & 4 & | & 0 & 1 & 0 \\\ 
+1 & 2 & -3 & | & 1 & 0 & 0 \\\
+2 & -1 & 4 & | & 0 & 1 & 0 \\\
 -2 & 1 & 3 & | & 0 & 0 & 1
 \end{pmatrix}
 \\]
@@ -287,8 +287,8 @@ In this case, there is a tie between the second and third rows. I will pick row 
 to get
 \\[
 \begin{pmatrix}
-2 & -1 & 4 & | & 0 & 1 & 0 \\\ 
-1 & 2 & -3 & | & 1 & 0 & 0 \\\ 
+2 & -1 & 4 & | & 0 & 1 & 0 \\\
+1 & 2 & -3 & | & 1 & 0 & 0 \\\
 -2 & 1 & 3 & | & 0 & 0 & 1
 \end{pmatrix}
 \\]
@@ -296,8 +296,8 @@ to get
 Multiplying the first row by $$c_{21} = -1/2$$ and adding to the second row, followed by multiplying the first row by $$c_{31} = 1$$ and adding to the third row gives
 \begin{equation}\label{eq:halfway}
 \begin{pmatrix}
-2 & -1  & 4 &  | & 0 & 1    & 0 \\\ 
-0 & 5/2 & -5 & | & 1 & -1/2 & 0 \\\ 
+2 & -1  & 4 &  | & 0 & 1    & 0 \\\
+0 & 5/2 & -5 & | & 1 & -1/2 & 0 \\\
 0 & 0    & 7 & | & 0 & 1    & 1
 \end{pmatrix}
 \end{equation}
@@ -310,7 +310,7 @@ Before proceeding to the inverse, we have managed the LU decomposition of the ma
   \end{pmatrix}}\_{\mat{L}}
   \vdot
   \underbrace{\begin{pmatrix}
-  2 & -1 & 4 \\\ 0 & 5/2 & -5 \\\ 0 & 0 & 7  
+  2 & -1 & 4 \\\ 0 & 5/2 & -5 \\\ 0 & 0 & 7
   \end{pmatrix}}\_{\mat{U}}
 \end{equation}
 
@@ -356,7 +356,7 @@ array([[0., 1., 0.],
 array([[ 1. ,  0. ,  0. ],
        [ 0.5,  1. ,  0. ],
        [-1. ,  0. ,  1. ]])
->>> U       
+>>> U
 array([[ 2. , -1. ,  4. ],
        [ 0. ,  2.5, -5. ],
        [ 0. ,  0. ,  7. ]])
@@ -387,25 +387,27 @@ Let's now return to Eq. (\ref{eq:halfway}) to finish computing the inverse.
 Multiply the second row by $$2/5$$ (and the final row by $$1/7$$):
 \\[
 \begin{pmatrix}
-1 & -1/2 & 2 &  | & 0 & 1/2  & 0 \\\ 
-0 & 1  & -2 & | & 2/5 & -1/5 & 0 \\\ 
+1 & -1/2 & 2 &  | & 0 & 1/2  & 0 \\\
+0 & 1  & -2 & | & 2/5 & -1/5 & 0 \\\
 0 & 0    & 1 &  | & 0 & 1/7  & 1/7
 \end{pmatrix}
 \\]
 Use the final row to zero the final column of rows 1 and 2:
 \\[
 \begin{pmatrix}
-1 & -1/2 & 0 & | & 0 & 3/14  & -2/7 \\\ 
-0 & 1    & 0 & | & 2/5 & 3/35 & 2/7 \\\ 
+1 & -1/2 & 0 & | & 0 & 3/14  & -2/7 \\\
+0 & 1    & 0 & | & 2/5 & 3/35 & 2/7 \\\
 0 & 0    & 1 & | & 0 & 1/7  & 1/7
 \end{pmatrix}
 \\]
 Finally, multiply row 2 by $$1/2$$ and add it to the first row
 \\[
 \begin{pmatrix}
-1 & 0 & 0 & | & 1/5 & 9/35 & -1/7 \\\ 
-0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\ 
+1 & 0 & 0 & | & 1/5 & 9/35 & -1/7 \\\
+0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\
 0 & 0 & 1 & | & 0   & 1/7  & 1/7
 \end{pmatrix}
 \\]
 which yields the same result for the inverse as before. Note that even though we permuted the first and second rows to use the largest available pivot, **we get the same inverse matrix** because we also permuted the rows of the auxilliary matrix that started as the identity.
+
+Next: [Hilbert Spaces](LA-HilbertSpace.md)

@@ -170,9 +170,25 @@ You undoubtedly already know what a determinant is, and how you can work it out 
     D = \sum_{ijk\cdots} (\varepsilon_{ijk\cdots}) a_{1i} a_{2j} a_{3k} \cdots
 \end{equation}
 
-## Miscellany
+### Properties of Determinants
 
-- $$\det(\alpha \mat{A}) = \alpha^n \det(\mat{A})$$
-- $$\det(\mat{A} \mat{B}) = \det(\mat{A}) \det(\mat{B})$$
-- $$\det(\mat{A}^{-1}) = \frac{1}{\det{\mat{A}}} $$
-- $$\mathrm{trace}(\mat{A B}) = \mathrm{trace}(\mat{B A})$$
+- Exchanging two rows in a matrix changes the sign of the value of its determinant.
+- Exchanging two columns in a matrix changes the sign of the value of its determinant.
+- Multiplying one row of a matrix by a constant $$\alpha$$ multiplies the determinant by $$\alpha$$.
+- Multiplying on row of a matrix by a constant $$\alpha$$ and adding the result to another row leaves the determinant unchanged.
+- Multiplying a matrix by $$\alpha$$ multiplies the determinant by $$\alpha^N$$: $$\det(\alpha \mat{A}) = \alpha^n \det(\mat{A})$$.
+- The determinant of a product is the product of determinants: $$\det(\mat{A} \mat{B}) = \det(\mat{A}) \det(\mat{B})$$.
+- The determinant of the inverse is the reciprocal of the determinant: $$\det(\mat{A}^{-1}) = \frac{1}{\det{\mat{A}}} $$.
+
+## Trace
+
+The trace of a square matrix is the sum of the elements on the main diagonal:
+\\[
+    \text{Tr } \mat{A} = \sum_{j=1}^N a_{jj}
+\\]
+The trace has the property
+\\[
+\text{Tr }(\mat{A \cdot B}) = \text{Tr }(\mat{B \cdot A})
+\\]
+
+Next: [Gauss-Jordan Elimination](LA-GaussJordan.md)
