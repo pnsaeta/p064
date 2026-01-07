@@ -47,7 +47,7 @@ Now, I'd like to generalize the notion of a vector as being an element of a **ve
 10. **Multiplication by 1 leaves a vector unchanged**: $$1\vb{v} = \vb{v}$$.
 
 - Axiom 1 means that the vector space is closed under addition.
-- The scalars may be real or complex (or quaternions…).
+- The scalars may be real or complex.
 
 ### Examples
 
@@ -64,7 +64,7 @@ There are many familiar examples, such as directed line segments in a plane, usi
 
 ### A Slightly Silly but Informative Example
 
-Suppose we revise the rule for multiplication of a directed line segment (an arrow) by a scalar to yield the zero vector for all vectors and scalars: $$\alpha \vb{v} = \vb{0}$$. This rule violates only one of the ten axioms, making it *not* a vector space. Which axion does it violate?
+Suppose we revise the rule for multiplication of a directed line segment (an arrow) by a scalar to yield the zero vector for all vectors and scalars: $$\alpha \vb{v} = \vb{0}$$. This rule violates only one of the ten axioms, making it *not* a vector space. Which axiom does it violate?
 
 
 ## Linear Operators
@@ -135,14 +135,14 @@ If $$\vb{b}^{T} = (1, e^{i\phi}, e^{2i\phi}, e^{3i\phi})$$, what is $$\langle \v
 
 ## Dirac Notation
 
-If the vector space is over the field of complex numbers, the two vectors of the inner product are treated differently; the amplitudes of the first vector are conjugated before multiplying by the corresponding amplitudes of the second vector. A pioneer of quantum mechanics, **Paul Adrien Maurice Dirac**, developed a notation to handle this conjugation for vector spaces over the field of complex numbers that physicists use to this day. In Dirac notation, a vector $$\psi$$ is denoted $$\ket{\psi}$$ and its conjugate transpose is denoted $$\bra{\psi}$$, so that the inner product of $$\psi$$ with itself is $$\bra{\psi}\ket{\psi}$$ (where we simplify to show only a single bar between the left- and right-hand sides).
+If the vector space is over the field of complex numbers, the two vectors of the inner product must be treated differently; the amplitudes of the first vector are conjugated before multiplying by the corresponding amplitudes of the second vector. A pioneer of quantum mechanics, **Paul Adrien Maurice Dirac**, developed a notation to handle this conjugation for vector spaces over the field of complex numbers that physicists use to this day to represent states in quantum mechanics. In Dirac notation, a vector $$\psi$$ is denoted $$\ket{\psi}$$ and its conjugate transpose is denoted $$\bra{\psi}$$, so that the inner product of $$\psi$$ with itself is $$\bra{\psi}\ket{\psi}$$ (where we simplify the notation to show only a single bar between the left- and right-hand sides).
 
 In Dirac notation, the vector $$\ket{\psi}$$ is called a **ket** and its **dual** (conjugate transpose) $$\bra{\psi}$$ is called a **bra**, so that their inner product is a **bra**c**ket** (which was inspired by the Poisson bracket of theoretical mechanics). Every ket vector has its corresponding bra vector, and their inner product yields a nonnegative real number. 
 
-Every physically observable quantity (e.g., momentum, angular momentum, position, etc.) corresponds to a special kind of linear operator, called a Hermitian operator, whose properties we will define and explore below.
+Every physically observable quantity (e.g., momentum, angular momentum, position, etc.) corresponds to a special kind of linear operator, called a **Hermitian operator**, whose properties we will define and explore below.
 
 + rotation through angle $$\theta$$ around the $$z$$ axis, $$\hat{R}(\theta \vb{e}_z)$$
-+ the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$.
++ the hamiltonian, $$\hat{H}$$, which acts on a state $$\ket{\psi}$$ to weight its components by their respective energies. If $$\ket{\psi}$$ is an eigenstate (eigenvector) of the hamiltonian, then $$\hat{H}\ket{\psi} = E \ket{\psi}$$. This is the **time-independent Schrödinger equation** written in Dirac notation. You will be studying it a lot in Physics 52!
 
 
 ### Matrix Representation
