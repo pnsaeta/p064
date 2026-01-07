@@ -18,7 +18,7 @@ Square matrices have a number of interesting properties and deserve special atte
 - a **normal** matrix commutes with its conjugate transpose, $$\mat{N}\vdot\hc{N} = \hc{N}\vdot\mat{N}$$, which means that you get the same matrix regardless of the order in which you multiply them.
 - the inverse of a **unitary** matrix is equal to its conjugate transpose: $$\mat{U}^{-1} = \hc{U}$$. Unitary matrices preserve the length of a vector. The time evolution operator in quantum mechanics may be represented by a unitary matrix whose matrix elements generally depend on time $$t$$.
 
-### Questions
+### Question
 
 1. Consider the matrices
 \\[
@@ -147,6 +147,13 @@ We can generalize readily to 3 dimensions, at least for rotations around one of 
     \end{pmatrix}
 \\]
 rotates a column vector around the $$y$$ axis. All proper rotations (that don't alter the handedness of the basis vectors) have a determinant of 1. Improper rotations, which do change the handedness of the basis vectors, have determinant $$-1$$.
+
+## Determinant
+
+You undoubtedly already know what a determinant is, and how you can work it out using minors, but allow me to make a couple of definitions.
+
+- Each contribution to the determinant of an $$N$$-dimensional matrix is the product of $$N$$ terms, one from each column and row.
+- There are $$N!$$ such contributions, since there are $$N$$ choices for the column in the first row, $$N-1$$ choices for the column in the second row, etc.
 
 ## Miscellany
 
