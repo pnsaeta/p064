@@ -73,7 +73,7 @@ array([[1.00000000e+00, 0.00000000e+00],
 
 ## Eigenvalues and Eigenvectors
 
-You can get both the eigenvalues and the corresponding normalized eigenvectors by calling `np.linalg.eig(m)`
+You can get both the eigenvalues and the corresponding normalized eigenvectors by calling `np.linalg.eig(m)`.
 
 ~~~~ python
 evals, evecs = np.linalg.eig(m)
@@ -165,32 +165,32 @@ array([[ 1.,  2.,  3.,  4.],
        [-4.,  2.,  7.,  8.]])
 ~~~~
 
-What is this good for? I'll offer an example from image processing inspired by [this page](https://www.geeksforgeeks.org/machine-learning/singular-value-decomposition-svd/).
+What is this good for? I’ll offer an example from image processing inspired by [this page](https://www.geeksforgeeks.org/machine-learning/singular-value-decomposition-svd/).
 
-As the matrix to analyze via singular value decomposition, we will use the grayscale values of this image of Harvey Seeley Mudd shown in Figure 1.
+As the matrix to analyze via singular value decomposition, we will use the grayscale values of this $$522 \times 400$$ pixel image of Harvey Seeley Mudd shown in Figure 1.
 
 <p class="center" markdown="0">
   <img src="figs/Harvey-Mudd.jpg" style="width: 200px;" alt="Harvey Seeley Mudd">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Mining engineer and philanthropist Harvey Seeley Mudd.</p>
 
+The following Python script loads the image, converts it to grayscale, and then performs a singular value decomposition. To generate a compressed rendering using the
+$$k$$ largest singular values, we use first $$k$$ columns of $$\\\mat{U}$$, the top-left $$k$$ rows and columns of $$\mat{S}$$, and the first $$k$$ rows of $$\mat{V}^{\mathrm{T}}$$.
+
 ~~~~ python
 harvey = plt.imread('Harvey-Mudd.jpg') # this is an RGB image
 harvey = harvey[:,:,0] # convert to grayscale
+
 from scipy.linalg import svd
 U, S, V_T = svd(harvey, full_matrices=False)
 S = np.diag(S)
-fig, ax = plt.subplots(5, 2, figsize=(8, 20))
-curr_fig = 0
-for r in [5, 10, 20, 40, 80]:
-    harvey_approx = U[:, :r] @ S[0:r, :r] @ V_T[:r, :]
-    ax[curr_fig][0].imshow(harvey_approx, cmap='gray')
-    ax[curr_fig][0].set_title(r"$$k = %d$$" % r)
-    ax[curr_fig, 0].axis('off')
-    ax[curr_fig][1].imshow(harvey, cmap='gray')
-    ax[curr_fig][1].set_title("Original")
-    ax[curr_fig, 1].axis('off')
-    curr_fig += 1
+
+fig, ax = plt.subplots()
+k = 5
+harvey_approx = U[:, :k] @ S[:k, :k] @ V_T[:k, :]
+ax.imshow(harvey_approx, cmap='gray')
+ax.set_title(r"$$k = %d$$" % k)
+ax.axis('off')
 ~~~~
 
 <p class="center" markdown="0">
@@ -207,4 +207,4 @@ for r in [5, 10, 20, 40, 80]:
   <img src="figs/Harvey-Mudd.jpg" style="width: 200px;" alt="">
 
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — approximations to the original “matrix” keeping only the $$k$$ strongest singular values. The final image is the original.</p>

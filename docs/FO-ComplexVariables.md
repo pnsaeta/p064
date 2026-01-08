@@ -15,7 +15,7 @@ The imaginary unit was conjured to be able to solve $$z^2 = x$$ for all $$x \in 
 \\]
 Here $$x$$ represents the real part of $$z$$ and $$y$$ the imaginary part of $$z$$. The algebra of the two parts is just the algebra of the real numbers, so addition is commutative. As for multiplication of two complex numbers, we have
 \begin{align}
-   (x\_1 + i y\_1)\times (x_2 + i y\_2) &= x\_1 x\_2 + x\_1 i y\_2 + i y\_1 x\_2 + i^2 y\_1 y\_2 \notag\\\ 
+   (x\_1 + i y\_1)\times (x_2 + i y\_2) &= x\_1 x\_2 + x\_1 i y\_2 + i y\_1 x\_2 + i^2 y\_1 y\_2 \notag\\\
    &= (x\_1 x\_2 - y\_1 y\_2) + i(x\_1 y\_2 + y\_1 x\_2) \notag
 \end{align}
 Both the real and imaginary parts of the product are unchanged on exchanging 1 and 2; multiplication of complex numbers is also commutative.
@@ -24,14 +24,14 @@ Both the real and imaginary parts of the product are unchanged on exchanging 1 a
 
 There are more involved ways to solve $$z^2 = x$$ that preserve the commutative property of addition but not for multiplication. In particular, the **quaternions** are defined by
 \begin{align}
-  -1 &= i^2 = j^2 = k^2  \notag \\\ 
+  -1 &= i^2 = j^2 = k^2  \notag \\\
   i j &= k = - j i \qqtext{and cyclic permutations}\notag
 \end{align}
-The quaternions have three distinct square roots of $$-1$$, and the products of these roots are antisymmetric; the multiplication of quaternions does not commute. Quaternions were all the rage when **James Clerk Maxwell** was working out electromagnetic theory and figure prominently in his treatise. Before long, **Oliver Heaviside** and **Josiah Willard Gibbs** developed vector notation and the quaternions were shelved, by and large, although they can be very convenient for representing rotations in three-dimensional space. Perhaps out of fondness for quaternions, mathematicians insist on using $$\vb{i}$$, $$\vb{j}$$, and $$\vb{k}$$ for unit vectors in the $$x$$, $$y$$, and $$z$$ directions, respectively, but that's just silly and certainly does not generalize to the curvilinear coordinate systems that play such an important role in physics.
+The quaternions have three distinct square roots of $$-1$$, and the products of these roots are antisymmetric; the multiplication of quaternions does not commute. Although Gauss invented them (for himself), William Rowan Hamilton (after whom the hamiltonian is named) independently developed them and spent much of his career developing their properties. Quaternions were all the rage when **James Clerk Maxwell** was working out electromagnetic theory and figure prominently in his treatise. Before long, **Josiah Willard Gibbs** and **Oliver Heaviside**  developed vector notation and the quaternions were shelved, by and large, although they can be very convenient for representing rotations in three-dimensional space. Out of fondness for quaternions, mathematicians persist in using $$\vb{i}$$, $$\vb{j}$$, and $$\vb{k}$$ for unit vectors in the $$x$$, $$y$$, and $$z$$ directions, respectively, but that's just silly and certainly does not generalize to the curvilinear coordinate systems that play such an important role in physics.
 
 ### Argand Plane
 
-A common way to visualize complex numbers is on the **Argand plane**, in which the real part of the number is plotted on the $$x$$ axis and the imaginary part along the $$y$$ axis. 
+A common way to visualize complex numbers is on the **Argand plane**, in which the real part of the number is plotted on the $$x$$ axis and the imaginary part along the $$y$$ axis.
 
 <p class="center" markdown="0">
   <img src="figs/Argand.webp" style="width: 300px;" alt="Argand plane">
@@ -40,7 +40,7 @@ A common way to visualize complex numbers is on the **Argand plane**, in which t
 
 Of course, we could also use a polar coordinate system in which
 \begin{align}
-  r &= \sqrt{x^2 + y^2} = |z| & \qquad x &= r \cos\phi = \Re(z) \notag \\\ 
+  r &= \sqrt{x^2 + y^2} = |z| & \qquad x &= r \cos\phi = \Re(z) \notag \\\
   \phi &= \arctan(y/x) &\qquad y &= r \sin\phi = \Im(z) \notag
 \end{align}
 Using Euler’s identity,
@@ -57,25 +57,25 @@ Addition is straightforward when complex numbers use the rectangular (Cartesian)
 
 Euler’s identity allows us to represent sines and cosines in terms of complex exponentials:
 \begin{align}
-  \cos\phi &= \frac{e^{i\phi} + e^{-i\phi}}{2} = \Re(e^{i\phi}) \notag \\\ 
-  \sin\phi &= \frac{e^{i\phi} - e^{-i\phi}}{2i} = \Im(e^{i\phi}) \notag 
+  \cos\phi &= \frac{e^{i\phi} + e^{-i\phi}}{2} = \Re(e^{i\phi}) \notag \\\
+  \sin\phi &= \frac{e^{i\phi} - e^{-i\phi}}{2i} = \Im(e^{i\phi}) \notag
 \end{align}
 The complex representation makes it easy to work out trigonometric identities. For example,
 \begin{align}
-  e^{i\theta} e^{i\phi} = e^{i(\theta+\phi)} &= \cos(\theta+\phi) + i \sin(\theta+\phi) \notag \\\ 
-  (\cos\theta + i \sin\theta)(\cos\phi+i\sin\phi) &= \cos(\theta+\phi) + i \sin(\theta+\phi) \notag \\\ 
+  e^{i\theta} e^{i\phi} = e^{i(\theta+\phi)} &= \cos(\theta+\phi) + i \sin(\theta+\phi) \notag \\\
+  (\cos\theta + i \sin\theta)(\cos\phi+i\sin\phi) &= \cos(\theta+\phi) + i \sin(\theta+\phi) \notag \\\
   (\cos\theta\cos\phi - \sin\theta\sin\phi) + i(\sin\theta\cos\phi + \cos\theta\sin\phi) &= \cos(\theta+\phi) + i \sin(\theta+\phi) \notag
 \end{align}
 therefore by comparing real and imaginary parts on both sides, we have
 \begin{align}
-  \cos(\theta+\phi) &= \cos\theta\cos\phi - \sin\theta\sin\phi  \notag \\\ 
+  \cos(\theta+\phi) &= \cos\theta\cos\phi - \sin\theta\sin\phi  \notag \\\
   \sin(\theta+\phi) &= \sin\theta\cos\phi + \cos\theta\sin\phi
 \end{align}
 
 Or another:
 \begin{align}
-  \cos^4\theta &= \frac{(e^{i\theta} + e^{-i\theta})^4}{2^4} 
-  = \frac{e^{4i\theta} + 4 e^{2i\theta} + 6 + 4e^{-2i\theta}+e^{4i\theta}}{16}\notag \\\ 
+  \cos^4\theta &= \frac{(e^{i\theta} + e^{-i\theta})^4}{2^4}
+  = \frac{e^{4i\theta} + 4 e^{2i\theta} + 6 + 4e^{-2i\theta}+e^{4i\theta}}{16}\notag \\\
   &= \frac18 \cos 4\theta + \frac12 \cos 2\theta + \frac38
 \end{align}
 You can confirm the plausibility of this last identity by checking out $$\theta \in \{0, \frac\pi2, \pi\}$$.
@@ -124,18 +124,18 @@ If we assume that the limit is well-defined and independent of the direction of 
 Let us suppose, on the one hand, that $$\delta y = 0$$ and that we approach the point $$z$$ parallel to the $$x$$ axis. Then Eq. (\ref{eq:CR0}) becomes
 \begin{align}
   f'(z) &= \lim_{\delta x\to0} \frac{[u(x+\delta x, y) - u(x,y)] +
-  i[v(x+\delta x, y)-v(x, y)]}{\delta x} \notag \\\ 
+  i[v(x+\delta x, y)-v(x, y)]}{\delta x} \notag \\\
   &= \pdv{u}{x} + i\pdv{v}{x} \label{eq:CR1}
 \end{align}
 On the other hand, if we let $$\delta x = 0$$ and approach $$z$$ parallel to the imaginary axis, we get
 \begin{align}
   f'(z) &= \lim_{\delta y\to0} \frac{[u(x, y + \delta y) - u(x,y)] +
-  i[v(x, y+\delta y)-v(x, y)]} {i \delta y} \notag \\\ 
+  i[v(x, y+\delta y)-v(x, y)]} {i \delta y} \notag \\\
   &= -i\pdv{u}{y} + \pdv{v}{y} \label{eq:CR2}
 \end{align}
 For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
 \begin{align}
-  \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\ 
+  \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\
   -\pdv{u}{y} &= \pdv{v}{x} \label{eq:CR4}
 \end{align}
 which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**. More generally, functions may be analytic in a region of the complex plane, but nonanalytic at certain points or in certain regions.
@@ -151,7 +151,7 @@ and to use induction to show that
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
-Standard differentiable functions of a single real variable $$x$$ with which you are familiar are generally also differentiable on replacing the variable with a complex variable $$z = x + iy$$: e.g., trigonometric functions, exponential functions, powers, polynomials, logarithms. 
+Standard differentiable functions of a single real variable $$x$$ with which you are familiar are generally also differentiable on replacing the variable with a complex variable $$z = x + iy$$: e.g., trigonometric functions, exponential functions, powers, polynomials, logarithms.
 
 ### A Non-differentiable Function of a Complex Variable
 
@@ -179,7 +179,7 @@ Provided that $$n \ne -1$$, the integral vanishes, since $$e^{i(n+1)\theta}$$ is
 \\[
     \oint \frac{\dd{z}}{z} = \int_0^{2\pi} r^{-1} e^{-i\theta} r i e^{i\theta}\dd{\theta} =\int_0^{2\pi} i\dd{\theta} =  2\pi i
 \\]
-This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges. 
+This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges.
 
 ### Laurent Expansion
 
@@ -189,7 +189,7 @@ There is a generalization of a Taylor expansion appropriate for functions of a c
 \end{equation}
 called a **Laurent expansion** about the point $$z_0$$. If such an expansion exists, integrating around a closed contour that contains the point $$z_0$$ would yield zero for every term in the series except for $$n = -1$$. That is,
 \\[
-    \underset{C}{\oint} f(z) = 2\pi i a_{-1} 
+    \underset{C}{\oint} f(z) = 2\pi i a_{-1}
 \\]
 The coefficient $$a_{-1}$$ is called **the residue** of the pole at $$z = z_0$$.
 
@@ -220,7 +220,7 @@ Consider, first, the real part of the integrand. Comparison with Eq. (\ref{eq:CI
 \\[
     \oint \qty( u\dd{x} - v\dd{y}) = \iint \qty(-\pdv{v}{x} - \pdv{u}{y}) \dd{x}\dd{y}
 \\]
-But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem. Goursat showed how to relax the constraint that the region be simply connected by making infinitely thin bridges between regions and showing that integrating on either side of the bridges produced contributions to the integral that exactly cancel. 
+But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem. Goursat showed how to relax the constraint that the region be simply connected by making infinitely thin bridges between regions and showing that integrating on either side of the bridges produced contributions to the integral that exactly cancel.
 
 ## Cauchy's Integral Formula
 
@@ -239,20 +239,20 @@ To prove the formula, note that we are free to distort the contour from $$C$$ th
 We can extend this result by differentiating both sides with respect to $$z_0$$:
 \begin{align}
     f'(z_0) &= \frac{1}{2\pi i} \underset{C}{\oint}
-    \frac{f(z)}{(z-z_0)^2} \dd{z} \\\ 
+    \frac{f(z)}{(z-z_0)^2} \dd{z} \\\
     f^{\prime\prime}(z_0) &= \frac{2!}{2\pi i} \underset{C}{\oint}
-    \frac{f(z)}{(z-z_0)^3}\dd{z} \\\ 
+    \frac{f(z)}{(z-z_0)^3}\dd{z} \\\
     f^{(n)}(z_0) &= \frac{n!}{2\pi i} \underset{C}{\oint}
     \frac{f(z)}{(z-z_0)^{n+1}}\dd{z}
 \end{align}
 
 ## The Residue Theorem
 
-If a function $$f(z)$$ is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number $$N$$ of poles (locations where the function diverges) in $$R$$, then 
+If a function $$f(z)$$ is analytic along a contour $$C$$ and inside region $$R$$ bounded by $$C$$ except at a finite number $$N$$ of poles (locations where the function diverges) in $$R$$, then
 \begin{equation}
   \int_C f(z) \dd{z} = 2 \pi i \sum_{j=1}^N (a_{-1})_j
 \end{equation}
-where $$(a_{-1})_j$$ is the the residue at pole $$j$$. 
+where $$(a_{-1})_j$$ is the the residue at pole $$j$$.
 
 The residue theorem establishes a method for evaluating integrals along closed paths on the complex plane. Quite often, however, we wish to evaluate an integral of a real function of a real variable along the real axis. Since the residue theorem requires that we integrate around a closed contour in the complex plane, an important step in using the residue theorem to calculate such integrals is to identify a contour that either
 
@@ -276,18 +276,18 @@ It may be helpful to use l'Hôpital’s rule in evaluating the limit.
 
 The series for a second-order pole begins with $$n = -2$$. If we multiply $$f(z)$$ by $$(z-z_0)^2$$ and then differentiate once with respect to $$z$$ before taking the limit as $$z \to z_0$$, we get
 \begin{align}
-  \dv{}{z}[f(z) (z-z_0)^2] &= \dv{}{z} \left[ a_{-2} + a_{-1}(z-z_0) + a_0 (z-z_0)^2 + \cdots \right] \\\ 
+  \dv{}{z}[f(z) (z-z_0)^2] &= \dv{}{z} \left[ a_{-2} + a_{-1}(z-z_0) + a_0 (z-z_0)^2 + \cdots \right] \\\
   \lim_{z \to z_0} \dv{}{z}[f(z) (z-z_0)^2] &= \lim_{z \to z_0} [a_{-1} + 2 a_0 (z-z_0) + \cdots] = a_{-1}
 \end{align}
 
 You can readily show by induction that for a $$n$$th-order pole,
 \begin{equation}
   \boxed{
-    \lim_{z \to z_0} \frac{1}{(n-1)!} \dv[n-1]{}{z}[f(z) (z-z_0)^n] = a_{-1} 
+    \lim_{z \to z_0} \frac{1}{(n-1)!} \dv[n-1]{}{z}[f(z) (z-z_0)^n] = a_{-1}
   }
 \end{equation}
 
-There are other approaches. If your function is the ratio of two functions for which you know the Taylor series, you can use series expansion to determine the coefficient of the $$z^{-1}$$ term. 
+There are other approaches. If your function is the ratio of two functions for which you know the Taylor series, you can use series expansion to determine the coefficient of the $$z^{-1}$$ term.
 
 
 ## Summary
@@ -295,7 +295,7 @@ There are other approaches. If your function is the ratio of two functions for w
 1. For the derivative of a function of a complex variable,
 \\[
     \dv{f(z)}{z} = \lim_{\delta z \to 0} \frac{f(z + \delta z)}{\delta z}
-\\] 
+\\]
 to exist, its value must be independent of the manner in which $$\delta z = \delta x + i \delta y$$ goes to zero. That is, we must get the same value for the derivative regardless of the direction along which we approach the point $$z$$. This insight generated the Cauchy-Riemann conditions.
 
 2. If the derivative exists in a region, the function is said to be analytic in that region. The integral of an analytic function around a closed curve is zero. This is analogous to path independence for potential energy: the work done in moving an object around on a closed path in a conservative field is zero.
@@ -308,15 +308,15 @@ to exist, its value must be independent of the manner in which $$\delta z = \del
 \\[
     f(z) = \sum_{n=-\infty}^\infty a_n (z - z_0)^n
 \\]
-If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z_0$$, all coefficients $$a_n$$ in its Laurent series vanish for $$n < -1$$. 
+If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z_0$$, all coefficients $$a_n$$ in its Laurent series vanish for $$n < -1$$.
 
-6. Integrating around a pole at $$z_0$$ for which we can generate a Laurent series yields zero for *every* term in the series except the term $$a_{-1} (z-z_0)^{-1}$$, which yields $$2 \pi i a_{-1}$$. 
+6. Integrating around a pole at $$z_0$$ for which we can generate a Laurent series yields zero for *every* term in the series except the term $$a_{-1} (z-z_0)^{-1}$$, which yields $$2 \pi i a_{-1}$$.
 
 7. The **residue theorem** says that the integral around a closed contour of a function that is analytic on and in the contour *except* at a finite number $$N$$ of poles in the interior of the contour is equal to $$2 \pi i$$ times the sum of the residues at the $$N$$ poles.
 
 ## Problems
 
-1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$. 
+1. Use Euler's identity to work out an expression for $$\sin^3 \theta$$ in terms of $$\sin 3\theta$$ and $$\sin\theta$$. Be sure to check your expression for a few values of $$\theta$$.
 
 2. Simplify $$\cos i z$$ for $$z = x + i y$$.
 
