@@ -1,14 +1,12 @@
 {:menu LA}
 
-
 # Numerical Linear Algebra with NumPy
-
 
 * toc
 {:toc}
 
-+ [Back to Linear Algebra](LA-LinearAlgebra.md)
-+ [Introduction to NumPy](SW-NumPy.md)
+- [Back to Linear Algebra](LA-LinearAlgebra.md)
+- [Introduction to NumPy](SW-NumPy.md)
 
 ## Matrix Multiplication
 
@@ -169,9 +167,44 @@ array([[ 1.,  2.,  3.,  4.],
 
 What is this good for? I'll offer an example from image processing inspired by [this page](https://www.geeksforgeeks.org/machine-learning/singular-value-decomposition-svd/).
 
-As the matrix to analyze via singular value decomposition, we will use the grayscale values of
+As the matrix to analyze via singular value decomposition, we will use the grayscale values of this image of Harvey Seeley Mudd shown in Figure 1.
 
 <p class="center" markdown="0">
-  <img src="figs/Harvey-Mudd.jpg" style="width: 400px;" alt="Harvey Seeley Mudd">
+  <img src="figs/Harvey-Mudd.jpg" style="width: 200px;" alt="Harvey Seeley Mudd">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$, using a sum through $$N=999$$. The peak does indeed seem consistent with $$\frac{2}{\pi} \text{Si}(\pi) \approx 1.179$$. </p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Mining engineer and philanthropist Harvey Seeley Mudd.</p>
+
+~~~~ python
+harvey = plt.imread('Harvey-Mudd.jpg') # this is an RGB image
+harvey = harvey[:,:,0] # convert to grayscale
+from scipy.linalg import svd
+U, S, V_T = svd(harvey, full_matrices=False)
+S = np.diag(S)
+fig, ax = plt.subplots(5, 2, figsize=(8, 20))
+curr_fig = 0
+for r in [5, 10, 20, 40, 80]:
+    harvey_approx = U[:, :r] @ S[0:r, :r] @ V_T[:r, :]
+    ax[curr_fig][0].imshow(harvey_approx, cmap='gray')
+    ax[curr_fig][0].set_title(r"$$k = %d$$" % r)
+    ax[curr_fig, 0].axis('off')
+    ax[curr_fig][1].imshow(harvey, cmap='gray')
+    ax[curr_fig][1].set_title("Original")
+    ax[curr_fig, 1].axis('off')
+    curr_fig += 1
+~~~~
+
+<p class="center" markdown="0">
+  <img src="figs/mudd-5.webp" style="width: 200px;" alt="">
+
+  <img src="figs/mudd-10.webp" style="width: 200px;" alt="">
+
+  <img src="figs/mudd-20.webp" style="width: 200px;" alt="">
+  <br />
+  <img src="figs/mudd-40.webp" style="width: 200px;" alt="">
+
+  <img src="figs/mudd-80.webp" style="width: 200px;" alt="">
+
+  <img src="figs/Harvey-Mudd.jpg" style="width: 200px;" alt="">
+
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
