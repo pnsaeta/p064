@@ -81,3 +81,5 @@ Or another:
   &= \frac18 \cos 4\theta + \frac12 \cos 2\theta + \frac38
 \end{align}
 You can confirm the plausibility of this last identity by checking out $$\theta \in \{0, \frac\pi2, \pi\}$$.
+
+Next: [Fourier Series](FO-FourierSeries.md)
