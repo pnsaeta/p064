@@ -13,12 +13,12 @@
 Let’s practice with Dirac notation. Recall that if $$\hat{A}\ket{a} = \ket{b}$$, then $$\bra{a} \hat{A}^{\dagger} = \bra{b}$$. That is, the adjoint operator $$\hat{A}^{\dagger}$$ turns the bra of $$\ket{a}$$ into the bra of $$\ket{b}$$. Is this consistent with matrix operations?
 
 - We can represent $$\hat{A}$$ by a square matrix with elements $$A_{ij}: \quad b_i = \sum_{j=1}^N A_{ij} a_j$$
-- Taking the complex conjugate of this equation gives 
+- Taking the complex conjugate of this equation gives
 \begin{equation}\label{eq:HO1}
-  b_j^* = \sum_{i=1}^N A_{ji}^* a_i^* = \sum_{i=1}^N a_i^* A_{ij}
-\end{equation} 
+  b_i^* = \sum_{j=1}^N A_{ij}^* a_j^* = \sum_{j=1}^N a_j^* A_{ji}
+\end{equation}
    where I have used the definition that the matrix of the adjoint operation is the conjugate transpose of the operator matrix.
-- Since Eq.&nbsp;(\ref{eq:HO1}) expresses the multiplication of a row vector, $$(a_1^*, \ldots, a_N^*)$$ by matrix $$A_{ji}$$
+- Since Eq.&nbsp;(\ref{eq:HO1}) expresses the multiplication of a row vector, $$(a_1^*, \ldots, a_N^*)$$ by matrix $$A_{ji}$$, it yields the row vector $$(b_1^*, b_2^*, \ldots)$$, which is the conjugate transpose of the original column vector $$b_i$$.
 
 
 
@@ -38,7 +38,7 @@ A similarity transformation preserves the determinant of a matrix.
 
 ## Eigenvalues and Eigenvectors
 
-An $$n$$-dimensional square matrix $$\mat{A}$$ transforms a vector in $$\mathbb{R}^n$$ to another vector in $$\mathbb{R}^n$$; in general, the transformed vector points in a different direction than the original vector and has different magnitude. However, an eigenvector satisfies
+An $$n$$-dimensional square matrix $$\mat{A}$$ transforms a vector in $$\mathbb{R}^n$$ to another vector in $$\mathbb{R}^n$$; in general, the transformed vector points in a different direction from the original vector and has different magnitude. However, an eigenvector satisfies
 \\[
     \mat{A} \vdot \vb{x} = \lambda \vb{x}
 \\]
@@ -51,21 +51,21 @@ Certain kinds of matrices are guaranteed to be diagonalizable and to have a set 
 
 Eigenvectors corresponding to different eigenvalues are guaranteed to be orthogonal:
 \begin{align}
-  \mat{H}\vdot \vb{x}_1 &= \lambda_1 \vb{x_1} &\qquad \vb{x}_2\vdot\mat{H}\vdot\vb{x}_1 &= \lambda_1 \vb{x}_2 \vdot \vb{x}_1 \\\ 
-  \mat{H}\vdot \vb{x}_2 &= \lambda_2 \vb{x_2} &\qquad \vb{x_1}\vdot\mat{H}\vdot\vb{x_2} &= \lambda_2 \vb{x}_1 \vdot \vb{x}_2
+  \mat{M}\vdot \vb{x}_1 &= \lambda_1 \vb{x_1} &\qquad \vb{x}_2\vdot\mat{M}\vdot\vb{x}_1 &= \lambda_1 \vb{x}_2 \vdot \vb{x}_1 \\\
+  \mat{M}\vdot \vb{x}_2 &= \lambda_2 \vb{x_2} &\qquad \vb{x_1}\vdot\mat{M}\vdot\vb{x_2} &= \lambda_2 \vb{x}_1 \vdot \vb{x}_2
 \end{align}
-If $$\mat{H}$$ is a real symmetric matrix, then subtracting the two rows gives
+If $$\mat{M}$$ is a real symmetric matrix, then subtracting the two rows gives
 \\[
-    \vb{x}_2\vdot\mat{H}\vdot\vb{x}_1 - \vb{x_1}\vdot\mat{H}\vdot\vb{x_2} = (\lambda_1-\lambda_2) \vb{x}_1 \vdot \vb{x_2}
+    \vb{x}_2\vdot\mat{M}\vdot\vb{x}_1 - \vb{x_1}\vdot\mat{M}\vdot\vb{x_2} = (\lambda_1-\lambda_2) \vb{x}_1 \vdot \vb{x_2}
 \\]
-But $$(\vb{x}_2 \vdot \mat{H} \vdot \vb{x}_1)^{\rm T} = \vb{x}_1 \vdot \mat{H}^{\rm T} \vdot \vb{x}_2 =
- \vb{x}_1 \vdot \mat{H} \vdot \vb{x}_2 $$ since $$\mat{H}$$ is symmetric. Therefore, the left-hand side vanishes, and since $$\lambda_1 \ne \lambda_2$$, it must be true that $$\vb{x}_1\vdot\vb{x}_2 = 0$$. So, *eigenvectors corresponding to distinct eigenvalues are orthogonal*. The proof for Hermitian matrices is similar.
+But $$(\vb{x}_2 \vdot \mat{M} \vdot \vb{x}_1)^{\rm T} = \vb{x}_1 \vdot \mat{M}^{\rm T} \vdot \vb{x}_2 =
+ \vb{x}_1 \vdot \mat{M} \vdot \vb{x}_2 $$ since $$\mat{M}$$ is symmetric. Therefore, the left-hand side vanishes, and since $$\lambda_1 \ne \lambda_2$$, it must be true that $$\vb{x}_1\vdot\vb{x}_2 = 0$$. So, *eigenvectors corresponding to distinct eigenvalues are orthogonal*. The proof for Hermitian matrices is similar.
 
 Since a scalar multiple of an eigenvector is also an eigenvector, it is possible to find a set of orthonormal eigenvectors that span the vector space of real symmetric matrices and also of Hermitian matrices.
 
 ## Positive Definite Matrices
 
-A symmetric square matrix $$\mat{A}$$ is **positive definite** if 
+A symmetric square matrix $$\mat{A}$$ is **positive definite** if
 \\[
     \vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x} \ge 0
 \\]
@@ -86,7 +86,7 @@ What is a physical example of a positive-definite matrix? Consider the kinetic e
     \vb{v}\_i = \vb*{\omega}\cross\vb{r}\_i
 \\]
 
-The kinetic energy of a mass $$m_i$$ at $$\vb{r}_i$$ is 
+The kinetic energy of a mass $$m_i$$ at $$\vb{r}_i$$ is
 \\[
     K = \frac12 m\_i \vb{v}\_i \vdot \vb{v}\_i =
      \frac12 m\_i (\vb\*{\omega}\cross\vb{r}\_i) \vdot
@@ -102,6 +102,7 @@ The magnitude of the cross product with $$\vb*{\omega}$$ is $$\omega r_i^{\perp}
     = \omega^2 r\_i^2 - (\vb*{\omega}\vdot\vb{r}\_i)^2
     = \vb\*{\omega}^{\rm T} \vdot (r\_i^2 \mat{I} - \vb{r}\_i \vdot \vb{r}\_i^{\rm T}) \vdot \vb\*{\omega}
 \\]
+(Note the [outer product](LA-LinearAlgebra.html#outer-products) in the final expression.)
 Therefore, we can express the kinetic energy of the rotating rigid body as
 \\[
     K = \frac12
@@ -114,9 +115,9 @@ Therefore, we can express the kinetic energy of the rotating rigid body as
     \sum\_i
     m\_i
     \begin{pmatrix}
-      r\_i^2 - x\_i^2 & -x\_i y\_i & -x\_i z\_i \\\ 
-      -y\_i x\_i & r\_i^2 - y\_i^2 & -y\_i z\_i \\\ 
-      -z\_i x\_i & -z\_i y\_i  & r\_i^2 - z\_i^2 
+      r\_i^2 - x\_i^2 & -x\_i y\_i & -x\_i z\_i \\\
+      -y\_i x\_i & r\_i^2 - y\_i^2 & -y\_i z\_i \\\
+      -z\_i x\_i & -z\_i y\_i  & r\_i^2 - z\_i^2
     \end{pmatrix}
     ]
     }\_{\mat{J}}
@@ -127,5 +128,5 @@ Therefore, we can express the kinetic energy of the rotating rigid body as
 \\]
 where $$\mat{J}$$ represents the **inertia tensor** of the rigid body. Since the contribution to the kinetic energy of each mass point $$m_i$$ is nonnegative, the symmetric matrix of the inertia tensor is positive definite (despite the impressive number of evident minus signs!).
 
-The structure of the inertia tensor makes it possible to show that we can always find a body-centered coordinate system in which the matrix is diagonal; because it is also positive definite, the eigenvalues along the diagonal must all be nonnegative. 
+The structure of the inertia tensor makes it possible to show that we can always find a body-centered coordinate system in which the matrix is diagonal; because it is also positive definite, the eigenvalues along the diagonal must all be nonnegative.
 
