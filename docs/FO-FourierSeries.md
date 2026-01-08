@@ -30,17 +30,23 @@ for all $$t$$. You are already familiar with a large class of periodic functions
 
 ### A Nifty Result
 
-The most memorable "little trick" I learned in my first college math class is how to integrate $$\sin^2\theta$$ and $$\cos^2\theta$$ over convenient intervals. Of course, the general method that always works is to use the identities
+Before we attack the general theory, I have to relate the most memorable "little trick" I learned in my first college math class, which is how to integrate $$\sin^2\theta$$ and $$\cos^2\theta$$ over convenient intervals. Of course, the general method that always works is to use the identities
 \\[
     \sin^2\theta = \frac{1 - \cos2\theta}{2} \qqtext{or}
     \cos^2\theta = \frac{1 + \cos 2\theta}{2}
 \\]
-and actually perform the integration.
+and actually perform the integration. However, as illustrated in Fig.&nbsp;2, if the interval over which you integrate has symmetry such that $$\sin^2\theta$$ and $$\cos^2\theta$$ have the same area, then by the Pythagorean theorem, each must average to 1/2.
+Therefore,
+\begin{align}
+  \int_0^T \sin^2 \left(\frac{2\pi t}{T}\right) \dd{t} &= \frac{T}{2}  \notag \\\
+  \int_0^T \cos^2 \left(\frac{2\pi t}{T}\right) \dd{t} &= \frac{T}{2}  \notag
+\end{align}
 
+Easy, peasy!!
 <p class="center" markdown="0">
   <img src="figs/nifty.webp" style="width: 600px;" alt="Nifty illustration of how to integrate the square of a trig function">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Over the interval shaded in the figure, the area under the curves for $$\sin^2\theta$$ and $$\cos^2\theta$$ are the same, and since they sum to 1, each has the average value of 1/2.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Over the interval shaded in the figure, the area under the curves for $$\sin^2\theta$$ and $$\cos^2\theta$$ are the same, and since they sum to 1 by the Pythagorean theorem, $$\sin^2\theta + \cos^2\theta = 1$$, each has the average value of 1/2.</p>
 
 
 ## Series Representation of Periodic Functions

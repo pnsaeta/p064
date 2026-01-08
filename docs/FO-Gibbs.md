@@ -6,7 +6,7 @@
 * toc
 {:toc}
 
-We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a square wave overshot the mark at the point of discontinuity at $$t = 0$$ where the square wave jumps from $$-1$$ to $$1$$, as illustrated in Fig.&nbsp;1.
+We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a square wave overshot the mark at the point of discontinuity at $$t = 0$$ where the square wave jumps from $$-1$$ to $$1$$, as illustrated in &nbsp;1.
 
 <p class="center" markdown="0">
   <img src="figs/square-near-zero.webp" style="width: 500px;" alt="Fourier series for a square wave near a discontinuity">
@@ -65,7 +65,7 @@ The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1
 
 ## Integrating to get $$g_N(t_\text{peak})$$
 
-We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$ to see how large the overshoot goes. 
+We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$ to see how large the overshoot goes.
 \\[
     g_N(t_\text{peak}) = \int_0^{t_\text{peak}} \frac{4}{T} \frac{\sin 2(N+1)\omega t}{\sin\omega t}\dd{t}
     = \frac{4}{T} \int_0^{x_\text{peak}} \frac{\sin 2(N+1)x}{\sin x} \frac{\dd{x}}{\omega}
@@ -78,13 +78,13 @@ We can rewrite this a bit by letting $$y = 2(N+1)x$$, so that
 \begin{equation}\label{eq:gNt}
   g_N(t_\text{peak}) \approx \frac{2}{\pi} \int_0^{\pi} \frac{\sin y}{y}\dd{y}
 \end{equation}
-Note that all dependence on $$N$$ has dropped out, provided that $$N$$ is large enough to allow the denominator to be approximated as $$x$$. 
+Note that all dependence on $$N$$ has dropped out, provided that $$N$$ is large enough to allow the denominator to be approximated as $$x$$.
 
 I can't do this integral analytically, although the *sine integral* is defined by
 \\[
     \mathrm{Si}(x) \equiv \int_0^x \frac{\sin t}{t}\dd{t}
 \\]
-in terms of which, 
+in terms of which,
 \\[
     g_\text{peak} \approx \frac{2}{\pi} \mathrm{Si}(\pi)
 \\]

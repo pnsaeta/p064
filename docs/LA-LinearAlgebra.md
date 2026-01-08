@@ -201,3 +201,5 @@ The second is to find the solutions to
   \mat{A} \vdot \vb{x} = \lambda \vb{x}
 \end{equation}
 Such solutions $$\vb{x}$$ are called **eigenvectors** and the corresponding values of $$\lambda$$ are the **eigenvalues**. Because Eq.&nbsp;(\ref{eq:eigenvector}) is homogeneous in $$\vb{x}$$, eigenvectors may be arbitrarily scaled. However, eigenvalues $$\lambda$$ are uniquely determined by the matrix $$\mat{A}$$.
+
+Next: [Norms](LA-Norms.md)
