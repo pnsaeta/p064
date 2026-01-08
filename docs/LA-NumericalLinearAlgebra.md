@@ -64,7 +64,7 @@ np.linalg.inv(m)
 array([[-2. ,  1. ],
        [ 1.5, -0.5]])
 ~~~~
-    
+
 You can check that the inverse has been computed correctly (up to numerical rounding error):
 
 ~~~~ python
@@ -98,11 +98,11 @@ evals[0] * evecs[:,0], m @ evecs[:,0]
 ## Cholesky Decomposition
 
 The Cholesky decomposition of a positive-definite symmetric (Hermitian)
-square matrix factors 
+square matrix factors
 the matrix into a lower-triangular matrix $$\mat{L}$$ such that the matrix
 product $$\mat{L} \vdot \mat{L}^{\rm H}$$ gives the original matrix, and
-where $$^{\rm H}$$ denotes the Hermitian conjugate (the conjugate transpose). 
-For a real matrix, it is just the transpose. 
+where $$^{\rm H}$$ denotes the Hermitian conjugate (the conjugate transpose).
+For a real matrix, it is just the transpose.
 
 ### Example
 
@@ -140,7 +140,7 @@ According to *Numerical Recipes*, for matrices admitting a Cholesky decompositio
 The singular value decomposition of a rectangular matrix $$\mat{M}$$ takes the form
 \begin{equation}
   \mbox{\Large
-  $$\underbrace{\mat{M}}_{m\times n} = \underbrace{\mat{u}}_{m\times m} \vdot 
+  $$\underbrace{\mat{M}}_{m\times n} = \underbrace{\mat{u}}_{m\times m} \vdot
   \underbrace{\mat{S}}_{m\times n} \vdot \underbrace{\mat{v}^{\rm H}}_{n\times n} $$
   }
 \end{equation}
@@ -166,3 +166,12 @@ u @ np.diag(s) @ vh
 array([[ 1.,  2.,  3.,  4.],
        [-4.,  2.,  7.,  8.]])
 ~~~~
+
+What is this good for? I'll offer an example from image processing inspired by [this page](https://www.geeksforgeeks.org/machine-learning/singular-value-decomposition-svd/).
+
+As the matrix to analyze via singular value decomposition, we will use the grayscale values of
+
+<p class="center" markdown="0">
+  <img src="figs/Harvey-Mudd.jpg" style="width: 400px;" alt="Harvey Seeley Mudd">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$, using a sum through $$N=999$$. The peak does indeed seem consistent with $$\frac{2}{\pi} \text{Si}(\pi) \approx 1.179$$. </p>

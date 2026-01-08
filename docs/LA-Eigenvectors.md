@@ -12,7 +12,7 @@ Consider the matrix
       1 & 1 & 1 \\\ 1 & 1 & 1 \\\ 1 & 1 & 1
     \end{pmatrix}
 \\]
-which consists of three copies of the same column vector. Clearly, the rows of this matrix are *not* linearly independent; if we were to attempt to reduce $$\mat{A}$$ to $$\mat{U}$$ form, we would get
+which consists of three copies of the same column vector. Clearly, the rows of this matrix are *not* linearly independent; if we were to attempt to reduce $$\mat{A}$$ to upper-triangular form, we would get
 \\[
     \mat{U} =  \begin{pmatrix}
       1 & 1 & 1 \\\ 0 & 0 & 0 \\\ 0 & 0 & 0
@@ -27,7 +27,7 @@ Only the first column has a pivot; the second and third columns do not. The matr
     x \\\ y \\\ z
     \end{pmatrix} = 0
 \\]
-which requires that 
+which requires that
 \begin{equation}\label{eq:constraint}
     x = -(y + z)
 \end{equation}
@@ -45,10 +45,10 @@ For a nontrivial value of $$\vb{x}$$ to satisfy this equation, the matrix $$\mat
 \\]
 Expanding in minors gives
 \begin{align}
-    (1-\lambda)[(1-\lambda)^2 - 1] + 1 [1 - (1-\lambda)] + 1 [1 - (1-\lambda)] &= 0 \notag \\\ 
-    (1-\lambda)(-2\lambda + \lambda^2) + 2 \lambda &= 0 \notag \\\ 
-    \lambda \qty[(1-\lambda)(\lambda-2)+2] &= 0 \notag \\\ 
-    \lambda \qty[-\lambda^2 +3\lambda -2 + 2] &= 0 \notag \\\ 
+    (1-\lambda)[(1-\lambda)^2 - 1] + 1 [1 - (1-\lambda)] + 1 [1 - (1-\lambda)] &= 0 \notag \\\
+    (1-\lambda)(-2\lambda + \lambda^2) + 2 \lambda &= 0 \notag \\\
+    \lambda \qty[(1-\lambda)(\lambda-2)+2] &= 0 \notag \\\
+    \lambda \qty[-\lambda^2 +3\lambda -2 + 2] &= 0 \notag \\\
     \lambda^2 (3 - \lambda)  &= 0 \notag
 \end{align}
 Two eigenvalues are 0, and a third is 3. What are the corresponding eigenvectors? I'll start with $$\lambda = 3$$ and substitute into $$\mat{A} - \lambda\mat{I}$$ to get
@@ -59,7 +59,7 @@ Two eigenvalues are 0, and a third is 3. What are the corresponding eigenvectors
     x \\\ y \\\ z
     \end{pmatrix} = 0
 \\]
-which is clearly satisfied by $$x=y=z$$ or 
+which is clearly satisfied by $$x=y=z$$ or
 \\[
     \vb{x}\_{1} = \begin{pmatrix}
     1 \\\ 1 \\\ 1
@@ -68,10 +68,12 @@ which is clearly satisfied by $$x=y=z$$ or
 
 What about for $$\lambda = 0$$? If we successively choose $$y = 0$$ and $$z = 0$$, then we get the two eigenvectors
 \\[
-  \vb{x}\_2 = \begin{pmatrix} 1 \\\ 0 \\\ -1 \end{pmatrix}  
+  \vb{x}\_2 = \begin{pmatrix} 1 \\\ 0 \\\ -1 \end{pmatrix}
   \qqtext{and}
-  \vb{x}\_3 = \begin{pmatrix} 1 \\\ -1 \\\ 0 \end{pmatrix}  
+  \vb{x}\_3 = \begin{pmatrix} 1 \\\ -1 \\\ 0 \end{pmatrix}
 \\]
+
+These three eigenvectors span the three-dimensional space, although they are not all orthogonal, since $$\vb{x}_2\vdot\vb{x}_3 = 1$$. Can you find a different $$\vb{x}_3$$ that is orthogonal to the other two basis vectors?
 
 ## Gram-Schmidt Orthogonalization
 

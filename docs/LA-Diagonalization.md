@@ -128,5 +128,6 @@ Therefore, we can express the kinetic energy of the rotating rigid body as
 \\]
 where $$\mat{J}$$ represents the **inertia tensor** of the rigid body. Since the contribution to the kinetic energy of each mass point $$m_i$$ is nonnegative, the symmetric matrix of the inertia tensor is positive definite (despite the impressive number of evident minus signs!).
 
-The structure of the inertia tensor makes it possible to show that we can always find a body-centered coordinate system in which the matrix is diagonal; because it is also positive definite, the eigenvalues along the diagonal must all be nonnegative.
+The structure of the inertia tensor makes it possible to show that we can always find a body-centered coordinate system in which the matrix is diagonal; because it is also positive definite, the eigenvalues along the diagonal must all be nonnegative. The axes of such a coordinate system are called **principal axes**.
 
+Next: [Eigenvalues and Eigenvectors](LA-Eigenvectors.md)
