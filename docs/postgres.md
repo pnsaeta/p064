@@ -201,4 +201,3 @@ postgres=#
 rm -rf '/var/lib/postgresql/10/main'
 ~~~~
 
- 

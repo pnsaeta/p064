@@ -1,7 +1,8 @@
 +	FO-Intro.md	Complex Numbers and All Things Fourier
++	FO-ComplexVariables.md	Complex Variables
 +	FO-FourierSeries.md	Fourier Series
 +	FO-Gibbs.md	The Gibbs Phenomenon
-+	FO-ComplexVariables.md	Complex Variables
++	FO-ComplexCalculus.md	Functions of Complex Variables
 +	FO-ContourIntegration.md	Contour Integration
 +	FO-FourierTransforms.md	Fourier Transforms
 +	FO-Delta.md	The Dirac Delta Function

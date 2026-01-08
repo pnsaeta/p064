@@ -53,7 +53,7 @@ If the differential equation you seek to solve can be written in the form
 \begin{equation}\label{eq:separable}
   a(y) y' + b(x) = 0
 \end{equation}
-we can effectively separate the variables as follows. If $$A'(y) = a(y)$$, then 
+we can effectively separate the variables as follows. If $$A'(y) = a(y)$$, then
 \begin{equation}\label{eq:dy}
   \dv{[A(y)]}{x} = \dv{A}{y} \dv{y}{x} = a(y) y'
 \end{equation}
@@ -66,7 +66,7 @@ by the chain rule. So,
 for an integration constant $$C$$. Note that this is the fussy mathematician's way. Physicists are happy proceeding as follows:
 \begin{align}
   a(y) \dd{y} &= -b(x)\dd{x}  \notag
-  \\\ 
+  \\\
   \int a(y) \dd{y} &= \int -b(x)\dd{x} + C
 \end{align}
 Simple. The mathematicians have a point that you must be careful about "tearing apart a derivative" this way if you think it establishes a pattern that you can do the same thing with second-order derivatives, which you cannot!
