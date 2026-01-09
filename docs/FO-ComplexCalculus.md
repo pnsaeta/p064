@@ -84,7 +84,7 @@ and to use induction to show that
     \dv{(z^n)}{z} = n z^{n-1}
 \\]
 
-*Standard differentiable functions of a single real variable $$x$$ with which you are familiar are generally also differentiable on replacing the variable with a complex variable $$z = x + iy$$: e.g., trigonometric functions, exponential functions, powers, polynomials, logarithms.*
+> Standard differentiable functions of a single real variable $$x$$ with which you are familiar are generally also differentiable on replacing the variable with a complex variable $$z = x + iy$$: e.g., trigonometric functions, exponential functions, powers, polynomials, logarithms.
 
 ### A Non-differentiable Function of a Complex Variable
 
@@ -92,7 +92,7 @@ However, it is possible to produce a very simple function that does not have a d
 \\[
     f(z) = z^* = x - i y
 \\]
-so that $$u(x,y) = x$$ and $$v(x,y) = -y$$. This function satisfies Eq. (\ref{eq:CR2}), but fails to satisfy (\ref{eq:CR1}), so its derivative does not exist.
+so that $$u(x,y) = x$$ and $$v(x,y) = -y$$. This function satisfies the second equality of Eq.&nbsp;(\ref{eq:CR3}), but fails to satisfy the first equality, so its derivative does not exist.
 
 The Cauchy-Riemann conditions are sufficient to ensure that we get the same limit for the derivative regardless of the direction along which we let $$\delta z \to 0$$. You may readily verify that if they are satisfied for two functions $$f(z)$$ and $$g(z)$$, then they are satisfied by $$(f+g)(z)$$ and $$(f-g)(z)$$; and you may verify that they are satisfied for $$z^n$$ for $$n \in \mathbb{Z}$$.
 
@@ -102,7 +102,12 @@ The Cauchy-Riemann conditions describe the coordination necessary between the re
 
 More formally, **Cauchy's integral theorem** holds that the path integral *vanishes* around any contour within a simply connected region in which the Cauchy-Riemann conditions hold. Crudely speaking, a **simply connected** region has no holes. Any closed path within a simply connected region can be shrunk continuously to a point without having left the region.
 
-Before proceeding to a proof, let us consider the integral of $$z^n$$ around a small circle of radius $$r$$ around the origin. Along that circle, we have $$z = r e^{i\theta}$$ and $$\dd{z} = r i e^{i\theta}\dd{\theta}$$,  so the integral is
+<p class="center" markdown="0">
+  <img src="figs/pole.webp" style="width: 400px;" alt="Integrating around a pole">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating $$f(z) = z^n$$ around a circle centered on the origin.</p>
+
+Before proceeding to a proof, let us consider the integral of $$z^n$$ around a small circle of radius $$r$$ around the origin, as illustrated in Fig.&nbsp;2. Along that circle, we have $$z = r e^{i\theta}$$ and $$\dd{z} = r i e^{i\theta}\dd{\theta}$$,  so the integral is
 \\[
     \oint z^n\dd{z} = \int_0^{2\pi} r^n e^{i n \theta} \, r i e^{i\theta}\dd{\theta}
     = i r^{n+1} \left. \frac{e^{i(n+1)\theta}}{i(n+1)}\right|_0^{2\pi}
