@@ -125,7 +125,7 @@ We can evaluate this integral via contour integration if we can identify a path 
     h_{\text{semicircle}} = \int_0^\pi \frac{e^{-i T R(\cos\phi + i\sin\phi)}}{Re^{i\phi}} \; R i e^{i\phi}\dd{\phi}
     = \int_0^\pi e^{TR\sin\phi} e^{-iTR\cos\phi} i\dd{\phi}
 \\]
-In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term goes exponentially to zero along the path, while the second one just oscillates extremely rapidly in phase. Therefore, as $$R \to \infty$$, $$h_{\text{semicircle}} \to 0$$.
+In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term goes exponentially to zero along the path if $$T < 0$$, while the second one just oscillates extremely rapidly in phase. Therefore, as $$R \to \infty$$, $$h_{\text{semicircle}} \to 0$$.
 
 <p class="center" markdown="0">
   <img src="figs/pvalue.webp" style="width: 400px;">
@@ -133,19 +133,18 @@ In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term
 <p class="icap" markdown="1"><a name="avoidance">Figure 2</a> — The pole at the origin lies directly on the contour. We consider distorting the contour in a tiny semicircle in the neighborhood of the origin, as suggested in the figure.</p>
 
 To avoid ploughing through the pole at the origin, we have to make a slight detour around $$\omega = 0$$.
-Let us suppose for the moment that $$T$$ is positive (we'll worry about negative $$T$$ momentarily). When $$T > 0$$, we can close the contour in the upper half-plane, as we have argued above. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
+Let us suppose for the moment that $$T$$ is negative (we'll worry about positive $$T$$ momentarily). When $$T < 0$$, we can close the contour in the upper half-plane, as we have argued above. So, we contemplate a slightly distorted contour, as illustrated in <a href="#avoidance">Figure&nbsp;2</a>, in which we make a slight detour to avoid the pole at the origin. In making this detour, we have indeed altered the value of the integral, but we can readily compute by how much. Along the tiny semicircle at radius $$\epsilon$$, $$\omega = \epsilon e^{i\phi}$$ and the path integral from $$\phi=\pi$$ to $$\phi=0$$ evaluates to
 \begin{equation}\label{eq:detour}
-  \int \frac{e^{i\omega T}}{\omega} \dd{\omega} = \int_\pi^0 \frac{e^{i\omega T}}{\epsilon e^{i\phi}} i\epsilon e^{i\phi}\dd{\phi} = -\int_0^\pi e^{i \epsilon T(\cos\phi + i\sin\phi)} i \dd{\phi}
+  \int \frac{e^{-i\omega T}}{\omega} \dd{\omega} = \int_\pi^0 \frac{e^{-i\omega T}}{\epsilon e^{i\phi}} i\epsilon e^{i\phi}\dd{\phi} = -\int_0^\pi e^{-i \epsilon T(\cos\phi + i\sin\phi)} i \dd{\phi}
 \end{equation}
-In the limit as $$\epsilon \to 0$$, the integral is equal to $$-i\pi$$. That is, **it is equal to $$-\frac12$$ of the value in integrating entirely around the pole**. It is negative, because we are going around the pole backwards, and it is half because we only go halfway around. Since the closed contour encloses no poles, the value of the integral on the contour is zero, but we must subtract the contribution we introduced by distorting the contour. So, we get that
+In the limit as $$\epsilon \to 0$$, the integrand becomes $$i$$ and the integral is equal to $$-i\pi$$. That is, **it is equal to $$-\frac12$$ of the value we would get on integrating entirely around the pole**. It is negative, because we are going around the pole backwards, and it is half because we only go halfway around. Since the closed contour encloses no poles, the value of the integral on the contour is zero, but we must subtract the contribution we introduced by distorting the contour. So, we get that
 \\[
-    h(T) = \frac{1}{2\pi i} i\pi = \frac12 \qqtext{for} T > 0
+    h(T) = \frac{1}{2\pi i} i\pi = \frac12 \qqtext{for} T < 0
 \\]
-
 
 > Of course, we could have distorted the contour to go around the pole in the positive direction by making a little semicircle *underneath* the pole, which would then have rendered the pole entirely in the contour. However, we then need to subtract the contribution we get by integrating around the tiny semicircle, which would be $$\frac{1}{2\pi i} (i\pi) = \frac12$$, from the full value of the pole, which is 1, which gives the same final answer of $$h(T) = \frac12$$ for $$T > 0$$.
 
-You can readily show that if $$T < 0$$, we must close in the lower half-plane, meaning that we need to traverse the contour in the negative direction. Of course, the pole has the same residue, so we get $$h(T) = -\frac12$$ in this case.
+You can readily show that if $$T > 0$$, we must close in the lower half-plane (LHP), meaning that we need to traverse the contour in the negative direction. Of course, the pole has the same residue, so we get $$h(T) = -\frac12$$ in this case.
 
 Combining these two results, we get
 \\[
@@ -170,19 +169,19 @@ Most Fourier transforms in frequency don't look much like the temporal function 
 \end{equation}
 as we derived in class. The Fourier transform of Eq.&nbsp;(\ref{eq:gaussian}) is
 \begin{equation}\label{eq:ftg}
-  \tilde{f}(\omega) = \int_{-\infty}^{\infty} e^{-i\omega t} e^{-t^2/\tau^2}\dd{t}
+  \tilde{f}(\omega) = \int_{-\infty}^{\infty} e^{i\omega t} e^{-t^2/\tau^2}\dd{t}
 \end{equation}
-which means that $$\alpha = 1/\tau^2$$ and $$\beta = i\omega$$. Using these values in Eq.&nbsp;(\ref{eq:gaussian}), we get
+which means that $$\alpha = 1/\tau^2$$ and $$\beta = -i\omega$$. Using these values in Eq.&nbsp;(\ref{eq:gaussian}), we get
 \begin{equation}\label{eq:ftga}
   \tilde{f}(\omega) = \tau\sqrt{\pi} e^{-\omega^2 \tau^2/4}
 \end{equation}
-*which is also a gaussian*. Notice that the Fourier transform of a function of time has dimensions of time, as is clear from the definition of the transform.
+**which is also a gaussian**. Notice that the Fourier transform of a function of time has dimensions of time, as is clear from the definition of the transform.
 
 A classical simple harmonic oscillator has the energy equation
 \\[
     E = \frac{k}{2} x^2 + \frac{1}{2m} p^2
 \\]
-which suggests that position $$x$$ and momentum $$p$$ play identical roles in determining the energy. When you study the quantum simple harmonic oscillator in Physics 52 and later in Physics 116, you will see that the ground state of a simple harmonic oscillator is indeed a gaussian when "projected" into position space (meaning as a function of $$x$$) or when projected into momentum space (as a function of $$p = kx$$). You may suspect that the symmetry of the roles played by position and momentum in the energy of a harmonic oscillator would make **all** quantum mechanical solutions (eigenfunctions) of the harmonic oscillator potential have the same form in positions space (as functions of $$x$$) and in momentum space; you will have a chance to confirm an example in homework.
+which suggests that position $$x$$ and momentum $$p$$ play identical roles in determining the energy. When you study the quantum simple harmonic oscillator in Physics 52 and later in Physics 116, you will see that the ground state of a simple harmonic oscillator is indeed a gaussian when "projected" into position space (meaning as a function of $$x$$) or when projected into momentum space (as a function of $$p = \hbar k$$). You may suspect that the symmetry of the roles played by position and momentum in the energy of a harmonic oscillator would make **all** quantum mechanical solutions (eigenfunctions) of the harmonic oscillator potential have the same form in positions space (as functions of $$x$$) and in momentum space; you will have a chance to confirm an example in homework.
 
 Another example function that arises in physics with this property is the hyperbolic secant, which often describes the temporal profile of an ultrashort laser pulse,
 \\[
@@ -195,7 +194,15 @@ The **convolution** of functions $$f(t)$$ and $$g(t)$$ is defined by
 \begin{equation}\label{eq:convolution}
    (f * g)(t) = \int_{-\infty}^{\infty} g(t') f(t - t') \dd{t'}
 \end{equation}
-and represents how one signal gets smeared out by another (such as a system response function). The convolution of two functions has a particularly straightforward representation in terms of their Fourier transforms. Given
+and represents how one signal gets smeared out by another (such as a system response function).
+
+<p class="center" markdown="0">
+  <img src="figs/convo1.webp" style="width: 400px;" alt="Example convolution">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — ?</p>
+
+
+The convolution of two functions has a particularly straightforward representation in terms of their Fourier transforms. Given
 \begin{align}
   \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{-i\omega t} \dd{t}  \notag \\\
   \tilde{g}(\omega) &= \int_{-\infty}^\infty g(t) e^{-i\omega t} \dd{t}  \notag
