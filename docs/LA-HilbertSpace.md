@@ -14,3 +14,5 @@ What is an example of a Hilbert space? Suppose that $$H$$ is the space of all sq
 These functions must die away sufficiently rapidly as $$|x| \to \infty$$ for the integral to exist, and this property ensures that the inner product of two such functions remains a function in the Hilbert space. This means that linear combinations of these vectors in the space remain square-integrable and form (normalizable) vectors in the space.
 
 A Hilbert space is **spanned** by a set of basis vector, $$\ket{\varphi_j}$$ for $$j = 1, 2, \ldots, $$. It may either by finite-dimensional or infinitedimensional. All vectors in the space may be expressed as a linear combination of the basis vectors. That is, the space is **complete**.
+
+Next: [Diagonalizing a Matrix](LA-Diagonalization.md)

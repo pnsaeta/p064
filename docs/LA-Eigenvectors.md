@@ -128,3 +128,5 @@ and then normalizing
 \\]
 
 While Gram-Schmidt orthogonalization is mathematically sound, the good folks who wrote *Numerical Recipes* point out that “because of the build-up of roundoff errors, naïve Gram-Schmidt orthogonalization is *terrible*. (Emphasis in the original.) They go on to explain that the right way to build an orthonormal basis for a subspace is by [singular value decomposition](LA-NumericalLinearAlgebra.md#singular-value-decomposition) (SVD).
+
+Next: [Numerical Linear Algebra](LA-NumericalLinearAlgebra.md)

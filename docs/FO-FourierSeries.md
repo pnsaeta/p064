@@ -165,7 +165,7 @@ By similar reasoning, we get that
   a_m &= \frac{2}{T} \int\_0^T \cos \qty(\frac{m 2 \pi t}{T}) f(t) \; dt \qquad m > 0 \label{eq:an}
 \end{align}
 
-### Example
+## Example: the Fourier Series for a Square Wave
 
 Let's see if we can determine the Fourier series for the square wave defined on the interval $$-\frac{T}{2} \le t < \frac{T}{2}$$ by
 \begin{equation}\label{eq:square}
@@ -208,8 +208,6 @@ for n in range(1, 102, 2):
 ax.set_xlabel("$t / T$")
 ax.legend();
 ~~~~
-
-
 
 <p class="center" markdown="0">
   <img src="figs/square.webp" style="width: 500px;">

@@ -13,3 +13,5 @@ If we are really thinking about a periodic signal, the analogous idea is a **Fou
 2. We will then proceed to [Fourier series](FO-FourierSeries.md) to represent periodic functions in terms of sines and cosines. We will see here another example of vector spaces (in particular, function spaces).
 3. Before generalizing Fourier series to Fourier transforms, we will explore the extension of the notions of differential and integral calculus to [functions of a complex variable](FO-ComplexCalculus.md) and develop [contour integration] (FO-ContourIntegration.md).
 4. Finally, we look at [Fourier transforms](FO-FourierTransforms.md).
+
+Next: [The Algebra of Complex Numbers](FO-ComplexVariables.md)
