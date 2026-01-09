@@ -37,14 +37,14 @@ Is it as simple as \begin{equation}
 don't have a closed path, so we can't use the residue theorem.
 
 We need to add a segment to the path that gets us from $$x = \infty$$
-back to $$x = -\infty$$ without adding anything to the value of the
-integral. Let's try closing along a semicircular arc of radius $$R$$, as
+back to $$x = -\infty$$ **without adding anything to the value of the
+integral**. Let's try closing along a semicircular arc of radius $$R$$, as
 illustrated below, and then take the limit as $$R \to \infty$$.
 
 <p class="center" markdown="0">
-  <img src="figs/UHP.webp" style="width: 400px;" alt="Closing in the upper half-plane">
+  <img src="figs/UHP.webp" style="width: 300px;" alt="Closing in the upper half-plane">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour for integrating $$(1+x^2)^{-1}$$.
 </p>
 
 Along the semicircular arc, $$z = R e^{i\theta}$$, so
@@ -54,7 +54,7 @@ integral is
   I' = \int_{0}^{\pi} \frac{i R e^{i\theta}}{1 + R^2 e^{2i\theta}} \dd{\theta}
 \end{equation}
 Let's pull the leading dependence on $$R$$ out of the
-integral: 
+integral:
 \begin{equation}
   I' = \frac{1}{R} \int_{0}^{\pi} \frac{i e^{i\theta}}{e^{2i\theta} + 1/R^2} \dd{\theta}
 \end{equation}
@@ -65,7 +65,7 @@ As $$R \to \infty$$, the integral becomes
 \end{equation}
 which clearly goes to zero as $$R \to 0$$. So, by closing
 the contour along the semicircular arc at infinity, we add no
-contribution to the integral. So, the integral around the closed contour
+contribution to the integral: the integral around the closed contour
 has the same value as the integral we care about along the $$x$$ axis,
 and that means we can use the residue theorem to evaluate it.
 
@@ -73,9 +73,9 @@ The integrand
 \begin{equation}
 \frac{1}{z^2+1} = \frac{1}{(z+i)(z-i)}
 \end{equation}
-has poles at $$z = \pm i$$. If we close the contour in the upper half-plane, as
-illustrated in the figure, then we proceed around the contour in the
-positive direction and we enclose the pole at $$z = i$$. By the residue
+has poles at $$z = \pm i$$. By closing the contour in the upper half-plane, as
+illustrated in the figure, we proceed around the contour in the
+positive direction (counterclockwise) and we enclose the pole at $$z = i$$. By the residue
 theorem, therefore, the value of the integral $$I$$ is $$2 \pi i$$ times
 the residue at $$z = i$$. Let $$\xi = z-i$$, so that the integrand in
 the vicinity of the pole has the form.
@@ -137,7 +137,7 @@ The residue at $$z_0 = e^{i\pi/4}$$ is
     a_{-1} = \lim_{z \to e^{i\pi/4}} \frac{z - e^{i\pi/4}}{z^4+1}
     = \lim_{z \to e^{i\pi/4}} \frac{1}{4z^3} = \frac{e^{-i 3\pi/4}}{4}
 \\]
-where I have used l’Hôpital’s rule to simplify the limit of the fraction. Similarly, the residue at 
+where I have used l’Hôpital’s rule to simplify the limit of the fraction. Similarly, the residue at
 $$z_0 = e^{i 3\pi/4}$$ is
 \\[
     b_{-1} = \lim_{z \to e^{i3\pi/4}} \frac{z - e^{i 3\pi/4}}{z^4+1}
@@ -146,10 +146,10 @@ $$z_0 = e^{i 3\pi/4}$$ is
 
 2. For the second method, consider the residue as $$z \to e^{i\pi/4}$$. Let $$\zeta = z-e^{i\pi/4}$$. Then
 \\[
-    \frac{1}{z^4 + 1} = \frac{1}{(e^{i\pi/4} + \zeta)^4 + 1} 
+    \frac{1}{z^4 + 1} = \frac{1}{(e^{i\pi/4} + \zeta)^4 + 1}
     = \frac{1}{-1 + 4 \zeta e^{3i\pi/4} + 6 \zeta^2 e^{i\pi/2} + 4 \zeta^3 e^{i\pi/4} + \zeta^4 + 1}
 \\]
-The ones cancel and we're left with 
+The ones cancel and we're left with
 \\[
     \frac{1}{\zeta} \frac{1}{(4 e^{3i\pi/4} + \O{\zeta})} \qquad\longrightarrow\qquad
     a_{-1} = \frac{e^{-3i\pi/4}}{4}
@@ -158,7 +158,7 @@ as we found before. We can find $$b_{-1}$$ in the same way.
 
 3. In $$(z - e^{i\pi/4})(z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4})$$, only one term goes to zero at each pole, so we just need to evaluate the denominators by multiplying together the three other terms:
 \begin{align}
-d_1 = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\ 
+d_1 = (z - e^{3i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{i\pi/4} \\\
 d_2 = (z - e^{i\pi/4})(z - e^{5i\pi/4})(z - e^{7i\pi/4}) &\text{ as } z \to e^{3i\pi/4}
 \end{align}
 
@@ -171,7 +171,7 @@ Each term in the product is of the form $$t_{mn} = (e^{i m \pi/4} - e^{i n \pi/4
 Using this expression to evaluate the denominators, we have
 \begin{align}
 d_1 &= t_{13} t_{15} t_{17} = (-2i)^3 e^{i(18)\pi/8}\sin(\pi/4) \sin(\pi/2) \sin(3\pi/4)
-= 8i e^{i\pi/4} \frac12 = 4i e^{i\pi/4} = 4 e^{i 3\pi/4} \\\ 
+= 8i e^{i\pi/4} \frac12 = 4i e^{i\pi/4} = 4 e^{i 3\pi/4} \\\
 d_2 &= t_{31} t_{35} t_{37} = (-2i)^3 e^{i(22)\pi/8}\sin(-\pi/4) \sin(\pi/4) \sin(\pi/2)
 = 8i e^{i3\pi/4} \times -\frac12 = 4 e^{i\pi/4}
 \end{align}
@@ -186,9 +186,9 @@ By the residue theorem, therefore,
 Can we confirm this value numerically?
 
 ~~~~ python
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib widget 
+%matplotlib widget
 from scipy.integrate import quad
 
 f = lambda x: 1 / (1 + x**4)
@@ -206,7 +206,7 @@ ax.plot(x,y);
 Because the contribution from the wings lives at a different scale than the bulk of the weight of the integrand near $$x = 0$$, I will break apart the integral into segments and then add the segments up.
 
 ~~~~ python
-v = np.array([quad(f, 0, 2), quad(f, 2, 4), quad(f, 4, 10), 
+v = np.array([quad(f, 0, 2), quad(f, 2, 4), quad(f, 4, 10),
     quad(f, 10, 20), quad(f, 20, 100)])
 np.pi / np.sqrt(2)
 
@@ -241,7 +241,7 @@ You can readily see that the numerical integration agrees well with the exact va
 
 ## Problems
 
-1. Evaluate $$\displaystyle \int_{0}^{\infty} \frac{1}{1 + x^6}\dd{x}$$.
+1. Evaluate $$\displaystyle \int_{0}^{\infty} \frac{1}{1 + x^6}\dd{x}$$. [*Ans:* $$\pi/3$$]
 
 2. Show that $$\displaystyle \int_0^\infty \frac{\sin x}{x}\dd{x} = \frac{\pi}{2}$$.
 

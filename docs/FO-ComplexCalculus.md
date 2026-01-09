@@ -103,7 +103,7 @@ The Cauchy-Riemann conditions describe the coordination necessary between the re
 More formally, **Cauchy's integral theorem** holds that the path integral *vanishes* around any contour within a simply connected region in which the Cauchy-Riemann conditions hold. Crudely speaking, a **simply connected** region has no holes. Any closed path within a simply connected region can be shrunk continuously to a point without having left the region.
 
 <p class="center" markdown="0">
-  <img src="figs/pole.webp" style="width: 400px;" alt="Integrating around a pole">
+  <img src="figs/pole.webp" style="width: 300px;" alt="Integrating around a pole">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating $$f(z) = z^n$$ around a circle centered on the origin.</p>
 
@@ -115,9 +115,9 @@ Before proceeding to a proof, let us consider the integral of $$z^n$$ around a s
 \\]
 Provided that $$n \ne -1$$, the integral vanishes, since $$e^{i(n+1)\theta}$$ is periodic with period $$2\pi$$. However, if $$n = -1$$, we have the integral
 \\[
-    \oint \frac{\dd{z}}{z} = \int_0^{2\pi} r^{-1} e^{-i\theta} r i e^{i\theta}\dd{\theta} =\int_0^{2\pi} i\dd{\theta} =  2\pi i
+    \oint \frac{\dd{z}}{z} = \int_0^{2\pi} \frac{r i e^{i\theta}}{r e^{i\theta}} \dd{\theta} =\int_0^{2\pi} i\dd{\theta} =  2\pi i
 \\]
-This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges.
+This result does not violate Cauchy's integral theorem because the function $$f(z) = 1/z$$ is not analytic at $$z = 0$$, where it diverges. **Integrating $$z^n$$ around a closed path around the origin gives zero for every integer $$n$$ except $$n = -1$$, where it gives $$2\pi i$$.**
 
 ### Laurent Expansion
 
@@ -197,7 +197,7 @@ The residue theorem establishes a method for evaluating integrals along closed p
 - closes along a segment that adds nothing to the value of the integral, or
 - generates a multiple of the desired integral (e.g., by integrating along a return path that goes from $$x = \infty$$ to $$x = -\infty$$ at some nonzero value of the imaginary part of $$z$$).
 
-Sometimes it is necessary to use a modified integrand so that the difference between the two paths parallel to the $$x$$ axis yields the actual integral we seek to evaluate.
+Sometimes it is necessary to use a modified integrand so that the difference between the two paths parallel to the $$x$$ axis yields the actual integral we seek to evaluate. [On the next page](FO-ContourIntegration.md) we will test out the residue theorem. But first, let's think about ways to compute residues.
 
 ### Computing Residues
 
@@ -264,3 +264,4 @@ If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z
 \\]
 and similarly for $$v$$.
 
+Next: [Contour Integration](FO-ContourIntegration.md)
