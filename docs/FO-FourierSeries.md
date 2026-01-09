@@ -140,7 +140,6 @@ To illustrate an (allegedly) easier approach that uses complex exponentials, I w
 \end{equation}
 That is, unless $$N = 0$$, the integral vanishes, since we integrate over an integral number of complete periods, so the numerator is the same at the beginning and end of the integration. However, if $$N = 0$$, the exponential is just 1, so we get an integral equal to the range of integration.
 
-
 Then Eq.&nbsp;(\ref{eq:thisone}) is
 \begin{align}
   \int_0^T \cos(m\omega t) \cos(n\omega t)\dd{t}
@@ -152,9 +151,9 @@ Then Eq.&nbsp;(\ref{eq:thisone}) is
 By Eq.&nbsp;(\ref{eq:keyortho}), the only integrals that are nonzero have $$m\pm n = 0$$.
 There are three cases. If $$m = n = 0$$, then all four terms yield $$T/4$$ and the integral evaluates to $$T$$. If, however, $$m = n \ne 0$$, then only two terms yield $$T/4$$, so the integral evaluates to $$T/2$$. Finally, if $$m \ne n$$, then all the terms vanish and the integral evaluates to 0.
 
+### General Strategy
 
-
-The strategy for determining the coefficients $$a_n$$ and $$b_n$$ is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
+The strategy for determining the coefficients $$a_n$$ and $$b_n$$ in Eq.&nbsp;(\ref{eq:fourierseries}) is now clear. To deduce $$b_m$$, multiply Eq. (\ref{eq:fourierseries}) by $$\sin(m 2 \pi t/T)$$ and integrate over a full period. The only term that survives on the right-hand side has coefficient $$b_m$$. Therefore,
 \begin{equation}\label{eq:bn}
     b_m = \frac{2}{T} \int_0^T \sin\qty(\frac{m 2 \pi t}{T}) f(t) \; dt
 \end{equation}
@@ -221,16 +220,21 @@ Stopping after just two terms ($$n=3$$) does not make a very convincing represen
 </p>
 <p class="icap" markdown="1">At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists. See [this page](FO-Gibbs.md) for more on the Gibbs phenomon.</p>
 
-The rate of convergence of this series is quite slow because of the discontinuity at $$t = 0$$ and the endpoints. We can explore the rate of convergence by investigating a continuous function that lacks a continuous first derivative, such as a triangular wave given by
+The rate of convergence of this series is quite slow (the coefficients are proportional to $$1/n$$) because of the discontinuity at $$t = 0$$ and the endpoints. We can explore the rate of convergence by investigating a continuous function that lacks a continuous first derivative, such as a triangular wave given by
 \\[
     g(t) = \frac12 - \frac{2|t|}{T} \qquad -\frac{T}{2} \le t \le \frac{T}{2}
 \\]
+for which the Fourier series is
+\\[
+    g(t) = \frac{8}{\pi^2} \sum_{n\text{ odd}} \frac{\cos (n \omega t)}{n^2}
+\\]
+Now the coefficients fall off like $$1/n^2$$, much faster than for the square wave.
 
 <p class="center" markdown="0">
   <img src="figs/triangle.webp" style="width: 500px;">
 </p>
 <p class="mycap" markdown="1">Truncated Fourier series approximation to
-a sawtooth wave. Comparing the rate of convergence to the discontinuous square wave, it clearly takes many fewer terms for the Fourier series to converge to this continuous function that lacks a continuous first derivative.</p>
+a sawtooth wave. Comparing the rate of convergence to the discontinuous square wave, it clearly takes many fewer terms for the Fourier series to converge to this continuous function that lacks a continuous first derivative. The coefficients </p>
 
 <p class="center" markdown="0">
   <img src="figs/triangle-zero.webp" style="width: 500px;">
@@ -301,7 +305,7 @@ As is apparent in <a href="#FO-parabola">Figure 4</a>, the series converges extr
 <p class="center" markdown="0">
   <img src="figs/FO-parabola.webp" style="width: 400px;">
 </p>
-<p class="icap" markdown="1"><a name="FO-parabola">Figure 4</a> — Convergence of the Fourier series representation of the parabolic function defined in Eq.&nbsp;(\ref{eq:fx}). The top panel shows the true function and the Fourier approximation that uses only the terms with $$n=0$$ and $$n=1$$. The bottom panel shows the difference between the truncated series and the true function for different points of truncation.</p>
+<p class="icap" markdown="1"><a name="FO-parabola">Figure 4</a> — Convergence of the Fourier series representation of the parabolic function defined in Eq.&nbsp;(\ref{eq:fx}). The top panel shows the true function and the Fourier approximation that uses only the terms with $$n=0$$ and $$n=1.$$ The bottom panel shows the difference between the truncated series and the true function for different points of truncation.</p>
 
 
 The convergence of the previous example seems a bit too good. What happens if we ask the Fourier series to converge to a function that is inconsistent with the boundary conditions we have imposed? Suppose, for instance, that we use the same basis functions of Eq.&nbsp;(\ref{eq:exa}) to represent a parabola that peaks not at $$x = L$$ but in the middle of the range? The result is
@@ -349,6 +353,13 @@ Compute
   \ev{f,f} &= \sum_n |a_n|^2 \label{eq:Prseval}
 \end{align}
 The last line, Eq.&nbsp;(\ref{eq:Prseval}), is **Parseval's identity**. As a mathematical result, it is akin to the **Pythagorean theorem**; we add up the squares of the components of a vector and we get its magnitude squared. But, it also has an important physical interpretation. The energy in an oscillatory function (a wave) is proportional to its amplitude squared. The coefficients $$|a_n|$$ represent the energy in each basis function.
+
+## Summary
+
+- something
+
+
+Next: [Functions of a Complex Variable](FO-ComplexCalculus.md)
 
 <!--
 1. Have them work out some series of varying symmetry
