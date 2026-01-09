@@ -6,7 +6,7 @@
 * toc
 {:toc}
 
-We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a square wave overshot the mark at the point of discontinuity at $$t = 0$$ where the square wave jumps from $$-1$$ to $$1$$, as illustrated in &nbsp;1.
+We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a square wave overshot the mark at the point of discontinuity at $$t = 0$$ where the square wave jumps from $$-1$$ to $$1$$, as illustrated in Fig.&nbsp;1.
 
 <p class="center" markdown="0">
   <img src="figs/square-near-zero.webp" style="width: 500px;" alt="Fourier series for a square wave near a discontinuity">
@@ -14,7 +14,8 @@ We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists.</p>
 
 Is there a way to quantify this overshoot?
-We found that the series representing the square wave is
+
+Recall that we found that the series representing the square wave is
 \begin{equation}\label{eq:squarewave}
     f(t) = \frac{4}{\pi} \sum\_{n\text{ odd}}^\infty \frac1n
     \sin\qty(\frac{  2\pi n t}{T})
@@ -63,7 +64,7 @@ The first peak for $$t > 0$$ will be when $$\sin 2(N+1)\omega t = 0$$ or $$2(N+1
     t_\text{peak} = \frac{\pi}{2(N+1)\omega} = \frac{T}{4(N+1)}
 \\]
 
-## Integrating to get $$g_N(t_\text{peak})$$
+## Integrating to Get $$g_N(t_\text{peak})$$
 
 We now can integrate $$g'_N(t)$$ from zero to $$t_\text{peak}$$ to see how large the overshoot goes.
 \\[
@@ -93,7 +94,7 @@ We can also use `scipy` to do the integral numerically:
 
 ~~~~ python
 from scipy.integrate import quad
-(val, err) = quad( lambda x : 1 if x == 0 else np.sin(x) / x, 0, np.pi)
+(val, err) = quad(lambda x : 1 if x == 0 else np.sin(x) / x, 0, np.pi)
 2 * val / np.pi
 1.1789797
 ~~~~

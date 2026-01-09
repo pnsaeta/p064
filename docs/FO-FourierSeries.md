@@ -356,7 +356,17 @@ The last line, Eq.&nbsp;(\ref{eq:Prseval}), is **Parseval's identity**. As a mat
 
 ## Summary
 
-- something
+- Fourier claimed that he could represent any periodic function as a weighted sum of sines and cosines of integer multiples of the fundamental frequency (the basis functions).
+- The product of any two distinct basis functions yields zero when integrated over one period; they are orthogonal.
+- The square of an oscillatory basis function averages to 1/2, which can be used to evaluate the coefficients in the Fourier expansion.
+- The Fourier series converges to the source function at points of continuity.
+- It converges to the mean value at points of discontinuity.
+- The amplitudes of coefficients in the Fourier expansion fall off more rapidly the smoother the source function.
+    - For functions with a discontinuity, the coefficients are proportional to $$1/n$$.
+    - For continuous functions with a discontinuous derivative, the coefficients are proportional to $$1/n^2$$.
+    - This pattern continues in the straightforward way.
+- For solutions of the second-order linear differential equation $$u''(x) = \lambda u(x)$$, when the bilinear concomitant $$[(u'_1)^* u_2 - u_1^* u'_2]_a^b$$ vanishes, eigenfunctions $$u_n(x)$$ corresponding to different eigenvalues $$\lambda$$ are orthogonal.
+- There are multiple ways to ensure that the bilinear concomitant vanishes, which means that there are multiple sets of orthogonal eigenfunctions that may be used to expand (represent) any function.
 
 
 Next: [Functions of a Complex Variable](FO-ComplexCalculus.md)

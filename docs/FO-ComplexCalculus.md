@@ -21,7 +21,7 @@ Another example: if $$f(z) = e^{iz} = e^{i(x + iy)} = e^{-y} e^{ix} = e^{-y}(\co
     u(x, y) = e^{-y} \cos x  \qquad\text{and}\qquad v(x,y) = e^{-y} \sin x
 \\]
 
-What would it mean to take the sine of a complex variable $$z$$?
+What would it mean to take the sine of a complex variable $$z = x + iy$$?
 \\[
     \sin z = \frac{e^{iz} - e^{-iz}}{2i}
     = \frac{e^{i x - y} - e^{-i x + y}}{2i} = \frac{e^{-y} e^{ix} - e^{y} e^{-ix}}{2i}
@@ -38,6 +38,12 @@ We might think to define the derivative of a function of a complex variable in a
     f'(z) = \lim_{\delta z \to 0} \frac{f(z+\delta z) - f(z)}{\delta z}
 \\]
 but a little thought reveals a major concern: the value of $$\delta z = \delta x + i \delta y$$ can be made to shrink to zero in any direction on the complex plane. Would this limit make any sense if the value for the derivative depended on the direction of approach?
+
+<p class="center" markdown="0">
+  <img src="figs/Cauchy-Riemann.webp" style="width: 400px;" alt="Cauchy-Riemann conditions">
+</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — For the derivative of a complex function to exist, we must get the same limit as a point $$(x,y)$$ is approached from any direction.</p>
+
 
 If we assume that the limit is well-defined and independent of the direction of approach, then there will need to be careful coordination between the real and imaginary parts of $$f(z)$$, which we can deduce by representing $$f(z) = u(x,y) + i v(x,y)$$. Making this substitution, we have
 \begin{equation}\label{eq:CR0}
@@ -58,11 +64,13 @@ On the other hand, if we let $$\delta x = 0$$ and approach $$z$$ parallel to the
   i[v(x, y+\delta y)-v(x, y)]} {i \delta y} \notag \\\
   &= -i\pdv{u}{y} + \pdv{v}{y} \label{eq:CR2}
 \end{align}
-For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent, we must have
-\begin{align}
-  \pdv{u}{x} &= \pdv{v}{y}  \label{eq:CR3} \\\
-  -\pdv{u}{y} &= \pdv{v}{x} \label{eq:CR4}
-\end{align}
+For Eqs. (\ref{eq:CR1}) and (\ref{eq:CR2}) to be consistent and yield a unique value for the derivative, their real and imaginary parts must be equal,
+\begin{equation}\label{eq:CR3}
+  \boxed{
+  \pdv{u}{x} = \pdv{v}{y} \qquad\text{and}\qquad
+  -\pdv{u}{y} = \pdv{v}{x}
+  }
+\end{equation}
 which are called the **Cauchy-Riemann conditions**. In sum, for the derivative of a function of a complex variable to exist, the Cauchy-Riemann conditions must be satisfied. Such functions are called **analytic**. More generally, functions may be analytic in a region of the complex plane, but nonanalytic at certain points or in certain regions.
 
 We already worked out that if $$f(z) = z^2$$, then $$u(x,y) = x^2 - y^2$$ and $$v(x,y) = 2 x y$$. We can see immediately that both Cauchy-Riemann conditions are satisfied in this case.
@@ -145,7 +153,7 @@ Consider, first, the real part of the integrand. Comparison with Eq. (\ref{eq:CI
 \\[
     \oint \qty( u\dd{x} - v\dd{y}) = \iint \qty(-\pdv{v}{x} - \pdv{u}{y}) \dd{x}\dd{y}
 \\]
-But by Eq. (\ref{eq:CR4}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem. Goursat showed how to relax the constraint that the region be simply connected by making infinitely thin bridges between regions and showing that integrating on either side of the bridges produced contributions to the integral that exactly cancel.
+But by Eq. (\ref{eq:CR3}), the quantity in parentheses is zero. A similar argument shows that the imaginary part also vanishes, which proves the theorem. Goursat showed how to relax the constraint that the region be simply connected by making infinitely thin bridges between regions and showing that integrating on either side of the bridges produced contributions to the integral that exactly cancel.
 
 ## Cauchy's Integral Formula
 
