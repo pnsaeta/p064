@@ -7,7 +7,7 @@
 
 ## The Damped Driven SHO
 
-The differential equation describing the motion of a damped driven simple harmonic oscillator is
+The differential equation describing the motion of a damped, driven simple-harmonic oscillator is
 \begin{equation}\label{eq:DDSHO}
   m\ddot{x} + b\dot{x} + m\omega_0^2 x = F_0(t)
 \end{equation}
@@ -16,10 +16,12 @@ where $$b$$ is the linear damping constant and $$m\omega_0^2 = k$$ is the spring
   \ddot{x} + 2\beta \dot{x} + \omega_0^2 x = \frac{F_0(t)}{m}
 \end{equation}
 
-In Engineering 79, you may have solved this equation using Laplace transforms. Here, we will use the Fourier transform. To take the Fourier transform, let us first take the transform of $$\dot{x}$$:
+In Engineering 79, you may have solved this equation using Laplace transforms. Here, we will use the Fourier transform.
+
+To take the Fourier transform, let us first take the transform of $$\dot{x}$$:
 \\[
     \int_{-\infty}^{\infty} \dot{x} e^{i\omega t} \dd{t} =
-    x e^{i\omega t} \bigg|\_{-\infty}^{\infty} - \int_{-\infty}^{\infty} x (i\omega) e^{i\omega t}\dd{t}
+    x e^{i\omega t} \bigg|\_{-\infty}^{\infty} - \int_{-\infty}^{\infty} (i\omega) x e^{i\omega t}\dd{t}
 \\]
 Assuming that $$x(t)$$ goes to zero as $$t \to \pm \infty$$, the integrated term vanishes and we get
 \\[
@@ -41,7 +43,7 @@ where
     \tilde{G}(\omega) = \frac{1/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega}
 \\]
 
-## Returning to the time domain
+## Returning to the Time Domain
 
 Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's position in terms of the Fourier transform of the forcing function $$F_0(t)$$. To see the behavior of the oscillator in the time domain, we now need to take the inverse Fourier transform:
 \begin{align}
@@ -110,6 +112,11 @@ Its Fourier transform is
     \\\
     &= F_0 \Omega \frac{e^{i 2 \pi N \omega/\Omega}-1}{\omega^2 - \Omega^2}
 \end{align}
+
+Let's define
+\begin{equation}\label{eq:cutoff}
+  t_c = \frac{2\pi N}{\Omega}
+\end{equation}
 
 By the convolution theorem, then,
 \begin{align}
