@@ -1,10 +1,11 @@
 {:menu FO}
 
-
 # An Application of Fourier Transforms
 
 * toc
 {:toc}
+
+## The Damped Driven SHO
 
 The differential equation describing the motion of a damped driven simple harmonic oscillator is
 \begin{equation}\label{eq:DDSHO}
@@ -45,17 +46,17 @@ where
 Equation (\ref{eq:xtilde}) gives the Fourier transform of the oscillator's position in terms of the Fourier transform of the forcing function $$F_0(t)$$. To see the behavior of the oscillator in the time domain, we now need to take the inverse Fourier transform:
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty e^{-i\omega t} \int_{-\infty}^{\infty} \frac{F_0(t')/m}{\omega_0^2 - \omega^2 - 2 \beta i \omega} e^{i\omega t'} \dd{t'} \dd{\omega}
-  \\\ 
-  &= \int_{-\infty}^{\infty}\dd{t'} F_0(t') \; 
+  \\\
+  &= \int_{-\infty}^{\infty}\dd{t'} F_0(t') \;
   \underbrace{ \frac{1}{2\pi m} \int_{-\infty}^{\infty} \dd{\omega} \frac{e^{-i\omega(t-t')}}{\omega_0^2 - \omega^2 - 2 \beta i \omega}}_{G(t-t')}
 \end{align}
-where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t' > t$$) or the lower half-plane (if $$t' < t$$). 
+where I have interchanged the order of integration. To perform the integration over $$\omega$$, we can use a contour that closes on a semicircle at $$R \to \infty$$, either in the upper half-plane (if $$t' > t$$) or the lower half-plane (if $$t' < t$$).
 
 Where are the poles? At the zeros of $$\omega^2 + 2 \beta i \omega - \omega_0^2$$, which are
 \\[
     \omega_{\pm} = -i\beta \pm \sqrt{-\beta^2 + \omega_0^2}
 \\]
-Let $$\omega_1 \equiv \sqrt{\omega_0^2 - \beta^2}$$. For an under-damped system, the radical is real, so the poles lie in the LHP at $$-i\beta \pm \omega_1$$. 
+Let $$\omega_1 \equiv \sqrt{\omega_0^2 - \beta^2}$$. For an under-damped system, the radical is real, so the poles lie in the LHP at $$-i\beta \pm \omega_1$$.
 
 Hence, if $$t' > t$$, we can close in the UHP and get $$G(t'-t) = 0$$. On the other hand, if $$t > t'$$, we must close the contour in the LHP, which means that we traverse the contour in the negative direction and that we enclose the two poles. Hence, for $$t > t'$$ we get
 \begin{equation}\label{eq:G}
@@ -78,7 +79,7 @@ with sum
 so that
 \begin{equation}
     G(t-t') = \begin{cases}
-      \displaystyle\frac{e^{-\beta(t-t')}}{m\omega_1} \sin\big[\omega_1(t-t')\big] & t > t' \\\ 
+      \displaystyle\frac{e^{-\beta(t-t')}}{m\omega_1} \sin\big[\omega_1(t-t')\big] & t > t' \\\
       0 & t < t'
     \end{cases}
 \end{equation}
@@ -94,31 +95,31 @@ In other words, the actual response of the oscillator, $$x(t)$$, is the convolut
 Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates for $$N$$ cycles:
 \\[
     F(t) = \begin{cases}
-      F_0 \sin(\Omega t) & 0 < t < \frac{2 \pi N}{\Omega} \\\ 
+      F_0 \sin(\Omega t) & 0 < t < \frac{2 \pi N}{\Omega} \\\
       0 & \text{otherwise}
     \end{cases}
 \\]
 Its Fourier transform is
 \begin{align}
     \tilde{F}(\omega) &= \int_{0}^{2 \pi N/\Omega} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
-    \\\ 
+    \\\
     &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
-    \\\ 
-    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} - 
+    \\\
+    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} -
     \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega + \Omega}\bigg]
-    \\\ 
+    \\\
     &= F_0 \Omega \frac{e^{i 2 \pi N \omega/\Omega}-1}{\omega^2 - \Omega^2}
 \end{align}
 
 By the convolution theorem, then,
 \begin{align}
-  x(t) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{F_0 \Omega}{m} 
+  x(t) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{F_0 \Omega}{m}
   \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i2\pi N\omega/\Omega}-1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
 
 Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly:
 \begin{equation}
-  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty} 
+  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
     \frac{e^{-i\omega t} - e^{i(2\pi N/\omega -t)\omega}}
     {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
@@ -136,16 +137,16 @@ where I have defined $$\Gamma^2 \equiv \omega_1^2 - \Omega^2 - \beta^2$$, and wh
 
 When $$0 < t < 2 \pi / N$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. Hence, the residue theorem yields
 \begin{align}
-  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2 \pi i) \bigg( \frac{e^{-i\omega_+ t}}{2\omega_1 (\Gamma^2-2\beta\omega_1 i)} 
+  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2 \pi i) \bigg( \frac{e^{-i\omega_+ t}}{2\omega_1 (\Gamma^2-2\beta\omega_1 i)}
    -  \frac{e^{-i\omega_- t}}{2 \omega_1 (\Gamma^2 + 2 \beta \omega_1 i)}
    \bigg)\notag
-   \\\ 
+   \\\
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right) \notag
-   \\\ 
+   \\\
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg) \notag \\\ 
+   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg) \notag \\\
    &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( 4\beta\omega_1 i \cos(\omega_1 t) - 2 \Gamma^2 i \sin (\omega_1 t) \bigg) \notag \\\ 
-   &= \frac{F_0 \Omega}{\omega_1 m} \frac{e^{-\beta t}}{\Gamma^4 + 4 \beta^2 \omega_1^2} 
+   \bigg( 4\beta\omega_1 i \cos(\omega_1 t) - 2 \Gamma^2 i \sin (\omega_1 t) \bigg) \notag \\\
+   &= \frac{F_0 \Omega}{\omega_1 m} \frac{e^{-\beta t}}{\Gamma^4 + 4 \beta^2 \omega_1^2}
    \left[ \Gamma^2 \sin(\omega_1 t) - 2\beta\omega_1 \cos(\omega_1 t)\right]
 \end{align}

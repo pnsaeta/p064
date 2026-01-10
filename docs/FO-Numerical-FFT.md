@@ -86,7 +86,7 @@ The two conspicuous nonzero imaginary coefficients towards the end of $$g$$ aris
     \sin(2\pi(N-k)n/N) = \sin(2\pi n)\cos(2\pi nk/N) - \cos(2\pi n)\sin(2\pi nk/N)
     = -\sin(2\pi nk/N)
 \\]
-we can see that the right half of the transformed array should be the negative mirror image of the left half.
+we can see that the right half of the transformed array should be the negative mirror image of the left half. The maximum frequency in the transform is $$\nu_{\text{max}} = \frac{1}{2 \Delta t}$$, where $$\Delta t$$ is the sampling interval. This frequency is called the **Nyquist frequency**.
 
 Aliasing makes the right half of the output array correspond to negative frequencies; it would be helpful to have a routine that computes an appropriate frequency axis to go with the transform. Numpy's routine is called `fftfreq(N, dt)`, where `N` is the number of points in the source array and `dt` is the **sampling period**. Example:
 
@@ -108,6 +108,19 @@ plt.subplots_adjust(bottom=0.15)
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The same data as in the previous figure, but now plotted against an honest frequency axis computed by `fftfreq`.</p>
 
 There is a modest "gotcha" here, as will be plain if I use lines instead of markers.
+
+<p class="center" markdown="0">
+  <img src="figs/fft3b.webp" style="width: 400px;" alt="Line plot of the previous">
+</p>
+  <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The same plot as Figure&nbsp;3, but with lines instead of markers. What the lines across the figure? The function `fftfreq` computes a comb of frequency values start from zero, advance to one interval shy of the Nyquist frequency, then start over at the negative of the Nyquist frequency and advance back to zero.</p>
+
+Because the order of the data in the transform is still positive frequencies first, then negative frequencies, when a line is drawn in the middle of the data range, it runs from the right side of the plot to the left. You can avoid this by "rolling" both arrays by half their length:
+
+<p class="center" markdown="0">
+  <img src="figs/fft3c.webp" style="width: 400px;" alt="Unwrapped">
+</p>
+<p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — The same data as in the previous plot, but unwrapped with `freqs = np.roll(freqs, len(freqs) // 2)` and similarly for the transformed data.</p>
+
 
 ### Inverse transform
 
