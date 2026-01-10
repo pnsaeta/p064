@@ -11,10 +11,10 @@
 
 The Fourier transform takes a function in the time (spatial) domain and transforms it to a representation in the frequency (spatial frequency) domain, as represented by
 \begin{align}
-  \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{-i\omega t} \dd{t}  \label{eq:FT1} \\\ 
-  f(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty  \tilde{f}(\omega) e^{i\omega t}\dd{\omega} \label{eq:FT2}
+  \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{i\omega t} \dd{t}  \label{eq:FT1} \\\
+  f(t) &= \frac{1}{2\pi} \int_{-\infty}^\infty  \tilde{f}(\omega) e^{-i\omega t}\dd{\omega} \label{eq:FT2}
 \end{align}
-and discussed on [the page on Fourier Transforms](FO-FourierTransforms.md). 
+and discussed on [the page on Fourier Transforms](FO-FourierTransforms.md).
 
 We commonly consider functions of time, which may or may not be periodic, but which may be quasi-periodic, such as the sounds from a musical instrument. After all, they don't go on forever, so they can't be composed of pure tones! Typically, we sample such functions at a fixed sampling rate. For example, suppose we consider the function
 \begin{equation}\label{eq:fft1}
@@ -76,7 +76,7 @@ Using Eq.&nbsp;(\ref{eq:fft3}), we can compute the elements of the `f[n]` vector
 \\]
 so that the real and imaginary parts of the transform are
 \begin{align}
-  g_k^{\rm re} &= \sum_{n=0}^{N-1} f_n \cos(2\pi k n/N) \notag \\\ 
+  g_k^{\rm re} &= \sum_{n=0}^{N-1} f_n \cos(2\pi k n/N) \notag \\\
   g_k^{\rm im} &= -\sum_{n=0}^{N-1} f_n \sin(2\pi k n/N) \notag
 \end{align}
 Our source function $$f(t)$$ is an odd function of $$t$$, since it is composed of two sine functions. So, the real part of a Fourier transform should vanish and the imaginary part should be nonzero for the two values $$k = 4$$ and $$k = 12$$. Since the average value of $$\sin^2 \phi$$ over a full period is $$\frac12$$, we should expect that the magnitude at $$n=4$$ should be $$\frac12 N = 64$$, which does indeed appear to be the case.
@@ -107,7 +107,7 @@ plt.subplots_adjust(bottom=0.15)
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The same data as in the previous figure, but now plotted against an honest frequency axis computed by `fftfreq`.</p>
 
-
+There is a modest "gotcha" here, as will be plain if I use lines instead of markers.
 
 ### Inverse transform
 
@@ -137,13 +137,13 @@ Before exploring some of the potential pitfalls of the fast Fourier transform, I
 
 In the mid-1960s, J. W. Cooley and J. W. Tukey at IBM Yorktown Heights Research Center rediscovered a method to reduce the count to $$N \log_2 N$$ operations. For out example of 65536 points, this means something like $$2^{16} \times 16 = 2^{20} \approx 10^6$$ operations, roughly 4000 times fewer. Such a speed-up converts an hour to a second, give or take, which has made the FFT a workhorse for a variety of scientific computations.
 
-So how does it work? Let $$W = e^{2\pi i / N}$$ so that 
+So how does it work? Let $$W = e^{2\pi i / N}$$ so that
 \begin{equation}\label{eq:ffta}
   g_k = \sum_{n=0}^{N-1} e^{2\pi i n k/N} f_n = \sum_{n=0}^{N-1} W^{nk} f_n
 \end{equation}
 The basis of the algorithm is the Danielson-Lanczos Lemma, which factors Eq.&nbsp;(\ref{eq:ffta}) into a sum over the even indices and a sum over the odd indices:
 \begin{align}
-  g_k &= \sum_{j=0}^{N/2-1} \qty[ W^{2kj} f_{2j} + W^{k(2j+1)} f_{2j+1} ]\notag \\\ 
+  g_k &= \sum_{j=0}^{N/2-1} \qty[ W^{2kj} f_{2j} + W^{k(2j+1)} f_{2j+1} ]\notag \\\
   &= g_k^{\rm even} + W^k g_k^{\rm odd} \notag
 \end{align}
 Each of these two transforms involves sums over just half of the $$N$$ elements of the original sum. The lemma can be applied recursively to each of these smaller transforms, each time dividing the number of points in the remaining transform by 2. For a number of initial data points $$N$$ that is a power of 2, after $$\log_2 N $$ divisions we are left with a single point. Summing is then trivial.
@@ -172,21 +172,21 @@ def Cooley_Tukey(v, inverse=False):
         N = len(x)
         if N <= 1:
             return # nothing left to do
-        
+
         # copy input values into even and odd arrays
         even, odd = np.array(x[0:N:2]), np.array(x[1:N:2])
-        
+
         # transform each of these in place
         fft_rec(even)
         fft_rec(odd)
-        
+
         # now update x by combining the even and odd versions
         halfN = N // 2
         for k in range(0, halfN):
             t = np.exp(complex(0, twopi * k / N)) * odd[k]
             x[k] = even[k] + t
             x[halfN + k] = even[k] - t
-        
+
     fft_rec(f)
     if inverse:
         f /= n

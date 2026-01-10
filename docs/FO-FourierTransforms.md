@@ -194,28 +194,30 @@ The **convolution** of functions $$f(t)$$ and $$g(t)$$ is defined by
 \begin{equation}\label{eq:convolution}
    (f * g)(t) = \int_{-\infty}^{\infty} g(t') f(t - t') \dd{t'}
 \end{equation}
-and represents how one signal gets smeared out by another (such as a system response function).
+and represents how one signal gets smeared out by a finite-width response function. Figure&nbsp;3 illustrates how a Gaussian response function affects an asymmetric triangular pulse.
 
 <p class="center" markdown="0">
   <img src="figs/convo1.webp" style="width: 400px;" alt="Example convolution">
 </p>
-<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — ?</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — If the red signal is sampled with an instrument that responds as illustrated in blue, the result is the convolution shown in green.</p>
 
 
 The convolution of two functions has a particularly straightforward representation in terms of their Fourier transforms. Given
 \begin{align}
-  \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{-i\omega t} \dd{t}  \notag \\\
-  \tilde{g}(\omega) &= \int_{-\infty}^\infty g(t) e^{-i\omega t} \dd{t}  \notag
+  \tilde{f}(\omega) &= \int_{-\infty}^\infty f(t) e^{i\omega t} \dd{t}  \notag \\\
+  \tilde{g}(\omega) &= \int_{-\infty}^\infty g(t) e^{i\omega t} \dd{t}  \notag
 \end{align}
 then
 \begin{align}
-  (f*g)(t) &= \int_{-\infty}^{\infty}\dd{t'}
-  \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega) e^{i\omega t'}
-  \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\Omega} \tilde{g}(\Omega) e^{i\Omega (t-t')} \notag \\\
+  (f*g)(t) &= \int_{-\infty}^{\infty} \dd{t'} g(t') f(t-t') \notag
+  \\\
+  &= \int_{-\infty}^{\infty}\dd{t'}
+  \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{g}(\omega) e^{-i\omega t'}
+  \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\Omega} \tilde{f}(\Omega) e^{-i\Omega (t-t')} \notag \\\
   &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega)
-  \int_{-\infty}^{\infty} \dd{\Omega} \tilde{g}(\Omega) e^{i\Omega t}
-  \underbrace{\frac{1}{2\pi} \int\_{-\infty}^{\infty} \dd{t'} e^{i (\omega - \Omega) t'}}\_{\delta(\omega-\Omega)} \notag \\\
-  &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega) \tilde{g}(\omega) e^{i\omega t}
+  \int_{-\infty}^{\infty} \dd{\Omega} \tilde{g}(\Omega) e^{-i\Omega t}
+  \underbrace{\frac{1}{2\pi} \int\_{-\infty}^{\infty} \dd{t'} e^{i (\Omega - \omega) t'}}\_{\delta(\Omega-\omega)} \notag \\\
+  &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega) \tilde{g}(\omega) e^{-i\omega t}
 \end{align}
 That is, **the Fourier transform of the convolution is the product of the Fourier transforms**. This result is known as the **convolution theorem**.
 
@@ -243,3 +245,5 @@ which is known as the **Wiener-Khinchin theorem**. The autocorrelation of a func
   (\Delta t)^2 = \frac{\displaystyle \int_{-\infty}^{\infty}  t^2 |E(t)|^2 \dd{t}}{\displaystyle \int_{-\infty}^{\infty}  |E(t)|^2 \dd{t}}
 \end{equation}
 where the integral in the denominator is for proper normalization. Calculate $$\Delta t$$ and the corresponding uncertainty in frequency, $$\Delta \omega$$. How does the uncertainty product for a hyperbolic secant pulse, $$(\Delta \omega)(\Delta t)$$, compare to the value of $$1/2$$ obtained for a gaussian?
+
+Next: [Numerical Fourier Transforms](FO-Numerical-FFT.md)
