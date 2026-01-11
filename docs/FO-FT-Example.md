@@ -131,10 +131,36 @@ Evaluating this integral is somewhat tricky. Let's first clean up the integrand 
     \frac{e^{-i\omega t} - e^{-i\omega(t-T)}}
     {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
-where $$\omega_{\pm} = \pm\omega_1 - i\beta$$. Writing the integrand this way shows that it has four first-order poles, two on the real axis and in the path of integration, and two in the lower half-plane.
+where $$\omega_{\pm} = \pm\omega_1 - i\beta$$. Writing the integrand this way shows that it has four first-order poles, two on the real axis on the path of integration, and two in the lower half-plane.
 
-It is straightforward to show that the residue at the poles on the real axis vanishes when $$t < 0$$ and when $$t>T$$, because at those points, the numerator vanishes. However, for $$0 < t < T$$, we have to close the first integral in the LHP and the second one in the UHP. So, we need to treat them separately. Of course, the poles lie on the axis of integration, so we will need to take their Cauchy principal values.
+### Case 1: $$ t < 0$$
 
+We can close the contour without adding anything to the integral with a giant semicircle in the upper half-plane. The poles at $$\omega=\omega_\pm$$ are in the LHP, so they contribute nothing. At $$\omega = \pm \Omega$$, the numerator vanishes because $$e^{\pm i\Omega T} = e^{\pm i \, 2\pi N} = 1$$. Hence, $$x(t) = 0$$ for $$t < 0$$. That's reassuring: we haven't started forcing the oscillator yet!
+
+### Case 2: $$0 < t < T$$
+
+In this case we must separate the terms in the numerator, since for the first one we must close in the LHP while for the second we must close in the UHP. For the first, we go around in the clockwise (negative) direction; for the second, we go around counterclockwise.
+
+### Case 3: $$ t > T$$
+
+Now we must close the contour in the lower half-plane. By the same argument as for case 1, the numerator vanishes and we get no contribution from the poles that lie on the real axis. However, our contour now encloses the two poles in the LHP, so we will need to evaluate them.
+
+### Poles at $$\omega = \omega_\pm$$
+
+When $$\omega \to \omega_+$$, the denominator becomes $$(\omega-\omega_+)\Delta_+$$, where $$\Delta_+$$ is
+\\[
+    \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
+    = 2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 -2 \beta \omega_1 i) = 2 \omega_1 (\Gamma - 2 \beta \omega_1 i)
+\\]
+where I have defined
+\\[
+  \Gamma \equiv \omega_1^2 - \Omega^2 - \beta^2
+\\]
+
+When $$\omega \to \omega_-$$, it becomes $$(\omega-\omega_-)\Delta_-$$ where
+\\[
+    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma + 2 \beta \omega_1 i)
+\\]
 
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
 
