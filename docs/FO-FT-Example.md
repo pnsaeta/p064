@@ -162,6 +162,25 @@ When $$\omega \to \omega_-$$, it becomes $$(\omega-\omega_-)\Delta_-$$ where
     \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma + 2 \beta \omega_1 i)
 \\]
 
+Since case 3 is simpler (we get nothing from the poles on the real axis), we'll start there.
+\begin{align}
+  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
+    \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
+    + \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{-2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
+    &= -\frac{i F_0 \Omega}{2 m \omega_1} \left(
+      \frac{e^{-\beta t -i\omega_1 t} - e^{-\beta(t-T) - i\omega_1 (t-T)}}{\Gamma - 2\beta\omega_1 i}
+      - \frac{e^{-\beta t + i\omega_1 t} - e^{-\beta(t-T) + i\omega_1 (t-T)}}{\Gamma + 2 \beta\omega_1 i}
+    \right) \notag \\\
+    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{e^{-\beta t}}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+     \left(
+      (\Gamma + 2 \beta \omega_1 i)e^{-i\omega_1 t}(1 - e^{i\omega_1 T}) -
+      (\Gamma - 2 \beta \omega_1 i)e^{i\omega_1 t}(1 - e^{-i\omega_1 T})
+    \right) \notag \\\
+    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{e^{-\beta t}}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+     \left(-2 i \Gamma \sin(\omega_1 t)
+\end{align}
+
+
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
 
 For $$t > T$$, we must close in the LHP for the exponentials in the numerators to go to zero. But if $$0 < t < T$$, we have to separate numerator into two distinct integrals, because we have to close in opposite half planes for the two terms. In either case, the denominator goes to the same expression (apart from the term going to zero), so we can evaluate it first. When $$\omega \to \omega_+$$, the denominator becomes
