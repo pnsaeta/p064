@@ -171,14 +171,17 @@ Since case 3 is simpler (we get nothing from the poles on the real axis), we'll 
       \frac{e^{-\beta t -i\omega_1 t} - e^{-\beta(t-T) - i\omega_1 (t-T)}}{\Gamma - 2\beta\omega_1 i}
       - \frac{e^{-\beta t + i\omega_1 t} - e^{-\beta(t-T) + i\omega_1 (t-T)}}{\Gamma + 2 \beta\omega_1 i}
     \right) \notag \\\
-    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{e^{-\beta t}}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \left(
-      (\Gamma + 2 \beta \omega_1 i)e^{-i\omega_1 t}(1 - e^{i\omega_1 T}) -
-      (\Gamma - 2 \beta \omega_1 i)e^{i\omega_1 t}(1 - e^{-i\omega_1 T})
-    \right) \notag \\\
-    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{e^{-\beta t}}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \left(-2 i \Gamma \sin(\omega_1 t)
+    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+    \bigg(-2 i \Gamma e^{-\beta t} \sin\omega_1 t + 2 i \Gamma e^{-\beta(t-T)}\sin (\omega_1(t-T)) \notag \\\
+    & \qquad \qquad  +4 \beta \omega_1 i \cos\omega_1 t - 4 \beta \omega_1 i e^{-\beta(t-T)} \cos(\omega_1(t-T))
+       \bigg) \notag \\\
+    &= \frac{F_0 \Omega}{m\omega_1 (\Gamma^2 + 4 \beta^2 \omega_1^2)} \bigg[
+      \Gamma \left(e^{-\beta(t-T)}\sin(\omega_1(t-T)) - e^{-\beta t}\sin\omega_1 t \right)
+      \notag \\\
+    & \qquad \qquad 2 \beta \omega_1 \left(e^{-\beta t}\cos\omega_1 t -
+    e^{-\beta(t-T)} \cos(\omega_1(t-T)) \right)\bigg] \notag
 \end{align}
+
 
 
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.

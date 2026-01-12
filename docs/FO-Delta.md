@@ -16,7 +16,7 @@ We can make a smooth approximation to $$\delta(x)$$ using any smooth peaked func
 \begin{equation} \label{eq:gauss1}
     g(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-x^2 / 2 \sigma^2}
 \end{equation}
-where the parameter $$\sigma$$ governs how narrow the peak, and I have written the prefactor (allegedly) so that $$g(x)$$ is normalized:
+where the parameter $$\sigma$$ governs how narrow the peak is, and I have written the prefactor (allegedly) so that $$g(x)$$ is normalized:
 \begin{equation} \label{eq:gauss2}
     \int_{-\infty}^{\infty} g(x) \dd{x} = 1
 \end{equation}
@@ -26,16 +26,16 @@ We'll verify below that $$g(x)$$ is indeed normalized. But, first notice that as
 Delta functions are made to be integrated over:
 \begin{equation}\label{eq:prop1}
   \int_a^b \delta(x) \dd{x} = \begin{cases}
-    1 & a < 0 < b \\\ 
-    -1 & b < 0 < a \\\ 
+    1 & a < 0 < b \\\
+    -1 & b < 0 < a \\\
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
 and
 \begin{equation}\label{eq:prop2}
   \int_a^b \delta(x-x_0) f(x)\dd{x} = \begin{cases}
-    f(x_0) & a < x_0 < b \\\ 
-    -f(x_0) & b < x_0 < a \\\ 
+    f(x_0) & a < x_0 < b \\\
+    -f(x_0) & b < x_0 < a \\\
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
@@ -87,8 +87,8 @@ where $$\mu$$ is the mean value of $$g(x)$$, which here is zero by symmetry.
 ## Summary
 
 \begin{align}
-  \int \delta(x)\dd{x} &= 1,\text{ provided that we integrate over 0} \\\ 
-  \int \delta(x - x_0) f(x) \dd{x} &= f(x_0),\text{  provided that we integrate over $$x_0$$} \\\ 
+  \int \delta(x)\dd{x} &= 1,\text{ provided that we integrate over 0} \\\
+  \int \delta(x - x_0) f(x) \dd{x} &= f(x_0),\text{  provided that we integrate over $$x_0$$} \\\
   \int \delta(kx) f(x) \dd{x} &= \frac{1}{k} f(0),\text{  provided that we integrate over 0}
 \end{align}
 
