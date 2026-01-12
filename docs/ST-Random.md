@@ -79,7 +79,7 @@ test_rng(poor, "LCG")
 <p class="center" markdown="0">
   <img src="figs/LCG-test.webp" style="width: 700px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability that to exceed (PTE) this value of $$\thi^2$$.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability that to exceed (PTE) this value of $$\chi^2$$. Clearly, the histogram is **too even**.</p>
 
 ## Xorshift
 
@@ -116,7 +116,7 @@ ax.plot(np.cumsum(better), lw=0.5)
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-MyRNG-test.webp" style="width: 800px;" alt="Cumulative sum for a simple xorshift random number generator">
+  <img src="figs/ST-MyRNG-test.webp" style="width: 700px;" alt="Cumulative sum for a simple xorshift random number generator">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Cumulative sum for a simple xorshift random number generator.</p>
 
@@ -127,11 +127,21 @@ Of course, for more efficient work in Python, you should use the built-in functi
 from numpy random import default_rng
 
 rng = default_rng() # instantiate the default random number generator
-rng.random(size=40) # generate an array of 40 uniform deviates
+class DefRNG:
+    def __init__(self, rng):
+        self.rng = rng
+
+    def uniform(self, size):
+        return self.rng.uniform(size=size)
+
+    def zero_mean(self, size):
+        return self.rng.uniform(-1, 1, size=size)
+
+test_rng(DefRNG(rng), "ST-default-rng")
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-default-rng-test.webp" style="width: 800px;" alt="Cumulative sum of the numpy default random number generator">
+  <img src="figs/ST-default-rng-test.webp" style="width: 700px;" alt="Cumulative sum of the numpy default random number generator">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Cumulative sum using numpy's `default_rng()`.</p>
 
@@ -171,7 +181,7 @@ axs[1].set_xlabel("$y$");
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-xform.webp" style="width: 500px;">
+  <img src="figs/ST-xform.webp" style="width: 600px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Histograms of one million uniform deviates $$x$$ (left) and the corresponding exponential deviates transformed via $$y = -\ln x$$ (right).</p>
 
@@ -224,21 +234,21 @@ class BoxMuller:
 
     def many(self, size: int):
         """
-        We will likely need more than size random numbers from -1 to 1,
+        We will likely need more than `size` random numbers from -1 to 1,
         since we can only use those whose sum of squares is ≤ 1. The fraction
         that should satisfy this condition is π / 4 ≈ 0.7854, so we should need
-        something like size * 4 / π values
+        something like `size` * 4 / π values
         """
-        n = int(1.05 * size * 2 / np.pi)  # we'll do a few extra
-        xy = rng.uniform(-1, 1, size=(n, 2))
-        r2 = xy[:,0] ** 2 + xy[:,1]**2
-        good = np.nonzero(r2 <= 1)[0]
+        n = int(1.05 * size * 2 / np.pi)          # we'll do 5% extra
+        xy = rng.uniform(-1, 1, size=(n, 2))      # fetch all the uniform deviates
+        r2 = xy[:,0] ** 2 + xy[:,1] ** 2          # compute r^2
+        good = np.nonzero(r2 <= 1)[0]             # which are within the unit circle?
         mag = np.sqrt(-2 * np.log(r2[good]) / r2[good])
-        boxm = np.outer(mag, [1,1]) * xy[good,:]
-        boxy = boxm.flatten()
-        if len(boxy) >= size:
+        boxm = np.outer(mag, [1,1]) * xy[good,:]  # multiply mag by x and y
+        boxy = boxm.flatten()                     # combine all the x and y deviates
+        if len(boxy) >= size:                     # do we have enough?
             return boxy[:size]
-        more = self.many(size - len(boxy))
+        more = self.many(size - len(boxy))        # how many more do we need?
         return np.concatenate((boxy, more))
 
     def __call__(self, size=1):
