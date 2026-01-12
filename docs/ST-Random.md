@@ -1,15 +1,15 @@
 {:menu ST}
 
-
-
 # Pseudorandom Numbers
 
 * toc
 {:toc}
 
+There are many situations in which we wish to use random numbers to solve problems, either because the underlying physical processes have an element of randomness or because the parameter space is too large to sample exhaustively. The starting point for a variety of random distributions is the uniform deviate, such as a random integer between 0 and some maximum value $$N$$.
+
 ## Linear Congruential Generators
 
-There are many situations in which we wish to use random numbers to solve problems, either because the underlying physical processes have an element of randomness or because the parameter space is too large to sample exhaustively. The starting point for a variety of random distributions is the uniform deviate, such as a random integer between 0 and some maximum value $$N$$. Starting in 1949, a particularly simple sort of "random" number generator was used to approximate truly random numbers. It is called a **linear congruential generator (LCG)** and has the simple form
+Starting in 1949, a particularly simple sort of "random" number generator was used to approximate truly random numbers. It is called a **linear congruential generator (LCG)** and has the simple form
 \begin{equation}\label{eq:LCG}
   I_{j+1} = (a I_j + c) \; \mathrm{mod} \; m
 \end{equation}
@@ -25,7 +25,7 @@ A workhorse random number generator must pass a battery of tests of randomness. 
 \\[
     \chi^2 = \sum_{n=1}^{N} \frac{(y_n - E_n)^2}{E_n}
 \\]
-where $$E_n$$ is the number of counts we expect to observe in the $$n$$th bin and $$y_n$$ is the actual number of counts observed. Roughly speaking, we expect $$\chi^2$$ to be about $$N$$.
+where $$E_n$$ is the number of counts we expect to observe in the $$n$$th bin and $$y_n$$ is the actual number of counts observed. Roughly speaking, we expect $$\chi^2$$ to be about $$N$$, the number of bins.
 
 There are plenty of others, as mentioned in *Numerical Recipes*, which references the "Diehard" battery of statistical tests with the caveat to be sure that said Diehard includes the so-called "Gorilla Test." How's that for colorful?!
 
@@ -38,11 +38,11 @@ class LCG:
         self.a = a
         self.c = c
         self.m = m
-    
+
     def __call__(self):
         self.x = (self.a * self.x + self.c) % self.m
         return self.x / self.m
-    
+
     @property
     def zero_mean(self):
         return 2 * self() - 1
@@ -72,7 +72,7 @@ class MyRNG:
     def __init__(self, seed=184738293):
         assert isinstance(seed, int) and seed != 0
         self._x = np.array([seed], dtype=np.uint64)
-    
+
     def int(self):
         self._x = self._x ^ (self._x >> 21)
         self._x = self._x ^ (self._x << 35)
@@ -164,13 +164,13 @@ One way to produce deviates that follow the normal distribution uses a generaliz
 \end{equation}
 If we let
 \begin{align}
-  x_1 &= \exp\qty[-\frac12 (y_1^2 + y_2^2)] \notag \\\ 
+  x_1 &= \exp\qty[-\frac12 (y_1^2 + y_2^2)] \notag \\\
   x_2 &= \frac{1}{2\pi} \arctan \frac{y_2}{y_1}
 \end{align}
 then the Jacobian is
 \\[
     \left|\begin{pmatrix}
-      -y_1 e^{-(y_1^2+y_2^2)^2/2} & \frac{1}{2\pi} \frac{1}{1+y_2^2/y_1^2}\qty(-\frac{y_2}{y_1^2}) \\\ 
+      -y_1 e^{-(y_1^2+y_2^2)^2/2} & \frac{1}{2\pi} \frac{1}{1+y_2^2/y_1^2}\qty(-\frac{y_2}{y_1^2}) \\\
       -y_2 e^{-(y_1^2+y_2^2)^2/2} & \frac{1}{2\pi} \frac{1}{1+y_2^2/y_1^2}\qty(\frac{1}{y_1})
     \end{pmatrix} \right|
     =
@@ -185,13 +185,13 @@ That is
 \\]
 showing that the two variables $$y_1$$ and $$y_2$$ each have Gaussian distributions. We now need to invert to get $$y_1$$ and $$y_2$$ as functions of $$x_1$$ and $$x_2$$:
 \begin{align}
-  -2\ln x_1 &= y_1^2 + y_2^2  \notag \\\ 
+  -2\ln x_1 &= y_1^2 + y_2^2  \notag \\\
   \frac{\sin(2\pi x_2)}{\cos(2\pi x_2)} &= \frac{y_2}{y_1} \notag
 \end{align}
 
-So, 
+So,
 \begin{align}
-  y_1 &= \cos(2\pi x_2) \sqrt{-2 \ln x_1}  \notag \\\ 
+  y_1 &= \cos(2\pi x_2) \sqrt{-2 \ln x_1}  \notag \\\
   y_2 &= \sin(2\pi x_2) \sqrt{-2 \ln x_1}  \notag
 \end{align}
 
@@ -220,7 +220,7 @@ class BoxMuller:
             return boxy[:size]
         more = self.many(size - len(boxy))
         return np.concatenate((boxy, more))
-        
+
     def __call__(self, size=1):
         if size == 1:
             if self.next:
@@ -249,7 +249,7 @@ ax.hist(v, bins=np.arange(-4,4,0.05), density=True);
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Normal deviates computed using the Box-Muller method.</p>
 
-Naturally, NumPy has an optimized routine to generate normal deviates called `rng.normal(loc, scale, size)`. The first two parameters are either floats or array_like of floats. The size parameter should be an int or a tuple of ints. 
+Naturally, NumPy has an optimized routine to generate normal deviates called `rng.normal(loc, scale, size)`. The first two parameters are either floats or array_like of floats. The size parameter should be an int or a tuple of ints.
 
 ~~~~ python
 fig, ax = plt.subplots()
@@ -300,11 +300,11 @@ Of course, this method cannot give the exact value for the integral. How much er
 where the first term shows the probability of 2 successes, the second the probability of a single success, and third the probability of no successes. Generalizing to $$N$$ throws, we have the probability of $$n$$ successes is given by the [binomial distribution](ST-Binomial.md).
 \\[
     P(n) = \binom{N}{n} p^n q^{(N-n)} = \frac{N!}{n! (N-n)!} p^n q^{(N-n)}
-\\] 
+\\]
 
 As derived on [the binomial distribution page](ST-Binomial.md), the mean number of successes and their standard deviation are given by
 \begin{align}
-  \ev{n} &= Np  \notag \\\ 
+  \ev{n} &= Np  \notag \\\
   \sigma &= \sqrt{N p q} \notag
 \end{align}
 

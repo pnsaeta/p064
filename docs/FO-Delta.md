@@ -39,7 +39,7 @@ and
     0 & \text{otherwise}
     \end{cases}
 \end{equation}
-That is, they pick out the function of whatever they multiply in the integrand at the point(s) where they blow up—provided that the range of integration includes the blow up.
+That is, they pick out the value of the function at the point(s) where they (the delta functions) blow up—provided that the range of integration includes the blow up.
 
 ### Normalization
 
@@ -126,30 +126,35 @@ Let's see if we can evaluate this integral using contour integration on the comp
 \\]
 so that the path includes the integral we want (going from $$-\infty$$ to $$\infty$$ along the real axis) and then finding a way to close the contour that doesn't add anything to the integral.
 
-Suppose that $$x_n > 0$$. Then if we close along a semicircle at $$ R = \infty $$ in the upper half-plane (UHP), along that path we have $$z = R e^{i \theta}$$ so that $$\dd{z} = iR e^{i \theta} \dd{\theta}$$
+Suppose that $$x_n > 0$$. Then if we close along a semicircle at $$ R = \infty $$ in the upper half-plane (UHP), as illustrated in <a href="#Fig1">Fig. 1</a>, along that path we have $$z = R e^{i \theta}$$ so that $$\dd{z} = iR e^{i \theta} \dd{\theta}$$:
 \\[
-    I = \frac{1}{2\pi i} \int_0^{\pi} \frac{e^{i x_n R (\cos\theta + i\sin\theta)}}{R e^{i\theta}} i R e^{i\theta}\dd{\theta} = \frac{1}{2\pi} \int_{0}^{\pi} e^{ix_nR\cos\theta}
+    I_{\text{semicircle}} = \frac{1}{2\pi i} \int_0^{\pi} \frac{e^{i x_n R (\cos\theta + i\sin\theta)}}{R e^{i\theta}} i R e^{i\theta}\dd{\theta} = \frac{1}{2\pi} \int_{0}^{\pi} e^{ix_nR\cos\theta}
     e^{-x_n R \sin\theta} \dd{\theta}
 \\]
-In the UHP, the second exponential goes strongly to zero, while the first exponential oscillates at a frequency that diverges. Therefore, $$I \to 0$$ and by closing along the semicircular path at $$R \to \infty$$ in the UHP, we add no additional contribution to the integral.
+In the UHP, the second exponential goes strongly to zero as $$R \to \infty$$, while the first exponential oscillates at a frequency that diverges. Therefore, $$I_\text{semicircle} \to 0$$ and by closing along the semicircular path at $$R \to \infty$$ in the UHP, we add no additional contribution to the integral.
 
 <p class="center" markdown="0">
-  <img src="figs/UHP.webp" style="width: 300px;">
+  <img src="figs/UHP.webp" style="width: 300px;" alt="">
 </p>
-<p class="mycap" markdown="1">Contour closing in the upper half-plane appropriate when $$x_n > 0$$.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Contour closing in the upper half-plane appropriate when $$x_n > 0$$.</p>
 
-We now need to evaluate $$I$$ along the illustrated path. The integrand has a simple pole at $$z = 0$$ which lies exactly along the path. We can either deviate the path on a tiny semicircular path passing underneath the origin, which puts the pole inside the path, or deviate on a tiny semicircle above the origin, which will exclude the pole from the path. I'll take the former choice, as illustrated in the following figure.
+
+We now need to evaluate $$I$$ along the illustrated path. The integrand has a simple pole at $$z = 0$$ which lies exactly along the path. We can either deviate the path on a tiny semicircular path passing underneath the origin, which puts the pole inside the path, or deviate on a tiny semicircle above the origin, which will exclude the pole from the path. I'll take the former choice, as illustrated in the <a href="#Fig2">Fig.&nbsp;2</a>.
 
 <p class="center" markdown="0">
-  <img src="figs/CauchyPValue.webp" style="width: 300px;">
+  <img src="figs/CauchyPValue.webp" style="width: 300px;" alt="deviating below">
 </p>
-<p class="mycap" markdown="1"></p>
+<p class="mycap" markdown="1"><a name="Fig2">Figure 2</a> — Deviating the contour along a tiny semicircle under the origin.</p>
 
  Along that tiny semicircle, $$z = \epsilon e^{i\theta}$$ for $$\pi \le \theta \le 2\pi$$. The contribution to the path integral along this tiny portion of path is thus
 \\[
     I_{sc} = \int_{\pi}^{2\pi} \frac{e^{ix_n \epsilon e^{i\theta}}}{\epsilon e^{i\theta}} i\epsilon e^{i\theta} \dd{\theta} = i \int_\pi^{2\pi} e^{i x_n \epsilon e^{i\theta}} \dd{\theta} = i\pi
 \\]
-as $$\epsilon \to 0$$. By distorting the path, we have added $$i\pi$$ to the value of the integral, so we need to subtract it from the result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral is
+as $$\epsilon \to 0$$. By distorting the path, we have added $$i\pi$$ to the value of the integral, so we need to subtract it from the final result. Since the pole now lies within the contour, by the residue theorem, the value of the adjusted integral,
+\\[
+    I = \frac{1}{2\pi i} \oint \frac{e^{i x_n z}}{z}\dd{z}
+\\]
+ is
 \\[
     I = \frac{1}{2\pi i}\times \qty(2\pi i a_{-1} - i\pi) = \frac{1}{2}
 \\]
@@ -162,4 +167,9 @@ If, on the other hand, $$x_n < 0$$, we must close in the lower half-plane (LHP).
 \\[
     b(x_n) = -\frac12 \qqtext{if $$x_n < 0$$}
 \\]
-But this is *exactly* what we need. If $$x_1$$ and $$x_2$$ have the same sign, then they integrate to give the same value (either $$\frac12$$ or $$-\frac12$$) and cancel one another in Eq. (\ref{eq:a}). If they straddle zero and $$x_2 > x_1$$ then the integral gives $$\frac12 - (-\frac12) = 1$$, as we expect for a $$\delta$$ function: integrating over where it turns on should give unity. If $$x_1$$ and $$x_2$$ straddle in the opposite order, then we get $$-1$$, again as we expect.
+But this is *exactly* what we need. If $$x_1$$ and $$x_2$$ have the same sign, then they integrate to give the same value (either $$\frac12$$ or $$-\frac12$$) and cancel one another in Eq. (\ref{eq:a}). If they straddle zero and $$x_2 > x_1$$ then the integral gives $$\frac12 - (-\frac12) = 1$$, as we expect for a $$\delta$$ function: integrating over where it turns on should give unity. If $$x_1$$ and $$x_2$$ straddle in the opposite order, then we get $$-1$$, again as we expect. Therefore,
+\\[
+    \delta(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{ik x}\dd{k}
+\\]
+
+Next: [Numerical Fourier Transforms](FO-Numerical-FFT.md)
