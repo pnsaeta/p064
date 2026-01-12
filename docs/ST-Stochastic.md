@@ -7,11 +7,11 @@
 * toc
 {:toc}
 
-Stochastic processes have an essential component of randomness (the word *stochastic* comes from the Greek for "aim at, guess"). 
+Stochastic processes have an essential component of randomness (the word *stochastic* comes from the Greek for "aim at, guess").
 
 ## One-Dimensional Random Walk
 
-Suppose that a walker of indeterminate gender begins at the origin and at each time step flips a coin; if it is heads, they take one step to the right; if it is tails, they take one step to the left. If we treat each coin flip as a random event (as opposed to a determinstic exercise in rotational and translational dynamics), then the "progress" that our walker makes away from the origin is a matter of probabilities. How far from the origin is the walker after $$N$$ flips? 
+Suppose that a walker of indeterminate gender begins at the origin and at each time step flips a coin; if it is heads, they take one step to the right; if it is tails, they take one step to the left. If we treat each coin flip as a random event (as opposed to a determinstic exercise in rotational and translational dynamics), then the "progress" that our walker makes away from the origin is a matter of probabilities. How far from the origin is the walker after $$N$$ flips?
 
 Such a random walk is described by the [binomial distribution](ST-Binomial.md), for which the mean number of steps to the right is $$\ev{n} = N p$$, where $$p$$ is the probability of a step to the right (i.e., of the coin showing heads) and the standard deviation of the distance from the origin is $$\sigma = \sqrt{N p q}$$, where $$q = 1 - p$$. If the coin is fair, $$ p = q = 1/2 $$ and the average *position* of the walker is the always at the origin, while the *typical distance from the origin* is $$\sigma = \frac12 \sqrt{N}$$. That is, the typical net distance the random walker covers grows with the square root of the number of steps.
 
@@ -27,11 +27,11 @@ If each direction is equally likely, then the average value of $$\delta x$$ for 
 \\[
     \ev{\delta x} = \frac{1}{2\pi} \int_0^{2\pi} \cos \theta \dd{\theta} = 0
 \\]
-and 
+and
 \\[
     \ev{(\delta x)^2} = \frac{1}{2\pi} \int_0^{2\pi} \cos^2 \theta\dd{\theta} = \frac12
 \\]
-The averages for $$\delta y$$ are the same. So, after $$N$$ steps, we expect 
+The averages for $$\delta y$$ are the same. So, after $$N$$ steps, we expect
 \\[
     \ev{r^2} = N\ev{(\delta x)^2} + N\ev{(\delta y)^2} = \frac{N}{2} + \frac{N}{2} = N
 \\]
@@ -40,6 +40,12 @@ In other words, we expect the walker to be about at radius $$r = \sqrt{N}$$ afte
 ### Exercise
 
 Simulate a random walk in which the walker takes random steps of length 1 in an arbitrary direction in the $$xy$$ plane and see if you can corroborate the expectation that the walker is about $$\sqrt{N}$$ steps from the origin after taking $$N$$ steps. I say about, because our method evaluates the mean square distance, $$\ev{r^2}$$. The average of $$r^2$$ is greater than the square of the average of $$r$$.
+
+<p class="center" markdown="0">
+  <img src="figs/ST-2D-Walk.webp" style="width: 100%;" alt="">
+</p>
+<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+
 
 ## Thermal Systems
 
@@ -84,7 +90,7 @@ Since the initial configuration of spins is not likely to be close to equilibriu
 
 Energy of the system of spins is not conserved. It is likely that the energy will decline sharply towards the beginning of the simulation, but eventually it should fluctuate about an equilibrium value. Both the equilibrium energy and the magnitude of the fluctuations are interesting thermal quantities:
 \begin{align}
-  C &= \frac{1}{k_{\rm B}T^2} \qty( \ev{E^2} - \ev{E}^2) \qquad \text{heat capacity}\notag \\\ 
+  C &= \frac{1}{k_{\rm B}T^2} \qty( \ev{E^2} - \ev{E}^2) \qquad \text{heat capacity}\notag \\\
   \chi &= \frac{1}{k_{\rm B} T} \qty( \ev{M^2} - \ev{M}^2) \qquad \text{magnetic susceptibility} \notag
 \end{align}
 where the magnetization, $$M$$, is simply $$\sum_i s_i$$.

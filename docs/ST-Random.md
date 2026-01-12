@@ -306,16 +306,16 @@ As you can see, `quad` worked very well indeed. Where `quad` may not work so wel
 **Monte Carlo integration** takes an entirely different approach akin to throwing darts. To illustrate, I will compute $$\pi$$ in a simple-minded way: I will throw a bunch of darts at the unit square (as in, I will draw $$(x,y)$$ from a random number generator that returns uniform deviates). If the dart is within a radius of 1 of the origin, I will call it a success. Since the ratio of the area of the quarter circle to the square is $$\pi/4$$, if I multiply the success rate by 4 I should obtain an estimate of $$\pi$$.
 
 ~~~~ python
-fig, ax = plt.subplots(figsize=(6,6))
+fig, ax = plt.subplots(figsize=(9, 9))
 phi = np.linspace(0, np.pi/2, 100)
 ax.plot(np.cos(phi), np.sin(phi), 'k-', lw=2)
-pts = rng.uniform(size=(10000,2))
+pts = rng.uniform(size=(50000,2))
 r2 = pts[:,0]**2 + pts[:,1]**2
 color = np.where(r2 < 1, 'g', 'r')
-ax.scatter(pts[:,0], pts[:,1], s=3, marker='o', c=color)
+ax.scatter(pts[:,0], pts[:,1], s=2, marker='o', c=color)
 inside = np.count_nonzero(r2<1)
 pi_est = 4 * inside / pts.shape[0]
-ax.set_title(r"$\pi \approx " + "%.4f" % pi_est + "$");
+ax.set_title(r"$\pi \approx %.4f$" % pi_est);
 ~~~~
 
 <p class="center" markdown="0">
@@ -347,9 +347,9 @@ In other words, the relative uncertainty will be minimized by making $$N$$ as la
 ### Does our estimate agree with expectations?
 
 Of course, we know what the correct value of $$\pi$$ is and our estimate is off by a relative error of
-$$ (\pi - 3.1588) / \pi = -0.0055$$, whereas the expected standard deviation over the mean is
+$$ (\pi - 3.1490) / \pi = -0.002\,37$$. We threw $$N = 50\,000$$ darts and found $$39\,363$$ inside the circle. So $$p = \frac{39\,363}{50\,000} = 0.787\,26$$, which means the expected standard deviation over the mean is
 \\[
-    \frac{\sigma}{\ev{n}} = \sqrt{ \frac{1-p}{Np} } = \sqrt{ \frac{0.215}{10\,000 \cdot 0.785}} = 0.005
+    \frac{\sigma}{\ev{n}} = \sqrt{ \frac{1-p}{Np} } = \sqrt{ \frac{1-0.787\,26}{50\,000 \cdot 0.787\,26}} = 0.002\,32
 \\]
 Very nice agreement.
 
@@ -360,3 +360,4 @@ The volume of a sphere is $$V = \frac{4}{3} \pi R^3$$; the volume of a hypersphe
     C_d = \frac{\pi^{d/2}}{\frac{d}{2} \Gamma\qty(\frac{d}{2})}
 \\]
 
+Next: [Stochastic Processes](ST-Stochastic)
