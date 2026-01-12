@@ -51,9 +51,9 @@ Some of the most important ODEs in physics include
 
 - Legendre’s equation arises when solving Laplace's equation in spherical coordinates, such as when one seeks the eigenstates of the hydrogen atom.
 
-- Bessel's equation describes the spatial component of waves on a spherical membrane, or waves on a pond. Solutions oscillate with an amplitude that falls off (asymptotically) with distance $$x$$ as $$1/\sqrt{x}$$, consistent with energy conservation as the wave propagates outward.
+- Bessel's equation describes the radial component of waves on a spherical membrane, or waves on a pond. Solutions oscillate with an amplitude that falls off (asymptotically) with distance $$x$$ as $$1/\sqrt{x}$$, consistent with energy conservation as the wave propagates outward.
 
-- The generalized Laguerre equation also arises as the radial equation when solving for the eigenstates of the hydrogen atom.
+- The generalized Laguerre equation arises as the radial equation when solving for the eigenstates of the hydrogen atom.
 
 
 ## Using the ODE to Characterize its Solutions
@@ -68,7 +68,7 @@ But, suppose that you didn't know that. Can we use the differential equation its
 
 With tongue in cheek (or malice of forethought), let us call the two solutions $$s(x)$$ and $$c(x)$$, and distinguish them by their properties at $$x = 0$$. We will take
 \begin{align}
-  s(0) &= 0 & \qquad s'(0) &= 1  \notag \\\ 
+  s(0) &= 0 & \qquad s'(0) &= 1  \notag \\\
   c(0) &= 1 & \qquad c'(0) &= 0 \notag
 \end{align}
 and note that the general solution must take the form
@@ -101,7 +101,7 @@ The same reasoning starting with $$c'(x) = A c(x) + B s(x)$$ and applying it at 
 \\]
 Differentiating again gives $$c''(x) = -c(x)$$, which at 0 yields
 \\[
-    c^{\prime\prime}(0) = -c(0) = -1 = B s'(0) = B 
+    c^{\prime\prime}(0) = -c(0) = -1 = B s'(0) = B
     \qquad \longrightarrow\qquad c'(x) = -s(x)
 \\]
 We can also establish the Pythagorean theorem! Note that at $$x = 0$$, $$c(0)^2 + s(0)^2 = 1$$. Now differentiate $$f = c^2(x) + s^2(x)$$ with respect to $$x$$:
@@ -119,14 +119,14 @@ Let us now consider a more general second-order linear differential equation,
 \\]
 The **Wronskian** of two functions is defined by $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
 \\[
-    \dv{W}{x} = f' g' + f g^{\prime\prime} - (g' f' + g f^{\prime\prime}) = 
+    \dv{W}{x} = f' g' + f g^{\prime\prime} - (g' f' + g f^{\prime\prime}) =
     f g^{\prime\prime} - g f^{\prime\prime}
 \\]
 Now we take advantage of the fact that each function solves the differential equation:
 \begin{align}
-  \dv{W}{x} &= f(x)[A(x) g'(x) + B(x)g(x)] - g(x)[A(x) f'(x) + B(x) f(x)]  \notag \\\ 
-  &= A(x) [f(x) g'(x) - g(x) f'(x)] = A(x) W(x) \notag \\\ 
-  \frac{1}{W} \dd{W} &= A(x)\dd{x} \notag \\\ 
+  \dv{W}{x} &= f(x)[A(x) g'(x) + B(x)g(x)] - g(x)[A(x) f'(x) + B(x) f(x)]  \notag \\\
+  &= A(x) [f(x) g'(x) - g(x) f'(x)] = A(x) W(x) \notag \\\
+  \frac{1}{W} \dd{W} &= A(x)\dd{x} \notag \\\
   \ln W &= \int A(x)\dd{x} \qquad\longrightarrow\qquad
   W(x) = c \exp\qty[\int A(x)\dd{x}] \label{eq:Abel}
 \end{align}
@@ -139,7 +139,7 @@ Consider the differential equation
   x^2 y'' + 2 x y' - 2y = 0
 \end{equation}
 for $$x > 0$$. (a) Show that $$y_1(x) = x$$ is a solution. (b) Use this solution and Abel's formula to find the second solution, $$y_2(x)$$.
-   
+
 ## Method of Frobenius
 
 The method of Frobenius is to way of developing series solutions to differential equations that aren't "too bad"—meaning that any singular points are regular. The method is quite simple. We assume a (Frobenius) series solution of the form
@@ -158,10 +158,10 @@ Substituting the Frobenius series into this equation gives
 \begin{align}
     x^2 \sum_{k=0}^\infty (k+s)(k+s-1)a_k x^{k+s-2} +
     x \sum_{k=0}^\infty (k+s) a_k x^{k+s-1} +
-    \sum_{k=0}^\infty (x^2 - n^2) a_k x^{k+s} &= 0 \notag \\\ 
+    \sum_{k=0}^\infty (x^2 - n^2) a_k x^{k+s} &= 0 \notag \\\
     \sum_{k=0}^\infty [(k+s)(k+s-1) + (k+s) - n^2 ] a_k x^{k+s}
     + \sum_{k=0}^\infty a_k x^{k+s+2}
-    &= 0 \notag \\\ 
+    &= 0 \notag \\\
     x^s \qty\{\sum_{l=0}^\infty [(s+l)^2 - n^2] a_l x^l +
     \sum_{l=2}^\infty a_{l-2} x^l \} &= 0
 \end{align}
@@ -179,8 +179,8 @@ Therefore,
 \\]
 Let's use this recursion relation to solve for $$J_0(x)$$, the zeroth-order Bessel function of the first kind for $$n = 0$$.
 \begin{align}
-  a_2 &= - \frac{1}{2^2}  \notag \\\ 
-  a_4 &= - \frac{a_2}{4^2} = \frac{1}{(2 \cdot 4)^2} \notag \\\ 
+  a_2 &= - \frac{1}{2^2}  \notag \\\
+  a_4 &= - \frac{a_2}{4^2} = \frac{1}{(2 \cdot 4)^2} \notag \\\
   a_{2k} &= (-1)^k \frac{1}{2^{2k}} \qty(\frac{1}{k!})^2 \notag
 \end{align}
 which we can combine to form

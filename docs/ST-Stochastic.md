@@ -44,7 +44,7 @@ Simulate a random walk in which the walker takes random steps of length 1 in an 
 <p class="center" markdown="0">
   <img src="figs/ST-2D-Walk.webp" style="width: 100%;" alt="">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A collection of two-dimensional random walks, starting from the origin (shown with a white square), each taking $$N=1000$$ steps of unit length. The colored circles mark the expected value of $$\sqrt{\ev{r^2}} = \sqrt{n}$$ after 200, 400, 600, 800, and 1000 steps. The colored dots make the corresponding position on each walk.</p>
 
 
 ## Thermal Systems
