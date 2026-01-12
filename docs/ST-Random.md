@@ -47,19 +47,39 @@ class LCG:
     def zero_mean(self):
         return 2 * self() - 1
 
-# Now create a poorly designed MLCG and test it
+def chisqtest(udev, nbins: int=100):
+    """
+    Given an array of uniform deviates on [0,1), compute χ^2 and return
+    the probability to exceed.
+    """
+    from scipy.stats import chi2
+    expected = len(udev) / nbins
+    h, edges = np.histogram(udev, bins=nbins, range=(0,1))
+    chisq = np.sum((h - expected)**2) / expected
+    return chisq, float(1 - chi2.cdf(chisq, df=nbins-1))
 
+# Testing/plotting routine
+def test_rng(gen, name: str, N: int=10000, figsize=(10,5)):
+    v = gen.uniform(size=N)
+    ch, Pexceed = chisqtest(v)
+    mn = v.mean()
+    fig, axs = plt.subplots(ncols=2, figsize=figsize)
+    axs[0].plot(np.cumsum(gen.zero_mean(N)), c=fs.traces[0], lw=0.5)
+    axs[1].hist(v, bins=100, color=fs.traces[1], alpha=0.25)
+    axs[0].set_title(f"Mean = {mn:.4f}")
+    axs[0].set_ylabel("Cumulative Sum")
+    axs[1].set_title(r"$\chi^2 = %.2f$, PTE $= %.2f$" % (ch, Pexceed))
+    return fig
+
+# Now create a poorly designed MLCG and test it
 poor = LCG(899, 0, 32768)
-lousy = [poor.zero_mean for n in range(33333)]
-fig, ax = plt.subplots()
-ax.plot(np.cumsum(lousy), lw=0.5);
+test_rng(poor, "LCG")
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/ST-LCG-test.webp" style="width: 800px;">
+  <img src="figs/LCG-test.webp" style="width: 700px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator and the associated value of $$\chi^2$$.</p>
-
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability that to exceed (PTE) this value of $$\thi^2$$.</p>
 
 ## Xorshift
 
@@ -329,3 +349,4 @@ The volume of a sphere is $$V = \frac{4}{3} \pi R^3$$; the volume of a hypersphe
 \\[
     C_d = \frac{\pi^{d/2}}{\frac{d}{2} \Gamma\qty(\frac{d}{2})}
 \\]
+
