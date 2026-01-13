@@ -29,9 +29,9 @@ of $$v$$, from which we can determine a new value of slope and then a new value 
 $$v$$, etc. The result is illustrated by the light red line in the figure below.
 
 <p class="center" markdown="0">
-  <img src="figs/slope-field.webp" style="width: 400px;">
+  <img src="figs/slope-field.webp" style="width: 400px;" alt="Slope field">
 </p>
-<p class="mycap" markdown="1">The arrows show the derivative $$\dot{v}$$; the red curve shows an example solution to the first-order equation, while the dashed green line shows the continuation of the slope from its value at $$t = 0$$.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The arrows show the derivative $$\dot{v}$$; the red curve shows an example solution to the first-order equation, while the dashed green line shows the continuation of the slope from its value at $$t = 0$$.</p>
 
 ## Solving a first-order differential equation of time
 
@@ -91,15 +91,15 @@ some refinements.
 At the top of the notebook, enter
 
 ~~~ python
-%matplotlib notebook
+%matplotlib widget
 import numpy as np
 import matplotlib.pyplot as plt
 ~~~
 
 The first line enables graphics output by matplotlib to be embedded in the
-notebook; the other two load the numpy and matplotlib modules.
+notebook; the other two load the numpy and matplotlib modules. If you are using the older Jupyter Notebook, change `widget` to `notebook` in the first line.
 
-~~~ python
+~~~~ python
 b = 1      # the damping coefficient (you can change this value)
 m = 1      # the particle mass (you can change this, too)
 v0 = 5     # the initial velocity
@@ -120,16 +120,17 @@ ax.plot(t, v0 * np.exp(-b/m * np.array(t)), 'b-', label='true')
 ax.set_xlabel('$$t$$')
 ax.set_ylabel('$$v$$')
 ax.legend();
-~~~
+~~~~
 
-The results are shown in Fig. [20](#org8565d13), which indicates that the values calculated
+The results are shown in Fig.&nbsp;2, which indicates that the values calculated
 using Euler’s method lie below the true solution to the differential equation,
 which is $$v(t) = v_0 \exp(-\frac{b}{m} t)$$.
 
 <p class="center" markdown="0">
-  <img src="figs/euler.webp" style="width: 500px;">
+  <img src="figs/euler.webp" style="width: 500px;" alt="Euler's method">
 </p>
-<p class="mycap" markdown="1">Euler’s method (red dots) compared to the true solution to the differential equation.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Euler’s method (red dots) compared to the true solution to the differential equation.</p>
+
 
 ### Question
 
@@ -406,7 +407,7 @@ If we use more conventional notation, in which $$\dot{x} = v$$ and $$\ddot{x} =
 \dot{v}$$, we could write
 
 \begin{align}
-  \dot{v} &= - \frac{k}{m} x \\\ 
+  \dot{v} &= - \frac{k}{m} x \\\
   \dot{x} &= v
 \end{align}
 
@@ -427,7 +428,7 @@ use **two** dependent variables, $$x$$ and $$v$$, to write the coupled equations
   \left[
   \begin{array}
     \dot{x}
-    \\\ 
+    \\\
     \dot{v}
  \end{array}
  \right]
@@ -462,7 +463,7 @@ def SHOderivs(t, X, k, m):
     where the dependent variable X holds [x, v].
     """
     x, v = X # we use x = X[0] and v = X[1]
-    # the derivative dx/dt = v, and 
+    # the derivative dx/dt = v, and
     # the derivative dv/dt = -k/m * x
     # we have to return the derivatives in the same order as the coordinates
     # were delivered in X
@@ -746,7 +747,7 @@ to show that in the case of small displacements from equilibrium, the
 accelerations in the $$x$$ and $$y$$ directions are given by
 
 \begin{align}
-  \ddot{x} &= -\frac{g}{\ell} x \\\ 
+  \ddot{x} &= -\frac{g}{\ell} x \\\
   \ddot{y} &= -\frac{g}{\ell} y
 \end{align}
 
@@ -770,7 +771,7 @@ from energy, rather than forces. We will discuss this approach soon in more deta
 be very helpful for certain projects. In the meantime, the
 summary is the following:
 
-1. Pick generalized coordinates $$q_i$$ that uniquely identify the configuration of the system. These 
+1. Pick generalized coordinates $$q_i$$ that uniquely identify the configuration of the system. These
 may be Cartesian, but may also be angles or other convenient quantities.
 2. Compute the potential energy $$U$$ in terms of the $$q_i$$.
 3. Compute the kinetic energy $$T$$ in terms of the $$q_i$$ and their time derivatives, $$\dot{q}_i$$.
@@ -793,7 +794,7 @@ if we measure $$\theta$$ from the south pole and the kinetic energy is
 After computing the lagrangian $$L = T-U$$ and applying the Euler-Lagrange equation
 for $$\theta$$ and $$\phi$$, we get the following equations of motion:
 \begin{align}
-  \ddot{\theta} &= \sin\theta \cos\theta \dot{\phi}^2 - \frac{g}{l} \sin\theta \label{eq:thd} \\\ 
+  \ddot{\theta} &= \sin\theta \cos\theta \dot{\phi}^2 - \frac{g}{l} \sin\theta \label{eq:thd} \\\
   \ddot{\phi} &= - 2\frac{\dot{\phi}_0 \sin^2 \theta_0}{\sin^3 \theta} \cos\theta \; \dot{\theta} \label{eq:phid}
 \end{align}
 

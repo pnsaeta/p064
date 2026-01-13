@@ -179,7 +179,8 @@ Therefore,
 \\]
 Let's use this recursion relation to solve for $$J_0(x)$$, the zeroth-order Bessel function of the first kind for $$n = 0$$.
 \begin{align}
-  a_2 &= - \frac{1}{2^2}  \notag \\\
+  a_0 &= 1 \notag \\\
+  a_2 &= - \frac{a_0}{2^2}  \notag \\\
   a_4 &= - \frac{a_2}{4^2} = \frac{1}{(2 \cdot 4)^2} \notag \\\
   a_{2k} &= (-1)^k \frac{1}{2^{2k}} \qty(\frac{1}{k!})^2 \notag
 \end{align}
@@ -220,4 +221,4 @@ ax.set_ylabel(r"$J_0(x)$");
 
 You can readily see the fine agreement between the truncated series and the `scipy` version of $$J_0(x)$$.
 
-[Numerical Approaches](DE-DE2.md)
+Next: [Numerical Approaches](DE-DE2.md)
