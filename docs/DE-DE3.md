@@ -23,77 +23,70 @@ more accurate solutions **to first-order equations** without having to take real
 steps. Wouldn’t it be nice if we could somehow take advantage of these tools to solve
 second-order differential equations?
 
-## The Secret
+## The Trick
 
-As it turns out, we can leverage all we have learned to handle a second-order
-equation! The trick is to use twice as many first-order equations. Let’s see how
-that can work using a particularly simple example. Suppose we wish to solve
+As it turns out, we can leverage all we have learned about integrating first-order equations to handle second-order equations! The trick is to express the single second-order equation as two coupled first-order equations.
 
+Let’s see how that can work using a particularly simple example. Suppose we wish to solve
 \begin{equation}
   m\ddot{x} = - k x
 \end{equation}
-
 which describes a particle of mass $$m$$ subject to a restoring force that grows linearly with
 displacement from $$x = 0$$. (Remember that the dots signify derivatives with respect to time.)
 
 If we use more conventional notation, in which $$\dot{x} = v$$ and $$\ddot{x} =
 \dot{v}$$, we could write
-
 \begin{align}
   \dot{v} &= - \frac{k}{m} x \\\
   \dot{x} &= v
 \end{align}
-
 each of which is a **first-order equation**. That is, by introducing as a new
 variable the first-derivative of position with respect to time ($$v$$), we can
-break apart the single second-order equation into **two coupled first-order
-equations**.
+break apart the single second-order equation into **two coupled first-order equations**.
+Easy!
 
-Let’s say that again. To solve a second-order differential equation of the form
-
+Let's say that again. To solve a second-order differential equation of the form
 \begin{equation}
   \ddot{x} = f(x, \dot{x}, t)
 \end{equation}
-
-use **two** dependent variables, $$x$$ and $$v$$, to write the coupled equations
-
+use **two dependent variables**, $$x(t)$$ and $$v(t)$$, to write the coupled equations
 \begin{equation}
-  \left[
+  \dv{}{t} \left[
   \begin{array}
-    \dot{x}
+    xx(t)
     \\\
-    \dot{v}
+    v(t)
  \end{array}
  \right]
  =
   \left[ \begin{array}\ v \\\ f(x, v, t) \end{array} \right]
 \end{equation}
-
 then we can use Euler’s method—or the better methods of `solve_ivp` —to solve
-**simultaneously** for $$x(t)$$ and $$v(t)$$. Recall that the call signature of
+**simultaneously** for $$x(t)$$ and $$v(t)$$.
+
+Recall that the call signature of
 `solve_ivp` is `solve_ivp(deriv_func, time_range, initial_values, ...)`.
 Fortunately, the `deriv_func` can return an array of derivatives, and the
 `initial_values` can be a corresponding array of the initial values of the
-coordinates. Let’s see how the example plays out.
+**dependent variables**. Let’s see how the example plays out.
 
-~~~ python
+~~~~ python
 # First prepare the notebook by loading the necessary modules
-%matplotlib notebook
+%matplotlib widget
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
-~~~
+~~~~
 
 We have to define a function that computes the vector of derivatives at time $$t$$
-and a vector of the coordinates, $$X = [x, v]$$. We can list the coordinates in
-any order we like, as long as use the same order for the derivatives, $$[\dot{x},
+and a vector of the dependent variables (coordinates), $$X = [x, v]$$. We can list the coordinates in any order we like, as long as use the same order for the derivatives, $$[\dot{x},
 \dot{v}]$$.
 
-~~~ python
+~~~~ python
 def SHOderivs(t, X, k, m):
     """
-    Compute the derivatives of a simple harmonic oscillator of mass m and spring constant k
-    where the dependent variable X holds [x, v].
+    Compute the derivatives of a simple harmonic oscillator of mass m and spring
+    constant k where the dependent variable X holds [x, v].
     """
     x, v = X # we use x = X[0] and v = X[1]
     # the derivative dx/dt = v, and
@@ -102,16 +95,16 @@ def SHOderivs(t, X, k, m):
     # were delivered in X
     derivs = np.array([v, -k/m * x])
     return derivs
-~~~
+~~~~
 
-Note again that this function receives the coordinates [x, v] in a list (array)
-in the variable `X`, so it returns the derivates [v, a]. We can now integrate
+Note again that this function receives the coordinates `[x, v]` in a list (array)
+in the variable `X`, so it returns the derivatives `[v, a]`. We can now integrate
 the differential equation for the time range $$0 \le t \le 1$$, starting with
 $$x(0) = 1$$ and $$v(0) = 0$$.
 
-~~~ python
+~~~~ python
 res = solve_ivp(SHOderivs, [0, 1], [1.0, 0.0],
-t_eval=np.linspace(0, 1, 21), args=(4, 0.25))
+  t_eval=np.linspace(0, 1, 21), args=(4, 0.25))
 res
 
 message: 'The solver successfully reached the end of the integration interval.'
@@ -135,22 +128,22 @@ y: array([[ 1.        ,  0.98006663,  0.92107572,  0.825395  ,  0.6967433 ,
 -0.56208386,  0.23632515,  1.02504019,  1.77273867,  2.45002813,
 3.0295073 ]])
 y_events: None
-~~~
+~~~~
 
 Looking at the output of `solve_ivp`, we see that the array returned as `y` is
 now two-dimensional, since our coordinate “vector” consists of X = [x, v]. Let&rsquo;s
 make a plot of the solution.
 
-~~~ python
+~~~~ python
 fig, ax = plt.subplots()
 t = res.t
 x = res.y[0,:]
 v = res.y[1,:]
-ax.plot(t, x, 'ro', label="$$x$$")
-ax.plot(t, v, 'bo', label="$$v$$")
+ax.plot(t, x, 'ro', label="$x$")
+ax.plot(t, v, 'bo', label="$v$")
 ax.legend()
-ax.set_xlabel('$$t$$');
-~~~
+ax.set_xlabel('$t$');
+~~~~
 
 <p class="center" markdown="0">
   <img src="figs/SHO1.webp" style="width: 500px;">
@@ -184,7 +177,7 @@ solves this equation. Furthermore, its derivative vanishes at $$t = 0$$, as we
 require. Let’s add this function to the plot to see how the numerical solution
 is doing.
 
-~~~ python
+~~~~ python
 fig, ax = plt.subplots()
 t = res.t
 x = res.y[0,:]
@@ -195,7 +188,7 @@ ax.plot(tvals, xvals, 'g-', label=r"$$x_{\mathrm{true}}$$")
 ax.legend()
 ax.set_xlabel('$$t$$')
 ax.set_ylabel('$$x$$');
-~~~
+~~~~
 
 <p class="center" markdown="0">
   <img src="figs/SHO2.webp" style="width: 500px;">
@@ -221,7 +214,7 @@ have to specify the particular values at the start, but to have `solve_ivp`
 return a smooth function. We can manage this by asking for
 `dense_output=True`. Let’s see how this works.
 
-~~~ python
+~~~~ python
 res = solve_ivp(SHOderivs, [0, 1], [1.0, 0.0], dense_output=True, args=(4, 0.25))
 res
 
@@ -245,30 +238,30 @@ res
     -3.58484295e+00, -7.59559602e-01,  2.88912221e+00,
     3.02950730e+00]])
     y_events: None
-~~~
+~~~~
 
 Notice that the output now includes an `OdeSolution` object in `res.sol`. We can
 use it to evaluate the solution at a point in time within the range we have
 simulated as follows:
 
-~~~ python
+~~~~ python
 res.sol(0.5)
 
 array([-0.41646995, -3.63647339])
-~~~
+~~~~
 
 The solution returns an array (vector) of values of the dependent variables $$[x,
 v]$$. Here&rsquo;s how we can use the solution to make a nice smooth plot of the
 results. We’ll plot the velocity:
 
-~~~ python
+~~~~ python
 tvals = np.linspace(0, 1, 101)
 Xvals = res.sol(tvals)
 fig, ax = plt.subplots()
 ax.plot(tvals, Xvals[1,:], 'r.-', label=r'$$v$$')
 ax.set_xlabel('$$t$$')
 ax.set_ylabel('$$v$$');
-~~~
+~~~~
 
 <p class="center" markdown="0">
   <img src="figs/SHO3.webp" style="width: 500px;">
@@ -278,13 +271,13 @@ ax.set_ylabel('$$v$$');
 
 Let’s see what the error in the velocity looks like:
 
-~~~ python
+~~~~ python
 errors = Xvals[1,:] + 4 * np.sin(tvals * 4)
 fig, ax = plt.subplots()
 ax.plot(tvals, errors, '.')
 ax.set_xlabel('$$t$$')
 ax.set_ylabel('Error in $$v$$');
-~~~
+~~~~
 
 <p class="center" markdown="0">
   <img src="figs/SHO4.webp" style="width: 500px;">
@@ -353,15 +346,15 @@ derivative, to get the coupled equations
 Then we pack all these **dependent variables** in a single array `Y` and supply a
 function that computes each one’s derivatives like so:
 
-~~~ python
+~~~~ python
 def bigderivs(t, Y, *other_parameters):
     x1, v1, x2, v2 = Y # break apart the individual variables, for convenience
     a1 = ...           # compute the acceleration of coordinate 1
     a2 = ...           # compute the acceleration of coordinate 2
     return np.array([v1, a1, v2, a2]) # return the vector of derivatives
-~~~
+~~~~
 
-The argument `*other_parameters` is a list of any additional parameters that our
+The argument `other_parameters` is a list of any additional parameters that our
 function may require to evaluate the derivatives. When you precede a variable
 name with an asterisk, it means that the variable holds a (possibly empty)
 list. (When you precede a variable name with a double asterisk, the variable
