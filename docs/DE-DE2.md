@@ -122,7 +122,7 @@ ax.set_ylabel('$$v$$')
 ax.legend();
 ~~~~
 
-The results are shown in Fig.&nbsp;2, which indicates that the values calculated
+The results are shown in <a href="#Fig2">Fig.&nbsp;2</a>, which indicates that the values calculated
 using Euler’s method lie below the true solution to the differential equation,
 which is $$v(t) = v_0 \exp(-\frac{b}{m} t)$$.
 
@@ -186,13 +186,13 @@ EulerError([2, 4, 8, 16]) # Cover the [0,1] range in 2, 4, 8, and 16 steps
 ~~~
 
 The results for crossing the 1-second time interval in 2, 4, 8, and 16 steps are
-shown in Fig. 2. Clearly, the smaller the steps we take, the more accurate the
+shown in <a href="#Fig3">Fig. 3</a>. Clearly, the smaller the steps we take, the more accurate the
 numerical approximation is. We could quantify
 
 <p class="center" markdown="0">
-  <img src="figs/euler_error.webp" style="width: 700px;">
+  <img src="figs/euler_error.webp" style="width: 700px;" alt="Error in Euler's method">
 </p>
-<p class="mycap" markdown="1">Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
+<p class="mycap" markdown="1"><a name="Fig3">Figure 3</a> — Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
 
 ### Exercise
 
@@ -245,17 +245,17 @@ Runge-Kutta-Fehlberg 4th-5th order does this, using the difference between the
 two methods to estimate the error of the step. The **RK45** method is the
 default method used by the scipy function `solve_ivp` which we will use instead
 of Euler’s method. This method is a real workhorse and should suffice for almost
-all of our work. First, we need to import the routine.
+all of our work. (However, see Prof. Tamayo on alternative strategies which do a better job of conserving energy in propagating equations of motion.) First, we need to import the routine.
 
 ~~~ python
 from scipy.integrate import solve_ivp
 ~~~
 
-To use this marvelous routine, let me remind you of the problem we’re trying to
+To use this routine, let me remind you of the problem we’re trying to
 solve. In a nutshell, it is that we have a function that computes the
 derivative,
 
-\begin{equation}
+\begin{equation}\label{eq:theDE}
      \frac{dy}{dt} = f(t, y)
 \end{equation}
 
@@ -274,7 +274,7 @@ def myderiv(t, v, b, m):
     return -v * b / m
 ~~~
 
-Now, we can use the function `solve_ivp` to integrate Eq. (7) from a starting
+Now, we can use the function `solve_ivp` to integrate Eq.&nbsp;(\ref{eq:theDE}) from a starting
 value of $$y$$ at $$t = 0$$. At a minimum, we need to supply the name of the
 function that computes the derivative, the time interval over which to
 integrate, and the initial value $$y_0$$. If our derivative function takes
@@ -300,9 +300,9 @@ res
     y_events: None
 ~~~
 
-As you can see from res, the call to solve<sub>ivp</sub> completed successfully; it
+As you can see from res, the call to `solve_ivp` completed successfully; it
 required 14 evaluations of the function myderiv; and returned the time values at
-which we requested output by passing the keyword parameter t<sub>eval</sub> with a list
+which we requested output by passing the keyword parameter `t_eval` with a list
 (array) of time values, along with the computed values of 𝑦. We can get a sense
 of the errors that this “marvelous” routine computed for us with the following:
 
@@ -313,13 +313,13 @@ ax.plot(res.t, errors, 'ro');
 ~~~
 
 <p class="center" markdown="0">
-  <img src="figs/rk45errors.webp" style="width: 500px;">
+  <img src="figs/rk45errors.webp" style="width: 500px;" alt="RK45 errors">
 </p>
-<p class="mycap" markdown="1">The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
+<p class="mycap" markdown="1"><a name="Fig4">Figure 4</a> — The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
 
 # Options for `solve_ivp`
 
-You probably find that the errors reported in Fig. [41](#orga19636d) are a bit
+You probably find that the errors reported in <a href="#Fig4">Fig. 4</a> are a bit
 large for your taste. It depends on the application. If it took a long time to
 compute the derivative function `myderiv`, we might be satisfied with these
 results. But, if that part of the computation isn’t burdensome, perhaps we&rsquo;d
