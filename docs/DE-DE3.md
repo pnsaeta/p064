@@ -28,7 +28,7 @@ second-order differential equations?
 As it turns out, we can leverage all we have learned about integrating first-order equations to handle second-order equations! The trick is to express the single second-order equation as two coupled first-order equations.
 
 Let’s see how that can work using a particularly simple example. Suppose we wish to solve
-\begin{equation}
+\begin{equation}\label{eq:SHODE}
   m\ddot{x} = - k x
 \end{equation}
 which describes a particle of mass $$m$$ subject to a restoring force that grows linearly with
@@ -42,25 +42,28 @@ If we use more conventional notation, in which $$\dot{x} = v$$ and $$\ddot{x} =
 \end{align}
 each of which is a **first-order equation**. That is, by introducing as a new
 variable the first-derivative of position with respect to time ($$v$$), we can
-break apart the single second-order equation into **two coupled first-order equations**.
+break apart the single second-order equation into two coupled first-order equations.
 Easy!
 
 Let's say that again. To solve a second-order differential equation of the form
+
 \begin{equation}
   \ddot{x} = f(x, \dot{x}, t)
 \end{equation}
+
 use **two dependent variables**, $$x(t)$$ and $$v(t)$$, to write the coupled equations
+
 \begin{equation}
   \dv{}{t} \left[
   \begin{array}
     xx(t)
     \\\
     v(t)
- \end{array}
- \right]
- =
-  \left[ \begin{array}\ v \\\ f(x, v, t) \end{array} \right]
+  \end{array}
+  \right]
+  = \left[ \begin{array}\ v \\\ f(x, v, t) \end{array} \right]
 \end{equation}
+
 then we can use Euler’s method—or the better methods of `solve_ivp` —to solve
 **simultaneously** for $$x(t)$$ and $$v(t)$$.
 
@@ -148,7 +151,7 @@ ax.set_xlabel('$t$');
 <p class="center" markdown="0">
   <img src="figs/SHO1.webp" style="width: 500px;">
 </p>
-<p class="mycap" markdown="1">The solution to Eq. (2) provided by `solve_ivp`.</p>
+<p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The solution to Eq.&nbsp;(\ref{eq:SHODE}) provided by `solve_ivp`.</p>
 
 
 
@@ -181,20 +184,19 @@ is doing.
 fig, ax = plt.subplots()
 t = res.t
 x = res.y[0,:]
-ax.plot(t, x, 'ro', label="$$x$$")
+ax.plot(t, x, 'ro', label="$x$")
 tvals = np.linspace(0, 1, 51)
 xvals = np.cos(4 * tvals)
-ax.plot(tvals, xvals, 'g-', label=r"$$x_{\mathrm{true}}$$")
+ax.plot(tvals, xvals, 'g-', label=r"$x_{\mathrm{true}}$")
 ax.legend()
-ax.set_xlabel('$$t$$')
-ax.set_ylabel('$$x$$');
+ax.set_xlabel('$t$')
+ax.set_ylabel('$x$');
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO2.webp" style="width: 500px;">
+  <img src="figs/SHO2.webp" style="width: 500px;" alt="Solution for SHO">
 </p>
-<p class="mycap" markdown="1"></p>
-
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Comparison of the numerical solution to the SHO differential equation (red dots) to the analytic solution (green curve).</p>
 
 
 ### Exercise
@@ -258,16 +260,15 @@ results. We’ll plot the velocity:
 tvals = np.linspace(0, 1, 101)
 Xvals = res.sol(tvals)
 fig, ax = plt.subplots()
-ax.plot(tvals, Xvals[1,:], 'r.-', label=r'$$v$$')
-ax.set_xlabel('$$t$$')
-ax.set_ylabel('$$v$$');
+ax.plot(tvals, Xvals[1,:], 'r.-', label=r'$v$')
+ax.set_xlabel('$t$')
+ax.set_ylabel('$v$');
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO3.webp" style="width: 500px;">
+  <img src="figs/SHO3.webp" style="width: 500px;" alt="Plotting output from solve_ivp">
 </p>
-<p class="mycap" markdown="1"></p>
-
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Plotting the output of `solve_ivp`.</p>
 
 Let’s see what the error in the velocity looks like:
 
@@ -275,15 +276,14 @@ Let’s see what the error in the velocity looks like:
 errors = Xvals[1,:] + 4 * np.sin(tvals * 4)
 fig, ax = plt.subplots()
 ax.plot(tvals, errors, '.')
-ax.set_xlabel('$$t$$')
-ax.set_ylabel('Error in $$v$$');
+ax.set_xlabel('$t$')
+ax.set_ylabel('Error in $v$');
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/SHO4.webp" style="width: 500px;">
+  <img src="figs/SHO4.webp" style="width: 500px;" alt="Error in the solution for the SHO">
 </p>
-<p class="mycap" markdown="1"></p>
-
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Error in the computed velocity from `solve_ivp`.</p>
 
 ## Practice
 
@@ -319,8 +319,6 @@ those coordinates. Suggestions for systems you could use:
 Then call `solve_ivp` with your function and see how well it does. Investigate
 how the error depends on the method and/or the tolerances (`rtol` or
 `atol`). Use a log-log plot for the absolute value of the error.
-
-<a id="orgb230ec0"></a>
 
 ## Generalizing to multiple variables
 
@@ -425,3 +423,5 @@ for $$\theta$$ and $$\phi$$, we get the following equations of motion:
 \end{align}
 
 Use these dynamical equations and `solve_ivp` to compute trajectories in the projection of the pendulum's position in the $$xy$$ plane.
+
+Next: [The Quantum SHO](DE-SHO-analytic.md)

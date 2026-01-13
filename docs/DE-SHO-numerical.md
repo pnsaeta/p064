@@ -8,16 +8,16 @@
 
 We will start our numerical approach from the nondimensionalized version of the one-dimensional Schrödinger equation for the simple harmonic oscillator:
 \begin{align}
-  \psi'' &=  (y^2-\epsilon)\psi  \\\ 
-  y &= \sqrt{\frac{m\omega}{\hbar}} x \\\ 
-  \epsilon &= \frac{2E}{\hbar \omega}
+  \psi'' &=  (y^2-\epsilon)\psi  \\\
+  y &= \sqrt{\frac{m\omega}{\hslash}} x \\\
+  \epsilon &= \frac{2E}{\hslash \omega}
 \end{align}
 
 ## General Properties
 
 From the symmetry of the potential, we expect solutions with either even or odd symmetry. Even solutions should have a vanishing derivative at $$x = 0$$, while odd solutions should vanish at $$x = 0$$:
 \begin{align}
-  \psi'(0) &= 0 &\qquad n \text{ even}  \notag \\\ 
+  \psi'(0) &= 0 &\qquad n \text{ even}  \notag \\\
   \psi(0) &= 0 &\qquad n \text{ odd} \notag
 \end{align}
 
@@ -37,7 +37,7 @@ The way to avoid this problem is to integrate *in reverse*. Rather than starting
 3. For an even eigenfunction, require that $$\psi'(0) = 0$$; for an odd eigenfunction, require that $$\psi(0) = 0$$. That is, adjust the value of $$\epsilon$$ to drive the solution towards the sought-after behavior at the origin. It can be helpful to define the figure of merit
 \begin{equation}
   \Phi = \begin{cases}
-    \displaystyle\frac{\psi'(0)}{\psi(0)} & n\text{ even} \\\ 
+    \displaystyle\frac{\psi'(0)}{\psi(0)} & n\text{ even} \\\
     \displaystyle\frac{\psi(0)}{\psi'(0)} & n\text{ odd}
   \end{cases}
 \end{equation}
@@ -60,7 +60,7 @@ def stop_at_zero(x, Y, epsilon): # event function to record situation at x = 0
 def shoot(epsilon:float, n:int, x_start=-5, y0=(1e-6, 0), x_stop=0):
     """
     Use the shooting method to integrate from x_start with initial condition y0
-    to x_stop. 
+    to x_stop.
     Inputs:
        epsilon: the value of the dimensionless energy eigenvalue to test
        n:       the number of the expected energy eigenfunction
@@ -148,7 +148,7 @@ The table shows just how accurately this method is able to determine the eigenva
 
 ## Discretizing the Differential Equation
 
-Another numerical approach to solving the differential equation is to divide the range in $$x$$ values into a number of equally spaced steps, to approximate the derivatives with finite differences, and then solve the problem using matrix methods. To see how this works, let us suppose that we divide the range from $$-y_0$$ to $$y_0$$ into an integral number $$N$$ of steps of size $$\Delta y$$ (where I am using the same dimensionless position variable as before, $$y = x \sqrt{m\omega/\hbar}$$ ). That is, we will look for the values of $$\psi$$ at the set of positions
+Another numerical approach to solving the differential equation is to divide the range in $$x$$ values into a number of equally spaced steps, to approximate the derivatives with finite differences, and then solve the problem using matrix methods. To see how this works, let us suppose that we divide the range from $$-y_0$$ to $$y_0$$ into an integral number $$N$$ of steps of size $$\Delta y$$ (where I am using the same dimensionless position variable as before, $$y = x \sqrt{m\omega/\hslash}$$ ). That is, we will look for the values of $$\psi$$ at the set of positions
 \begin{equation}\label{eq:xpos}
   y_k = -y_0 + k \Delta y \qquad k = 0, 1, 2, \ldots, N
 \end{equation}
@@ -157,7 +157,7 @@ The approximate value of the derivative $$\psi'$$ can be computed with a finite 
 \begin{equation}\label{eq:psifinite}
   \psi'(y_j + \Delta y/2) \approx \frac{\psi(y_{j+1}) - \psi(y_j)}{\Delta y} = \frac{\psi_{j+1} - \psi_j}{\Delta y}
 \end{equation}
-Note that the position at which this best approximates the derivative is halfway between the two $$y$$ positions we use. 
+Note that the position at which this best approximates the derivative is halfway between the two $$y$$ positions we use.
 
 To compute the second derivative, we can subtract values of the derivative at $$y_j-\Delta y/2$$ from its value at $$y_j+\Delta y/2$$ and divide by the displacement ($$\Delta y$$)
 to get
@@ -178,11 +178,11 @@ becomes the finite difference equations
 Equation&nbsp;(\ref{eq:FDeq}) may be cast in matrix form as
 \begin{equation}\label{eq:eveq}
   \underbrace{\begin{pmatrix}
-  a_{00} & a_{01} & 0 & 0 & \cdots & 0 \\\ 
-  a_{10} & a_{11} & a_{12} & 0 & \cdots & 0 \\\ 
-  0 & a_{21} & a_{22} & a_{23} & \cdots & 0\\\ 
-  0 & 0 & a_{32} & a_{33} & \cdots & 0 \\\ 
-  \vdots & \vdots & \vdots & \vdots & \ddots & a_{N-1\, N} \\\ 
+  a_{00} & a_{01} & 0 & 0 & \cdots & 0 \\\
+  a_{10} & a_{11} & a_{12} & 0 & \cdots & 0 \\\
+  0 & a_{21} & a_{22} & a_{23} & \cdots & 0\\\
+  0 & 0 & a_{32} & a_{33} & \cdots & 0 \\\
+  \vdots & \vdots & \vdots & \vdots & \ddots & a_{N-1\, N} \\\
   0 & 0 & 0 & 0 & a_{N\, N-1} & a_{NN}
   \end{pmatrix}
   }\_{\mat{A}}
@@ -198,8 +198,8 @@ Equation&nbsp;(\ref{eq:FDeq}) may be cast in matrix form as
 where the elements of the matrix $$\mat{A}$$ are given by
 \begin{equation}\label{eq:Amat}
   a_{ij} = \begin{cases}
-    \frac{2}{(\Delta y)^2} + y_j^2 & i = j \\\ 
-    -\frac{1}{(\Delta y)^2} & i = j \pm 1 \\\ 
+    \frac{2}{(\Delta y)^2} + y_j^2 & i = j \\\
+    -\frac{1}{(\Delta y)^2} & i = j \pm 1 \\\
     0 & \text{otherwise}
   \end{cases}
 \end{equation}
