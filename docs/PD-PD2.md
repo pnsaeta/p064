@@ -84,9 +84,9 @@ Hence, the solution for the potential inside the square region is
 \end{equation}
 
 <p class="center" markdown="0">
-  <img src="figs/Lapl2.gif" style="width: 600px;">
+  <img src="figs/Lapl2.gif" style="width: 600px;" alt="Heat map showing the electrostatic potential in a square region">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Heat map showing the convergence of the solution shown in Eq. (\ref{eq:Lapl2}) for the first several terms in the series. Note that because the hyperbolic sine grows large very rapidly, the successive terms after the first few serve only to impace the very top of the figure, right next to the wall that is held at $$V = 1$$.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Heat map showing the convergence of the solution shown in Eq. (\ref{eq:Lapl2}) for the first several terms in the series. Note that because the hyperbolic sine grows large very rapidly, the successive terms after the first few serve only to impact the very top of the figure, right next to the wall that is held at $$V = 1$$.</p>
 
 
 Here's some code to generate the successive plots.
@@ -127,7 +127,8 @@ def animate(*args):
     title = plt.title(r"$n_{\rm max} = %d$" % args[0])
     return (im, title)
 
-ani = FuncAnimation(fig, animate, frames=list(range(1, 21, 2)), interval=300, blit=True, repeat=False)
+ani = FuncAnimation(fig, animate, frames=list(range(1, 21, 2)),
+    interval=300, blit=True, repeat=False)
 ~~~~
 
 ## Solving Laplace's Equation in a Circular Region
@@ -145,7 +146,7 @@ To figure out the divergence, recall that it is defined as the ratio of the flux
 \\]
 
 <p class="center" markdown="0">
-  <img src="figs/LaplacePolar.webp" style="width: 300px;">
+  <img src="figs/LaplacePolar.webp" style="width: 300px;" alt="Fluxes in a circular plaquette">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — A small area element in polar coordinates showing the flux of a vector field $$\vb{A}$$ into and out of the area element. </p>
 
@@ -172,7 +173,7 @@ as illustrated in <a href="#Fig4">Figure&nbsp;4</a>.
 We seek the potential in the interior of the circle.
 
 <p class="center" markdown="0">
-  <img src="figs/Laplace.webp" style="width: 200px;">
+  <img src="figs/Laplace.webp" style="width: 200px;" alt="Boundary conditions">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Electric potential on the boundary of a circular region of radius $$a$$.</p>
 
@@ -240,7 +241,7 @@ Hence,
 \end{equation}
 
 <p class="center" markdown="0">
-  <img src="figs/Laplace-Circle.webp" style="width: 400px;">
+  <img src="figs/Laplace-Circle.webp" style="width: 400px;" alt="Potential in the circular region with boundary conditions shown in Figure 4">
 </p>
 <p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — The electrostatic potential inside a circular region bounded by the potential shown in <a href="#4">Figure&nbsp;4</a>. Note carefully the range of the colormap. Can you explain?</p>
 
@@ -271,8 +272,8 @@ plt.colorbar(im);
 Modify the code that produced a “heat map” of the potential inside the circular electrodes shown in <a href="#4">Figure&nbsp;4</a> so that it also computes the potential *outside* the electrodes, as shown in <a href="#Fig6">Figure&nbsp;6</a>.
 
 <p class="center" markdown="0">
-  <img src="figs/Laplace-Outside.webp" style="width: 400px;">
+  <img src="figs/Laplace-Outside.webp" style="width: 400px;" alt="Exterior potential">
 </p>
 <p class="icap" markdown="1"><a name="Fig6">Figure 6</a> — Electric potential in a plane far from the ends of half-cylindrical electrodes in which the upper has potential $$V=1$$ and the lower $$V=-1$$.</p>
 
-
+Next: [The Wave Equation](PD-PD3.md)

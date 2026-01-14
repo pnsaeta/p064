@@ -1,19 +1,15 @@
 {:menu PD}
 
-
-
 # PDEs III — the Wave Equation
 
 * toc
 {:toc}
 
-
-
 Many systems are well described by the linear wave equation,
 \begin{equation}\label{eq:wave}
   \nabla^2 \psi = \frac{1}{v^2} \pdv[2]{\psi}{t}
 \end{equation}
-where $$v$$ is the wave speed and $$\psi$$ is something that's waving. 
+where $$v$$ is the wave speed and $$\psi$$ is something that's waving.
 
 ### Cartesian coordinates
 
@@ -25,10 +21,10 @@ The left-hand side depends only on spatial coordinates, while the right-hand sid
 
 By a similar argument, each of the terms on the left must separately be a constant. If each of those is negative, we have
 \begin{align}
-  X(x) &= e^{i k_x x} \notag \\\ 
-  Y(y) &= e^{i k_y y} \notag \\\ 
-  Z(y) &= e^{i k_z z} \notag \\\ 
-  T(t) &= e^{-i \omega t} \notag 
+  X(x) &= e^{i k_x x} \notag \\\
+  Y(y) &= e^{i k_y y} \notag \\\
+  Z(y) &= e^{i k_z z} \notag \\\
+  T(t) &= e^{-i \omega t} \notag
 \end{align}
 where to satisfy Eq.&nbsp;(\ref{eq:cartesians}), we must have
 \begin{equation}\label{eq:k}
@@ -41,7 +37,7 @@ In more compact notation, the solutions are **plane waves** of the form
   \psi(\vb{r},t) = A_{\vb{k}} e^{i(\vb{k}\vdot\vb{r} - \omega t)}
 \end{equation}
 
-For sound waves in a fluid, this scalar version of the wave equation is appropriate. However, in a material that resists shearing forces, such as a solid, the amplitude for a given $$\vb{k}$$ is not a scalar but a vector. Actually, in that case we have to go back to the differential equation and include both compressive and shear forces, which generally makes the velocity of the wave different depending on whether the wave is transverse or longitudinal. This sort of problem is developed at length in **Fields and Waves**, *Physics 154*. 
+For sound waves in a fluid, this scalar version of the wave equation is appropriate. However, in a material that resists shearing forces, such as a solid, the amplitude for a given $$\vb{k}$$ is not a scalar but a vector. Actually, in that case we have to go back to the differential equation and include both compressive and shear forces, which generally makes the velocity of the wave different depending on whether the wave is transverse or longitudinal. This sort of problem is developed at length in **Fields and Waves**, *Physics 154*.
 
 In the case of light waves, what's waving? The electric and magnetic fields. We usually take $$\psi$$ to represent the electric field vector, in which case the amplitude $$A_{\vb{k}}$$ must itself be a vector. However, Gauss's law,
 \begin{equation}\label{eq:gauss}
@@ -75,7 +71,7 @@ which we substitute into the wave equation to get
 \\]
 Dividing both sides by $$\psi = R\Theta T$$ gives
 \begin{equation}\label{eq:B1}
-    \frac{R^{\prime\prime} + \frac1r R'}{R} + 
+    \frac{R^{\prime\prime} + \frac1r R'}{R} +
     \frac{1}{r^2} \frac{\Theta^{\prime\prime}}{\Theta} =
     \frac{1}{v^2} \frac{T^{\prime\prime}}{T}
 \end{equation}
@@ -156,7 +152,7 @@ If the domain of solution includes the origin, then we must rule out the Neumann
 
 It is possible to show the following relationships among Bessel functions $$Z_n(x)$$, where $$Z$$ can represent either Bessel functions of the first kind ($$J_n$$) or of the second kind ($$Y_n$$):
 \begin{align}
-  Z\_{n-1}(x) + Z\_{n+1}(x) &= \frac{2n}{x} Z\_n(x) \label{eq:bes1} \\\ 
+  Z\_{n-1}(x) + Z\_{n+1}(x) &= \frac{2n}{x} Z\_n(x) \label{eq:bes1} \\\
   Z\_{n-1}(x) - Z\_{n+1}(x) &= 2 Z'\_n(x) \label{eq:bes2}
 \end{align}
 There is an integral representation of Bessel functions,
@@ -171,7 +167,7 @@ which capture the behavior at large values of $$x$$.
 
 From [Sturm-Liouville theory](DE-SturmLiouville.md), we can show that if $$\alpha_{\nu}$$ is the $$\nu$$th zero of $$J_n(x)$$, then
 \begin{equation}\label{eq:ortho}
-  \int_{0}^{a} J_{n}(\alpha_{\nu} r/a) J_{n}(\alpha_{\mu}r/a)\; r\dd{r} = 
+  \int_{0}^{a} J_{n}(\alpha_{\nu} r/a) J_{n}(\alpha_{\mu}r/a)\; r\dd{r} =
   \frac{a^2}{2}[J_{n+1}(\alpha_{\nu})]^2 \delta_{\nu\mu}
 \end{equation}
 In other words, the orthogonality condition of the Bessel functions uses the weight factor $$r$$ in the integration.
@@ -245,7 +241,7 @@ class Drum:
         """
         Create a Drum object, initialize the displacement of the drum head
         according to the function f_init, and use n_max radial functions.
-        
+
         The integration routine `romberg` is used to evaluate the coefficients
         in the radial expansion via integration. It does not handle functions with
         discontinuous derivatives gracefully, so I am using a smooth function.
@@ -265,10 +261,10 @@ class Drum:
             integral = romberg(lambda x: self.f(x)*x*jv(0,x*an), 0, rz,
                                tol=1e-9, rtol=1e-9, divmax=15)
             self.bn[n] = 2 * integral / (jv(1, an))**2
-        
+
         if 'radii' in kwargs:
             self.set_radii(kwargs['radii'])
-    
+
     def set_radii(self, radii):
         """
         To evaluate the solution requires the values of J_0(an * r/a) at
@@ -281,7 +277,7 @@ class Drum:
         self.Jnr = np.zeros((len(radii), self.n_max))
         for n in range(self.n_max):
             self.Jnr[:,n] = self.bn[n] * jv(0, radii * self.an[n])
-        
+
     def __call__(self, t):
         "Evaluate the solution at a given time"
         assert self.radii is not None, "You must set radii before evaluating"
