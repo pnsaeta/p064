@@ -1,6 +1,5 @@
 {:menu PD}
 
-
 # Numerical Solution to Partial Differential Equations
 
 * toc
@@ -19,7 +18,7 @@ By definition,
 \\[
     \pdv{V}{x} = \lim_{\Delta x \to 0} \frac{V(x+\Delta x, y) - V(x, y)}{\Delta x}
 \\]
-The finite-difference approach to approximating derivatives is to make $$\Delta x$$ small but finite. If we discretize the area using
+The finite-difference approach to approximating derivatives is to make $$\Delta x$$ small but finite. If we discretize the region using
 \\[
     x_j = j\,\Delta x \qquad\text{and}\qquad y_i = i\,\Delta y
 \\]
@@ -33,7 +32,7 @@ is an approximation to the value at $$x_j + \frac12 \Delta x$$. To get the secon
         \displaystyle\frac{V_{i,j+1}-V_{i,j}}{\Delta x} - \frac{V_{i,j}-V_{i,j-1}}{\Delta x}}{\Delta x}
     = \frac{V_{i,j+1} - 2 V_{i,j} + V_{i,j-1}}{(\Delta x)^2}
 \\]
-If we use a square grid, so that $$\Delta x = \Delta y$$, then
+On a square grid, $$\Delta x = \Delta y$$, then
 \\[
     \pdv[2]{V}{x} + \pdv[2]{V}{y} \approx \frac{V_{i,j+1} + V_{i,j-1} + V_{i+1,j} + V_{i-1,j} - 4V_{i,j}}{(\Delta x)^2} = 0
 \\]
@@ -47,11 +46,11 @@ In other words, the potential at $$[i,j]$$ is equal to the average of the four n
 
 The relaxation method converges rather slowly. It typically takes a large number of iterations to achieve a potential distribution that doesn't change appreciably on subsequent iterations. One way to try to speed up convergence of the relaxation method is to **over-relax** by an amount between 1 and 2. That is, if Eq.&nbsp;(\ref{eq:average}) would change the value of $$V_{i,j}$$ by $$\delta V_{i,j}$$, change it by $$\rho \delta V_{i,j}$$ for $$1 \le \rho \le 2$$. For the "right" value of the successive over-relaxation parameter $$\rho$$, you can achieve significantly better performance. However, if you make $$\rho$$ too big, the convergence rate gets worse again, and for $$\rho \ge 2$$, the method becomes unstable and fails to converge.
 
-Another strategy is to do an initial relaxation on a coarse lattice, and use the result of that relaxation to seed the initial values of a finer lattice. 
+Another strategy is to do an initial relaxation on a coarse lattice, and use the result of that relaxation to seed the initial values of a finer lattice.
 
 ### Exercise
 
-Compare over-relaxation and coarse-graining approaches for accelerating convergence of a 
+Compare over-relaxation and coarse-graining approaches for accelerating convergence in a square region of side $$L$$ whose left, bottom, and right boundaries are grounded and whose top boundary is held at $$V_0$$.
 
 ## Diffusion in One-Dimension
 
@@ -73,7 +72,7 @@ where $$t_0 = \sigma^2/D$$. You can verify that it agrees with the initial condi
 
 ## First attempt: FTCS
 
-Let’s try the easiest thing: we'll use finite differences to handle both $$x$$ and $$t$$: let $$u[i,j]$$ represent the temperature at time $$i$$ and at position $$j$$, where 
+Let’s try the easiest thing: we'll use finite differences to handle both $$x$$ and $$t$$: let $$u[i,j]$$ represent the temperature at time $$i$$ and at position $$j$$, where
 \begin{equation}
     t_i = i \Delta t \qquad\text{and}\qquad x_j = j \Delta x
 \end{equation}
@@ -86,14 +85,14 @@ The only unknown in this equation is $$u[i+1,j]$$, so we have a really simple up
 \begin{equation}
   u[i+1,j] = u[i,j] + \underbrace{\frac{D \Delta t}{(\Delta x)^2}}_{\alpha} (u[i,j+1] - 2 u[i,j] + u[i,j-1])
 \end{equation}
-We’ll call this FTCS for *forward in time, centered in space*.
+We’ll call this FTCS for **forward in time, centered in space**.
 
-How does it work?
+How does it work? As you can see in <a href="#Fig1">Fig. 1</a>, not too well!
 
 <p class="center" markdown="0">
-  <img src="figs/FTCS.gif" style="width: 500px;">
+  <img src="figs/FTCS.gif" style="width: 500px;" alt="FTCS solution is unstable">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Solution to the one-dimensional heat diffusion equation for $$\alpha = 1$$. The solution is clearly unstable!</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Solution to the one-dimensional heat diffusion equation for $$\alpha = 1$$ using the forward in time, center in space (FTCS) method. The solution is clearly unstable!</p>
 
 ## Stability Analysis
 
@@ -101,14 +100,16 @@ Why doesn’t this method work? How can we estimate the stability of the method?
 \begin{equation}
   a(x,t) = f(t) e^{ikx} \qqtext{which discretizes to} \xi^n e^{ik\Delta x j}
 \end{equation}
-where $$f(t)$$ is a (complex) amplitude function of time. In the discrete version, $$\xi$$ represents the amplitude factor that shows how the amplitude of a mode at wave vector $$k$$ changes over a time step. Substituting the discrete form into the FTCS evolution equation gives
+where $$f(t)$$ is a (complex) amplitude function of time. In the discrete version, $$\xi$$ represents the amplitude factor that shows how the amplitude of a mode at wave vector $$k$$ changes over a time step. If $$|\xi| > 1$$, the mode grows exponentially in time, indicating instability.
+
+Substituting the discrete form into the FTCS evolution equation gives
 \begin{equation}\label{eq:blah}
   \xi^{n+1} e^{ik\Delta x j} = \xi^n \qty[ e^{ik\Delta x j} + \alpha\qty(e^{ik\Delta x(j+1)} - 2 e^{ik\Delta x j} + e^{ik\Delta x(j-1)}) ]
 \end{equation}
 Dividing through by $$\xi^n e^{ik\Delta x j}$$ we get
 \\[
     \xi = 1 + \alpha(e^{ik\Delta x} - 2 + e^{-ik\Delta x}) = 1 + \alpha[2\cos(k\Delta x) - 2] =
-    1 - 4\alpha \sin^2(k \Delta x/2)
+    1 - 4\alpha \sin^2 \left(\frac{k \Delta x}{2}\right)
 \\]
 For the solution to be stable, we must have $$|\xi| < 1$$ for all $$k$$. For small $$k$$, we have no problem; the sine term helps us out. The maximum value of $$\sin^2(k \Delta x)$$ is 1, so to keep the solution stable for all possible values of $$k$$, we must have
 \\[
@@ -118,7 +119,7 @@ For the solution to be stable, we must have $$|\xi| < 1$$ for all $$k$$. For sma
 Let's run the simulation again, but this time adjust the time step so $$\alpha = \frac12$$.
 
 <p class="center" markdown="0">
-  <img src="figs/FTCS-stable.gif" style="width: 500px;">
+  <img src="figs/FTCS-stable.gif" style="width: 500px;" alt="Stable solution using FTCS with alpha=1/2, consistent with the von Neumann stability criterion">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Solution to the one-dimensional heat diffusion equation for $$\alpha = \frac12$$. The solution is now stable, although it appears to be losing energy.</p>
 
@@ -132,14 +133,14 @@ A von Neumann stability analysis of this update formula gives
 \\[
     \xi = \frac{1}{1 + 4\alpha\sin^2(k\Delta x/2)}
 \\]
-which shows that this method is *unconditionally stable*.
+which shows that this method is *unconditionally stable*. That's quite a benefit, although we have more work to do because we have to solve for all the unknown values at once.
 
 ## Crank-Nicolson
 
 An even better approach is to average these two methods
 \begin{align}\label{eq:CrankNicolson}
   u[i+1,j] - u[i,j] = \frac{D \Delta t}{2(\Delta x)^2}
-  &\bigg[\bigg(u[i+1,j+1] - 2u[i+1,j] + u[i+1,j-1]\bigg) \notag \\\ 
+  &\bigg[\bigg(u[i+1,j+1] - 2u[i+1,j] + u[i+1,j-1]\bigg) \notag \\\
   & \qquad + \bigg(u[i,j+1] - 2u[i,j] + u[i,j-1] \bigg) \bigg]
 \end{align}
 which is called the **Crank-Nicolson method**. By averaging the explicit and implicit methods, Crank-Nicolson works out to be second order in time. The von Neumann stability analysis gives
@@ -153,33 +154,33 @@ If we separate the terms that involve the as-yet unknown values, $$u_j^{i+1}$$, 
 \begin{equation}
   \label{eq:CNmatrices}
   \begin{pmatrix}
-    1 + \frac\alpha2 & -\frac\alpha2 & 0 & 0 & \cdots  \\\ 
-    -\frac\alpha2 & 1 + \alpha & -\frac\alpha2 & 0 & \cdots \\\ 
-    0 & -\frac\alpha2 & 1 + \alpha & -\frac\alpha2 & \cdots \\\ 
-    0 & 0 & -\frac\alpha2 & 1 + \alpha & -\frac\alpha2  \\\ 
+    1 + \frac\alpha2 & -\frac\alpha2 & 0 & 0 & \cdots  \\\
+    -\frac\alpha2 & 1 + \alpha & -\frac\alpha2 & 0 & \cdots \\\
+    0 & -\frac\alpha2 & 1 + \alpha & -\frac\alpha2 & \cdots \\\
+    0 & 0 & -\frac\alpha2 & 1 + \alpha & -\frac\alpha2  \\\
    \vdots & \vdots & \vdots & \vdots & \ddots
   \end{pmatrix}
   \begin{pmatrix}
-    u_0^{i+1} \\\ 
-    u_1^{i+1} \\\ 
-    u_2^{i+1} \\\ 
-    u_3^{i+1} \\\ 
-    \vdots \\\ 
+    u_0^{i+1} \\\
+    u_1^{i+1} \\\
+    u_2^{i+1} \\\
+    u_3^{i+1} \\\
+    \vdots \\\
   \end{pmatrix}
   =
   \begin{pmatrix}
-    1 - \frac\alpha2 & \frac\alpha2 & 0 & 0 & \cdots  \\\ 
-    \frac\alpha2 & 1 - \alpha & \frac\alpha2 & 0 & \cdots \\\ 
-    0 & \frac\alpha2 & 1 - \alpha & \frac\alpha2 & \cdots \\\ 
-    0 & 0 & \frac\alpha2 & 1 - \alpha & \frac\alpha2  \\\ 
+    1 - \frac\alpha2 & \frac\alpha2 & 0 & 0 & \cdots  \\\
+    \frac\alpha2 & 1 - \alpha & \frac\alpha2 & 0 & \cdots \\\
+    0 & \frac\alpha2 & 1 - \alpha & \frac\alpha2 & \cdots \\\
+    0 & 0 & \frac\alpha2 & 1 - \alpha & \frac\alpha2  \\\
    \vdots & \vdots & \vdots & \vdots & \ddots
   \end{pmatrix}
   \begin{pmatrix}
-    u_0^{i} \\\ 
-    u_1^{i} \\\ 
-    u_2^{i} \\\ 
-    u_3^{i} \\\ 
-    \vdots \\\ 
+    u_0^{i} \\\
+    u_1^{i} \\\
+    u_2^{i} \\\
+    u_3^{i} \\\
+    \vdots \\\
   \end{pmatrix}
 \end{equation}
 
