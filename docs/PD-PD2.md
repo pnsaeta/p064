@@ -1,12 +1,9 @@
 {:menu PD}
 
-
-
 # PDEs II — Laplace’s Equation
 
 * toc
 {:toc}
-
 
 Laplace’s equation
 \begin{equation}\label{eq:Laplace}
@@ -27,19 +24,19 @@ which leads to
 \\]
 Dividing by $$X(x)Y(y)Z(z)$$ yields
 \\[
-    \frac{X^{\prime\prime}(x)}{X(x)} + 
+    \frac{X^{\prime\prime}(x)}{X(x)} +
     \frac{Y^{\prime\prime}(y)}{Y(y)} +
     \frac{Z^{\prime\prime}(z)}{Z(z)} = 0
 \\]
-which is the sum of three functions of a single variable. For this to work each of these terms must separately equal a constant. Boundary conditions then impose constraints on the allowed constants, leading to discrete values. 
+which is the sum of three functions of a single variable. For this to work each of these terms must separately equal a constant. Boundary conditions then impose constraints on the allowed constants, leading to discrete values.
 
 ### A Two-Dimensional Example
 
 For simplicity, let's consider a two-dimensional example in which a square region of side $$L$$ has three sides held at $$V = 0$$ and the side at $$y = L$$ held at $$V = 1$$:
 \begin{align}
-  V_{xx} + V_{yy} &= 0 \notag \\\ 
-  V(0, y) = V(L, y) &= 0  \notag \\\ 
-  V(x, 0) &= 0 \notag \\\ 
+  V_{xx} + V_{yy} &= 0 \notag \\\
+  V(0, y) = V(L, y) &= 0  \notag \\\
+  V(x, 0) &= 0 \notag \\\
   V(x, L) &= 1 \notag
 \end{align}
 
@@ -53,13 +50,13 @@ To satisfy boundary conditions at $$x = 0$$ and $$x = L$$, we must have
 \\[
     X(x) = \sin \qty(\frac{n \pi x}{L})
 \\]
-so that $$X^{\prime\prime}/X = - (n \pi /L)^2$$. Therefore, the equation for $$Y(y)$$ must be 
+so that $$X^{\prime\prime}/X = - (n \pi /L)^2$$. Therefore, the equation for $$Y(y)$$ must be
 \\[
     \frac{Y^{\prime\prime}}{Y} = \qty(\frac{n\pi}{L})^2
     \qquad\longrightarrow\qquad
     Y(y) = a e^{n \pi y/L} + b e^{-n \pi y/L}
 \\]
-We need to find the right combination of $$a$$ and $$b$$ to make $$Y(0) = 0$$, which means that we need $$a = -b$$. I will take $$a = \frac12$$, so that
+We need to find the right combination of $$a$$ and $$b$$ to make $$Y(0) = 0$$, which means that we need $$a = -b$$. I will take $$a = \frac12$$ so that
 \\[
     Y(y) = \frac{e^{n \pi y/L} - e^{-n \pi y/L}}{2} = \sinh\qty(\frac{n \pi y}{L})
 \\]
@@ -75,8 +72,8 @@ At the back wall
 \\]
 Multiplying both sides by $$\sin(m \pi x/L)$$ and integrating from 0 to $$L$$ gives
 \begin{align}
-    \int_0^L \sin(m \pi x/L)\dd{x} &= c_m \frac{L}{2} \sinh(m\pi) \notag \\\ 
-    -\frac{L}{m \pi} \left. \cos(m\pi x/L) \right|_0^L &= c_m \frac{L}{2} \sinh(m\pi) \notag \\\ 
+    \int_0^L \sin(m \pi x/L)\dd{x} &= c_m \frac{L}{2} \sinh(m\pi) \notag \\\
+    -\frac{L}{m \pi} \left. \cos(m\pi x/L) \right|_0^L &= c_m \frac{L}{2} \sinh(m\pi) \notag \\\
     c_m &= \frac{2}{m\pi \sinh(m\pi)} \qty(1 - \cos(m\pi)) \notag
 \end{align}
 Hence, the solution for the potential inside the square region is
@@ -143,7 +140,7 @@ The gradient is straightforward:
 \\]
 To figure out the divergence, recall that it is defined as the ratio of the flux out of the "volume" divided by the volume as the volume goes to zero. In the 2-D case, volume is replaced by area, which is $$\dd{a} = r\dd{\theta} \dd{r}$$. As illustrated in the figure below, the net flux of vector field $$\vb{A}$$ out of the area is
 \\[
-    A_r(r+\dd{r}, \theta) (r+\dd{r}) \dd{\theta} - A_r(r,\theta) r\dd{\theta} 
+    A_r(r+\dd{r}, \theta) (r+\dd{r}) \dd{\theta} - A_r(r,\theta) r\dd{\theta}
     + A_\theta(r, \theta + \dd{\theta}) \dd{r} - A_\theta(r,\theta) \dd{r}
 \\]
 
@@ -167,7 +164,7 @@ Hence, the laplacian in polar coordinates is
 To have a definite problem to work out, let us suppose that a circular region of radius $$a$$ is surrounded by electrodes that maintain the potential
 \\[
     V(a, \theta) = \begin{cases}
-      +1 & 0 < \theta < \pi \\\ 
+      +1 & 0 < \theta < \pi \\\
       -1 & \pi < \theta < 2\pi
     \end{cases}
 \\]
@@ -224,7 +221,7 @@ The potential may thus be represented by the series
     V(r, \theta) = a\_0 + a'\_0 \ln r + \sum_{n=1}^{\infty} (\alpha_n r^n + \beta_n r^{-n})(a_n \cos n\theta + b_n \sin n\theta)
 \\]
 
-If we were solving in an annular region, we would need to keep all terms, in principle. However, since our region of interest includes the origin, we must exclude the terms that diverge there. Hence, $$a'_0 = \beta_n = 0$$, and we are left with 
+If we were solving in an annular region, we would need to keep all terms, in principle. However, since our region of interest includes the origin, we must exclude the terms that diverge there. Hence, $$a'_0 = \beta_n = 0$$, and we are left with
 \\[
     V(r, \theta) = a_0  + \sum_{n=1}^{\infty} \qty(\frac{r}{a})^n (a_n \cos n\theta + b_n \sin n\theta)
 \\]

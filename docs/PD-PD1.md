@@ -1,7 +1,5 @@
 {:menu PD}
 
-
-
 # Partial Differential Equations
 
 * toc
@@ -11,7 +9,7 @@
 
 You have already encountered several partial differential equations in your physics and engineering courses. Let's take a moment to remind ourselves:
 
-+ By applying Newton's second law to a small segment of a taut, flexible string, we worked out
+- By applying Newton's second law to a small segment of a taut, flexible string, we worked out
 \\[
     \pdv[2]{y}{x} = \frac{\mu}{F} \pdv[2]{y}{t}
 \\]
@@ -21,23 +19,23 @@ where $$y(x,t)$$ is the displacement of the string from its equilibrium position
 \\]
 where $$v = \sqrt{F/\mu}$$ is the wave speed and $$f$$ and $$g$$ are arbitrary functions.
 
-+ Maxwell's equation for the electric field is
+- Maxwell's equation for the electric field is
 \\[
     \div\vb{E} = \begin{cases}
-       \frac{\displaystyle\rho(\vb{r}, t)}{\displaystyle\epsilon_0} & \text{S.I.} \\\ 
+       \frac{\displaystyle\rho(\vb{r}, t)}{\displaystyle\epsilon_0} & \text{S.I.} \\\
        4\pi\rho(\vb{r}, t) & \text{gaussian}
     \end{cases}
 \\]
 which is a statement that charge generates a diverging electric field. If the charge distribution is independent of time, then we can define an electrostatic potential such that $$\vb{E} = -\grad V$$, which leads to **Poisson's equation** for the electric potential,
 \\[
-    \laplacian V(\vb{r}) =
+    \div \grad V(\vb{r}) = \laplacian V(\vb{r}) =
     \pdv[2]{V}{x} + \pdv[2]{V}{y} + \pdv[2]{V}{z}
     = \begin{cases}
-      -\rho(\vb{r}) / \epsilon_0 & \text{S.I.} \\\ 
+      -\rho(\vb{r}) / \epsilon_0 & \text{S.I.} \\\
       -4\pi\rho(\vb{r}) & \text{gaussian}
     \end{cases}
 \\]
-In a region of charge-free space, the potential satisfies **Laplace's equation** 
+In a region of charge-free space, the potential satisfies **Laplace's equation**
 \\[
     \laplacian V(\vb{r}) =
     \pdv[2]{V}{x} + \pdv[2]{V}{y} + \pdv[2]{V}{z}
@@ -45,9 +43,9 @@ In a region of charge-free space, the potential satisfies **Laplace's equation**
 \\]
 [I have written the laplacian in cartesian coordinates here, but the meaning of the laplacian is the divergence of the gradient, regardless of the coordinate system, and the expression is more complicated in cylindrical, spherical, and other curvilinear coordinate systems.]
 
-+ The Schrödinger equation of quantum mechanics is
+- The Schrödinger equation of quantum mechanics is
 \\[
-    -\frac{\hslash^2}{2m} \laplacian\Psi(\vb{r},t) + 
+    -\frac{\hslash^2}{2m} \laplacian\Psi(\vb{r},t) +
     V(\vb{r},t) \Psi(\vb{r}, t) = \frac{\hslash}{i} \pdv{\Psi(\vb{r},t)}{t}
 \\]
 which is second order in space and first order in time.
@@ -59,7 +57,7 @@ For our development, we will focus on an equation quite similar to the Schrödin
 Newton argued that heat flowed from a hot region to a cold region in proportion to the temperature difference between them. To keep the exposition as simple as possible, we consider a uniform cylindrical rod, whose surface is thermally insulated, and whose axis is aligned with the $$x$$ axis. In particular, focus on a small segment of the rod, as illustrated in <a href="#Fig1">Figure&nbsp;1</a>.
 
 <p class="center" markdown="0">
-  <img src="figs/rod.webp" style="width: 300px;">
+  <img src="figs/rod.webp" style="width: 300px;" alt="A segment of the rod">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — We consider a small segment of the insulated rod, with cross section $$A$$ and thickness $$\delta x$$. The heat that flows into the segment on the left is $$J(x) A$$, where the heat flux density $$J$$ has dimensions energy per unit area per unit time.</p>
 
@@ -82,16 +80,16 @@ where $$u(x,t)$$ is the temperature of the rod and $$\kappa(x,t)$$ is thermal co
 \\]
 Finally, the heat generated in the segment is $$G \delta t = g A \delta x \delta t$$, where $$g$$ is the power per unit volume deposited and $$\delta t$$ is the time over which the heat is deposited. Putting this all together, conservation of energy applied to the little segment gives
 \begin{equation}\label{eq:heat-equation}
-  \underbrace{c \rho A \delta x \pdv{u}{t}}\_{\text{net power in}} = 
+  \underbrace{c \rho A \delta x \pdv{u}{t}}\_{\text{net power in}} =
   \underbrace{g(x,t) A \delta x\vphantom{\pdv{u}{t}}}\_{\text{source power}} \;
-  \underbrace{- \kappa(x,t) A \pdv{u(x,t)}{x}}\_{\text{heat flow in}} \;
-  \underbrace{+ \kappa(x+\delta x,t) A \pdv{u(x+\delta x, t)}{x}}\_{\text{heat flow out}}
+  - \underbrace{\kappa(x,t) A \pdv{u(x,t)}{x}}\_{\text{heat flow in}} \;
+  + \underbrace{\kappa(x+\delta x,t) A \pdv{u(x+\delta x, t)}{x}}\_{\text{heat flow out}}
 \end{equation}
 We can simplify this expression by dividing by $$A\delta x$$ and taking the limit as $$\delta x \to 0$$, which gives
 \\[
   c \rho \pdv{u}{t} = g + \pdv{}{x}\qty(\kappa \pdv{u}{x})
 \\]
-or, if we rearrange to put the differential terms on the left and the source term on the right, we have 
+or, if we rearrange to put the differential terms on the left and the source term on the right, we have
 \begin{equation}\label{eq:heat-eq}
   \boxed{c \rho \pdv{u}{t} - \pdv{}{x}\qty(\kappa \pdv{u}{x}) = g(x,t)}
 \end{equation}
@@ -154,19 +152,19 @@ For clarity, let's work out the dimensions and S.I. units of the important quant
 
 As a first pass at learning how to solve Eq. (\ref{eq:one-D}), let us consider a uniform rod of length $$L$$ whose initial temperature is $$u = 1$$, and whose ends at $$x = 0$$ and $$x = L$$ are held at temperature 0. That is
 \begin{align}
-  \pdv{u}{t} &= D \pdv[2]{u}{x} \label{eq:DE} \\\ 
-  u(x,0) &= 1 \\\ 
-  u(0, t) &= 0 \\\ 
+  \pdv{u}{t} &= D \pdv[2]{u}{x} \label{eq:DE} \\\
+  u(x,0) &= 1 \\\
+  u(0, t) &= 0 \\\
   u(L, t) &= 0
 \end{align}
 
-The basic strategy we will use relies on the fact that the differential equation we seek to solve is **linear**: the variable $$u$$ appears in each term to the first power (including in derivatives). A crucial consequence of this linearity is that we can superpose solutions; if $$f(x,t)$$ and $$g(x,t)$$ solve Eq. (\ref{eq:DE}), then so does $$c_1 f(x,t) + c_2 g(x,t)$$ for constants $$c_1$$ and $$c_2$$. This **principle of superposition** motivates the hope that we can find solutions of the separated-variable form 
+The basic strategy we will use relies on the fact that the differential equation we seek to solve is **linear**: the variable $$u$$ appears in each term to the first power (including in derivatives). A crucial consequence of this linearity is that we can superpose solutions; if $$f(x,t)$$ and $$g(x,t)$$ solve Eq. (\ref{eq:DE}), then so does $$c_1 f(x,t) + c_2 g(x,t)$$ for constants $$c_1$$ and $$c_2$$. This **principle of superposition** motivates the hope that we can find solutions of the separated-variable form
 \begin{equation}\label{eq:sepv}
     u(x,t) = X(x) T(t)
 \end{equation}
 which we can then superpose to match the initial and boundary conditions. In terms of Eq. (\ref{eq:sepv}), we have
 \begin{align}
-  \pdv{u}{t} &= X(x) T'(t) \\\ 
+  \pdv{u}{t} &= X(x) T'(t) \\\
   \pdv[2]{u}{x} &= X^{\prime\prime}(x) T(t)
 \end{align}
 which we can substitute into Eq. (\ref{eq:DE}) to get
@@ -175,11 +173,11 @@ which we can substitute into Eq. (\ref{eq:DE}) to get
 \\]
 To make progress, divide both sides by $$D u = D X(x)T(t)$$ to get
 \begin{equation}\label{eq:sepvar}
-    \frac{1}{D} \frac{T'(t)}{T(t)} = \frac{X^{\prime\prime}(x)}{X(x)} = -k^2
+    \frac{1}{D} \frac{T'(t)}{T(t)} = \frac{X^{\prime\prime}(x)}{X(x)}
 \end{equation}
 The left-hand side is a function of time, while the right-hand side is a function of position. The only way that these can be equal to each other is for each to be equal to a constant, which I will call $$-k^2$$. We can now solve separately the ordinary differential equations for $$T(t)$$ and $$X(x)$$, getting
 \\[
-    \dv{T}{t} = -k^2 D T(t) 
+    \dv{T}{t} = -k^2 D T(t)
     \qquad\longrightarrow\qquad
     T(t) = a e^{-k^2 D t}
 \\]
@@ -189,7 +187,7 @@ for some constant $$a$$, and
     \qquad\longrightarrow\qquad
     X(x) = c_1 \sin k x + c_2 \cos k x
 \\]
-for constants $$c_j$$. 
+for constants $$c_j$$.
 
 The boundary conditions at $$x = 0$$ and $$x = L$$ require that $$X(0) = X(L) = 0$$, which requires that
 \\[
@@ -210,7 +208,7 @@ As we learned in our study of [Fourier series](FO-FourierSeries.md), we can use 
 Hence,
 \\[
     c_n = \begin{cases}
-      \frac{4}{n\pi} & n\text{ odd} \\\ 
+      \frac{4}{n\pi} & n\text{ odd} \\\
       0 & n\text{ even}
     \end{cases}
 \\]
@@ -246,9 +244,9 @@ ax.set_ylabel("$u$");
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/PDE0.webp" style="width: 600px;">
+  <img src="figs/PDE0.webp" style="width: 500px;" alt="Temperature profiles in an insulated rod with ends held at zero">
 </p>
-<p class="icap" markdown="1">Plot of Eq. (\ref{eq:solution}) using the first 500 terms in the series and the values $$D=1$$ and $$L=1$$. Note that the solution at $$t = 0$$ shows the Gibbs phenomenon at the points of discontinuity at $$x = 0$$ and $$x = L$$. Note, as well, that the modes with higher spatial frequency (larger $$n$$) decay much more rapidly, so that by $$t = 0.05$$, the temperature distribution is dominated by the fundamental mode ($$\sin \pi x/L$$), which decays with a time constant $$\tau = L^2/(\pi^2 D) \approx 10$$.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Plot of Eq. (\ref{eq:solution}) using the first 500 terms in the series and the values $$D=1$$ and $$L=1$$. Note that the solution at $$t = 0$$ shows the Gibbs phenomenon at the points of discontinuity at $$x = 0$$ and $$x = L$$. Note, as well, that the modes with higher spatial frequency (larger $$n$$) decay much more rapidly, so that by $$t = 0.05$$, the temperature distribution is dominated by the fundamental mode ($$\sin \pi x/L$$), which decays with a time constant $$\tau = L^2/(\pi^2 D) \approx 10$$.</p>
 
 The plot shows that the initially uniform temperature distribution, with the rod at $$u = 1$$, is rapidly altered near the ends of the rod, which are forced to be at zero temperature. Their influence gradually propagates inwards towards the center of the rod, which is always the point of maximum temperature. As time elapses, the shape of the temperature distribution converges to the shape of the fundamental spatial mode, $$\sin \pi x/L$$, which decays slowest. All-in-all, this solution seems to make good physical sense.
 
@@ -256,12 +254,12 @@ The plot shows that the initially uniform temperature distribution, with the rod
 
 Let's alter the previous situation slightly. We'll continue to hold the left end of the rod at $$x = 0$$ at 0°C, but this time we will insulate the end at $$x = L$$ so that heat cannot flow in or out. Let's also suppose that the initial temperature distribution in the rod is linear. So, we take
 \begin{align}
-  u(0, t) &= 0 \\\ 
-  u_x(L, t) &= 0 \\\ 
+  u(0, t) &= 0 \\\
+  u_x(L, t) &= 0 \\\
   u(x, 0) &= \frac{x}{L}
 \end{align}
 
-Since we solve the same differential equation, we already know the form of the separated-variable solutions: 
+Since we solve the same differential equation, we already know the form of the separated-variable solutions:
 \\[
     \varphi_k(x,t) = X(x) T(t) = \sin k x \; e^{-k^2 D t}
 \\]
@@ -279,25 +277,25 @@ I leave as an exercise the demonstration that the basis functions
 \\[
     \varphi_n(x,0) = \sin \frac{(n+\frac12)\pi x}{L}
 \\]
-are indeed orthogonal on the interval $$[0, L]$$. We thus seek a series representation of the solution to the partial differential equation of the form
+are indeed orthogonal on the interval $$[0, L]$$. (Hint: bilinear concomitant.) We thus seek a series representation of the solution to the partial differential equation of the form
 \\[
-    u(x,t) = \sum_{n=0}^{\infty} b_n \sin \frac{(n+\frac12)\pi x}{L} 
+    u(x,t) = \sum_{n=0}^{\infty} b_n \sin \frac{(n+\frac12)\pi x}{L}
     \exp\qty(-Dt \qty[\frac{(n+\frac12)\pi)}{L}]^2)
 \\]
 
 We now use the initial condition to determine the coefficients $$b_n$$:
 \begin{align}
   \sum_{n=0}^{\infty} b_n \sin\frac{(n+\frac12)\pi x}{L}
-  &= u(x,0)= \frac{x}{L}  \notag \\\ 
+  &= u(x,0)= \frac{x}{L}  \notag \\\
   b_m \frac{L}2 &= \int_0^L \frac{x}{L} \sin\frac{(m+\frac12)\pi x}{L} \dd{x}
-   \\\ 
+   \\\
   b_m &= \frac{2}{L} \int_0^{(m+\frac12)\pi} \frac1L \qty[\frac{L}{(m+\frac12)\pi}]^2 y \sin y \dd{y}
 \end{align}
-We now integrate by parts
+Integrate by parts
 \begin{align}
-    b_m &= \frac{2}{(m+\frac12)^2 \pi^2} 
+    b_m &= \frac{2}{(m+\frac12)^2 \pi^2}
     \qty[ \left.-y \cos y \right|_0^{(m+\frac12)\pi} + \int\_0^{(m+\frac12)\pi}
-    \cos y\dd{y} ] \\\ 
+    \cos y\dd{y} ] \\\
     &= \frac{2}{(m+\frac12)^2 \pi^2} \sin\qty[\qty(m+\frac12)\pi] =
     \frac{2 (-1)^m}{(m+\frac12)^2 \pi^2} = \frac{8 (-1)^m}{(2m+1)^2 \pi^2}
 \end{align}
@@ -332,9 +330,9 @@ ax.set_ylabel("$u$");
 ~~~~
 
 <p class="center" markdown="0">
-  <img src="figs/PDE1.webp" style="width: 600px;">
+  <img src="figs/PDE1.webp" style="width: 500px;" alt="Temperature profiles in an insulated rod with the left end held at zero">
 </p>
-<p class="icap" markdown="1">The temperature profile in an insulated rod whose left end is mantained at 0°C and whose right end is insulated, as developed in Eq. (\ref{eq:PDE2}).</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The temperature profile in an insulated rod whose left end is maintained at 0°C and whose right end is insulated, as developed in Eq. (\ref{eq:PDE2}).</p>
 
 ## Temperature Variation Underground
 
@@ -353,10 +351,10 @@ The partial differential equation we must solve is still the same: $$u_t = D u_{
 so that $$T(t) = A e^{-i\omega t}$$. Substituting in Eq. (\ref{eq:sepvar}) gives
 \begin{align}
     \frac{1}{D} \frac{-i\omega A e^{-i\omega t}}{Ae^{-i\omega t}} &=
-    \frac{X^{\prime\prime}(x)}{X(x)} \notag \\\ 
+    \frac{X^{\prime\prime}(x)}{X(x)} \notag \\\
     \underbrace{-\frac{i\omega}{D}}_{k^2} X(x) &= X^{\prime\prime}(x) \notag
 \end{align}
-The solutions for $$X(x)$$ are $$e^{\pm k x}$$ where 
+The solutions for $$X(x)$$ are $$e^{\pm k x}$$ where
 \\[
     k = \sqrt{\frac{-i \omega}{D}} = \sqrt{\frac{\omega}{D} e^{-i\pi/2}}
     = \sqrt{\frac{\omega}{D}} e^{-i \pi/4} = \sqrt{\frac{\omega}{2D}} (1 - i)
@@ -370,14 +368,14 @@ So, the full time-dependent solution is
 \\]
 The term proportional to $$c_1$$ grows in amplitude with increasing depth $$x$$, which is unphysical for this problem, so we must take $$c_1 = 0$$. Therefore, the solution for the temperature profile is
 \begin{align}
-  u(x,t) &= u_0 + A  e^{-\beta x} \cos \qty(\beta x - \omega t)\label{eq:Tprofile} \\\ 
+  u(x,t) &= u_0 + A  e^{-\beta x} \cos \qty(\beta x - \omega t)\label{eq:Tprofile} \\\
   \beta &= \sqrt{\frac{\omega}{2D}} = \sqrt{\frac{\pi}{\tau D}}
 \end{align}
 where $$\tau$$ is the period of oscillation of the driving surface temperature. The shorter the period, the larger the value of $$\beta$$ and the more rapidly the surface variation dies out with depth. The daily variations in surface temperature barely penetrate into the ground, but the annual variations do.
 
 <p class="center" markdown="0">
-  <img src="figs/wine.webp" style="width: 500px;">
+  <img src="figs/wine.webp" style="width: 500px;" alt="Temperature oscillations in the ground">
 </p>
-<p class="icap" markdown="1">Illustration of Eq. (\ref{eq:Tprofile}), which describes the temperature of the ground as a function of depth over the course of an annual temperature oscillation at the surface of amplitude 15°C, with an average of 5°C. Note: this does *not* attempt to describe facts “on” the ground in Claremont!</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Illustration of Eq. (\ref{eq:Tprofile}), which describes the temperature of the ground as a function of depth over the course of an annual temperature oscillation at the surface of amplitude 15°C, with an average of 5°C. Note: this does *not* attempt to describe facts “on” the ground in Claremont!</p>
 
-
+Next: [Solving Laplace’s Equation](PD-PD2.md)
