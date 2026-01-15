@@ -184,19 +184,19 @@ If we separate the terms that involve the as-yet unknown values, $$u_j^{i+1}$$, 
   \end{pmatrix}
 \end{equation}
 
-Notice that both matrices are **tridiagonal**. As you will undoubtedly recall, on the first homework assignment you wrote a solver for tridiagonal matrix problems. At the time, I mentioned that your routine would come in handy later when we were solving partial differential equations. This would be a wonderful time to pull it out to implement a Crank-Nicolson solver!
+Notice that both matrices are **tridiagonal**. Tridiagonal systems are easy to solve in a number of operations that is simply proportional to the size $$N$$ of the matrices involved. If you have already written a tridiagonal solver, this would be a wonderful time to pull it out to implement a Crank-Nicolson solver!
 
 ### Questions
 
 1. Apart from the first and last rows, the rows of the two matrices in Eq.&nbsp;(\ref{eq:CNmatrices}) all have the same form. The right expressions for row 0 and row $$N-1$$ depend on the boundary conditions there. What assumption have I made in Eq.&nbsp;(\ref{eq:CNmatrices}) for the left end?
 
-2. The most common boundary conditions are Dirichlet and Neumann conditions. In Dirichlet boundary conditions, the value of the variable is fixed, whereas in Neumann boundary conditions, the normal derivative is fixed (often at zero). In a one-dimensional problem, the normal derivative is the same thing as $$\partial u/\partial x$$. Work out how the tridiagonal matrices need to be adjusted for each type of boundary condition.
+2. The most common boundary conditions are called **Dirichlet** and **Neumann** conditions. In Dirichlet boundary conditions, the value of the variable is fixed at the boundary, whereas in Neumann boundary conditions, the normal derivative is fixed at the boundary (often at zero). In a one-dimensional problem, the normal derivative is the same thing as $$\partial u/\partial x$$. Work out how the tridiagonal matrices need to be adjusted for each type of boundary condition.
 
 3. After implementing the Crank-Nicolson method for solving $$u_t = D u_{xx}$$ in a one-dimensional uniform rod, investigate the error compared to the analytic solution as a function of time step $$\Delta t$$ for fixed $$\Delta x$$. Is the method second-order in time? That is, is the error proportional to $$(\Delta t)^2$$?
 
 4. If material properties such as $$c$$ and $$\kappa$$ were functions of temperature (not an uncommon situation), how would you have to modify the Crank-Nicolson matrices shown in Eq.&nbsp;(\ref{eq:CNmatrices}) to account for these temperature dependencies? Is the problem even well-posed? What additional assumptions do you need to make?
 
-## Solution
+<!-- ## Solution
 
 If the material properties depend on temperature, we need to return to the original differential equation and approximate the derivatives afresh. Recall that the original partial differential equation for the diffusion of heat in one dimension is
 \begin{equation}
@@ -212,3 +212,4 @@ where the upper index represents the step and the lower the position. The quanti
 \begin{equation}
   u_j^{i+1} = u_j^i + \frac{\Delta t}{c_j^i(\Delta x)^2} \bigg(\kappa(u_{j+1}^i)u_{j+1}^i - 2 \kappa(u_j^i)u_j^i + \kappa(u_{j-1}^i) u_{j-1}^i \bigg)
 \end{equation}
+-->

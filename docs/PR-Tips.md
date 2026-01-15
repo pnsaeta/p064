@@ -51,7 +51,7 @@ with open(path('testing'), 'w') as f:
 ~~~~
 
 
-### Numpy arrays
+### NumPy arrays
 
 You can save numpy arrays in binary format, which takes less space on disk than converting to text and which loads a great many times faster.
 
@@ -112,7 +112,7 @@ args = [(N, t, 1000, 100) for t in temps] # generate the list of argument sets
 
 with mp.Pool(PROCESSES) as pool:          # create a pool of processes
     res = pool.map(run_one, args)         # use the pool to run the run_one function on each set of args
-df = pd.DataFrame(res)                    # when every simulation has been run and assembled in res, 
+df = pd.DataFrame(res)                    # when every simulation has been run and assembled in res,
                                           # generate a DataFrame from the list of dictionaries
 ~~~~
 
