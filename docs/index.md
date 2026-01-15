@@ -27,6 +27,10 @@ This course aims to extend your understanding of a range of important mathematic
   </tr>
 
   <tr class="sep">
+    <td><a href="SE-Series.html">Infinite Series</a></td>
+    <td>Infinite series (and their truncated versions) allow us to simplify many problems by seeking approximate solutions.</td>
+  </tr>
+  <tr>
     <td><a href="LA-LinearAlgebra.html">Linear Algebra</a></td>
     <td> We will review key results and discuss numerical approaches to solving problems in linear algebra </td>
   </tr>

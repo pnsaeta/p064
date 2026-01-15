@@ -17,7 +17,7 @@ with the understanding that $$0! = 1$$. Euler's $$\Gamma$$ function generalizes 
 \begin{equation}\label{eq:Gamma}
     \boxed{ \Gamma(n+1) = \int_0^\infty x^n e^{-x} \dd{x} }
 \end{equation}
-where the extra 1 in the argument is courtesy of Legendre. 
+where the extra 1 in the argument is courtesy of Legendre.
 
 To see that $$\Gamma(n+1)$$ corresponds to the factorial function, integrate by parts:
 \\[
@@ -69,7 +69,7 @@ Therefore,
 
 Getting back to the gamma function, we can now use the recurrence relation of Eq. (\ref{eq:recurrence}) to deduce that
 \begin{align}
-    \Gamma\qty(\frac32) &= \frac12 \Gamma\qty(\frac12) = \frac{\sqrt{\pi}}{2} \notag \\\ 
+    \Gamma\qty(\frac32) &= \frac12 \Gamma\qty(\frac12) = \frac{\sqrt{\pi}}{2} \notag \\\
     \Gamma\qty(\frac52) &= \frac32 \Gamma\qty(\frac32) = \frac{3\sqrt{\pi}}{4} \notag
 \end{align}
 and in general
@@ -79,15 +79,15 @@ and in general
 \\]
 where the **double factorial** is defined by
 \\[
-    n!! = n \times (n-2) \times \cdots \times \begin{cases} 1 & n\text{ odd} \\\ 
+    n!! = n \times (n-2) \times \cdots \times \begin{cases} 1 & n\text{ odd} \\\
     2 & n\text{ even}
     \end{cases}
 \\]
 
-<p class="center" markdown="0">
-  <img src="figs/gamma.webp" style="width: 500px;">
+<p class="figure" markdown="0">
+  <img src="figs/gamma.webp" style="width: 500px;" alt="Euler's gamma function">
 </p>
-<p class="mycap" markdown="1">The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
+<p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 
 The figure was generated with the following Python code:
 
@@ -109,10 +109,10 @@ Factorials grow extremely rapidly with their argument; it could be handy to have
     \ln n! = \ln 1 + \ln 2 + \cdots + \ln n
 \\]
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/baby-Stirling.webp" style="width: 400px;" alt="The logarithm of n!">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A way to estimate $$\ln x!$$ would be to compute the area under the red curve, although that sure looks like an overestimate, since there is area outside the blue bars. By contrast, the area under the green curve would be an underestimate, since it is entirely contained in the bars.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — A way to estimate $$\ln x!$$ would be to compute the area under the red curve, although that sure looks like an overestimate, since there is area outside the blue bars. By contrast, the area under the green curve would be an underestimate, since it is entirely contained in the bars.</p>
 
 The area under the red curve would be
 \\[
@@ -120,7 +120,7 @@ The area under the red curve would be
 \\]
 The upper limit on the integral is $$n+1$$ because the bar for $$\ln n$$ starts at $$n$$ and goes to $$n+1$$. The area under the green curve would be
 \\[
-    \ln n!\_{\text{green}} = \int\_{2}^{n+1} \ln (x-1) \dd{x} = \int\_1^{n} \ln x' \dd{x'} = x'\ln x' - x' \bigg|\_1^{n} = 
+    \ln n!\_{\text{green}} = \int\_{2}^{n+1} \ln (x-1) \dd{x} = \int\_1^{n} \ln x' \dd{x'} = x'\ln x' - x' \bigg|\_1^{n} =
     n \ln n - n
 \\]
 The true value lies above green but below red. So, crudely, $$\ln n! \approx n \ln n - n$$ and $$n! \approx n^n e^{-n}$$, although that's going to be a modest underestimate. As a spot check, we can evaluate $$6! = 720$$:
@@ -135,12 +135,12 @@ We know from above that $$\Gamma(n+1) = n!$$ for nonnegative integers $$n$$. Tha
 \\[
     n! = \int_0^{\infty} x^n e^{-x} \dd{x}
 \\]
-The integrand is the product of a rapidly increasing function of $$x$$ (at large $$n$$) and a rapidly decreasing function of $$x$$. There's a peak somewhere. Maybe we could develop an approximation by expanding about that peak. 
+The integrand is the product of a rapidly increasing function of $$x$$ (at large $$n$$) and a rapidly decreasing function of $$x$$. There's a peak somewhere. Maybe we could develop an approximation by expanding about that peak.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/gamma-integrand.webp" style="width: 400px;" alt="The integrand of the gamma function">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The integrand of $$\Gamma(x)$$, shown here for $$n = 6$$. It is peaked in the vicinity of $$x = n$$.</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(x)$$, shown here for $$n = 6$$. It is peaked in the vicinity of $$x = n$$.</p>
 
 Actually, it will be smoother if we expand the logarithm of the integrand around the peak, and then exponentiate our series expansion. So, the steps are:
 
@@ -159,9 +159,9 @@ Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expa
 ### Step 2: Expand $$y$$ in a Taylor Series
 
 \begin{align}
-  i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y'' (n) &= -\frac{1}{n} \notag \\\ 
-  i &= 3 & \qquad y''' &=  \frac{2! \; n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag \\\ 
-  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! \; n}{x^4} &\qquad y^{\text{iv}} (n) &= \frac{3!}{n^3} \notag \\\ 
+  i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y'' (n) &= -\frac{1}{n} \notag \\\
+  i &= 3 & \qquad y''' &=  \frac{2! \; n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag \\\
+  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! \; n}{x^4} &\qquad y^{\text{iv}} (n) &= \frac{3!}{n^3} \notag \\\
   i &= 5 & \qquad y^{\text{v}} &=  \frac{4! \; n}{x^5} &\qquad y^{\text{v}} (n) &= \frac{4!}{n^4} \notag
   \end{align}
 
@@ -185,14 +185,14 @@ where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go 
 \begin{equation}\label{eq:nfact2}
   n! \approx \sqrt{2 \pi n} \; n^n e^{-n}
 \end{equation}
-When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer to the true value of 720 than our first approximation. 
+When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer to the true value of 720 than our first approximation.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/gamma-first-pass.webp" style="width: 400px;" alt="First term in the Stirling approximation">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
 
-Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check: 
+Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
 
 <div class="center-div">
 <table border="1" class="dataframe">
@@ -281,7 +281,7 @@ Then,
 \begin{equation}\label{eq:nf2}
   n! \approx n^n e^{-n} \int_{-\infty}^{\infty} e^{-\alpha n^2} e^q \dd{\xi}
 \end{equation}
-If we now expand $$e^q$$ in a Taylor series, 
+If we now expand $$e^q$$ in a Taylor series,
 \\[
     e^q = 1 + q + \frac{q^2}{2!} + \frac{q^3}{3!} + \cdots
 \\]
@@ -292,10 +292,10 @@ then we will have terms of the form
 
 Before sweating the details, note that if $$\mu$$ is odd, then the integrand is odd and so the integral evaluates to zero. So, we only need to worry about even values of $$\mu = 2m$$. We can evaluate these by **differentiating under the integral sign**:
 \begin{align}
-  I_{2m} &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}  
-  = \int_{-\infty}^{\infty} \left( -\pdv{}{\alpha}\right)^m \;e^{-\alpha \xi^2} \dd{\xi} \notag \\\ 
+  I_{2m} &= \int_{-\infty}^{\infty} \xi^{2m} e^{-\alpha \xi^2} \dd{\xi}
+  = \int_{-\infty}^{\infty} \left( -\pdv{}{\alpha}\right)^m \;e^{-\alpha \xi^2} \dd{\xi} \notag \\\
   &= \left( -\pdv{}{\alpha}\right)^m \int_{-\infty}^{\infty} e^{\alpha \xi^2} \dd{\xi} = \left( -\pdv{}{\alpha}\right)^m \sqrt{\frac{\pi}{\alpha}}
-  = \sqrt{\frac{\pi}{\alpha}} \frac{1}{2} \times \frac{3}{2} \times \cdots \times \frac{2m-1}{2} \alpha^{-m} \notag \\\ 
+  = \sqrt{\frac{\pi}{\alpha}} \frac{1}{2} \times \frac{3}{2} \times \cdots \times \frac{2m-1}{2} \alpha^{-m} \notag \\\
   &= \sqrt{2 \pi n} \frac{(2m-1)!!}{2^m} (2n)^m = \sqrt{2 \pi n} \; n^m \; (2m-1)!!
 \end{align}
 
@@ -306,18 +306,18 @@ the terms we need from $$q$$ are all negative:
   \label{eq:qterms}
   q: &\quad -\sqrt{2\pi n} \left[ \frac{1}{4n^{3}} n^{2} (3!!) +
     \frac{1}{6n^{5}} n^{3} (5!!) + \frac{7!! \; n^{4}}{8n^{7}}  + \cdots
-       \right]\\\ 
+       \right]\\\
   &\quad -\sqrt{2 \pi n} \left[ \frac{3}{4n} + \frac{5}{2n^{2}} + \frac{105}{8n^{3}} +
     \cdots \right]
 \end{align}
 What about the next term, $$q^{2}/2$$. What are the terms with even powers of $$\xi$$?
 \begin{align}
  q^{2} & = \frac{\xi^{6}}{(3n^2)^{2}} + \frac{\xi^{8}}{(4n^{3})^{2}} +
-         2\frac{\xi^{3}}{3n^{2}} \frac{\xi^{5}}{5n^{4}}  + \cdots \\\ 
+         2\frac{\xi^{3}}{3n^{2}} \frac{\xi^{5}}{5n^{4}}  + \cdots \\\
        &= \frac{\xi^{6}}{9n^{4}} + \frac{\xi^{8}}{n^{6}} \left( \frac{1}{16} +
          \frac{2}{15} \right)
 \end{align}
-On integrating, the first term will yield 
+On integrating, the first term will yield
 \begin{equation}\label{eq:blah2}
   \frac{1}{2} \sqrt{2 \pi n} \frac{1}{9n^4} n^3 (5!!) =  \sqrt{2\pi n} \frac{5}{6n}
 \end{equation}
@@ -420,7 +420,7 @@ For those up to a challenge, show that the next term in the series is
 
 Perhaps a more insightful way to show the error arising from the various versions of the Stirling series is to take the absolute difference between the true value and the approximate value, and divide that by the true value.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Stirling-error.webp" style="width: 500px;" alt="">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Relative error in the various approximations to the factorial function. The dots represent the true values; the dashed curves are power laws proportional to $$1/n$$, $$1/n^2$$, and $$1/n^3$$ chosen to pass through the points at $$n = 30$$.</p>
