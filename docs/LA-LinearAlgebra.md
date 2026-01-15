@@ -26,10 +26,9 @@ You already know all about such objects. You can add them if they have the same 
 
 However, having a magnitude and direction is not quite a sufficient definition for a vector, until we supplement with rules for addition and for multiplication by a scalar. If we adopt a geometric approach, then the rule for vector addition is to place the tail of vector $$\vb{B}$$ at the head of vector $$\vb{A}$$, and draw the arrow from the tail of $$\vb{A}$$ to the head of $$\vb{B}$$, as illustrated below.
 
-<p class="figure" markdown="0">
-  <img src="figs/vector-addition.webp" style="width: 200px;">
-</p>
-<p class="mycap" markdown="1">Addition of vectors: $$\vb{C} = \vb{A} + \vb{B}$$. Note that $$\vb{B} + \vb{A}$$, shown dashed, yields the same vector $$\vb{C}$$. In other words, vector addition is **commutative**.</p>
+<p class="figure" markdown="0" alt="something">
+  <img src="figs/vector-addition.webp" style="width: 200px;" alt="something">
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — Addition of vectors: $$\vb{C} = \vb{A} + \vb{B}$$. Note that $$\vb{B} + \vb{A}$$, shown dashed, yields the same vector $$\vb{C}$$. In other words, vector addition is **commutative**.</p>
 
 ## Vector Spaces
 

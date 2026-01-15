@@ -85,9 +85,8 @@ where the **double factorial** is defined by
 \\]
 
 <p class="figure" markdown="0">
-  <img src="figs/gamma.webp" style="width: 500px;" alt="Euler's gamma function">
-</p>
-<p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
+  <img src="figs/gamma.webp" style="width: 400px;" alt="Euler's gamma function">
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 
 The figure was generated with the following Python code:
 
@@ -190,7 +189,7 @@ When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer 
 <p class="figure" markdown="0">
   <img src="figs/gamma-first-pass.webp" style="width: 400px;" alt="First term in the Stirling approximation">
 </p>
-<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
 
 Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
 
@@ -423,4 +422,4 @@ Perhaps a more insightful way to show the error arising from the various version
 <p class="figure" markdown="0">
   <img src="figs/Stirling-error.webp" style="width: 500px;" alt="">
 </p>
-<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Relative error in the various approximations to the factorial function. The dots represent the true values; the dashed curves are power laws proportional to $$1/n$$, $$1/n^2$$, and $$1/n^3$$ chosen to pass through the points at $$n = 30$$.</p>
+<p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — Relative error in the various approximations to the factorial function. The dots represent the true values; the dashed curves are power laws proportional to $$1/n$$, $$1/n^2$$, and $$1/n^3$$ chosen to pass through the points at $$n = 30$$.</p>

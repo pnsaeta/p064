@@ -214,10 +214,9 @@ ax.set_xlabel("$x$")
 ax.set_ylabel(r"$J_0(x)$");
 ~~~~
 
-<p class="center" markdown="0">
-  <img src="figs/J0.webp" style="width: 500px;">
-</p>
-<p class="mycap" markdown="1">The behavior of $$J_0(x)$$ for small $$x$$ computed via `myJ0` (smooth curve) and `scipy.special.jv` (dots).</p>
+<p class="figure" markdown="0">
+  <img src="figs/J0.webp" style="width: 500px;" alt="Zeroth-order Bessel">
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The behavior of $$J_0(x)$$ for small $$x$$ computed via `myJ0` (smooth curve) and `scipy.special.jv` (dots).</p>
 
 You can readily see the fine agreement between the truncated series and the `scipy` version of $$J_0(x)$$.
 
