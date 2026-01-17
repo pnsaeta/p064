@@ -39,11 +39,10 @@ The **harmonic series**,
 \\]
 does not converge, even though its terms tend to zero as $$n \to \infty$$. Its divergence is logarithmic (i.e., weak), as illustrated in the following figure
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/harmonic.webp" style="width: 400px;" alt="Harmonic series">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1 </a> — The harmonic series is represented by the area shaded blue of the bars of height $$1$$, $$\frac12$$, $$\frac13$$, etc. The area of the bars is greater than the area under the curve $$1/x$$ (shown in red), since the curve is everywhere contained within a bar. Since $$\int_1^x \frac1{x'}\dd{x'} = \ln x$$, which slowly diverges as $$x\to\infty$$, the harmonic series diverges even though its individual terms tend to zero.</p>
-
 
 ### Geometric Series
 
@@ -53,7 +52,7 @@ Successive terms of a **geometric series** form a fixed ratio $$r$$:
 \\]
 There is a nifty trick for summing a (finite) geometric series. Consider $$r S_N$$:
 \begin{align}
-    S\_N &= a\_0 (1 + r + r^2 + \cdots + r^N) \\\ 
+    S\_N &= a\_0 (1 + r + r^2 + \cdots + r^N) \\\
     r S\_N &= a\_0(\hphantom{1 + } \;\, r + r^2 + \cdots + r^N + r^{N+1})
 \end{align}
 If we now subtract the second line from the first, we get
@@ -74,12 +73,12 @@ It is often necessary to know whether an infinite series converges to a finite v
 3. **Ratio test**: the convergence of a series may be determined from the limit of the ratio of successive terms:
 \\[
     \lim_{n\to\infty} \frac{a_{n+1}}{a_n} \begin{cases}
-    < 1 &\quad \text{convergence} \\\ 
-    > 1 &\quad \text{divergence} \\\ 
+    < 1 &\quad \text{convergence} \\\
+    > 1 &\quad \text{divergence} \\\
     = 1 &\quad \text{indeterminate}
     \end{cases}
 \\]
-4. **Integral test**: The caption to Fig. 1 above illustrates using an integral test 
+4. **Integral test**: The caption to Fig. 1 above illustrates using an integral test
 
 ### Exercises
 
@@ -99,13 +98,13 @@ Another series that frequently arises in physical theory is the **Riemann zeta**
 \end{equation}
 If $$\nu=1$$, this series becomes the harmonic series, which we know to be divergent. For $$\nu < 1$$ it diverges more rapidly, but for $$\nu > 1$$ we can use an integral test to check convergence:
 \\[
-    \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}} 
+    \zeta(\nu) = \sum_{n=1}^\infty \frac1{n^{\nu}}
     < 1 + \int_2^{\infty} (x-1)^{-\nu} \dd{x}
     = 1 + \left.\frac{(x-1)^{1-\nu}}{1-\nu}\right|_{x=2}^{\infty} = 1 + \frac{1}{\nu-1} = \frac{\nu}{\nu-1} < \infty
     \qquad\text{when } \nu > 1
 \\]
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/zeta.webp" style="width: 400px;" alt="Riemann zeta function">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2 </a> — The Riemann zeta function for $$\nu = 1.1$$. The red and green curves clearly bound the area of the blue bars, which represents $$\zeta(1.1)$$ (note the logarithmic vertical scale).</p>
@@ -144,12 +143,12 @@ which shows that $$A > \frac12$$. As shown, for example, in Arfken, we could als
     \frac17 + \frac19 + \frac{1}{11} + \frac{1}{13} + \frac{1}{15}
   \right)
   \notag
-  \\\ 
+  \\\
   &\qquad - \left(\frac14\right) + \left( \frac{1}{17} + \cdots + \frac{1}{25}\right) - \left(\frac16 \right) + \cdots
   \label{eq:altharm}
 \end{align}
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/altharmonic.webp" style="width: 400px;" alt="Alternating harmonic series shown converging to 3/2">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Partial sums of the alternating harmonic series as grouped as illustrated in Eq.&nbsp;(\ref{eq:altharm}), which demonstrates convergence to 3/2.</p>
