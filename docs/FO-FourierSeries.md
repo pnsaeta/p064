@@ -23,10 +23,9 @@ A periodic function with period $$T$$ has the property that
 \\]
 for all $$t$$. You are already familiar with a large class of periodic functions, the trigonometric functions sine, cosine, and tangent, along with their reciprocals, but these just scratch the surface.
 
-<p class="center" markdown="0">
-  <img src="figs/periodic.webp" style="width: 600px;">
-</p>
-<p class="mycap" markdown="1">A few functions with period $$T$$.</p>
+<p class="figure" markdown="0" alt="something">
+  <img src="figs/periodic.webp" style="width: 600px;" alt="something">
+</p><p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A few functions with period $$T$$.</p>
 
 ### A Nifty Result
 
@@ -43,7 +42,7 @@ Therefore,
 \end{align}
 
 Easy, peasy!!
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/nifty.webp" style="width: 600px;" alt="Nifty illustration of how to integrate the square of a trig function">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Over the interval shaded in the figure, the area under the curves for $$\sin^2\theta$$ and $$\cos^2\theta$$ are the same, and since they sum to 1 by the Pythagorean theorem, $$\sin^2\theta + \cos^2\theta = 1$$, each has the average value of 1/2.</p>
@@ -208,17 +207,17 @@ ax.set_xlabel("$t / T$")
 ax.legend();
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/square.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1">The Fourier series representation of the square wave defined in Eq. (\ref{eq:square}) for terms through the given order $$n$$. Increasing numbers of terms allow the series to approach ever more closely the constant value 1 for $$0 < t < \frac{T}{2}$$, but there appears to be a persistent overshoot at the discontinuities, which is called the [Gibbs phenomenon](FO-Gibbs.md). </p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The Fourier series representation of the square wave defined in Eq. (\ref{eq:square}) for terms through the given order $$n$$. Increasing numbers of terms allow the series to approach ever more closely the constant value 1 for $$0 < t < \frac{T}{2}$$, but there appears to be a persistent overshoot at the discontinuities, which is called the [Gibbs phenomenon](FO-Gibbs.md). </p>
 
 Stopping after just two terms ($$n=3$$) does not make a very convincing representation of the square wave, but as we add more and more terms, it does indeed appear that the Fourier series is at least trying to converge to $$f(t)$$, at least away from its points of discontinuity. Let’s home in on the region around $$t = 0$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/square-near-zero.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1">At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists. See [this page](FO-Gibbs.md) for more on the Gibbs phenomon.</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists. See [this page](FO-Gibbs.md) for more on the Gibbs phenomon.</p>
 
 The rate of convergence of this series is quite slow (the coefficients are proportional to $$1/n$$) because of the discontinuity at $$t = 0$$ and the endpoints. We can explore the rate of convergence by investigating a continuous function that lacks a continuous first derivative, such as a triangular wave given by
 \\[
@@ -230,20 +229,19 @@ for which the Fourier series is
 \\]
 Now the coefficients fall off like $$1/n^2$$, much faster than for the square wave.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/triangle.webp" style="width: 500px;">
-</p>
-<p class="mycap" markdown="1">Truncated Fourier series approximation to
+</p><p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — Truncated Fourier series approximation to
 a sawtooth wave. Comparing the rate of convergence to the discontinuous square wave, it clearly takes many fewer terms for the Fourier series to converge to this continuous function that lacks a continuous first derivative. The coefficients </p>
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/triangle-zero.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1">Near a point of discontinuity in the first derivative, the rate of convergence is slower, although still significantly faster than in the first example.</p>
+<p class="icap" markdown="1"><a name="Fig6">Figure 6</a> — Near a point of discontinuity in the first derivative, the rate of convergence is slower, although still significantly faster than in the first example.</p>
 
 ## General Theory
 
-To demonstrate the sines and cosines are orthogonal over a period, we took advantage of trigonometric identities. We now seek to develop an approach that relies only on the governing differential equation and doesn't need such specialized knowledge as trig identities.
+To demonstrate that the sines and cosines are orthogonal over a period, we took advantage of trigonometric identities. We now seek to develop an approach that relies only on the governing differential equation and doesn't need such specialized knowledge as trig identities.
 
 The trigonometric functions satisfy the differential equation
 \begin{equation}\label{eq:DE}
@@ -300,12 +298,12 @@ Using the orthogonality of the functions defined in Eq.&nbsp;(\ref{eq:exa}), you
   f(x) = \sum_{n = 0}^\infty \frac{32}{\pi^3 (1+2n)^3} \sin\left[\left(n+\frac12\right)\frac{\pi x}{L}\right]
 \end{equation}
 
-As is apparent in <a href="#FO-parabola">Figure 4</a>, the series converges extremely rapidly, since the basis function with $$n = 0$$ is a pretty close approximation to the parabola.
+As is apparent in <a href="#FO-parabola">Figure 7</a>, the series converges extremely rapidly, since the basis function with $$n = 0$$ is a pretty close approximation to the parabola.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FO-parabola.webp" style="width: 400px;">
 </p>
-<p class="icap" markdown="1"><a name="FO-parabola">Figure 4</a> — Convergence of the Fourier series representation of the parabolic function defined in Eq.&nbsp;(\ref{eq:fx}). The top panel shows the true function and the Fourier approximation that uses only the terms with $$n=0$$ and $$n=1.$$ The bottom panel shows the difference between the truncated series and the true function for different points of truncation.</p>
+<p class="icap" markdown="1"><a name="Fig7">Figure 7</a> — Convergence of the Fourier series representation of the parabolic function defined in Eq.&nbsp;(\ref{eq:fx}). The top panel shows the true function and the Fourier approximation that uses only the terms with $$n=0$$ and $$n=1.$$ The bottom panel shows the difference between the truncated series and the true function for different points of truncation.</p>
 
 
 The convergence of the previous example seems a bit too good. What happens if we ask the Fourier series to converge to a function that is inconsistent with the boundary conditions we have imposed? Suppose, for instance, that we use the same basis functions of Eq.&nbsp;(\ref{eq:exa}) to represent a parabola that peaks not at $$x = L$$ but in the middle of the range? The result is
@@ -313,17 +311,17 @@ The convergence of the previous example seems a bit too good. What happens if we
   g(x) = \frac{4}{L^2} x (L-x) = \sum_{n=0}^\infty \frac{16 - 8 \pi (n+\frac12) (-1)^n}{[\pi(n+\frac12)]^3}
   \sin\left[\pi (n+\frac12)\frac{x}{L}\right]
 \end{equation}
-illustrated in <a href="#convslow">Figure 5</a>.
+illustrated in <a href="#Fig8">Figure 8</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FO-awkward.webp" style="width: 400px;">
 </p>
-<p class="icap" markdown="1"><a name="convslow">Figure 5</a> — Convergence of the Fourier series using basis functions to represent a parabola that is symmetric in the interval $$[0, L]$$. The percentage shown in the legend is the value of $$\sqrt{ \langle f-s_n, f-s_n\rangle }$$.</p>
+<p class="icap" markdown="1"><a name="Fig8">Figure 8</a> — Convergence of the Fourier series using basis functions to represent a parabola that is symmetric in the interval $$[0, L]$$. The percentage shown in the legend is the value of $$\sqrt{ \langle f-s_n, f-s_n\rangle }$$.</p>
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FO-awk.webp">
 </p>
-<p class="icap" markdown="1"><a name="FOawk">Figure 6</a> — Same as above, but showing versions of the series through increasing number of terms. The series converges more slowly than the parabola that agrees with the boundary conditions. Note the additional power of $$n$$ in the numerator.</p>
+<p class="icap" markdown="1"><a name="Fig9">Figure 9</a> — Same as above, but showing versions of the series through increasing number of terms. The series converges more slowly than the parabola that agrees with the boundary conditions. Note the additional power of $$n$$ in the numerator.</p>
 
 ## Parseval's Identity
 
