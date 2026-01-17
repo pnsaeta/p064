@@ -1,6 +1,6 @@
 # Syllabus
 
-The first three semesters at Harvey Mudd College provide an introduction to computation in Python and grounding in important topics in the mathematics that underpins physics, including single- and multi-variable calculus, linear algebra, and ordinary differential equations. Our course builds on that foundation to develop your ability to use computation to explore physically meaningful problems using standard and powerful Python modules (NumPy, scipy, matplotlib, and pandas) and to extend your mathematical foundation to include several topics of central importance to physics. These include
+The first three semesters at Harvey Mudd College provide an introduction to computation in Python and grounding in important topics in the mathematics that underpins physics, including single- and multi-variable calculus, linear algebra, and ordinary differential equations. Our course builds on that foundation to develop your ability to use computation to explore physically meaningful problems using standard and powerful Python modules (NumPy, SciPy, Matplotlib, and pandas) and to extend your mathematical foundations to include several topics of central importance to physics. These include
 
 - series expansions
 - Fourier series and transforms
@@ -16,6 +16,7 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
 ## Nuts and Bolts
 
 - Meetings: Tuesdays and Thursdays, 13:15–14:30, Shanahan 2454
+- Homework due on Mondays at 23:59 (one minute before midnight)
 
 ### Instructor
 
@@ -70,13 +71,13 @@ On successfully completing this course, you will:
 
 ## Grade
 
-- (30%) Midterm on linear algebra, series, Fourier series, and Fourier transforms
-- (40%) Homework, quizzes, and class participation
+- Two midterms worth 20% and 25% (the one you score higher on gets weighted 25%)
+- (25%) Homework, quizzes, and class participation
 - (30%) Project
 
 ## Use of Artificial Intelligence
 
-ChatGPT can write simple programs in a variety of languages, including Python. I might be tempted to use it to show me how to translate something I have already written in Python to a different language, such as Julia, in which I am not nearly as fluent as I am in Python. However, our goals in this course include helping you develop your ability to solve problems using computation, to debug code, and to assess the reliability of solutions. The only way to learn how to solve complicated problems is to develop your skills on simpler ones—ones that are simple enough that modern A.I. tools can handle them. I ask you not to use them, however, because they will not help you to develop a working foundation that you can extend to more complex and interesting problems.
+ChatGPT can write simple programs in a variety of languages, including Python. I might be tempted to use it to show me how to translate something I have already written in Python to a different language, such as Julia, in which I am not nearly as fluent as I am in Python. Claude is an even more powerful coding "partner". However, my goals in this course include helping you develop your ability to solve problems using computation, to debug code, and to assess the reliability of solutions. The only way to learn how to solve complicated problems is to develop your skills on simpler ones—ones that are simple enough that modern A.I. tools can handle them easily. I ask you not to use them, however, because they will not help you to develop a working foundation that you can extend to more complex and interesting problems.
 
 ## Mission
 
