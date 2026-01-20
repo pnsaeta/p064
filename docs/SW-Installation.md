@@ -13,7 +13,7 @@ Computation in this course will use Python and JupyterLab, which are open-source
 - The current stable version of the Python language is 3.14, which is what I run by default in a **virtual environment**.
 - Sometimes, it is more convenient to code in an environment such as Microsoft’s **Visual Studio Code**. At others, it is simpler to use a Jupyter Lab notebook. You must set up your computer at minimum to allow running Jupyter Lab notebooks.
 - It is possible to have multiple versions of Python installed on your computer. **Virtual environments** allow these different versions to avoid conflicting with one another. When you *activate* a virtual environment, you inform the shell that you wish to use a particular Python installation. Jupyter Lab may use a particular Python environment.
-- On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`. 
+- On Unix-based systems (MacOS, Linux), you can launch Python from a terminal window by entering `python`.
 
 ~~~~ shell
 > python
@@ -45,7 +45,7 @@ installing on Ubuntu (Linux).
 
 ## Checking your Installation
 
-You may already have installed on your computer all the software you need for this 
+You may already have installed on your computer all the software you need for this
 course. To check, run the following code. If it
 generates the plot, you are ready to proceed to [Jupyter](SW-Jupyter.md).
 
@@ -68,7 +68,7 @@ ax.set_title("Did it work?")
 plt.show()
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/check_installation.webp" style="width: 400px;">
 </p>
 
@@ -82,7 +82,7 @@ plt.show()
 The computational portions of the course will use Python 3 and several modules,
 most notably `numpy`, `scipy`, and `matplotlib`, and `jupyter`. If you are starting from scratch, I recommend you just install the Jupyter Lab application:
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/JL.webp" style="width: 600px;" alt="">
 </p>
 <p class="icap" markdown="1"><a name="FigJL">Figure 1</a> — Installing the JupyterLab Desktop Application</p>
@@ -108,7 +108,7 @@ ax.plot([1, 2], [3, 4], 'ro')
 Press **shift-return** to execute the code in the cell. If your installation is working
 properly, you should see a really dumb plot with two red dots:
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/dumbplot.webp" style="width: 400px;" alt="dumb plot">
 </p>
 <p class="icap" markdown="1"><a name="FigDP">Figure DP</a> — a dumb test plot.</p>
@@ -372,15 +372,15 @@ Launch Jupyter notebook from the directory where you would like to load code and
 
 A browser window should open and you will see a listing of the files in the current directory. At the bottom of the Edit menu you should see
 
-<p class="center" markdown="0"><img alt="nbextensions config" src="figs/notebookext1.webp"></p>
+<p class="figure" markdown="0"><img alt="nbextensions config" src="figs/notebookext1.webp"></p>
 
 You should now see a menu item called **Nbextensions**, as illustrated in the figure.
-   
-<p class="center" markdown="0">
+
+<p class="figure" markdown="0">
    <img alt="Nbextensions" src="figs/nbextensions.webp">
 </p>
 
-Clicking on the **Nbextensions** menu will allow you to load extensions as  desired. I recommend several, including 
+Clicking on the **Nbextensions** menu will allow you to load extensions as  desired. I recommend several, including
 
 + Autopep8
 + Codefolding
@@ -393,11 +393,11 @@ Clicking on the **Nbextensions** menu will allow you to load extensions as  desi
 
 We will need a couple of extensions to be installed in JupyterLab. The first step to install those is to enable them by clicking the jigsaw icon as shown in the figure below and then clicking on the **Enable** button.
 
-<p class="center"><img alt="Enable" src="figs/labext1.webp"></p>
+<p class="figure"><img alt="Enable" src="figs/labext1.webp"></p>
 
 Once you have enabled extensions, you can use the search box to install the two extensions shown here
 
-<p class="center"><img alt="?" src="figs/labext2.webp"></p>
+<p class="figure"><img alt="?" src="figs/labext2.webp"></p>
 
 Alternatively, you can issue the following statement in the terminal
 
@@ -445,7 +445,7 @@ font.family         : serif # sans-serif
 font.size           : 12.0 # 10.0
 font.serif          : Utopia, DejaVu Serif, Bitstream Vera Serif, ...
 
-text.usetex         : True ## use latex for all text handling. 
+text.usetex         : True ## use latex for all text handling.
 
 xtick.top           : True ## draw ticks on the top side
 xtick.direction     : in   ## direction: in, out, or inout

@@ -48,7 +48,7 @@ A quick peek at the denominator, which is linear in $$\omega$$, suggests that we
 \\]
 we note that the pole lies on the negative imaginary axis, as illustrated in <a href="#Fig1">Fig. 1</a>. Consider first the case that $$t < t'$$. Along a semicircular arc in the upper half-plane, the numerator goes strongly to zero and contributes nothing to a contour integral that includes the real axis. Since this contour contains no poles, the value of the integral is zero. That's reassuring! Before the source is applied at $$t = t'$$ it contributes nothing to $$G(x,t)$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/UHP-omega.webp" style="width: 350px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — When $$t - t' < 0$$, we can close the contour in the upper half-plane without modifying the value of the integral along the real axis.</p>

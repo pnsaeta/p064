@@ -41,7 +41,7 @@ back to $$x = -\infty$$ **without adding anything to the value of the
 integral**. Let's try closing along a semicircular arc of radius $$R$$, as
 illustrated below, and then take the limit as $$R \to \infty$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/UHP.webp" style="width: 300px;" alt="Closing in the upper half-plane">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A possible way to produce a closed contour for integrating $$(1+x^2)^{-1}$$.
@@ -112,7 +112,7 @@ $$\phi \in \left\{\pi/4, 3\pi/4, 5\pi/4, 7\pi/4\right\}$$. The first two
 lie in the upper half-plane, so we need to calculate the residues at
 these two poles.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/poles-of-z4.webp" style="width: 300px;" alt="Location of the poles">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Location of the poles of $$1/(z^4+1)$$. The dashed circle has radius 1.</p>
@@ -198,7 +198,7 @@ fig, ax = plt.subplots()
 ax.plot(x,y);
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/CI1.webp" style="width: 400px;" alt="The integrandl">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Plot of $$f(x) = 1 / (1 + x^4)$$.</p>

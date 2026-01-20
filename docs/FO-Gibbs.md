@@ -8,7 +8,7 @@
 
 We saw on [the previous page](FO-FourierSeries.md) that the Fourier series for a square wave overshot the mark at the point of discontinuity at $$t = 0$$ where the square wave jumps from $$-1$$ to $$1$$, as illustrated in Fig.&nbsp;1.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/square-near-zero.webp" style="width: 500px;" alt="Fourier series for a square wave near a discontinuity">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — At the point of discontinuity at $$t = 0$$, the series is clearly converging to the midpoint between the limit values on either side. As the number of terms increases, the transition from $$-1$$ to $$1$$ grows narrower, but the **Gibbs** overshoot phenomenon persists.</p>
@@ -101,7 +101,7 @@ from scipy.integrate import quad
 
 So, the height of the peak should be 1.179, which does indeed seem to be consistent with Fig. 2.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Gibbs-overshoot.webp" style="width: 400px;" alt="The Gibbs phenomenon">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Zooming in on the Gibbs peak near $$t = 0$$, using a sum through $$N=999$$. The peak does indeed seem consistent with $$\frac{2}{\pi} \text{Si}(\pi) \approx 1.179$$. </p>

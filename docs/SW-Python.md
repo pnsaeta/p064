@@ -11,7 +11,7 @@ def myfunc(x, *args, **kwargs):
     This function has no real purpose in life other than to illustrate fixed
     and variable arguments. The first argument, x, is required; if you don't pass
     some argument, Python will throw an error. On the other hand, if you only supply
-    a single argument, args will be an empty tuple and kwargs will be an empty 
+    a single argument, args will be an empty tuple and kwargs will be an empty
     dictionary. There is no error, and no optional arguments are present.
     """
     pass # a real function should do something!
@@ -35,15 +35,15 @@ class FourierExpansion:
 
     def __init__(self, f, leftBC, rightBC, n_max=20): # this is the constructor
         """
-        The constructor get called when we try to instantiate an object of 
+        The constructor get called when we try to instantiate an object of
         the class FourierExpansion with a call such as fe = FourierExpansion(f, …)
 
         The first argument is conventionally called "self" and refers to the object
         itself. The constructor may take any number of additional arguments, or none
-        at all. In this case, there are three required arguments, and one that is 
+        at all. In this case, there are three required arguments, and one that is
         optional, but has a default of 20.
 
-        A common thing to do is to store the arguments as data members of the object, 
+        A common thing to do is to store the arguments as data members of the object,
         as illustrated below.
         """
         self.function = f      # Store the given function (which is assumed to take a single argument)
@@ -63,7 +63,7 @@ class FourierExpansion:
 
     def __str__(self):
         return f"Fourier expansion of {self.function} over the range [{self.a}, {self.b}]"
-    
+
     def __call__(self, x):
         """
         This function gets called when you write FE(x), where FE is an object of class
@@ -71,7 +71,7 @@ class FourierExpansion:
         object as a function, which is sometimes convenient.
         """
         return x * 3 # not particularly useful, but you get the idea
-    
+
 
 ~~~~
 

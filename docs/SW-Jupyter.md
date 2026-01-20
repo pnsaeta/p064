@@ -19,7 +19,7 @@ Notebook cells can include text written in **Markdown** (such as this cell),
 formatting information and math expressions written in LaTeX (more about that in
 a bit). Raw cells just hold the text and don’t interpret symbols that would
 change the font or show equations if they were processed as Markdown. Code cells
-get submitted to the Jupyter kernel (and passed to the Python interpreter). 
+get submitted to the Jupyter kernel (and passed to the Python interpreter).
 This cell is in Raw mode so I can illustrate the basics of Markdown.
 
 ~~~~ markdown
@@ -44,7 +44,7 @@ To center an equation on its own line, use
 \end{equation}
 
 Notice that mathematical functions should be preceded with a backslash
-and that you get Greek letters by preceding their name in English with a backslash. 
+and that you get Greek letters by preceding their name in English with a backslash.
 
 For more information about Markdown, check out the **Markdown Reference**
 item in the Jupyter **Help** menu.
@@ -73,10 +73,10 @@ To center an equation on its own line, use
 \end{equation}
 
 Notice that mathematical functions should be preceded with a backslash and that
-you get Greek letters by preceding their name in English with a backslash. 
+you get Greek letters by preceding their name in English with a backslash.
 
 For more information about Markdown, check out the **Markdown Reference** item
-in the Jupyter **Help** menu. 
+in the Jupyter **Help** menu.
 
 ## Code
 
@@ -86,7 +86,7 @@ allows graphs to appear in output cells of the notebook. Magic lines start with
 a % (and you can’t put a comment after them the way you can in Python. To
 execute the commands in a cell, make sure the cell is selected and press
 **shift-enter** or **shift-return**. Or, if you are a mouse person, click the
-triangle symbol at the top of the page. 
+triangle symbol at the top of the page.
 
 
 ~~~~ python
@@ -100,7 +100,7 @@ import matplotlib.pyplot as plt  # plt is the standard abbreviation for pyplot
 ## A simple plot
 
 To illustrate how you can make a plot and have it show up in the notebook, let’s
-try a very simple example. 
+try a very simple example.
 
 ~~~~ python
 fig, ax = plt.subplots()
@@ -110,7 +110,7 @@ ax.set_ylabel("y")
 ax.legend();
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/intro-1.webp" style="width: 400px;">
 </p>
 
@@ -121,24 +121,24 @@ Some explanations:
 - `ax.plot` takes two lists, one for the x values, and the other for the y
   values. They must have the same length! The optional argument `'r*'` says to use
   red star symbols, `ms=16` sets the marker size, and the label allows the legend to associate a label with
-  the symbol in the legend. 
+  the symbol in the legend.
 - `ax.set_xlabel` and `ax.set_ylabel` take a string. The string can contain
   LaTeX commands (see below).
 - `ax.legend();` says to show a legend of the traces on the plot, letting
   matplotlib decide the best location for it. The semicolon suppresses the
   output of this command. (You can remove it and run the command again to see
-  what gets returned.) 
+  what gets returned.)
 
 See [Introduction to Matplotlib](SW-Matplotlib.md) for some basics on using Matplotlib to generate plots.
 
 ## Troubleshooting
 
-For Jupyter Lab to work with matplotlib, you need to have a few extensions installed. If plotting or animations aren't working for you, you may have out-of-date versions of Python and/or the necessary modules. 
+For Jupyter Lab to work with matplotlib, you need to have a few extensions installed. If plotting or animations aren't working for you, you may have out-of-date versions of Python and/or the necessary modules.
 
 From a terminal, type
 
 ~~~~ bash
-> jupyter labextension list 
+> jupyter labextension list
 JupyterLab v4.3.4
 /Users/saeta/.virtualenvs/py13/share/jupyter/labextensions
         anywidget v0.9.13 enabled OK
@@ -167,7 +167,7 @@ Kate Riggs found that these two commands fixed her installation, which was runni
 
 ## Installing Jupyter labextensions
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/labextension.webp" style="width: 300px;">
 </p>
 

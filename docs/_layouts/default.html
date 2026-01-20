@@ -7,9 +7,6 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
  
     <script>
       window.MathJax = {
@@ -32,8 +29,11 @@
           processEnvironments: true,
           processRefs: true,
           tagFormat: {
-            number: (n) =>  n,
-            id: (n) => 'eqn-id-' + n
+            number: (n) =>  n.toString(),
+            id: (n) => 'eqn-id-' + n,
+            tag: (tag) => '(' + tag + ')',
+            ref: '', // means use the tag function
+            url: (id, base) => base + '#' + encodeURIComponent(id),
           },
           macros: {
             mat: ['{\\mathbb{#1}}', 1]

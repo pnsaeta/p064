@@ -12,11 +12,11 @@ It appears postgresql-10-main is the database we have been using
 I need to upgrade it
 
  pg_upgrade -b oldbindir [-B newbindir] -d oldconfigdir -D newconfigdir [option...]
- 
+
  /var/lib/postgresql/10/main
- 
+
  journalctl -u postgresql.service
- 
+
 ~~~~ shell
  root@physics /v/l/postgresql# systemctl status postgresql
 ● postgresql.service - PostgreSQL RDBMS
@@ -61,7 +61,7 @@ root       19103  0.0  0.0   9208  2360 pts/10   S+   18:51   0:00 grep --color=
 
 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c config_file=/etc/postgresql/10/main/postgresql.conf
 ~~~~
- 
+
 
 Okay, managed to get somewhere by
 
@@ -191,9 +191,9 @@ postgres=#
  saeta@physics  ~ 
 
 ~~~~
- 
+
  Now I need to change the server port to 5432, which is what django is expecting.
- 
+
 ~~~~ shell
  sudo cat delete_old_cluster.sh
 #!/bin/sh

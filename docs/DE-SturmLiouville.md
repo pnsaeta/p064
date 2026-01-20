@@ -48,29 +48,29 @@ which looks a lot like Eq.&nbsp;(\ref{eq:old}). To show that $$L$$ is a **self-a
 \end{equation}
 it suffices to integrate twice by parts:
 \begin{align}
- \ev{Lf,g} &= \int_{a}^{b} - \frac{1}{w(x)} 
+ \ev{Lf,g} &= \int_{a}^{b} - \frac{1}{w(x)}
    \left(\dv{}{x} \qty[p(x) f'] + r(x) f \right)^{\star}
-    w(x) g(x) \dd{x} 
-    \notag \\\ 
+    w(x) g(x) \dd{x}
+    \notag \\\
    &= -\int_{a}^{b}  \left(\dv{}{x} \qty[p(x) f'] + r(x) f\right)^{\star} g(x) \dd{x}
-   \notag \\\ 
+   \notag \\\
    &= -p f^{\star\prime}g\bigg|\_{a}^{b} + \int_{a}^{b} f^{\star\prime} p g' \dd{x} -
     \int_{a}^{b} r(x) f^{\star} g \dd{x}
-  \notag  \\\ 
+  \notag  \\\
     &= -p f^{\star\prime}g\bigg|\_{a}^{b} +
       f^{\star} p g' \bigg|\_{a}^{b} -
        \int_{a}^{b} f^{\star} \dv{}{x}\qty[ p(x) g'] \dd{x} -
        \int_{a}^{b} r(x) f^{\star} g \dd{x}
-       \notag \\\ 
-       &=  \textcolor{DarkRed}{ 
+       \notag \\\
+       &=  \textcolor{DarkRed}{
         \underbrace{\left.p(x) \left( f^{\star}g' - f^{\star\prime}g \right) \right|\_{a}^{b} }\_{\text{bilinear concomitant}}} + \ev{f,Lg}
 \end{align}
 Provided that the boundary conditions at $$a$$ and $$b$$ cause the terms in red to vanish, then $$\ev{Lf,g} = \ev{f,Lg}$$.
 
 Once we have shown that $$L$$ is self-adjoint, it follows easily (again) that the eigenvalues $$\lambda$$ must be real and that the eigenfunctions corresponding to different eigenvalues must be orthogonal:
 \begin{align}
-  \ev{Lu_1, u_2} - \ev{u_1, L u_2}  &= 0 \notag \\\ 
-  \lambda_1^{\star} \ev{u_1, u_2} - \lambda_2 \ev{u_1, u_2} &= 0 \notag \\\ 
+  \ev{Lu_1, u_2} - \ev{u_1, L u_2}  &= 0 \notag \\\
+  \lambda_1^{\star} \ev{u_1, u_2} - \lambda_2 \ev{u_1, u_2} &= 0 \notag \\\
   (\lambda_1^{\star} - \lambda_2) \ev{u_1, u_2} &= 0
 \end{align}
 If $$u_1 = u_2$$, then $$(\lambda_1^{\star} - \lambda_1) \ev{u_1, u_1} = 0$$, which shows that $$\lambda_1$$ must be real. If $$\lambda_1 \ne \lambda_2$$, then $$\ev{u_1, u_2} = 0$$.
@@ -109,6 +109,6 @@ then direct substitution shows that
 \end{equation}
 where
 \begin{align}
-  p(x) &= \exp \qty(\int^x \frac{Q(x')}{P(x')}\dd{x'}) \notag \\\ 
+  p(x) &= \exp \qty(\int^x \frac{Q(x')}{P(x')}\dd{x'}) \notag \\\
   q(x) &= \frac{Q(x)}{P(x)} \exp \qty(\int^x \frac{Q(x')}{P(x')}\dd{x'})
 \end{align}

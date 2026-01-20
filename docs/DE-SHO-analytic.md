@@ -160,7 +160,7 @@ Higher-order solutions have the same Gaussian form, multiplied by a **Hermite po
 </table>
 </div>
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO-psi.webp" style="width: 600px;" alt="Five states of the quantum SHO">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The five lowest-energy normalized wave functions of a simple harmonic oscillator. Note that each successive wave function has one more node than the previous.</p>

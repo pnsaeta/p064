@@ -5,7 +5,7 @@
 
 * toc
 {:toc}
- 
+
 ## Cheat sheets
 
   - [Beginners](https://matplotlib.org/cheatsheets/handout-beginner.pdf)
@@ -24,9 +24,9 @@ fig = plt.figure(figsize=(8,6)) # create a figure that is 8" x 6"
 To make all figures in a notebook use a different size, you can execute the
 following code near the top of the notebook:
 
-~~~~ python 
+~~~~ python
 import matplotlib as mpl
-mpl.rcParams['figure.figsize'] = (8.0, 6.0) 
+mpl.rcParams['figure.figsize'] = (8.0, 6.0)
 ~~~~
 Or you can put your preference in your matplotlibrc so that it is loaded
 automatically every time you use matplotlib. See [Configuration](SW-Installation.md) for details.
@@ -37,7 +37,7 @@ A figure can have more than one set of *Axes*. There are several ways to create
 these. The simplest is `plt.subplots()`, which creates a new figure and populates
 it with the number of rows and columns of subplots that you specify.
 
-~~~~ python 
+~~~~ python
 fig, axes = plt.subplots(1, 2, figsize=(8,5))
 axleft, axright = axes  # if there is only one row, axes is a vector; otherwise, a 2-D array
 axleft.plot(np.random.random(20), np.random.random(20), 'ro')
@@ -49,16 +49,14 @@ If you wish to tie certain axes of the subplots to one another, pass
 `plt.subplots()`. In <a href="#Fig1">Fig. 1</a> the value of `sharey` was implicitly set to
 `False`.
 
-<p class="center">
+<p class="figure">
 <img src="figs/subplots.webp" style="width: 500px;" alt="Sample figure with subplots">
-</p>
-<p class="mycap" id="Fig1">Fig. 1 — A simple figure with two subplots</p>
+</p><p class="mycap" id="Fig1">Fig. 1 — A simple figure with two subplots</p>
 
 Had we passed `sharey=True` to the `plt.subplots()` command, we would have
 obtained a figure like <a href="#Fig2">Fig. 2</a>.
 
-<p class="center"><img src="figs/sharey.webp" style="width: 500px;" alt="Subplots with shared y axis"></p>
-<p class="mycap" id="Fig2">Fig. 2 — Two subplots with a shared y axis</p>
+<p class="figure"><img src="figs/sharey.webp" style="width: 500px;" alt="Subplots with shared y axis"></p><p class="mycap" id="Fig2">Fig. 2 — Two subplots with a shared y axis</p>
 
 
 
@@ -70,10 +68,10 @@ the subplots. See
 ## Labels
 
 Axes should be labeled (with units, where appropriate). The following example
-assumes that `usetex=True`. See [Configuration](SW-Installation.md) for how to set that up. 
+assumes that `usetex=True`. See [Configuration](SW-Installation.md) for how to set that up.
 
 
-~~~~ python 
+~~~~ python
 fig3, ax3 = plt.subplots(figsize=(6,4))
 t_vals = np.arange(0.0, 1.0, 0.01)
 sines = np.sin(2 * np.pi * t_vals)
@@ -83,14 +81,14 @@ ax3.set_xlabel(r'$t$')
 ax3.legend([r'$\sin(2\pi t)$', r'$\cos(2\pi t)$']);
 ~~~~
 
-<p class="center"><img src="figs/labels.webp" style="width: 500px;"></p>
-<p class="icap">Using LaTeX to produce properly formatted labels, with variables set in italics and functions in roman font.</p>
+<p class="figure" alt="something"><img src="figs/labels.webp" style="width: 500px;" alt="something"></p>
+<p class="icap" alt="something">Using LaTeX to produce properly formatted labels, with variables set in italics and functions in roman font.</p>
 
 In this example, the legend was created by passing in a list of strings, one for
 each trace. A better approach is to build in the labels for the legend explicitly:
 
 
-~~~~ python 
+~~~~ python
     fig4 = plt.figure(4, figsize=(6,4))
     ax4 = fig4.add_subplot(111)
     ax4.plot(t_vals, sines, 'b.', label=r'$\sin(2\pi t)$')
@@ -106,7 +104,7 @@ To plot a series of data with error bars, use `errorbar(xdata, ydata,
 yerr=yerrors)`. Here's an example that loads some data from a web site using
 the pandas package. Pandas makes it easier to work with tables of data.
 
-~~~~ python 
+~~~~ python
 import pandas as pd
 the_data = pd.read_table('https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt')
 ebars = plt.figure()
@@ -117,14 +115,13 @@ eax.set_xlabel('Position (mm)')
 eax.set_ylabel('Intensity (V)');
 ~~~~
 
-<p class="center"><img src="figs/errorbar.webp" style="width: 500px;"></p>
-<p class="icap" markdown="1">A figure with error bars showing data taken by a student in Physics 134,
+<p class="figure" alt="something"><img src="figs/errorbar.webp" style="width: 500px;" alt="something"></p>
+<p class="icap" markdown="1" alt="something">A figure with error bars showing data taken by a student in Physics 134,
  *Optics Lab*  (I had to grow the error bars by a factor of 50 so you could see them!).</p>
 
 The `pd.read_table()` call produces a pandas `DataFrame`. You can examine the
 contents of the frame just by entering the variable name in a cell:
 
-<p class="center"><img src="figs/pandas.webp"></p>
-<p class="mycap" markdown="1">A pandas `DataFrame`.</p>
+<p class="figure" alt="something"><img src="figs/pandas.webp" alt="something"></p><p class="mycap" markdown="1"><a name="Fig3">Figure 3</a> — A pandas `DataFrame`.</p>
 
 See [Pandas](SW-pandas.md) for more information on how to use pandas.

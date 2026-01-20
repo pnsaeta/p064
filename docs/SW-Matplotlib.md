@@ -53,18 +53,18 @@ Some explanations:
 
 * `myfunc` takes two arguments, and their types are indicated after the
   colons. Where possible, specifying the type expected for the argument makes
-  your functions easier to interpret. 
+  your functions easier to interpret.
 * the type `np.ndarray` is the kind of array that gets returned from
   `np.linspace`; it is a very commonly used type in numpy.
 * A docstring helps explain the purpose of the function.
 * the square root function is defined differently in numpy than in the Python
   `math` module. The numpy version notices when an argument is not a single
   number but a np.ndarray of values and automatically calculates for each value
-  in the array. 
+  in the array.
 
 Read that last bullet point again. NumPy calls this feature *broadcasting*; it
 is **really** nice. It means we don’t need to write loops to compute array
-values; numpy will take care of that for us. 
+values; numpy will take care of that for us.
 
 Let’s try a curve with a small value of damping parameter $$\zeta$$.
 
@@ -84,7 +84,7 @@ Let’s try a curve with a small value of damping parameter $$\zeta$$.
 
 Okay, that looks like a peak near $$x = 1$$ (which means that the frequency is
 near the *natural frequency*). Now let’s add a curve on the same axes but with
-$$\zeta = 0.5$$ this time. 
+$$\zeta = 0.5$$ this time.
 
 ### Adding a second curve
 
@@ -126,7 +126,7 @@ Can you summarize the behavior you observe?
 
 ### Refining the graph
 
-You may notice that when the damping parameter is small, we aren't calculating enough points near the peak to get a smooth curve. One strategy would be to use more points in `x`, but that seems inelegant: we don't need all those extra points except around the peak. 
+You may notice that when the damping parameter is small, we aren't calculating enough points near the peak to get a smooth curve. One strategy would be to use more points in `x`, but that seems inelegant: we don't need all those extra points except around the peak.
 
 We can use `np.concatenate` to generate a set of points for `x` that are more closely spaced around the peak:
 
@@ -138,10 +138,9 @@ x = np.concatenate((
     ))
 ~~~~
 
-<p class="center" markdown="0">
-  <img src="figs/intro-5.webp" style="width: 400px;">
-</p>
-<p class="mycap"><a name="Fig5"></a>Smoother curves around the peak.</p>
+<p class="figure" markdown="0" alt="something">
+  <img src="figs/intro-5.webp" style="width: 400px;" alt="something">
+</p><p class="mycap"><a name="Fig5"></a>Smoother curves around the peak.</p>
 
 
 
@@ -161,8 +160,7 @@ for zeta in (0.05, 0.1, 0.2, 0.5, 1, 2):
 ax.legend();
 ~~~~
 
-<p class="center"><img src="figs/intro-6.webp" style="width: 400px;"></p>
-<p class="mycap">Now our resonance cup runneth over in style!</p>
+<p class="figure" alt="something"><img src="figs/intro-6.webp" style="width: 400px;" alt="something"></p><p class="mycap">Now our resonance cup runneth over in style!</p>
 
 
 
@@ -174,7 +172,7 @@ Let’s see if you can now apply what we’ve explored so far.
 
 1. Make an array called `hermione` that has 51 equally spaced points between 0 and 1, inclusive.
 2. Make a plot of the square of the values in `hermione`. Use blue dots to plot
-   the points by passing **'bo'** to the `plot` function. 
+   the points by passing **'bo'** to the `plot` function.
 
 ## Modifying the way a trace is displayed
 
@@ -202,6 +200,6 @@ as the following
 ax.plot([0, 0.25, 0.5, 0.75], [1, 0.75, 0.5, -0.25], 'o', color='#44bb60')
 ~~~~
 
-See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors. 
+See [markers](https://matplotlib.org/api/markers_api.html?highlight=marker#module-matplotlib.markers) for more marker options and [colors](https://matplotlib.org/api/colors_api.html?highlight=color#module-matplotlib.colors) for more options for representing colors.
 
 [Next step: formatting in Matplotlib](SW-MPLFormatting.md)

@@ -56,7 +56,7 @@ For our development, we will focus on an equation quite similar to the Schrödin
 
 Newton argued that heat flowed from a hot region to a cold region in proportion to the temperature difference between them. To keep the exposition as simple as possible, we consider a uniform cylindrical rod, whose surface is thermally insulated, and whose axis is aligned with the $$x$$ axis. In particular, focus on a small segment of the rod, as illustrated in <a href="#Fig1">Figure&nbsp;1</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/rod.webp" style="width: 300px;" alt="A segment of the rod">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — We consider a small segment of the insulated rod, with cross section $$A$$ and thickness $$\delta x$$. The heat that flows into the segment on the left is $$J(x) A$$, where the heat flux density $$J$$ has dimensions energy per unit area per unit time.</p>
@@ -243,7 +243,7 @@ ax.set_xlabel("$x/L$")
 ax.set_ylabel("$u$");
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/PDE0.webp" style="width: 500px;" alt="Temperature profiles in an insulated rod with ends held at zero">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Plot of Eq. (\ref{eq:solution}) using the first 500 terms in the series and the values $$D=1$$ and $$L=1$$. Note that the solution at $$t = 0$$ shows the Gibbs phenomenon at the points of discontinuity at $$x = 0$$ and $$x = L$$. Note, as well, that the modes with higher spatial frequency (larger $$n$$) decay much more rapidly, so that by $$t = 0.05$$, the temperature distribution is dominated by the fundamental mode ($$\sin \pi x/L$$), which decays with a time constant $$\tau = L^2/(\pi^2 D) \approx 10$$.</p>
@@ -329,7 +329,7 @@ ax.set_xlabel("$x/L$")
 ax.set_ylabel("$u$");
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/PDE1.webp" style="width: 500px;" alt="Temperature profiles in an insulated rod with the left end held at zero">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The temperature profile in an insulated rod whose left end is maintained at 0°C and whose right end is insulated, as developed in Eq. (\ref{eq:PDE2}).</p>
@@ -373,7 +373,7 @@ The term proportional to $$c_1$$ grows in amplitude with increasing depth $$x$$,
 \end{align}
 where $$\tau$$ is the period of oscillation of the driving surface temperature. The shorter the period, the larger the value of $$\beta$$ and the more rapidly the surface variation dies out with depth. The daily variations in surface temperature barely penetrate into the ground, but the annual variations do.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/wine.webp" style="width: 500px;" alt="Temperature oscillations in the ground">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Illustration of Eq. (\ref{eq:Tprofile}), which describes the temperature of the ground as a function of depth over the course of an annual temperature oscillation at the surface of amplitude 15°C, with an average of 5°C. Note: this does *not* attempt to describe facts “on” the ground in Claremont!</p>

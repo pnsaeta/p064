@@ -76,7 +76,7 @@ poor = LCG(899, 0, 32768)
 test_rng(poor, "LCG")
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/LCG-test.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability that to exceed (PTE) this value of $$\chi^2$$. Clearly, the histogram is **too even**.</p>
@@ -115,7 +115,7 @@ fig, ax = plt.subplots()
 ax.plot(np.cumsum(better), lw=0.5)
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-MyRNG-test.webp" style="width: 700px;" alt="Cumulative sum for a simple xorshift random number generator">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Cumulative sum for a simple xorshift random number generator.</p>
@@ -140,7 +140,7 @@ class DefRNG:
 test_rng(DefRNG(rng), "ST-default-rng")
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-default-rng-test.webp" style="width: 700px;" alt="Cumulative sum of the numpy default random number generator">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Cumulative sum using numpy's `default_rng()`.</p>
@@ -180,7 +180,7 @@ axs[1].hist(expo, bins=np.linspace(0,4,101), density=True)
 axs[1].set_xlabel("$y$");
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-xform.webp" style="width: 600px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Histograms of one million uniform deviates $$x$$ (left) and the corresponding exponential deviates transformed via $$y = -\ln x$$ (right).</p>
@@ -274,7 +274,7 @@ fig, ax = plt.subplots()
 ax.hist(v, bins=np.arange(-4,4,0.05), density=True);
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-gauss.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Normal deviates computed using the Box-Muller method.</p>
@@ -318,7 +318,7 @@ pi_est = 4 * inside / pts.shape[0]
 ax.set_title(r"$\pi \approx %.4f$" % pi_est);
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-MC-pi.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Illustration of the Monte Carlo method of computing $$\pi$$.</p>

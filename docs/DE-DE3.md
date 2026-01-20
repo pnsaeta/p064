@@ -148,10 +148,9 @@ ax.legend()
 ax.set_xlabel('$t$');
 ~~~~
 
-<p class="center" markdown="0">
-  <img src="figs/SHO1.webp" style="width: 500px;">
-</p>
-<p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The solution to Eq.&nbsp;(\ref{eq:SHODE}) provided by `solve_ivp`.</p>
+<p class="figure" markdown="0" alt="something">
+  <img src="figs/SHO1.webp" style="width: 500px;" alt="something">
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — <a name="Fig1">Figure 1</a> — The solution to Eq.&nbsp;(\ref{eq:SHODE}) provided by `solve_ivp`.</p>
 
 
 
@@ -193,7 +192,7 @@ ax.set_xlabel('$t$')
 ax.set_ylabel('$x$');
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO2.webp" style="width: 500px;" alt="Solution for SHO">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Comparison of the numerical solution to the SHO differential equation (red dots) to the analytic solution (green curve).</p>
@@ -265,7 +264,7 @@ ax.set_xlabel('$t$')
 ax.set_ylabel('$v$');
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO3.webp" style="width: 500px;" alt="Plotting output from solve_ivp">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Plotting the output of `solve_ivp`.</p>
@@ -280,7 +279,7 @@ ax.set_xlabel('$t$')
 ax.set_ylabel('Error in $v$');
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO4.webp" style="width: 500px;" alt="Error in the solution for the SHO">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Error in the computed velocity from `solve_ivp`.</p>

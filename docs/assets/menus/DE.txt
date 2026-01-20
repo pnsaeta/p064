@@ -1,5 +1,6 @@
 +	DE-DE1.md	Ordinary Differential Equations
 +	DE-DE2.md	Numerical Approaches to Solving ODEs
++	DE-DE3.md	Solving Second-Order ODEs Numerically
 +	DE-SHO-analytic.md	The Quantum Simple Harmonic Oscillator
 +	DE-SHO-numerical.md	The Quantum SHO—Numerical Approaches
 +	DE-SturmLiouville.md	Sturm-Liouville Theory

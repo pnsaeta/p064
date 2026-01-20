@@ -169,7 +169,7 @@ What is this good for? I’ll offer an example from image processing inspired by
 
 As the matrix to analyze via singular value decomposition, we will use the grayscale values of this $$522 \times 400$$ pixel image of Harvey Seeley Mudd shown in Figure 1.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Harvey-Mudd.jpg" style="width: 200px;" alt="Harvey Seeley Mudd">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Mining engineer and philanthropist Harvey Seeley Mudd.</p>
@@ -193,7 +193,7 @@ ax.set_title(r"$$k = %d$$" % k)
 ax.axis('off')
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/mudd-5.webp" style="width: 200px;" alt="">
 
   <img src="figs/mudd-10.webp" style="width: 200px;" alt="">

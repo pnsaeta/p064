@@ -47,12 +47,12 @@ def frame(n:int):
     line.set_ydata(y)                 # update the trace
     title = ax.set_title(f"n = {n}")  # update the plot title
     return line, title                # return the Artists that have changed
-    
+
 ani = FuncAnimation(fig, frame, range(1, 80, 2), interval=100, blit=True)
 ani.save("squarewave.gif", fps=10, dpi=100)
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/squarewave.gif" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Fourier series expansion of a square wave as it evolves by including increasing numbers of terms.</p>
@@ -101,14 +101,14 @@ ani = FuncAnimation(
 ~~~~
 
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/2DLaplace.gif" style="width: 800px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — A 3-D animation showing the electrostatic potential as a function of the number of terms in the Fourier series used to estimate it. The elevation/color axis shows the potential.</p>
 
 ## Dynamic updating of graphics
 
-Sometimes you want to have a graphic update over the course of a computation in a Jupyter notebook. As illustrated in the code snippet below, it is easy to update an image plot. Just call `im.set_data()` with the new values. 
+Sometimes you want to have a graphic update over the course of a computation in a Jupyter notebook. As illustrated in the code snippet below, it is easy to update an image plot. Just call `im.set_data()` with the new values.
 
 Unfortunately, a similar trick to update the data used to make line plots doesn't work;
 I find that I have to clear the axes and redraw everything.

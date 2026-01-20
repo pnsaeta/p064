@@ -45,7 +45,7 @@ Now, we just need to combine all these terms:
 \end{align}
 
 <p class="figure" markdown="0">
-  <img src="figs/sech-expansion.webp" style="width: 400px;" alt="series expansion of sech">
+  <img src="figs/sech-expansion.webp" style="width: 500px;" alt="series expansion of sech">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Maclaurin series for the hyperbolic cosine obtained by inverting the series for $$\cosh x$$. Each successive curve includes the terms through the order listed in the legend.</p>
 

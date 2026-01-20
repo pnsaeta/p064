@@ -41,7 +41,7 @@ In other words, we expect the walker to be about at radius $$r = \sqrt{N}$$ afte
 
 Simulate a random walk in which the walker takes random steps of length 1 in an arbitrary direction in the $$xy$$ plane and see if you can corroborate the expectation that the walker is about $$\sqrt{N}$$ steps from the origin after taking $$N$$ steps. I say about, because our method evaluates the mean square distance, $$\ev{r^2}$$. The average of $$r^2$$ is greater than the square of the average of $$r$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/ST-2D-Walk.webp" style="width: 100%;" alt="">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A collection of two-dimensional random walks, starting from the origin (shown with a white square), each taking $$N=1000$$ steps of unit length. The colored circles mark the expected value of $$\sqrt{\ev{r^2}} = \sqrt{n}$$ after 200, 400, 600, 800, and 1000 steps. The colored dots make the corresponding position on each walk.</p>

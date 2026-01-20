@@ -28,7 +28,7 @@ should change in the next small interval of time. This takes us to a new value
 of $$v$$, from which we can determine a new value of slope and then a new value of
 $$v$$, etc. The result is illustrated by the light red line in the figure below.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/slope-field.webp" style="width: 400px;" alt="Slope field">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The arrows show the derivative $$\dot{v}$$; the red curve shows an example solution to the first-order equation, while the dashed green line shows the continuation of the slope from its value at $$t = 0$$.</p>
@@ -126,7 +126,7 @@ The results are shown in <a href="#Fig2">Fig.&nbsp;2</a>, which indicates that t
 using Euler’s method lie below the true solution to the differential equation,
 which is $$v(t) = v_0 \exp(-\frac{b}{m} t)$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/euler.webp" style="width: 500px;" alt="Euler's method">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Euler’s method (red dots) compared to the true solution to the differential equation.</p>
@@ -189,10 +189,9 @@ The results for crossing the 1-second time interval in 2, 4, 8, and 16 steps are
 shown in <a href="#Fig3">Fig. 3</a>. Clearly, the smaller the steps we take, the more accurate the
 numerical approximation is. We could quantify
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/euler_error.webp" style="width: 700px;" alt="Error in Euler's method">
-</p>
-<p class="mycap" markdown="1"><a name="Fig3">Figure 3</a> — Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — <a name="Fig3">Figure 3</a> — Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
 
 ### Exercise
 
@@ -312,10 +311,9 @@ fig, ax = plt.subplots()
 ax.plot(res.t, errors, 'ro');
 ~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/rk45errors.webp" style="width: 500px;" alt="RK45 errors">
-</p>
-<p class="mycap" markdown="1"><a name="Fig4">Figure 4</a> — The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
+</p><p class="mycap" markdown="1"><a name="Fig2">Figure 2</a> — <a name="Fig4">Figure 4</a> — The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
 
 # Options for `solve_ivp`
 

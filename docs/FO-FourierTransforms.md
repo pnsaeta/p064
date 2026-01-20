@@ -81,7 +81,7 @@ Consider a unit step function $$f(t)$$,
 \begin{equation}\label{eq:ft}
   f(t) = \begin{cases} 1 & -\tau < t < \tau \\\ 0 & \text{otherwise} \end{cases}
 \end{equation}
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/step.webp" style="width: 300px;">
 </p>
 
@@ -94,7 +94,7 @@ It clearly vanishes strongly enough as $$|t|$$ grows large, so we should have no
 \end{equation}
 This function is shown in Fig.&nbsp;1.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/sinc.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="sinc">Figure 1</a> — The Fourier transform of a unit step centered on the origin (Eq.&nbsp;(\ref{eq:ft}), which is given by Eq.&nbsp;(\ref{eq:ftofstep}). Note that the longer the step, the narrower the range of frequencies $$\omega$$ spanned by the central peak.</p>
@@ -127,7 +127,7 @@ We can evaluate this integral via contour integration if we can identify a path 
 \\]
 In the UHP, the value of $$\sin\phi$$ is positive, so the first exponential term goes exponentially to zero along the path if $$T < 0$$, while the second one just oscillates extremely rapidly in phase. Therefore, as $$R \to \infty$$, $$h_{\text{semicircle}} \to 0$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/pvalue.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="avoidance">Figure 2</a> — The pole at the origin lies directly on the contour. We consider distorting the contour in a tiny semicircle in the neighborhood of the origin, as suggested in the figure.</p>
@@ -196,7 +196,7 @@ The **convolution** of functions $$f(t)$$ and $$g(t)$$ is defined by
 \end{equation}
 and represents how one signal gets smeared out by a finite-width response function. Figure&nbsp;3 illustrates how a Gaussian response function affects an asymmetric triangular pulse.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/convo1.webp" style="width: 400px;" alt="Example convolution">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — If the red signal is sampled with an instrument that responds as illustrated in blue, the result is the convolution shown in green.</p>

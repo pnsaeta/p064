@@ -50,7 +50,6 @@ with open(path('testing'), 'w') as f:
     print("This is a test of the emergency broadcast system. This is only a test.", file=f)
 ~~~~
 
-
 ### NumPy arrays
 
 You can save numpy arrays in binary format, which takes less space on disk than converting to text and which loads a great many times faster.

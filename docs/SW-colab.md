@@ -52,14 +52,14 @@ Help on class Fit in module fit.main:
 
 class Fit(builtins.object)
  |  Object to perform a fit and compute residuals and chisq.
- |  
+ |
  |  If the fit is successful, the field Fit.valid is set to True.
- |  
+ |
  |  Methods defined here:
- |  
+ |
  |  __call__(self, t:numpy.ndarray)
  |      Evaluate the fitting function using current parameter values.
- |  
+ |
  |  __init__(self, function, x:numpy.ndarray, y:numpy.ndarray, p0:numpy.ndarray, **kwargs)
  |      kwargs may include hold="1011", where each 0 corresponds
  |      to a parameter allowed to vary and 1 to a value held fixed.

@@ -33,7 +33,7 @@ The quaternions have three distinct square roots of $$-1$$, and the products of 
 
 A common way to visualize complex numbers is on the **Argand plane**, in which the real part of the number is plotted on the $$x$$ axis and the imaginary part along the $$y$$ axis.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Argand.webp" style="width: 300px;" alt="Argand plane">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The complex number $$z = x + i y$$ (for real $$x$$ and $$y$$) is plotted on the $$xy$$ plane at point $$(x,y)$$.</p>

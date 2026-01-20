@@ -6,10 +6,10 @@
 * toc
 {:toc}
 
-[Pandas](https://pandas.pydata.org) is a Python module that provides features 
+[Pandas](https://pandas.pydata.org) is a Python module that provides features
 somewhat akin to a spreadsheet or database and meshes very naturally with both
 [NumPy](SW-NumPy.md) and [Matplotlib](SW-Matplotlib.md). Before we can
-explore it, we need to import this module. 
+explore it, we need to import this module.
 
 ## Installation
 
@@ -43,7 +43,7 @@ df = pd.DataFrame(dict(Fibonacci=fibo, Prime=prime, Nifty=nifty))
 If we ask Jupyter to display the DataFrame by submitting df, this is what we
 get:
 
-<p class="center"><img src="figs/pandas-out.webp"></p>
+<p class="figure" alt="something"><img src="figs/pandas-out.webp" alt="something"></p>
 
 In combination with Jupyter, pandas generates a nice looking table, with column
 heads you can use for sorting. In this case, everything is sorted in ascending
@@ -58,7 +58,7 @@ df
 ~~~~
 which generates the output
 
-<p class="center"><img src="figs/pandas-index.webp"></p>
+<p class="figure" alt="something"><img src="figs/pandas-index.webp" alt="something"></p>
 
 * Plotting data in a pandas DataFrame
 
@@ -70,7 +70,7 @@ and use it to specify blue squares:
 df.plot(y='Prime', style='bs')
 ~~~~
 
-<p class="center"><img src="figs/prime.webp" style="width: 500px;"></p>
+<p class="figure" alt="something"><img src="figs/prime.webp" style="width: 500px;" alt="something"></p>
 
 If I would rather plot one column against another, I can specify both `x` and
 `y` values. I'll gussy up some other things, too.
@@ -79,7 +79,7 @@ If I would rather plot one column against another, I can specify both `x` and
 df.plot(x='Fibonacci', y='Prime', kind='scatter', title='Ridiculous')
 ~~~~
 
-<p class="center"><img src="figs/ridiculous.webp" style="width: 500px;"></p>
+<p class="figure" alt="something"><img src="figs/ridiculous.webp" style="width: 500px;" alt="something"></p>
 
 As usual, you can get lots more information about a command by asking for help:
 
@@ -98,7 +98,7 @@ df[df['Fibonacci'] % 2 == 0]
 ~~~~
 which yields
 
-<p class="center"><img src="figs/evenfib.webp"></p>
+<p class="figure" alt="something"><img src="figs/evenfib.webp" alt="something"></p>
 
 What’s going on here? The interior expression, `df['Fibonacci'] % 2 == 0`
 produces a boolean array of values, one for each row in the DataFrame. This
@@ -128,8 +128,7 @@ Name: Fibonacci, dtype: int64
 
 On the [Matplotlib introduction page](SW-Matplotlib.md), we developed the following figure.
 
-<p class="center"><img src="figs/intro-5.webp" style="width: 500px;"></p>
-<p class="mycap">Now our resonance cup runneth over in style!</p>
+<p class="figure" alt="something"><img src="figs/intro-5.webp" style="width: 500px;" alt="something"></p><p class="mycap">Now our resonance cup runneth over in style!</p>
 
 I’m going to recompute the values plotted in this figure and store them
 in a pandas DataFrame for easy display.
@@ -143,8 +142,7 @@ df = pd.DataFrame(values, index=logx)
 df
 ~~~~
 
-<p class="center"><img src="figs/intro-pandas.webp" style="width: 500px;"></p>
-<p class="mycap">Displaying a pandas DataFrame.</p>
+<p class="figure" alt="something"><img src="figs/intro-pandas.webp" style="width: 500px;" alt="something"></p><p class="mycap">Displaying a pandas DataFrame.</p>
 
 
 
@@ -157,8 +155,7 @@ You can access individual columns using their name:
    df.plot(logx=True, logy=True, xlabel="$x$", ylabel="$y$");
 ~~~~
 
-<p class="center"><img src="figs/intro-7.webp" style="width: 500px;"></p>
-<p class="mycap">With the curves in a pandas DataFrame, the plot command takes a single line.</p>
+<p class="figure" alt="something"><img src="figs/intro-7.webp" style="width: 500px;" alt="something"></p><p class="mycap">With the curves in a pandas DataFrame, the plot command takes a single line.</p>
 
 
 
@@ -166,7 +163,7 @@ Notice how the value of $$\zeta$$ doesn’t affect the frequencies either
 significantly below the natural frequency ($$x = 1$$) nor significantly above it,
 where all the curves fall off in the same way with increasing frequency. Also
 note how the plotting operation could be achieved with a single call, with the
-various properties adjusted with keyword arguments. 
+various properties adjusted with keyword arguments.
 
 ## Practice with pandas and matplotlib
 
@@ -174,21 +171,20 @@ I have placed some experimental data with uncertainties at
 [https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt](https://www.physics.hmc.edu/courses/p134/CircularMoore2004.txt). The $$x$$ axis
 variable is the position of the detector (in mm); the $$y$$ axis variable is the
 observed light intensity (in volts); the $$y$$ uncertainty values are in the same
-units. 
+units.
 
 Prepare a plot of these data using discrete points for the data, error bars set
 according to the uncertainties, and see if you can style your graph *exactly*
 like the one shown below. Feel free to consult the matplotlib documentation as
-liberally as you like! 
+liberally as you like!
 
 
-<p class="center"><img src="figs/moore.webp"></p>
-<p class="mycap">Target practice: Can you make your plot look <strong>exactly</strong> like this one?</p>
+<p class="figure" alt="something"><img src="figs/moore.webp" alt="something"></p><p class="mycap">Target practice: Can you make your plot look <strong>exactly</strong> like this one?</p>
 
 **Hints**
 
 + You can load the data into a convenient data structure defined by pandas with
-   some code like 
+   some code like
 
 ~~~~ python
 import pandas as pd
@@ -197,7 +193,7 @@ the_data = pd.read_table('filename_or_URL')
 
 You can then see a table of the data by entering `the_data` in a Jupyter
 cell. You can access individual columns of the data by name: `the_data['x']` or
-`the_data.x`. 
+`the_data.x`.
 
 + The command to plot with error bars is `ax.errorbar(xvals, yvals, yerrors)`
    and you can add lots of keyword arguments to make things look the way you
@@ -205,7 +201,7 @@ cell. You can access individual columns of the data by name: `the_data['x']` or
    Moore’s data by a factor of 50 (yeah, he was good!). The data in the
    $$x$$ column is the position of the detector in millimeters, while the data in
    the columns labeled `I` and `I_err` are the intensity and intensity errors,
-   with values in volts. 
+   with values in volts.
 
 + Potentially interesting keywords:
     - `marker`

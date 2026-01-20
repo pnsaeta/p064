@@ -39,7 +39,7 @@ We might think to define the derivative of a function of a complex variable in a
 \\]
 but a little thought reveals a major concern: the value of $$\delta z = \delta x + i \delta y$$ can be made to shrink to zero in any direction on the complex plane. Would this limit make any sense if the value for the derivative depended on the direction of approach?
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Cauchy-Riemann.webp" style="width: 400px;" alt="Cauchy-Riemann conditions">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — For the derivative of a complex function to exist, we must get the same limit as a point $$(x,y)$$ is approached from any direction.</p>
@@ -102,7 +102,7 @@ The Cauchy-Riemann conditions describe the coordination necessary between the re
 
 More formally, **Cauchy's integral theorem** holds that the path integral *vanishes* around any contour within a simply connected region in which the Cauchy-Riemann conditions hold. Crudely speaking, a **simply connected** region has no holes. Any closed path within a simply connected region can be shrunk continuously to a point without having left the region.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/pole.webp" style="width: 300px;" alt="Integrating around a pole">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating $$f(z) = z^n$$ around a circle centered on the origin.</p>

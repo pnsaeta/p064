@@ -25,7 +25,7 @@ From the symmetry of the potential, we expect solutions with either even or odd 
 
 A naive strategy would integrate from the origin out, starting either from $$(\psi, \psi') = (1,0)$$ at $$x = 0$$ for even $$n$$ or $$(\psi, \psi') = (0,1)$$ for odd $$n$$. This approach will work for a while, but is ultimately doomed to fail. The differential equation we seek to solve is second order, so it has two, linearly independent solutions. Far from the origin, one solution is (roughly) exponentially decreasing, while the other is (roughly) exponentially increasing. To be physically meaningful, an eigenfunction must consist *exclusively* of the exponentially decreasing solution; any component of the exponentially increasing solution will eventually diverge to infinity. When we use a numerical approach, we cannot avoid round-off errors that will inevitably inject a tiny amount of the exponentially growing solution. Eventually, it takes over and comes to dominate the behavior of the numerical solution, as shown in <a ref="Fig1">Figure 1</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO-bad-integration.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — An illustration of integrating from the origin with $$\psi(0) = 1$$ and $$\psi'(0) = 0$$ for $$\epsilon = 1$$ (blue curve) and with $$\psi'(0) = 1$$ and $$\psi(0) = 0$$ for $$\epsilon=3$$. The solutions start out looking great, but eventually, numerical error admixes enough of the exponentially blowing-up solution that they begin to diverge.</p>
@@ -102,7 +102,7 @@ savefig("SHO-shooting")
 
 which produces the graph below. Note that even with the right eigenvalue (the green curve in the upper panel), the solution degrades quite rapidly after the peak because of the small but nonzero value of $$\psi'$$ at the origin. However, the figure of merit appears to be doing the right thing and should allow us to home in on legitimate eigenvalues.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/SHO-shooting.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Solution for $$\psi(x)$$ for different test values of $$\epsilon$$ (upper panel) and the corresponding figure of merit $$\Phi$$ (lower panel).</p>

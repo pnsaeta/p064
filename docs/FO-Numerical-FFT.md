@@ -34,7 +34,7 @@ The result of these commands is shown in <a href="#Fig1">Figure&nbsp;1</a>.
 
 
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft1.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A simple periodic function, defined in Eq.&nbsp;(\ref{eq:fft1}). The dots show the sampled values; the lines are a guide to the eye.</p>
@@ -55,7 +55,7 @@ fig.align_ylabels(axs);
 ~~~~
 
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft2.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The output of the `fft` command on the input 128-point array plotted in <a href="#1">Figure&nbsp;1</a>.</p>
@@ -102,21 +102,21 @@ fig.align_ylabels(axs)
 plt.subplots_adjust(bottom=0.15)
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft3.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The same data as in the previous figure, but now plotted against an honest frequency axis computed by `fftfreq`.</p>
 
 There is a modest "gotcha" here, as will be plain if I use lines instead of markers.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft3b.webp" style="width: 400px;" alt="Line plot of the previous">
 </p>
   <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The same plot as Figure&nbsp;3, but with lines instead of markers. What the lines across the figure? The function `fftfreq` computes a comb of frequency values start from zero, advance to one interval shy of the Nyquist frequency, then start over at the negative of the Nyquist frequency and advance back to zero.</p>
 
 Because the order of the data in the transform is still positive frequencies first, then negative frequencies, when a line is drawn in the middle of the data range, it runs from the right side of the plot to the left. You can avoid this by "rolling" both arrays by half their length:
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft3c.webp" style="width: 400px;" alt="Unwrapped">
 </p>
 <p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — The same data as in the previous plot, but unwrapped with `freqs = np.roll(freqs, len(freqs) // 2)` and similarly for the transformed data.</p>
@@ -139,7 +139,7 @@ ax.set_ylabel("Inverse FFT")
 plt.subplots_adjust(left=0.15)
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft4.webp" style="width: 400px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Inverse transform of $$g_k$$, which indeed reproduces the original data (to within roundoff error).</p>
@@ -224,7 +224,7 @@ ax.set_xlabel("$t$")
 ax.set_ylabel("Signal")
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/fft5.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — Computation of the FFT and the inverse FFT for a sinusoidal input whose period is commensurate with the sampling period. The results suggest that our implementation of the Cooley-Tukey algorithm does indeed produce expected results.</p>
@@ -237,7 +237,7 @@ If the data aren't sampled fast enough, the discrete samples will not be able to
 \end{equation}
 where $$\tau$$ is the sampling period. In other words, **the Nyquist frequency corresponds to having two samples in a period**. Signals at frequencies greater than the Nyquist frequency are **aliased** to frequencies at the Nyquist frequency or lower; they fold back into the lower-frequency region. Aliasing can cause major headaches when your signal has high-frequency components that exceed the Nyquist frequency.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FT-alias.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig6">Figure 6</a> — Illustration of aliasing. The blue curve represents the true source signal, the red dots show the actual samples, and the dashed red curve shows the sine wave we can infer from the discrete samples: it oscillates way more slowly than the true signal.</p>
@@ -288,14 +288,14 @@ axs[0].set_xlabel('$t$ (s)')
 axs[1].set_xlabel(r'$\nu$ (Hz)');
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FT-noalias.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig7">Figure 7</a> — A sinusoid going through two periods and sampled 16 times per period (left panel) produces a very clean power spectrum (right panel) in which a single nonzero value at $$\nu = 2$$ Hz appears, as is to be expected.</p>
 
 What happens if we don't quite make it through a full period? I'll modify the example just slightly by changing the frequency of the source wave. The frequency is shown in the legend of the power spectrum plot. When the sampled wave "doesn't fit" in the time window over which we sample, a periodic continuation of the function has a discontinuity at the right edge. This sharp discontinuity leads to aliasing of high-frequency power into the Nyquist range, and causes the power to be smeared out over a broad range of frequencies.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FT-alias-ps.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig8">Figure 8</a> — Computed power spectra from the sinusoidal input shown in the left panel. When the periodic signal cannot complete an integral number of cycles in the sampling period, there is an implicit discontinuity between the right edge and left edge, resulting in power spreading into nearby frequencies.</p>
@@ -324,7 +324,7 @@ sw = np.cos(tw * 15.5 * 2 * np.pi)
 which is a pure cosine wave that makes it through a half-integral number of periods (i.e., $$15\frac12$$). In <a href="#Fig9">Figure&nbsp;9</a>, the red curve shows power spectrum computed from these data. It has a strong peak at the “right” frequency, but the tails of the peak die off rather slowly. The blue curve shows the power spectrum we obtain on multiplying the raw signal by the window function shown in Eq.&nbsp;(\ref{eq:sine2}). While the resulting peak is not as sharp as it is with the raw data, the falloff with separation from the “true” peak is orders of magnitude faster with the windowed data.
 
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FT-window.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig9">Figure 9</a> — Power spectrum of a pure sinusoidal signal that doesn’t fit in the sampled interval (red curve) and from that signal using the window function of Eq.&nbsp;(\ref{eq:sine2}) . </p>

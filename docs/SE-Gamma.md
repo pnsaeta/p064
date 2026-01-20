@@ -86,7 +86,7 @@ where the **double factorial** is defined by
 
 <p class="figure" markdown="0">
   <img src="figs/gamma.webp" style="width: 400px;" alt="Euler's gamma function">
-</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For large values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — The gamma function $$\Gamma(x)$$ for small arguments $$x$$. For integral values of $$x$$, $$\Gamma(x) = (x-1)!$$.</p>
 
 The figure was generated with the following Python code:
 
@@ -160,7 +160,7 @@ Evidently, the peak at $$y' = 0$$ occurs when $$x = n$$, so we will look to expa
 \begin{align}
   i &= 2 & \qquad y'' &=  -\frac{n}{x^2} &\qquad y'' (n) &= -\frac{1}{n} \notag \\\
   i &= 3 & \qquad y''' &=  \frac{2! \; n}{x^3} &\qquad y''' (n) &= \frac{2}{n^2} \notag \\\
-  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! \; n}{x^4} &\qquad y^{\text{iv}} (n) &= \frac{3!}{n^3} \notag \\\
+  i &= 4 & \qquad y^{\text{iv}} &=  -\frac{3! \; n}{x^4} &\qquad y^{\text{iv}} (n) &= -\frac{3!}{n^3} \notag \\\
   i &= 5 & \qquad y^{\text{v}} &=  \frac{4! \; n}{x^5} &\qquad y^{\text{v}} (n) &= \frac{4!}{n^4} \notag
   \end{align}
 
@@ -168,9 +168,10 @@ I think I see the pattern here. So
 \begin{equation}\label{eq:Taylor}
   y = n \ln n - n - \frac{(x-n)^2}{2!\;n} + \frac{2!(x-n)^3}{3!\;n^2} - \frac{3!(x-n)^4}{4!\; n^3}+ \cdots
 \end{equation}
-We can simplify the notation by letting $$\xi = x-n$$:
+We can simplify the notation by letting $$\xi \equiv x-n$$:
 \begin{equation}\label{eq:ybetter}
   y = n \ln n - n - \frac{\xi^2}{2n} + \frac{\xi^3}{3n^2} - \frac{\xi^4}{4n^3} + \cdots
+  \qquad \xi \equiv x - n
 \end{equation}
 
 ### Step 3: A First Pass
@@ -180,7 +181,7 @@ To get our feet wet, let's just include the first term in this series with $$\xi
   n! &\approx \int_{-n}^\infty \exp\left[ n\ln n - n - \frac{\xi^2}{2n} \right] \dd{\xi}  \notag
   &= n^n e^{-n} \int_{-n}^\infty e^{-\alpha \xi^2} \dd{\xi} \notag
 \end{align}
-where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go off to $$-\infty$$, we would know that the integral was $$\sqrt{\pi/\alpha} = \sqrt{2 \pi n}$$. Looking at Fig.&nbsp;2, it might seem like a reasonable approximation; the integrand seems really small there. Our new approximation to $$n!$$ is
+where I have defined $$\alpha \equiv 1/2n$$. If we could let the lower limit go off to $$-\infty$$, we would know that the integral was $$\sqrt{\pi/\alpha} = \sqrt{2 \pi n}$$. Looking at <a href="#Fig3">Fig.&nbsp;3</a>, it might seem like a reasonable approximation; the integrand seems really small there. Our new approximation to $$n!$$ is
 \begin{equation}\label{eq:nfact2}
   n! \approx \sqrt{2 \pi n} \; n^n e^{-n}
 \end{equation}
@@ -191,7 +192,7 @@ When $$n = 6$$, this approximation gives 710.1, which is a heck of a lot closer 
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The integrand of $$\Gamma(7) = 6!$$ (black curve) and the approximate integrand from Eq.&nbsp;(\ref{eq:ybetter}) when we include only the term quadratic in $$\xi = x-n$$.</p>
 
-Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
+Looking at the approximate integrand for $$n = 6$$ in <a href="#Fig4">Fig.&nbsp;4</a>, it seems clear that we are overcounting area to the left of the peak and undercounting to its right. It seems likely that for larger values of $$n$$ we are probably going to be doing better. Let's make a quick check:
 
 <div class="center-div">
 <table border="1" class="dataframe">
@@ -207,62 +208,62 @@ Looking at the approximate integrand for $$n = 6$$ in Fig.&nbsp;3, it seems clea
     <tr>
       <td>1</td>
       <td>1</td>
-      <td>0.367879</td>
-      <td>0.922137</td>
+      <td>0.367 879</td>
+      <td>0.922 137</td>
     </tr>
     <tr>
       <td>2</td>
       <td>2</td>
-      <td>0.270671</td>
-      <td>0.959502</td>
+      <td>0.270 671</td>
+      <td>0.959 502</td>
     </tr>
     <tr>
       <td>3</td>
       <td>6</td>
-      <td>0.224042</td>
-      <td>0.972702</td>
+      <td>0.224 042</td>
+      <td>0.972 702</td>
     </tr>
     <tr>
       <td>4</td>
       <td>24</td>
-      <td>0.195367</td>
-      <td>0.979424</td>
+      <td>0.195 367</td>
+      <td>0.979 424</td>
     </tr>
     <tr>
       <td>5</td>
       <td>120</td>
-      <td>0.175467</td>
-      <td>0.983493</td>
+      <td>0.175 467</td>
+      <td>0.983 493</td>
     </tr>
     <tr>
       <td>6</td>
       <td>720</td>
-      <td>0.160623</td>
-      <td>0.986220</td>
+      <td>0.160 623</td>
+      <td>0.986 220</td>
     </tr>
     <tr>
       <td>7</td>
       <td>5040</td>
-      <td>0.149003</td>
-      <td>0.988174</td>
+      <td>0.149 003</td>
+      <td>0.988 174</td>
     </tr>
     <tr>
       <td>8</td>
-      <td>40320</td>
-      <td>0.139587</td>
-      <td>0.989643</td>
+      <td>40 320</td>
+      <td>0.139 587</td>
+      <td>0.989 643</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>362880</td>
-      <td>0.131756</td>
-      <td>0.990787</td>
+      <td>362 880</td>
+      <td>0.131 756</td>
+      <td>0.990 787</td>
     </tr>
     <tr>
       <td>10</td>
-      <td>3628800</td>
-      <td>0.125110</td>
-      <td>0.991704</td>
+      <td>3 628 800</td>
+      <td>0.125 110</td>
+      <td>0.991 704</td>
     </tr>
   </tbody>
 </table>
@@ -341,72 +342,72 @@ which is called **Stirling's approximation**. As you can see from the table belo
     <tr>
       <td>1</td>
       <td>1</td>
-      <td>0.367879</td>
-      <td>0.922137</td>
-      <td>0.998982</td>
+      <td>0.367 879</td>
+      <td>0.922 137</td>
+      <td>0.998 982</td>
     </tr>
     <tr>
       <td>2</td>
       <td>2</td>
-      <td>0.270671</td>
-      <td>0.959502</td>
-      <td>0.999481</td>
+      <td>0.270 671</td>
+      <td>0.959 502</td>
+      <td>0.999 481</td>
     </tr>
     <tr>
       <td>3</td>
       <td>6</td>
-      <td>0.224042</td>
-      <td>0.972702</td>
-      <td>0.999721</td>
+      <td>0.224 042</td>
+      <td>0.972 702</td>
+      <td>0.999 721</td>
     </tr>
     <tr>
       <td>4</td>
       <td>24</td>
-      <td>0.195367</td>
-      <td>0.979424</td>
-      <td>0.999829</td>
+      <td>0.195 367</td>
+      <td>0.979 424</td>
+      <td>0.999 829</td>
     </tr>
     <tr>
       <td>5</td>
       <td>120</td>
-      <td>0.175467</td>
-      <td>0.983493</td>
-      <td>0.999885</td>
+      <td>0.175 467</td>
+      <td>0.983 493</td>
+      <td>0.999 885</td>
     </tr>
     <tr>
       <td>6</td>
       <td>720</td>
-      <td>0.160623</td>
-      <td>0.986220</td>
-      <td>0.999917</td>
+      <td>0.160 623</td>
+      <td>0.986 220</td>
+      <td>0.999 917</td>
     </tr>
     <tr>
       <td>7</td>
       <td>5040</td>
-      <td>0.149003</td>
-      <td>0.988174</td>
-      <td>0.999938</td>
+      <td>0.149 003</td>
+      <td>0.988 174</td>
+      <td>0.999 938</td>
     </tr>
     <tr>
       <td>8</td>
       <td>40320</td>
-      <td>0.139587</td>
-      <td>0.989643</td>
-      <td>0.999952</td>
+      <td>0.139 587</td>
+      <td>0.989 643</td>
+      <td>0.999 952</td>
     </tr>
     <tr>
       <td>9</td>
-      <td>362880</td>
-      <td>0.131756</td>
-      <td>0.990787</td>
-      <td>0.999961</td>
+      <td>362 880</td>
+      <td>0.131 756</td>
+      <td>0.990 787</td>
+      <td>0.999 961</td>
     </tr>
     <tr>
       <td>10</td>
-      <td>3628800</td>
-      <td>0.125110</td>
-      <td>0.991704</td>
-      <td>0.999968</td>
+      <td>3 628 800</td>
+      <td>0.125 110</td>
+      <td>0.991 704</td>
+      <td>0.999 968</td>
     </tr>
   </tbody>
 </table>

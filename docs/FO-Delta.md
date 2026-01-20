@@ -133,7 +133,7 @@ Suppose that $$x_n > 0$$. Then if we close along a semicircle at $$ R = \infty $
 \\]
 In the UHP, the second exponential goes strongly to zero as $$R \to \infty$$, while the first exponential oscillates at a frequency that diverges. Therefore, $$I_\text{semicircle} \to 0$$ and by closing along the semicircular path at $$R \to \infty$$ in the UHP, we add no additional contribution to the integral.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/UHP.webp" style="width: 300px;" alt="">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Contour closing in the upper half-plane appropriate when $$x_n > 0$$.</p>
@@ -141,10 +141,9 @@ In the UHP, the second exponential goes strongly to zero as $$R \to \infty$$, wh
 
 We now need to evaluate $$I$$ along the illustrated path. The integrand has a simple pole at $$z = 0$$ which lies exactly along the path. We can either deviate the path on a tiny semicircular path passing underneath the origin, which puts the pole inside the path, or deviate on a tiny semicircle above the origin, which will exclude the pole from the path. I'll take the former choice, as illustrated in the <a href="#Fig2">Fig.&nbsp;2</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/CauchyPValue.webp" style="width: 300px;" alt="deviating below">
-</p>
-<p class="mycap" markdown="1"><a name="Fig2">Figure 2</a> — Deviating the contour along a tiny semicircle under the origin.</p>
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — <a name="Fig2">Figure 2</a> — Deviating the contour along a tiny semicircle under the origin.</p>
 
  Along that tiny semicircle, $$z = \epsilon e^{i\theta}$$ for $$\pi \le \theta \le 2\pi$$. The contribution to the path integral along this tiny portion of path is thus
 \\[

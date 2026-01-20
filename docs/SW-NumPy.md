@@ -74,7 +74,7 @@ ax.set_xlabel('$t$')           # dollar signs turn on LaTeX; t is italicized
 ax.legend();                   # use labels to create a legend
 ~~~~
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/sineplot.webp" style="width: 500px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig">Figure 1</a> — Plot of $$\sin(2\pi t)$$ and $$\cos(2\pi t)$$ on the interval $$[0, 1]$$. Note that my preferences set `usetex=True` automatically, so that text between dollar signs is fed through TeX. If you don't see proper rendering, try including the optional keyword argument `usetex=True` in the two `set_label` commands.</p>
@@ -82,7 +82,7 @@ ax.legend();                   # use labels to create a legend
 
 ### Universal functions
 
-Functions that "broadcast" across the elements of an array are called **universal functions**. 
+Functions that "broadcast" across the elements of an array are called **universal functions**.
 You can [read more about NumPy's universal functions](https://numpy.org/doc/stable/reference/ufuncs.html) in the official documentation. They include all the standard trigonometric, exponential, and hyperbolic functions, degree-radian conversions, rounding, etc. Some “unusual” ones you might find handy:
 
 + `square(x)` computes the square of all elements of `x`
@@ -191,7 +191,7 @@ array([[[-2.8,  0.2,  3.8,  6.1],
 
         [[-6.2, -5.6, -5.6,  9.3],
         [-8.5,  0.2,  1.6,  4.6],
-        [-1.9,  1.2,  5.8,  6. ]]])    
+        [-1.9,  1.2,  5.8,  6. ]]])
 ~~~~
 
 You can also sort over other axes.

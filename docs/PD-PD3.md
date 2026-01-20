@@ -112,14 +112,14 @@ If the domain over which we seek to solve the equation includes the full circle,
 
 The solutions to Bessel's equation that are bounded at the origin are called **Bessel functions** (of the first kind) and denoted $$J_n(x)$$. We can look for a series solution using the [method of Frobenius](DE-DE1.md). I will simply illustrate here the shape of the solutions.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/J0-4.webp" style="width: 500px;" alt="The first five Bessel functions">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The first five Bessel functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;(\ref{eq:asympt}).</p>
 
 The solutions that diverge at the origin are called **Neumann functions** (or Bessel functions of the second kind) and denoted $$Y_n(x)$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Y0-4.webp" style="width: 500px;" alt="The first five Neumann functions">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The first few Neumann functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;(\ref{eq:asympt}).</p>
@@ -199,14 +199,14 @@ Using Eq.&nbsp;(\ref{eq:ortho}), we can evaluate the coefficients $$b_\nu$$, get
 
 An example solution arising from an initial axially symmetric disturbance is shown in <a href="#Fig3">Figure&nbsp;3</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/drum.gif" style="width: 500px;" alt="Animation of the vertical displacement of a drumhead as a function of radius">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — The radial displacement of the drum head as a function of time (shown in the plot title) for an azimuthally symmetric initial disturbance. Note that the wave reflects from the clamped boundary condition at $$r = a$$, and that the amplitude of the wave diminishes as it propagates outward, consistent with conservation of energy, since the length of the wavefront increases proportional to the radius $$r$$.</p>
 
 Somehow, the two-dimensional plot leaves something to be desired. Wouldn't it be more natural to image the displacements of the two-dimensional drum surface, which would require a three-dimensional rendering as a function of time? I thought so!
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/3dbessel.gif" style="width: 800px;" alt="3D representation of the vibrating drumhead">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Illustration of the motion of a drumhead given an initial axially symmetric disturbance. Note that the vertical displacements are highly exaggerated.</p>

@@ -119,14 +119,14 @@ Invite us to learn with you, tracing for us *the most useful path* through the c
 
 The advice “why before how” also applies to individual slides, if you make them.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/slide2.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — This is a visually appealing slide created by a clinic team that aimed to explain how they were using a technique called dynamic light scattering to determine the size of particles in their samples. The title, "Dynamics Light Scattering" identifies the technique they used. They knew nothing about DLS at the start of the project and most audience members know nothing about it. Can you think of a more helpful title?</p>
 
  Rather than titling a slide with the name of the phenomenon or technique, consider using a question, as illustrated in <a href="#Fig2">Figure&nbsp;2</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/slide1.webp" style="width: 700px;">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — I could have titled this slide “Interband Transitions”, which makes perfect sense to those already in the know. However, I think using a question that gets at the heart of the issue is more helpful. My title for Fig. 1 might be “How We Measure Particle Size”.</p>

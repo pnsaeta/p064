@@ -21,7 +21,7 @@ The Titius-Bode formula,
 \end{equation}
 predicts the positions of the planets in the solar system, as illustrated in Fig.&nbsp;1.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/PR-Bode.webp" style="width: 400px;" alt="">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The red dots show the actual orbital radii of the planets; the blue curve shows the prediction of the Titius-Bode formula, Eq.&nbsp;(\ref{eq:titius-bode}).</p>
@@ -39,16 +39,16 @@ distance from the earth to the sun.) The system has a period of about
 80 years with an eccentricity of 0.52. (The eccentricity $$\epsilon$$ of
 an ellipse is given by $$\epsilon = c/a$$, where the distance from
 the center to one focus is $$ c = \sqrt{a^{2}- b^{2}} $$, $$a$$ is
-the semimajor axis, and $$b$$ is the semiminor axis.) 
-For the purposes of this problem, ignore the *average* separation of the stars; take instead the period of their orbit 
-to be *exactly* 80 years. You can then use Kepler's third 
+the semimajor axis, and $$b$$ is the semiminor axis.)
+For the purposes of this problem, ignore the *average* separation of the stars; take instead the period of their orbit
+to be *exactly* 80 years. You can then use Kepler's third
 law
 \begin{equation}
 	T^{2} = \frac{4\pi^{2} \mu}{k} a^{3}
 	\label{eq:KeplerIII}
 \end{equation}
-to figure out the necessary orbital parameters. In this 
-expression, $$\mu$$ is the reduced mass of the two stars (their 
+to figure out the necessary orbital parameters. In this
+expression, $$\mu$$ is the reduced mass of the two stars (their
 product over their sum), and $$k = GM_{1}M_{2}$$.
 
 Investigate the motion of a planet of about the size of the Earth
@@ -70,7 +70,7 @@ useful.
 
 A double pendulum consists of a two point masses suspended from light, rigid rods, with the second rod attached at the first mass. If released from rest at small amplitude, such a system is well behaved; its motion can be described as a combination of two normal modes. In a normal mode, both particles oscillate at the same frequency. Mass-spring systems (molecules, crystals) exhibit this behavior, as well. However, because the gravitational torque is a **nonlinear** function of displacement angle, when given sufficient initial energy, the double pendulum exhibits remarkable, chaotic behavior, as illustrated in <a href="#Fig2">Figure 2</a>.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Double-Pendulum.mp4" style="width: 600px;" alt="double pendulum">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — A set of 5 double pendulums released from rest from very slightly different initial configurations. Initially, their motion is indistinguishable, but as time goes on, their trajectories diverge chaotically.</p>
@@ -90,7 +90,7 @@ The Trebuchet is a medieval engine of war; it uses a long boom that is heavily w
 
 Consider a pendulum consisting of a light, stiff rod of length $$\ell$$ to which a small mass $$m$$ is attached at one end. The other end is made to oscillate rapidly in the vertical. If it oscillates with sufficient amplitude and at high enough frequency, then the inverted pendulum can oscillate stably about its **unstable** vertical equilibrium position. See [this page](https://en.wikipedia.org/wiki/Kapitza%27s_pendulum) for some background.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Kapitza.webp" style="width: 500px;" alt="Kaptiza phase plot">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Phase plot of a Kapitza (inverted) pendulum driven at 40 times its natural frequency. The red curve shows the final 5% of the simulated duration.</p>
@@ -105,7 +105,7 @@ The Ising model attempts to represent the interactions between neighboring spins
 \end{equation}
 where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of interaction between nearest neighbors, and $$B$$ the strength of interaction with an externally applied magnetic field. If $$J > 0$$, the spins prefer to align; if $$J < 0$$, nearest neighbors prefer to point in opposite directions. Of course, on a triangular lattice, this is not possible, which can lead to interesting behavior.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/Ising-kagome-2-1.gif" style="width: 800px;" alt="Ising model on a kagome lattice">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Relaxation run of an Ising model on a two-dimensional kagome lattice with $$B = 0$$, $$J=2$$ and $$T=1$$ (in energy units). Starting from an initial random configuration and applying the Metropolis algorithm, this lattice settles into ferromagnetic alignment, but cannot figure out how to convert the yellow down-spins to red up-spins to continue to lower the system energy.</p>
@@ -115,12 +115,12 @@ where each spin $$s_i$$ is equal to $$\pm 1$$, $$J$$ measures the strength of in
 
 A generalization of the Ising model, called the **planar model**, treats spins in a crystalline lattice as units vector in the $$xy$$ plane, yielding an energy function
 \begin{equation}
-  E = - J \sum_{i, j=\text{nn}(i)} \mathbf{s}_i \cdot \mathbf{s}\_j 
+  E = - J \sum_{i, j=\text{nn}(i)} \mathbf{s}_i \cdot \mathbf{s}\_j
   = - J \sum\_{i, j=\text{nn}(i)} \cos(\theta_i - \theta_j)
 \end{equation}
 where $$\theta_i$$ is the angle spin $$i$$ makes with the $$x$$ axis. As discussed in Chapter 15 of Gould, Tobochnik, and Christian, the mean magnetization in this model is zero at all finite temperatures, but there is a phase transition (the Kosterlitz-Thouless transition) at $$T_{\text{KT}}$$. Below $$T_{\text{KT}}$$, the spin-spin correlation function $$C(r)$$ decreases as a power law, but above $$T_{\text{KT}}$$, $$C(r)$$ decreases exponentially.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/KT.webp" style="width: 600px;" alt="Kosterlitz-Thousless system">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The planar model that exhibits a Kosterlitz-Thouless transition.</p>

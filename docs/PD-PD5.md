@@ -89,7 +89,7 @@ We’ll call this FTCS for **forward in time, centered in space**.
 
 How does it work? As you can see in <a href="#Fig1">Fig. 1</a>, not too well!
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FTCS.gif" style="width: 500px;" alt="FTCS solution is unstable">
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — Solution to the one-dimensional heat diffusion equation for $$\alpha = 1$$ using the forward in time, center in space (FTCS) method. The solution is clearly unstable!</p>
@@ -118,7 +118,7 @@ For the solution to be stable, we must have $$|\xi| < 1$$ for all $$k$$. For sma
 
 Let's run the simulation again, but this time adjust the time step so $$\alpha = \frac12$$.
 
-<p class="center" markdown="0">
+<p class="figure" markdown="0">
   <img src="figs/FTCS-stable.gif" style="width: 500px;" alt="Stable solution using FTCS with alpha=1/2, consistent with the von Neumann stability criterion">
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Solution to the one-dimensional heat diffusion equation for $$\alpha = \frac12$$. The solution is now stable, although it appears to be losing energy.</p>
