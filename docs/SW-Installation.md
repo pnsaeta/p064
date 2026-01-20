@@ -324,12 +324,14 @@ $$ pip install --user virtualenv   # install virtualenv
 $$ python -m virtualenv py14       # the standard virtualenv package
 ~~~~
 
-After creating the virtual environment above, you need to activate it:
+After creating the virtual environment above, you need to activate it. Check the output of the previous command to see where your virtual environment is located.
+On my installation, virtual environments are located in `$HOME/.virtualenvs/`. So, the `py14` environment is located at `/Users/saeta/.virtualenvs/py14`. Within that directory there is a `bin` directory that holds scripts and binary (executable) files. If I were located within the `py14` directory, I would then run
 
 ~~~~ shell
-$$ source activate.sh
+$$ source bin/activate.sh
+~~~~
 
-then run
+to activate the `py14` virtual environment. Once you have activated your virtual environment (which you can check with the `env` command described above), run
 
 ~~~~ shell
 pip install --upgrade pip  # make sure you have an up-to-date version
@@ -382,10 +384,10 @@ You should now see a menu item called **Nbextensions**, as illustrated in the fi
 
 Clicking on the **Nbextensions** menu will allow you to load extensions as  desired. I recommend several, including
 
-+ Autopep8
-+ Codefolding
-+ Collapsible Headings
-+ ExecuteTime
+- Autopep8
+- Codefolding
+- Collapsible Headings
+- ExecuteTime
 
 ![Extensions](figs/extensions.webp)
 
@@ -424,7 +426,6 @@ allows the width of the cell to expand as the window is made wider:
   margin-left: 40px;
 }
 ~~~~
-
 
 ### Matplotlib
 
