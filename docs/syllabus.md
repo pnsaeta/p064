@@ -15,7 +15,7 @@ Our course is for straight physics majors and CS/Physics Joint Majors; it replac
 
 ## Nuts and Bolts
 
-- Meetings: Tuesdays and Thursdays, 13:15–14:30, Shanahan 2454
+- Meetings: Tuesdays and Thursdays, 13:15–14:30, Shanahan 3485
 - Homework due on Mondays at 23:59 (one minute before midnight)
 
 ### Instructor
