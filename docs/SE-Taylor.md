@@ -68,6 +68,6 @@ Ultimately, the justification of l'Hôptial's rule comes from Taylor series, whi
     L = \lim_{x\to0} \frac{1 - (1 - x^2/2! + x^4/4! - \cdots)}{x^2} = \lim_{x\to0} \frac{1}{2!} - \frac{x^2}{4!} + \cdots
     = \frac12
 \\]
-No need to compute derivatives (if you already know the Taylor series)! Oftentimes, this approach is much simplier than (successive) "trips to the hospital."
+No need to compute derivatives (if you already know the Taylor series)! Oftentimes, this approach is much simpler than (successive) "trips to the hospital."
 
 [Next: Manipulating Series](SE-Manipulate.md)
