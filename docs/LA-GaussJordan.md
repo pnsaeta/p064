@@ -9,6 +9,7 @@
 {:toc}
 
 ## Motivation
+
 One can seek the inverse of a given square matrix $$\mat{A}$$ using
 **Gauss-Jordan elimination**, which consists in writing $$\mat{A}$$
 and $$\mat{I}$$ side-by-side and conducting identical row operations on both to
@@ -55,58 +56,59 @@ order to transform $$\mat{A}$$ into $$\mat{I}$$ while simultaneously
 transforming $$\mat{I}$$ into $$\mat{A}^{-1}$$.
 
 ## Procedure
+
 To start, write $$\mat{A}$$ next to the $$3\times3$$ identity matrix:
 \\[
-\begin{pmatrix}
-1 & 2 & -3 & | & 1 & 0 & 0 \\\
-2 & -1 & 4 & | & 0 & 1 & 0 \\\
--2 & 1 & 3 & | & 0 & 0 & 1
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 2 & -3  & 1 & 0 & 0 \\\
+2 & -1 & 4  & 0 & 1 & 0 \\\
+-2 & 1 & 3  & 0 & 0 & 1
+\end{array}\right)
 \\]
 In this case, $$a_{11}$$ is already the number 1, so we don't need to alter the first row; if it had a different value, we could start by dividing the first row by that value. Element $$a_{11}$$ is called the **pivot**.
 To zero the first column of rows 2 and 3, we multiply the first row by $$-2$$ and 2, respectively, and add to get
 \\[
-\begin{pmatrix}1 & 2 & -3 &  | &  1 & 0 & 0 \\\
-0 & -5 & 10 & | & -2 & 1 & 0 \\\
-0 & 5 & -3  & | &  2 & 0 & 1\end{pmatrix}
+\left( \begin{array}{ccc|ccc}1 & 2 & -3 & 1 & 0 & 0 \\\
+0 & -5 & 10 & -2 & 1 & 0 \\\
+0 & 5 & -3  &  2 & 0 & 1\end{array} \right)
 \\]
 Now divide the second row by $$-5$$ to get
 \\[
-\begin{pmatrix}
-1 & 2 & -3 &  | &  1 & 0 & 0 \\\
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 5 & -3  & | &  2 & 0 & 1
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 2 & -3 &   1 & 0 & 0 \\\
+0 & 1 & -2 & 2/5 & -1/5 & 0 \\\
+0 & 5 & -3  &  2 & 0 & 1
+\end{array} \right)
 \\]
 To eliminate the 5 on the second column of the third row, multiply the second row by $$-5$$ and add, giving
 \\[
-\begin{pmatrix}1 & 2 & -3 & | &  1 & 0 & 0 \\\
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 0 &  7 & | & 0 & 1 & 1\end{pmatrix}
+\left( \begin{array}{ccc|ccc}1 & 2 & -3 &  1 & 0 & 0 \\\
+0 & 1 & -2 & 2/5 & -1/5 & 0 \\\
+0 & 0 &  7 & 0 & 1 & 1\end{array} \right)
 \\]
 Dividing the last row by 7 reduces the original matrix to standard upper-triangular form (ones on the main diagonal and zeros below it):
 \\[
-\begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\
-0 & 1 & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 0 &  1 & | & 0 & 1/7 & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 2 & -3 &  1 & 0 & 0 \\\
+0 & 1 & -2 & 2/5 & -1/5 & 0 \\\
+0 & 0 &  1 & 0 & 1/7 & 1/7
+\end{array} \right)
 \\]
 Now we proceed from bottom to top, eliminating with row operations the nonzero entries above the main diagonal. Multiplying the final row by 2 and adding to the middle row gives
 \\[
-\begin{pmatrix}
-1 & 2 & -3 & | &  1 & 0 & 0 \\\
-0 & 1 &  0 & | & 2/5 & 3/35 & 2/7 \\\
-0 & 0 &  1 & | & 0 & 1/7 & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 2 & -3 &  1 & 0 & 0 \\\
+0 & 1 &  0 & 2/5 & 3/35 & 2/7 \\\
+0 & 0 &  1 & 0 & 1/7 & 1/7
+\end{array} \right)
 \\]
 We now add to the first row the second row multiplied by $$-2$$ and the third row multiplied by 3, which gives
 \\[
-\begin{pmatrix}
-1 & 0 & 0 & | &  1/5 & 9/35 & -1/7 \\\
-0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\
-0 & 0 & 1 & | & 0 & 1/7 & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 0 & 0 &  1/5 & 9/35 & -1/7 \\\
+0 & 1 & 0 & 2/5 & 3/35 & 2/7 \\\
+0 & 0 & 1 & 0 & 1/7 & 1/7
+\end{array} \right)
 \\]
 Thus, we have determined that
 \\[
@@ -274,11 +276,11 @@ Gauss-Jordan elimination is straightforward to program. A naïve implementation 
 
 Let's start back at the beginning and scan the first column to look for the row whose first element has the greatest magnitude:
 \\[
-\begin{pmatrix}
-1 & 2 & -3 & | & 1 & 0 & 0 \\\
-2 & -1 & 4 & | & 0 & 1 & 0 \\\
--2 & 1 & 3 & | & 0 & 0 & 1
-\end{pmatrix}
+ \left( \begin{array}{ccc|ccc}
+1 & 2 & -3 & 1 & 0 & 0 \\\
+2 & -1 & 4 & 0 & 1 & 0 \\\
+-2 & 1 & 3 & 0 & 0 & 1
+\end{array} \right)
 \\]
 In this case, there is a tie between the second and third rows. I will pick row 2 and exchange rows 1 and 2 with the permutation matrix
 \\[
@@ -286,20 +288,20 @@ In this case, there is a tie between the second and third rows. I will pick row 
 \\]
 to get
 \\[
-\begin{pmatrix}
-2 & -1 & 4 & | & 0 & 1 & 0 \\\
-1 & 2 & -3 & | & 1 & 0 & 0 \\\
--2 & 1 & 3 & | & 0 & 0 & 1
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+2 & -1 & 4 & 0 & 1 & 0 \\\
+1 & 2 & -3 & 1 & 0 & 0 \\\
+-2 & 1 & 3 & 0 & 0 & 1
+\end{array} \right)
 \\]
 
 Multiplying the first row by $$c_{21} = -1/2$$ and adding to the second row, followed by multiplying the first row by $$c_{31} = 1$$ and adding to the third row gives
 \begin{equation}\label{eq:halfway}
-\begin{pmatrix}
-2 & -1  & 4 &  | & 0 & 1    & 0 \\\
-0 & 5/2 & -5 & | & 1 & -1/2 & 0 \\\
-0 & 0    & 7 & | & 0 & 1    & 1
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+2 & -1  & 4 &  0 & 1    & 0 \\\
+0 & 5/2 & -5 & 1 & -1/2 & 0 \\\
+0 & 0    & 7 & 0 & 1    & 1
+\end{array} \right)
 \end{equation}
 
 Before proceeding to the inverse, we have managed the LU decomposition of the matrix $$\mat{P}\vdot\mat{A}$$ as
@@ -386,27 +388,27 @@ array([[ 1.        , -0.4       ,  0.57142857],
 Let's now return to Eq. (\ref{eq:halfway}) to finish computing the inverse.
 Multiply the second row by $$2/5$$ (and the final row by $$1/7$$):
 \\[
-\begin{pmatrix}
-1 & -1/2 & 2 &  | & 0 & 1/2  & 0 \\\
-0 & 1  & -2 & | & 2/5 & -1/5 & 0 \\\
-0 & 0    & 1 &  | & 0 & 1/7  & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & -1/2 & 2 &  0 & 1/2  & 0 \\\
+0 & 1  & -2 & 2/5 & -1/5 & 0 \\\
+0 & 0    & 1 &  0 & 1/7  & 1/7
+\end{array} \right)
 \\]
 Use the final row to zero the final column of rows 1 and 2:
 \\[
-\begin{pmatrix}
-1 & -1/2 & 0 & | & 0 & 3/14  & -2/7 \\\
-0 & 1    & 0 & | & 2/5 & 3/35 & 2/7 \\\
-0 & 0    & 1 & | & 0 & 1/7  & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & -1/2 & 0 & 0 & 3/14  & -2/7 \\\
+0 & 1    & 0 & 2/5 & 3/35 & 2/7 \\\
+0 & 0    & 1 & 0 & 1/7  & 1/7
+\end{array} \right)
 \\]
 Finally, multiply row 2 by $$1/2$$ and add it to the first row
 \\[
-\begin{pmatrix}
-1 & 0 & 0 & | & 1/5 & 9/35 & -1/7 \\\
-0 & 1 & 0 & | & 2/5 & 3/35 & 2/7 \\\
-0 & 0 & 1 & | & 0   & 1/7  & 1/7
-\end{pmatrix}
+\left( \begin{array}{ccc|ccc}
+1 & 0 & 0 & 1/5 & 9/35 & -1/7 \\\
+0 & 1 & 0 & 2/5 & 3/35 & 2/7 \\\
+0 & 0 & 1 & 0   & 1/7  & 1/7
+\end{array} \right)
 \\]
 which yields the same result for the inverse as before. Note that even though we permuted the first and second rows to use the largest available pivot, **we get the same inverse matrix** because we also permuted the rows of the auxilliary matrix that started as the identity.
 

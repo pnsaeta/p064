@@ -75,7 +75,7 @@ for all vectors $$\vb{x}$$. [If $$\mat{A}$$ is Hermitian, then the transpose ope
 \\]
 Taking the transpose of this equation gives
 \\[
-    \qty(\vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A}^\rm {T} \vdot \qty(\vb{x}^{\rm T})^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x} = \lambda |\vb{x}|^2
+    \left(\vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x}\right)^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A}^{\rm T} \vdot \left(\vb{x}^{\rm T}\right)^{\rm T} = \vb{x}^{\rm T} \vdot \mat{A} \vdot \vb{x} = \lambda |\vb{x}|^2
 \\]
 The norm of a vector is positive-definite, and by assertion, so is $$\vb{x}^{\rm T}\vdot\mat{A}\vdot\vb{x}$$. Therefore, $$\lambda \ge 0$$. Once again, the proof for Hermitian matrices is similar.
 

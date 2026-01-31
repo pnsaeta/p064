@@ -144,7 +144,7 @@ The singular value decomposition of a rectangular matrix $$\mat{M}$$ takes the f
 \end{equation}
 where $$\mat{u}$$ is unitary, $$\mat{S}$$ is diagonal with the singular values in descending order along the main diagonal (and zeros elsewhere), and $$\mat{v}^{\rm H}$$ is also unitary.
 
-~~~ python
+~~~~ python
 sm = np.array([[1, 2, 3, 4],
               [-4, 2, 7, 8]])
 u, s, vh = np.linalg.svd(sm, full_matrices=False)
@@ -189,7 +189,7 @@ fig, ax = plt.subplots()
 k = 5
 harvey_approx = U[:, :k] @ S[:k, :k] @ V_T[:k, :]
 ax.imshow(harvey_approx, cmap='gray')
-ax.set_title(r"$$k = %d$$" % k)
+ax.set_title(r"$k = %d$" % k)
 ax.axis('off')
 ~~~~
 
