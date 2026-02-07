@@ -350,7 +350,7 @@ Compute
   \ev{f,f} &= \sum_{m,n} a_m^* a_n \ev{u_m, u_n} = \sum_n |a_n|^2 \ev{u_n, u_n} \notag \\\
   \ev{f,f} &= \sum_n |a_n|^2 \label{eq:Prseval}
 \end{align}
-The last line, Eq.&nbsp;(\ref{eq:Prseval}), is **Parseval's identity**. As a mathematical result, it is akin to the **Pythagorean theorem**; we add up the squares of the components of a vector and we get its magnitude squared. But, it also has an important physical interpretation. The energy in an oscillatory function (a wave) is proportional to its amplitude squared. The coefficients $$|a_n|$$ represent the energy in each basis function.
+The last line, \eqref{eq:Prseval}, is **Parseval's identity**. As a mathematical result, it is akin to the **Pythagorean theorem**; we add up the squares of the components of a vector and we get its magnitude squared. But, it also has an important physical interpretation. The energy in an oscillatory function (a wave) is proportional to its amplitude squared. The coefficients $$|a_n|^2$$ represent the energy in each basis function.
 
 ## Summary
 
