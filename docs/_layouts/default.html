@@ -30,7 +30,7 @@
           processRefs: true,
           tagFormat: {
             number: (n) =>  n.toString(),
-            id: (n) => 'eqn-id-' + n,
+            id: (id) => 'mjx-eqn:' + id.replace(/\s/g, '_'),
             tag: (tag) => '(' + tag + ')',
             ref: '', // means use the tag function
             url: (id, base) => base + '#' + encodeURIComponent(id),
