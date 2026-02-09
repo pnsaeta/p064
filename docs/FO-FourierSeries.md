@@ -366,7 +366,6 @@ The last line, \eqref{eq:Prseval}, is **Parseval's identity**. As a mathematical
 - For solutions of the second-order linear differential equation $$u''(x) = \lambda u(x)$$, when the bilinear concomitant $$[(u'_1)^* u_2 - u_1^* u'_2]_a^b$$ vanishes, eigenfunctions $$u_n(x)$$ corresponding to different eigenvalues $$\lambda$$ are orthogonal.
 - There are multiple ways to ensure that the bilinear concomitant vanishes, which means that there are multiple sets of orthogonal eigenfunctions that may be used to expand (represent) any function.
 
-
 Next: [Functions of a Complex Variable](FO-ComplexCalculus.md)
 
 <!--
