@@ -305,13 +305,12 @@ As is apparent in <a href="#FO-parabola">Figure 7</a>, the series converges extr
 </p>
 <p class="icap" markdown="1"><a name="Fig7">Figure 7</a> — Convergence of the Fourier series representation of the parabolic function defined in Eq.&nbsp;(\ref{eq:fx}). The top panel shows the true function and the Fourier approximation that uses only the terms with $$n=0$$ and $$n=1.$$ The bottom panel shows the difference between the truncated series and the true function for different points of truncation.</p>
 
-
 The convergence of the previous example seems a bit too good. What happens if we ask the Fourier series to converge to a function that is inconsistent with the boundary conditions we have imposed? Suppose, for instance, that we use the same basis functions of Eq.&nbsp;(\ref{eq:exa}) to represent a parabola that peaks not at $$x = L$$ but in the middle of the range? The result is
 \begin{equation}\label{eq:awk}
   g(x) = \frac{4}{L^2} x (L-x) = \sum_{n=0}^\infty \frac{16 - 8 \pi (n+\frac12) (-1)^n}{[\pi(n+\frac12)]^3}
-  \sin\left[\pi (n+\frac12)\frac{x}{L}\right]
+  \sin\left[\pi \left(n+\frac12 \right)\frac{x}{L}\right]
 \end{equation}
-illustrated in <a href="#Fig8">Figure 8</a>.
+which is illustrated in <a href="#Fig8">Figure 8</a>.
 
 <p class="figure" markdown="0">
   <img src="figs/FO-awkward.webp" style="width: 400px;">
@@ -330,7 +329,7 @@ When the bilinear concomitant vanishes, we are guaranteed that basis eigenfuncti
   \ev{u_m, u_n} = \delta_{mn}
 \end{equation}
 (Remember that our inner product is defined as $$\ev{u_m, u_n} = \int_a^b u_m^*(x) u_n(x) \dd{x}$$.)
-That is, the functions $$u_n$$ for an **orthonormal basis** for functions on the interval $$a \le x \le b$$, which means that we can represent an arbitrary function $$f(x)$$ as
+That is, the functions $$u_n$$ form an **orthonormal basis** for functions on the interval $$a \le x \le b$$, which means that we can represent an arbitrary function $$f(x)$$ as
 \begin{equation}\label{eq:arbf}
   f(x) = \sum_{n} a_n u_n(x)
 \end{equation}
