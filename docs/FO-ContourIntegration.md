@@ -5,7 +5,7 @@
 * toc
 {:toc}
 
-We saw in [the page on Complex Variables](FO-ComplexVariables.md) that the integral around a closed contour on the complex plane may be evaluated by summing the residues of the enclosed poles. Let’s check this out by evaluating the following integral:
+We saw in [the page on the calculus of complex variables](FO-ComplexCalculus.md) that the integral around a closed contour on the complex plane may be evaluated by summing the residues of the enclosed poles. Let’s check this out by evaluating the following integral:
 \begin{equation}
   I = \int_{-\infty}^{\infty} \frac{1}{1 + x^2}\dd{x}
 \end{equation}
@@ -26,8 +26,10 @@ To get our feet wet using contour integration, let's try integrating
 \end{equation} over the infinite interval. This function will provide a
 way of checking our methods, since we can readily evaluate it by a
 straight trigonometric substitution. If $$x = \tan\phi$$, so that
-$$\dd{x} = \sec^2 \phi \dd{\phi}$$, then \begin{equation}
-  \int_{-\infty}^{\infty} f(x)\dd{x} = \int_{-\pi/2}^{\pi/2} \frac{\sec^2 \phi\dd{\phi}}{1+\tan^2\phi}
+$$\dd{x} = \sec^2 \phi \dd{\phi}$$, then
+\begin{equation}
+  \int_{-\infty}^{\infty} f(x)\dd{x} =
+  \int_{-\pi/2}^{\pi/2} \frac{\sec^2\phi}{1+\tan^2\phi} \dd{\phi}
   = \int_{-\pi/2}^{\pi/2} \frac{\sec^2\phi}{\sec^2\phi} \dd{\phi} = \pi
 \end{equation} Can we get this same result via contour integration?
 
@@ -251,8 +253,8 @@ You can readily see that the numerical integration agrees well with the exact va
 
 5. If $$f(z) = u(x,y) + i v(x,y)$$ is analytic in a region, prove that $$u$$ and $$v$$ are harmonic in the region. A harmonic function $$g(x,y)$$ is one that satisfies $$\displaystyle \pdv[2]{g}{x} + \pdv[2]{g}{y} = 0$$.
 
-6. Evaluate $$\displaystyle \oint_C \frac{e^z}{(z^2+\pi^2)^2}\dd{z}$$ where $$C$$ is the circle $$\| z \|=6$$.
+6. Evaluate $$\displaystyle \oint_C \frac{e^z}{(z^2+\pi^2)^2}\dd{z}$$ where $$C$$ is the circle $$\|z\|=6$$.
 
-7. Evaluate $$\displaystyle \frac{1}{2\pi i} \oint_C \frac{e^{zt}}{(z^2+1)^2}\dd{z}$$ if $$t > 0$$ and $$ C $$ is the circle $$ \| z \| =3 $$ .
+7. Evaluate $$\displaystyle \frac{1}{2\pi i} \oint_C \frac{e^{zt}}{(z^2+1)^2}\dd{z}$$ if $$t > 0$$ and $$ C $$ is the circle $$\| z \| =3 $$ .
 
 Next: [Fourier Transforms](FO-FourierTransforms.md)
