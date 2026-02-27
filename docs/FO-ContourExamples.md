@@ -64,10 +64,20 @@ To get rid of the alternating signs, maybe we could use
 \\[
     \frac{\cos\pi z}{z^2 \sin \pi z}
 \\]
-since the cosine in the numerator will also oscillate in sign, so it will remove the sign oscillation from the quotient.
+since the cosine in the numerator will also oscillate in sign, so it will remove the sign oscillation from the quotient. Of course, we'd have to calculate the residues to make sure we were properly accounting for factors of $$\pi$$. But, assuming we sweat the details, it would appear that we might evaluate $$\zeta(2)$$ by integrating around the contour shown in Fig.&nbsp;2.
 
 <p class="figure" markdown="0">
   <img src="figs/zeta1.webp" style="width: 400px;" alt="zeta1">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating around the illustrated contour in the positive sense would yield $$2 \pi i \zeta(2)$$.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating around the illustrated contour in the positive sense would yield a value proportional to $$\zeta(2)$$.</p>
 
+<p class="figure" markdown="0">
+  <img src="figs/zeta2.webp" style="width: 400px;" alt="zeta2">
+</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — blah</p>
+
+
+<p class="figure" markdown="0">
+  <img src="figs/zeta3.webp" style="width: 400px;" alt="zeta3">
+</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — blah</p>
