@@ -44,7 +44,6 @@ but a little thought reveals a major concern: the value of $$\delta z = \delta x
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — For the derivative of a complex function to exist, we must get the same limit as a point $$(x,y)$$ is approached from any direction.</p>
 
-
 If we assume that the limit is well-defined and independent of the direction of approach, then there will need to be careful coordination between the real and imaginary parts of $$f(z)$$, which we can deduce by representing $$f(z) = u(x,y) + i v(x,y)$$. Making this substitution, we have
 \begin{equation}\label{eq:CR0}
     f'(z) = \lim_{\delta x, \delta y \to 0} \frac{
@@ -263,5 +262,7 @@ If a Laurent series exists, it is unique. For a simple (first-order) pole at $$z
     \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
 \\]
 and similarly for $$v$$.
+
+4. Show that $$f(z) = \sqrt{z}$$ is differentiable.
 
 Next: [Contour Integration](FO-ContourIntegration.md)
