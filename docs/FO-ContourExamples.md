@@ -46,4 +46,28 @@ However, since we have to close the contour for the second integral in the LHP, 
 
 ## Summing a series
 
-The Riemann zeta function is $$\zeta(n) = \sum_{j=1}^\infty j^{-n}$$.
+The Riemann zeta function is $$\zeta(n) = \sum_{j=1}^\infty j^{-n}$$. Can we evaluate the sum in closed form somehow using contour integration?
+
+I'm going to focus at the moment on $$\zeta(2)$$. If we could somehow arrange for a series of poles to lie on the positive real axis at the integers, with residues equal to $$1/n^2$$, and then if we could find a suitable contour to evaluate the integral around, we might be able to sum the series.
+
+My first idea was to try the integrand
+\\[
+    \frac{1}{z^2 \sin \pi z}
+\\]
+The denominator has a zero at each positive integer, producing a simple pole. Unfortunately, it has a problem of alternating signs. Consider the neighborhood of the pole at $$n$$, where we might take $$z = n + \xi$$:
+\\[
+    \sin (\pi z) = \sin{(n+\xi)\pi} = \sin n\pi \cos\xi + \cos n\pi \sin \xi
+    = (-1)^n \xi
+\\]
+
+To get rid of the alternating signs, maybe we could use
+\\[
+    \frac{\cos\pi z}{z^2 \sin \pi z}
+\\]
+since the cosine in the numerator will also oscillate in sign, so it will remove the sign oscillation from the quotient.
+
+<p class="figure" markdown="0">
+  <img src="figs/zeta1.webp" style="width: 400px;" alt="zeta1">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating around the illustrated contour in the positive sense would yield $$2 \pi i \zeta(2)$$.</p>
+
