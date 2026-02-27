@@ -71,6 +71,11 @@ since the cosine in the numerator will also oscillate in sign, so it will remove
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating around the illustrated contour in the positive sense would yield a value proportional to $$\zeta(2)$$.</p>
 
+So, let's now sweat the details by first calculating the residue of $$\cot\pi z/z^2$$ at $$z = n$$. The numerator goes to $$\cos \pi(n+\zeta) = \cos n\pi = (-1)^n$$, and we already worked out that the denominator goes to $$n^2 (-1)^n$$. So, the residue is indeed the term we need to sum. That is
+\\[
+    \zeta(2) = \frac{1}{2\pi i} \oint \frac{\cot \pi z}{z^2} \dd{z}
+\\]
+
 <p class="figure" markdown="0">
   <img src="figs/zeta2.webp" style="width: 400px;" alt="zeta2">
 </p>
