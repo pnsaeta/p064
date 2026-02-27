@@ -75,12 +75,36 @@ So, let's now sweat the details by first calculating the residue of $$\cot\pi z/
 \\[
     \zeta(2) = \frac{1}{2\pi i} \oint \frac{\cot \pi z}{z^2} \dd{z}
 \\]
+around the contour abcda.
+
+By symmetry, all the poles on the negative real axis duplicate those enclosed in Fig.&nbsp;2, so maybe we could consider the contour shown in Fig.&nbsp;3.
 
 <p class="figure" markdown="0">
   <img src="figs/zeta2.webp" style="width: 400px;" alt="zeta2">
 </p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — blah</p>
 
+I know it looks crazy, but stay with me a moment. Let's say for the sake of argument that the infinitesimal segment from d to a contributes nothing to the integral. If we could show that the contributions from the giant semicircles also vanish, then integrating around the contour in Fig.&nbsp;3 should yield $$2 \zeta(2)$$.
+
+Along the semicircles, $$z = R e^{i\theta}$$, so $$\dd{z} = i R e^{i\theta} \dd{\theta}$$. Let's think about the UHP first. That integral is
+\\[
+    I_{\rm UHP} = \frac{1}{2\pi i}\int_{\pi}^0 \frac{\cos \left[\pi R e^{i\theta}\right]}{R^2 e^{2i\theta} \sin\left[ \pi R e^{i\theta}\right]} i R e^{i\theta}\dd{\theta}
+    =
+    -\frac{1}{2\pi R} \int_0^\pi  i
+    \frac{e^{i\pi R (\cos\theta + i\sin\theta)} + e^{-i\pi R (\cos\theta + i\sin\theta)}}{e^{i\pi R (\cos\theta + i\sin\theta)} - e^{-i\pi R (\cos\theta + i\sin\theta)}}
+     e^{-i\theta} \dd{\theta}
+\\]
+In the upper half-plane, $$\sin\theta \ge 0$$, so the second exponential in both numerator and denominator blow up in exactly the same way, while the first exponential goes strongly to zero. Multiplying numerator and denominator by $$e^{i\pi R(\cos\theta + i\sin\theta)}$$ gives
+\begin{align}
+   I_{\rm UHP} &= \frac{1}{2\pi i R} \int_0^\pi
+    \frac{1 + e^{i 2\pi R(\cos\theta + i \sin\theta)}}
+    {1 - e^{i 2\pi R(\cos\theta + i\sin\theta)}} e^{i\theta}\dd{\theta}  \notag \\\
+    &= \frac{1}{2\pi i R} \int_0^\pi
+    \frac{1 + e^{-2\pi R \sin\theta} e^{i 2\pi R\cos\theta}}
+    {1 - e^{-2\pi R \sin\theta} e^{i 2\pi R \cos\theta}} e^{i\theta}\dd{\theta} \notag \\\
+    &= \frac{1}{2\pi i R} \int_0^\pi e^{i\theta}\dd{\theta} \notag \\\
+    &=
+\end{align}
 
 <p class="figure" markdown="0">
   <img src="figs/zeta3.webp" style="width: 400px;" alt="zeta3">
