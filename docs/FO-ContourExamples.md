@@ -80,4 +80,4 @@ since the cosine in the numerator will also oscillate in sign, so it will remove
 <p class="figure" markdown="0">
   <img src="figs/zeta3.webp" style="width: 400px;" alt="zeta3">
 </p>
-<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — blah</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Shrinking the contour from Figure&nbsp;3 down to a tiny circle surrounding the pole at the origin.</p>
