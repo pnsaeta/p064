@@ -82,7 +82,7 @@ By symmetry, all the poles on the negative real axis duplicate those enclosed in
 <p class="figure" markdown="0">
   <img src="figs/zeta2.webp" style="width: 400px;" alt="zeta2">
 </p>
-<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — blah</p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — A possible closed contour that might yield twice $$\zeta(2)$$.</p>
 
 I know it looks crazy, but stay with me a moment. Let's say for the sake of argument that the infinitesimal segment from d to a contributes nothing to the integral. If we could show that the contributions from the giant semicircles also vanish, then integrating around the contour in Fig.&nbsp;3 should yield $$2 \zeta(2)$$.
 
@@ -103,10 +103,18 @@ In the upper half-plane, $$\sin\theta \ge 0$$, so the second exponential in both
     \frac{1 + e^{-2\pi R \sin\theta} e^{i 2\pi R\cos\theta}}
     {1 - e^{-2\pi R \sin\theta} e^{i 2\pi R \cos\theta}} e^{i\theta}\dd{\theta} \notag \\\
     &= \frac{1}{2\pi i R} \int_0^\pi e^{i\theta}\dd{\theta} \notag \\\
-    &=
+    &= \frac{1}{2\pi i R} \frac{e^{i\pi} - e^0}{i} = \frac{1}{\pi R}
 \end{align}
+Clearly, in the limit as $$R \to \infty$$, $$I_{\rm UHP} \to 0$$.
+The same argument applies to the semicircle in the lower half-plane. Therefore, the integral around the contour of Fig.&nbsp;3 should yield $$2\zeta(2)$$.
 
 <p class="figure" markdown="0">
   <img src="figs/zeta3.webp" style="width: 400px;" alt="zeta3">
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Shrinking the contour from Figure&nbsp;3 down to a tiny circle surrounding the pole at the origin.</p>
+
+We can now shrink the contour down to the tiny circle around the origin shown in Fig.&nbsp;4, since the integrand is well-behaved throughout the region away from the real axis. Notice, however, that we are going around the pole at the origin in the negative direction, so
+\\[
+    2\zeta(2) = - 2\pi i a_{-1}(z = 0)
+\\]
+All we have to do is evaluate the residue of $$\frac{1}{2\pi i}\cot \pi z / z^2$$ at $$z = 0$$.
