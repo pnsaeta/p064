@@ -56,8 +56,8 @@ My first idea was to try the integrand
 \\]
 The denominator has a zero at each positive integer, producing a simple pole. Unfortunately, it has a problem of alternating signs. Consider the neighborhood of the pole at $$n$$, where we might take $$z = n + \xi$$:
 \\[
-    \sin (\pi z) = \sin{(n+\xi)\pi} = \sin n\pi \cos\xi + \cos n\pi \sin \xi
-    = (-1)^n \xi
+    \sin (\pi z) = \sin{(n+\xi)\pi} = \sin n\pi \cos\pi\xi + \cos n\pi \sin \pi\xi
+    = (-1)^n \pi \xi
 \\]
 
 To get rid of the alternating signs, maybe we could use
@@ -71,9 +71,9 @@ since the cosine in the numerator will also oscillate in sign, so it will remove
 </p>
 <p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Integrating around the illustrated contour in the positive sense would yield a value proportional to $$\zeta(2)$$.</p>
 
-So, let's now sweat the details by first calculating the residue of $$\cot\pi z/z^2$$ at $$z = n$$. The numerator goes to $$\cos \pi(n+\zeta) = \cos n\pi = (-1)^n$$, and we already worked out that the denominator goes to $$n^2 (-1)^n$$. So, the residue is indeed the term we need to sum. That is
+So, let's now sweat the details by first calculating the residue of $$\cot\pi z/z^2$$ at $$z = n$$. The numerator goes to $$\cos \pi(n+\zeta) = \cos n\pi = (-1)^n$$, and we already worked out that the denominator goes to $$n^2 \pi (-1)^n$$. So, we need to multiply the integrand by $$\pi$$ so that the residue is indeed the term we need to sum. That is
 \\[
-    \zeta(2) = \frac{1}{2\pi i} \oint \frac{\cot \pi z}{z^2} \dd{z}
+    \zeta(2) = \frac{1}{2\pi i} \oint \pi\frac{\cot \pi z}{z^2} \dd{z}
 \\]
 around the contour abcda.
 
@@ -88,22 +88,23 @@ I know it looks crazy, but stay with me a moment. Let's say for the sake of argu
 
 Along the semicircles, $$z = R e^{i\theta}$$, so $$\dd{z} = i R e^{i\theta} \dd{\theta}$$. Let's think about the UHP first. That integral is
 \\[
-    I_{\rm UHP} = \frac{1}{2\pi i}\int_{\pi}^0 \frac{\cos \left[\pi R e^{i\theta}\right]}{R^2 e^{2i\theta} \sin\left[ \pi R e^{i\theta}\right]} i R e^{i\theta}\dd{\theta}
+    I_{\rm UHP} = \frac{1}{2\pi i}\int_{\pi}^0 \pi
+    \frac{\cos \left[\pi R e^{i\theta}\right]}{R^2 e^{2i\theta} \sin\left[ \pi R e^{i\theta}\right]} i R e^{i\theta}\dd{\theta}
     =
-    -\frac{1}{2\pi R} \int_0^\pi  i
+    -\frac{1}{2 R} \int_0^\pi  i
     \frac{e^{i\pi R (\cos\theta + i\sin\theta)} + e^{-i\pi R (\cos\theta + i\sin\theta)}}{e^{i\pi R (\cos\theta + i\sin\theta)} - e^{-i\pi R (\cos\theta + i\sin\theta)}}
      e^{-i\theta} \dd{\theta}
 \\]
 In the upper half-plane, $$\sin\theta \ge 0$$, so the second exponential in both numerator and denominator blow up in exactly the same way, while the first exponential goes strongly to zero. Multiplying numerator and denominator by $$e^{i\pi R(\cos\theta + i\sin\theta)}$$ gives
 \begin{align}
-   I_{\rm UHP} &= \frac{1}{2\pi i R} \int_0^\pi
+   I_{\rm UHP} &= \frac{1}{2 i R} \int_0^\pi
     \frac{1 + e^{i 2\pi R(\cos\theta + i \sin\theta)}}
     {1 - e^{i 2\pi R(\cos\theta + i\sin\theta)}} e^{i\theta}\dd{\theta}  \notag \\\
-    &= \frac{1}{2\pi i R} \int_0^\pi
+    &= \frac{1}{2 i R} \int_0^\pi
     \frac{1 + e^{-2\pi R \sin\theta} e^{i 2\pi R\cos\theta}}
     {1 - e^{-2\pi R \sin\theta} e^{i 2\pi R \cos\theta}} e^{i\theta}\dd{\theta} \notag \\\
-    &= \frac{1}{2\pi i R} \int_0^\pi e^{i\theta}\dd{\theta} \notag \\\
-    &= \frac{1}{2\pi i R} \frac{e^{i\pi} - e^0}{i} = \frac{1}{\pi R}
+    &= \frac{1}{2 i R} \int_0^\pi e^{i\theta}\dd{\theta} \notag \\\
+    &= \frac{1}{2 i R} \frac{e^{i\pi} - e^0}{i} = \frac{1}{R}
 \end{align}
 Clearly, in the limit as $$R \to \infty$$, $$I_{\rm UHP} \to 0$$.
 The same argument applies to the semicircle in the lower half-plane. Therefore, the integral around the contour of Fig.&nbsp;3 should yield $$2\zeta(2)$$.
@@ -117,4 +118,26 @@ We can now shrink the contour down to the tiny circle around the origin shown in
 \\[
     2\zeta(2) = - 2\pi i a_{-1}(z = 0)
 \\]
-All we have to do is evaluate the residue of $$\frac{1}{2\pi i}\cot \pi z / z^2$$ at $$z = 0$$.
+All we have to do is evaluate the residue of $$\frac{1}{2\pi i} \pi\cot \pi z / z^2$$ at $$z = 0$$. We can do this using series expansions:
+\begin{align}
+  \frac{1}{2\pi i} \pi \frac{\cot \pi z}{z^2} &=
+  -\frac{i}{2z^2} \frac{1 - \pi^2 z^2 / 2! + \cdots}
+  {\pi z - (\pi z)^3/3! + \cdots}
+    \notag
+    \\\
+    &= - \frac{i}{2 \pi z^3}
+    \frac{1 - \pi^2 z^2 / 2! + \cdots}
+  {1 - (\pi z)^2/3! + \cdots}
+  \notag \\\
+  &= -\frac{i}{2\pi z^3} \left[1 - \frac{\pi^2 z^2}{2!} + \cdots \right]
+  \left[1 + \frac{\pi^2 z^2}{3!} - \cdots \right] \notag
+  \\\
+  &= - \frac{i}{2\pi z^3} \left[ 1 - \frac{\pi^2 z^2}{3} + \cdots \right]
+\end{align}
+Hence, the residue is $$a_{-1} = i \pi / 6$$ and
+\\[
+    2 \zeta(2) = - 2 \pi i \left(\frac{i \pi}{6} \right)
+    \qquad\longrightarrow\qquad
+    \boxed{ \zeta(2) = \frac{\pi^2}{6} }
+\\]
+Kinda like magic!
