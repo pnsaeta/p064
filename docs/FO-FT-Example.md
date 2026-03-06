@@ -163,26 +163,50 @@ When $$\omega \to \omega_-$$, it becomes $$(\omega-\omega_-)\Delta_-$$ where
     \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma + 2 \beta \omega_1 i)
 \\]
 
-Since case 3 is simpler (we get nothing from the poles on the real axis), we'll start there.
+Let us define
 \begin{align}
-  x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
-    \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
-    + \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{-2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
-    &= \frac{i F_0 \Omega}{2 m \omega_1} \left(
-      \frac{e^{-\beta t -i\omega_1 t} - e^{-\beta(t-T) - i\omega_1 (t-T)}}{\Gamma - 2\beta\omega_1 i}
-      - \frac{e^{-\beta t + i\omega_1 t} - e^{-\beta(t-T) + i\omega_1 (t-T)}}{\Gamma + 2 \beta\omega_1 i}
-    \right) \notag \\\
-    &= \frac{i F_0 \Omega}{2 m \omega_1} \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-    \bigg(-2 i \Gamma e^{-\beta t} \sin\omega_1 t + 2 i \Gamma e^{-\beta(t-T)}\sin (\omega_1(t-T)) \notag \\\
-    & \qquad \qquad  +4 \beta \omega_1 i \cos\omega_1 t - 4 \beta \omega_1 i e^{-\beta(t-T)} \cos(\omega_1(t-T))
-       \bigg) \notag \\\
-    &= \frac{F_0 \Omega}{m\omega_1 (\Gamma^2 + 4 \beta^2 \omega_1^2)} \bigg[
-      \Gamma \left(e^{-\beta t}\sin\omega_1 t - e^{-\beta(t-T)}\sin(\omega_1(t-T))  \right)
-      \notag \\\
-    & \qquad \qquad + 2 \beta \omega_1 \left(e^{-\beta t}\cos\omega_1 t -
-    e^{-\beta(t-T)} \cos(\omega_1(t-T)) \right)\bigg] \notag
+  \Delta &= \sqrt{\Gamma^{2} + 4 \beta^{2}\omega_{1}^{2}} \label{eq:Delta} \\\
+  \tan \varphi &= \frac{2\beta\omega_{1}}{\Gamma}
 \end{align}
+in terms of which we can express the denominators in polar form as
+\begin{align*}
+  \Delta_{+}
+  &=
+    2 \omega_{1}\Delta e^{-i\varphi}
+  \\\
+  \Delta_{-}
+  &= -2\omega_{1}\Delta e^{i\varphi}
+\end{align*}
+The two exponentials have the same form, so I will work out the contribution to
+$$x(t)$$ for $$e^{-i\omega t}$$ and get the second one by taking $$t \to t-T$$. Setting aside
+the prefactor for the moment, the sum of the residues at $$\omega \to \omega_{\pm}$$ is
+\begin{align*}
+  S(t)
+  &=
+    \frac{e^{-i\omega_{+}t}}{(\omega_{+}-\omega_{-})\Delta e^{-i\varphi}} +
+    \frac{e^{-i\omega_{-}t}}{(\omega_{-}-\omega_{+}) \Delta e^{i\varphi}}
+  \\\
+  &= \frac{e^{-\beta t}}{2\omega_{1} \Delta} \left( e^{-i(\omega_{1}t - \varphi)} -
+    e^{i(\omega_{1}t-\varphi)}\right)
+  \\\
+  &= \frac{e^{-\beta t}}{2\omega_{1}\Delta} (-2i) \sin(\omega_{1}t-\varphi)
+  \\\
+  &= \frac{-i e^{-\beta t} \sin(\omega_{1}t - \varphi)}{\omega_{1}\Delta}
+\end{align*}
 
+Combining now with the prefactor and the factor of $$2\pi i$$ for the poles, we get
+\begin{align*}
+  x(t)
+  &=
+    - \frac{F_{0}\Omega}{2\pi m} (-2 \pi i) \frac{-i}{\omega_{1}\Delta}
+    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right)
+  \\\
+  &= \frac{F_{0}\Omega}{m \omega_{1}\Delta}
+    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right)
+\end{align*}
+
+
+Since case 3 is simpler (we get nothing from the poles on the real axis), we'll start there.
 \begin{align}
   x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
     \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
@@ -202,13 +226,30 @@ Since case 3 is simpler (we get nothing from the poles on the real axis), we'll 
       \notag \\\
     &\qquad\qquad
       - e^{-\beta(t-T)} \bigg[ (\Gamma + 2 \beta \omega_1 i) e^{-i\omega_1(t-T)}
-      + (\Gamma - 2 \beta \omega_1 i) e^{i\omega_1(t-T)}
+      - (\Gamma - 2 \beta \omega_1 i) e^{i\omega_1(t-T)}
       \bigg]
-      \bigg)\notag
+      \bigg)\notag \\\
     &= \frac{i F_0 \Omega}{2\omega_1 m}
       \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \bigg( e^{-\beta t} \bigg[\Gamma(-2i)\sin \omega_1 t +2\beta\omega_1 (2i)\cos\omega_1 t \bigg]
+     \bigg( e^{-\beta t} \bigg[\Gamma(-2i)\sin \omega_1 t +2\beta\omega_1 (2i)\cos\omega_1 t \bigg] \notag
+    \\\
+    &\qquad\qquad
+    - e^{-\beta(t-T)} \bigg[\Gamma (-2i)\sin\omega_1(t-T) + 2\beta\omega_1 i (2) \cos \omega_1(t-T)
+      \bigg] \bigg) \notag
 \end{align}
+Both terms in square brackets can be simplified if we define a phase factor
+\begin{equation}\label{eq:phase}
+  \tan\varphi = \frac{2\beta\omega_1}{\Gamma}
+\end{equation}
+and using $$\sin(a+b) = \sin a\cos b + \cos a\sin b$$:
+\begin{equation}\label{eq:case3}
+  x(t) = \frac{F_0 \Omega}{m\omega_1}
+   \frac{1}{\sqrt{\Gamma^2 + 4 \beta^2 \omega_1^2}}
+   \bigg(
+    e^{-\beta t}\sin(\omega_1 t - \varphi) -
+    e^{-\beta(t-T)}\sin(\omega_1(t-T) - \varphi)
+   \bigg)
+\end{equation}
 
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
 
