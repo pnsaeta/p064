@@ -227,4 +227,29 @@ The residue at $$\omega \to -\Omega$$ is
     &= - \frac{e^{i\Omega t}}{(2\Omega)( \Omega^2 -\omega_1^2 -\beta^2 - 2 \beta \Omega i)}
     \notag \\\
     &= - \frac{e^{i\Omega t}}{(2\Omega)\Delta e^{-i\varphi}}
+    = -\frac{e^{i(\Omega t + \varphi)}}{2\Omega\Delta}
+    \label{eq:resn}
+\end{align}
+and the residue at $$\omega \to \Omega$$ is
+\begin{align}
+    a_{-1}(\Omega) &= \frac{e^{-i\Omega t}}{(\Omega-\omega_+)
+    (\Omega-\omega_-)(2\Omega)}
+    \notag \\\
+    &= \frac{e^{-i\Omega t}}{(2\Omega)(\Omega^2 + \omega_+\omega_-
+    - \Omega(\omega_+ + \omega_-))}
+    \notag \\\
+    &= \frac{e^{-i\Omega t}}{(2\Omega)( \Omega^2 -\omega_1^2 -\beta^2
+     + 2 \beta \Omega i)}
+    \notag \\\
+    &= \frac{e^{-i\Omega t}}{(2\Omega)\Delta e^{i\varphi}}
+    = \frac{e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
+    \label{eq:resp}
+\end{align}
+
+Since $$t > 0$$, we can close in the UHP and get $$i\pi$$ times the sum of the residues. Hence, from the first exponential, we get a contribution to $$x(t)$$ of
+\begin{align}
+  x_1(t) &= -\frac{F_0\Omega}{2\pi m} (\pi i) \frac{-e^{i(\Omega t+\varphi)}
+  - e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
+    \notag \\\
+    &= \frac{F_0 i \cos(\Omega t + \varphi)}{2m \Delta} \notag
 \end{align}
