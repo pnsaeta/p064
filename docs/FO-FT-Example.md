@@ -169,112 +169,62 @@ Let us define
   \tan \varphi &= \frac{2\beta\omega_{1}}{\Gamma}
 \end{align}
 in terms of which we can express the denominators in polar form as
-\begin{align*}
+\begin{align}
   \Delta_{+}
   &=
-    2 \omega_{1}\Delta e^{-i\varphi}
+    2 \omega_{1}\Delta e^{-i\varphi} \notag
   \\\
   \Delta_{-}
-  &= -2\omega_{1}\Delta e^{i\varphi}
-\end{align*}
+  &= -2\omega_{1}\Delta e^{i\varphi} \notag
+\end{align}
 The two exponentials have the same form, so I will work out the contribution to
 $$x(t)$$ for $$e^{-i\omega t}$$ and get the second one by taking $$t \to t-T$$. Setting aside
 the prefactor for the moment, the sum of the residues at $$\omega \to \omega_{\pm}$$ is
-\begin{align*}
+\begin{align}
   S(t)
   &=
     \frac{e^{-i\omega_{+}t}}{(\omega_{+}-\omega_{-})\Delta e^{-i\varphi}} +
     \frac{e^{-i\omega_{-}t}}{(\omega_{-}-\omega_{+}) \Delta e^{i\varphi}}
-  \\\
+  \notag \\\
   &= \frac{e^{-\beta t}}{2\omega_{1} \Delta} \left( e^{-i(\omega_{1}t - \varphi)} -
-    e^{i(\omega_{1}t-\varphi)}\right)
+    e^{i(\omega_{1}t-\varphi)}\right) \notag
   \\\
   &= \frac{e^{-\beta t}}{2\omega_{1}\Delta} (-2i) \sin(\omega_{1}t-\varphi)
-  \\\
+  \notag \\\
   &= \frac{-i e^{-\beta t} \sin(\omega_{1}t - \varphi)}{\omega_{1}\Delta}
-\end{align*}
+  \notag
+\end{align}
 
-Combining now with the prefactor and the factor of $$2\pi i$$ for the poles, we get
-\begin{align*}
+Combining now with the prefactor and the factor of $$-2\pi i$$ for the poles, which we enclose while integrating in the negative sense, we get
+\begin{align}
   x(t)
   &=
     - \frac{F_{0}\Omega}{2\pi m} (-2 \pi i) \frac{-i}{\omega_{1}\Delta}
     \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right)
-  \\\
+  \notag\\\
   &= \frac{F_{0}\Omega}{m \omega_{1}\Delta}
-    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right)
-\end{align*}
-
-
-Since case 3 is simpler (we get nothing from the poles on the real axis), we'll start there.
-\begin{align}
-  x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
-    \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
-    - \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
-    &= \frac{i F_0 \Omega}{2\omega_1 m}
-      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \left(
-      (\Gamma + 2 \beta \omega_1 i)(e^{-i\omega_+t} - e^{-i\omega_+(t-T)})
-      - (\Gamma - 2\beta\omega_1 i)(e^{-i\omega_-t} - e^{-i\omega_-(t-T)})
-      \right) \notag
-      \\\
-    &= \frac{i F_0 \Omega}{2\omega_1 m}
-      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \bigg(
-      e^{-\beta t} \bigg[ (\Gamma + 2 \beta \omega_1 i)e^{-i\omega_1 t} -
-      (\Gamma - 2 \beta \omega_1 i)e^{i\omega_1 t} \bigg]
-      \notag \\\
-    &\qquad\qquad
-      - e^{-\beta(t-T)} \bigg[ (\Gamma + 2 \beta \omega_1 i) e^{-i\omega_1(t-T)}
-      - (\Gamma - 2 \beta \omega_1 i) e^{i\omega_1(t-T)}
-      \bigg]
-      \bigg)\notag \\\
-    &= \frac{i F_0 \Omega}{2\omega_1 m}
-      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
-     \bigg( e^{-\beta t} \bigg[\Gamma(-2i)\sin \omega_1 t +2\beta\omega_1 (2i)\cos\omega_1 t \bigg] \notag
-    \\\
-    &\qquad\qquad
-    - e^{-\beta(t-T)} \bigg[\Gamma (-2i)\sin\omega_1(t-T) + 2\beta\omega_1 i (2) \cos \omega_1(t-T)
-      \bigg] \bigg) \notag
+    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right) \label{eq:case3}
 \end{align}
-Both terms in square brackets can be simplified if we define a phase factor
-\begin{equation}\label{eq:phase}
-  \tan\varphi = \frac{2\beta\omega_1}{\Gamma}
+This is the entire solution for case 3, since we get nothing from the poles on the real axis.
+
+
+When $$0 < t < T$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. So, the poles in the LHP yield Eq.\eqref{eq:case3} without the term involving $$t-T$$, to which we must add the contributions from the poles on the real axis.
+
+Again setting aside the prefactor for the moment, we need to evaluate
+\begin{equation}
+  I(t) = \int_{-\infty}^{\infty}
+    \frac{e^{-i\omega t} }
+    {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
-and using $$\sin(a+b) = \sin a\cos b + \cos a\sin b$$:
-\begin{equation}\label{eq:case3}
-  x(t) = \frac{F_0 \Omega}{m\omega_1}
-   \frac{1}{\sqrt{\Gamma^2 + 4 \beta^2 \omega_1^2}}
-   \bigg(
-    e^{-\beta t}\sin(\omega_1 t - \varphi) -
-    e^{-\beta(t-T)}\sin(\omega_1(t-T) - \varphi)
-   \bigg)
-\end{equation}
-
-Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
-
-For $$t > T$$, we must close in the LHP for the exponentials in the numerators to go to zero. But if $$0 < t < T$$, we have to separate numerator into two distinct integrals, because we have to close in opposite half planes for the two terms. In either case, the denominator goes to the same expression (apart from the term going to zero), so we can evaluate it first. When $$\omega \to \omega_+$$, the denominator becomes
-\\[
-    \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
-    = 2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 -2 \beta \omega_1 i) = 2 \omega_1 (\Gamma^2 - 2 \beta \omega_1 i)
-\\]
-where I have defined $$\Gamma^2 \equiv \omega_1^2 - \Omega^2 - \beta^2$$, and when $$\omega \to \omega_-$$, it becomes
-\\[
-    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma^2 + 2 \beta \omega_1 i)
-\\]
-
-When $$0 < t < 2 \pi / N$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. Hence, the residue theorem yields
+at $$\omega \to \pm \Omega$$.
+The residue at $$\omega \to -\Omega$$ is
 \begin{align}
-  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2 \pi i) \bigg( \frac{e^{-i\omega_+ t}}{2\omega_1 (\Gamma^2-2\beta\omega_1 i)}
-   -  \frac{e^{-i\omega_- t}}{2 \omega_1 (\Gamma^2 + 2 \beta \omega_1 i)}
-   \bigg)\notag
-   \\\
-   &= - \frac{F_0 \Omega i}{2 \omega_1 m} e^{-\beta t} \left( \frac{e^{-i\omega_1 t}}{\Gamma^2-2\beta\omega_1 i } - \frac{e^{i\omega_1 t}}{\Gamma^2+2\beta\omega_1 i} \right) \notag
-   \\\
-   &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( e^{-i \omega_1 t}(\Gamma^2 + 2 \beta \omega_1 i) - e^{i\omega_1 t}(\Gamma^2 - 2 \beta \omega_1 i) \bigg) \notag \\\
-   &= - \frac{F_0 \Omega i}{2 \omega_1 m} \frac{ e^{-\beta t} }{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \bigg( 4\beta\omega_1 i \cos(\omega_1 t) - 2 \Gamma^2 i \sin (\omega_1 t) \bigg) \notag \\\
-   &= \frac{F_0 \Omega}{\omega_1 m} \frac{e^{-\beta t}}{\Gamma^4 + 4 \beta^2 \omega_1^2}
-   \left[ \Gamma^2 \sin(\omega_1 t) - 2\beta\omega_1 \cos(\omega_1 t)\right]
+    a_{-1}(-\Omega) &= \frac{e^{i\Omega t}}{(-\Omega-\omega_+)
+    (-\Omega-\omega_-)(-2\Omega)}
+    \notag \\\
+    &= -\frac{e^{i\Omega t}}{(2\Omega)(\Omega^2 + \omega_+\omega_- + \Omega(\omega_+ + \omega_-))}
+    \notag \\\
+    &= - \frac{e^{i\Omega t}}{(2\Omega)( \Omega^2 -\omega_1^2 -\beta^2 - 2 \beta \Omega i)}
+    \notag \\\
+    &= - \frac{e^{i\Omega t}}{(2\Omega)\Delta e^{-i\varphi}}
 \end{align}
