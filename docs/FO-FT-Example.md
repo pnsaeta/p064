@@ -186,8 +186,28 @@ Since case 3 is simpler (we get nothing from the poles on the real axis), we'll 
 \begin{align}
   x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
     \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
-    + \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{-2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
-    &=
+    - \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
+    &= \frac{i F_0 \Omega}{2\omega_1 m}
+      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+     \left(
+      (\Gamma + 2 \beta \omega_1 i)(e^{-i\omega_+t} - e^{-i\omega_+(t-T)})
+      - (\Gamma - 2\beta\omega_1 i)(e^{-i\omega_-t} - e^{-i\omega_-(t-T)})
+      \right) \notag
+      \\\
+    &= \frac{i F_0 \Omega}{2\omega_1 m}
+      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+     \bigg(
+      e^{-\beta t} \bigg[ (\Gamma + 2 \beta \omega_1 i)e^{-i\omega_1 t} -
+      (\Gamma - 2 \beta \omega_1 i)e^{i\omega_1 t} \bigg]
+      \notag \\\
+    &\qquad\qquad
+      - e^{-\beta(t-T)} \bigg[ (\Gamma + 2 \beta \omega_1 i) e^{-i\omega_1(t-T)}
+      + (\Gamma - 2 \beta \omega_1 i) e^{i\omega_1(t-T)}
+      \bigg]
+      \bigg)\notag
+    &= \frac{i F_0 \Omega}{2\omega_1 m}
+      \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+     \bigg( e^{-\beta t} \bigg[\Gamma(-2i)\sin \omega_1 t +2\beta\omega_1 (2i)\cos\omega_1 t \bigg]
 \end{align}
 
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
