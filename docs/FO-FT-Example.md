@@ -104,13 +104,14 @@ Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates 
 Its Fourier transform is
 \begin{align}
     \tilde{F}(\omega) &= \int_{0}^{2 \pi N/\Omega} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
+    = \frac{F_0}{2i} \int_0^{2\pi N/\Omega} \left(e^{i(\omega+\Omega)t} - e^{i(\omega-\Omega)t} \right)\dd{t}
     \\\
     &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
     \\\
-    &= \frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} -
+    &= -\frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} -
     \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega + \Omega}\bigg]
     \\\
-    &= F_0 \Omega \frac{e^{i 2 \pi N \omega/\Omega}-1}{\omega^2 - \Omega^2}
+    &= F_0 \Omega \frac{1-e^{i 2 \pi N \omega/\Omega}}{\omega^2 - \Omega^2}
 \end{align}
 
 Let's define
@@ -122,12 +123,12 @@ which is the time that the forcing function stops.
 By the convolution theorem, then,
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{F_0 \Omega}{m}
-  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i\omega T}-1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
+  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{1-e^{i\omega T}}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
 
 Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly:
 \begin{equation}
-  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
+  x(t) = -\frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
     \frac{e^{-i\omega t} - e^{-i\omega(t-T)}}
     {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
@@ -164,25 +165,30 @@ When $$\omega \to \omega_-$$, it becomes $$(\omega-\omega_-)\Delta_-$$ where
 
 Since case 3 is simpler (we get nothing from the poles on the real axis), we'll start there.
 \begin{align}
-  x(t) &= \frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
+  x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
     \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
     + \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{-2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
-    &= -\frac{i F_0 \Omega}{2 m \omega_1} \left(
+    &= \frac{i F_0 \Omega}{2 m \omega_1} \left(
       \frac{e^{-\beta t -i\omega_1 t} - e^{-\beta(t-T) - i\omega_1 (t-T)}}{\Gamma - 2\beta\omega_1 i}
       - \frac{e^{-\beta t + i\omega_1 t} - e^{-\beta(t-T) + i\omega_1 (t-T)}}{\Gamma + 2 \beta\omega_1 i}
     \right) \notag \\\
-    &= -\frac{i F_0 \Omega}{2 m \omega_1} \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
+    &= \frac{i F_0 \Omega}{2 m \omega_1} \frac{1}{\Gamma^2 + 4 \beta^2 \omega_1^2}
     \bigg(-2 i \Gamma e^{-\beta t} \sin\omega_1 t + 2 i \Gamma e^{-\beta(t-T)}\sin (\omega_1(t-T)) \notag \\\
     & \qquad \qquad  +4 \beta \omega_1 i \cos\omega_1 t - 4 \beta \omega_1 i e^{-\beta(t-T)} \cos(\omega_1(t-T))
        \bigg) \notag \\\
     &= \frac{F_0 \Omega}{m\omega_1 (\Gamma^2 + 4 \beta^2 \omega_1^2)} \bigg[
-      \Gamma \left(e^{-\beta(t-T)}\sin(\omega_1(t-T)) - e^{-\beta t}\sin\omega_1 t \right)
+      \Gamma \left(e^{-\beta t}\sin\omega_1 t - e^{-\beta(t-T)}\sin(\omega_1(t-T))  \right)
       \notag \\\
-    & \qquad \qquad 2 \beta \omega_1 \left(e^{-\beta t}\cos\omega_1 t -
+    & \qquad \qquad + 2 \beta \omega_1 \left(e^{-\beta t}\cos\omega_1 t -
     e^{-\beta(t-T)} \cos(\omega_1(t-T)) \right)\bigg] \notag
 \end{align}
 
-
+\begin{align}
+  x(t) &= -\frac{F_0 \Omega}{2\pi m} (-2\pi i)\left(
+    \frac{e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}{2 \omega_1 (\Gamma - 2\beta\omega_1 i)}
+    + \frac{e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}{-2\omega_1(\Gamma+2\beta\omega_1 i)} \right)  \notag \\\
+    &=
+\end{align}
 
 Hence, we are left with worrying about the poles at $$\omega_\pm$$. For $$t < 0$$, we may close the contour along a semicircular path at $$R\to\infty$$ in the UHP. Since that path contains no poles, we get zero, as we must expect: the oscillator is quiet before we start the forcing function at $$t = 0$$.
 
