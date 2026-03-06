@@ -181,7 +181,7 @@ A classical simple harmonic oscillator has the energy equation
 \\[
     E = \frac{k}{2} x^2 + \frac{1}{2m} p^2
 \\]
-which suggests that position $$x$$ and momentum $$p$$ play identical roles in determining the energy. When you study the quantum simple harmonic oscillator in Physics 52 and later in Physics 116, you will see that the ground state of a simple harmonic oscillator is indeed a gaussian when "projected" into position space (meaning as a function of $$x$$) or when projected into momentum space (as a function of $$p = \hbar k$$). You may suspect that the symmetry of the roles played by position and momentum in the energy of a harmonic oscillator would make **all** quantum mechanical solutions (eigenfunctions) of the harmonic oscillator potential have the same form in positions space (as functions of $$x$$) and in momentum space; you will have a chance to confirm an example in homework.
+which suggests that position $$x$$ and momentum $$p$$ play identical roles in determining the energy. When you study the quantum simple harmonic oscillator in Physics 52 and later in Physics 116, you will see that the ground state of a simple harmonic oscillator is indeed a gaussian when "projected" into position space (meaning as a function of $$x$$) or when projected into momentum space (as a function of $$p = \hbar k$$). You may suspect that the symmetry of the roles played by position and momentum in the energy of a harmonic oscillator would make **all** quantum mechanical solutions (eigenfunctions) of the harmonic oscillator potential have the same form in position space (as functions of $$x$$) and in momentum space; you will have a chance to confirm an example in homework.
 
 Another example function that arises in physics with this property is the hyperbolic secant, which often describes the temporal profile of an ultrashort laser pulse,
 \\[
@@ -216,7 +216,8 @@ then
   \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\Omega} \tilde{f}(\Omega) e^{-i\Omega (t-t')} \notag \\\
   &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega)
   \int_{-\infty}^{\infty} \dd{\Omega} \tilde{g}(\Omega) e^{-i\Omega t}
-  \underbrace{\frac{1}{2\pi} \int\_{-\infty}^{\infty} \dd{t'} e^{i (\Omega - \omega) t'}}\_{\delta(\Omega-\omega)} \notag \\\
+  \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{t'}
+   e^{i (\Omega - \omega) t'} \notag \\\
   &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \dd{\omega} \tilde{f}(\omega) \tilde{g}(\omega) e^{-i\omega t}
 \end{align}
 That is, **the Fourier transform of the convolution is the product of the Fourier transforms**. This result is known as the **convolution theorem**.
