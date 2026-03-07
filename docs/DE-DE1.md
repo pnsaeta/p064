@@ -117,7 +117,7 @@ Let us now consider a more general second-order linear differential equation,
 \\[
     y^{\prime\prime} = A(x) y'(x) + B(x) y(x)
 \\]
-In a move reminiscent of the **bilinear concomitant** we encountered in developing orthogonality relations for the basis functions in a Fourier expansion, define the **Wronskian** of two functions as $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
+In a move reminiscent of the **bilinear concomitant** we encountered in developing orthogonality relations for the basis functions in a Fourier expansion, define the **Wronskian** of two functions as $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can use the differential equation itself to simplify the derivative of the Wronskian,
 \\[
     \dv{W}{x} = f' g' + f g^{\prime\prime} - (g' f' + g f^{\prime\prime}) =
     f g^{\prime\prime} - g f^{\prime\prime}
