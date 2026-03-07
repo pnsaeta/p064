@@ -31,12 +31,12 @@ Some of the most important ODEs in physics include
     <td> — </td>
   </tr>
   <tr>
-    <td>Legendre's equation</td>
+    <td>Legendre’s equation</td>
     <td>$$(1-x^2)y^{\prime\prime} - 2 x y' + \ell(\ell+1) y = 0$$</td>
     <td>$$\text{regular @ }x = \pm 1$$</td>
   </tr>
   <tr>
-    <td>Bessel's equation</td>
+    <td>Bessel’s equation</td>
     <td>$$x^2 y^{\prime\prime} + x y' + (x^2 - n^2) y = 0$$</td>
     <td>$$\text{regular @ }x = 0$$</td>
   </tr>
@@ -117,7 +117,7 @@ Let us now consider a more general second-order linear differential equation,
 \\[
     y^{\prime\prime} = A(x) y'(x) + B(x) y(x)
 \\]
-The **Wronskian** of two functions is defined by $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
+In a move reminiscent of the **bilinear concomitant** we encountered in developing orthogonality relations for the basis functions in a Fourier expansion, define the **Wronskian** of two functions as $$W(f,g) = f g' - g f'$$. If each of $$f(x)$$ and $$g(x)$$ solves the differential equation, we can compute the derivative of the Wronskian,
 \\[
     \dv{W}{x} = f' g' + f g^{\prime\prime} - (g' f' + g f^{\prime\prime}) =
     f g^{\prime\prime} - g f^{\prime\prime}

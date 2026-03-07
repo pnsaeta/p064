@@ -6,15 +6,14 @@
 {:toc}
 
 We have seen how to solve first-order differential equations of the form
-
 \begin{equation}
-  \frac{d v}{d t} = f(v) \qquad\text{or}\qquad \frac{d x}{d t} = g(x)
+  \dv{v}{t} = f(v) \qquad\text{or}\qquad \dv{x}{t} = g(x)
   \label{eq:firstorder}
 \end{equation}
 
 However, Newton’s equations of motion (in one dimension) are typically *second-order*
-differential equations of the form $$ m \frac{d^2 x}{dt^2} = F(x, v, t) $$ where
-$$v = dx/dt$$ and $$F$$ is some function of the position, velocity, and time. We have seen how
+differential equations of the form $$ m \dv[2]{x}{t} = F(x, v, t) $$ where
+$$v = \dv{x}{t}$$ and $$F$$ is some function of the position, velocity, and time. We have seen how
 we can use Euler’s method to develop an approximate numerical solution to a **first-order**
 equation, where we use the fact that we know the function that computes the derivative,
 and we can use small but finite steps to estimate the true solution. We have also seen
@@ -52,16 +51,14 @@ Let's say that again. To solve a second-order differential equation of the form
 \end{equation}
 
 use **two dependent variables**, $$x(t)$$ and $$v(t)$$, to write the coupled equations
-
-\begin{equation}
-  \dv{}{t} \left[
-  \begin{array}
-    x(t)
-    \\\
-    v(t)
-  \end{array}
-  \right]
-  = \left[ \begin{array}\ v \\\ f(x, v, t) \end{array} \right]
+\begin{equation}\label{eq:blah}
+  \dv{}{t}
+  \begin{bmatrix}
+    x(t) \\\ v(t)
+  \end{bmatrix}
+  = \begin{bmatrix}
+    v \\\ f(x, v, t)
+    \end{bmatrix}
 \end{equation}
 
 then we can use Euler’s method—or the better methods of `solve_ivp` —to solve
@@ -82,26 +79,26 @@ from scipy.integrate import solve_ivp
 ~~~~
 
 We have to define a function that computes the vector of derivatives at time $$t$$
-and a vector of the dependent variables (coordinates), $$X = [x, v]$$. We can list the coordinates in any order we like, as long as use the same order for the derivatives, $$[\dot{x},
+and a vector of the dependent variables (coordinates), $$Y = [x, v]$$. We can list the coordinates in any order we like, as long as use the same order for the derivatives, $$[\dot{x},
 \dot{v}]$$.
 
 ~~~~ python
-def SHOderivs(t, X, k, m):
+def SHOderivs(t, Y, k, m):
     """
     Compute the derivatives of a simple harmonic oscillator of mass m and spring
-    constant k where the dependent variable X holds [x, v].
+    constant k where the dependent variable Y holds [x, v].
     """
-    x, v = X # we use x = X[0] and v = X[1]
+    x, v = Y # we use x = Y[0] and v = Y[1]
     # the derivative dx/dt = v, and
     # the derivative dv/dt = -k/m * x
     # we have to return the derivatives in the same order as the coordinates
-    # were delivered in X
+    # were delivered in Y
     derivs = np.array([v, -k/m * x])
     return derivs
 ~~~~
 
 Note again that this function receives the coordinates `[x, v]` in a list (array)
-in the variable `X`, so it returns the derivatives `[v, a]`. We can now integrate
+in the variable `Y`, so it returns the derivatives `[v, a]`. We can now integrate
 the differential equation for the time range $$0 \le t \le 1$$, starting with
 $$x(0) = 1$$ and $$v(0) = 0$$.
 
@@ -134,8 +131,7 @@ y_events: None
 ~~~~
 
 Looking at the output of `solve_ivp`, we see that the array returned as `y` is
-now two-dimensional, since our coordinate “vector” consists of X = [x, v]. Let&rsquo;s
-make a plot of the solution.
+now two-dimensional, since our coordinate “vector” consists of Y = [x, v]. Let&rsquo;s make a plot of the solution.
 
 ~~~~ python
 fig, ax = plt.subplots()
@@ -150,9 +146,7 @@ ax.set_xlabel('$t$');
 
 <p class="figure" markdown="0" alt="something">
   <img src="figs/SHO1.webp" style="width: 500px;" alt="something">
-</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — <a name="Fig1">Figure 1</a> — The solution to Eq.&nbsp;(\ref{eq:SHODE}) provided by `solve_ivp`.</p>
-
-
+</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> —  The solution to Eq.&nbsp;\eqref{eq:SHODE} provided by `solve_ivp`.</p>
 
 This plot looks very promising. It looks like the start of an oscillation, which
 you might expect for a mass suspended from a spring. After all, the differential
@@ -321,23 +315,17 @@ how the error depends on the method and/or the tolerances (`rtol` or
 
 ## Generalizing to multiple variables
 
-The step to handling more than one variable is now very small. For each second
-derivative, we use two variables, one for the coordinate and one for its first
+The step to handling more than one variable is now very small. For each second derivative, we use two variables, one for the coordinate and one for its first
 derivative, to get the coupled equations
-
 \begin{equation}
-  \left[
-    \begin{array}
+    \begin{bmatrix}
       \dot{x}_1 \\\ \dot{v}_1 \\\ \dot{x}_2 \\\ \dot{v}_2
-    \end{array}
-  \right]
+    \end{bmatrix}
   =
-  \left[
-  \begin{array}\
+  \begin{bmatrix}
       v_1 \\\ \ddot{x}_1 = f_1(t, x_1, v_1, x_2, v_2)
       \\\ v_2 \\\ \ddot{x}_2 = f_2(t, x_1, v_1, x_2, v_2)
-    \end{array}
-  \right]
+    \end{bmatrix}
 \end{equation}
 
 Then we pack all these **dependent variables** in a single array `Y` and supply a
