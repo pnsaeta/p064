@@ -5,7 +5,7 @@
 * toc
 {:toc}
 
-We now know how to solve initial-value problems, which are differential equations of time for which we know values at an initial point in time and wish to propagate them forwards. This method works for mechanics problems for which we have equations of motion obtained either from Newton’s laws or from the more elegant Lagrangian formulation. However, that's not the only differential equation game in town. Sometimes, we have to solve a **boundary value problem**.
+We now know how to solve initial-value problems, which are differential equations of time for which we know values at an initial point in time and wish to propagate them forwards. This method works for mechanics problems for which we have equations of motion obtained either from Newton’s laws or from the more elegant Lagrangian formulation. However, that's not the only differential equation game in town. Sometimes, we have to solve a **boundary value problem**. For example, the quantum mechanical ground state of a simple harmonic oscillator.
 
 The **time-independent Schrödinger equation** describes the wave function $$\psi(x)$$ of a particle in a static potential $$V(x)$$. It is
 \begin{equation}
@@ -20,37 +20,44 @@ In a quadratic potential
 we have the following equation to solve for the unknown function $$\psi(x)$$:
 \begin{equation}
   -\frac{\hslash^2}{2m} \frac{d^2 \psi}{d x^2} + \frac{m \omega^2 x^2}{2} \psi(x) = E \psi(x)
+  \label{eq:SHOwithdims}
 \end{equation}
 
-We can perhaps simplify this equation a bit by looking for a combination of the constants $$\hslash$$, $$m$$, and $$\omega$$ to produce a length scale, which we can then use to yield a dimensionless position coordinate.
+## Removing Dimensions
+
+While it is certainly possible to solve Eq.&nbsp;\eqref{eq:SHOwithdims} in its current form, using numerical values for $$\hslash$$, $$m$$, and $$\omega$$, it is **bad form**! Trying to debug code written in “natural units” is a nightmare, as the values tend to require scientific notation. It is much better to look for combinations of the contants in the problem that allow you to produce sensible dimensionless versions of the dynamical variables.
+
+In the present case, we can perhaps simplify a bit by looking for a combination of the constants $$\hslash$$, $$m$$, and $$\omega$$ to produce a length scale, which we can then use to yield a dimensionless position coordinate.
 \begin{align}
   [\hslash] &= \mathrm{M \, L^2 \, T^{-1}} \\\
   [m] &= \mathrm{M} \\\
   [\omega] &= \mathrm{T^{-1}} \\\
   \left[ \sqrt{\frac{\hslash}{m \omega}} \right] &= \mathrm{L}
 \end{align}
-So, we can produce a dimensionless coordinate $$y$$ via
+So, we can produce a dimensionless coordinate $$y$$ with the definition
 \begin{equation}
-  \boxed{ x = \sqrt{\frac{\hslash}{m\omega}} y }
+  \boxed{ x \equiv \sqrt{\frac{\hslash}{m\omega}} y }
 \end{equation}
 to give
 \begin{align}
-  -\frac{\hslash^2}{2m} \left(\frac{m\omega}{\hslash}\right) \psi''
+  -\frac{\hslash^2}{2m} \left(\frac{m\omega}{\hslash}\right) \dv[2]{\psi}{y}
   + \frac{m\omega^2}{2} \left( \frac{\hslash}{m\omega} \right) y^2 \psi
-  &= E \psi(y) \\\
-  - \psi'' + y^2 \psi &= \frac{E}{\hslash \omega} \psi = \epsilon\psi
+  &= E \psi(y) \notag \\\
+  - \hslash \omega \dv[2]{\psi}{y} + \hslash \omega y^2 \psi &= E \psi
+  \notag \\\
+  -\dv[2]{\psi}{y} + (y^2 - \epsilon) \psi &= 0
   \label{eq:escale}
 \end{align}
-In this last equation, $$\epsilon = E/\hslash\omega$$ is the dimensionless energy eigenvalue. Our task, therefore, is to solve the equation
+In this last equation, $$\epsilon = E/\hslash\omega$$ is the dimensionless energy eigenvalue. Having removed dimensions, we are left with the differential equation
 \begin{equation}
   \boxed{ -\psi'' + (y^2 - \epsilon) \psi = 0 }
   \label{eq:SHODE}
 \end{equation}
-and we expect that this will work out nicely only for discrete values of $$\epsilon$$ (the energy eigenvalues).
+to solve, where the primes now indicate differentiation with respect to the dimensionless coordinate $$y$$. We have gotten rid of a lot of clutter and will now obtain eigenvalues of $$\epsilon$$ that are numbers of order unity. These are much nicer to work with. Of course, we expect that this will work out nicely only for discrete values of $$\epsilon$$ (the energy eigenvalues).
 
 ## Asymptotic Behavior
 
-The wave function $$\psi$$ is the **probability amplitude** of the particle of mass $$m$$ (which we may take to be an electron), which means that $$\psi^{*} \psi(x) \, dx$$ measures the probability that the electron may be found between $$x$$ and $$x + dx$$. For a solution to Eq. (\ref{eq:SHODE}) to be normalizable, the magnitude of $$\psi$$ must go strongly to zero as $$\|y\| \gg 1$$. In that region, we may safely ignore $$\epsilon$$ in the differential equation, so we must have
+The wave function $$\psi$$ is the **probability amplitude** of the particle of mass $$m$$ (which we may take to be an electron), which means that $$\psi^{*}(y) \psi(y) \dd{y} = |\psi(y)|^2 \dd{y}$$ measures the probability that the electron may be found between $$y$$ and $$y + \dd{y}$$. For a solution to Eq. (\ref{eq:SHODE}) to be normalizable, the magnitude of $$\psi$$ must go strongly to zero as $$\|y\| \gg 1$$. In that region, we may safely ignore $$\epsilon$$ in the differential equation, so we must have
 \begin{equation}\label{eq:SHOasy}
   \psi'' \approx y^2 \psi
 \end{equation}
@@ -58,6 +65,7 @@ That is, each derivative needs to bring down a factor of $$y$$. Let's try $$\psi
 \begin{align}
   \psi' &= -2\alpha y e^{-\alpha y^2} \\\
   \psi'' &= (-2\alpha + 4 \alpha^2 y^2) e^{-\alpha y^2}
+  = (-2\alpha + 4\alpha^2 y^2) \psi
 \end{align}
 For large $$|y|$$, this form will approximately solve Eq. (\ref{eq:SHOasy}) if we take $$\alpha = 1/2$$. Therefore, we look for a solution to Eq. (\ref{eq:SHODE}).
 
