@@ -132,7 +132,7 @@ Now we take advantage of the fact that each function solves the differential equ
 \end{align}
 Using this expression (known as **Abel's formula**) and knowledge of one of the two solutions, we can generate a first-order equation to yield the other solution.
 
-### Exercise
+### Exercise — Finding a second solution
 
 Consider the differential equation
 \begin{equation}\label{eq:BDP}
@@ -142,11 +142,11 @@ for $$x > 0$$. (a) Show that $$y_1(x) = x$$ is a solution. (b) Use this solution
 
 ## Method of Frobenius
 
-The method of Frobenius is to way of developing series solutions to differential equations that aren't "too bad"—meaning that any singular points are regular. The method is quite simple. We assume a (Frobenius) series solution of the form
+The method of Frobenius is to way to solve differential equations that aren’t “too bad”—meaning that any singular points are regular. The method is quite simple. We assume a (Frobenius) series solution of the form
 \\[
     y(x) = \sum_{k=0}^{\infty} a_k x^{k+s}
 \\]
-which is a generalization of a Taylor series that includes the possibility of negative or nonintegral powers, and substitute it into the differential equation. We then perform appropriate index shifts to group all terms to the same power of $$x$$. For a homogeneous ODE, each of these must be zero.
+which is a generalization of a Taylor series that includes the possibility of negative or nonintegral powers, and substitute it into the differential equation. ($$s$$ is an unknown constant.) We then perform appropriate index shifts to group all terms to the same power of $$x$$. Since each power of $$x$$ is a linearly independent function, the coefficient of For a homogeneous ODE, each of these must be zero.
 
 To illustrate, let's apply the method to Bessel's equation,
 \begin{equation}\label{eq:Bessel}
@@ -165,11 +165,13 @@ Substituting the Frobenius series into this equation gives
     x^s \qty\{\sum_{l=0}^\infty [(s+l)^2 - n^2] a_l x^l +
     \sum_{l=2}^\infty a_{l-2} x^l \} &= 0
 \end{align}
-There is only one term in the sums with $$l = 0$$. Although we could choose $$a_0 = 0$$, but that would just shift the start of the series (effectively shifting $$s$$). So, if $$a_0 \ne 0$$, then we must have for $$l = 0$$ that
+There is only one term in the sums with $$l = 0$$. Although we could choose $$a_0 = 0$$, that would just shift the start of the series (effectively shifting $$s$$). So, if $$a_0 \ne 0$$, then we must have for $$l = 0$$ that
 \\[
     s^2 = n^2 \qquad\longrightarrow\qquad s = \pm n
 \\]
-Taking $$a_0 = 1$$, the next required relationship between coefficients happens for $$l = 2$$. Combining the series for $$l \ge 2$$, we have
+This equation is called the **indicial equation**. Taking $$a_0 = 1$$, we next have to consider the case when $$l = 1$$.
+
+ the next required relationship between coefficients happens for $$l = 2$$. Combining the series for $$l \ge 2$$, we have
 \\[
     a_0 + \sum_{l=2}^\infty \qty[(l^2 \pm 2 n l)a_l + a_{l-2} ] x^l
 \\]
