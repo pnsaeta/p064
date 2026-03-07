@@ -56,7 +56,7 @@ use **two dependent variables**, $$x(t)$$ and $$v(t)$$, to write the coupled equ
 \begin{equation}
   \dv{}{t} \left[
   \begin{array}
-    xx(t)
+    x(t)
     \\\
     v(t)
   \end{array}

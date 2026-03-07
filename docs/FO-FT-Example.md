@@ -246,10 +246,17 @@ and the residue at $$\omega \to \Omega$$ is
     \label{eq:resp}
 \end{align}
 
-Since $$t > 0$$, we can close in the UHP and get $$i\pi$$ times the sum of the residues. Hence, from the first exponential, we get a contribution to $$x(t)$$ of
+Since $$t > 0$$, we can close in the LHP and get $$-i\pi$$ times the sum of the residues. Hence, from the first exponential, we get a contribution to $$x(t)$$ of
 \begin{align}
-  x_1(t) &= -\frac{F_0\Omega}{2\pi m} (\pi i) \frac{-e^{i(\Omega t+\varphi)}
-  - e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
+  x_1(t) &= -\frac{F_0\Omega}{2\pi m} (-\pi i) \frac{-e^{i(\Omega t+\varphi)}
+  + e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
     \notag \\\
-    &= \frac{F_0 i \cos(\Omega t + \varphi)}{2m \Delta} \notag
+    &= \frac{F_0}{2 m \Delta} (i) (-i \sin(\Omega t + \varphi))
+    = \frac{F_0 \sin(\Omega t + \varphi)}{m \Delta}
+    \notag
 \end{align}
+
+For the term with $$e^{-i\omega(t-T)} = e^{i\omega(T-t)}$$ in the numerator, we close in the UHP and get $$\pi i$$ times the sum of the residues:
+\\[
+    x_2(t) = \frac{F_0 \sin(\Omega(t-T)+\varphi)}{m\Delta}
+\\]
