@@ -1,10 +1,11 @@
 {:menu DE}
 
-
 # The Quantum Simple Harmonic Oscillator
 
 * toc
 {:toc}
+
+We now know how to solve initial-value problems, which are differential equations of time for which we know values at an initial point in time and wish to propagate them forwards. This method works for mechanics problems for which we have equations of motion obtained either from Newton’s laws or from the more elegant Lagrangian formulation. However, that's not the only differential equation game in town. Sometimes, we have to solve a **boundary value problem**.
 
 The **time-independent Schrödinger equation** describes the wave function $$\psi(x)$$ of a particle in a static potential $$V(x)$$. It is
 \begin{equation}

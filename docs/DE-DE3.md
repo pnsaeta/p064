@@ -18,13 +18,13 @@ we can use Euler’s method to develop an approximate numerical solution to a **
 equation, where we use the fact that we know the function that computes the derivative,
 and we can use small but finite steps to estimate the true solution. We have also seen
 that nifty functions like `solve_ivp` can use higher-order numerical methods to compute
-more accurate solutions **to first-order equations** without having to take really tiny
+**much** more accurate solutions **to first-order equations** without having to take really tiny
 steps. Wouldn’t it be nice if we could somehow take advantage of these tools to solve
 second-order differential equations?
 
 ## The Trick
 
-As it turns out, we can leverage all we have learned about integrating first-order equations to handle second-order equations! The trick is to express the single second-order equation as two coupled first-order equations.
+As it turns out, we *can* leverage all we have learned about integrating first-order equations to handle second-order equations! The trick is to express the single second-order equation as **two coupled first-order equations and to solve them simultaneously**.
 
 Let’s see how that can work using a particularly simple example. Suppose we wish to solve
 \begin{equation}\label{eq:SHODE}
@@ -39,8 +39,7 @@ If we use more conventional notation, in which $$\dot{x} = v$$ and $$\ddot{x} =
   \dot{v} &= - \frac{k}{m} x \\\
   \dot{x} &= v
 \end{align}
-each of which is a **first-order equation**. That is, by introducing as a new
-variable the first-derivative of position with respect to time ($$v$$), we can
+each of which is a **first-order equation**. That is, by introducing $$v = \dot{x}$$ as a “new dependent variable”, we can
 break apart the single second-order equation into two coupled first-order equations.
 Easy!
 

@@ -140,7 +140,7 @@ Consider the differential equation
 \end{equation}
 for $$x > 0$$. (a) Show that $$y_1(x) = x$$ is a solution. (b) Use this solution and Abel's formula to find the second solution, $$y_2(x)$$.
 
-## Method of Frobenius
+## A Series Solution — the Method of Frobenius
 
 The method of Frobenius is to way to solve differential equations that aren’t “too bad”—meaning that any singular points are regular. The method is quite simple. We assume a (Frobenius) series solution of the form
 \\[
@@ -163,15 +163,17 @@ Substituting the Frobenius series into this equation gives
     + \sum_{k=0}^\infty a_k x^{k+s+2}
     &= 0 \notag \\\
     x^s \qty\{\sum_{l=0}^\infty [(s+l)^2 - n^2] a_l x^l +
-    \sum_{l=2}^\infty a_{l-2} x^l \} &= 0
+    \sum_{l=2}^\infty a_{l-2} x^l \} &= 0 \label{eq:Frob}
 \end{align}
 There is only one term in the sums with $$l = 0$$. Although we could choose $$a_0 = 0$$, that would just shift the start of the series (effectively shifting $$s$$). So, if $$a_0 \ne 0$$, then we must have for $$l = 0$$ that
 \\[
     s^2 = n^2 \qquad\longrightarrow\qquad s = \pm n
 \\]
-This equation is called the **indicial equation**. Taking $$a_0 = 1$$, we next have to consider the case when $$l = 1$$.
-
- the next required relationship between coefficients happens for $$l = 2$$. Combining the series for $$l \ge 2$$, we have
+This equation is called the **indicial equation**. Taking $$a_0 = 1$$, we next have to consider the case when $$l = 1$$ (assuming that $$s = \pm n$$). From Eq.&nbsp;\eqref{eq:Frob}, we have
+\\[
+    [(s+1)^2 - n^2]a_1 = 0
+\\]
+which requires that $$a_1 = 0$$. So, all the odd coefficients vanish, and the next required relationship between coefficients happens for $$l = 2$$. Combining the series for $$l \ge 2$$, we have
 \\[
     a_0 + \sum_{l=2}^\infty \qty[(l^2 \pm 2 n l)a_l + a_{l-2} ] x^l
 \\]

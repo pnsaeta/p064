@@ -7,11 +7,9 @@
 {:toc}
 
 Newton’s equations of motion (in one dimension) are typically second-order
-differential equations of the form $$\displaystyle m \frac{d^2 x}{dt^2} = F(x, v, t) $$ where
-$$v = dx/dt$$ and $$F$$ is some function of the position, velocity, and time. To get
-started in understanding how to solve such equations numerically, let’s start
-with a simpler situation in which the acceleration is proportional to the
-velocity,
+differential equations of the form $$\displaystyle m \dv[2]{x}{t} = F(x, v, t) $$ where
+$$v = \dv{x}{t}$$ and $$F$$ is some function of the position, velocity, and time. To get our feet wet on how to solve such equations numerically, let’s start
+with a simpler situation in which the acceleration is proportional to the velocity,
 $$
   m \dot{v} = f(v)
 $$
@@ -21,7 +19,7 @@ example, a ball bearing moving through a viscous fluid.
 
 ## Seeing a path to solution
 
-One way to visualize this equation is to show the slope $$dv/dt = f(v)/m$$ as a
+One way to visualize this equation is to show the slope $$\dv{v}{t} = f(v)/m$$ as a
 function of $$t$$ and $$v$$ in a slope field. We start at a particular value of $$v$$
 at $$t = 0$$ and follow the local value of slope to determine how the value of $$v$$
 should change in the next small interval of time. This takes us to a new value
@@ -38,19 +36,17 @@ $$v$$, etc. The result is illustrated by the light red line in the figure below.
 Let us take the first-order differential equation above and simplify it by
 moving the mass to the right-hand side,
 $$
-  \frac{dv}{dt} = \frac{1}{m} f(v)
+  \dv{v}{t} = \frac{1}{m} f(v)
 $$
 which we can also write suggestively as
-
 \begin{equation}
-  dv = \frac{f(v)}{m}  \, dt
+  \dd{v} = \frac{f(v)}{m}  \dd{t}
   \label{eq:DE}
 \end{equation}
-
 Conceptually, this equation says that if we know $$v(t)$$ at some moment of time
 $$t$$, we know how $$v$$ will change in the next *infinitesimal* increment of time
-$$dt$$; the rate of that change is just given by $$f(v)/m$$. However, this
-expression is only true in the limit that $$dt$$ is infinitesimal (infinitely
+$$\dd{t}$$; the rate of that change is just given by $$f(v)/m$$. However, this
+expression is only true in the limit that $$\dd{t}$$ is infinitesimal (infinitely
 tiny), which means that we would need to apply this rule an infinite number of
 times to cover even a modest (finite) time interval.
 
@@ -78,9 +74,8 @@ velocity,
   f(v) = -b v
   \label{eq:damping}
 \end{equation}
-
 where $$b$$ is a constant whose dimensions in SI units would be newton-seconds per
-meter. This damping force is definitely not independent of the particle’s
+meter. This viscous damping force is definitely not independent of the particle’s
 velocity; as the particle slows down, the damping force retarding its further
 motion diminishes. Therefore, we should expect that using Euler’s method will
 tend to be increasingly inaccurate the larger we make the time steps $$\Delta
@@ -117,8 +112,8 @@ while t[-1] < 1:
 fig, ax = plt.subplots()   # create a plot
 ax.plot(t, v, 'ro', label='Euler')
 ax.plot(t, v0 * np.exp(-b/m * np.array(t)), 'b-', label='true')
-ax.set_xlabel('$$t$$')
-ax.set_ylabel('$$v$$')
+ax.set_xlabel('$t$')
+ax.set_ylabel('$v$')
 ax.legend();
 ~~~~
 
@@ -191,7 +186,7 @@ numerical approximation is. We could quantify
 
 <p class="figure" markdown="0">
   <img src="figs/euler_error.webp" style="width: 700px;" alt="Error in Euler's method">
-</p><p class="mycap" markdown="1"><a name="Fig1">Figure 1</a> — <a name="Fig3">Figure 3</a> — Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
+</p><p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Euler’s method solution (left) and absolute error (right) for different numbers of steps. Clearly, taking smaller steps leads to smaller final error. But how efficiently?</p>
 
 ### Exercise
 
@@ -313,7 +308,7 @@ ax.plot(res.t, errors, 'ro');
 
 <p class="figure" markdown="0">
   <img src="figs/rk45errors.webp" style="width: 500px;" alt="RK45 errors">
-</p><p class="mycap" markdown="1"><a name="Fig2">Figure 2</a> — <a name="Fig4">Figure 4</a> — The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
+</p><p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — The errors from a call to `solve_ivp` using default parameters. **Do you think they are acceptable?**</p>
 
 # Options for `solve_ivp`
 
