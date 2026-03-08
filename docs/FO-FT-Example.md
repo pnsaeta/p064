@@ -272,5 +272,24 @@ Let's reprise the definitions we've made:
   \omega_{\pm} &= -i\beta \pm \omega_1 \notag \\\
   \Gamma &= \omega_1^2 - \Omega^2 - \beta^2 \notag \\\
   \Delta &= \sqrt{\Gamma^2 + 4 \omega_1^2 + \beta^2} \notag \\\
-  \tan \varphi &= \frac{2 \omega_1 \beta}{\Gamma}
+  \tan \varphi &= \frac{2 \omega_1 \beta}{\Gamma} \notag \\\
+  \gamma &= \Omega^2 - \omega_0^2 \notag \\\
+  \delta &= \sqrt{\gamma^2 + 4 \beta^2 \Omega^2} \notag \\\
+  \tan \psi &= \frac{2 \beta \Omega}{\gamma} \notag
 \end{align}
+
+In terms of these definitions, the solution for $$x(t)$$ is
+\begin{equation}\label{eq:amazing}
+  x(t) = \begin{cases}
+  0 & t < 0 \\\
+  -\frac{F_0}{m}\bigg[
+    \frac{\Omega}{\Delta\omega_1} e^{-\beta t}\sin(\omega_1 t - \varphi)
+    + \frac{\sin(\Omega t + \psi)}{\delta}
+  \bigg] & 0 \le t \le T
+  \\\
+  \frac{F_0 \Omega}{m \omega_1 \Delta}\bigg[
+    e^{-\beta(t-T)} \sin\big[\omega_1(t-T)-\varphi\big]
+    - e^{-\beta t} \sin(\omega_1 t - \varphi)
+  \bigg] & t > T
+  \end{cases}
+\end{equation}
