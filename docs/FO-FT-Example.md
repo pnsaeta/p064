@@ -181,39 +181,34 @@ Summing these gives
   \frac{1}{2 \omega_1 \Delta} \bigg[
     e^{-i(\omega_+ t - \varphi)} - e^{-i(\omega_- t + \varphi )}
     e^{-i(\omega_-(t-T) + \varphi)} - e^{-i(\omega_+(t-T)-\varphi)}
-  \bigg] \notag
+  \bigg] \notag \\\
+  &= \frac{1}{2 \omega_1 \Delta} \bigg[
+    e^{-\beta t} \left( e^{-i(\omega_1 t - \varphi)} - e^{i(\omega_1 t - \varphi)} \right) \notag \\\
+  &\qquad\qquad +
+    e^{-\beta(t-T)}\left( e^{i(\omega_1 (t-T) - \varphi)} - e^{-i(\omega_1 (t-T) - \varphi)} \right) \bigg] \notag \\\
+  &= \frac{1}{2 \omega_1 \Delta} \bigg[
+    e^{-\beta t}(-2i) \sin(\omega_1 t-\varphi) +
+    e^{-\beta(t-T)}(2i)\sin(\omega_1 (t-T) - \varphi)
+    \bigg] \notag \\\
+  &= \frac{-i}{\omega_1 \Delta} \bigg[
+    e^{-\beta t} \sin(\omega_1 t - \varphi)
+    - e^{-\beta(t-T)} \sin(\omega_1(t-T) - \varphi)
+  \bigg]
 \end{align}
-
-The two exponentials have the same form, so I will work out the contribution to
-$$x(t)$$ for $$e^{-i\omega t}$$ and get the second one by taking $$t \to t-T$$. Setting aside
-the prefactor for the moment, the sum of the residues at $$\omega \to \omega_{\pm}$$ is
+Since we close in the LHP, we traverse the contour in the negative direction, so these poles contribute $$-2\pi i$$ times the sum of the residues. Hence,
 \begin{align}
-  S(t)
-  &=
-    \frac{e^{-i\omega_{+}t}}{(\omega_{+}-\omega_{-})\Delta e^{-i\varphi}} +
-    \frac{e^{-i\omega_{-}t}}{(\omega_{-}-\omega_{+}) \Delta e^{i\varphi}}
-  \notag \\\
-  &= \frac{e^{-\beta t}}{2\omega_{1} \Delta} \left( e^{-i(\omega_{1}t - \varphi)} -
-    e^{i(\omega_{1}t-\varphi)}\right) \notag
-  \\\
-  &= \frac{e^{-\beta t}}{2\omega_{1}\Delta} (-2i) \sin(\omega_{1}t-\varphi)
-  \notag \\\
-  &= \frac{-i e^{-\beta t} \sin(\omega_{1}t - \varphi)}{\omega_{1}\Delta}
-  \notag
+  x(t) &= \frac{F \Omega}{2\pi m}(-2\pi i) \frac{-i}{\omega_1 \Delta} \bigg[
+    e^{-\beta t} \sin(\omega_1 t - \varphi)
+    - e^{-\beta(t-T)} \sin(\omega_1(t-T) - \varphi)
+  \bigg] \notag \\\
+  &= \frac{F \Omega}{m \omega_1 \Delta} \bigg[
+    e^{-\beta t} \sin(\omega_1 t - \varphi)
+    - e^{-\beta(t-T)} \sin(\omega_1(t-T) - \varphi)
+  \bigg] \label{eq:case2}
 \end{align}
+This is the entire solution for case 2, since we get nothing from the poles on the real axis.
 
-Combining now with the prefactor and the factor of $$-2\pi i$$ for the poles, which we enclose while integrating in the negative sense, we get
-\begin{align}
-  x(t)
-  &=
-    - \frac{F_{0}\Omega}{2\pi m} (-2 \pi i) \frac{-i}{\omega_{1}\Delta}
-    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right)
-  \notag\\\
-  &= \frac{F_{0}\Omega}{m \omega_{1}\Delta}
-    \left( e^{-\beta t} \sin(\omega_{1}t-\varphi) - e^{-\beta(t-T)}\sin(\omega_{1}(t-T) - \varphi) \right) \label{eq:case3}
-\end{align}
-This is the entire solution for case 3, since we get nothing from the poles on the real axis.
-
+### Case 3 — $$0 < t <T$$
 
 When $$0 < t < T$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. So, the poles in the LHP yield Eq.\eqref{eq:case3} without the term involving $$t-T$$, to which we must add the contributions from the poles on the real axis.
 
