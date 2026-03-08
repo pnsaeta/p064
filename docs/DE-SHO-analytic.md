@@ -67,7 +67,10 @@ That is, each derivative needs to bring down a factor of $$y$$. Let's try $$\psi
   \psi'' &= (-2\alpha + 4 \alpha^2 y^2) e^{-\alpha y^2}
   = (-2\alpha + 4\alpha^2 y^2) \psi
 \end{align}
-For large $$|y|$$, this form will approximately solve Eq. (\ref{eq:SHOasy}) if we take $$\alpha = 1/2$$. Therefore, we look for a solution to Eq. (\ref{eq:SHODE}).
+For large $$|y|$$, we can neglect the $$-2\alpha$$ term compared to the term that grows like $$y^2$$. This form will approximately solve Eq.&nbsp;\eqref{eq:SHOasy} if we take $$\alpha = 1/2$$. Therefore, we look for a solution to Eq. (\ref{eq:SHODE}) of the form
+\\[
+    \psi(y) = e^{-y^2/2} f(y)
+\\]
 
 ## Frobenius Solution
 
