@@ -126,7 +126,7 @@ By the convolution theorem, then,
   \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i\omega T} - 1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
 
-Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly by shifting the denominator to have positive $$\omega^2$$ in the first denominator and flipping the sign of the final numerator:
+Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly by shifting the denominator to have positive $$\omega^2$$ in the first term and flipping the sign of the final numerator:
 \begin{equation}
   x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
     \frac{e^{-i\omega t} - e^{-i\omega(t-T)}}
@@ -148,35 +148,42 @@ In this case we must separate the terms in the numerator, since for the first on
 
 ### Poles at $$\omega = \omega_\pm$$
 
-When $$\omega \to \omega_+$$, the denominator becomes $$(\omega-\omega_+)\Delta_+$$, where $$\Delta_+$$ is
+First, let's simplify the denominator:
 \\[
-    \Delta_+ = (\omega_+ - \omega_-)(\omega_+^2-\Omega^2)
-    = 2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 -2 \beta \omega_1 i) = 2 \omega_1 (\Gamma - 2 \beta \omega_1 i)
+    (\omega_{\pm}^2 - \Omega^2) = \omega_1^2 \mp 2 \omega_1 \beta i - \beta^2 -\Omega^2
 \\]
-where I have defined
+It will be convenient to express this value in polar representation, so define
+\begin{equation}\label{eq:polars1}
+  \Gamma \equiv \omega_1^2 - \beta^2 - \Omega^2
+  \qquad
+  \Delta \equiv \sqrt{\Gamma^2 + 4\beta^2 \omega_1^2}
+  \qquad
+  \tan\varphi \equiv \frac{2\beta\omega_1}{\Gamma}
+\end{equation}
+which gives
 \\[
-  \Gamma \equiv \omega_1^2 - \Omega^2 - \beta^2
+    (\omega_{\pm}^2 - \Omega^2) = \Delta e^{\mp i \varphi}
 \\]
 
-When $$\omega \to \omega_-$$, it becomes $$(\omega-\omega_-)\Delta_-$$ where
-\\[
-    \Delta_- = -(\omega_+ - \omega_-)(\omega_-^2 - \Omega^2) = -2\omega_1 (\omega_1^2 - \Omega^2 - \beta^2 + 2 \beta \omega_1 i) = - 2 \omega_1(\Gamma + 2 \beta \omega_1 i)
-\\]
+Noting that $$(\omega_+ - \omega_-) = 2 \omega_1$$, the residues are
+\begin{equation}\label{eq:res1}
+  a_{-1}(\omega_+) = \frac{ e^{-i\omega_+ t} - e^{-i\omega_+(t-T)}}
+  {\Delta e^{-i\varphi} (2\omega_1)}
+\end{equation}
+and
+\begin{equation}\label{eq:res2}
+  a_{-1}(\omega_-) = \frac{ e^{-i\omega_- t} - e^{-i\omega_-(t-T)}}
+  {\Delta e^{i\varphi} (-2\omega_1)}
+\end{equation}
+Summing these gives
+\begin{align}
+  a_{-1}(\omega_+) + a_{-1}(\omega_-) &=
+  \frac{1}{2 \omega_1 \Delta} \bigg[
+    e^{-i(\omega_+ t - \varphi)} - e^{-i(\omega_- t + \varphi )}
+    e^{-i(\omega_-(t-T) + \varphi)} - e^{-i(\omega_+(t-T)-\varphi)}
+  \bigg] \notag
+\end{align}
 
-Let us define
-\begin{align}
-  \Delta &= \sqrt{\Gamma^{2} + 4 \beta^{2}\omega_{1}^{2}} \label{eq:Delta} \\\
-  \tan \varphi &= \frac{2\beta\omega_{1}}{\Gamma}
-\end{align}
-in terms of which we can express the denominators in polar form as
-\begin{align}
-  \Delta_{+}
-  &=
-    2 \omega_{1}\Delta e^{-i\varphi} \notag
-  \\\
-  \Delta_{-}
-  &= -2\omega_{1}\Delta e^{i\varphi} \notag
-\end{align}
 The two exponentials have the same form, so I will work out the contribution to
 $$x(t)$$ for $$e^{-i\omega t}$$ and get the second one by taking $$t \to t-T$$. Setting aside
 the prefactor for the moment, the sum of the residues at $$\omega \to \omega_{\pm}$$ is
@@ -265,15 +272,15 @@ For the term with $$e^{-i\omega(t-T)} = e^{i\omega(T-t)}$$ in the numerator, we 
 
 Let's reprise the definitions we've made:
 \begin{align}
-  \beta &= \frac{b}{2m}  \notag \\\
+  \beta &= \frac{b}{2m}  &\qquad
   \omega_0 &= \sqrt{k/m} \notag \\\
-  T &= \frac{2\pi N}{\Omega} \notag \\\
+  T &= \frac{2\pi N}{\Omega} &\qquad
   \omega_1 &= \sqrt{\omega_0^2 - \beta^2} \notag \\\
-  \omega_{\pm} &= -i\beta \pm \omega_1 \notag \\\
+  \omega_{\pm} &= -i\beta \pm \omega_1 &\qquad
   \Gamma &= \omega_1^2 - \Omega^2 - \beta^2 \notag \\\
-  \Delta &= \sqrt{\Gamma^2 + 4 \omega_1^2 + \beta^2} \notag \\\
-  \tan \varphi &= \frac{2 \omega_1 \beta}{\Gamma} \notag \\\
-  \gamma &= \Omega^2 - \omega_0^2 \notag \\\
+  \Delta &= \sqrt{\Gamma^2 + 4 \omega_1^2 + \beta^2} &\qquad
+  \tan \varphi &= \frac{2 \beta \omega_1}{\Gamma} \notag \\\
+  \gamma &= \Omega^2 - \omega_0^2 &\qquad
   \delta &= \sqrt{\gamma^2 + 4 \beta^2 \Omega^2} \notag \\\
   \tan \psi &= \frac{2 \beta \Omega}{\gamma} \notag
 \end{align}
