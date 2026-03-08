@@ -97,38 +97,38 @@ In other words, the actual response of the oscillator, $$x(t)$$, is the convolut
 Let's say that at $$t = 0$$ an oscillatory forcing function begins and operates for $$N$$ cycles:
 \\[
     F(t) = \begin{cases}
-      F_0 \sin(\Omega t) & 0 < t < \frac{2 \pi N}{\Omega} \\\
+      F_0 \sin(\Omega t) & 0 < t < \frac{2 \pi N}{\Omega} \equiv T \\\
       0 & \text{otherwise}
     \end{cases}
 \\]
-Its Fourier transform is
+Note that $$T$$ is the time when the forcing function ceases.
+The Fourier transform  of $$F(t)$$ is
 \begin{align}
-    \tilde{F}(\omega) &= \int_{0}^{2 \pi N/\Omega} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
-    = \frac{F_0}{2i} \int_0^{2\pi N/\Omega} \left(e^{i(\omega+\Omega)t} - e^{i(\omega-\Omega)t} \right)\dd{t}
+    \tilde{F}(\omega) &= \int_{0}^{T} F_0 \frac{e^{i\Omega t} - e^{-i\Omega t}}{2i} e^{i\omega t}\dd{t}
+    = \frac{F_0}{2i} \int_0^{T} \left(e^{i(\omega+\Omega)t} - e^{i(\omega-\Omega)t} \right)\dd{t}
     \\\
-    &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{2\pi N/\Omega}
+    &= \frac{F_0}{2i} \bigg[ \frac{e^{i(\omega+\Omega)t}}{i(\omega+\Omega)} - \frac{e^{i(\omega-\Omega)t}}{i(\omega-\Omega)} \bigg]_0^{T}
     \\\
-    &= -\frac{F_0}{2} \bigg[ \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega-\Omega} -
-    \frac{e^{i 2\pi N \omega/\Omega}-1}{\omega + \Omega}\bigg]
-    \\\
-    &= F_0 \Omega \frac{1-e^{i 2 \pi N \omega/\Omega}}{\omega^2 - \Omega^2}
+    &= -\frac{F_0}{2} \bigg[ \frac{e^{i\omega T}-1}{\omega+\Omega} -
+      \frac{e^{i\omega T}-1}{\omega - \Omega}
+      \bigg]
+      \\\
+    &= -\frac{F_0}{2} (e^{i\omega T}-1)\bigg[
+      \frac{\omega-\Omega - \omega - \Omega}{\omega^2 - \Omega^2}
+        \bigg]
+        \\\
+    &= F_0 \Omega \frac{e^{i \omega T}-1}{\omega^2 - \Omega^2}
 \end{align}
-
-Let's define
-\begin{equation}\label{eq:cutoff}
-  T = \frac{2\pi N}{\Omega}
-\end{equation}
-which is the time that the forcing function stops.
 
 By the convolution theorem, then,
 \begin{align}
   x(t) &= \frac{1}{2\pi} \int_{-\infty}^{\infty} \frac{F_0 \Omega}{m}
-  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{1-e^{i\omega T}}{\omega^2 - \Omega^2} \dd{\omega}  \notag
+  \frac{e^{-i\omega t}}{\omega_0^2-\omega^2-2\beta i \omega} \frac{e^{i\omega T} - 1}{\omega^2 - \Omega^2} \dd{\omega}  \notag
 \end{align}
 
-Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly:
+Evaluating this integral is somewhat tricky. Let's first clean up the integrand slightly by shifting the denominator to have positive $$\omega^2$$ in the first denominator and flipping the sign of the final numerator:
 \begin{equation}
-  x(t) = -\frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
+  x(t) = \frac{F_0 \Omega}{2 \pi m} \int_{-\infty}^{\infty}
     \frac{e^{-i\omega t} - e^{-i\omega(t-T)}}
     {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
 \end{equation}
@@ -138,13 +138,13 @@ where $$\omega_{\pm} = \pm\omega_1 - i\beta$$. Writing the integrand this way sh
 
 We can close the contour without adding anything to the integral with a giant semicircle in the upper half-plane. The poles at $$\omega=\omega_\pm$$ are in the LHP, so they contribute nothing. At $$\omega = \pm \Omega$$, the numerator vanishes because $$e^{\pm i\Omega T} = e^{\pm i \, 2\pi N} = 1$$. Hence, $$x(t) = 0$$ for $$t < 0$$. That's reassuring: we haven't started forcing the oscillator yet!
 
-### Case 2: $$0 < t < T$$
+### Case 2: $$ t > T$$
+
+Now we must close the contour in the lower half-plane. By the same argument as for case 1, we get no contribution from the poles that lie on the real axis because the numerator vanishes. However, our contour now encloses the two poles in the LHP, so we will need to evaluate them.
+
+### Case 3: $$0 < t < T$$
 
 In this case we must separate the terms in the numerator, since for the first one we must close in the LHP while for the second we must close in the UHP. For the first, we go around in the clockwise (negative) direction; for the second, we go around counterclockwise.
-
-### Case 3: $$ t > T$$
-
-Now we must close the contour in the lower half-plane. By the same argument as for case 1, the numerator vanishes and we get no contribution from the poles that lie on the real axis. However, our contour now encloses the two poles in the LHP, so we will need to evaluate them.
 
 ### Poles at $$\omega = \omega_\pm$$
 
@@ -260,3 +260,17 @@ For the term with $$e^{-i\omega(t-T)} = e^{i\omega(T-t)}$$ in the numerator, we 
 \\[
     x_2(t) = \frac{F_0 \sin(\Omega(t-T)+\varphi)}{m\Delta}
 \\]
+
+## Solution
+
+Let's reprise the definitions we've made:
+\begin{align}
+  \beta &= \frac{b}{2m}  \notag \\\
+  \omega_0 &= \sqrt{k/m} \notag \\\
+  T &= \frac{2\pi N}{\Omega} \notag \\\
+  \omega_1 &= \sqrt{\omega_0^2 - \beta^2} \notag \\\
+  \omega_{\pm} &= -i\beta \pm \omega_1 \notag \\\
+  \Gamma &= \omega_1^2 - \Omega^2 - \beta^2 \notag \\\
+  \Delta &= \sqrt{\Gamma^2 + 4 \omega_1^2 + \beta^2} \notag \\\
+  \tan \varphi &= \frac{2 \omega_1 \beta}{\Gamma}
+\end{align}
