@@ -210,58 +210,45 @@ This is the entire solution for case 2, since we get nothing from the poles on t
 
 ### Case 3 — $$0 < t <T$$
 
-When $$0 < t < T$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. So, the poles in the LHP yield Eq.\eqref{eq:case3} without the term involving $$t-T$$, to which we must add the contributions from the poles on the real axis.
+When $$0 < t < T$$, we get a contribution from the two poles in the LHP from the term proportional to $$e^{-i\omega t}$$ and nothing from the other exponential, whose contour we close in the UHP. So, the poles in the LHP yield Eq.&nbsp;\eqref{eq:case2} without the term involving $$t-T$$, to which we must add the contributions from the poles on the real axis.
 
-Again setting aside the prefactor for the moment, we need to evaluate
-\begin{equation}
-  I(t) = \int_{-\infty}^{\infty}
-    \frac{e^{-i\omega t} }
-    {(\omega-\omega_{+})(\omega-\omega_{-})(\omega-\Omega)(\omega+\Omega)} \dd{\omega}
-\end{equation}
-at $$\omega \to \pm \Omega$$.
-The residue at $$\omega \to -\Omega$$ is
-\begin{align}
-    a_{-1}(-\Omega) &= \frac{e^{i\Omega t}}{(-\Omega-\omega_+)
-    (-\Omega-\omega_-)(-2\Omega)}
-    \notag \\\
-    &= -\frac{e^{i\Omega t}}{(2\Omega)(\Omega^2 + \omega_+\omega_- + \Omega(\omega_+ + \omega_-))}
-    \notag \\\
-    &= - \frac{e^{i\Omega t}}{(2\Omega)( \Omega^2 -\omega_1^2 -\beta^2 - 2 \beta \Omega i)}
-    \notag \\\
-    &= - \frac{e^{i\Omega t}}{(2\Omega)\Delta e^{-i\varphi}}
-    = -\frac{e^{i(\Omega t + \varphi)}}{2\Omega\Delta}
-    \label{eq:resn}
-\end{align}
-and the residue at $$\omega \to \Omega$$ is
-\begin{align}
-    a_{-1}(\Omega) &= \frac{e^{-i\Omega t}}{(\Omega-\omega_+)
-    (\Omega-\omega_-)(2\Omega)}
-    \notag \\\
-    &= \frac{e^{-i\Omega t}}{(2\Omega)(\Omega^2 + \omega_+\omega_-
-    - \Omega(\omega_+ + \omega_-))}
-    \notag \\\
-    &= \frac{e^{-i\Omega t}}{(2\Omega)( \Omega^2 -\omega_1^2 -\beta^2
-     + 2 \beta \Omega i)}
-    \notag \\\
-    &= \frac{e^{-i\Omega t}}{(2\Omega)\Delta e^{i\varphi}}
-    = \frac{e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
-    \label{eq:resp}
-\end{align}
-
-Since $$t > 0$$, we can close in the LHP and get $$-i\pi$$ times the sum of the residues. Hence, from the first exponential, we get a contribution to $$x(t)$$ of
-\begin{align}
-  x_1(t) &= -\frac{F_0\Omega}{2\pi m} (-\pi i) \frac{-e^{i(\Omega t+\varphi)}
-  + e^{-i(\Omega t + \varphi)}}{2\Omega\Delta}
-    \notag \\\
-    &= \frac{F_0}{2 m \Delta} (i) (-i \sin(\Omega t + \varphi))
-    = \frac{F_0 \sin(\Omega t + \varphi)}{m \Delta}
-    \notag
-\end{align}
-
-For the term with $$e^{-i\omega(t-T)} = e^{i\omega(T-t)}$$ in the numerator, we close in the UHP and get $$\pi i$$ times the sum of the residues:
+Now we need to consider the poles at $$\omega \to \pm \Omega$$. First, let's work on the term proportional to $$e^{-i\omega t}$$:
 \\[
-    x_2(t) = \frac{F_0 \sin(\Omega(t-T)+\varphi)}{m\Delta}
+    a_{-1}(\Omega) = \frac{e^{-i\Omega t}}{2\Omega \big[
+      \Omega^2 - \omega_0^2 + 2 \beta \Omega i\big]}
 \\]
+Once again, let's represent the term in brackets in polars by defining
+\begin{equation}\label{eq:moredefs}
+  \gamma \equiv \Omega^2 - \omega_0^2
+  \qquad
+  \delta \equiv \sqrt{\gamma^2 + 4 \beta^2 \Omega^2}
+  \qquad
+  \tan \psi \equiv \frac{2 \beta \Omega}{\gamma}
+\end{equation}
+so
+\\[
+    a_{-1}(\Omega) = \frac{e^{-i(\Omega t + \psi)}}{2 \Omega \delta}
+\\]
+Similarly, the residue at $$\omega \to -\Omega$$ is
+\\[
+    a_{-1}(-\Omega) = \frac{e^{i(\Omega t + \psi)}}{-2\Omega\delta}
+\\]
+Summing these gives
+\\[
+    a_{-1}(-\Omega) + a_{-1}(\Omega) =
+    -i \frac{\sin(\Omega t + \psi)}{\Omega \delta}
+\\]
+which we need to multiply by $$-\pi i$$, since it is on the path of integration and because we traverse the contour in the negative sense. We get
+\\[
+    a_{-1}(-\Omega) + a_{-1}(\Omega) =
+    i \frac{\sin(\Omega(t-T) + \psi)}{\Omega \delta}
+\\]
+which we must multiply by $$\pi i$$, since we close this one in the UHP and traverse the contour in the positive sense. Before finishing that algebra, we can simplify a bit:
+\\[
+  \sin(\Omega(t-T)+ \psi) =
+  \sin(\Omega t + \psi - \omega T) = \sin(\Omega t + \psi)
+\\]
+since shifting the argument of the sine by $$2\pi N$$ doesn't change the value. So, the two sums yield identical values.
 
 ## Solution
 
