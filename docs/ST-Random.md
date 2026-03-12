@@ -308,7 +308,7 @@ np.log(np.cosh(1))
 
 As you can see, `quad` worked very well indeed. Where `quad` may not work so well is in a multidimensional integration. If a successful evaluation  of `quad` takes $$N$$ operations, an $$n$$-dimensional integral will require $$N^n$$ operations, which may take prohibitively long.
 
-**Monte Carlo integration** takes an entirely different approach akin to throwing darts. To illustrate, I will compute $$\pi$$ in a simple-minded way: I will throw a bunch of darts at the unit square (as in, I will draw $$(x,y)$$ from a random number generator that returns uniform deviates on [0,1)). If the dart is within a radius of 1 of the origin, I will call it a success. Since the ratio of the area of the quarter circle to the square is $$\pi/4$$, if I multiply the success rate by 4 I should obtain an estimate of $$\pi$$.
+**Monte Carlo integration** takes an entirely different approach akin to throwing darts. To illustrate, I will compute $$\pi$$ in a simple-minded way: I will throw a bunch of darts at the unit square (as in, I will draw $$(x,y)$$ from a random number generator that returns uniform deviates on [0,1) ). If the dart is within a radius of 1 of the origin, I will call it a success. Since the ratio of the area of the quarter circle to the square is $$\pi/4$$, if I multiply the success rate by 4 I should obtain an estimate of $$\pi$$.
 
 ~~~~ python
 fig, ax = plt.subplots(figsize=(9, 9))
