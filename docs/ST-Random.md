@@ -187,7 +187,7 @@ axs[1].set_xlabel("$y$");
 
 ## Normal Deviates
 
-One way to produce deviates that follow the normal distribution uses a generalization of Eq.&nbsp;(\ref{eq:probxform}) to two dimensions in an approach that mimics the way Poisson and Laplace figured out how to simplify the problem by squaring it. As you perhaps learned in Math 19, the Jacobian determinant generalizes the one-dimensional transformation of Eq.&nbsp;(\ref{eq:probxform}) to multiple dimensions:
+One way to produce deviates that follow the normal distribution uses a generalization of Eq.&nbsp;\eqref{eq:probxform} to two dimensions in an approach that mimics the way Poisson and Laplace figured out how to simplify the problem by squaring it. As you perhaps learned in Math 19, the Jacobian determinant generalizes the one-dimensional transformation of Eq.&nbsp;\eqref{eq:probxform} to multiple dimensions:
 \begin{equation}
   \label{eq:jacobian}
   P(y_1, y_2, \ldots) \dd{y_1} \dd{y_2} \ldots = p(x_1, x_2, \ldots) \qty| \frac{\partial(x_1, x_2, \ldots)}{\partial(y_1, y_2, \ldots)}| \dd{y_1} \dd{y_2} \ldots
