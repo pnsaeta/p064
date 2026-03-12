@@ -46,7 +46,6 @@ Simulate a random walk in which the walker takes random steps of length 1 in an 
 </p>
 <p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A collection of two-dimensional random walks, starting from the origin (shown with a white square), each taking $$N=1000$$ steps of unit length. The colored circles mark the expected value of $$\sqrt{\ev{r^2}} = \sqrt{n}$$ after 200, 400, 600, 800, and 1000 steps. The colored dots make the corresponding position on each walk.</p>
 
-
 ## Thermal Systems
 
 In mechanics we often simplify systems by ignoring their surroundings: for example, we ignore air resistance, friction at the pivot of a pendulum, and various other physical effects that we hope are small and don't alter the system "too much." If the system of interest can exchange energy with its surroundings, and the surroundings have temperature $$T$$, then the probability of finding the system in a particular configuration (called a **microstate**) is proportional to the Boltzmann factor, $$e^{-E/k_{\rm B}T}$$, where $$E$$ is the system's energy in the microstate, $$T$$ is the absolute temperature (kelvins), and $$k_{\rm B}$$ is the **Boltzmann constant**. As we have seen in [my molecular dynamics simulation](https://saeta.physics.hmc.edu/EMD.html), even without an external thermal bath at temperature $$T$$, when particles can exchange energy with one another and you have more than a few, the same dependence of microstate probability on the Boltzmann factor may be observed.
@@ -63,7 +62,7 @@ The Ising model assumes that each spin is influenced only by its neighboring spi
 \end{equation}
 If $$J$$ is positive, then the spins can lower their energy by aligning with their neighbors, which is a recipe for ferromagnetic behavior. If the applied field $$B$$ is zero, then that's the entire model. Otherwise, the presence of field $$B$$ biases in favor of $$s_i = 1$$ over $$s_i = -1$$.
 
-> Note that Eq.&nbsp;(\ref{eq:Ising}) has condensed into the constants $$J$$ and $$B$$ relevant physical quantities, such as the magnetic moment $$\mu$$ of each spin. We will mostly be interested in studying how the alignment of the $$N$$ spins depends on the temperature.
+> Note that Eq.&nbsp;\eqref{eq:Ising} has condensed into the constants $$J$$ and $$B$$ relevant physical quantities, such as the magnetic moment $$\mu$$ of each spin. We will mostly be interested in studying how the alignment of the $$N$$ spins depends on the temperature.
 
 We will make another simplification to allow each of the $$N$$ spins to have two neighbors; we will set them up in a ring so that the neighbors of $$s_0$$ are $$s_1$$ and $$s_{N-1}$$. This approach is called **periodic** (or **wrap-around**) boundary conditions. It is a way of attempting to eliminate "surfaces," which in this one-dimensional example would be the start and end of the chain.
 

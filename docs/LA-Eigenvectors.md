@@ -31,7 +31,7 @@ which requires that
 \begin{equation}\label{eq:constraint}
     x = -(y + z)
 \end{equation}
-This is the equation of a plane; $$y$$ and $$z$$ are arbitrary, but once they are specified, there is a unique value of $$x$$. We can construct a basis for the nullspace by letting each of the free variables ($$y$$ and $$z$$) be zero and forming the vector consistent with Eq. (\ref{eq:constraint}). Hence, the vectors $$\begin{pmatrix} -1 & 1 & 0 \end{pmatrix}^{\rm T}$$ and $$\begin{pmatrix} -1 & 0 & 1\end{pmatrix}^{\rm T}$$ constitute a basis for the nullspace.
+This is the equation of a plane; $$y$$ and $$z$$ are arbitrary, but once they are specified, there is a unique value of $$x$$. We can construct a basis for the nullspace by letting each of the free variables ($$y$$ and $$z$$) be zero and forming the vector consistent with Eq. \eqref{eq:constraint}. Hence, the vectors $$\begin{pmatrix} -1 & 1 & 0 \end{pmatrix}^{\rm T}$$ and $$\begin{pmatrix} -1 & 0 & 1\end{pmatrix}^{\rm T}$$ constitute a basis for the nullspace.
 
 What are the eigenvalues and eigenvectors of $$\mat{A}$$? That is, for what values of $$\vb{x}$$ and $$\lambda$$ is
 \\[

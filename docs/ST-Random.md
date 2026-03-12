@@ -291,7 +291,12 @@ The result is essentially the same as shown above, albeit the data are computed 
 
 ## Monte Carlo Integration
 
-We have used `scipy`'s `quad` routine to perform numerical integration of a one-dimensional function; it gives both a result and an error estimate. As a reminder, we'll compute $$\int_0^1 \tanh x \dd{x} = \ln \cosh(1)$$.
+We have used `scipy`'s `quad` routine to perform numerical integration of a one-dimensional function; it gives both a result and an error estimate. As a reminder, we'll compute $$\int_0^1 \tanh x \dd{x} = \ln \cosh(1)$$, corresponding to the shaded area in Fig.&nbsp;.
+
+<p class="figure" markdown="0">
+  <img src="figs/ST-tanh.webp" style="width: 400px;" alt="Hyperbolic tangent">
+/p>
+<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Integrating under the hyperbolic tangent.</p>
 
 ~~~~ python
 from scipy.integrate import quad
