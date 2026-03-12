@@ -291,11 +291,11 @@ The result is essentially the same as shown above, albeit the data are computed 
 
 ## Monte Carlo Integration
 
-We have used `scipy`'s `quad` routine to perform numerical integration of a one-dimensional function; it gives both a result and an error estimate. As a reminder, we'll compute $$\int_0^1 \tanh x \dd{x} = \ln \cosh(1)$$, corresponding to the shaded area in Fig.&nbsp;.
+We have used `scipy`'s `quad` routine to perform numerical integration of a one-dimensional function; it gives both a result and an error estimate. As a reminder, we'll compute $$\int_0^1 \tanh x \dd{x} = \ln \cosh(1)$$, corresponding to the shaded area in Fig.&nbsp;3.
 
 <p class="figure" markdown="0">
   <img src="figs/ST-tanh.webp" style="width: 400px;" alt="Hyperbolic tangent">
-/p>
+</p>
 <p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Integrating under the hyperbolic tangent.</p>
 
 ~~~~ python
@@ -308,7 +308,7 @@ np.log(np.cosh(1))
 
 As you can see, `quad` worked very well indeed. Where `quad` may not work so well is in a multidimensional integration. If a successful evaluation  of `quad` takes $$N$$ operations, an $$n$$-dimensional integral will require $$N^n$$ operations, which may take prohibitively long.
 
-**Monte Carlo integration** takes an entirely different approach akin to throwing darts. To illustrate, I will compute $$\pi$$ in a simple-minded way: I will throw a bunch of darts at the unit square (as in, I will draw $$(x,y)$$ from a random number generator that returns uniform deviates). If the dart is within a radius of 1 of the origin, I will call it a success. Since the ratio of the area of the quarter circle to the square is $$\pi/4$$, if I multiply the success rate by 4 I should obtain an estimate of $$\pi$$.
+**Monte Carlo integration** takes an entirely different approach akin to throwing darts. To illustrate, I will compute $$\pi$$ in a simple-minded way: I will throw a bunch of darts at the unit square (as in, I will draw $$(x,y)$$ from a random number generator that returns uniform deviates on [0,1)). If the dart is within a radius of 1 of the origin, I will call it a success. Since the ratio of the area of the quarter circle to the square is $$\pi/4$$, if I multiply the success rate by 4 I should obtain an estimate of $$\pi$$.
 
 ~~~~ python
 fig, ax = plt.subplots(figsize=(9, 9))
@@ -326,7 +326,7 @@ ax.set_title(r"$\pi \approx %.4f$" % pi_est);
 <p class="figure" markdown="0">
   <img src="figs/ST-MC-pi.webp" style="width: 500px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig3">Figure 3</a> — Illustration of the Monte Carlo method of computing $$\pi$$.</p>
+<p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Illustration of the Monte Carlo method of computing $$\pi$$.</p>
 
 Of course, this method cannot give the exact value for the integral. How much error should we expect? If the ratio of the success area to the total is $$p$$, then the probability that each dart is a success is $$p$$ and the probability that it is a failure is $$q = 1 - p$$. Each of the darts is independent of every other. If we throw two darts, then the four possible outcomes are the terms in
 \\[
