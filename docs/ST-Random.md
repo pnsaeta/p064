@@ -79,7 +79,7 @@ test_rng(poor, "LCG")
 <p class="figure" markdown="0">
   <img src="figs/LCG-test.webp" style="width: 700px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability that to exceed (PTE) this value of $$\chi^2$$. Clearly, the histogram is **too even**.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — (left) Period test of a poorly designed MLCG with $$a=899$$, $$c=0$$, and $$m=32768$$, revealing a troublingly short period. (right) Histogram of the same generator, the associated value of $$\chi^2$$, and the probability to exceed (PTE) this value of $$\chi^2$$. Clearly, the histogram is **too even**.</p>
 
 ## Xorshift
 
