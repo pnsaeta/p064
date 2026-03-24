@@ -34,9 +34,16 @@ ax.plot(s.t, E);
 
 In Runge-Kutta integrators, all dependent variables are updated in parallel. That is, at each (sub) time step, all derivatives are computed and used to advance each dependent variable. By contrast, in the leapfrog approach,
 
-- we first compute the acceleration for the current (known) values ($$x, v$$)
-- update the velocity by applying the acceleration for half the time step
-- update the position for the full time step using the newly updated velocity value
-- recompute the acceleration using the updated values ($$x,v$$) and use it to update $$v$$ for the remaining half time step.
+- we first compute the acceleration using the current (known) values ($$x, v$$)
+- update the velocity by applying the acceleration for half the time step: $$v \leftarrow v + \frac12 a \Delta t$$
+- update the position for the full time step using the newly updated velocity value: $$x \leftarrow x + v \Delta t$$
+- recompute the acceleration using the updated values ($$x,v$$) and use it to update $$v$$ for the remaining half time step: $$v \leftarrow v + \frac12 a \Delta t$$.
 
-**Symplectic integrators** use a different strategy to integrate
+The method is called leapfrog, because we alternately update the position and the velocity, using always the most recent values of $$(x,v)$$ for the updates.
+
+More generally, a **symplectic integrator** subdivides a time step $$\Delta t$$ into $$k$$ parts, and for each part, updates first the velocity and then the position using the equations
+\begin{align}
+  v_i &= v_{i-1} + (\Delta t) c_i a(x_{i-1})  \label{eq:vupdate} \\\
+  x_i &= x_{i-1} + (\Delta t) d_i v_i \label{eq:xupdate}
+\end{align}
+The leapfrog method uses $$c_i = (\frac12, \frac12)$$ and $$d_i = (1, 0)$$ and is second order ($$k=2$$). Higher order methods are possible, too. A third-order integrator uses $$c_i = (\frac{7}{24}, \frac34, -\frac{1}{24})$$ and $$d_i = (\frac23, -\frac23, 1)$$.
