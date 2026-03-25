@@ -410,4 +410,4 @@ for $$\theta$$ and $$\phi$$, we get the following equations of motion:
 
 Use these dynamical equations and `solve_ivp` to compute trajectories in the projection of the pendulum's position in the $$xy$$ plane.
 
-Next: [The Quantum SHO](DE-SHO-analytic.md)
+Next: [Symplectic Integrators](DE-Symplectic.md)

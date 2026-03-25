@@ -204,4 +204,5 @@ ani.save("squarewave.webp", writer=ImageMagickWriter(fps=10, extra_args=['-loop'
 ~~~~
 
 Unfortunately, as of 2/2/25, there is a bug in the matplotlib code that I had to fix on line 476 of `matplotlib/__init__.py` by replacing `path = 'convert'` to `path = "magick"`, since ImageMagick has deprecated the use of `convert` as its command line executable in favor of `magick`. (I have submitted a bug report.)
+
 (3/24/26) For reasons mysterious, they still haven't fixed this bug, although in the most recent version of matplotlib, the line that needs fixing is 479.
