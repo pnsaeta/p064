@@ -41,9 +41,23 @@ In Runge-Kutta integrators, all dependent variables are updated in parallel. Tha
 
 The method is called leapfrog, because we alternately update the position and the velocity, using always the most recent values of $$(x,v)$$ for the updates.
 
+## Symplectic methods
+
 More generally, a **symplectic integrator** subdivides a time step $$\Delta t$$ into $$k$$ parts, and for each part, updates first the velocity and then the position using the equations
 \begin{align}
   v_i &= v_{i-1} + (\Delta t) c_i a(x_{i-1})  \label{eq:vupdate} \\\
   x_i &= x_{i-1} + (\Delta t) d_i v_i \label{eq:xupdate}
 \end{align}
-The leapfrog method uses $$c_i = (\frac12, \frac12)$$ and $$d_i = (1, 0)$$ and is second order ($$k=2$$). Higher order methods are possible, too. A third-order integrator uses $$c_i = (\frac{7}{24}, \frac34, -\frac{1}{24})$$ and $$d_i = (\frac23, -\frac23, 1)$$.
+The leapfrog method uses $$c_i = (\frac12, \frac12)$$ and $$d_i = (1, 0)$$ and is second order ($$k=2$$). Higher order methods are possible, too. A third-order integrator uses $$c_i = (\frac{7}{24}, \frac34, -\frac{1}{24})$$ and $$d_i = (\frac23, -\frac23, 1)$$, and a fourth-order one uses ($$q \equiv 2^{1/3}$$)
+\begin{align}
+  c_1 = c_4 &= \frac{1}{2(2-q)} \\\
+  c_2 = c_3 &= \frac{1-q}{2(2-q)} \\\
+  d_1 = d_3 &= \frac{1}{2-q} \\\
+  d_2 &= - \frac{q}{2-q} \\\
+  d_4 &= 0
+\end{align}
+
+<p class="figure" markdown="0">
+  <img src="figs/Symplectic-energy.webp" style="width: 400px;" alt="Failure of energy conservation">
+</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The degree of energy nonconservation, $$|E - E_0|$$, as a function of time for the simple harmonic oscillator integrated with the RKF45 method by `solve_ivp` and by symplectic integrators of order $$k$$.</p>
