@@ -57,7 +57,7 @@ to solve, where the primes now indicate differentiation with respect to the dime
 
 ## Asymptotic Behavior
 
-The wave function $$\psi$$ is the **probability amplitude** of the particle of mass $$m$$ (which we may take to be an electron), which means that $$\psi^{*}(y) \psi(y) \dd{y} = |\psi(y)|^2 \dd{y}$$ measures the probability that the electron may be found between $$y$$ and $$y + \dd{y}$$. For a solution to Eq. (\ref{eq:SHODE}) to be normalizable, the magnitude of $$\psi$$ must go strongly to zero as $$\|y\| \gg 1$$. In that region, we may safely ignore $$\epsilon$$ in the differential equation, so we must have
+The wave function $$\psi$$ is the **probability amplitude** of the particle of mass $$m$$ (which we may take to be an electron), which means that $$\psi^{*}(y) \psi(y) \dd{y} = |\psi(y)|^2 \dd{y}$$ measures the probability that the electron may be found between $$y$$ and $$y + \dd{y}$$. For a solution to Eq. \eqref{eq:SHODE} to be normalizable, the magnitude of $$\psi$$ must go strongly to zero as $$\|y\| \gg 1$$. In that region, we may safely ignore $$\epsilon$$ in the differential equation, so we must have
 \begin{equation}\label{eq:SHOasy}
   \psi'' \approx y^2 \psi
 \end{equation}
@@ -67,14 +67,14 @@ That is, each derivative needs to bring down a factor of $$y$$. Let's try $$\psi
   \psi'' &= (-2\alpha + 4 \alpha^2 y^2) e^{-\alpha y^2}
   = (-2\alpha + 4\alpha^2 y^2) \psi
 \end{align}
-For large $$|y|$$, we can neglect the $$-2\alpha$$ term compared to the term that grows like $$y^2$$. This form will approximately solve Eq.&nbsp;\eqref{eq:SHOasy} if we take $$\alpha = 1/2$$. Therefore, we look for a solution to Eq. (\ref{eq:SHODE}) of the form
+For large $$|y|$$, we can neglect the $$-2\alpha$$ term compared to the term that grows like $$y^2$$. This form will approximately solve Eq.&nbsp;\eqref{eq:SHOasy} if we take $$\alpha = 1/2$$. Therefore, we look for a solution to Eq. \eqref{eq:SHODE} of the form
 \\[
     \psi(y) = e^{-y^2/2} f(y)
 \\]
 
 ## Frobenius Solution
 
-We look for a solution to Eq. (\ref{eq:SHODE}) with the form
+We look for a solution to Eq. \eqref{eq:SHODE} with the form
 \begin{equation}\label{eq:Frobenius}
   \psi(y) = e^{-y^2/2} \sum_{k=0}^{\infty} a_k y^{k+s}
 \end{equation}
@@ -88,7 +88,7 @@ for which the ratio of successive terms is
   \frac{a_{k+2}}{a_k} = \frac{1}{2} \frac{(k/2)!}{(k/2+1)!} = \frac{1}{2(k/2+1)} = \frac{1}{k+2}
 \end{equation}
 
-Differentiating Eq. (\ref{eq:Frobenius}) gives
+Differentiating Eq. \eqref{eq:Frobenius} gives
 \begin{equation}\label{eq:d1}
   \psi' = e^{-y^2/2} \sum_{k=0}^{\infty} a_k [(k+s) y^{k+s-1} - y^{k+s+1}]
 \end{equation}
@@ -109,7 +109,7 @@ We also need to represent $$(y^2 - \epsilon)\psi$$ with appropriate index shifti
 \begin{equation}\label{eq:shift2}
   (y^2 - \epsilon)\psi = e^{-y^2/2} \sum_{j=0} (-\epsilon a_j + a_{j-2} )y^{j+s}
 \end{equation}
-with the understanding that $$a_{-2} = 0$$. Substituting all these (shifted) series into Eq. (\ref{eq:SHODE}) gives
+with the understanding that $$a_{-2} = 0$$. Substituting all these (shifted) series into Eq. \eqref{eq:SHODE} gives
 \begin{equation}\label{eq:what}
   e^{-y^2/2} \sum_{j=0}^{\infty} y^{j+s} \left[
     -a_{j+2}(j+s+2)(j+s+1) + a_j(2j + 2s + 1 - \epsilon)
@@ -126,21 +126,21 @@ There are a couple of things to notice about this relation. First, it couples on
 \end{equation}
 The second thing to notice is that for large values of $$j$$, successive terms in the series all have the same sign, so they don't tend to cancel one another out.
 
-To show that the series must terminate by choosing $$\epsilon = 2j + 1$$ for some integer $$j$$, consider the asymptotic form of the ratio in Eq. (\ref{eq:ratio}) when $$j$$ is so large that we can neglect the constants. The numerator approaches $$2j$$ and the denominator approaches $$j^2$$, so the ratio approaches
+To show that the series must terminate by choosing $$\epsilon = 2j + 1$$ for some integer $$j$$, consider the asymptotic form of the ratio in Eq. \eqref{eq:ratio} when $$j$$ is so large that we can neglect the constants. The numerator approaches $$2j$$ and the denominator approaches $$j^2$$, so the ratio approaches
 \begin{equation}\label{eq:ratio2}
   \frac{a_{j+2}}{a_j} \to \frac{2}{j}
 \end{equation}
-which has the same limit as Eq. (\ref{eq:badlimit}) which represents the series for $$e^{y^2/2}$$.
+which has the same limit as Eq. \eqref{eq:badlimit} which represents the series for $$e^{y^2/2}$$.
 If the series does not terminate, then it asymptotically approaches a nonzero constant, which means that we cannot scale the wave function to produce a normalized probability density.
 
 ### Energy Eigenvalues
 
-Hence, to yield a physically meaningful solution, we just choose $$\epsilon = 2n+1$$ for whole number $$n$$. Using Eq. (\ref{eq:escale}) to convert to energy implies that the energy eigenvalues are
+Hence, to yield a physically meaningful solution, we just choose $$\epsilon = 2n+1$$ for whole number $$n$$. Using Eq. \eqref{eq:escale} to convert to energy implies that the energy eigenvalues are
 \begin{equation}\label{eq:EEV}
   \boxed{E_n = \hslash \omega \left(n + \frac12 \right) \qquad n = 0, 1, 2, \ldots }
 \end{equation}
 
-It should perhaps not be too surprising that the energy of the ground state is not zero, which is the minimum value of the potential. For the expectation value of the potential to vanish would require that we find the electron with certainty within an infinitesimal region surrounding $$x = 0$$; the wave function would have to be a Dirac $$\delta(x)$$ function. However, such a solution has infinite kinetic energy, so its total energy is definitely not zero. The ground-state wave function has equal kinetic and potential energy contributions. From the recurrence relation, Eq. (\ref{eq:recurrence}), with $$n = 0$$ and $$\epsilon = 1$$, we see that for $$a_0 = 1$$, $$a_2 = 0$$ and the series terminates. Hence, the (non-normalized) ground-state wave function is
+It should perhaps not be too surprising that the energy of the ground state is not zero, which is the minimum value of the potential. For the expectation value of the potential to vanish would require that we find the electron with certainty within an infinitesimal region surrounding $$x = 0$$; the wave function would have to be a Dirac $$\delta(x)$$ function. However, such a solution has infinite kinetic energy, so its total energy is definitely not zero. The ground-state wave function has equal kinetic and potential energy contributions. From the recurrence relation, Eq. \eqref{eq:recurrence}, with $$n = 0$$ and $$\epsilon = 1$$, we see that for $$a_0 = 1$$, $$a_2 = 0$$ and the series terminates. Hence, the (non-normalized) ground-state wave function is
 \begin{equation}\label{eq:groundstate}
   \Psi_0 (x) = e^{-y^2/2} = \exp\left(-\frac{m \omega x^2}{2\hslash}\right)
 \end{equation}
@@ -155,9 +155,8 @@ It should perhaps not be too surprising that the energy of the ground state is n
 
 Higher-order solutions have the same Gaussian form, multiplied by a **Hermite polynomial** of order $$n$$. The first few of these are
 
-
 <div>
-<table style="width: 250px; padding: 0px; margin: 0 auto;">
+<table class="nicetable" style="width: 250px; padding: 0px; margin: 0 auto;">
   <tr>
     <th>$$n$$</th><th>Hermite Polynomial $$H_n(y)$$</th>
   </tr>
@@ -168,7 +167,7 @@ Higher-order solutions have the same Gaussian form, multiplied by a **Hermite po
   <tr><td>2</td><td>$$ 4y^2 - 2 $$</td></tr>
   <tr><td>3</td><td>$$ 8y^3 - 12 y $$</td></tr>
   <tr><td>4</td><td>$$ 16y^4  - 48 y^2 + 12 $$</td></tr>
-  <tr><td>5</td><td>$$ 32 y^5 - 160 x^3 + 120x $$</td></tr>
+  <tr><td>5</td><td>$$ 32 y^5 - 160 y^3 + 120y $$</td></tr>
 </table>
 </div>
 
