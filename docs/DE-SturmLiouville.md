@@ -1,6 +1,5 @@
 {:menu DE}
 
-
 # Sturm-Liouville Theory
 
 * toc
@@ -10,7 +9,7 @@
 
 In discussing [Fourier Series](FO-FourierSeries.md), we ran into the **bilinear concomitant**, which arose when considering solutions to the differential equation
 \begin{equation}\label{eq:old}
-  \dv[2]{y}{x} = -\lambda y(x)
+  \dv[2]{y}{x} = \lambda y(x)
 \end{equation}
 
 Recall that we started with two solutions, $$y_1(x)$$ and $$y_2(x)$$, and then integrated the combination $$y_1 ^{*\prime\prime} y_2 - y_1^* y_2 ^{\prime\prime}$$ from $$a$$ to $$b$$, getting
@@ -18,7 +17,7 @@ Recall that we started with two solutions, $$y_1(x)$$ and $$y_2(x)$$, and then i
 \left[ y\_1^{\prime\*} y\_2 - y_1^\* y_2^\prime \right]_a^b  =
   (\lambda_1^\* - \lambda_2) \int_a^b y\_1^\* y_2 \, dx
 \end{equation}
-from which we showed that the eigenvalues $$\lambda$$ were real and that when the bilinear concomitant (the left-hand side) vanished, the functions $$y_1(x)$$ and $$y_2(x)$$ were orthogonal in the sense defined by the integral of Eq.&nbsp;(\ref{eq:BC}).
+from which we showed that the eigenvalues $$\lambda$$ were real and that when the bilinear concomitant (the left-hand side) vanished, the functions $$y_1(x)$$ and $$y_2(x)$$ were orthogonal in the sense defined by the integral of Eq.&nbsp;\eqref{eq:BC}.
 
 ## Generalization
 
@@ -30,7 +29,10 @@ These equations may be put into **self-adjoint form**
 \begin{equation}\label{eq:self-adjoint}
   \boxed{  \dv{}{x}\qty[ p(x) \dv{y}{x}] + r(x) y = -\lambda w(x) y }
 \end{equation}
-where $$w(x)$$ is a **weighting factor** that will end up being used in the definition of the inner product of two solutions. That is, we define the inner product as
+where $$w(x)$$ is a **weighting factor** that will end up being used in the definition of the inner product of two solutions. Solutions to equations of this form corresponding to different eigenvalues
+$$\lambda$$ can readily be shown to be orthogonal. They can further be shown to form a complete set, meaning that they can be used as basis vectors to expand an arbitrary function on their domain.
+
+We define the inner product as
 \begin{equation}\label{eq:inner}
   \ev{f,g} = \int_a^b [f(x)]^* g(x) \, w(x) \, dx
 \end{equation}
@@ -42,24 +44,25 @@ the original differential equation is cast in the form
 \begin{equation}\label{eq:linop2}
   L\,y = \lambda y
 \end{equation}
-which looks a lot like Eq.&nbsp;(\ref{eq:old}). To show that $$L$$ is a **self-adjoint** operator, meaning that
+which looks a lot like Eq.&nbsp;\eqref{eq:old}. To show that $$L$$ is a **self-adjoint** operator, meaning that
 \begin{equation}\label{eq:selfadjoint}
   \ev{Lf, g} = \ev{f, Lg}
 \end{equation}
 it suffices to integrate twice by parts:
 \begin{align}
- \ev{Lf,g} &= \int_{a}^{b} - \frac{1}{w(x)}
-   \left(\dv{}{x} \qty[p(x) f'] + r(x) f \right)^{\star}
+ \ev{Lf,g} &= \int_a^b - \frac{1}{w(x)}
+   \bigg( \dv{}{x} \big[ p(x) f' \big] + r(x) f \bigg)^{\star}
     w(x) g(x) \dd{x}
-    \notag \\\
-   &= -\int_{a}^{b}  \left(\dv{}{x} \qty[p(x) f'] + r(x) f\right)^{\star} g(x) \dd{x}
-   \notag \\\
+    \\\
+    &= -\int_{a}^{b}  \left( \dv{}{x} \big[p(x) f'\big] + r(x) f \right)^{\star} g(x) \dd{x}
+   \notag
+   \\\
    &= -p f^{\star\prime}g\bigg|\_{a}^{b} + \int_{a}^{b} f^{\star\prime} p g' \dd{x} -
     \int_{a}^{b} r(x) f^{\star} g \dd{x}
   \notag  \\\
-    &= -p f^{\star\prime}g\bigg|\_{a}^{b} +
+   &= -p f^{\star\prime}g\bigg|\_{a}^{b} +
       f^{\star} p g' \bigg|\_{a}^{b} -
-       \int_{a}^{b} f^{\star} \dv{}{x}\qty[ p(x) g'] \dd{x} -
+       \int_{a}^{b} f^{\star} \dv{}{x} [ p(x) g'] \dd{x} -
        \int_{a}^{b} r(x) f^{\star} g \dd{x}
        \notag \\\
        &=  \textcolor{DarkRed}{
@@ -77,7 +80,7 @@ If $$u_1 = u_2$$, then $$(\lambda_1^{\star} - \lambda_1) \ev{u_1, u_1} = 0$$, wh
 
 ## Getting to Self-Adjoint Form
 
-If $$P'(x) = Q(x)$$ in Eq.&nbsp;(\ref{eq:Sturm-Liouville}), we're effectively done: $$r(x) = R(x) + \lambda$$ and $$w(x) = 1$$.
+If $$P'(x) = Q(x)$$ in Eq.&nbsp;\eqref{eq:Sturm-Liouville}, we're effectively done: $$r(x) = R(x) + \lambda$$ and $$w(x) = 1$$.
 
 However, there are plenty of common second-order linear differential equations where $$P'(x) \ne Q$$. For example, Bessel's equation is
 \begin{equation}\label{eq:Bessel}
@@ -89,7 +92,7 @@ so that $$P' = 2x$$ while $$x = Q$$. Intuitively, we could solve this little pro
 \\]
 which we can put in the form
 \\[
-    \dv{}{x} \qty[ x y' ] + x y = \frac{\nu^2}{x} y \, w(x)
+    \frac{\mathrm{d}}{\dd{x}} ( x y' ) + x y = \frac{\nu^2}{x} y \, w(x)
 \\]
 where $$w(x) = x$$.
 

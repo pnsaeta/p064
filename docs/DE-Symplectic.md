@@ -60,6 +60,6 @@ The leapfrog method uses $$c_i = (\frac12, \frac12)$$ and $$d_i = (1, 0)$$ and i
 <p class="figure" markdown="0">
   <img src="figs/Symplectic-energy.webp" style="width: 400px;" alt="Failure of energy conservation">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The degree of energy nonconservation, $$|E - E_0|$$, as a function of time for the simple harmonic oscillator integrated with the RKF45 method by `solve_ivp` and by symplectic integrators of order $$k$$. The RKF45 routine uses an adaptive step size to bound the error, whereas the symplectic integrators all used a step size $$\Delta t = 0.05$$. Unlike the Runge-Kutta method, the energy errors of the symplectic integrators </p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The degree of energy nonconservation, $$|E - E_0|$$, as a function of time for the simple harmonic oscillator integrated with the RKF45 method by `solve_ivp` and by symplectic integrators of order $$k$$. The RKF45 routine uses an adaptive step size to bound the error, whereas the symplectic integrators all used a step size $$\Delta t = 0.05$$. Unlike the Runge-Kutta method, whose energy errors grow quasi-monotonically, the energy errors of the symplectic integrators oscillate.</p>
 
 Next: [Quantum SHO](DE-SHO-analytic.md)
