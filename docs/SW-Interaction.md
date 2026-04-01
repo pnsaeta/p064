@@ -153,7 +153,16 @@ class DDSHO:
 
 ~~~~
 
+The result of a call to
+
+~~~~ python
+d1 = DDSHO()
+d1.plot()
+~~~~
+
+is shown in Fig.&nbsp;1. As the user alters any of the slider values, the plots update continuously.
+
 <p class="figure" markdown="0">
-  <img src="figs/interactive.webp" style="width: 400px;" alt="An interactive simulation in Matplotlib">
+  <img src="figs/interactive.webp" style="width: 600px;" alt="An interactive simulation in Matplotlib">
 </p>
-<p class="icap" markdown="1"><a name="Fig">Figure </a> — </p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The Bode plot (and phase plot) of a damped, sinusoidally driven SHO.</p>
