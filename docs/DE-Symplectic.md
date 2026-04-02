@@ -175,6 +175,26 @@ Then
 \\]
 Unless $$|\gamma_{\pm}| = 1$$, the solution in the diagonal basis will grow or shrink in magnitude over time, which is inconsistent with energy conservation.
 
-To solve for the eigenvalues $$\gamma_{\pm}$$
+To solve for the eigenvalues $$\gamma_{\pm}$$, we calculate
+\\[
+    \det \begin{pmatrix}
+      1 - \omega^2 (\Delta t)^2 - \gamma & \Delta t \\\
+      -\omega^2 \Delta t & 1 - \gamma
+    \end{pmatrix} = 0
+\\]
+which simplifies to
+\begin{equation}\label{eq:gain}
+  \gamma^2 + \gamma[\omega^2 (\Delta t)^2 - 2] + 1 = 0
+\end{equation}
+Let $$\theta \equiv \omega \Delta t$$. Then
+\begin{equation}\label{eq:roots}
+  \gamma = \frac{2 - x^2 \pm \sqrt{4 - 4x^2 + x^4 - 4}}{2}
+\end{equation}
+For $$\theta < 2$$, the radical is real and $$\gamma$$ is complex. It's magnitude is
+\\[
+    |\gamma|^2 = \left(1 - \theta^2 + \frac{\theta^4}{4}\right) +
+     \frac{\theta^2}{4}\left(1 - \frac{\theta^2}{4}\right)
+     =
+\\]
 
 Next: [Quantum SHO](DE-SHO-analytic.md)
