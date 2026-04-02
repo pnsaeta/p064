@@ -152,6 +152,33 @@ The matrix $$\mat{M}$$ is called the **propagator**: it tells us how to propagat
 
 Knowing that energy of the SHO is a conserved quantity, intuitively we must have that successive applications of $$\mat{M}$$ do not cause the state vector either grow or shrink, or the energy will grow or shrink with time.
 
+To make that more precise, we could take as our initial state
+\\[
+    \begin{pmatrix} x_0 \\\ v_0 \end{pmatrix} = A_0
+    \begin{pmatrix}
+      e^{-i\omega t} \\\ -i\omega e^{-i\omega t}
+    \end{pmatrix}
+\\]
+where $$A_0$$ is the initial amplitude and I have explicitly used an exact solution to the differential equation. Now we propagate to the next step:
+\\[
+    \begin{pmatrix} x_1 \\\ v_1 \end{pmatrix} = A_1
+    \begin{pmatrix}
+      e^{-i\omega t} \\\ -i\omega e^{-i\omega t}
+    \end{pmatrix} =
+    A_0 \mat{M} \begin{pmatrix}
+      e^{-i\omega t} \\\ -i\omega e^{-i\omega t}
+    \end{pmatrix}
+\\]
+or dividing out $$e^{-i\omega t}$$,
+\\[
+    A_1 \begin{pmatrix}
+      1 \\\ -i\omega
+    \end{pmatrix} = A_0 \mat{M} \begin{pmatrix}
+      1 \\\ -i\omega
+    \end{pmatrix}
+\\]
+For stability, we require that $$|A_1| = |A_0|$$; the amplitude should remain constant.
+
 ## Change of Basis
 
 The matrix $$\mat{M}$$ is not diagonal in the $$(x_n, v_n)$$ basis. Suppose we find a matrix $$\mat{S}$$ such that
