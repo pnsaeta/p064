@@ -150,6 +150,31 @@ The matrix $$\mat{M}$$ is called the **propagator**: it tells us how to propagat
   \begin{pmatrix} x_{0} \\\ v_{0} \end{pmatrix}
 \end{equation}
 
-Knowing that energy of the SHO is a conserved quantity, we must have that successive applications of $$\mat{M}$$ do not cause the state vector either grow or shrink.
+Knowing that energy of the SHO is a conserved quantity, intuitively we must have that successive applications of $$\mat{M}$$ do not cause the state vector either grow or shrink, or the energy will grow or shrink with time.
+
+## Change of Basis
+
+The matrix $$\mat{M}$$ is not diagonal in the $$(x_n, v_n)$$ basis. Suppose we find a matrix $$\mat{S}$$ such that
+\begin{equation}\label{eq:similarity}
+    \mat{S}^{-1}\widetilde{\mat{M}}\mat{S} = \mat{M}
+\end{equation}
+where $$\widetilde{\mat{M}}$$ is diagonal. Equation \eqref{eq:similarity} is called a **similarity transformation**. It is a change of basis that yields a diagonal representation of matrix $$\mat{M}$$. Since $$\widetilde{\mat{M}}$$ is diagonal, we can write
+\begin{equation}\label{eq:mtilde}
+  \widetilde{\mat{M}} = \begin{pmatrix} \gamma_+ & 0 \\\ 0 & \gamma_- \end{pmatrix}
+\end{equation}
+Then
+\\[
+    \mat{M}^n = (\mat{S}^{-1}\widetilde{\mat{M}}\mat{S})
+    (\mat{S}^{-1}\widetilde{\mat{M}}\mat{S})\cdots
+    (\mat{S}^{-1}\widetilde{\mat{M}}\mat{S})
+    = \mat{S}^{-1}\widetilde{\mat{M}}^n\mat{S}
+    = \mat{S}^{-1}\begin{pmatrix}
+      \gamma_+^n & 0 \\\ 0 & \gamma_-^n
+    \end{pmatrix}
+    \mat{S}
+\\]
+Unless $$|\gamma_{\pm}| = 1$$, the solution in the diagonal basis will grow or shrink in magnitude over time, which is inconsistent with energy conservation.
+
+To solve for the eigenvalues $$\gamma_{\pm}$$
 
 Next: [Quantum SHO](DE-SHO-analytic.md)
