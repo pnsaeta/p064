@@ -276,7 +276,8 @@ additional parameters (as ours does), we need to supply the extra parameters in
 a tuple as the `args` keyword argument, as shown below.
 
 ~~~ python
-res = solve_ivp(myderiv, [0, 1], [5.0], t_eval=np.linspace(0, 1, 11), args=(1, 1))
+b, m = 1, 1
+res = solve_ivp(myderiv, [0, 1], [5.0], t_eval=np.linspace(0, 1, 11), args=(b, m))
 res
 
     message: 'The solver successfully reached the end of the integration interval.'
@@ -301,7 +302,7 @@ which we requested output by passing the keyword parameter `t_eval` with a list
 of the errors that this “marvelous” routine computed for us with the following:
 
 ~~~ python
-errors = res.y[0,:] - 5.0 * np.exp(-res.t * 1.0 / 1.0)
+errors = res.y[0,:] - 5.0 * np.exp(-res.t * b / m)
 fig, ax = plt.subplots()
 ax.plot(res.t, errors, 'ro');
 ~~~
