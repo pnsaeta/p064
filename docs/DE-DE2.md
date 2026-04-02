@@ -150,9 +150,9 @@ def Euler(tvals, v0, b=1, m=1):
     """
     v = [v0,] # initialize the output array
     for n in range(1, len(tvals)):
-    dt = tvals[n] - tvals[n-1] # in case the time steps aren't even
-    dv = -b * v[-1] * dt / m
-    v.append(v[-1] + dv)
+        dt = tvals[n] - tvals[n-1] # in case the time steps aren't even
+        dv = -b * v[-1] * dt / m
+        v.append(v[-1] + dv)
     return np.array(v)
 ~~~
 
@@ -171,10 +171,10 @@ def EulerError(nsteps:list, b=1, m=1, v0=5):
     ax2.set_xlabel('$$t$$')
     ax2.set_ylabel('Error')
     for n in nsteps:
-    tvals = np.linspace(0, 1.0, n+1) # linspace divides the span between the arguments into n equal steps
-    vvals = Euler(tvals, v0, b, m)
-    ax1.plot(tvals, vvals, '.-', label=str(n))
-    ax2.plot(tvals, np.abs(vvals - v0 * np.exp(-tvals * b/m)), '.-', label=str(n))
+        tvals = np.linspace(0, 1.0, n+1) # linspace divides the span between the arguments into n equal steps
+        vvals = Euler(tvals, v0, b, m)
+        ax1.plot(tvals, vvals, '.-', label=str(n))
+        ax2.plot(tvals, np.abs(vvals - v0 * np.exp(-tvals * b/m)), '.-', label=str(n))
     ax1.legend()
 
 EulerError([2, 4, 8, 16]) # Cover the [0,1] range in 2, 4, 8, and 16 steps
@@ -191,7 +191,7 @@ numerical approximation is. We could quantify
 ### Exercise
 
 Prepare a plot that shows how the error after 1 second depends on the size of
-the time step $$dt = (1~\mathrm{s}) / n$$, where $$n$$ is the number of equal steps
+the time step $$\dd{t} = (1~\mathrm{s}) / n$$, where $$n$$ is the number of equal steps
 used to subdivide the 1-second interval. You can use the `Euler` function above
 to do much of the computing, along with `np.linspace` to produce the time
 values.
@@ -250,7 +250,7 @@ solve. In a nutshell, it is that we have a function that computes the
 derivative,
 
 \begin{equation}\label{eq:theDE}
-     \frac{dy}{dt} = f(t, y)
+    \frac{dy}{dt} = f(t, y)
 \end{equation}
 
 and we are trying to solve for $$y(t)$$ assuming that we know the value of $$y(t_0)
@@ -268,7 +268,7 @@ def myderiv(t, v, b, m):
     return -v * b / m
 ~~~
 
-Now, we can use the function `solve_ivp` to integrate Eq.&nbsp;(\ref{eq:theDE}) from a starting
+Now, we can use the function `solve_ivp` to integrate Eq.&nbsp;\eqref{eq:theDE} from a starting
 value of $$y$$ at $$t = 0$$. At a minimum, we need to supply the name of the
 function that computes the derivative, the time interval over which to
 integrate, and the initial value $$y_0$$. If our derivative function takes

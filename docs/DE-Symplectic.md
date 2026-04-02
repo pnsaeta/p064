@@ -186,15 +186,19 @@ which simplifies to
 \begin{equation}\label{eq:gain}
   \gamma^2 + \gamma[\omega^2 (\Delta t)^2 - 2] + 1 = 0
 \end{equation}
-Let $$\theta \equiv \omega \Delta t$$. Then
-\begin{equation}\label{eq:roots}
-  \gamma = \frac{2 - x^2 \pm \sqrt{4 - 4x^2 + x^4 - 4}}{2}
-\end{equation}
+Let $$\theta \equiv \omega \Delta t$$; it represents the angle through which the phase of the oscillator moves in the interval $$\Delta t$$. Then
+\begin{align}
+  \gamma &= \frac{2 - \theta^2 \pm \sqrt{4 - 4\theta^2 + \theta^4 - 4}}{2} \notag \\\
+  &= 1 - \frac{\theta^2}{2} \pm \theta \sqrt{\frac{\theta^2}{4}-1}
+  \notag \\\
+  &= 1 - \frac{\theta^2}{2} \pm i\theta \sqrt{1-\frac{\theta^2}{4}}
+\end{align}
 For $$\theta < 2$$, the radical is real and $$\gamma$$ is complex. It's magnitude is
 \\[
     |\gamma|^2 = \left(1 - \theta^2 + \frac{\theta^4}{4}\right) +
-     \frac{\theta^2}{4}\left(1 - \frac{\theta^2}{4}\right)
-     =
+     \theta^2 \left(1 - \frac{\theta^2}{4}\right)
+     = 1
 \\]
+Wow. This means that for $$\theta < 2$$, the eigenvalues (gain) have magnitude 1, which means that the solution neither grows nor shrinks over time.
 
 Next: [Quantum SHO](DE-SHO-analytic.md)
