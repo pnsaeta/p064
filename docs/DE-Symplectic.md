@@ -73,10 +73,83 @@ We now break it apart into two coupled first-order differential equations:
   \dv{x}{t} &= v \\\
   \dv{v}{t} &= -\omega^2 x
 \end{align}
-and use the following Euler integration scheme for a time step $$\Delta t$$:
+and use the following simple Euler integration scheme for a time step $$\Delta t$$:
 \begin{align}
-  v_{n+1} &= v_n + (-\omega^2 x_n) \Delta t \\\
-  x_{n+1} &= x_n + v_{n+1} \Delta t
+  v_{n+1} &= v_n + (-\omega^2 x_n) \Delta t \label{eq:vn1}\\\
+  x_{n+1} &= x_n + v_{n+1} \Delta t \label{eq:xn1}
 \end{align}
+
+We will now look for a matrix $$\mat{M}$$ such that
+\\[
+  \begin{pmatrix}
+    x_{n+1} \\\
+    v_{n+1}
+  \end{pmatrix} =
+  \mat{M}
+  \begin{pmatrix}
+    x_{n} \\\
+    v_{n}
+  \end{pmatrix}
+\\]
+which we will be able to use to characterize the stability of the integrator.
+
+To find $$\mat{M}$$, we will reorganize Eqs. \eqref{eq:vn1} and \eqref{eq:xn1} to put all values at interval $$n+1$$ on the left and the rest on the right:
+\begin{align}
+  x_{n+1} - v_{n+1} \Delta t &= x_n  \notag \\\
+  v_{n+1} &= v_n - \omega^2 x_n \Delta t \notag
+\end{align}
+or
+\\[
+    \underbrace{\begin{pmatrix}
+      1 & -\Delta t \\\
+      0 & 1
+    \end{pmatrix}}\_{\mat{m}}
+    \begin{pmatrix} x_{n+1} \\\ v_{n+1} \end{pmatrix}
+    =
+    \begin{pmatrix}
+      1 & 0 \\\
+      -\omega^2 \Delta t & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+      x_n \\\ v_n
+    \end{pmatrix}
+\\]
+Noting that
+\\[
+    \mat{m}^{-1} = \begin{pmatrix}
+    1 & \Delta t \\\ 0 & 1
+    \end{pmatrix}
+\\]
+and multiplying from the left we get
+\begin{equation}\label{eq:M}
+  \begin{pmatrix} x_{n+1} \\\ v_{n+1} \end{pmatrix}
+  = \begin{pmatrix}
+    1 & \Delta t \\\ 0 & 1
+    \end{pmatrix}
+  \begin{pmatrix}
+      1 & 0 \\\
+      -\omega^2 \Delta t & 1
+    \end{pmatrix}
+  \begin{pmatrix}
+      x_n \\\ v_n
+    \end{pmatrix}
+    =
+  \underbrace{\begin{pmatrix}
+      1 - (\omega\Delta t)^2 & \Delta t \\\
+      -\omega^2 \Delta t & 1
+    \end{pmatrix}}_{\mat{M}}
+  \begin{pmatrix}
+      x_n \\\ v_n
+    \end{pmatrix}
+\end{equation}
+
+The matrix $$\mat{M}$$ is called the **propagator**: it tells us how to propagate the state vector at time $$n$$ to the state vector at time $$n+1$$. By induction,
+\begin{equation}\label{eq:propagation}
+  \begin{pmatrix} x_{n} \\\ v_{n} \end{pmatrix}
+  = \mat{M}^n
+  \begin{pmatrix} x_{0} \\\ v_{0} \end{pmatrix}
+\end{equation}
+
+Knowing that energy of the SHO is a conserved quantity, we must have that successive applications of $$\mat{M}$$ do not cause the state vector either grow or shrink.
 
 Next: [Quantum SHO](DE-SHO-analytic.md)
