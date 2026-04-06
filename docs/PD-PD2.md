@@ -13,7 +13,9 @@ describes the electrostatic potential $$V$$ in a charge-free region of space. It
 
 > An important property of $$V$$ in a region where $$\laplacian V = 0$$ is that **the minimum and the maximum value of $$V$$ must occur on the boundary**. Why? At a local extremum, $$\grad V$$ must vanish and each $$\pdv[2]{V}{x_i}$$ must have the same sign (positive for a local minimum, negative for a local maximum). But the sum of the second partials has to be zero, so the only way they can sum to zero is if all vanish, in which case the gradient must be constant throughout the region. Either it is zero and the potential is uniform through the region, or it is nonzero and the extrema happen at the limits of the region along the direction of the gradient.
 
-If the region has rectangular boundaries, then the natural approach to solving it is to look for **separated-variable solutions** of the form
+## Strategy
+
+Solutions to a partial differential equation typically are complicated functions of the independent variables. However, we have seen that we can represent an arbitrary function on the interval $$0 \le x \le L$$ using periodic functions, so we may speculate that we might express arbitrary two- and three-dimensional functions as products of one-dimensional basis functions. If the region satisfying Eq.&nbsp;\eqref{eq:Laplace} has rectangular boundaries, then the natural approach to solving it is to look for **separated-variable solutions** of the form
 \\[
     V = X(x) Y(y) Z(z)
 \\]
@@ -30,6 +32,13 @@ Dividing by $$X(x)Y(y)Z(z)$$ yields
 \\]
 which is the sum of three functions of a single variable. For this to work each of these terms must separately equal a constant. Boundary conditions then impose constraints on the allowed constants, leading to discrete values.
 
+Recapping this approach, our strategy is
+
+* to represent a function of three variables, $$V(x,y,z)$$, as a product three functions of a single variable: $$V(x,y,z) = X(x)Y(y)Z(z)$$
+* to substitute this form into the partial differential equation
+* to divide by $$V(x)$$ to separate all $$x$$ dependence from all $$y$$ dependence and from all $$z$$ dependence
+* and to argue that for this sum of functions of **independent variables** to vanish, the contribution from each independent variable must be a constant.
+
 ### A Two-Dimensional Example
 
 For simplicity, let's consider a two-dimensional example in which a square region of side $$L$$ has three sides held at $$V = 0$$ and the side at $$y = L$$ held at $$V = 1$$:
@@ -43,7 +52,7 @@ For simplicity, let's consider a two-dimensional example in which a square regio
 <p class="figure" markdown="0">
   <img src="figs/Laplace1.webp" style="width: 300px;">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A square region of space in which three of the walls are held at $$V=0$$, while the back wall is held at $$V = 1$$.</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — A square region of space in which three of the walls are held at $$V=0$$, while the back (top) wall is held at $$V = 1$$.</p>
 
 
 To satisfy boundary conditions at $$x = 0$$ and $$x = L$$, we must have
@@ -83,10 +92,12 @@ Hence, the solution for the potential inside the square region is
   }
 \end{equation}
 
+Let's think a bit about this solution for $$V(x,y)$$. It is the sum of product solutions, with coefficients that decrease rapidly with $$n$$. Note, however, that the term $$\sinh(n \pi y/L)$$ grows rapidly as $$y \to L$$, which compensates the decrease in the coefficients for points near the surface at $$y = L$$. We should expect, therefore, that we require many terms in the series to obtain an accurate solution near $$y = L$$, but that only a few should suffice for other values of $$y$$.
+
 <p class="figure" markdown="0">
   <img src="figs/Lapl2.gif" style="width: 600px;" alt="Heat map showing the electrostatic potential in a square region">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Heat map showing the convergence of the solution shown in Eq. (\ref{eq:Lapl2}) for the first several terms in the series. Note that because the hyperbolic sine grows large very rapidly, the successive terms after the first few serve only to impact the very top of the figure, right next to the wall that is held at $$V = 1$$.</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — Heat map showing the convergence of the solution shown in Eq. \eqref{eq:Lapl2} for the first several terms in the series. Note that because the hyperbolic sine grows large very rapidly, the successive terms after the first few serve only to impact the very top of the figure, right next to the wall that is held at $$V = 1$$.</p>
 
 
 Here's some code to generate the successive plots.
@@ -133,13 +144,13 @@ ani = FuncAnimation(fig, animate, frames=list(range(1, 21, 2)),
 
 ## Solving Laplace's Equation in a Circular Region
 
-If the region in which you seek to solve Laplace's equation is not rectangular but circular, it will make sense to return to the definition of the laplacian and express this operator in terms of polar coordinates. Since the laplacian is the divergence of the gradient, we need to work out (or look up) expressions for these operators in polar coordinates.
+If the region in which you seek to solve Laplace's equation is not rectangular but circular, it will make sense to return to the definition of the laplacian and express this operator in terms of polar coordinates. Since the laplacian is the divergence of the gradient, we need to work out (or look up and take on faith) expressions for these operators in polar coordinates.
 
 The gradient is straightforward:
 \\[
     \grad V = \pdv{V}{r} \vu{r} + \frac1r \pdv{V}{\theta} \vu*{\theta}
 \\]
-To figure out the divergence, recall that it is defined as the ratio of the flux out of the "volume" divided by the volume as the volume goes to zero. In the 2-D case, volume is replaced by area, which is $$\dd{a} = r\dd{\theta} \dd{r}$$. As illustrated in the figure below, the net flux of vector field $$\vb{A}$$ out of the area is
+To figure out the divergence, recall that it is defined as the ratio of the flux out of the "volume" divided by the volume as the volume goes to zero. In the 2-D case, volume is replaced by area, which is $$\dd{a} = r\dd{\theta} \dd{r}$$. As illustrated in <a href="#Fig3">Fig.&nbsp;3</a> below, the net flux of vector field $$\vb{A}$$ out of the area is
 \\[
     A_r(r+\dd{r}, \theta) (r+\dd{r}) \dd{\theta} - A_r(r,\theta) r\dd{\theta}
     + A_\theta(r, \theta + \dd{\theta}) \dd{r} - A_\theta(r,\theta) \dd{r}
@@ -162,6 +173,8 @@ Hence, the laplacian in polar coordinates is
     }
 \end{equation}
 
+## Example
+
 To have a definite problem to work out, let us suppose that a circular region of radius $$a$$ is surrounded by electrodes that maintain the potential
 \\[
     V(a, \theta) = \begin{cases}
@@ -177,7 +190,6 @@ We seek the potential in the interior of the circle.
 </p>
 <p class="icap" markdown="1"><a name="Fig4">Figure 4</a> — Electric potential on the boundary of a circular region of radius $$a$$.</p>
 
-
 We look for a separated variable solution of the form $$V(r, \theta) = R(r)\Theta(\theta)$$ which we substitute into the expression for the laplacian to get
 \\[
     R^{\prime\prime}(r) \Theta(\theta) +
@@ -188,6 +200,10 @@ Dividing by $$\dd{A}$$ and multiplying by $$r^2$$ separates the variables to giv
 \\[
     \frac{r^2 R^{\prime\prime} + r R'}{R} + \frac{\Theta^{\prime\prime}}{\Theta} = 0
 \\]
+The first term depends only on $$r$$, while the second depend only on $$\theta$$. **Each, therefore, must be a constant.** Which one should we consider first?
+
+Angular variables typically have a special constraint: $$\theta + 2\pi = \theta$$. **If you increase the polar angle by $$2\pi$$, you should return to the same point. Therefore, $$\Theta(\theta+2\pi) = \Theta(\theta)$$.**
+
 Since our domain includes the entire range of $$\theta$$, and since $$\theta = 0$$ corresponds to the same point as $$\theta = 2\pi$$, we must insist that $$\Theta(\theta)$$ have period $$2\pi$$. Hence,
 \\[
     \Theta(\theta) = \alpha \cos n\theta + \beta \sin n\theta \qqtext{for $$n \in 0, 1, 2, \ldots$$}
@@ -227,7 +243,7 @@ If we were solving in an annular region, we would need to keep all terms, in pri
     V(r, \theta) = a_0  + \sum_{n=1}^{\infty} \qty(\frac{r}{a})^n (a_n \cos n\theta + b_n \sin n\theta)
 \\]
 after removing dimensions from the radial portion.
-It remains to determine the unknown coefficients $$a_n$$ and $$b_n$$.  The potential on the boundary has odd symmetry (imagine the range of $$\theta$$ going from $$-\pi$$ to $$\pi$$), so all the $$a_n$$ vanish. Multiplying by $$\sin m\theta$$ and integrating from $$-\pi$$ to $$\pi$$, we have
+It remains to determine the unknown coefficients $$a_n$$ and $$b_n$$.  The potential on the boundary has odd symmetry (imagine the range of $$\theta$$ going from $$-\pi$$ to $$\pi$$), so all the $$a_n$$ vanish since $$\cos n\theta$$ is an even function of $$\theta$$. Multiplying by $$\sin m\theta$$ and integrating from $$-\pi$$ to $$\pi$$, we have
 \\[
     \int_{-\pi}^{\pi} \mathrm{sgn}\theta \; \sin m\theta \dd{\theta} = b_m \pi
 \\]
