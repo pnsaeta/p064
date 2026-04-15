@@ -40,11 +40,11 @@ Rearranging slightly, we get
 \begin{equation}\label{eq:average}
   V_{i,j} = \frac{1}{4}\left( V_{i+1,j} + V_{i-1,j} + V_{i,j+1} + V_{i,j-1} \right)
 \end{equation}
-In other words, the potential at $$[i,j]$$ is equal to the average of the four nearest neighbor values along the cardinal directions. A simple method to approach the true solution is to **relax** an initial configuration towards a solution that agrees with Eq.&nbsp;(\ref{eq:average}) by iterating multiple times through the array and applying Eq.&nbsp;(\ref{eq:average}).
+In other words, the potential at $$[i,j]$$ is equal to the average of the four nearest neighbor values along the cardinal directions. A simple method to approach the true solution is to **relax** an initial configuration towards a solution that agrees with Eq.&nbsp;\eqref{eq:average} by iterating multiple times through the array and applying Eq.&nbsp;\eqref{eq:average}.
 
 ### Successive Over-Relaxation
 
-The relaxation method converges rather slowly. It typically takes a large number of iterations to achieve a potential distribution that doesn't change appreciably on subsequent iterations. One way to try to speed up convergence of the relaxation method is to **over-relax** by an amount between 1 and 2. That is, if Eq.&nbsp;(\ref{eq:average}) would change the value of $$V_{i,j}$$ by $$\delta V_{i,j}$$, change it by $$\rho \delta V_{i,j}$$ for $$1 \le \rho \le 2$$. For the "right" value of the successive over-relaxation parameter $$\rho$$, you can achieve significantly better performance. However, if you make $$\rho$$ too big, the convergence rate gets worse again, and for $$\rho \ge 2$$, the method becomes unstable and fails to converge.
+The relaxation method converges rather slowly. It typically takes a large number of iterations to achieve a potential distribution that doesn't change appreciably on subsequent iterations. One way to try to speed up convergence of the relaxation method is to **over-relax** by an amount between 1 and 2. That is, if Eq.&nbsp;\eqref{eq:average} would change the value of $$V_{i,j}$$ by $$\delta V_{i,j}$$, change it by $$\rho \delta V_{i,j}$$ for $$1 \le \rho \le 2$$. For the "right" value of the successive over-relaxation parameter $$\rho$$, you can achieve significantly better performance. However, if you make $$\rho$$ too big, the convergence rate gets worse again, and for $$\rho \ge 2$$, the method becomes unstable and fails to converge.
 
 Another strategy is to do an initial relaxation on a coarse lattice, and use the result of that relaxation to seed the initial values of a finer lattice.
 
@@ -125,7 +125,7 @@ Let's run the simulation again, but this time adjust the time step so $$\alpha =
 
 ## Implicit Methods
 
-So, the FTCS approach to solving the diffusion equation can be stable, although it requires us to take a great many small time steps. Recall that the FTCS method uses the known values at time step $$i$$ to compute the new value at time $$i+1$$. Suppose that we flip this around and try to find the (unknown) temperature values at step $$i+1$$ so that they are self-consistent with the known values at step $$i$$. In other words, let’s replace the right-hand side of Eq.&nbsp;(\ref{eq:FTCS}) with the values at step $$i+1$$:
+So, the FTCS approach to solving the diffusion equation can be stable, although it requires us to take a great many small time steps. Recall that the FTCS method uses the known values at time step $$i$$ to compute the new value at time $$i+1$$. Suppose that we flip this around and try to find the (unknown) temperature values at step $$i+1$$ so that they are self-consistent with the known values at step $$i$$. In other words, let’s replace the right-hand side of Eq.&nbsp;\eqref{eq:FTCS} with the values at step $$i+1$$:
 \begin{equation}
   \frac{u[i+1,j] - u[i,j]}{\Delta t} = D \frac{u[i+1,j+1] - 2 u[i+1,j] + u[i+1,j-1]}{(\Delta x)^2}
 \end{equation}
@@ -188,13 +188,13 @@ Notice that both matrices are **tridiagonal**. Tridiagonal systems are easy to s
 
 ### Questions
 
-1. Apart from the first and last rows, the rows of the two matrices in Eq.&nbsp;(\ref{eq:CNmatrices}) all have the same form. The right expressions for row 0 and row $$N-1$$ depend on the boundary conditions there. What assumption have I made in Eq.&nbsp;(\ref{eq:CNmatrices}) for the left end?
+1. Apart from the first and last rows, the rows of the two matrices in Eq.&nbsp;\eqref{eq:CNmatrices} all have the same form. The right expressions for row 0 and row $$N-1$$ depend on the boundary conditions there. What assumption have I made in Eq.&nbsp;\eqref{eq:CNmatrices} for the left end?
 
 2. The most common boundary conditions are called **Dirichlet** and **Neumann** conditions. In Dirichlet boundary conditions, the value of the variable is fixed at the boundary, whereas in Neumann boundary conditions, the normal derivative is fixed at the boundary (often at zero). In a one-dimensional problem, the normal derivative is the same thing as $$\partial u/\partial x$$. Work out how the tridiagonal matrices need to be adjusted for each type of boundary condition.
 
 3. After implementing the Crank-Nicolson method for solving $$u_t = D u_{xx}$$ in a one-dimensional uniform rod, investigate the error compared to the analytic solution as a function of time step $$\Delta t$$ for fixed $$\Delta x$$. Is the method second-order in time? That is, is the error proportional to $$(\Delta t)^2$$?
 
-4. If material properties such as $$c$$ and $$\kappa$$ were functions of temperature (not an uncommon situation), how would you have to modify the Crank-Nicolson matrices shown in Eq.&nbsp;(\ref{eq:CNmatrices}) to account for these temperature dependencies? Is the problem even well-posed? What additional assumptions do you need to make?
+4. If material properties such as $$c$$ and $$\kappa$$ were functions of temperature (not an uncommon situation), how would you have to modify the Crank-Nicolson matrices shown in Eq.&nbsp;\eqref{eq:CNmatrices} to account for these temperature dependencies? Is the problem even well-posed? What additional assumptions do you need to make?
 
 <!-- ## Solution
 

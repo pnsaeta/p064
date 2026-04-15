@@ -259,7 +259,7 @@ Hence,
 <p class="figure" markdown="0">
   <img src="figs/Laplace-Circle.webp" style="width: 400px;" alt="Potential in the circular region with boundary conditions shown in Figure 4">
 </p>
-<p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — The electrostatic potential inside a circular region bounded by the potential shown in <a href="#4">Figure&nbsp;4</a>. Note carefully the range of the colormap. Can you explain?</p>
+<p class="icap" markdown="1"><a name="Fig5">Figure 5</a> — The electrostatic potential inside a circular region bounded by the potential shown in <a href="#4">Figure&nbsp;4</a>. Note carefully the range of the colormap. Can you explain the overshoot?</p>
 
 ~~~~ python
 N = 401

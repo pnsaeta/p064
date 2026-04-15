@@ -9,7 +9,7 @@ Many systems are well described by the linear wave equation,
 \begin{equation}\label{eq:wave}
   \nabla^2 \psi = \frac{1}{v^2} \pdv[2]{\psi}{t}
 \end{equation}
-where $$v$$ is the wave speed and $$\psi$$ is something that's waving.
+where $$v$$ is the wave speed and $$\psi$$ is something that's waving. For example, $$\psi$$ could represent the departure of the air pressure from its equilibrium value, so that this equation describes the pressure variations of a sound wave.
 
 ## Cartesian coordinates
 
@@ -26,7 +26,7 @@ By a similar argument, each of the terms on the left must separately be a consta
   Z(y) &= e^{i k_z z} \notag \\\
   T(t) &= e^{-i \omega t} \notag
 \end{align}
-where to satisfy Eq.&nbsp;(\ref{eq:cartesians}), we must have
+where to satisfy Eq.&nbsp;\eqref{eq:cartesians}, we must have
 \begin{equation}\label{eq:k}
   \boxed{k_x^2 + k_y^2 + k_z^2 = \frac{\omega^2}{v^2}}
 \end{equation}
@@ -43,7 +43,7 @@ In the case of light waves, what's waving? The electric and magnetic fields. We 
 \begin{equation}\label{eq:gauss}
   \div\vb{E} = 0
 \end{equation}
-forces the wave to be transverse. The argument is straightforward. With $$\vb{E}$$ playing the role of $$\psi$$ in Eq.&nbsp;(\ref{eq:planewaves}), Gauss's law requires
+forces the wave to be transverse. The argument is straightforward. With $$\vb{E}$$ playing the role of $$\psi$$ in Eq.&nbsp;\eqref{eq:planewaves}, Gauss's law requires
 \begin{equation}\label{eq:transverse}
   \div\vb{E} = \pdv{E_x}{x} + \pdv{E_y}{y} + \pdv{E_z}{z} = (ik_x A_x  + i k_y A_y + i k_z A_z)e^{i(\vb{k}\vdot\vb{r}-\omega t)}
    = i \vb{k}\vdot\vb{A}_{\vb{k}} e^{i(\vb{k}\vdot\vb{r}-\omega t)} = 0
@@ -81,7 +81,7 @@ which shows that all the time dependence is on the right-hand side. For this equ
     \qquad\longrightarrow\qquad
     T(t) = e^{\pm i \omega t}
 \\]
-(I could also use $$\sin\omega t$$ and $$\cos\omega t$$.) Returning now to the left-hand side of Eq. (\ref{eq:B1}) and multiplying by $$r^2$$ we have
+(I could also use $$\sin\omega t$$ and $$\cos\omega t$$.) Returning now to the left-hand side of Eq. \eqref{eq:B1} and multiplying by $$r^2$$ we have
 \\[
     \frac{r^2 R^{\prime\prime} + r R'}{R} + \frac{\Theta^{\prime\prime}}{\Theta} = -k^2 r^2
     \qquad\longrightarrow\qquad
@@ -115,14 +115,14 @@ The solutions to Bessel's equation that are bounded at the origin are called **B
 <p class="figure" markdown="0">
   <img src="figs/J0-4.webp" style="width: 500px;" alt="The first five Bessel functions">
 </p>
-<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The first five Bessel functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;(\ref{eq:asympt}).</p>
+<p class="icap" markdown="1"><a name="Fig1">Figure 1</a> — The first five Bessel functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;\eqref{eq:asympt}.</p>
 
 The solutions that diverge at the origin are called **Neumann functions** (or Bessel functions of the second kind) and denoted $$Y_n(x)$$.
 
 <p class="figure" markdown="0">
   <img src="figs/Y0-4.webp" style="width: 500px;" alt="The first five Neumann functions">
 </p>
-<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The first few Neumann functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;(\ref{eq:asympt}).</p>
+<p class="icap" markdown="1"><a name="Fig2">Figure 2</a> — The first few Neumann functions of integer order. The dashed black curves show the asymptotic envelope, $$y = \pm\sqrt{2/\pi x}$$.  See Eq.&nbsp;\eqref{eq:asympt}.</p>
 
 ~~~~ python
 import matplotlib.pyplot as plt
@@ -192,7 +192,7 @@ To determine the unknown coefficients $$b_\nu$$, we must solve
 \end{equation}
 for the initial displacement function $$f(r)$$.
 
-Using Eq.&nbsp;(\ref{eq:ortho}), we can evaluate the coefficients $$b_\nu$$, getting
+Using Eq.&nbsp;\eqref{eq:ortho}, we can evaluate the coefficients $$b_\nu$$, getting
 \begin{equation}\label{eq:solution}
   b_\nu = \frac{ \displaystyle\int_0^a f(r) J_0(\alpha_\nu r/a) r\, dr}{\frac{a^2}{2}\left[J_1(\alpha_\nu) \right]^2}
 \end{equation}
