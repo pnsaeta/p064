@@ -30,7 +30,7 @@
           processRefs: true,
           tagFormat: {
             number: (n) =>  n.toString(),
-            id: (n) => 'eqn-id-' + n,
+            id: (id) => 'mjx-eqn:' + id.replace(/\s/g, '_'),
             tag: (tag) => '(' + tag + ')',
             ref: '', // means use the tag function
             url: (id, base) => base + '#' + encodeURIComponent(id),
@@ -43,7 +43,7 @@
       };
     </script>
     
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
     <link rel="stylesheet" href="{{ "/assets/css/mystyle.css" | relative_url }}">
   </head>
   <body>
